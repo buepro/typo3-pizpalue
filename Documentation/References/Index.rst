@@ -27,11 +27,11 @@ __ https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/t3SphinxThe
 .. toctree::
 :hidden:
 	   :maxdepth: 3
-	   :titlesonly:
+		   :titlesonly:
 
-	   HelloWorld/Index
-	   Hyperlinks/Index
-	   reStructuredText/Index
-	   Various/Headings
-	   Various/Admonitions
-	   Various/Git
+		   HelloWorld/Index
+		   Hyperlinks/Index
+		   reStructuredText/Index
+		   Various/Headings
+		   Various/Admonitions
+		   Various/Git
