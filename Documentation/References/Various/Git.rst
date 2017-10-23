@@ -29,7 +29,7 @@ Then to prove it (it won't print any diff)
    git diff master..origin/master
 
 .. figure:: Images/TortoiseGit_Reset.jpg
-   :alt: Tick 'unknown changes' in push dialog from TortoiseGit
+	:alt: Tick 'unknown changes' in push dialog from TortoiseGit
 
    Tick 'unknown changes' in push dialog from TortoiseGit
 

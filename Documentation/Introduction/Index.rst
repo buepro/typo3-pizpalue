@@ -54,8 +54,8 @@ This chapter should help people figure how the extension works. Remove it
 if not relevant.
 
 .. figure:: ../Images/Introduction/WebsiteLanding.png
-   :width: 500px
+	:width: 500px
    :alt: Website landing page
 
-   Website landing page
+	   Website landing page
 

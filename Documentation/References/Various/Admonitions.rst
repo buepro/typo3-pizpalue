@@ -9,36 +9,36 @@ Admonitions
 
 
 .. attention::
-   attention text
+attention text
 
 
 .. caution::
-   caution text
+caution text
 
 
 .. danger::
-   danger text
+danger text
 
 
 .. error::
-   error text
+error text
 
 
 .. hint::
-   hint text
+hint text
 
 
 .. important::
-   important text
+important text
 
 
 .. note::
-   note text
+note text
 
 
 .. tip::
-   tip text
+tip text
 
 
 .. warning::
-   warning text
+warning text

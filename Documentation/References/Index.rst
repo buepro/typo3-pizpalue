@@ -25,13 +25,13 @@ __ https://docs.typo3.org/typo3cms/HowToDocument/stable/WritingReST/
 __ https://docs.typo3.org/typo3cms/drafts/github/TYPO3-Documentation/t3SphinxThemeRtdDemoDocs/
 
 .. toctree::
-   :hidden:
-   :maxdepth: 3
-   :titlesonly:
+:hidden:
+	   :maxdepth: 3
+	   :titlesonly:
 
-   HelloWorld/Index
-   Hyperlinks/Index
-   reStructuredText/Index
-   Various/Headings
-   Various/Admonitions
-   Various/Git
+	   HelloWorld/Index
+	   Hyperlinks/Index
+	   reStructuredText/Index
+	   Various/Headings
+	   Various/Admonitions
+	   Various/Git

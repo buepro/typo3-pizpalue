@@ -46,10 +46,10 @@ or some other language:
 
 .. code-block:: javascript
    :linenos:
-   :emphasize-lines: 2-4
+	   :emphasize-lines: 2-4
 
-	$(document).ready(
-		function () {
-			doStuff();
-		}
-	);
+		$(document).ready(
+			function () {
+				doStuff();
+			}
+		);

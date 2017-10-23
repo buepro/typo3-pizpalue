@@ -41,7 +41,7 @@ Other configuration
 
 
 .. figure:: ../Images/AdministratorManual/ExtensionManager.png
-   :alt: Extension Manager
+	:alt: Extension Manager
 
    Extension Manager (caption of the image)
 
