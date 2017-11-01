@@ -44,6 +44,8 @@ web site.
 
    - Robert Breithuber for brt_videourlreplace
 
+   - Stanislas Rolland for sr_language_menu
+
 
 .. _screenshots:
 
