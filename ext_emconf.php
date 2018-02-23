@@ -28,8 +28,7 @@ $EM_CONF[$_EXTKEY] = [
             'brt_videourlreplace'   => '1.2.1-1.2.2',
             'slickcarousel'         => '2.0.0',
             'ws_flexslider'         => '1.5.3-1.5.5',
-            'bpsynplate'            => '8.0.5',
-            'user_bpcusplate'       => '8.0.1'
+            'bpsynplate'            => '8.0.5'
         ],
         'conflicts' => [],
         'suggests'  => [],
