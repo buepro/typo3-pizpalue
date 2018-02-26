@@ -25,7 +25,7 @@ $EM_CONF[$_EXTKEY] = [
             'bootstrap_grids'       => '1.4.0',
             'sr_language_menu'      => '6.4.2',
             'news'                  => '6.0.0-6.1.1',
-            'brt_videourlreplace'   => '1.2.1-1.2.2',
+            'brt_videourlreplace'   => '1.2.1-1.2.4',
             'slickcarousel'         => '2.0.0',
             'ws_flexslider'         => '1.5.3-1.5.5',
         ],
