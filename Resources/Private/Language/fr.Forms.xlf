@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+
+			<trans-unit id="idGeneralContactForm.element.idName.properties.label">
+				<source>Name</source>
+				<target state="translated">Nom</target>
+			</trans-unit>
+
+			<trans-unit id="idGeneralContactForm.element.idEmail.properties.label">
+				<source>Email</source>
+				<target state="translated">Email</target>
+			</trans-unit>
+
+			<trans-unit id="idGeneralContactForm.element.idTelephone.properties.label">
+				<source>Telephone</source>
+				<target state="translated">Téléphone</target>
+			</trans-unit>
+
+			<trans-unit id="idGeneralContactForm.element.idSubject.properties.label">
+				<source>Subject</source>
+				<target state="translated">Objet</target>
+			</trans-unit>
+
+			<trans-unit id="idGeneralContactForm.element.idMessage.properties.label">
+				<source>Meassage</source>
+				<target state="translated">Message</target>
+			</trans-unit>
+
+			<trans-unit id="idGeneralContactForm.element.idFileupload.properties.label">
+				<source>PDF-File</source>
+				<target state="translated">Document PDF</target>
+			</trans-unit>
+
+			<trans-unit id="idGeneralContactForm.element.idImageupload.properties.label">
+				<source>Image</source>
+				<target state="translated">Image</target>
+			</trans-unit>
+
+			<trans-unit id="element.idGeneralContactForm.renderingOptions.submitButtonLabel">
+				<source>Send</source>
+				<target state="translated">Envoyer</target>
+			</trans-unit>
+
+			<trans-unit id="element.idGeneralContactForm.label">
+				<source>General contact form</source>
+				<target state="translated">Formulaire general de contact</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

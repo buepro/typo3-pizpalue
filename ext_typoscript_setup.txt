@@ -1,0 +1,2 @@
+plugin.tx_form.settings.yamlConfigurations.200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
+module.tx_form.settings.yamlConfigurations.200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml

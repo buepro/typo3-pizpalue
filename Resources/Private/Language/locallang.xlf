@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+		  product-name="bpsynplate">
+		<header/>
+		<body>
+
+			<trans-unit id="bpsCeFrame1">
+				<source>Custom frame 1</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCeFrame2">
+				<source>Custom frame 2</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCeFrame3">
+				<source>Custom frame 3</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCeFrame4">
+				<source>Custom frame 4</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefAnimation1">
+				<source>Custom animation 1</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefAnimation2">
+				<source>Custom animation 2</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefAnimation3">
+				<source>Custom animation 3</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefScrollAnimation1">
+				<source>Custom scroll animation 1</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefScrollAnimation2">
+				<source>Custom scroll animation 2</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefScrollAnimation3">
+				<source>Custom scroll animation 3</source>
+			</trans-unit>
+
+			<trans-unit id="grids.sheet.options">
+				<source>Options</source>
+			</trans-unit>
+
+			<trans-unit id="grids.label.containerClass">
+				<source>Class</source>
+			</trans-unit>
+
+			<trans-unit id="grids.label.sectionClass">
+				<source>Section class</source>
+			</trans-unit>
+
+			<trans-unit id="grids.label.wrapSection">
+				<source>Wrap section</source>
+			</trans-unit>
+
+			<trans-unit id="grids.label.isContainerFluid">
+				<source>Is bootstrap fluid container</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,15 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowSaveToExtensionPaths: false
+        allowedFileMounts:
+          200: 1:/pizpalue/forms/
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                translation:
+                  translationFile:
+                    10: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+		  product-name="bpsynplate">
+		<header/>
+		<body>
+
+			<trans-unit id="bpsCeFrame1">
+				<source>Custom frame 1</source>
+				<target state="translated">Angepasster Rahmen 1</target>
+			</trans-unit>
+
+			<trans-unit id="bpsCeFrame2">
+				<source>Custom frame 2</source>
+				<target state="translated">Angepasster Rahmen 2</target>
+			</trans-unit>
+
+			<trans-unit id="bpsCeFrame3">
+				<source>Custom frame 3</source>
+				<target state="translated">Angepasster Rahmen 3</target>
+			</trans-unit>
+
+			<trans-unit id="bpsCeFrame4">
+				<source>Custom frame 4</source>
+				<target state="translated">Angepasster Rahmen 4</target>
+			</trans-unit>
+
+			<trans-unit id="bpsCefAnimation1">
+				<source>Angepasste Animation 1</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefAnimation2">
+				<source>Angepasste Animation 2</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefAnimation3">
+				<source>Angepasste Animation 3</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefScrollAnimation1">
+				<source>Angepasste Scrollanimation 1</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefScrollAnimation2">
+				<source>Angepasste Scrollanimation 2</source>
+			</trans-unit>
+
+			<trans-unit id="bpsCefScrollAnimation3">
+				<source>Angepasste Scrollanimation 3</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
