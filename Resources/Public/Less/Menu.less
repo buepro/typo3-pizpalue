@@ -1,0 +1,76 @@
+header {
+	ul.navbar-main li {
+		&:hover, &.open {
+			background: fade(@brand-primary, 10%);
+		}
+		ul.dropdown-menu {
+			min-width: 100%;
+		}
+	}
+	&.navbar {
+		nav.in ul.navbar-main li {
+			&:hover, &.open {
+				background: transparent;
+			}
+		}
+	}
+}
+
+.navbar-default-transition {
+	.navbar-main > li:hover > a > .bar {
+		opacity: 0.8;
+	}
+	&navbar-transition .navbar-main > li:hover > a > .bar {
+		opacity: 0.5;
+	}
+}
+
+@media screen and (min-width: @screen-md-min) {
+	header.navbar-default-transition {
+		background: rgba(0,0,0,0.7);
+		background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.1) 80%,rgba(0,0,0,0.03) 90%,rgba(0,0,0,0));
+		border-bottom-width: 0;
+
+		ul.navbar-main li {
+			&:hover, &.open {
+				background: rgba(0,0,0,0.7);
+				background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.1) 80%,rgba(0,0,0,0.03) 90%,rgba(0,0,0,0));
+			}
+		}
+
+		&.navbar-transition {
+			background: @navbar-default-bg;
+			ul.navbar-main li {
+				&:hover, &.open {
+					background: @navbar-default-bg;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: @screen-sm-max) {
+	.nav > li > a {
+		padding: 10px 20px;
+	}
+}
+
+
+.pp-adminmenu {
+	ul {
+		list-style-type: none;
+		&.sp-menulevel-1 {
+			padding-left: 0;
+		}
+		li {
+			display: inline-block;
+			padding: 0 0.5rem;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}

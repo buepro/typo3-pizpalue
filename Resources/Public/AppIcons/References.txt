@@ -1,0 +1,10 @@
+Info:
+https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+
+Onlinetools:
+> http://www.favicononline.es/
+> http://realfavicongenerator.net/
+> http://www.favicon-generator.org/
+
+Extensions:
+> gsfavicon

@@ -1,0 +1,44 @@
+@keyframes blink {
+	0% {background: transparent;}
+	50% {background: orange;}
+    100% {background: transparent;}
+}
+
+#setupsetting {
+	z-index: 10000;
+	position: fixed;
+	box-sizing: border-box;
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	margin: 6px;
+	animation: blink 3s ease-in-out 0s infinite;
+	opacity: 0.5;
+}
+
+@pp-colorplate-radius: 100px;
+#colorset {
+	display: inline-block;
+	.color {
+		float: left;
+		overflow: hidden;
+		width: 2 * @pp-colorplate-radius;
+		height: 2 * @pp-colorplate-radius;
+		border-radius: @pp-colorplate-radius;
+		margin: 10px;
+	}
+	.bottomcolorrow {
+		clear: both;
+	}
+	.maincolor {
+		margin-left: @pp-colorplate-radius + 20px;
+		margin-bottom: -@pp-colorplate-radius / 5;
+		background: @brand-primary;
+	}
+	.secundarycolor {
+		background: @brand-secundary;
+	}
+	.complementarycolor {
+		background: @brand-complementary;
+	}
+}

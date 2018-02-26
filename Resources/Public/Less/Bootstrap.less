@@ -1,0 +1,70 @@
+@media screen and (min-width: @screen-md-min) {
+	.navbar-top .navbar-collapse {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.jumbotron {
+	a {
+		color: mix(@jumbotron-color, @brand-primary, 70%);
+		&:hover {
+			color: mix(@jumbotron-color, @brand-primary, 80%);
+		}
+	}
+	@media screen and (max-width: @screen-sm-min) {
+		padding: (@jumbotron-padding * 0.4) (@jumbotron-padding * 0.6);
+
+		.container &,
+		.container-fluid & {
+			padding: (@jumbotron-padding * 0.6) (@jumbotron-padding * 0.8);
+		}
+	}
+}
+
+.frame.well .form-group {
+	margin-bottom: 15px;
+}
+
+.tab-v1 {
+	.nav-tabs {
+		margin-bottom: 0;
+		background: @syn-tab-v1-background;
+		li a {
+			&:hover {
+				background: @syn-tab-v1-background-hover;
+				color: contrast(@syn-tab-v1-background-hover);
+			}
+		}
+		li.active a {
+			background: @syn-tab-v1-active-background;
+			color: contrast(@syn-tab-v1-active-background);
+		}
+	}
+	.tab-content {
+		border: @syn-tab-v1-border-color 1px solid;
+		border-top: 0;
+		padding: @nav-link-padding;
+	}
+}
+
+.panel-heading {
+	padding: @panel-heading-padding;
+	a {
+		color: inherit;
+	}
+	h4 {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: ceil(@font-size-base * 1.125);
+	}
+}
+
+.btn-pp-1 {
+	background: @brand-primary;
+	border-color: darken(@brand-primary, 10%);
+	color: contrast(@brand-primary);
+	&:hover {
+		color: white;
+	}
+}

@@ -1,0 +1,38 @@
+/* external: micro clearfix hack */
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after, .clear {
+	clear: both;
+}
+
+/* global/tags */
+
+/* images */
+
+/* forms */
+
+/* plugins */
+
+/* ppynplate (pp-) */
+.pp-notopmargin {
+	margin-top: 0;
+}
+
+.pp-novertmargin {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.pp-topspace {
+	margin-top: 0.5em;
+}
+
+.pp-rightspace {
+	margin-right: 0.5em;
+}
+
+/* structure/containers */
