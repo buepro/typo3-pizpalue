@@ -5,6 +5,15 @@ if (!defined('TYPO3_MODE')) {
 
 
 /***************
+ * Static templates
+  */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Main',
+    'Pizpalue - Main');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY,
+    'Configuration/TypoScript/Grids', 'Pizpalue - Grid CEs');
+
+
+/***************
  * Backend Styling
  */
 if (TYPO3_MODE == 'BE') {

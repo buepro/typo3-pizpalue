@@ -5,47 +5,47 @@
 		<header/>
 		<body>
 
-			<trans-unit id="bpsCeFrame1">
+			<trans-unit id="ppCeFrame1">
 				<source>Custom frame 1</source>
 				<target state="translated">Angepasster Rahmen 1</target>
 			</trans-unit>
 
-			<trans-unit id="bpsCeFrame2">
+			<trans-unit id="ppCeFrame2">
 				<source>Custom frame 2</source>
 				<target state="translated">Angepasster Rahmen 2</target>
 			</trans-unit>
 
-			<trans-unit id="bpsCeFrame3">
+			<trans-unit id="ppCeFrame3">
 				<source>Custom frame 3</source>
 				<target state="translated">Angepasster Rahmen 3</target>
 			</trans-unit>
 
-			<trans-unit id="bpsCeFrame4">
+			<trans-unit id="ppCeFrame4">
 				<source>Custom frame 4</source>
 				<target state="translated">Angepasster Rahmen 4</target>
 			</trans-unit>
 
-			<trans-unit id="bpsCefAnimation1">
+			<trans-unit id="ppCefAnimation1">
 				<source>Angepasste Animation 1</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefAnimation2">
+			<trans-unit id="ppCefAnimation2">
 				<source>Angepasste Animation 2</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefAnimation3">
+			<trans-unit id="ppCefAnimation3">
 				<source>Angepasste Animation 3</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefScrollAnimation1">
+			<trans-unit id="ppCefScrollAnimation1">
 				<source>Angepasste Scrollanimation 1</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefScrollAnimation2">
+			<trans-unit id="ppCefScrollAnimation2">
 				<source>Angepasste Scrollanimation 2</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefScrollAnimation3">
+			<trans-unit id="ppCefScrollAnimation3">
 				<source>Angepasste Scrollanimation 3</source>
 			</trans-unit>
 

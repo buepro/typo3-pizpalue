@@ -5,43 +5,43 @@
 		<header/>
 		<body>
 
-			<trans-unit id="bpsCeFrame1">
+			<trans-unit id="ppCeFrame1">
 				<source>Custom frame 1</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCeFrame2">
+			<trans-unit id="ppCeFrame2">
 				<source>Custom frame 2</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCeFrame3">
+			<trans-unit id="ppCeFrame3">
 				<source>Custom frame 3</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCeFrame4">
+			<trans-unit id="ppCeFrame4">
 				<source>Custom frame 4</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefAnimation1">
+			<trans-unit id="ppCefAnimation1">
 				<source>Custom animation 1</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefAnimation2">
+			<trans-unit id="ppCefAnimation2">
 				<source>Custom animation 2</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefAnimation3">
+			<trans-unit id="ppCefAnimation3">
 				<source>Custom animation 3</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefScrollAnimation1">
+			<trans-unit id="ppCefScrollAnimation1">
 				<source>Custom scroll animation 1</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefScrollAnimation2">
+			<trans-unit id="ppCefScrollAnimation2">
 				<source>Custom scroll animation 2</source>
 			</trans-unit>
 
-			<trans-unit id="bpsCefScrollAnimation3">
+			<trans-unit id="ppCefScrollAnimation3">
 				<source>Custom scroll animation 3</source>
 			</trans-unit>
 

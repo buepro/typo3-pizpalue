@@ -1,0 +1,41 @@
+# @see bootstrap_grids tsconfig.ts
+tx_gridelements {
+    setup {
+        ppContainerFixed {
+            title = Bootstrap fix container
+            description = Provides a bootstrap container with fixed width
+            iconIdentifier = tx-pizpalue-ppContainerFixed
+            frame = 0
+            topLevelLayout = 0
+            config {
+                colCount = 1
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = Bootstrap fix cell
+                        colPos = 101
+                    }
+                }
+            }
+            flexformDS = FILE:EXT:pizpalue/Configuration/FlexForm/PpContainerFixed.xml
+        }
+        ppContainer {
+            title = Full width ontainer
+            description = Provides container covering the entire screen width
+            iconIdentifier = tx-pizpalue-ppContainer
+            frame = 0
+            topLevelLayout = 0
+            config {
+                colCount = 1
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = Bootstrap fluid cell
+                        colPos = 101
+                    }
+                }
+            }
+            flexformDS = FILE:EXT:pizpalue/Configuration/FlexForm/PpContainer.xml
+        }
+    }
+}

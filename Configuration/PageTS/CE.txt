@@ -1,0 +1,14 @@
+TCEFORM.tt_content.frame_class {
+   addItems {
+      pp1 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame1
+      pp2 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame2
+      pp3 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame3
+      pp4 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame4
+      pp-animation1 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefAnimation1
+      pp-animation2 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefAnimation2
+      pp-animation3 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefAnimation3
+      pp-scrollanimation1 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefScrollAnimation1
+      pp-scrollanimation2 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefScrollAnimation2
+      pp-scrollanimation3 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefScrollAnimation3
+   }
+}
