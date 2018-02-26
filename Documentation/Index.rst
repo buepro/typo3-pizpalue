@@ -36,7 +36,7 @@ pizpalue
 		        Roman Büchler
 
 		    :Email:
-		        rb@synac.com
+		        rb@buechler.pro
 
 		    :License:
 		        This document is published under the Open Content License

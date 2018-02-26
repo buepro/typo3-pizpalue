@@ -1,0 +1,14 @@
+plugin.tx_news {
+   _LOCAL_LANG {
+      es {
+           dateFormat = %d/%m/%Y
+      }
+   }
+   settings {
+      displayDummyIfNoMedia = 1
+      list.media.dummyImage = EXT:pizpalue/Extensions/news/Resources/Public/Images/knewsticker3.png
+      list.media.image.width >
+   }
+}
+
+page.includeCSS.PizpalueNewsLess = EXT:pizpalue/Extensions/news/Resources/Public/Less/General.less

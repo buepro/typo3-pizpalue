@@ -1,0 +1,19 @@
+plugin.tx_newsslider.settings {
+    compressJS = TRUE
+    compressCSS = TRUE
+}
+
+page {
+    includeCSS.PizpalueNewssliderLess = EXT:pizpalue/Extensions/newsslider/Resources/Public/Less/General.less
+}
+
+#======================#
+# development settings #
+#======================#
+[globalString = LIT:setup = {$pizpalue.page.state}]
+   plugin.tx_newsslider.settings {
+       compressJS = FALSE
+       compressCSS = FALSE
+   }
+[global]
+

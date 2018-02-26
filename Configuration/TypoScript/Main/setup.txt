@@ -1,0 +1,151 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Extensions/bootstrap_package/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/AppIcons.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Plugins.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Libs.txt">
+
+
+#========#
+# config #
+#========#
+config {
+	// compression
+	compressJs = 1
+	compressCss = 1
+	concatenateJs = 1
+	concatenateCss = 1
+	admPanel = 0
+
+	// Branding
+	headerComment (
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		           Eine Webseite von buechler.pro
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	)
+
+	// Language Settings
+	sys_language_overlay = 1
+	sys_language_uid = 0
+	language = de
+	locale_all = de_CH.UTF-8
+	htmlTag_setParams = lang="de" dir="ltr" class="no-js"
+}
+
+#===========================#
+# config language dependant #
+#===========================#
+[globalVar = GP:L = 1]
+   config {
+		sys_language_uid = 1
+		language = fr
+		locale_all = fr_CH.UTF-8
+		htmlTag_setParams = lang="fr" dir="ltr" class="no-js"
+   }
+[global]
+
+[globalVar = GP:L = 2]
+	config {
+		sys_language_uid = 2
+		language = en
+		locale_all = en_GB.UTF-8
+		htmlTag_setParams = lang="en" dir="ltr" class="no-js"
+	}
+[global]
+
+# pass language config to fluid
+page.10.settings.pizpalue.useSrLanguageMenu = {$pizpalue.menu.language.useSrLanguageMenu}
+
+
+#========#
+# meta   #
+#========#
+page.meta.google-site-verification = {$pizpalue.seo.google.siteVerification}
+
+
+#=============#
+# page object #
+#=============#
+page {
+	shortcutIcon >
+
+	includeCSS {
+		PizpalueBootstrapLess = EXT:pizpalue/Resources/Public/Less/Bootstrap.less
+		PizpaluePluginsLess = EXT:pizpalue/Resources/Public/Less/Plugins.less
+	}
+	includeJSFooter {
+		PizpalueBootstrap = EXT:pizpalue/Resources/Public/JavaScripts/Bootstrap.js
+		PizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScripts/General.js
+	}
+	10 {
+		templateName.stdWrap.cObject {
+		pagets__fullwidth_clean = TEXT
+		pagets__fullwidth_clean.value = FullwidthClean
+		}
+		settings {
+			logo {
+				text = {$pizpalue.customer.commonName}
+			}
+			pizpalue {
+				commonName = {$pizpalue.customer.commonName}
+				commonEmail = {$pizpalue.customer.commonEmail}
+			}
+		}
+	}
+
+}
+
+popup {
+	includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family={$pizpalue.general.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
+}
+
+[globalString = LIT:1 = {$pizpalue.menu.language.enable}]
+	# href link tag for search engines
+	page.headerData.110 < lib.pizpalue.hrefLinkTag
+[global]
+
+[globalString = LIT:1 = {$pizpalue.features.useStyle}]
+	page {
+		includeCSS {
+			PizpalueCss = EXT:pizpalue/Resources/Public/Css/General.css
+			PizpalueMenuLess = EXT:pizpalue/Resources/Public/Less/Menu.less
+			PizpalueSocialLess = EXT:pizpalue/Resources/Public/Less/Social.less
+			PizpalueFormsLess = EXT:pizpalue/Resources/Public/Less/Forms.less
+			PizpalueGeneralLess = EXT:pizpalue/Resources/Public/Less/General.less
+		}
+	}
+[global]
+
+[globalString = LIT:1 = {$pizpalue.features.useCeScrollAnimation}]
+	page {
+		includeCSS {
+			Aos = EXT:pizpalue/Contrib/Aos/dist/aos.css
+			PizpalueCeScrollAnimation = EXT:pizpalue/Resources/Public/Css/CeScrollAnimation.css
+		}
+		includeJSFooter {
+			Aos = EXT:pizpalue/Contrib/Aos/dist/aos.js
+			PizpalueCeScrollAnimation = EXT:pizpalue/Resources/Public/JavaScripts/CeScrollAnimation.js
+		}
+	}
+[global]
+
+#==============#
+# localization #
+#==============#
+plugin.tx_bootstrap_package._LOCAL_LANG {
+	de {
+		skiptomaincontent = Zum Hauptinhalt springen
+	}
+
+	es {
+		skiptomaincontent = Salta al contenido principal
+	}
+}
+
+
+#=========================================================#
+# development settings (see ext_typoscript_constants.txt) #
+#=========================================================#
+[globalString = LIT:setup = {$pizpalue.agency.pageState}]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/setup.txt">
+[global]

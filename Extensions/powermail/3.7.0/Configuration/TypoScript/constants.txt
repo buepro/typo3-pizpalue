@@ -1,0 +1,32 @@
+plugin.tx_powermail.settings {
+   receiver {
+      enable = 1
+      default {
+         senderName = {$pizpalue.customer.commonName}
+         senderEmail = {$pizpalue.customer.commonEmail}
+      }
+      overwrite {
+         email = {$pizpalue.customer.commonEmail}
+         name = {$pizpalue.customer.commonName}
+      }
+   }
+   sender {
+      enable = 1
+      default {
+         senderName = {$pizpalue.customer.commonName}
+         senderEmail = {$pizpalue.customer.commonEmail}
+      }
+   }
+   styles.bootstrap {
+      labelClasses = control-label col-sm-3
+      offsetClasses = col-sm-offset-3
+      fieldWrappingClasses = col-sm-9
+   }
+   # remove jQuery inclusion
+   javascript.powermailJQuery =
+   captcha {
+      textColor = #000000
+      image = EXT:pizpalue/Resources/Private/Images/captcha_bg.png
+   }
+}
+

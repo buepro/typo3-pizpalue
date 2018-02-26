@@ -1,0 +1,15 @@
+# see https://www.thomaskieslich.de/blog/127-typo3-8x-ckeditor-konfigurieren/
+# see https://www.clickstorm.de/blog/der-neue-typo3-rte-ckeditor/
+
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+    - { resource: "EXT:bootstrap_package/Configuration/RTE/Default.yaml" }
+
+editor:
+  config:
+    defaultContentLanguage: "de"
+    defaultLanguage: "de"
+    allowedContent : true
+    extraAllowedContent : "span"

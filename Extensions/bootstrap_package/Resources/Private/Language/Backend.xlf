@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-01T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+
+			<trans-unit id="backend_layout.column.subnav">
+				<source>Sub Navigation</source>
+			</trans-unit>
+
+			<trans-unit id="backend_layout.fullwidth_clean">
+				<source>Full width</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

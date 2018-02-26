@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{languagenavigation}">
+	<ul id="language_menu" class="language-menu">
+		<f:for each="{languagenavigation}" as="item">
+			<li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
+				<f:switch expression="{item.languageUid}">
+					<f:case value="2">
+						<f:variable name="languageTitle">English</f:variable>
+						<f:variable name="hreflang">en-GB</f:variable>
+					</f:case>
+					<f:case value="1">
+						<f:variable name="languageTitle">Français</f:variable>
+						<f:variable name="hreflang">fr-CH</f:variable>
+					</f:case>
+					<f:defaultCase>
+						<f:variable name="languageTitle">Deutsch</f:variable>
+						<f:variable name="hreflang">de-CH</f:variable>
+					</f:defaultCase>
+				</f:switch>
+				<f:if condition="{item.available}">
+					<f:then>
+						<a href="{item.link}" hreflang="{hreflang}" title="{languageTitle}">
+							<span>{languageTitle}</span>
+						</a>
+					</f:then>
+					<f:else>
+						<span>{languageTitle}</span>
+					</f:else>
+				</f:if>
+			</li>
+		</f:for>
+	</ul>
+</f:if>

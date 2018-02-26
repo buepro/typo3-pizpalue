@@ -1,0 +1,3 @@
+page {
+   includeCSS.PizpalueExtensionsPowermailLess = EXT:pizpalue/Extensions/powermail/2.17.2/Resources/Public/Less/General.less
+}

@@ -1,0 +1,3 @@
+tx_news.templateLayouts {
+    11 = LLL:EXT:pizpalue/Extensions/news/Resources/Private/Language/locallang.xlf:ImageOnTop
+}

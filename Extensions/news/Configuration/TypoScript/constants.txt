@@ -1,0 +1,7 @@
+plugin.tx_news {
+    view.twb {
+        templateRootPath = EXT:pizpalue/Extensions/news/Resources/Private/Templates/Styles/Twb/Templates/
+        partialRootPath = EXT:pizpalue/Extensions/news/Resources/Private/Templates/Styles/Twb/Partials/
+        #layoutRootPath = EXT:pizpalue/Extensions/news/Resources/Private/Templates/Styles/Twb/Layouts/
+    }
+}

@@ -1,0 +1,18 @@
+########################
+#### BACKENDLAYOUTS ####
+########################
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:pizpalue/Extensions/bootstrap_package/Configuration/PageTS/Mod/WebLayout/BackendLayouts" extensions="txt">
+
+mod.web_layout.BackendLayouts {
+    # default >
+    # default_clean >
+    special_start >
+    special_feature >
+    default_2_columns >
+    default_2_columns_25_75 >
+    default_2_columns_50_50 >
+    default_2_columns_offset_right >
+    default_3_columns >
+    default_subnavigation_left_2_columns >
+    default_subnavigation_right_2_columns >
+}

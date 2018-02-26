@@ -1,0 +1,48 @@
+
+config {
+
+	# ---------------------------------------------- #
+	#  css
+	# ---------------------------------------------- #
+	concatenateCss = 0
+	compressCss = 0
+
+	# ---------------------------------------------- #
+	#  javascript
+	# ---------------------------------------------- #
+	compressJs = 0
+	concatenateJs = 0
+
+	# ---------------------------------------------- #
+	#  various
+	# ---------------------------------------------- #
+    no_cache = 1
+    admPanel = 0
+
+    # ---------------------------------------------- #
+	#  extensions
+	# ---------------------------------------------- #
+    tx_realurl_enable = 0
+
+}
+
+
+page {
+	includeCSS {
+		PizpalueDevelopLess = EXT:pizpalue/Resources/Public/Less/Develop.less
+	}
+
+	includeJSFooterlibs {
+		# responsiveimages = EXT:bootstrap_package/Resources/Public/JavaScript/Src/jquery.responsiveimages.js
+	}
+
+	1 = TEXT
+	1 {
+		value = <div id="setupsetting"></div>
+		stdWrap.typolink {
+			extTarget = _blank
+			parameter = https://www.buechler.pro
+			title = In Arbeit - Eine Weseite von buechler.pro
+		}
+	}
+}

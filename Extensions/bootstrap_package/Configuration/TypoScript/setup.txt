@@ -1,0 +1,25 @@
+#============#
+# lib object #
+#============#
+
+# allows to add curly braces to be treated of type getText in RTE editor
+# @see https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html
+lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 1
+
+
+# [BUGFIX] Prepare colPos field for proper quoting (#452)
+# Relates to https://forge.typo3.org/issues/81492
+# and https://forge.typo3.org/issues/80506
+# corrected by Anja:
+# lib.dynamicContent.20.select.where = {#colPos}={register:colPos}
+# reverted due to misfunction by Roman:
+# lib.dynamicContent.20.select.where = colPos={register:colPos}
+
+
+#=============#
+# page object #
+#=============#
+
+page {
+    includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family={$pizpalue.general.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
+}

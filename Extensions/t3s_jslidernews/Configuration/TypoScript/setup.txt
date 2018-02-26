@@ -1,0 +1,14 @@
+plugin.tx_t3sjslidernews {
+   settings {
+      cropMaxChar = 100
+   }
+
+   _LOCAL_LANG {
+		es {
+         readmore = leer más
+      }
+      de {
+         readmore = weiter lesen
+      }
+   }
+}

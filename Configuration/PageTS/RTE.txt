@@ -1,0 +1,36 @@
+/******************
+ * RTE
+ * @see https://www.clickstorm.de/blog/der-neue-typo3-rte-ckeditor/
+ *
+ */
+RTE {
+    config {
+        tt_content {
+            bodytext {
+                types {
+                    text {
+                        preset = pizpalue
+                    }
+                    textcolumn {
+                        preset = pizpalue
+                    }
+                    texticon {
+                        preset = pizpalue
+                    }
+                    textmedia {
+                        preset = pizpalue
+                    }
+                    textpic {
+                        preset = pizpalue
+                    }
+                    textteaser {
+                        preset = pizpalue
+                    }
+                    panel {
+                        preset = pizpalue
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+plugin.tx_femanager.settings.adminName = {$pizpalue.customer.commonName}
+plugin.tx_femanager.settings.adminEmail = {$pizpalue.customer.commonEmail}
+plugin.tx_femanager.persistence.storagePid = {$pizpalue.storage.feUserPid}

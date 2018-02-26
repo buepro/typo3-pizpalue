@@ -1,0 +1,45 @@
+/**
+ * Generate the favicons/appicons at realfavicongenerator.net, copy the assets
+ * accordingly and paste the header data to the customer constants (pizpalue.
+ * appIcon.headerData).
+ *
+ * @see https://realfavicongenerator.net/
+ * @see https://css-tricks.com/favicon-quiz/
+ * @see https://wiki.selfhtml.org/wiki/Grafik/Favicon
+ * @see https://github.com/audreyr/favicon-cheat-sheet
+ * @see http://www.favicon-generator.org/
+ * @see http://www.favicomatic.com
+ * @see https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+ *
+ *
+ *
+ * Example header data:
+ *
+ * <link rel="apple-touch-icon" sizes="180x180" href="/fileadmin/bpcusplate/favicon/apple-touch-icon.png?v=yyxzA9RWMG">
+ * <link rel="icon" type="image/png" sizes="32x32" href="/fileadmin/bpcusplate/favicon/favicon-32x32.png?v=yyxzA9RWMG">
+ * <link rel="icon" type="image/png" sizes="16x16" href="/fileadmin/bpcusplate/favicon/favicon-16x16.png?v=yyxzA9RWMG">
+ * <link rel="manifest" href="/fileadmin/bpcusplate/favicon/manifest.json?v=yyxzA9RWMG">
+ * <link rel="mask-icon" href="/fileadmin/bpcusplate/favicon/safari-pinned-tab.svg?v=yyxzA9RWMG" color="#5bbad5">
+ * <link rel="shortcut icon" href="/fileadmin/bpcusplate/favicon/favicon.ico?v=yyxzA9RWMG">
+ * <meta name="apple-mobile-web-app-title" content="Piz Palue">
+ * <meta name="application-name" content="Piz Palue">
+ * <meta name="msapplication-config" content="/fileadmin/bpcusplate/favicon/browserconfig.xml?v=yyxzA9RWMG">
+ * <meta name="theme-color" content="#ffffff">
+ *
+ */
+
+
+# app icon
+page.headerData.610 = TEXT
+page.headerData.610.value (
+{$pizpalue.appIcon.headerData}
+)
+
+[globalString = LIT:1 = {$pizpalue.appIcon.insertMetaTags}]
+	page.meta {
+		apple-mobile-web-app-title = {$pizpalue.appIcon.appName}
+		applicationName = {$pizpalue.appIcon.appName}
+		msapplication-config = {$pizpalue.appIcon.folder}/browserconfig.xml
+		theme-color = {$pizpalue.appIcon.androidThemeColor}
+	}
+[global]

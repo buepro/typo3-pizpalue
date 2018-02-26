@@ -1,0 +1,27 @@
+.news-list-view {
+  .page-navigation {
+	> p {
+	  display: none;
+	}
+	&:nth-child(1) {
+	  ul {
+		margin-top: 0;
+	  }
+	}
+  }
+}
+
+.news-list-item {
+  &:nth-last-child(n+2) {
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: @gray-lighter 1px solid;
+  }
+  .pp-newsimage {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	img {
+	  display: inline-block;
+	}
+  }
+}
