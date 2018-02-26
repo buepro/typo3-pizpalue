@@ -8,7 +8,7 @@ $EM_CONF[$_EXTKEY] = [
     'title'            => 'Piz Palü Distribution',
     'description'      => 'This distribution is based on TYPO3 version 8 and the bootstrap package from Benjamin Kott.',
     'category'         => 'distribution',
-    'version'          => '8.2.2',
+    'version'          => '8.2.3',
     'state'            => 'stable',
     'clearcacheonload' => 1,
     'author'           => 'Roman Büchler',
@@ -28,7 +28,6 @@ $EM_CONF[$_EXTKEY] = [
             'brt_videourlreplace'   => '1.2.1-1.2.2',
             'slickcarousel'         => '2.0.0',
             'ws_flexslider'         => '1.5.3-1.5.5',
-            'bpsynplate'            => '8.0.5'
         ],
         'conflicts' => [],
         'suggests'  => [],
