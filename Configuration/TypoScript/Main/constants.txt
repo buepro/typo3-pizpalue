@@ -293,6 +293,8 @@ styles.content.loginform.dateFormat = {$pizpalue.general.dateTimeFormat}
 # plugins
 # ---------------------------------------------------------- #
 plugin {
+	bootstrap_package_contentelements.header.defaultHeaderType = 1
+
 	tx_srlanguagemenu {
 		defaultLanguageISOCode = DE
 		defaultCountryISOCode = DE
@@ -301,3 +303,19 @@ plugin {
 		languageTitle = 1
 	}
 }
+
+
+# ---------------------------------------------------------- #
+# design
+# ---------------------------------------------------------- #
+
+[treeLevel = 0]
+page.theme.navigationstyle = default-transition
+page.theme.navigationtype = top
+[end]
+
+# under construction page
+[page|uid = 59]
+page.theme.navigationstyle = default-transition
+page.theme.navigationtype = top
+[end]
