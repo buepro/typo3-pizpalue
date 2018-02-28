@@ -74,10 +74,10 @@ pizpalue.customer {
 	commonName = Allgemeiner Kundenname
 
 	# cat=pizpalue:customer/1020/0014; type=string; label=Common customer email
-	commonEmail = neu.im@typo3hof.ch
+	commonEmail =
 
 	# cat=pizpalue:customer/1020/0018; type=string; label=Domain name
-	domain = typo3hof.ch
+	domain =
 
 	# cat=pizpalue:customer/1020/0080; type=string; label=Copyright text
 	copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
@@ -101,20 +101,20 @@ plugin.bootstrap_package.settings.less {
 	brand-complementary = #FF0000
 
 	// cat=pizpalue:customer/1030/0110; type=string; label=Register tabs bar background color
-	syn-tab-v1-background = @gray-lighter
+	pp-tab-v1-background = @gray-lighter
 
 	// cat=pizpalue:customer/1030/0120; type=string; label=Active register background color
-	syn-tab-v1-active-background = #fff
+	pp-tab-v1-active-background = #fff
 
 	// cat=pizpalue:customer/1030/0110; type=string; label=Register border color
-	syn-tab-v1-border-color = #ddd
+	pp-tab-v1-border-color = #ddd
 
-	syn-tab-v1-background-hover = mix(@syn-tab-v1-background,@syn-tab-v1-active-background)
-	nav-tabs-active-link-hover-color = contrast(@syn-tab-v1-background)
-	nav-tabs-active-link-hover-bg = @syn-tab-v1-active-background
-	nav-tabs-active-link-hover-border-color = @syn-tab-v1-border-color
-	nav-tabs-border-color = @syn-tab-v1-border-color
-	nav-tabs-link-hover-border-color = mix(@syn-tab-v1-background,@syn-tab-v1-border-color)
+	pp-tab-v1-background-hover = mix(@pp-tab-v1-background,@pp-tab-v1-active-background)
+	nav-tabs-active-link-hover-color = contrast(@pp-tab-v1-background)
+	nav-tabs-active-link-hover-bg = @pp-tab-v1-active-background
+	nav-tabs-active-link-hover-border-color = @pp-tab-v1-border-color
+	nav-tabs-border-color = @pp-tab-v1-border-color
+	nav-tabs-link-hover-border-color = mix(@pp-tab-v1-background,@pp-tab-v1-border-color)
 
 	navbar-default-bg = #e8e8e8
 	navbar-default-link-color = lighten(@navbar-default-link-active-color,15%)
@@ -275,7 +275,7 @@ pizpalue.features {
 	# cat=pizpalue:customer/1510/0010; type=boolean; label=Use style:If selected a style sheet will be included
 	useStyle = 1
 
-	# cat=pizpalue:customer/1510/0110; type=boolean; label=Use CE animation:If selected a content element animation will be availabe (js,css)
+	# cat=pizpalue:customer/1510/0110; type=boolean; label=Use CE animation:If selected a content element animation will be availabe (js,css - not implemented yet)
 	useCeAnimation = 0
 
 	# cat=pizpalue:customer/1510/0120; type=boolean; label=Use CE scroll animation:If selected a content element scroll animation will be included (js,css)
@@ -303,19 +303,3 @@ plugin {
 		languageTitle = 1
 	}
 }
-
-
-# ---------------------------------------------------------- #
-# design
-# ---------------------------------------------------------- #
-
-[treeLevel = 0]
-page.theme.navigationstyle = default-transition
-page.theme.navigationtype = top
-[end]
-
-# under construction page
-[page|uid = 59]
-page.theme.navigationstyle = default-transition
-page.theme.navigationtype = top
-[end]

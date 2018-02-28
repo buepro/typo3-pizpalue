@@ -1,74 +1,74 @@
 html {
-	font-size: 100%;
-	// rem ~ px -> has impact on list indents
+    font-size: 100%;
+    // rem ~ px -> has impact on list indents
 }
 
 .scroll-top {
-	background: fade(black, 30%);
-	border: fade(white, 30%) 1px solid;
-	border-radius: 5px;
-	right: 10px;
-	bottom: 10px;
-	width: 2.5em;
-	height: 2.5em;
+    background: fade(black, 30%);
+    border: fade(white, 30%) 1px solid;
+    border-radius: 5px;
+    right: 10px;
+    bottom: 10px;
+    width: 2.5em;
+    height: 2.5em;
 }
 
 figure {
-	margin-bottom: 1.7em;
+    margin-bottom: 1.7em;
 }
 
 .frame-pp1, .frame-pp2, .frame-pp3 {
-	border: 1px;
-	border-radius: @border-radius-base;
-	padding: 1em;
+    border: 1px;
+    border-radius: @border-radius-base;
+    padding: 1em;
 }
 
 .frame-pp1 {
-	border-color: @brand-primary;
-	background: tint(@brand-primary, 30%);
-	background: linear-gradient(20deg, tint(@brand-primary, 50%), tint(@brand-primary, 80%));
-	&, h1, h2, h3, h4, h5, h6 {
-		color: contrast(tint(@brand-primary, 65%));
-	}
-	a {
-		color: spin(@brand-primary,180);
-	}
+    border-color: @brand-primary;
+    background: tint(@brand-primary, 30%);
+    background: linear-gradient(20deg, tint(@brand-primary, 50%), tint(@brand-primary, 80%));
+    &, h1, h2, h3, h4, h5, h6 {
+        color: contrast(tint(@brand-primary, 65%));
+    }
+    a {
+        color: spin(@brand-primary,180);
+    }
 }
 
 .frame-pp2 {
-	border-color: @brand-secundary;
-	background: tint(@brand-secundary, 30%);
-	background: linear-gradient(20deg, tint(@brand-secundary, 50%), tint(@brand-secundary, 80%));
-	&, h1, h2, h3, h4, h5, h6 {
-		color: contrast(tint(@brand-secundary, 65%));
-	}
+    border-color: @brand-secundary;
+    background: tint(@brand-secundary, 30%);
+    background: linear-gradient(20deg, tint(@brand-secundary, 50%), tint(@brand-secundary, 80%));
+    &, h1, h2, h3, h4, h5, h6 {
+        color: contrast(tint(@brand-secundary, 65%));
+    }
 }
 
 .frame-pp3 {
-	border-color: @brand-complementary;
-	background: tint(@brand-complementary, 30%);
-	background: linear-gradient(20deg, tint(@brand-complementary, 50%), tint(@brand-complementary, 80%));
-	&, h1, h2, h3, h4, h5, h6 {
-		color: contrast(tint(@brand-complementary, 65%));
-	}
+    border-color: @brand-complementary;
+    background: tint(@brand-complementary, 30%);
+    background: linear-gradient(20deg, tint(@brand-complementary, 50%), tint(@brand-complementary, 80%));
+    &, h1, h2, h3, h4, h5, h6 {
+        color: contrast(tint(@brand-complementary, 65%));
+    }
 }
 
 footer .section {
-	padding-top: 2em;
-	padding-bottom: 2em;
-	a, .language-menu .active a {
-		font-weight: normal;
-		color: lighten(@brand-primary, 10%);
-		&:hover {
-			color: lighten(@brand-primary, 50%);
-			text-decoration: none;
-		}
-	}
+    padding-top: 2em;
+    padding-bottom: 2em;
+    a, .language-menu .active a {
+        font-weight: normal;
+        color: lighten(@brand-primary, 10%);
+        &:hover {
+            color: lighten(@brand-primary, 50%);
+            text-decoration: none;
+        }
+    }
 }
 
 img.pp-nolazyload {
-	opacity: 1 !important;
-	transition: all 0s ease 0s !important;
+    opacity: 1 !important;
+    transition: all 0s ease 0s !important;
 }
 
 
@@ -81,15 +81,15 @@ img.pp-nolazyload {
 /* @screen-lg-min: 1200px */
 
 @media screen and (max-width: @screen-xs-max) {
-	figure {
-		> img, a > img {
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-	.footer-section-content {
-		.text-center, .text-right {
-			text-align: left;
-		}
-	}
+    figure {
+        > img, a > img {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    .footer-section-content {
+        .text-center, .text-right {
+            text-align: left;
+        }
+    }
 }
