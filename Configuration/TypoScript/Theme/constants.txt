@@ -18,7 +18,7 @@ page.theme.navigationtype = top
 # appicons
 # ---------------------------------------------------------- #
 
-bpsynplate.appIcon {
+pizpalue.appIcon {
 
     headerData (
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=zXd0483NpM">
