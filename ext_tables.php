@@ -36,7 +36,7 @@ if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package'])
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY,
     'Extensions/powermail/3.7.0/Configuration/TypoScript', 'Pizpalue - powermail 3.7.0');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Extensions/news/Configuration/TypoScript',
-    'Pizpalue - news 6.0.0');
+    'Pizpalue - news 6.1.1');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY,
     'Extensions/newsslider/Configuration/TypoScript', 'Pizpalue - newsslider 2.0.1');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY,
