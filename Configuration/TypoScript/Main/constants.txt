@@ -93,12 +93,15 @@ page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
 plugin.bootstrap_package.settings.less {
 	# cat=pizpalue:customer/1030/0010; type=string; label=Primary brand color
 	brand-primary = #1E9A00
+	brand-primary = #4C86B2
 
 	# cat=pizpalue:customer/1030/0020; type=string; label=Secundary brand color
 	brand-secundary = #5300FF
+	brand-secundary = #4A639B
 
 	# cat=pizpalue:customer/1030/0030; type=string; label=Complementary brand color
 	brand-complementary = #FF0000
+	brand-complementary = #4898A8
 
 	// cat=pizpalue:customer/1030/0110; type=string; label=Register tabs bar background color
 	pp-tab-v1-background = @gray-lighter
