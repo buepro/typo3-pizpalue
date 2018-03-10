@@ -1,0 +1,2 @@
+page.theme.navigationstyle = default-transition
+page.theme.navigationtype = top
