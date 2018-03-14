@@ -1,20 +1,23 @@
 {
-  "name": "typo3/cms-pizpalue",
+  "name": "buepro/pizpalue",
   "type": "typo3-cms-extension",
   "description": "TYPO3 Piz Palue Package",
+  "keywords": [
+    "TYPO3",
+    "distribution",
+    "piz palue"
+  ],
   "homepage": "https://typo3.org",
   "license": ["GPL-2.0+"],
-
   "require": {
     "typo3/cms-core": "~8.7.0",
-    "typo3-ter/bootstrap-package": "8.0.2",
+    "typo3-ter/bootstrap-package": "~8.0.6",
     "typo3-ter/static-info-tables": "~6.5.1",
-    "typo3-ter/vhs": "~4.3.3",
-    "typo3-ter/realurl": "~2.3.2",
+    "typo3-ter/vhs": "~4.4.0",
     "typo3-ter/dd-googlesitemap": "~2.1.4",
     "typo3-ter/gridelements": "8.0.0",
     "typo3-ter/bootstrap-grids": "1.4.0",
-    "typo3-ter/sr-language-menu": "~6.4.2-6.4.3",
+    "typo3-ter/sr-language-menu": "~6.4.3",
     "typo3-ter/news": "~6.3.0",
     "typo3-ter/brt-videourlreplace": "~1.2.4",
     "typo3-ter/slickcarousel": "~2.0.0",
