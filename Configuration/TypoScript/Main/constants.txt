@@ -211,7 +211,18 @@ page.theme {
 pizpalue.appIcon {
 
 	#cat=pizpalue:customer/1110/010; type=string; label=Header data to be inserted:Create the resources externally (e.g. realfavicongenerator.net) and copy the nedded header data here. To get nicer source code paste the code into the constant editor.
-	headerData =
+	headerData (
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=eE5ARl4rRK">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=eE5ARl4rRK">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=eE5ARl4rRK">
+<link rel="manifest" href="/site.webmanifest?v=eE5ARl4rRK">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=eE5ARl4rRK" color="#4c86b2">
+<link rel="shortcut icon" href="/favicon.ico?v=eE5ARl4rRK">
+<meta name="apple-mobile-web-app-title" content="Piz Pal&uuml;">
+<meta name="application-name" content="Piz Pal&uuml;">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#4c86b2">
+	)
 
 	#cat=pizpalue:customer/1110/030; type=boolean; label=Insert meta tags
 	insertMetaTags = 0
