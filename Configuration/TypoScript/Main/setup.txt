@@ -95,9 +95,6 @@ page {
 
 }
 
-popup {
-    includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family={$pizpalue.general.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
-}
 
 [globalString = LIT:1 = {$pizpalue.menu.language.enable}]
 # href link tag for search engines
