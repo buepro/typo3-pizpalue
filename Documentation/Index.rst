@@ -1,10 +1,10 @@
+.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
+
 .. include:: Includes.txt
 
-
-.. Usually we define 'php' as default highlight language in Includes.txt.
-With the following 'highlight' directive we switch to reStructuredText as default highlight language.
-
-.. highlight:: rst
 
 .. _start:
 
@@ -14,52 +14,45 @@ pizpalue
 
 .. only:: html
 
-    :Classification:
-		        pizpalue
+	:Classification:
+		pizpalue
 
-		    :Version:
-		        |release|
+	:Version:
+		|release|
 
-    :Language:
-		        en
+	:Language:
+		en
 
-		    :Description:
-		        Manual covering TYPO3 extension pizpalue
+	:Description:
+		Provides information regarding distribution pizpalue
 
-		    :Keywords:
-		        distribution, bootstrap, bootstrap_package
+	:Keywords:
+		distribution, bootstrap, bootstrap_package
 
-		    :Copyright:
-		        2017
+	:Copyright:
+		2017
 
-		    :Author:
-		        Roman Büchler
+	:Author:
+		Roman Büchler
 
-		    :Email:
-		        rb@buechler.pro
+	:Email:
+		rb@buechler.pro
 
-		    :License:
-		        This document is published under the Open Content License
-		        available from http://www.opencontent.org/opl.shtml
+	:License:
+		This document is published under the Open Content License
+		available from http://www.opencontent.org/opl.shtml
 
-    :Rendered:
-		        |today|
+	:Rendered:
+		|today|
 
-    The content of this document is related to TYPO3,
-    a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
+	The content of this document is related to TYPO3,
+	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
 
 
 **Table of Contents**
 
 .. toctree::
-:maxdepth: 3
-	   :titlesonly:
+	:hidden:
+	:maxdepth: 1
 
-		   Introduction/Index
-		   User/Index
-		   Administrator/Index
-		   Configuration/Index
-		   Developer/Index
-		   References/Index
-
-
+	Introduction/Index

@@ -21,6 +21,8 @@ might be presented in galleries or sliders.
 
 Furthermore everything is on board to start search engine optimization.
 
+Discover the functionality at the `demo site <https://www.pizpalue.buechler.pro/>`__.
+
 Take advantage from the strong TYPO3 community and go for a flexible and independent
 web site.
 
@@ -55,9 +57,32 @@ Screenshots
 This chapter should help people figure how the extension works. Remove it
 if not relevant.
 
-.. figure:: ../Images/Introduction/WebsiteLanding.png
-	:width: 500px
+.. figure:: ../Images/Introduction/PizPalue_LandingPage.jpg
+   :width: 500px
    :alt: Website landing page
 
-		   Website landing page
+   Website landing page
 
+----
+
+.. figure:: ../Images/Introduction/PizPalue_NewsPage.jpg
+   :width: 500px
+   :alt: Page embedding news
+
+   Page embedding news
+
+----
+
+.. figure:: ../Images/Introduction/PizPalue_ScrollAnimationPage.jpg
+   :width: 500px
+   :alt: Page embedding scroll animated content
+
+   Page embedding scroll animated content
+
+----
+
+.. figure:: ../Images/Introduction/PizPalue_FlexContentWidthPage.jpg
+   :width: 500px
+   :alt: Page embedding contents covering entire page width
+
+   Page embedding contents covering entire page width
