@@ -1,8 +1,11 @@
 <?php
 
-########################################################################
-# Extension Manager/Repository config file for ext "pizpalue".
-########################################################################
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'Piz Palü Distribution',
