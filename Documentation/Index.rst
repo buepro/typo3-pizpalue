@@ -23,11 +23,8 @@ pizpalue
 	:Language:
 		en
 
-	:Description:
-		Provides information regarding distribution pizpalue
-
 	:Keywords:
-		distribution, bootstrap, bootstrap_package
+		piz palü, pizpalue, distribution, bootstrap, bootstrap_package
 
 	:Copyright:
 		2017
@@ -46,13 +43,14 @@ pizpalue
 		|today|
 
 	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`_.
+	a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`__.
 
 
-**Table of Contents**
+Table of Contents
+=================
 
 .. toctree::
-	:hidden:
-	:maxdepth: 1
+	:maxdepth: 2
 
 	Introduction/Index
+	User/Index
