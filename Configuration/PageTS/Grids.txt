@@ -20,7 +20,7 @@ tx_gridelements {
             flexformDS = FILE:EXT:pizpalue/Configuration/FlexForm/PpContainerFixed.xml
         }
         ppContainer {
-            title = Full width ontainer
+            title = Full width container
             description = Provides container covering the entire screen width
             iconIdentifier = tx-pizpalue-ppContainer
             frame = 0
