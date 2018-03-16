@@ -13,7 +13,7 @@ $EM_CONF[$_EXTKEY] = [
                             . 'It is tailored for the Swiss market featuring German as default language and additional '
                             . 'translations to French and English.',
     'category'         => 'distribution',
-    'version'          => '8.2.8',
+    'version'          => '8.2.9',
     'state'            => 'stable',
     'clearcacheonload' => 1,
     'author'           => 'Roman Büchler',
