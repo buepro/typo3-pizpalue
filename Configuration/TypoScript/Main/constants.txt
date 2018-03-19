@@ -34,59 +34,6 @@ plugin.bootstrap_package_contentelements {
 
 
 # ---------------------------------------------------------- #
-# general
-# ---------------------------------------------------------- #
-
-pizpalue.general {
-	# cat=pizpalue:general/1000/0010; type=string; label=Date format
-	dateFormat = d.m.Y
-
-	# cat=pizpalue:general/1000/0020; type=string; label=Time format
-	timeFormat = H:i
-
-	# cat=pizpalue:general/1000/0030; type=string; label=Datetime format
-	dateTimeFormat = d.m.Y H:i
-
-	# cat=pizpalue:general/1000/0040; type=options[Lora=Lora, Merriweather=Merriweather, Raleway=Raleway, Roboto=Roboto, Source Sans Pro=Source+Sans+Pro, Ubuntu=Ubuntu]; label=Google Webfont:The webfont being included (set as for bootstrap_package)
-	google-webfont = Source+Sans+Pro
-}
-
-
-# ---------------------------------------------------------- #
-# agency
-# ---------------------------------------------------------- #
-
-pizpalue.agency {
-	# cat=pizpalue:agency/1010/0010; type=string; label=Agency reference:HTML used to create a reference to the agency
-	reference = <span class="pp-agency-reference">Eine Webseite von <a href="https://www.buechler.pro" target="_blank">buechler.pro</a></span>
-
-	# cat=pizpalue:agency/1010/0900; type=options[Production=production,Setup=setup]; label=Page state
-	pageState = production
-}
-
-
-# ---------------------------------------------------------- #
-# customer
-# ---------------------------------------------------------- #
-
-pizpalue.customer {
-	# cat=pizpalue:customer/1020/0010; type=string; label=Common customer name
-	commonName = Allgemeiner Kundenname
-
-	# cat=pizpalue:customer/1020/0014; type=string; label=Common customer email
-	commonEmail =
-
-	# cat=pizpalue:customer/1020/0018; type=string; label=Domain name
-	domain =
-
-	# cat=pizpalue:customer/1020/0080; type=string; label=Copyright text
-	copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
-}
-
-page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
-
-
-# ---------------------------------------------------------- #
 # colors
 # ---------------------------------------------------------- #
 
@@ -315,3 +262,56 @@ plugin {
 		languageTitle = 1
 	}
 }
+
+
+# ---------------------------------------------------------- #
+# general
+# ---------------------------------------------------------- #
+
+pizpalue.general {
+	# cat=pizpalue:general/1000/0010; type=string; label=Date format
+	dateFormat = d.m.Y
+
+	# cat=pizpalue:general/1000/0020; type=string; label=Time format
+	timeFormat = H:i
+
+	# cat=pizpalue:general/1000/0030; type=string; label=Datetime format
+	dateTimeFormat = d.m.Y H:i
+
+	# cat=pizpalue:general/1000/0040; type=options[Lora=Lora, Merriweather=Merriweather, Raleway=Raleway, Roboto=Roboto, Source Sans Pro=Source+Sans+Pro, Ubuntu=Ubuntu]; label=Google Webfont:The webfont being included (set as for bootstrap_package)
+	google-webfont = Source+Sans+Pro
+}
+
+
+# ---------------------------------------------------------- #
+# agency
+# ---------------------------------------------------------- #
+
+pizpalue.agency {
+	# cat=pizpalue:agency/1010/0010; type=string; label=Agency reference:HTML used to create a reference to the agency
+	reference = <span class="pp-agency-reference">Eine Webseite von <a href="https://www.buechler.pro" target="_blank">buechler.pro</a></span>
+
+	# cat=pizpalue:agency/1010/0900; type=options[Production=production,Setup=setup]; label=Page state
+	pageState = production
+}
+
+
+# ---------------------------------------------------------- #
+# customer
+# ---------------------------------------------------------- #
+
+pizpalue.customer {
+	# cat=pizpalue:customer/1020/0010; type=string; label=Common customer name
+	commonName = Allgemeiner Kundenname
+
+	# cat=pizpalue:customer/1020/0014; type=string; label=Common customer email
+	commonEmail =
+
+	# cat=pizpalue:customer/1020/0018; type=string; label=Domain name
+	domain =
+
+	# cat=pizpalue:customer/1020/0080; type=string; label=Copyright text
+	copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
+}
+
+page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
