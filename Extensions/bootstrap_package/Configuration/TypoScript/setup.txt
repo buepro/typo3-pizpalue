@@ -21,9 +21,9 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 1
 #=============#
 
 page {
-    includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family={$pizpalue.general.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
+    includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family={$pizpalue.style.google-webfontfamily}
 }
 
 popup {
-    includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family={$pizpalue.general.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
+    includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family={$pizpalue.style.google-webfontfamily}
 }

@@ -1,30 +1,10 @@
 # ---------------------------------------------------------- #
-# templates
-# ---------------------------------------------------------- #
-page {
-	fluidtemplate {
-		#layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/Page/
-		partialRootPath = EXT:pizpalue/Resources/Private/Partials/Page/
-		templateRootPath = EXT:pizpalue/Resources/Private/Templates/Page/
-	}
-}
-
-plugin.bootstrap_package_contentelements {
-	view {
-		#layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/ContentElements/
-		partialRootPath = EXT:pizpalue/Resources/Private/Partials/ContentElements/
-		#templateRootPath = EXT:pizpalue/Resources/Private/Templates/ContentElements/
-	}
-}
-
-
-# ---------------------------------------------------------- #
 # subcategories
 # ---------------------------------------------------------- #
 # customsubcategory=1000=General
 # customsubcategory=1010=Agency
 # customsubcategory=1020=Customer
-# customsubcategory=1030=Colors
+# customsubcategory=1030=Style
 # customsubcategory=1040=Logo
 # customsubcategory=1060=Menu
 # customsubcategory=1110=Appicon
@@ -34,10 +14,23 @@ plugin.bootstrap_package_contentelements {
 
 
 # ---------------------------------------------------------- #
-# colors
+# style (colors, font)
+# ---------------------------------------------------------- #
+#
+# attention: subcategory assignment only works when the
+#            constants are sequentially listed as in the
+#            origianl file (EXT:bootstrap_package/..
+#            /constants.txt) and this block comes first.
+#
 # ---------------------------------------------------------- #
 
 plugin.bootstrap_package.settings.less {
+    # cat=pizpalue:customer/1030/0110; type=string; label=Google Webfont
+    google-webfont = Source Sans Pro
+
+    # cat=pizpalue:customer/1030/0120; type=string; label=Google Webfont Weights: Comma separated list of font weights
+    google-webfont-weight = 300,400,700
+
 	# cat=pizpalue:customer/1030/0010; type=string; label=Primary brand color
 	brand-primary = #4C86B2
 
@@ -47,13 +40,13 @@ plugin.bootstrap_package.settings.less {
 	# cat=pizpalue:customer/1030/0030; type=string; label=Complementary brand color
 	brand-complementary = #4898A8
 
-	// cat=pizpalue:customer/1030/0110; type=string; label=Register tabs bar background color
+	# cat=pizpalue:customer advanced/1030/1110; type=string; label=Register tabs bar background color
 	pp-tab-v1-background = @gray-lighter
 
-	// cat=pizpalue:customer/1030/0120; type=string; label=Active register background color
+	# cat=pizpalue:customer advanced/1030/1120; type=string; label=Active register background color
 	pp-tab-v1-active-background = #fff
 
-	// cat=pizpalue:customer/1030/0110; type=string; label=Register border color
+	# cat=pizpalue:customer advanced/1030/1130; type=string; label=Register border color
 	pp-tab-v1-border-color = #ddd
 
 	pp-tab-v1-background-hover = mix(@pp-tab-v1-background,@pp-tab-v1-active-background)
@@ -67,11 +60,60 @@ plugin.bootstrap_package.settings.less {
 	navbar-default-link-color = lighten(@navbar-default-link-active-color,15%)
 }
 
-pizpalue.colors {
-	brand-primary = {$plugin.bootstrap_package.settings.less.brand-primary}
-	brand-secundary = {$plugin.bootstrap_package.settings.less.brand-secundary}
-	brand-complementary = {$plugin.bootstrap_package.settings.less.brand-complementary}
+pizpalue.style {
+    # cat=pizpalue:customer advanced/1030/1130; type=string; label=Google Webfont family declaration: Alter in case more than one font family are used
+    google-webfontfamily = {$plugin.bootstrap_package.settings.less.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
 }
+
+
+# ---------------------------------------------------------- #
+# general
+# ---------------------------------------------------------- #
+
+pizpalue.general {
+	# cat=pizpalue:general/1000/0010; type=string; label=Date format
+	dateFormat = d.m.Y
+
+	# cat=pizpalue:general/1000/0020; type=string; label=Time format
+	timeFormat = H:i
+
+	# cat=pizpalue:general/1000/0030; type=string; label=Datetime format
+	dateTimeFormat = d.m.Y H:i
+}
+
+
+# ---------------------------------------------------------- #
+# agency
+# ---------------------------------------------------------- #
+
+pizpalue.agency {
+	# cat=pizpalue:agency/1010/0010; type=string; label=Agency reference:HTML used to create a reference to the agency
+	reference = <span class="pp-agency-reference">Eine Webseite von <a href="https://www.buechler.pro" title="buechler.pro | TYPO3-Webseiten ohne Grenzen, SEO, Informatik" target="_blank">buechler.pro</a></span>
+
+	# cat=pizpalue:agency/1010/0900; type=options[Production=production,Setup=setup]; label=Page state
+	pageState = production
+}
+
+
+# ---------------------------------------------------------- #
+# customer
+# ---------------------------------------------------------- #
+
+pizpalue.customer {
+	# cat=pizpalue:customer/1020/0010; type=string; label=Common customer name
+	commonName = Allgemeiner Kundenname
+
+	# cat=pizpalue:customer/1020/0014; type=string; label=Common customer email
+	commonEmail =
+
+	# cat=pizpalue:customer/1020/0018; type=string; label=Domain name
+	domain =
+
+	# cat=pizpalue:customer/1020/0080; type=string; label=Copyright text
+	copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
+}
+
+page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
 
 
 # ---------------------------------------------------------- #
@@ -265,53 +307,21 @@ plugin {
 
 
 # ---------------------------------------------------------- #
-# general
+# templates
 # ---------------------------------------------------------- #
-
-pizpalue.general {
-	# cat=pizpalue:general/1000/0010; type=string; label=Date format
-	dateFormat = d.m.Y
-
-	# cat=pizpalue:general/1000/0020; type=string; label=Time format
-	timeFormat = H:i
-
-	# cat=pizpalue:general/1000/0030; type=string; label=Datetime format
-	dateTimeFormat = d.m.Y H:i
-
-	# cat=pizpalue:general/1000/0040; type=options[Lora=Lora, Merriweather=Merriweather, Raleway=Raleway, Roboto=Roboto, Source Sans Pro=Source+Sans+Pro, Ubuntu=Ubuntu]; label=Google Webfont:The webfont being included (set as for bootstrap_package)
-	google-webfont = Source+Sans+Pro
+page {
+	fluidtemplate {
+		#layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/Page/
+		partialRootPath = EXT:pizpalue/Resources/Private/Partials/Page/
+		templateRootPath = EXT:pizpalue/Resources/Private/Templates/Page/
+	}
 }
 
-
-# ---------------------------------------------------------- #
-# agency
-# ---------------------------------------------------------- #
-
-pizpalue.agency {
-	# cat=pizpalue:agency/1010/0010; type=string; label=Agency reference:HTML used to create a reference to the agency
-	reference = <span class="pp-agency-reference">Eine Webseite von <a href="https://www.buechler.pro" target="_blank">buechler.pro</a></span>
-
-	# cat=pizpalue:agency/1010/0900; type=options[Production=production,Setup=setup]; label=Page state
-	pageState = production
+plugin.bootstrap_package_contentelements {
+	view {
+		#layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/ContentElements/
+		partialRootPath = EXT:pizpalue/Resources/Private/Partials/ContentElements/
+		#templateRootPath = EXT:pizpalue/Resources/Private/Templates/ContentElements/
+	}
 }
 
-
-# ---------------------------------------------------------- #
-# customer
-# ---------------------------------------------------------- #
-
-pizpalue.customer {
-	# cat=pizpalue:customer/1020/0010; type=string; label=Common customer name
-	commonName = Allgemeiner Kundenname
-
-	# cat=pizpalue:customer/1020/0014; type=string; label=Common customer email
-	commonEmail =
-
-	# cat=pizpalue:customer/1020/0018; type=string; label=Domain name
-	domain =
-
-	# cat=pizpalue:customer/1020/0080; type=string; label=Copyright text
-	copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
-}
-
-page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
