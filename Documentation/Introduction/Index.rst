@@ -54,8 +54,10 @@ web site.
 Screenshots
 -----------
 
-This chapter should help people figure how the extension works. Remove it
-if not relevant.
+Landing page
+............
+
+`See example <https://www.pizpalue.buechler.pro/>`__
 
 .. figure:: ../Images/Introduction/PizPalue_LandingPage.jpg
    :width: 500px
@@ -65,6 +67,11 @@ if not relevant.
 
 ----
 
+News embedding
+..............
+
+`See example <https://www.pizpalue.buechler.pro/das-plus/news/>`__
+
 .. figure:: ../Images/Introduction/PizPalue_NewsPage.jpg
    :width: 500px
    :alt: Page embedding news
@@ -73,6 +80,11 @@ if not relevant.
 
 ----
 
+Scroll animation
+................
+
+`See example <https://www.pizpalue.buechler.pro/das-plus/stilergaenzungen/>`__
+
 .. figure:: ../Images/Introduction/PizPalue_ScrollAnimationPage.jpg
    :width: 500px
    :alt: Page embedding scroll animated content
@@ -80,6 +92,11 @@ if not relevant.
    Page embedding scroll animated content
 
 ----
+
+Flexible content width
+......................
+
+`See example <https://www.pizpalue.buechler.pro/das-plus/flexible-inhaltsbreite/>`__
 
 .. figure:: ../Images/Introduction/PizPalue_FlexContentWidthPage.jpg
    :width: 500px

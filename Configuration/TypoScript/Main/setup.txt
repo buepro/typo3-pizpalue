@@ -145,6 +145,6 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
 #=========================================================#
 # development settings (see ext_typoscript_constants.txt) #
 #=========================================================#
-[globalString = LIT:setup = {$pizpalue.agency.pageState}]
+[globalString = LIT:1 = {$pizpalue.agency.isDebugMode}]
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/setup.txt">
 [global]
