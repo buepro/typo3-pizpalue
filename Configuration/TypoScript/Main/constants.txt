@@ -373,6 +373,8 @@ styles.content.loginform.dateFormat = {$pizpalue.general.dateTimeFormat}
 # plugins
 # ---------------------------------------------------------- #
 plugin {
+	tx_indexedsearch.settings.rootPidList = -1
+
 	bootstrap_package_contentelements.header.defaultHeaderType = 1
 
 	tx_srlanguagemenu {
