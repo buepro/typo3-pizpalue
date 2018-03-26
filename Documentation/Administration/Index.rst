@@ -16,7 +16,7 @@ During development or maintenance phase two actions might be of interest:
 #. Show under construction page
 #. Enable code debugging
 
-To temporarily show an under construction page the page "In Arbeit" might be
+To temporarily show an under construction page the page "Baustelle" might be
 moved before the root page where the code debugging can be enabled by activating
 the debug mode in the "PIZPALUE: AGENCY" category from the constant editor.
 
