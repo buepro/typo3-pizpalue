@@ -1,36 +1,19 @@
 .pp-social-link {
 	white-space: nowrap;
+	transition: color 0.7s;
 }
 
-.pp-social-icon {
-	width: 32px;
-	line-height: 32px;
-	display: inline-block;
-	box-sizing: content-box;
-	margin: 0 0.3em -0.7em 0.3em;
-	text-indent: 100px;
-	overflow: hidden;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 100%;
-	transition: background-size 1s;
-	&:hover {
-		background-size: 120%;
+.pp-ion-social-bar {
+	padding: 0;
+	font-size: 28px;
+	line-height: 28px;
+	li {
+		margin: 0 0.2em;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
 	}
-}
-
-.pp-facebook-white {
-	background-image: url(../../../Contrib/NickLa/images/white_facebook.png);
-}
-
-.pp-twitterbird-white {
-	background-image: url(../../../Contrib/NickLa/images/white_twitter_bird.png);
-}
-
-.pp-linkedin-white {
-	background-image: url(../../../Contrib/NickLa/images/white_linkedin.png);
-}
-
-.pp-pinterest-white {
-	background-image: url(../../../Contrib/NickLa/images/white_pinterest.png);
 }
