@@ -27,3 +27,17 @@ You might follow these steps to setup seo features:
    :alt: SEO related constants in "PIZPALUE CUSTOMER" category
 
    SEO related constants in "PIZPALUE CUSTOMER" category
+
+.. _404:
+
+404-Handling
+------------
+
+The 404-handling can be configured in the install tool. An example configuration might look as following:
+
+========================================== ===================================================
+Parameter                                  Value
+========================================== ===================================================
+[FE][pageNotFound_handling]                REDIRECT:https://www.pizpalue.buechler.pro/404/
+[FE][pageNotFound_handling_statheader]     HTTP/1.0 404 Not Found
+========================================== ===================================================

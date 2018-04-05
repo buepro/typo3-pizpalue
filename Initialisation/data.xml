@@ -10,7 +10,7 @@
 			<packager_name></packager_name>
 			<packager_email></packager_email>
 			<TYPO3_version>8.7.10</TYPO3_version>
-			<created>Thursday 22. March 2018</created>
+			<created>Wednesday  4. April 2018</created>
 		</meta>
 		<static_tables index="relStaticTables" type="array"></static_tables>
 		<excludeMap type="array"></excludeMap>
@@ -1457,7 +1457,7 @@
 					<uid>175</uid>
 					<pid>1</pid>
 					<title>Kundenvernetzung</title>
-					<size>3895</size>
+					<size>4143</size>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array">
 						<softref_element index="bodytext:typolink_tag:1" type="array">
@@ -1502,6 +1502,17 @@
 								<type>external</type>
 								<tokenID>d842bec65358d39ddad769f7d1a7d73b</tokenID>
 								<tokenValue>https://www.pinterest.com/</tokenValue>
+							</subst>
+						</softref_element>
+						<softref_element index="bodytext:typolink_tag:9" type="array">
+							<field>bodytext</field>
+							<spKey>typolink_tag</spKey>
+							<url>https://www.instagram.com</url>
+							<type>url</type>
+							<subst type="array">
+								<type>external</type>
+								<tokenID>1875c168e9804f724ee82977ff828645</tokenID>
+								<tokenValue>https://www.instagram.com</tokenValue>
 							</subst>
 						</softref_element>
 					</softrefs>
@@ -8486,7 +8497,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1521733642</field>
+				<field index="tstamp" type="integer">1522832512</field>
 				<field index="sorting" type="integer">256</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="perms_userid" type="integer">1</field>
@@ -8522,7 +8533,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description">Diese Webseite dient als Basis, um professionelle TYPO3-Webseiten zu erstellen. Dank der sorgfältigen Einbindung von Erweiterungen können Inhalte ansprechend präsentiert und leicht verwaltet werden.</field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1521733642</field>
+				<field index="SYS_LASTCHANGED" type="integer">1522832512</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -8541,7 +8552,7 @@
 				<field index="tsconfig_includes">EXT:bootstrap_package/Configuration/PageTS/Feature/Ionicons.txt,EXT:pizpalue/Configuration/PageTS/Grids.txt,EXT:pizpalue/Configuration/PageTS/CE.txt,EXT:pizpalue/Extensions/news/Configuration/PageTS/General.txt</field>
 				<field index="tx_impexp_origuid" type="integer">1</field>
 				<field index="categories" type="integer">0</field>
-				<field index="tx_ddgooglesitemap_lastmod">1521731890,1521733279,1521733565,1521733610,1521733642</field>
+				<field index="tx_ddgooglesitemap_lastmod">1521733279,1521733565,1521733610,1521733642,1522832512</field>
 				<field index="tx_ddgooglesitemap_priority" type="integer">5</field>
 				<field index="tx_ddgooglesitemap_change_frequency"></field>
 				<field index="tx_realurl_pathsegment"></field>
@@ -9842,7 +9853,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1519671680</field>
+				<field index="tstamp" type="integer">1522832512</field>
 				<field index="crdate" type="integer">1495207768</field>
 				<field index="cruser_id" type="integer">1</field>
 				<field index="editlock" type="integer">0</field>
@@ -9853,7 +9864,7 @@
 				<field index="header_position"></field>
 				<field index="rowDescription" type="NULL"></field>
 				<field index="bodytext">&lt;p class=&quot;text-center&quot;&gt;Kundenvernetzung (soziale Vernetzung)&lt;/p&gt;
-&lt;p class=&quot;text-center&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;https://www.facebook.com/&quot;&gt;&lt;span class=&quot;pp-social-icon pp-facebook-white&quot;&gt;Facebookicon&lt;/span&gt;&lt;/a&gt;  &lt;a class=&quot;pp-social-link&quot; href=&quot;https://twitter.com/&quot;&gt;&lt;span class=&quot;pp-social-icon pp-twitterbird-white&quot;&gt;Twitterbirdicon&lt;/span&gt;&lt;/a&gt;  &lt;a class=&quot;pp-social-link&quot; href=&quot;https://www.linkedin.com/&quot;&gt;&lt;span class=&quot;pp-social-icon pp-linkedin-white&quot;&gt;Linkedinicon&lt;/span&gt;&lt;/a&gt;  &lt;a class=&quot;pp-social-link&quot; href=&quot;https://www.pinterest.com/&quot;&gt;&lt;span class=&quot;pp-social-icon pp-pinterest-white&quot;&gt;Pinteresticon&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;</field>
+&lt;ul class=&quot;text-center pp-ion-social-bar&quot;&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;https://www.facebook.com/&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-facebook&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;https://twitter.com/&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-twitter&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;https://www.linkedin.com/&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-linkedin&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;https://www.pinterest.com/&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-pinterest&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;https://www.instagram.com&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-instagram&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;</field>
 				<field index="bullets_type" type="integer">0</field>
 				<field index="uploads_description" type="integer">0</field>
 				<field index="uploads_type" type="integer">0</field>
@@ -9980,10 +9991,19 @@
 										<tokenValue>https://www.pinterest.com/</tokenValue>
 									</subst>
 								</softref_element>
+								<softref_element index="9" type="array">
+									<url>https://www.instagram.com</url>
+									<type>url</type>
+									<subst type="array">
+										<type>external</type>
+										<tokenID>1875c168e9804f724ee82977ff828645</tokenID>
+										<tokenValue>https://www.instagram.com</tokenValue>
+									</subst>
+								</softref_element>
 							</softref_key>
 						</keys>
 						<tokenizedContent>&lt;p class=&quot;text-center&quot;&gt;Kundenvernetzung (soziale Vernetzung)&lt;/p&gt;
-&lt;p class=&quot;text-center&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:2439f007131caa7735b9f6003c69422a}&quot;&gt;&lt;span class=&quot;pp-social-icon pp-facebook-white&quot;&gt;Facebookicon&lt;/span&gt;&lt;/a&gt;  &lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:067b133759aba063cfe50d4a8bb63f2f}&quot;&gt;&lt;span class=&quot;pp-social-icon pp-twitterbird-white&quot;&gt;Twitterbirdicon&lt;/span&gt;&lt;/a&gt;  &lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:e7eb4d406380f67564e965c9085b6769}&quot;&gt;&lt;span class=&quot;pp-social-icon pp-linkedin-white&quot;&gt;Linkedinicon&lt;/span&gt;&lt;/a&gt;  &lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:d842bec65358d39ddad769f7d1a7d73b}&quot;&gt;&lt;span class=&quot;pp-social-icon pp-pinterest-white&quot;&gt;Pinteresticon&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;</tokenizedContent>
+&lt;ul class=&quot;text-center pp-ion-social-bar&quot;&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:2439f007131caa7735b9f6003c69422a}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-facebook&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:067b133759aba063cfe50d4a8bb63f2f}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-twitter&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:e7eb4d406380f67564e965c9085b6769}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-linkedin&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:d842bec65358d39ddad769f7d1a7d73b}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-pinterest&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:1875c168e9804f724ee82977ff828645}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-instagram&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;</tokenizedContent>
 					</softrefs>
 				</field>
 			</related>
@@ -26302,7 +26322,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">1</field>
-				<field index="SYS_LASTCHANGED" type="integer">1521732087</field>
+				<field index="SYS_LASTCHANGED" type="integer">1521734895</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>

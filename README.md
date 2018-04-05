@@ -13,7 +13,7 @@ Furthermore everything is on board to start search engine optimization.
 Take advantage from the strong TYPO3 community and go for a flexible and independent
 web site.
 
-Further information can be found through the [TYPO3 extension repository](https://extensions.typo3.org/).
+Further information can be found through the [TYPO3 extension repository](https://extensions.typo3.org/extension/pizpalue/).
 
 ## Guidelines
 
