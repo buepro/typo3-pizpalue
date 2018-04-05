@@ -31,6 +31,7 @@ $EM_CONF[$_EXTKEY] = [
             'brt_videourlreplace'   => '1.2.1-1.2.99',
             'slickcarousel'         => '2.0.0-2.0.99',
             'ws_flexslider'         => '1.5.3-1.5.99',
+            'url_forwarding'        => '1.3.1-1.3.99'
         ],
         'conflicts' => [],
         'suggests'  => [],

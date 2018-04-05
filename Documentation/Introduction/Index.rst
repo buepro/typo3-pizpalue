@@ -48,6 +48,8 @@ web site.
 
    - Stanislas Rolland for sr_language_menu
 
+   - Patrick Broens for url_forwarding
+
 
 .. _screenshots:
 
