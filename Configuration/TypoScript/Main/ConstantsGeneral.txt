@@ -1,0 +1,14 @@
+# ---------------------------------------------------------- #
+# general
+# ---------------------------------------------------------- #
+
+pizpalue.general {
+	# cat=pizpalue: general/1000/0010; type=string; label=Date format
+	dateFormat = d.m.Y
+
+	# cat=pizpalue: general/1000/0020; type=string; label=Time format
+	timeFormat = H:i
+
+	# cat=pizpalue: general/1000/0030; type=string; label=Datetime format
+	dateTimeFormat = d.m.Y H:i
+}

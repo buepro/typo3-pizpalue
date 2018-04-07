@@ -1,0 +1,107 @@
+# ---------------------------------------------------------- #
+# bootstrap_package - bootstrap
+# ---------------------------------------------------------- #
+#
+# attention: subcategory assignment only works when the
+#            constants are sequentially listed as in the
+#            origianl file (EXT:bootstrap_package/..
+#            Bootstrap/constants.txt) and this block comes
+#            first.
+#
+# ---------------------------------------------------------- #
+
+# .......................................................... #
+# style (font)
+# .......................................................... #
+
+plugin.bootstrap_package.settings.less {
+    # cat=pizpalue: customer style/1033/1010; type=string; label=Google Webfont
+    google-webfont = Source Sans Pro
+
+    # cat=pizpalue: customer style/1033/1012; type=string; label=Google Webfont Weights: Comma separated list of font weights
+    google-webfont-weight = 300,400,700
+}
+
+pizpalue.style {
+    # cat=pizpalue: customer style/1033/1014; type=string; label=Google Webfont family declaration: Alter in case more than one font family are used
+    google-webfontfamily = {$plugin.bootstrap_package.settings.less.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
+}
+
+# .......................................................... #
+# style (color)
+# .......................................................... #
+
+plugin.bootstrap_package.settings.less {
+
+	# cat=pizpalue: customer/1032/1080; type=string; label=Footer background color
+    footer-bg = #333
+
+    # cat=pizpalue: customer style/1035/1082; type=string; label=Footer text color
+    footer-color = contrast(@footer-bg)
+
+    # cat=pizpalue: customer style/1035/1084; type=string; label=Footer link color
+    footer-link-color = mix(@link-color,@footer-color)
+
+    # cat=pizpalue: customer style/1035/1086; type=string; label=Footer link hover color
+    footer-link-hover-color = darken(@footer-link-color, 15%)
+
+    # cat=pizpalue: customer style/1035/1088; type=string; label=Footer link hover decoration
+    footer-link-hover-decoration = underline
+
+	# cat=pizpalue: customer/1032/0010; type=string; label=Primary brand color
+	brand-primary = #4C86B2
+
+	# cat=pizpalue: customer/1032/0012; type=string; label=Secundary brand color
+	brand-secundary = #4A639B
+
+	# cat=pizpalue: customer/1032/0014; type=string; label=Complementary brand color
+	brand-complementary = #4898A8
+
+	# cat=pizpalue: customer/1032/0020; type=string; label=Page background color
+	body-bg = #fff
+
+    # cat=pizpalue: customer/1030/0010; type=string; label=Header panel half height (px)
+    navbar-height = 70px
+
+    # cat=pizpalue: customer/1032/0040; type=string; label=Header background color
+    navbar-default-bg = #e8e8e8
+
+    # cat=pizpalue: customer style/1034/1020; type=string; label=Default link color
+    navbar-default-link-color = lighten(@navbar-default-link-active-color,15%)
+
+    # cat=pizpalue: customer style/1034/1030; type=string; label=Default link hover color
+    navbar-default-link-hover-color = @navbar-default-link-active-color
+
+    # cat=pizpalue: customer style/1034/1040; type=string; label=Default link hover background
+    navbar-default-link-hover-bg = transparent
+
+    # cat=pizpalue: customer style/1034/1050; type=string; label=Default link active color
+    navbar-default-link-active-color = #333
+
+    # cat=pizpalue: customer style/1034/1060; type=string; label=Default link active background
+    navbar-default-link-active-bg = transparent
+
+    # cat=pizpalue: customer style/1034/1070; type=string; label=Default link disabled color
+    navbar-default-link-disabled-color = #ccc
+
+    # cat=pizpalue: customer style/1034/1080; type=string; label=Default link disabled background
+    navbar-default-link-disabled-bg = transparent
+
+	# cat=pizpalue: customer style/1039/1110; type=string; label=Register tabs bar background color
+	pp-tab-v1-background = @gray-lighter
+
+	# cat=pizpalue: customer style/1039/1120; type=string; label=Active register background color
+	pp-tab-v1-active-background = #fff
+
+	# cat=pizpalue: customer style/1039/1130; type=string; label=Register border color
+	pp-tab-v1-border-color = #ddd
+
+
+	pp-tab-v1-background-hover = mix(@pp-tab-v1-background,@pp-tab-v1-active-background)
+	nav-tabs-active-link-hover-color = contrast(@pp-tab-v1-background)
+	nav-tabs-active-link-hover-bg = @pp-tab-v1-active-background
+	nav-tabs-active-link-hover-border-color = @pp-tab-v1-border-color
+	nav-tabs-border-color = @pp-tab-v1-border-color
+	nav-tabs-link-hover-border-color = mix(@pp-tab-v1-background,@pp-tab-v1-border-color)
+
+}
