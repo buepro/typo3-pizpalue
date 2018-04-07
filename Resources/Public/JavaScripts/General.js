@@ -49,15 +49,28 @@ $(document).ready(function () {
      * is not supported by the client the footer is shown normally.
      *
      */
-    +function () {
-        if (ppFrameRevealFooter) {
-            $('#content').addClass('pp-reveal-footer')
-                .css('margin-bottom',$('footer').height());
-            $('footer').addClass('pp-reveal-footer');
-        }
+    +function() {
+        var originalMargin = $('#content').css('margin-bottom');
+        function revealFooter () {
+            if (ppFrameRevealFooter) {
+                var footerHeight = $('footer').height();
+                var contentHeight = $(window).height();
+                if($('.navbar-fixed-top').length) contentHeight -= $('.navbar-fixed-top').height();
+                if (footerHeight < contentHeight) {
+                    $('#content').addClass('pp-reveal-footer')
+                        .css('margin-bottom',footerHeight);
+                    $('footer').addClass('pp-reveal-footer');
+                } else {
+                    $('#content').removeClass('pp-reveal-footer')
+                        .css('margin-bottom',originalMargin);
+                    $('footer').removeClass('pp-reveal-footer');
+                }
+            }
+        };
+        revealFooter();
+        $(window).resize(function() {
+            revealFooter();
+        });
     }();
-    $(window).resize(function() {
-        $('#content').css('margin-bottom',$('footer').height());
-    });
 
 });
