@@ -41,4 +41,23 @@ $(document).ready(function () {
         }
     });
 
+    /**
+     * reveal footer
+     *
+     * js is used because the bottom margin from the content container
+     * needs to be calculated (depends on screen width). in case js
+     * is not supported by the client the footer is shown normally.
+     *
+     */
+    +function () {
+        if (ppFrameRevealFooter) {
+            $('#content').addClass('pp-reveal-footer')
+                .css('margin-bottom',$('footer').height());
+            $('footer').addClass('pp-reveal-footer');
+        }
+    }();
+    $(window).resize(function() {
+        $('#content').css('margin-bottom',$('footer').height());
+    });
+
 });

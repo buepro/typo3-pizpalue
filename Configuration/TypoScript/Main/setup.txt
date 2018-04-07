@@ -73,6 +73,11 @@ page {
         PizpalueBootstrapLess = EXT:pizpalue/Resources/Public/Less/Bootstrap.less
         PizpaluePluginsLess = EXT:pizpalue/Resources/Public/Less/Plugins.less
     }
+    jsFooterInline {
+        1010 = TEXT
+        2
+        1010.stdWrap.dataWrap = var ppFrameRevealFooter = {$pizpalue.frame.revealFooter}
+    }
     includeJSFooter {
         PizpalueBootstrap = EXT:pizpalue/Resources/Public/JavaScripts/Bootstrap.js
         PizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScripts/General.js
@@ -89,6 +94,7 @@ page {
             pizpalue {
                 commonName = {$pizpalue.customer.commonName}
                 commonEmail = {$pizpalue.customer.commonEmail}
+                frame.revealFooter = {$pizpalue.frame.revealFooter}
             }
         }
     }

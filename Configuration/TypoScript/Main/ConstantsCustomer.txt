@@ -20,6 +20,9 @@ page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
 pizpalue.frame {
     # cat=pizpalue: customer/1030/0020; type=boolean; label=Show footer panel
     showFooter = 1
+
+    # cat=pizpalue: customer/1030/0030; type=boolean; label=Reveal footer
+    revealFooter = 0
 }
 
 page.theme.footersection.enable = {$pizpalue.frame.showFooter}
@@ -63,6 +66,11 @@ page.logo.height = {$pizpalue.logo.height}
 
 pizpalue.menu {
 
+    main {
+        # cat=pizpalue: customer/1060/0100; type=options[Default=default, Default Transition=default-transition, Inverse=inverse, Inverse Transition=inverse-transition]; label=Navigation Style
+        navigationstyle = default
+    }
+
 	meta {
 		# cat=pizpalue: customer/1060/0110; type=boolean; label=Show meta menu
 		enable = 0
@@ -76,6 +84,9 @@ pizpalue.menu {
 }
 
 page.theme {
+
+    navigationstyle = {$pizpalue.menu.main.navigationstyle}
+
 	meta {
 		enable = {$pizpalue.menu.meta.enable}
 	}

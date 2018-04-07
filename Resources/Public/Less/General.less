@@ -13,6 +13,10 @@ html {
     height: 2.5em;
 }
 
+#content {
+    background: @body-bg;
+}
+
 figure {
     margin-bottom: 1.7em;
 }
@@ -79,6 +83,17 @@ footer .section {
 img.pp-nolazyload {
     opacity: 1 !important;
     transition: all 0s ease 0s !important;
+}
+
+#content.pp-reveal-footer {
+    position: relative;
+    z-index: 10;
+}
+footer.pp-reveal-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 8;
 }
 
 
