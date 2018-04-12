@@ -75,7 +75,6 @@ page {
     }
     jsFooterInline {
         1010 = TEXT
-        2
         1010.stdWrap.dataWrap = var ppFrameRevealFooter = {$pizpalue.frame.revealFooter}
     }
     includeJSFooter {
