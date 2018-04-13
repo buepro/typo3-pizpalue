@@ -18,7 +18,7 @@
     "typo3-ter/gridelements": "8.0.0",
     "typo3-ter/bootstrap-grids": "1.4.0",
     "typo3-ter/sr-language-menu": "~6.4.3",
-    "typo3-ter/news": "~6.3.0",
+    "georgringer/news": "~6.3.0",
     "typo3-ter/brt-videourlreplace": "~1.2.4",
     "typo3-ter/slickcarousel": "~2.0.0",
     "typo3-ter/ws-flexslider": "~1.5.5",
