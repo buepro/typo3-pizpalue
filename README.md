@@ -31,7 +31,7 @@ Adding the extension to a composer based installation:
 composer require buepro/typo3-pizpalue
 ```
 
-Installing TYPO3 with pizpalue-distribution
+Installing TYPO3 with pizpalue-distribution:
 
 ```
 {
