@@ -64,3 +64,5 @@ Installing TYPO3 with pizpalue-distribution
     "minimum-stability": "stable"
 }
 ```
+
+After the extension has been added install it in the extension manager.
