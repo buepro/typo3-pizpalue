@@ -10,7 +10,7 @@
 			<packager_name></packager_name>
 			<packager_email></packager_email>
 			<TYPO3_version>8.7.10</TYPO3_version>
-			<created>Wednesday  4. April 2018</created>
+			<created>Saturday 21. April 2018</created>
 		</meta>
 		<static_tables index="relStaticTables" type="array"></static_tables>
 		<excludeMap type="array"></excludeMap>
@@ -457,7 +457,7 @@
 					<uid>5</uid>
 					<pid>1</pid>
 					<title>404</title>
-					<size>1725</size>
+					<size>1745</size>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
@@ -1097,8 +1097,8 @@
 				<rec index="1" type="array">
 					<uid>1</uid>
 					<pid>1</pid>
-					<title>Synplate Basisinstallation</title>
-					<size>1365</size>
+					<title>TYPO3 Piz Palü Basisinstallation</title>
+					<size>1372</size>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array">
 						<softref_element index="include_static_file:ext_fileref:2" type="array">
@@ -1457,7 +1457,7 @@
 					<uid>175</uid>
 					<pid>1</pid>
 					<title>Kundenvernetzung</title>
-					<size>4143</size>
+					<size>4613</size>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array">
 						<softref_element index="bodytext:typolink_tag:1" type="array">
@@ -1582,19 +1582,11 @@
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
-				<rec index="172" type="array">
-					<uid>172</uid>
-					<pid>5</pid>
-					<title>What to do</title>
-					<size>3052</size>
-					<relations index="rels" type="array"></relations>
-					<softrefs type="array"></softrefs>
-				</rec>
 				<rec index="171" type="array">
 					<uid>171</uid>
 					<pid>5</pid>
-					<title>Page not found</title>
-					<size>3446</size>
+					<title>Die angeforderte Seite konnte nicht gefu...</title>
+					<size>3440</size>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array"></softrefs>
 				</rec>
@@ -1809,7 +1801,7 @@
 					<uid>200</uid>
 					<pid>62</pid>
 					<title>Kontakt</title>
-					<size>3805</size>
+					<size>6008</size>
 					<relations index="rels" type="array">
 						<element index="tt_content:201" type="array">
 							<id>201</id>
@@ -7293,7 +7285,6 @@
 			</page_contents>
 			<page_contents index="5" type="array">
 				<table index="tt_content" type="array">
-					<item index="172">1</item>
 					<item index="171">1</item>
 					<item index="170">1</item>
 				</table>
@@ -8497,7 +8488,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1522832512</field>
+				<field index="tstamp" type="integer">1524334334</field>
 				<field index="sorting" type="integer">256</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="perms_userid" type="integer">1</field>
@@ -8533,7 +8524,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description">Diese Webseite dient als Basis, um professionelle TYPO3-Webseiten zu erstellen. Dank der sorgfältigen Einbindung von Erweiterungen können Inhalte ansprechend präsentiert und leicht verwaltet werden.</field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1522832512</field>
+				<field index="SYS_LASTCHANGED" type="integer">1524334334</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -8552,7 +8543,7 @@
 				<field index="tsconfig_includes">EXT:bootstrap_package/Configuration/PageTS/Feature/Ionicons.txt,EXT:pizpalue/Configuration/PageTS/Grids.txt,EXT:pizpalue/Configuration/PageTS/CE.txt,EXT:pizpalue/Extensions/news/Configuration/PageTS/General.txt</field>
 				<field index="tx_impexp_origuid" type="integer">1</field>
 				<field index="categories" type="integer">0</field>
-				<field index="tx_ddgooglesitemap_lastmod">1521733279,1521733565,1521733610,1521733642,1522832512</field>
+				<field index="tx_ddgooglesitemap_lastmod">1522832512,1522912611,1524334298,1524334307,1524334334</field>
 				<field index="tx_ddgooglesitemap_priority" type="integer">5</field>
 				<field index="tx_ddgooglesitemap_change_frequency"></field>
 				<field index="tx_realurl_pathsegment"></field>
@@ -8605,11 +8596,11 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1521733642</field>
+				<field index="tstamp" type="integer">1522912611</field>
 				<field index="sorting" type="integer">256</field>
 				<field index="crdate" type="integer">1495207768</field>
 				<field index="cruser_id" type="integer">1</field>
-				<field index="title">Synplate Basisinstallation</field>
+				<field index="title">TYPO3 Piz Palü Basisinstallation</field>
 				<field index="sitetitle"></field>
 				<field index="hidden" type="integer">0</field>
 				<field index="starttime" type="integer">0</field>
@@ -9853,13 +9844,13 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1522832512</field>
+				<field index="tstamp" type="integer">1524334334</field>
 				<field index="crdate" type="integer">1495207768</field>
 				<field index="cruser_id" type="integer">1</field>
 				<field index="editlock" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="sorting" type="integer">2560</field>
-				<field index="CType">text</field>
+				<field index="CType">list</field>
 				<field index="header">Kundenvernetzung</field>
 				<field index="header_position"></field>
 				<field index="rowDescription" type="NULL"></field>
@@ -9893,7 +9884,7 @@
 				<field index="header_link"></field>
 				<field index="image_zoom" type="integer">0</field>
 				<field index="header_layout">100</field>
-				<field index="list_type"></field>
+				<field index="list_type">typoscript2ce_pi1</field>
 				<field index="sectionIndex" type="integer">1</field>
 				<field index="linkToTop" type="integer">0</field>
 				<field index="file_collections"></field>
@@ -9904,12 +9895,23 @@
 				<field index="recursive" type="integer">0</field>
 				<field index="imageheight" type="integer">0</field>
 				<field index="sys_language_uid" type="integer">0</field>
-				<field index="pi_flexform" type="NULL"></field>
+				<field index="pi_flexform">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
+&lt;T3FlexForms&gt;
+    &lt;data&gt;
+        &lt;sheet index=&quot;main&quot;&gt;
+            &lt;language index=&quot;lDEF&quot;&gt;
+                &lt;field index=&quot;settings.typoscriptobjectpath&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;lib.pizpalue.contentElement.socialNetwork&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+    &lt;/data&gt;
+&lt;/T3FlexForms&gt;</field>
 				<field index="accessibility_title"></field>
 				<field index="accessibility_bypass" type="integer">0</field>
 				<field index="accessibility_bypass_text"></field>
 				<field index="l18n_parent" type="integer">0</field>
-				<field index="l18n_diffsource">a:24:{s:5:&quot;CType&quot;;N;s:6:&quot;colPos&quot;;N;s:6:&quot;header&quot;;N;s:13:&quot;header_layout&quot;;N;s:15:&quot;header_position&quot;;N;s:4:&quot;date&quot;;N;s:11:&quot;header_link&quot;;N;s:9:&quot;subheader&quot;;N;s:8:&quot;bodytext&quot;;N;s:6:&quot;layout&quot;;N;s:11:&quot;frame_class&quot;;N;s:18:&quot;space_before_class&quot;;N;s:17:&quot;space_after_class&quot;;N;s:12:&quot;sectionIndex&quot;;N;s:9:&quot;linkToTop&quot;;N;s:16:&quot;sys_language_uid&quot;;N;s:6:&quot;hidden&quot;;N;s:9:&quot;starttime&quot;;N;s:7:&quot;endtime&quot;;N;s:8:&quot;fe_group&quot;;N;s:8:&quot;editlock&quot;;N;s:10:&quot;categories&quot;;N;s:14:&quot;rowDescription&quot;;N;s:25:&quot;tx_gridelements_container&quot;;N;}</field>
+				<field index="l18n_diffsource">a:27:{s:5:&quot;CType&quot;;N;s:6:&quot;colPos&quot;;N;s:6:&quot;header&quot;;N;s:13:&quot;header_layout&quot;;N;s:15:&quot;header_position&quot;;N;s:4:&quot;date&quot;;N;s:11:&quot;header_link&quot;;N;s:9:&quot;subheader&quot;;N;s:9:&quot;list_type&quot;;N;s:11:&quot;pi_flexform&quot;;N;s:5:&quot;pages&quot;;N;s:9:&quot;recursive&quot;;N;s:6:&quot;layout&quot;;N;s:11:&quot;frame_class&quot;;N;s:18:&quot;space_before_class&quot;;N;s:17:&quot;space_after_class&quot;;N;s:12:&quot;sectionIndex&quot;;N;s:9:&quot;linkToTop&quot;;N;s:16:&quot;sys_language_uid&quot;;N;s:6:&quot;hidden&quot;;N;s:9:&quot;starttime&quot;;N;s:7:&quot;endtime&quot;;N;s:8:&quot;fe_group&quot;;N;s:8:&quot;editlock&quot;;N;s:10:&quot;categories&quot;;N;s:14:&quot;rowDescription&quot;;N;s:25:&quot;tx_gridelements_container&quot;;N;}</field>
 				<field index="l10n_source" type="integer">0</field>
 				<field index="selected_categories"></field>
 				<field index="category_field"></field>
@@ -10005,6 +10007,14 @@
 						<tokenizedContent>&lt;p class=&quot;text-center&quot;&gt;Kundenvernetzung (soziale Vernetzung)&lt;/p&gt;
 &lt;ul class=&quot;text-center pp-ion-social-bar&quot;&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:2439f007131caa7735b9f6003c69422a}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-facebook&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:067b133759aba063cfe50d4a8bb63f2f}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-twitter&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:e7eb4d406380f67564e965c9085b6769}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-linkedin&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:d842bec65358d39ddad769f7d1a7d73b}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-pinterest&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; 	&lt;li class=&quot;ion&quot;&gt;&lt;a class=&quot;pp-social-link&quot; href=&quot;{softref:1875c168e9804f724ee82977ff828645}&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;ion ion-social-instagram&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;</tokenizedContent>
 					</softrefs>
+				</field>
+				<field index="pi_flexform" type="array">
+					<type>flex</type>
+					<flexform index="flexFormRels" type="array">
+						<db_relations index="db" type="array"></db_relations>
+						<file_relations index="file" type="array"></file_relations>
+						<softref_relations index="softrefs" type="array"></softref_relations>
+					</flexform>
 				</field>
 			</related>
 		</tablerow>
@@ -11468,7 +11478,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1495703661</field>
+				<field index="tstamp" type="integer">1522919893</field>
 				<field index="sorting" type="integer">2048</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="perms_userid" type="integer">1</field>
@@ -11504,7 +11514,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">1</field>
-				<field index="SYS_LASTCHANGED" type="integer">0</field>
+				<field index="SYS_LASTCHANGED" type="integer">1522919893</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -11523,124 +11533,12 @@
 				<field index="tsconfig_includes"></field>
 				<field index="tx_impexp_origuid" type="integer">2</field>
 				<field index="categories" type="integer">0</field>
-				<field index="tx_ddgooglesitemap_lastmod"></field>
+				<field index="tx_ddgooglesitemap_lastmod">1522919893</field>
 				<field index="tx_ddgooglesitemap_priority" type="integer">5</field>
 				<field index="tx_ddgooglesitemap_change_frequency"></field>
 				<field index="tx_realurl_pathsegment"></field>
 				<field index="tx_realurl_pathoverride" type="integer">0</field>
 				<field index="tx_realurl_exclude" type="integer">0</field>
-			</fieldlist>
-			<related index="rels" type="array"></related>
-		</tablerow>
-		<tablerow index="tt_content:172" type="array">
-			<fieldlist index="data" type="array">
-				<field index="uid" type="integer">172</field>
-				<field index="pid" type="integer">5</field>
-				<field index="t3ver_oid" type="integer">0</field>
-				<field index="t3ver_id" type="integer">0</field>
-				<field index="t3ver_wsid" type="integer">0</field>
-				<field index="t3ver_label"></field>
-				<field index="t3ver_state" type="integer">0</field>
-				<field index="t3ver_stage" type="integer">0</field>
-				<field index="t3ver_count" type="integer">0</field>
-				<field index="t3ver_tstamp" type="integer">0</field>
-				<field index="t3ver_move_id" type="integer">0</field>
-				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1495207768</field>
-				<field index="crdate" type="integer">1495207768</field>
-				<field index="cruser_id" type="integer">1</field>
-				<field index="editlock" type="integer">0</field>
-				<field index="hidden" type="integer">0</field>
-				<field index="sorting" type="integer">64</field>
-				<field index="CType">text</field>
-				<field index="header">What to do</field>
-				<field index="header_position"></field>
-				<field index="rowDescription" type="NULL"></field>
-				<field index="bodytext">&lt;p class=&quot;csc-frame-frame1&quot;&gt;The information might still be available.&lt;br /&gt;You can try to look for  the information in the sitemap at this page. &lt;br /&gt;&lt;br /&gt;Also you can  try the &lt;LINK 1 - internal-link &quot;Opens internal link in current window&quot;&gt;search&lt;/link&gt;.&lt;/p&gt;</field>
-				<field index="bullets_type" type="integer">0</field>
-				<field index="uploads_description" type="integer">0</field>
-				<field index="uploads_type" type="integer">0</field>
-				<field index="assets" type="integer">0</field>
-				<field index="image" type="integer">0</field>
-				<field index="imagewidth" type="integer">0</field>
-				<field index="imageorient" type="integer">0</field>
-				<field index="imagecols" type="integer">1</field>
-				<field index="imageborder" type="integer">0</field>
-				<field index="media" type="integer">0</field>
-				<field index="layout">0</field>
-				<field index="frame_class">default</field>
-				<field index="deleted" type="integer">0</field>
-				<field index="cols" type="integer">0</field>
-				<field index="spaceBefore" type="integer">0</field>
-				<field index="spaceAfter" type="integer">0</field>
-				<field index="space_before_class"></field>
-				<field index="space_after_class"></field>
-				<field index="records"></field>
-				<field index="pages"></field>
-				<field index="starttime" type="integer">0</field>
-				<field index="endtime" type="integer">0</field>
-				<field index="colPos" type="integer">0</field>
-				<field index="subheader"></field>
-				<field index="fe_group"></field>
-				<field index="header_link"></field>
-				<field index="image_zoom" type="integer">0</field>
-				<field index="header_layout">2</field>
-				<field index="list_type"></field>
-				<field index="sectionIndex" type="integer">1</field>
-				<field index="linkToTop" type="integer">0</field>
-				<field index="file_collections"></field>
-				<field index="filelink_size" type="integer">0</field>
-				<field index="filelink_sorting"></field>
-				<field index="target"></field>
-				<field index="date" type="integer">0</field>
-				<field index="recursive" type="integer">0</field>
-				<field index="imageheight" type="integer">0</field>
-				<field index="sys_language_uid" type="integer">0</field>
-				<field index="pi_flexform" type="NULL"></field>
-				<field index="accessibility_title"></field>
-				<field index="accessibility_bypass" type="integer">0</field>
-				<field index="accessibility_bypass_text"></field>
-				<field index="l18n_parent" type="integer">0</field>
-				<field index="l18n_diffsource">a:1:{s:8:&quot;bodytext&quot;;N;}</field>
-				<field index="l10n_source" type="integer">0</field>
-				<field index="selected_categories"></field>
-				<field index="category_field"></field>
-				<field index="table_class"></field>
-				<field index="table_caption" type="NULL"></field>
-				<field index="table_delimiter" type="integer">124</field>
-				<field index="table_enclosure" type="integer">0</field>
-				<field index="table_header_position" type="integer">0</field>
-				<field index="table_tfoot" type="integer">0</field>
-				<field index="tx_impexp_origuid" type="integer">161</field>
-				<field index="l10n_state" type="NULL"></field>
-				<field index="categories" type="integer">0</field>
-				<field index="teaser"></field>
-				<field index="quote_source"></field>
-				<field index="icon"></field>
-				<field index="icon_position">0</field>
-				<field index="icon_size" type="integer">0</field>
-				<field index="icon_type" type="integer">0</field>
-				<field index="icon_color"></field>
-				<field index="icon_background"></field>
-				<field index="external_media_source"></field>
-				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
-				<field index="quote_link"></field>
-				<field index="panel_class">default</field>
-				<field index="external_media_ratio"></field>
-				<field index="backupColPos" type="integer">-2</field>
-				<field index="tx_gridelements_backend_layout"></field>
-				<field index="tx_gridelements_children" type="integer">0</field>
-				<field index="tx_gridelements_container" type="integer">0</field>
-				<field index="tx_gridelements_columns" type="integer">0</field>
-				<field index="tx_wsflexslider_images" type="NULL"></field>
-				<field index="slickdefault" type="integer">0</field>
-				<field index="slickheight"></field>
-				<field index="tx_slickcarouselbgimg"></field>
-				<field index="tx_news_related_news" type="integer">0</field>
-				<field index="tx_srlanguagemenu_type" type="integer">0</field>
-				<field index="tx_srlanguagemenu_languages"></field>
 			</fieldlist>
 			<related index="rels" type="array"></related>
 		</tablerow>
@@ -11658,17 +11556,17 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1495207768</field>
+				<field index="tstamp" type="integer">1522919893</field>
 				<field index="crdate" type="integer">1495207768</field>
 				<field index="cruser_id" type="integer">1</field>
 				<field index="editlock" type="integer">0</field>
 				<field index="hidden" type="integer">0</field>
 				<field index="sorting" type="integer">128</field>
 				<field index="CType">text</field>
-				<field index="header">Page not found</field>
+				<field index="header">Die angeforderte Seite konnte nicht gefunden werden (404)</field>
 				<field index="header_position"></field>
 				<field index="rowDescription" type="NULL"></field>
-				<field index="bodytext">&lt;p class=&quot;lead&quot;&gt;&lt;span id=&quot;result_box&quot;&gt;The page you were looking for cannot be found. &lt;/span&gt;You may have followed a bad link or mis-typed an URL&lt;span id=&quot;result_box&quot;&gt;. &lt;/span&gt;Possibly the page has been moved, discarded or is from the past. Our apologies.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</field>
+				<field index="bodytext">&lt;p class=&quot;lead&quot;&gt;Leider konnte die gewünschte Seite nicht gefunden werden. Möglicherweise handelt es sich um einen veralteten Link.&lt;/p&gt;</field>
 				<field index="bullets_type" type="integer">0</field>
 				<field index="uploads_description" type="integer">0</field>
 				<field index="uploads_type" type="integer">0</field>
@@ -11713,7 +11611,7 @@
 				<field index="accessibility_bypass" type="integer">0</field>
 				<field index="accessibility_bypass_text"></field>
 				<field index="l18n_parent" type="integer">0</field>
-				<field index="l18n_diffsource">a:21:{s:5:&quot;CType&quot;;N;s:6:&quot;colPos&quot;;N;s:16:&quot;sys_language_uid&quot;;N;s:6:&quot;header&quot;;N;s:13:&quot;header_layout&quot;;N;s:15:&quot;header_position&quot;;N;s:4:&quot;date&quot;;N;s:11:&quot;header_link&quot;;N;s:8:&quot;bodytext&quot;;N;s:11:&quot;rte_enabled&quot;;N;s:6:&quot;layout&quot;;N;s:11:&quot;spaceBefore&quot;;N;s:10:&quot;spaceAfter&quot;;N;s:13:&quot;section_frame&quot;;N;s:6:&quot;hidden&quot;;N;s:12:&quot;sectionIndex&quot;;N;s:9:&quot;linkToTop&quot;;N;s:9:&quot;starttime&quot;;N;s:7:&quot;endtime&quot;;N;s:8:&quot;fe_group&quot;;N;s:10:&quot;categories&quot;;N;}</field>
+				<field index="l18n_diffsource">a:24:{s:5:&quot;CType&quot;;N;s:6:&quot;colPos&quot;;N;s:6:&quot;header&quot;;N;s:13:&quot;header_layout&quot;;N;s:15:&quot;header_position&quot;;N;s:4:&quot;date&quot;;N;s:11:&quot;header_link&quot;;N;s:9:&quot;subheader&quot;;N;s:8:&quot;bodytext&quot;;N;s:6:&quot;layout&quot;;N;s:11:&quot;frame_class&quot;;N;s:18:&quot;space_before_class&quot;;N;s:17:&quot;space_after_class&quot;;N;s:12:&quot;sectionIndex&quot;;N;s:9:&quot;linkToTop&quot;;N;s:16:&quot;sys_language_uid&quot;;N;s:6:&quot;hidden&quot;;N;s:9:&quot;starttime&quot;;N;s:7:&quot;endtime&quot;;N;s:8:&quot;fe_group&quot;;N;s:8:&quot;editlock&quot;;N;s:10:&quot;categories&quot;;N;s:14:&quot;rowDescription&quot;;N;s:25:&quot;tx_gridelements_container&quot;;N;}</field>
 				<field index="l10n_source" type="integer">0</field>
 				<field index="selected_categories"></field>
 				<field index="category_field"></field>
@@ -12671,7 +12569,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1519672178</field>
+				<field index="tstamp" type="integer">1522935074</field>
 				<field index="sorting" type="integer">1152</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="perms_userid" type="integer">1</field>
@@ -12707,7 +12605,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1519672178</field>
+				<field index="SYS_LASTCHANGED" type="integer">1522935074</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -12726,7 +12624,7 @@
 				<field index="tsconfig_includes" type="NULL"></field>
 				<field index="tx_impexp_origuid" type="integer">0</field>
 				<field index="categories" type="integer">0</field>
-				<field index="tx_ddgooglesitemap_lastmod">1516207947,1516207966,1519658236,1519672176,1519672178</field>
+				<field index="tx_ddgooglesitemap_lastmod">1519658236,1519672176,1519672178,1522935043,1522935074</field>
 				<field index="tx_ddgooglesitemap_priority" type="integer">5</field>
 				<field index="tx_ddgooglesitemap_change_frequency"></field>
 				<field index="tx_realurl_pathsegment"></field>
@@ -13181,7 +13079,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1519672178</field>
+				<field index="tstamp" type="integer">1522935074</field>
 				<field index="crdate" type="integer">1495705601</field>
 				<field index="cruser_id" type="integer">1</field>
 				<field index="editlock" type="integer">0</field>
@@ -13240,7 +13138,51 @@
                     &lt;value index=&quot;vDEF&quot;&gt;1:/pizpalue/forms/GeneralContact.yaml&lt;/value&gt;
                 &lt;/field&gt;
                 &lt;field index=&quot;settings.overrideFinishers&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;0&lt;/value&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;1&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+        &lt;sheet index=&quot;9beac7efc7da9477da6560ffd8b63922&quot;&gt;
+            &lt;language index=&quot;lDEF&quot;&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.blindCarbonCopyAddress&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.carbonCopyAddress&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.format&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;html&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.recipientAddress&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;empfaenger@ihredomain.ch&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.recipientName&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;Ihr Name&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.replyToAddress&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.senderAddress&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;{idEmail}&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.senderName&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;{idName}&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.subject&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;{idSubject}&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.EmailToReceiver.translation.language&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;default&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+        &lt;sheet index=&quot;fe06625898e36ce6af2a5a2615d53dc2&quot;&gt;
+            &lt;language index=&quot;lDEF&quot;&gt;
+                &lt;field index=&quot;settings.finishers.Redirect.additionalParameters&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;settings.finishers.Redirect.pageUid&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;pages_70&lt;/value&gt;
                 &lt;/field&gt;
             &lt;/language&gt;
         &lt;/sheet&gt;
