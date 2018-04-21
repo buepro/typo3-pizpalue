@@ -38,6 +38,7 @@ PIZPALUE: GENERAL            A parameter in this category might be used for vari
 PIZPALUE: AGENCY             Everything related to the authority maintaining the site
 PIZPALUE: CUSTOMER           Main customer related parameters
 PIZPALUE: CUSTOMER STYLE     More detailed customer style related parameters
+PIZPALUE: CUSTOMER SOCIAL    Definition from references to social networks
 PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
 ============================ ==================================================
 

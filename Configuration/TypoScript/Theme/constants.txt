@@ -7,6 +7,8 @@ page.theme.navigationstyle = default-transition
 page.theme.navigationtype = top
 [end]
 
+pizpalue.frame.revealFooter = 1
+
 # under construction page
 [page|uid = 59]
 page.theme.navigationstyle = default-transition

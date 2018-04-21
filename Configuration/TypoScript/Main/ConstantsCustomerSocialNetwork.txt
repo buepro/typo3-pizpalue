@@ -1,0 +1,56 @@
+pizpalue.customer.socialNetwork {
+    facebook {
+        # cat=pizpalue: customer social; type=string; label=Facebook link:In case a link is set a corresponding icon will be rendered. Removing the link removes as well the icon.
+        link = https://www.facebook.com/
+        # cat=pizpalue: customer social; type=string; label=Facebook link title
+        linkTitle = Besuchen Sie uns auf Facebook
+    }
+    twitter {
+        # cat=pizpalue: customer social; type=string; label=Twitter link:In case a link is set a corresponding icon will be rendered. Removing the link removes as well the icon.
+        link = https://twitter.com/
+        # cat=pizpalue: customer social; type=string; label=Twitter link title
+        linkTitle = Besuchen Sie uns auf Twitter
+    }
+    linkedin {
+        # cat=pizpalue: customer social; type=string; label=Linkedin link:In case a link is set a corresponding icon will be rendered. Removing the link removes as well the icon.
+        link = https://www.linkedin.com/
+        # cat=pizpalue: customer social; type=string; label=Linkedin link title
+        linkTitle = Besuchen Sie uns auf Linkedin
+    }
+    pinterest {
+        # cat=pizpalue: customer social; type=string; label=Pinterest link:In case a link is set a corresponding icon will be rendered. Removing the link removes as well the icon.
+        link = https://www.pinterest.com/
+        # cat=pizpalue: customer social; type=string; label=Pinterest link title
+        linkTitle = Besuchen Sie uns auf Pinterest
+    }
+    instagram {
+        # cat=pizpalue: customer social; type=string; label=Instagram link:In case a link is set a corresponding icon will be rendered. Removing the link removes as well the icon.
+        link = https://www.instagram.com/
+        # cat=pizpalue: customer social; type=string; label=Instagram link title
+        linkTitle = Besuchen Sie uns auf Instagram
+    }
+    custom1 {
+        # cat=pizpalue: customer social; type=string; label=Custom link 1
+        link =
+        # cat=pizpalue: customer social; type=string; label=Custom link title 1
+        linkTitle =
+        # cat=pizpalue: customer social; type=string; label=Custom icon class 1:See as well http://ionicons.com/
+        iconClass = ion ion-social-custom1
+    }
+    custom2 {
+        # cat=pizpalue: customer social; type=string; label=Custom link 2
+        link =
+        # cat=pizpalue: customer social; type=string; label=Custom link title 2
+        linkTitle =
+        # cat=pizpalue: customer social; type=string; label=Custom icon class 2:See as well http://ionicons.com/
+        iconClass = ion ion-social-custom2
+    }
+    custom3 {
+        # cat=pizpalue: customer social; type=string; label=Custom link 3
+        link =
+        # cat=pizpalue: customer social; type=string; label=Custom link title 3
+        linkTitle =
+        # cat=pizpalue: customer social; type=string; label=Custom icon class 3:See as well http://ionicons.com/
+        iconClass = ion ion-social-custom3
+    }
+}

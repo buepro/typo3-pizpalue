@@ -24,7 +24,7 @@ pizpalue
 		en
 
 	:Keywords:
-		piz palü, pizpalue, distribution, bootstrap, bootstrap_package
+		pizpalue, distribution, bootstrap, bootstrap_package
 
 	:Copyright:
 		2017

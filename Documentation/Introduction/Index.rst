@@ -50,6 +50,8 @@ web site.
 
    - Patrick Broens for url_forwarding
 
+   - Alex Kellner for typoscript2ce
+
 
 .. _screenshots:
 

@@ -22,6 +22,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/ConstantsGeneral.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/ConstantsAgency.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/ConstantsCustomer.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/ConstantsCustomerSocialNetwork.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/ConstantsCustomerVarious.txt">
 
 

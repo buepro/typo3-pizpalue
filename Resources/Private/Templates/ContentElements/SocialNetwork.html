@@ -1,0 +1,11 @@
+<ul class="text-center pp-ion-social-bar">
+    <f:for each="{settings}" as="network">
+        <f:if condition="{network.link}">
+            <li class="ion">
+                <f:link.external uri="{network.link}" title="{network.linkTitle}" class="pp-social-link" target="_blank">
+                    <span class="{network.iconClass}"></span>
+                </f:link.external>
+            </li>
+        </f:if>
+    </f:for>
+</ul>
