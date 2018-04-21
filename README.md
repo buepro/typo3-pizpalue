@@ -15,7 +15,52 @@ web site.
 
 Further information can be found through the [TYPO3 extension repository](https://extensions.typo3.org/extension/pizpalue/).
 
-## Guidelines
+## Installation
 
-General package related prefix: Pp or pp (e.g. for files PpFileName.ext or for
-CSS definitions pp-mainbox)
+### With TYPO3
+
+1. Go to the extension manager
+2. Select 'Get preconfigured distribution'
+3. Search for "Piz Palü Distribution" and install it
+
+### With composer
+
+Adding the extension to a composer based installation:
+
+```
+composer require buepro/typo3-pizpalue
+```
+
+Installing TYPO3 with pizpalue-distribution
+
+```
+{
+    "name": "buepro/typo3-cms-pizpalue",
+    "description": "TYPO3 with pizpalue distribution",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
+    "require": {
+        "typo3/cms": "^8",
+        "buepro/typo3-pizpalue": "~8.2.18"
+    },
+    "extra": {
+	 		"typo3/cms": {
+			 	"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			 	"web-dir": "web"
+			 }
+	 },
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Roman",
+            "email": "rb@buechler.pro"
+        }
+    ],
+    "minimum-stability": "stable"
+}
+```
