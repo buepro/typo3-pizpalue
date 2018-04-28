@@ -53,6 +53,10 @@
 				<source>Class</source>
 			</trans-unit>
 
+			<trans-unit id="grids.label.containerAttribute">
+                <source>Attributes</source>
+            </trans-unit>
+
 			<trans-unit id="grids.label.sectionClass">
 				<source>Section class</source>
 			</trans-unit>

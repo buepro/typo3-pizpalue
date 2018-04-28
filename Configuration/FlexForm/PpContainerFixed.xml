@@ -20,6 +20,15 @@
                             </config>
                         </TCEforms>
                     </containerClass>
+                    <containerAttribute type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:grids.label.containerAttribute</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </containerAttribute>
                     <wrapSection type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:grids.label.wrapSection</label>

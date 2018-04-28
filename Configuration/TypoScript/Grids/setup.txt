@@ -5,7 +5,7 @@
 lib.pizpalue.gridelements {
 	ppContainerFixed < lib.gridelements.defaultGridSetup
 	ppContainerFixed {
-		wrap = <div class="pp-container-fixed container {field:flexform_containerClass}">|</div>
+		wrap = <div class="pp-container-fixed container {field:flexform_containerClass}" {field:flexform_containerAttribute}>|</div>
 		wrap {
 			insertData = 1
 		}
@@ -18,7 +18,7 @@ lib.pizpalue.gridelements {
 	}
     ppContainer < lib.gridelements.defaultGridSetup
     ppContainer {
-        wrap = <div class="pp-container {field:flexform_containerClass}">|</div>
+        wrap = <div class="pp-container {field:flexform_containerClass}" {field:flexform_containerAttribute}>|</div>
 		wrap {
 			if.isFalse.field = flexform_isContainerFluid
 			insertData = 1
