@@ -33,11 +33,11 @@ $(document).ready(function () {
      */
     $('ul.navbar-main li.dropdown').hover(function() {
         if($('button.navbar-toggle:hidden').length) {
-            $(this).toggleClass('open');
+            $(this).addClass('open');
         }
     }, function() {
         if($('button.navbar-toggle:hidden').length) {
-            $(this).toggleClass('open');
+            $(this).removeClass('open');
         }
     });
 
