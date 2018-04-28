@@ -88,7 +88,10 @@ img.pp-nolazyload {
 #content.pp-reveal-footer {
     position: relative;
     z-index: 10;
-    /* correct flickering on ie edge */
+}
+/* correct flickering on ie edge */
+/* attention: fixed positioned elements within this container won't be fixed */
+_:-ms-lang(x), _:-webkit-full-screen, #content.pp-reveal-footer {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
