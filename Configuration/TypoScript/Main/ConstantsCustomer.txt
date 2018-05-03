@@ -69,6 +69,8 @@ pizpalue.menu {
     main {
         # cat=pizpalue: customer/1060/0100; type=options[Default=default, Default Transition=default-transition, Inverse=inverse, Inverse Transition=inverse-transition]; label=Navigation Style
         navigationstyle = default
+        # cat=pizpalue: customer/1060/0102; type=options[Default=, Fixed Top=top, Fixed Bottom=bottom]; label=Navigation Type
+        navigationtype =
     }
 
 	meta {
@@ -86,6 +88,7 @@ pizpalue.menu {
 page.theme {
 
     navigationstyle = {$pizpalue.menu.main.navigationstyle}
+    navigationtype = {$pizpalue.menu.main.navigationtype}
 
 	meta {
 		enable = {$pizpalue.menu.meta.enable}
