@@ -147,3 +147,17 @@ editor. The constant can be found in "PIZPALUE: Customer - Frame".
    "transform: translateZ(0)" to the last content element in the preceeding
    sibling element. In any case the element having "transform: translateZ(0)"
    assigned should be higher than the footer.
+
+
+.. _usr-ppClasses
+
+Piz Palue classes
+=================
+
+============================= ==================================================
+Class                         Usage
+============================= ==================================================
+pp-label-dataprotection       Used in wrapper grid element to define a
+                              replacment text for a data protection notice check
+                              box (see contact page)
+============================= ==================================================
