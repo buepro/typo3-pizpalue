@@ -3,7 +3,7 @@ renderingOptions:
   submitButtonLabel: Send
 type: Form
 identifier: idGeneralContactForm
-label: General contact form
+label: 'General contact form'
 prototypeName: standard
 finishers:
   -
@@ -17,7 +17,7 @@ finishers:
       carbonCopyAddress: ''
       blindCarbonCopyAddress: ''
       format: html
-      attachUploads: 'true'
+      attachUploads: true
       translation:
         language: ''
     identifier: EmailToReceiver
@@ -106,3 +106,14 @@ renderables:
         type: ImageUpload
         identifier: idImageupload
         label: Image
+      -
+        properties:
+          options:
+            dataprotectionRead: 'Please confirm that you have read our data protection notice by checking this checkbox'
+        type: MultiCheckbox
+        identifier: idDataprotectionMultiCheckbox
+        label: Data protection notice
+        validators:
+          -
+            identifier: NotEmpty
+        defaultValue: {  }

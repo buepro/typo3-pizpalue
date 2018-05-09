@@ -73,4 +73,16 @@ $(document).ready(function () {
         });
     }();
 
+    /**
+     * dataprotection label
+     *
+     */
+    +function() {
+        var multiCheckBox = $('#idGeneralContactForm-idDataprotectionMultiCheckbox');
+        if (multiCheckBox.length > 0) {
+            var html = $('.pp-label-dataprotection p').html();
+            multiCheckBox.find('label > span').html(html);
+        };
+    }();
+
 });

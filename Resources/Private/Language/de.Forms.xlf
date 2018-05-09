@@ -40,6 +40,11 @@
 				<target state="translated">Bild</target>
 			</trans-unit>
 
+			<trans-unit id="idGeneralContactForm.element.idDataprotectionMultiCheckbox.properties.label">
+                <source>Data protection notice</source>
+                <target state="translated">Datenschutzhinweis</target>
+            </trans-unit>
+
 			<trans-unit id="element.idGeneralContactForm.renderingOptions.submitButtonLabel">
 				<source>Send</source>
 				<target state="translated">Senden</target>
