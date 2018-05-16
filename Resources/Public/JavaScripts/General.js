@@ -1,4 +1,17 @@
 /**
+ * return value from a key (name) in the url
+ *
+ * @see davidwalsh.name/query-string-javascript
+ */
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+
+/**
  * open the element from collapsable elements (e.g. accordion elements)
  * if the css style .csc-space-after-1 is found within .collapse
  */
