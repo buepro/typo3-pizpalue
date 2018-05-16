@@ -12914,7 +12914,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1525854094</field>
+				<field index="tstamp" type="integer">1525874560</field>
 				<field index="sorting" type="integer">1152</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="perms_userid" type="integer">1</field>
@@ -12950,7 +12950,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1525854094</field>
+				<field index="SYS_LASTCHANGED" type="integer">1525874560</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -12969,7 +12969,7 @@
 				<field index="tsconfig_includes" type="NULL"></field>
 				<field index="tx_impexp_origuid" type="integer">0</field>
 				<field index="categories" type="integer">0</field>
-				<field index="tx_ddgooglesitemap_lastmod">1519672178,1522935043,1522935074,1525854010,1525854095</field>
+				<field index="tx_ddgooglesitemap_lastmod">1525854010,1525854095,1525874551,1525874556,1525874560</field>
 				<field index="tx_ddgooglesitemap_priority" type="integer">5</field>
 				<field index="tx_ddgooglesitemap_change_frequency"></field>
 				<field index="tx_realurl_pathsegment"></field>
@@ -13565,7 +13565,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1522935074</field>
+				<field index="tstamp" type="integer">1525874560</field>
 				<field index="crdate" type="integer">1495705601</field>
 				<field index="cruser_id" type="integer">1</field>
 				<field index="editlock" type="integer">0</field>
