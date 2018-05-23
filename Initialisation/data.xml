@@ -10,7 +10,7 @@
 			<packager_name></packager_name>
 			<packager_email></packager_email>
 			<TYPO3_version>8.7.10</TYPO3_version>
-			<created>Wednesday  9. May 2018</created>
+			<created>Wednesday 23. May 2018</created>
 		</meta>
 		<static_tables index="relStaticTables" type="array"></static_tables>
 		<excludeMap type="array"></excludeMap>
@@ -1109,7 +1109,7 @@
 					<uid>1</uid>
 					<pid>1</pid>
 					<title>TYPO3 Piz Palü Basisinstallation</title>
-					<size>1372</size>
+					<size>1437</size>
 					<relations index="rels" type="array"></relations>
 					<softrefs type="array">
 						<softref_element index="include_static_file:ext_fileref:2" type="array">
@@ -1652,6 +1652,45 @@
 						</softref_element>
 					</softrefs>
 				</rec>
+				<rec index="241" type="array">
+					<uid>241</uid>
+					<pid>74</pid>
+					<title>Google Analytics Status Block</title>
+					<size>2816</size>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="240" type="array">
+					<uid>240</uid>
+					<pid>57</pid>
+					<title>Generatoren zur Erstellung eines Impress...</title>
+					<size>3523</size>
+					<relations index="rels" type="array"></relations>
+					<softrefs type="array">
+						<softref_element index="bodytext:typolink_tag:1" type="array">
+							<field>bodytext</field>
+							<spKey>typolink_tag</spKey>
+							<url>https://www.bag.ch/impressum-generator</url>
+							<type>url</type>
+							<subst type="array">
+								<type>external</type>
+								<tokenID>730544d6adee820f40758794864890f3</tokenID>
+								<tokenValue>https://www.bag.ch/impressum-generator</tokenValue>
+							</subst>
+						</softref_element>
+						<softref_element index="bodytext:typolink_tag:3" type="array">
+							<field>bodytext</field>
+							<spKey>typolink_tag</spKey>
+							<url>https://www.activemind.de/datenschutz/impressums-generator</url>
+							<type>url</type>
+							<subst type="array">
+								<type>external</type>
+								<tokenID>42dc6e40db924d635d6e3a66c76ee278</tokenID>
+								<tokenValue>https://www.activemind.de/datenschutz/impressums-generator</tokenValue>
+							</subst>
+						</softref_element>
+					</softrefs>
+				</rec>
 				<rec index="191" type="array">
 					<uid>191</uid>
 					<pid>57</pid>
@@ -1722,31 +1761,6 @@
 					<relations index="rels" type="array">
 						<element index="tt_content:188" type="array">
 							<id>188</id>
-							<table>tt_content</table>
-						</element>
-					</relations>
-					<softrefs type="array"></softrefs>
-				</rec>
-				<rec index="188" type="array">
-					<uid>188</uid>
-					<pid>57</pid>
-					<title>[No title]</title>
-					<size>4598</size>
-					<relations index="rels" type="array">
-						<element index="tt_content:191" type="array">
-							<id>191</id>
-							<table>tt_content</table>
-						</element>
-						<element index="tt_content:190" type="array">
-							<id>190</id>
-							<table>tt_content</table>
-						</element>
-						<element index="tt_content:189" type="array">
-							<id>189</id>
-							<table>tt_content</table>
-						</element>
-						<element index="tt_content:192" type="array">
-							<id>192</id>
 							<table>tt_content</table>
 						</element>
 					</relations>
@@ -4163,6 +4177,32 @@
 					<title>Endless Possibilities</title>
 					<size>3381</size>
 					<relations index="rels" type="array"></relations>
+					<softrefs type="array"></softrefs>
+				</rec>
+				<rec index="188" type="array">
+					<uid>188</uid>
+					<pid>57</pid>
+					<title>[No title]</title>
+					<size>4620</size>
+					<relationLevel>1</relationLevel>
+					<relations index="rels" type="array">
+						<element index="tt_content:191" type="array">
+							<id>191</id>
+							<table>tt_content</table>
+						</element>
+						<element index="tt_content:190" type="array">
+							<id>190</id>
+							<table>tt_content</table>
+						</element>
+						<element index="tt_content:189" type="array">
+							<id>189</id>
+							<table>tt_content</table>
+						</element>
+						<element index="tt_content:192" type="array">
+							<id>192</id>
+							<table>tt_content</table>
+						</element>
+					</relations>
 					<softrefs type="array"></softrefs>
 				</rec>
 			</table>
@@ -7394,10 +7434,12 @@
 			<page_contents index="74" type="array">
 				<table index="tt_content" type="array">
 					<item index="237">1</item>
+					<item index="241">1</item>
 				</table>
 			</page_contents>
 			<page_contents index="57" type="array">
 				<table index="tt_content" type="array">
+					<item index="240">1</item>
 					<item index="191">1</item>
 					<item index="190">1</item>
 					<item index="189">1</item>
@@ -8597,7 +8639,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1525702874</field>
+				<field index="tstamp" type="integer">1527064506</field>
 				<field index="sorting" type="integer">256</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="perms_userid" type="integer">1</field>
@@ -8633,7 +8675,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description">Diese Webseite dient als Basis, um professionelle TYPO3-Webseiten zu erstellen. Dank der sorgfältigen Einbindung von Erweiterungen können Inhalte ansprechend präsentiert und leicht verwaltet werden.</field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1525702874</field>
+				<field index="SYS_LASTCHANGED" type="integer">1527064506</field>
 				<field index="abstract"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -8652,7 +8694,7 @@
 				<field index="tsconfig_includes">EXT:bootstrap_package/Configuration/PageTS/Feature/Ionicons.txt,EXT:pizpalue/Configuration/PageTS/Grids.txt,EXT:pizpalue/Configuration/PageTS/CE.txt,EXT:pizpalue/Extensions/news/Configuration/PageTS/General.txt</field>
 				<field index="tx_impexp_origuid" type="integer">1</field>
 				<field index="categories" type="integer">0</field>
-				<field index="tx_ddgooglesitemap_lastmod">1524921355,1524921392,1524921543,1524921581,1525702874</field>
+				<field index="tx_ddgooglesitemap_lastmod">1524921392,1524921543,1524921581,1525702874,1527064506</field>
 				<field index="tx_ddgooglesitemap_priority" type="integer">5</field>
 				<field index="tx_ddgooglesitemap_change_frequency"></field>
 				<field index="tx_realurl_pathsegment"></field>
@@ -8705,7 +8747,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1524921581</field>
+				<field index="tstamp" type="integer">1527064506</field>
 				<field index="sorting" type="integer">256</field>
 				<field index="crdate" type="integer">1495207768</field>
 				<field index="cruser_id" type="integer">1</field>
@@ -8718,7 +8760,9 @@
 				<field index="clear" type="integer">3</field>
 				<field index="include_static_file">EXT:bootstrap_package/Configuration/TypoScript,EXT:gridelements/Configuration/TypoScript/,EXT:bootstrap_grids/Configuration/TypoScript,EXT:brt_videourlreplace/Configuration/TypoScript,EXT:ws_flexslider/Configuration/TypoScript,EXT:slickcarousel/Configuration/TypoScript,EXT:news/Configuration/TypoScript,EXT:news/Configuration/TypoScript/Styles/Twb,EXT:sr_language_menu/Configuration/TypoScript/PluginSetup,EXT:pizpalue/Configuration/TypoScript/Main,EXT:pizpalue/Configuration/TypoScript/Theme,EXT:pizpalue/Configuration/TypoScript/Grids,EXT:pizpalue/Extensions/news/Configuration/TypoScript</field>
 				<field index="constants">
-</field>
+
+pizpalue.logo.alt = 
+page.theme.cookieconsent.content.href = 74</field>
 				<field index="config">
 </field>
 				<field index="nextLevel"></field>
@@ -11901,7 +11945,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1525712350</field>
+				<field index="tstamp" type="integer">1527064115</field>
 				<field index="sorting" type="integer">1664</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="perms_userid" type="integer">1</field>
@@ -11937,7 +11981,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1525712350</field>
+				<field index="SYS_LASTCHANGED" type="integer">1527064115</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -11956,7 +12000,7 @@
 				<field index="tsconfig_includes" type="NULL"></field>
 				<field index="tx_impexp_origuid" type="integer">0</field>
 				<field index="categories" type="integer">0</field>
-				<field index="tx_ddgooglesitemap_lastmod">1525702528,1525702768,1525702897,1525703624,1525712350</field>
+				<field index="tx_ddgooglesitemap_lastmod">1525702768,1525702897,1525703624,1525712350,1527064115</field>
 				<field index="tx_ddgooglesitemap_priority" type="integer">5</field>
 				<field index="tx_ddgooglesitemap_change_frequency"></field>
 				<field index="tx_realurl_pathsegment"></field>
@@ -12111,6 +12155,118 @@
 				</field>
 			</related>
 		</tablerow>
+		<tablerow index="tt_content:241" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">241</field>
+				<field index="pid" type="integer">74</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_id" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_label"></field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="tstamp" type="integer">1527064115</field>
+				<field index="crdate" type="integer">1527064115</field>
+				<field index="cruser_id" type="integer">1</field>
+				<field index="editlock" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="sorting" type="integer">512</field>
+				<field index="CType">text</field>
+				<field index="header">Google Analytics Status Block</field>
+				<field index="header_position"></field>
+				<field index="rowDescription"></field>
+				<field index="bodytext">&lt;p&gt;###GoogleAnalyticsStatus###&lt;/p&gt;</field>
+				<field index="bullets_type" type="integer">0</field>
+				<field index="uploads_description" type="integer">0</field>
+				<field index="uploads_type" type="integer">0</field>
+				<field index="assets" type="integer">0</field>
+				<field index="image" type="integer">0</field>
+				<field index="imagewidth" type="integer">0</field>
+				<field index="imageorient" type="integer">0</field>
+				<field index="imagecols" type="integer">2</field>
+				<field index="imageborder" type="integer">0</field>
+				<field index="media" type="integer">0</field>
+				<field index="layout">0</field>
+				<field index="frame_class">default</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="cols" type="integer">0</field>
+				<field index="spaceBefore" type="integer">0</field>
+				<field index="spaceAfter" type="integer">0</field>
+				<field index="space_before_class"></field>
+				<field index="space_after_class"></field>
+				<field index="records" type="NULL"></field>
+				<field index="pages" type="NULL"></field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="colPos" type="integer">0</field>
+				<field index="subheader"></field>
+				<field index="fe_group"></field>
+				<field index="header_link"></field>
+				<field index="image_zoom" type="integer">0</field>
+				<field index="header_layout">2</field>
+				<field index="list_type"></field>
+				<field index="sectionIndex" type="integer">1</field>
+				<field index="linkToTop" type="integer">0</field>
+				<field index="file_collections" type="NULL"></field>
+				<field index="filelink_size" type="integer">0</field>
+				<field index="filelink_sorting"></field>
+				<field index="target"></field>
+				<field index="date" type="integer">0</field>
+				<field index="recursive" type="integer">0</field>
+				<field index="imageheight" type="integer">0</field>
+				<field index="sys_language_uid" type="integer">0</field>
+				<field index="pi_flexform" type="NULL"></field>
+				<field index="accessibility_title"></field>
+				<field index="accessibility_bypass" type="integer">0</field>
+				<field index="accessibility_bypass_text"></field>
+				<field index="l18n_parent" type="integer">0</field>
+				<field index="l18n_diffsource"></field>
+				<field index="l10n_source" type="integer">0</field>
+				<field index="selected_categories" type="NULL"></field>
+				<field index="category_field"></field>
+				<field index="table_class"></field>
+				<field index="table_caption" type="NULL"></field>
+				<field index="table_delimiter" type="integer">124</field>
+				<field index="table_enclosure" type="integer">0</field>
+				<field index="table_header_position" type="integer">0</field>
+				<field index="table_tfoot" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">0</field>
+				<field index="l10n_state" type="NULL"></field>
+				<field index="categories" type="integer">0</field>
+				<field index="teaser" type="NULL"></field>
+				<field index="quote_source"></field>
+				<field index="icon"></field>
+				<field index="icon_position"></field>
+				<field index="icon_size" type="integer">0</field>
+				<field index="icon_type" type="integer">0</field>
+				<field index="icon_color">#FFFFFF</field>
+				<field index="icon_background">#333333</field>
+				<field index="external_media_source"></field>
+				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
+				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
+				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
+				<field index="quote_link"></field>
+				<field index="panel_class">default</field>
+				<field index="external_media_ratio"></field>
+				<field index="backupColPos" type="integer">-2</field>
+				<field index="tx_gridelements_backend_layout">0</field>
+				<field index="tx_gridelements_children" type="integer">0</field>
+				<field index="tx_gridelements_container" type="integer">0</field>
+				<field index="tx_gridelements_columns" type="integer">0</field>
+				<field index="tx_wsflexslider_images" type="NULL"></field>
+				<field index="slickdefault" type="integer">0</field>
+				<field index="slickheight">0.5</field>
+				<field index="tx_slickcarouselbgimg"></field>
+				<field index="tx_news_related_news" type="integer">0</field>
+				<field index="tx_srlanguagemenu_type" type="integer">0</field>
+				<field index="tx_srlanguagemenu_languages"></field>
+			</fieldlist>
+			<related index="rels" type="array"></related>
+		</tablerow>
 		<tablerow index="pages:57" type="array">
 			<fieldlist index="data" type="array">
 				<field index="uid" type="integer">57</field>
@@ -12125,7 +12281,7 @@
 				<field index="t3ver_tstamp" type="integer">0</field>
 				<field index="t3ver_move_id" type="integer">0</field>
 				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1521732250</field>
+				<field index="tstamp" type="integer">1526370039</field>
 				<field index="sorting" type="integer">1280</field>
 				<field index="deleted" type="integer">0</field>
 				<field index="perms_userid" type="integer">1</field>
@@ -12161,7 +12317,7 @@
 				<field index="newUntil" type="integer">0</field>
 				<field index="description" type="NULL"></field>
 				<field index="no_search" type="integer">0</field>
-				<field index="SYS_LASTCHANGED" type="integer">1521732250</field>
+				<field index="SYS_LASTCHANGED" type="integer">1526370039</field>
 				<field index="abstract" type="NULL"></field>
 				<field index="module"></field>
 				<field index="extendToSubpages" type="integer">0</field>
@@ -12180,7 +12336,7 @@
 				<field index="tsconfig_includes" type="NULL"></field>
 				<field index="tx_impexp_origuid" type="integer">0</field>
 				<field index="categories" type="integer">0</field>
-				<field index="tx_ddgooglesitemap_lastmod">1495704337,1495704344,1495704348,1495704380,1521732250</field>
+				<field index="tx_ddgooglesitemap_lastmod">1495704380,1521732250,1526369863,1526369973,1526370040</field>
 				<field index="tx_ddgooglesitemap_priority" type="integer">5</field>
 				<field index="tx_ddgooglesitemap_change_frequency"></field>
 				<field index="tx_realurl_pathsegment"></field>
@@ -12188,6 +12344,148 @@
 				<field index="tx_realurl_exclude" type="integer">0</field>
 			</fieldlist>
 			<related index="rels" type="array"></related>
+		</tablerow>
+		<tablerow index="tt_content:240" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">240</field>
+				<field index="pid" type="integer">57</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_id" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_label"></field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="tstamp" type="integer">1526369972</field>
+				<field index="crdate" type="integer">1526369863</field>
+				<field index="cruser_id" type="integer">1</field>
+				<field index="editlock" type="integer">0</field>
+				<field index="hidden" type="integer">0</field>
+				<field index="sorting" type="integer">32</field>
+				<field index="CType">text</field>
+				<field index="header">Generatoren zur Erstellung eines Impressums</field>
+				<field index="header_position"></field>
+				<field index="rowDescription"></field>
+				<field index="bodytext">&lt;p&gt;&lt;a href=&quot;https://www.bag.ch/impressum-generator&quot;&gt;https://www.bag.ch/impressum-generator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.activemind.de/datenschutz/impressums-generator&quot;&gt;https://www.activemind.de/datenschutz/impressums-generator&lt;/a&gt;&lt;/p&gt;</field>
+				<field index="bullets_type" type="integer">0</field>
+				<field index="uploads_description" type="integer">0</field>
+				<field index="uploads_type" type="integer">0</field>
+				<field index="assets" type="integer">0</field>
+				<field index="image" type="integer">0</field>
+				<field index="imagewidth" type="integer">0</field>
+				<field index="imageorient" type="integer">0</field>
+				<field index="imagecols" type="integer">2</field>
+				<field index="imageborder" type="integer">0</field>
+				<field index="media" type="integer">0</field>
+				<field index="layout">0</field>
+				<field index="frame_class">default</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="cols" type="integer">0</field>
+				<field index="spaceBefore" type="integer">0</field>
+				<field index="spaceAfter" type="integer">0</field>
+				<field index="space_before_class"></field>
+				<field index="space_after_class"></field>
+				<field index="records" type="NULL"></field>
+				<field index="pages" type="NULL"></field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="colPos" type="integer">0</field>
+				<field index="subheader"></field>
+				<field index="fe_group"></field>
+				<field index="header_link"></field>
+				<field index="image_zoom" type="integer">0</field>
+				<field index="header_layout">0</field>
+				<field index="list_type"></field>
+				<field index="sectionIndex" type="integer">1</field>
+				<field index="linkToTop" type="integer">0</field>
+				<field index="file_collections" type="NULL"></field>
+				<field index="filelink_size" type="integer">0</field>
+				<field index="filelink_sorting"></field>
+				<field index="target"></field>
+				<field index="date" type="integer">0</field>
+				<field index="recursive" type="integer">0</field>
+				<field index="imageheight" type="integer">0</field>
+				<field index="sys_language_uid" type="integer">0</field>
+				<field index="pi_flexform" type="NULL"></field>
+				<field index="accessibility_title"></field>
+				<field index="accessibility_bypass" type="integer">0</field>
+				<field index="accessibility_bypass_text"></field>
+				<field index="l18n_parent" type="integer">0</field>
+				<field index="l18n_diffsource">a:24:{s:5:&quot;CType&quot;;N;s:6:&quot;colPos&quot;;N;s:6:&quot;header&quot;;N;s:13:&quot;header_layout&quot;;N;s:15:&quot;header_position&quot;;N;s:4:&quot;date&quot;;N;s:11:&quot;header_link&quot;;N;s:9:&quot;subheader&quot;;N;s:8:&quot;bodytext&quot;;N;s:6:&quot;layout&quot;;N;s:11:&quot;frame_class&quot;;N;s:18:&quot;space_before_class&quot;;N;s:17:&quot;space_after_class&quot;;N;s:12:&quot;sectionIndex&quot;;N;s:9:&quot;linkToTop&quot;;N;s:16:&quot;sys_language_uid&quot;;N;s:6:&quot;hidden&quot;;N;s:9:&quot;starttime&quot;;N;s:7:&quot;endtime&quot;;N;s:8:&quot;fe_group&quot;;N;s:8:&quot;editlock&quot;;N;s:10:&quot;categories&quot;;N;s:14:&quot;rowDescription&quot;;N;s:25:&quot;tx_gridelements_container&quot;;N;}</field>
+				<field index="l10n_source" type="integer">0</field>
+				<field index="selected_categories" type="NULL"></field>
+				<field index="category_field"></field>
+				<field index="table_class"></field>
+				<field index="table_caption" type="NULL"></field>
+				<field index="table_delimiter" type="integer">124</field>
+				<field index="table_enclosure" type="integer">0</field>
+				<field index="table_header_position" type="integer">0</field>
+				<field index="table_tfoot" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">0</field>
+				<field index="l10n_state" type="NULL"></field>
+				<field index="categories" type="integer">0</field>
+				<field index="teaser" type="NULL"></field>
+				<field index="quote_source"></field>
+				<field index="icon"></field>
+				<field index="icon_position"></field>
+				<field index="icon_size" type="integer">0</field>
+				<field index="icon_type" type="integer">0</field>
+				<field index="icon_color">#FFFFFF</field>
+				<field index="icon_background">#333333</field>
+				<field index="external_media_source"></field>
+				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
+				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
+				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
+				<field index="quote_link"></field>
+				<field index="panel_class">default</field>
+				<field index="external_media_ratio"></field>
+				<field index="backupColPos" type="integer">-2</field>
+				<field index="tx_gridelements_backend_layout">0</field>
+				<field index="tx_gridelements_children" type="integer">0</field>
+				<field index="tx_gridelements_container" type="integer">0</field>
+				<field index="tx_gridelements_columns" type="integer">0</field>
+				<field index="tx_wsflexslider_images" type="NULL"></field>
+				<field index="slickdefault" type="integer">0</field>
+				<field index="slickheight">0.5</field>
+				<field index="tx_slickcarouselbgimg"></field>
+				<field index="tx_news_related_news" type="integer">0</field>
+				<field index="tx_srlanguagemenu_type" type="integer">0</field>
+				<field index="tx_srlanguagemenu_languages"></field>
+			</fieldlist>
+			<related index="rels" type="array">
+				<field index="bodytext" type="array">
+					<softrefs type="array">
+						<keys type="array">
+							<softref_key index="typolink_tag" type="array">
+								<softref_element index="1" type="array">
+									<url>https://www.bag.ch/impressum-generator</url>
+									<type>url</type>
+									<subst type="array">
+										<type>external</type>
+										<tokenID>730544d6adee820f40758794864890f3</tokenID>
+										<tokenValue>https://www.bag.ch/impressum-generator</tokenValue>
+									</subst>
+								</softref_element>
+								<softref_element index="3" type="array">
+									<url>https://www.activemind.de/datenschutz/impressums-generator</url>
+									<type>url</type>
+									<subst type="array">
+										<type>external</type>
+										<tokenID>42dc6e40db924d635d6e3a66c76ee278</tokenID>
+										<tokenValue>https://www.activemind.de/datenschutz/impressums-generator</tokenValue>
+									</subst>
+								</softref_element>
+							</softref_key>
+						</keys>
+						<tokenizedContent>&lt;p&gt;&lt;a href=&quot;{softref:730544d6adee820f40758794864890f3}&quot;&gt;https://www.bag.ch/impressum-generator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;{softref:42dc6e40db924d635d6e3a66c76ee278}&quot;&gt;https://www.activemind.de/datenschutz/impressums-generator&lt;/a&gt;&lt;/p&gt;</tokenizedContent>
+					</softrefs>
+				</field>
+			</related>
 		</tablerow>
 		<tablerow index="tt_content:191" type="array">
 			<fieldlist index="data" type="array">
@@ -12698,202 +12996,6 @@
 					<relations index="itemArray" type="array">
 						<element index="0" type="array">
 							<id>188</id>
-							<table>tt_content</table>
-						</element>
-					</relations>
-				</field>
-			</related>
-		</tablerow>
-		<tablerow index="tt_content:188" type="array">
-			<fieldlist index="data" type="array">
-				<field index="uid" type="integer">188</field>
-				<field index="pid" type="integer">57</field>
-				<field index="t3ver_oid" type="integer">0</field>
-				<field index="t3ver_id" type="integer">0</field>
-				<field index="t3ver_wsid" type="integer">0</field>
-				<field index="t3ver_label"></field>
-				<field index="t3ver_state" type="integer">0</field>
-				<field index="t3ver_stage" type="integer">0</field>
-				<field index="t3ver_count" type="integer">0</field>
-				<field index="t3ver_tstamp" type="integer">0</field>
-				<field index="t3ver_move_id" type="integer">0</field>
-				<field index="t3_origuid" type="integer">0</field>
-				<field index="tstamp" type="integer">1495704231</field>
-				<field index="crdate" type="integer">1495704231</field>
-				<field index="cruser_id" type="integer">1</field>
-				<field index="editlock" type="integer">0</field>
-				<field index="hidden" type="integer">0</field>
-				<field index="sorting" type="integer">256</field>
-				<field index="CType">gridelements_pi1</field>
-				<field index="header"></field>
-				<field index="header_position"></field>
-				<field index="rowDescription"></field>
-				<field index="bodytext" type="NULL"></field>
-				<field index="bullets_type" type="integer">0</field>
-				<field index="uploads_description" type="integer">0</field>
-				<field index="uploads_type" type="integer">0</field>
-				<field index="assets" type="integer">0</field>
-				<field index="image" type="integer">0</field>
-				<field index="imagewidth" type="integer">0</field>
-				<field index="imageorient" type="integer">0</field>
-				<field index="imagecols" type="integer">2</field>
-				<field index="imageborder" type="integer">0</field>
-				<field index="media" type="integer">0</field>
-				<field index="layout">0</field>
-				<field index="frame_class">default</field>
-				<field index="deleted" type="integer">0</field>
-				<field index="cols" type="integer">0</field>
-				<field index="spaceBefore" type="integer">0</field>
-				<field index="spaceAfter" type="integer">0</field>
-				<field index="space_before_class"></field>
-				<field index="space_after_class"></field>
-				<field index="records" type="NULL"></field>
-				<field index="pages" type="NULL"></field>
-				<field index="starttime" type="integer">0</field>
-				<field index="endtime" type="integer">0</field>
-				<field index="colPos" type="integer">0</field>
-				<field index="subheader"></field>
-				<field index="fe_group"></field>
-				<field index="header_link"></field>
-				<field index="image_zoom" type="integer">0</field>
-				<field index="header_layout">0</field>
-				<field index="list_type"></field>
-				<field index="sectionIndex" type="integer">1</field>
-				<field index="linkToTop" type="integer">0</field>
-				<field index="file_collections" type="NULL"></field>
-				<field index="filelink_size" type="integer">0</field>
-				<field index="filelink_sorting"></field>
-				<field index="target"></field>
-				<field index="date" type="integer">0</field>
-				<field index="recursive" type="integer">0</field>
-				<field index="imageheight" type="integer">0</field>
-				<field index="sys_language_uid" type="integer">0</field>
-				<field index="pi_flexform">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
-&lt;T3FlexForms&gt;
-    &lt;data&gt;
-        &lt;sheet index=&quot;sDEF&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;mdCol1&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;col-md-6&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;mdCol2&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;col-md-6&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-        &lt;sheet index=&quot;smallDevices&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;smCol1&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;smCol2&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-        &lt;sheet index=&quot;extraSmallDevices&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;xsCol1&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;xsCol2&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-        &lt;sheet index=&quot;largeDevices&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;lgCol1&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;lgCol2&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-        &lt;sheet index=&quot;customClasses&quot;&gt;
-            &lt;language index=&quot;lDEF&quot;&gt;
-                &lt;field index=&quot;col21class&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-                &lt;field index=&quot;col22class&quot;&gt;
-                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
-                &lt;/field&gt;
-            &lt;/language&gt;
-        &lt;/sheet&gt;
-    &lt;/data&gt;
-&lt;/T3FlexForms&gt;</field>
-				<field index="accessibility_title"></field>
-				<field index="accessibility_bypass" type="integer">0</field>
-				<field index="accessibility_bypass_text"></field>
-				<field index="l18n_parent" type="integer">0</field>
-				<field index="l18n_diffsource"></field>
-				<field index="l10n_source" type="integer">0</field>
-				<field index="selected_categories" type="NULL"></field>
-				<field index="category_field"></field>
-				<field index="table_class"></field>
-				<field index="table_caption" type="NULL"></field>
-				<field index="table_delimiter" type="integer">124</field>
-				<field index="table_enclosure" type="integer">0</field>
-				<field index="table_header_position" type="integer">0</field>
-				<field index="table_tfoot" type="integer">0</field>
-				<field index="tx_impexp_origuid" type="integer">0</field>
-				<field index="l10n_state" type="NULL"></field>
-				<field index="categories" type="integer">0</field>
-				<field index="teaser" type="NULL"></field>
-				<field index="quote_source"></field>
-				<field index="icon"></field>
-				<field index="icon_position"></field>
-				<field index="icon_size" type="integer">0</field>
-				<field index="icon_type" type="integer">0</field>
-				<field index="icon_color">#FFFFFF</field>
-				<field index="icon_background">#333333</field>
-				<field index="external_media_source"></field>
-				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
-				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
-				<field index="quote_link"></field>
-				<field index="panel_class">default</field>
-				<field index="external_media_ratio"></field>
-				<field index="backupColPos" type="integer">-2</field>
-				<field index="tx_gridelements_backend_layout">2cols</field>
-				<field index="tx_gridelements_children" type="integer">7</field>
-				<field index="tx_gridelements_container" type="integer">0</field>
-				<field index="tx_gridelements_columns" type="integer">0</field>
-				<field index="tx_wsflexslider_images" type="NULL"></field>
-				<field index="slickdefault" type="integer">0</field>
-				<field index="slickheight"></field>
-				<field index="tx_slickcarouselbgimg"></field>
-				<field index="tx_news_related_news" type="integer">0</field>
-				<field index="tx_srlanguagemenu_type" type="integer">0</field>
-				<field index="tx_srlanguagemenu_languages"></field>
-			</fieldlist>
-			<related index="rels" type="array">
-				<field index="pi_flexform" type="array">
-					<type>flex</type>
-					<flexform index="flexFormRels" type="array">
-						<db_relations index="db" type="array"></db_relations>
-						<file_relations index="file" type="array"></file_relations>
-						<softref_relations index="softrefs" type="array"></softref_relations>
-					</flexform>
-				</field>
-				<field index="tx_gridelements_children" type="array">
-					<type>db</type>
-					<relations index="itemArray" type="array">
-						<element index="0" type="array">
-							<id>191</id>
-							<table>tt_content</table>
-						</element>
-						<element index="1" type="array">
-							<id>190</id>
-							<table>tt_content</table>
-						</element>
-						<element index="2" type="array">
-							<id>189</id>
-							<table>tt_content</table>
-						</element>
-						<element index="3" type="array">
-							<id>192</id>
 							<table>tt_content</table>
 						</element>
 					</relations>
@@ -43682,6 +43784,202 @@ Aenean ante elit, elementum et, varius ut, condimentum ut, sem. Aenean ante nequ
 						<element index="0" type="array">
 							<id>91</id>
 							<table>sys_file</table>
+						</element>
+					</relations>
+				</field>
+			</related>
+		</tablerow>
+		<tablerow index="tt_content:188" type="array">
+			<fieldlist index="data" type="array">
+				<field index="uid" type="integer">188</field>
+				<field index="pid" type="integer">57</field>
+				<field index="t3ver_oid" type="integer">0</field>
+				<field index="t3ver_id" type="integer">0</field>
+				<field index="t3ver_wsid" type="integer">0</field>
+				<field index="t3ver_label"></field>
+				<field index="t3ver_state" type="integer">0</field>
+				<field index="t3ver_stage" type="integer">0</field>
+				<field index="t3ver_count" type="integer">0</field>
+				<field index="t3ver_tstamp" type="integer">0</field>
+				<field index="t3ver_move_id" type="integer">0</field>
+				<field index="t3_origuid" type="integer">0</field>
+				<field index="tstamp" type="integer">1526370039</field>
+				<field index="crdate" type="integer">1495704231</field>
+				<field index="cruser_id" type="integer">1</field>
+				<field index="editlock" type="integer">0</field>
+				<field index="hidden" type="integer">1</field>
+				<field index="sorting" type="integer">256</field>
+				<field index="CType">gridelements_pi1</field>
+				<field index="header"></field>
+				<field index="header_position"></field>
+				<field index="rowDescription"></field>
+				<field index="bodytext" type="NULL"></field>
+				<field index="bullets_type" type="integer">0</field>
+				<field index="uploads_description" type="integer">0</field>
+				<field index="uploads_type" type="integer">0</field>
+				<field index="assets" type="integer">0</field>
+				<field index="image" type="integer">0</field>
+				<field index="imagewidth" type="integer">0</field>
+				<field index="imageorient" type="integer">0</field>
+				<field index="imagecols" type="integer">2</field>
+				<field index="imageborder" type="integer">0</field>
+				<field index="media" type="integer">0</field>
+				<field index="layout">0</field>
+				<field index="frame_class">default</field>
+				<field index="deleted" type="integer">0</field>
+				<field index="cols" type="integer">0</field>
+				<field index="spaceBefore" type="integer">0</field>
+				<field index="spaceAfter" type="integer">0</field>
+				<field index="space_before_class"></field>
+				<field index="space_after_class"></field>
+				<field index="records" type="NULL"></field>
+				<field index="pages" type="NULL"></field>
+				<field index="starttime" type="integer">0</field>
+				<field index="endtime" type="integer">0</field>
+				<field index="colPos" type="integer">0</field>
+				<field index="subheader"></field>
+				<field index="fe_group"></field>
+				<field index="header_link"></field>
+				<field index="image_zoom" type="integer">0</field>
+				<field index="header_layout">0</field>
+				<field index="list_type"></field>
+				<field index="sectionIndex" type="integer">1</field>
+				<field index="linkToTop" type="integer">0</field>
+				<field index="file_collections" type="NULL"></field>
+				<field index="filelink_size" type="integer">0</field>
+				<field index="filelink_sorting"></field>
+				<field index="target"></field>
+				<field index="date" type="integer">0</field>
+				<field index="recursive" type="integer">0</field>
+				<field index="imageheight" type="integer">0</field>
+				<field index="sys_language_uid" type="integer">0</field>
+				<field index="pi_flexform">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
+&lt;T3FlexForms&gt;
+    &lt;data&gt;
+        &lt;sheet index=&quot;sDEF&quot;&gt;
+            &lt;language index=&quot;lDEF&quot;&gt;
+                &lt;field index=&quot;mdCol1&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;col-md-6&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;mdCol2&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;col-md-6&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+        &lt;sheet index=&quot;smallDevices&quot;&gt;
+            &lt;language index=&quot;lDEF&quot;&gt;
+                &lt;field index=&quot;smCol1&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;smCol2&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+        &lt;sheet index=&quot;extraSmallDevices&quot;&gt;
+            &lt;language index=&quot;lDEF&quot;&gt;
+                &lt;field index=&quot;xsCol1&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;xsCol2&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+        &lt;sheet index=&quot;largeDevices&quot;&gt;
+            &lt;language index=&quot;lDEF&quot;&gt;
+                &lt;field index=&quot;lgCol1&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;lgCol2&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+        &lt;sheet index=&quot;customClasses&quot;&gt;
+            &lt;language index=&quot;lDEF&quot;&gt;
+                &lt;field index=&quot;col21class&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index=&quot;col22class&quot;&gt;
+                    &lt;value index=&quot;vDEF&quot;&gt;&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+    &lt;/data&gt;
+&lt;/T3FlexForms&gt;</field>
+				<field index="accessibility_title"></field>
+				<field index="accessibility_bypass" type="integer">0</field>
+				<field index="accessibility_bypass_text"></field>
+				<field index="l18n_parent" type="integer">0</field>
+				<field index="l18n_diffsource">a:1:{s:6:&quot;hidden&quot;;N;}</field>
+				<field index="l10n_source" type="integer">0</field>
+				<field index="selected_categories" type="NULL"></field>
+				<field index="category_field"></field>
+				<field index="table_class"></field>
+				<field index="table_caption" type="NULL"></field>
+				<field index="table_delimiter" type="integer">124</field>
+				<field index="table_enclosure" type="integer">0</field>
+				<field index="table_header_position" type="integer">0</field>
+				<field index="table_tfoot" type="integer">0</field>
+				<field index="tx_impexp_origuid" type="integer">0</field>
+				<field index="l10n_state" type="NULL"></field>
+				<field index="categories" type="integer">0</field>
+				<field index="teaser" type="NULL"></field>
+				<field index="quote_source"></field>
+				<field index="icon"></field>
+				<field index="icon_position"></field>
+				<field index="icon_size" type="integer">0</field>
+				<field index="icon_type" type="integer">0</field>
+				<field index="icon_color">#FFFFFF</field>
+				<field index="icon_background">#333333</field>
+				<field index="external_media_source"></field>
+				<field index="tx_bootstrappackage_carousel_item" type="integer">0</field>
+				<field index="tx_bootstrappackage_accordion_item" type="integer">0</field>
+				<field index="tx_bootstrappackage_tab_item" type="integer">0</field>
+				<field index="quote_link"></field>
+				<field index="panel_class">default</field>
+				<field index="external_media_ratio"></field>
+				<field index="backupColPos" type="integer">-2</field>
+				<field index="tx_gridelements_backend_layout">2cols</field>
+				<field index="tx_gridelements_children" type="integer">7</field>
+				<field index="tx_gridelements_container" type="integer">0</field>
+				<field index="tx_gridelements_columns" type="integer">0</field>
+				<field index="tx_wsflexslider_images" type="NULL"></field>
+				<field index="slickdefault" type="integer">0</field>
+				<field index="slickheight"></field>
+				<field index="tx_slickcarouselbgimg"></field>
+				<field index="tx_news_related_news" type="integer">0</field>
+				<field index="tx_srlanguagemenu_type" type="integer">0</field>
+				<field index="tx_srlanguagemenu_languages"></field>
+			</fieldlist>
+			<related index="rels" type="array">
+				<field index="pi_flexform" type="array">
+					<type>flex</type>
+					<flexform index="flexFormRels" type="array">
+						<db_relations index="db" type="array"></db_relations>
+						<file_relations index="file" type="array"></file_relations>
+						<softref_relations index="softrefs" type="array"></softref_relations>
+					</flexform>
+				</field>
+				<field index="tx_gridelements_children" type="array">
+					<type>db</type>
+					<relations index="itemArray" type="array">
+						<element index="0" type="array">
+							<id>191</id>
+							<table>tt_content</table>
+						</element>
+						<element index="1" type="array">
+							<id>190</id>
+							<table>tt_content</table>
+						</element>
+						<element index="2" type="array">
+							<id>189</id>
+							<table>tt_content</table>
+						</element>
+						<element index="3" type="array">
+							<id>192</id>
+							<table>tt_content</table>
 						</element>
 					</relations>
 				</field>
