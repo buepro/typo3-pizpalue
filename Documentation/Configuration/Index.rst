@@ -55,3 +55,8 @@ Further configurations regarding the cookie dialog can be found und "PIZPALUE: C
 .. _info
 For Google Analytics a control block can be embedded by using the string ###GoogleAnalyticsStatus### in a content
 element.
+
+.. _note
+The cookie dialog is rendered with a partial. You might need to update your template by embedding
+   ::
+      <f:render partial="Structure/CookieConsent" arguments="{_all}" />
