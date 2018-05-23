@@ -4,22 +4,18 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
-
 			<trans-unit id="ppCeFrame1">
 				<source>Custom frame 1</source>
 				<target state="translated">Angepasster Rahmen 1</target>
 			</trans-unit>
-
 			<trans-unit id="ppCeFrame2">
 				<source>Custom frame 2</source>
 				<target state="translated">Angepasster Rahmen 2</target>
 			</trans-unit>
-
 			<trans-unit id="ppCeFrame3">
 				<source>Custom frame 3</source>
 				<target state="translated">Angepasster Rahmen 3</target>
 			</trans-unit>
-
 			<trans-unit id="ppCeFrame4">
 				<source>Custom frame 4</source>
 				<target state="translated">Angepasster Rahmen 4</target>
@@ -28,27 +24,63 @@
 			<trans-unit id="ppCefAnimation1">
 				<source>Angepasste Animation 1</source>
 			</trans-unit>
-
 			<trans-unit id="ppCefAnimation2">
 				<source>Angepasste Animation 2</source>
 			</trans-unit>
-
 			<trans-unit id="ppCefAnimation3">
 				<source>Angepasste Animation 3</source>
 			</trans-unit>
-
 			<trans-unit id="ppCefScrollAnimation1">
 				<source>Angepasste Scrollanimation 1</source>
 			</trans-unit>
-
 			<trans-unit id="ppCefScrollAnimation2">
 				<source>Angepasste Scrollanimation 2</source>
 			</trans-unit>
-
 			<trans-unit id="ppCefScrollAnimation3">
 				<source>Angepasste Scrollanimation 3</source>
 			</trans-unit>
 
+			<trans-unit id="cookieconsent.common.header">
+                <source>Cookies used on the website!</source>
+                <target state="translated">Diese Webseite benutzt Cookies!</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.message">
+                <source>This website uses cookies to ensure you get the best experience on our website.</source>
+                <target state="translated">Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies eingesetzt.</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.dismiss">
+                <source>Got it!</source>
+                <target state="translated">Alles klar!</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.allow">
+                <source>Allow cookies</source>
+                <target state="translated">Cookies erlauben</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.deny">
+                <source>Decline</source>
+                <target state="translated">Ablehnen</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.link">
+                <source>Learn more</source>
+                <target state="translated">Mehr erfahren</target>
+            </trans-unit>
+
+            <trans-unit id="googleanalyticsstatus.title">
+                <source>Google Analytics Status</source>
+                <target state="translated">Google Analytics Status</target>
+            </trans-unit>
+            <trans-unit id="googleanalyticsstatus.description">
+                <source>Here you can object to the anonymous collection by Google Analytics on this website for your browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a different computer or web browser, you will need to re-set the exclusion.</source>
+                <target state="translated">Für diese Webseite können Sie hier, durch ein "Opt-Out-Cookie", die anonymen Datenerfassung durch Google Analytics deaktivieren. Bitte beachten Sie, dass wenn Sie das Ausschluss-Cookie löschen oder einen anderen Computer oder Webbrowser verwenden, den Ausschluss neu setzen müssen.</target>
+            </trans-unit>
+            <trans-unit id="googleanalyticsstatus.link.enable">
+                <source>Enable Google Analytics (Opt-In)</source>
+                <target state="translated">Google Analytics aktivieren (Opt-In)</target>
+            </trans-unit>
+            <trans-unit id="googleanalyticsstatus.link.disable">
+                <source>Deactivate Google Analytics (Opt-Out)</source>
+                <target state="translated">Google Analytics deaktivieren (Opt-Out)</target>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

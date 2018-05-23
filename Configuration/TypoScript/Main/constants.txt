@@ -6,18 +6,20 @@
 # customsubcategory=1020=Customer
 # customsubcategory=1030=Frame
 # customsubcategory=1032=Style
-# customsubcategory=1033=Style font
-# customsubcategory=1034=Style header
-# customsubcategory=1035=Style footer
-# customsubcategory=1039=Style various
+# customsubcategory=1033=Font
+# customsubcategory=1034=Header
+# customsubcategory=1035=Footer
+# customsubcategory=1039=Various
 # customsubcategory=1040=Logo
 # customsubcategory=1060=Menu
+# customsubcategory=1080=Cookie consent
 # customsubcategory=1110=Appicon
 # customsubcategory=1210=Storage
 # customsubcategory=1410=SEO
 # customsubcategory=1510=Features
 
 
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Extensions/bootstrap_package/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/ConstantsBsp.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/ConstantsGeneral.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/ConstantsAgency.txt">
@@ -55,7 +57,7 @@ plugin {
 # ---------------------------------------------------------- #
 page {
 	fluidtemplate {
-		#layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/Page/
+		layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/Page/
 		partialRootPath = EXT:pizpalue/Resources/Private/Partials/Page/
 		templateRootPath = EXT:pizpalue/Resources/Private/Templates/Page/
 	}

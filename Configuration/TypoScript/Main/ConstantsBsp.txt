@@ -87,6 +87,18 @@ plugin.bootstrap_package.settings.less {
     # cat=pizpalue: customer style/1034/1080; type=string; label=Default link disabled background
     navbar-default-link-disabled-bg = transparent
 
+    # cat=pizpalue: customer style/1080/1010; type=string; label= Cookie consent panel z-index
+    cookieconsent-zindex = 1080
+
+    # cat=pizpalue: customer style/1080/1020; type=string; label= Cookie consent panel background
+    cookieconsent-bg = @gray-darker
+
+    # cat=pizpalue: customer style/1080/1030; type=string; label= Cookie consent panel color
+    cookieconsent-color = contrast(@cookieconsent-bg, black, white, 43%)
+
+    # cat=pizpalue: customer style/1080/1030; type=string; label= Cookie consent panel link color
+    cookieconsent-link-color = @brand-primary
+
 	# cat=pizpalue: customer style/1039/1110; type=string; label=Register tabs bar background color
 	pp-tab-v1-background = @gray-lighter
 
@@ -95,7 +107,6 @@ plugin.bootstrap_package.settings.less {
 
 	# cat=pizpalue: customer style/1039/1130; type=string; label=Register border color
 	pp-tab-v1-border-color = #ddd
-
 
 	pp-tab-v1-background-hover = mix(@pp-tab-v1-background,@pp-tab-v1-active-background)
 	nav-tabs-active-link-hover-color = contrast(@pp-tab-v1-background)

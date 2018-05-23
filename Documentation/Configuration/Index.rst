@@ -41,3 +41,17 @@ Parameter                                  Value
 [FE][pageNotFound_handling]                REDIRECT:https://www.pizpalue.buechler.pro/404/
 [FE][pageNotFound_handling_statheader]     HTTP/1.0 404 Not Found
 ========================================== ===================================================
+
+.. _cookieconsent:
+
+Cookie consent
+--------------
+
+To show a cookie dialog the "Enable Cookie Consent"-parameter has to be set (available through the constant editor
+under "PIZPALUE: CUSTOMER"). As well a link to a privacy policy page can be set in the cookie dialog.
+
+Further configurations regarding the cookie dialog can be found und "PIZPALUE: CUSTOMER VARIOUS" in the constant editor.
+
+.. _info
+For Google Analytics a control block can be embedded by using the string ###GoogleAnalyticsStatus### in a content
+element.

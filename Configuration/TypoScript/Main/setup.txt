@@ -18,9 +18,9 @@ config {
     // Branding
     headerComment (
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-               Eine Webseite von buechler.pro
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+   Eine Webseite basierend der Distribution pizpalue von buechler.pro
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     )
 
@@ -66,6 +66,10 @@ page.meta.google-site-verification = {$pizpalue.seo.google.siteVerification}
 #=============#
 # page object #
 #=============#
+
+#---------#
+# general #
+#---------#
 page {
     shortcutIcon >
 
@@ -101,11 +105,18 @@ page {
 }
 
 
+#----------#
+# language #
+#----------#
 [globalString = LIT:1 = {$pizpalue.menu.language.enable}]
 # href link tag for search engines
 page.headerData.110 < lib.pizpalue.hrefLinkTag
 [global]
 
+
+#-------------------#
+# style definitions #
+#-------------------#
 [globalString = LIT:1 = {$pizpalue.features.useStyle}]
 page {
     includeCSS {
@@ -118,6 +129,10 @@ page {
 }
 [global]
 
+
+#----------------------------------#
+# content element scroll animation #
+#----------------------------------#
 [globalString = LIT:1 = {$pizpalue.features.useCeScrollAnimation}]
 page {
     includeCSS {
@@ -130,6 +145,7 @@ page {
     }
 }
 [global]
+
 
 #==============#
 # localization #

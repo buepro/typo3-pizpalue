@@ -4,7 +4,47 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+            <trans-unit id="cookieconsent.common.header">
+                <source>Cookies used on the website!</source>
+                <target state="translated">Ce site Web utilise des cookies!</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.message">
+                <source>This website uses cookies to ensure you get the best experience on our website.</source>
+                <target state="translated">Les cookies sont utilisés pour vous permettre une utilisation optimale de notre site Web.</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.dismiss">
+                <source>Got it!</source>
+                <target state="translated">je l'ai!</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.allow">
+                <source>Allow cookies</source>
+                <target state="translated">Autoriser les cookies</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.deny">
+                <source>Decline</source>
+                <target state="translated">Déclin</target>
+            </trans-unit>
+            <trans-unit id="cookieconsent.common.link">
+                <source>Learn more</source>
+                <target state="translated">En savoir plus</target>
+            </trans-unit>
 
+            <trans-unit id="googleanalyticsstatus.title">
+                <source>Google Analytics Status</source>
+                <target state="translated">Google Analytics Status</target>
+            </trans-unit>
+            <trans-unit id="googleanalyticsstatus.description">
+                <source>Here you can object to the anonymous collection by Google Analytics on this website for your browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a different computer or web browser, you will need to re-set the exclusion.</source>
+                <target state="translated">Vous pouvez vous opposer à la collecte anonyme de Google Analytics sur ce site Web pour votre navigateur en utilisant un "Opt-Out-Cookie". Veuillez noter que si vous supprimez le témoin d'exclusion ou si vous utilisez un ordinateur ou un navigateur Web différent, vous devrez réinitialiser l'exclusion.</target>
+            </trans-unit>
+            <trans-unit id="googleanalyticsstatus.link.enable">
+                <source>Enable Google Analytics (Opt-In)</source>
+                <target state="translated">Activer Google Analytics (Opt-In)</target>
+            </trans-unit>
+            <trans-unit id="googleanalyticsstatus.link.disable">
+                <source>Deactivate Google Analytics (Opt-Out)</source>
+                <target state="translated">Désactiver Google Analytics (Opt-Out)</target>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -101,6 +101,27 @@ page.theme {
 
 
 # ---------------------------------------------------------- #
+# cookie consent
+# ---------------------------------------------------------- #
+
+page.theme.cookieconsent {
+    # cat=pizpalue: customer/1080/0110; type=boolean; label=Enable Cookie Consent: For more information about this solution please head over to https://cookieconsent.insites.com/
+    enable = 1
+
+    # cat=pizpalue: customer/1080/1010; type=options[Basic=basic, Basic Close=basic-close, Basic Header=basic-header]; label=Layout
+    layout = basic
+
+    # cat=pizpalue: customer/1080/1020; type=options[Banner Top=top, Banner Bottom=bottom, Floating Top Left=top-left, Floating Top Right=top-right, Floating Bottom Left=bottom-left, Floating Bottom Right=bottom-right]; label=Position: Position is used to describe where on the screen your popup should display. We also use 'position' to assume the shape of your popup. If you specify 'top' or 'bottom', we assume that a full width 'banner' is required. If however you specify a horizontal direction, we assume that a corner popup is required (which we call 'floating').
+    position = bottom-left
+
+    content {
+        # cat=pizpalue: customer/1080/1040; type=string; label=Privacy Police: Insert a full Link to the privacy police page or a page uid from your current TYPO3 System.
+        href =
+    }
+}
+
+
+# ---------------------------------------------------------- #
 # appicons
 # ---------------------------------------------------------- #
 
