@@ -139,12 +139,18 @@ page.meta.author = {$pizpalue.seo.metaAuthor}
 # ---------------------------------------------------------- #
 
 pizpalue.features {
-	# cat=pizpalue: customer various/1510/0010; type=boolean; label=Use style:If selected a style sheet will be included
+	# cat=pizpalue: customer various/1510/0110; type=boolean; label=Use style:If selected a style sheet will be included
 	useStyle = 1
 
-	# cat=pizpalue: customer various/1510/0110; type=boolean; label=Use CE animation:If selected a content element animation will be availabe (js,css - not implemented yet)
+	# cat=pizpalue: customer various/1510/0210; type=boolean; label=Use CE animation:If selected a content element animation will be availabe (js,css - not implemented yet)
 	useCeAnimation = 0
 
-	# cat=pizpalue: customer various/1510/0120; type=boolean; label=Use CE scroll animation:If selected a content element scroll animation will be included (js,css)
-	useCeScrollAnimation = 1
+	scrollAnimation {
+        # cat=pizpalue: customer various/1510/0320; type=string; label=Custom scroll animation frame 1 attributes
+        frame1Attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
+        # cat=pizpalue: customer various/1510/0340; type=string; label=Custom scroll animation frame 2 attributes
+        frame2Attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
+        # cat=pizpalue: customer various/1510/0350; type=string; label=Custom scroll animation frame 3 attributes
+        frame3Attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
+	}
 }

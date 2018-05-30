@@ -100,6 +100,13 @@ page {
                 frame.revealFooter = {$pizpalue.frame.revealFooter}
             }
         }
+        dataProcessing {
+            2 = Buepro\Pizpalue\DataProcessing\ConstantsProcessor
+            2 {
+                as = pizpalue
+                key = pizpalue
+            }
+        }
     }
 
 }
@@ -133,11 +140,11 @@ page {
 #----------------------------------#
 # content element scroll animation #
 #----------------------------------#
-[globalString = LIT:1 = {$pizpalue.features.useCeScrollAnimation}]
+[globalString = LIT:1 = {$pizpalue.features.scrollAnimation.enable}]
+lib.contentElement.settings.preload.images = 1
 page {
     includeCSS {
         Aos = EXT:pizpalue/Contrib/Aos/dist/aos.css
-        PizpalueCeScrollAnimation = EXT:pizpalue/Resources/Public/Css/CeScrollAnimation.css
     }
     includeJSFooter {
         Aos = EXT:pizpalue/Contrib/Aos/dist/aos.js

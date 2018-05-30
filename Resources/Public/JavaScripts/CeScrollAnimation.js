@@ -3,7 +3,6 @@
  *
  **/
 
- var debug = 1;
 
 /**
  * extend the provided class
@@ -19,28 +18,12 @@
 
 }(jQuery);
 
+
+/**
+ * initialize and update AOS
+ *
+ */
 +function($) {
-
-    $('.frame-pp-scrollanimation1')
-        .attr('data-aos','fade-up-right')
-        .attr('data-aos-anchor-placement','center-bottom');
-
-    $('.frame-pp-scrollanimation2')
-        .attr('data-aos','fade-up-left')
-        .attr('data-aos-anchor-placement','center-bottom');
-
-    $('.frame-pp-scrollanimation3')
-        .attr('data-aos','zoom-in')
-        .attr('data-aos-anchor-placement','center-bottom');
-
-	$(document).ready(function () {
-        window.setTimeout(function(){
-            AOS.init({
-                easing: 'ease-in-out-sine',
-            });
-            //console.log('aos initialized');
-        }, 500);
-	});
 
 	$(window).on('loaded.bk2k.responsiveimage',function() {
         window.setTimeout(function(){
@@ -50,4 +33,13 @@
         //console.log('loaded.bk2k.responsiveimage');
 	});
 
-} (jQuery);
+    $(document).ready(function () {
+        window.setTimeout(function(){
+            AOS.init({
+                easing: 'ease-in-out-sine',
+            });
+            //console.log('aos initialized');
+        }, 500);
+    });
+
+}(jQuery);

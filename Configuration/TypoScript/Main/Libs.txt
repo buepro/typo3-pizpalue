@@ -107,3 +107,20 @@ lib.pizpalue.contentElement.socialNetwork {
         }
     }
 }
+
+
+#===============================================================================
+#
+# pass constants to content elements
+#
+#===============================================================================
+lib.contentElement {
+    dataProcessing {
+        110 = Buepro\Pizpalue\DataProcessing\ConstantsProcessor
+        110 {
+            as = pizpalue
+            key = pizpalue
+        }
+    }
+}
+

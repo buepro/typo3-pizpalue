@@ -167,3 +167,10 @@ page.tracking.google.trackingID = {$pizpalue.seo.google.trackingID}
 # ---------------------------------------------------------- #
 # features
 # ---------------------------------------------------------- #
+
+pizpalue.features {
+	scrollAnimation {
+        # cat=pizpalue: customer/1510/0302; type=boolean; label=Enable content element scroll animation:If selected content element scroll animation will be available. This feature forces the images to be preloaded. Just enable it on pages where scroll animation is desired.
+        enable = 0
+    }
+}
