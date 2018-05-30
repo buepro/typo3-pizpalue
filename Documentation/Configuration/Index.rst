@@ -57,8 +57,9 @@ where the content element dimensions change upon scrolling, like it is the case 
 This is why the images are configured to be fully preloaded when the scroll animation feature is enabled. This might be
 overwritten with the following TS:
 
-   ::
-      lib.contentElement.settings.preload.images = 0
+.. code-block:: typoscript
+
+   lib.contentElement.settings.preload.images = 0
 
 .. _cookieconsent:
 
@@ -76,5 +77,7 @@ element.
 
 .. _note
 The cookie dialog is rendered with a partial. You might need to update your template by embedding
-   ::
-      <f:render partial="Structure/CookieConsent" arguments="{_all}" />
+
+.. code-block:: fluid
+
+   <f:render partial="Structure/CookieConsent" arguments="{_all}" />
