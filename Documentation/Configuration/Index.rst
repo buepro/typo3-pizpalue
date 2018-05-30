@@ -42,6 +42,24 @@ Parameter                                  Value
 [FE][pageNotFound_handling_statheader]     HTTP/1.0 404 Not Found
 ========================================== ===================================================
 
+.. _scrollanimation:
+
+Scroll animation
+----------------
+
+The scroll animation feature allows to call further attention to content elements while the user is scrolling on the
+page. Typically content elements are moved in from the side of the page.
+
+The feature can be enabled in the constant editor (PIZPALUE: CUSTOMER - Features).
+
+Since this feature is based on the dimensions from the visible area and the content element problems might come up
+where the content element dimensions change upon scrolling, like it is the case with the lazy image loading feature.
+This is why the images are configured to be fully preloaded when the scroll animation feature is enabled. This might be
+overwritten with the following TS:
+
+   ::
+      lib.contentElement.settings.preload.images = 0
+
 .. _cookieconsent:
 
 Cookie consent
