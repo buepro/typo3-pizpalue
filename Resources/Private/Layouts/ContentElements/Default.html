@@ -49,7 +49,6 @@
         <f:else>
 
             <a id="c{data.uid}"></a>
-            <div id="pp-cnf{data.uid}" {scrollAttr -> f:format.htmlentitiesDecode()} class="pp-noframe{ppClasses -> f:format.htmlentities()}"{ppAttr -> f:format.htmlentitiesDecode()}{ppStyleAttr -> f:format.htmlentitiesDecode()}>
                 <f:if condition="{data._LOCALIZED_UID}">
                     <a id="c{data._LOCALIZED_UID}"></a>
                 </f:if>
@@ -72,7 +71,6 @@
                 <f:if condition="{data.space_after_class}">
                     <div class="frame-space-after-{data.space_after_class}"></div>
                 </f:if>
-            </div>
 
         </f:else>
     </f:if>
