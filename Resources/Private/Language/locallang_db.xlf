@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-31T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+            <trans-unit id="tx_pizpalue_ttc.attributes">
+				<source>Attributes</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes">
+				<source>Additional classes</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.style">
+                <source>Inline style</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.additionalAttributes">
+				<source>Additional attributes</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

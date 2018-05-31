@@ -19,6 +19,22 @@ Please refere as well to the manual user section from the
 related extensions.
 
 
+.. _ce-attributes:
+
+Attribute enhancement for content elements
+==========================================
+
+Sometimes it would be handy to directly alter attributes from a content element container: add an additional class,
+some inline style or additional attributes.
+
+This functionality has been added by introducing additional fields to the content element table and adapting the
+rendering accordingly. The new fields are available under the appearance tab in the "Attributes" palette.
+
+.. figure:: ../Images/User/ContentElementAttributes.jpg
+   :alt: Palette "Attributes" under the appearance tab in the content element form
+
+   Palette "Attributes" under the appearance tab in the content element form
+
 
 .. _user-bootstrap_grids:
 
@@ -61,7 +77,6 @@ render the image on top of the text (`see example <https://www.pizpalue.buechler
 
    News template to render image on top
 
-
 .. _user-customframes:
 
 Custom frames
@@ -76,7 +91,6 @@ Additional frames can be selected for content elements (`see example <https://ww
 
 As for the time beeing the custom animations (Custom animation 1..3) aren't
 implemented yet.
-
 
 .. _user-inlineLocalization:
 
@@ -95,7 +109,6 @@ curly brackets within the editor (`see example <https://www.pizpalue.buechler.pr
 .. tip::
    You might reference other content as defined by the
    `"getText" data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html>`__.
-
 
 .. _user-flexContentWidth:
 
@@ -147,7 +160,6 @@ editor. The constant can be found in "PIZPALUE: Customer - Frame".
    "transform: translateZ(0)" to the last content element in the preceeding
    sibling element. In any case the element having "transform: translateZ(0)"
    assigned should be higher than the footer.
-
 
 .. _usr-ppClasses
 
