@@ -14,6 +14,7 @@
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.style">
                 <source>Stieldefinitionen</source>
+                <target state="translated">Inline-Stil</target>
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.additionalAttributes">
 				<source>Additional attributes</source>
