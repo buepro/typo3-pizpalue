@@ -5,7 +5,8 @@
 		<header/>
 		<body>
             <trans-unit id="tx_pizpalue_ttc.attributes">
-				<source>Attribute</source>
+				<source>Attributes</source>
+				<target state="translated">Attribute</target>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.classes">
 				<source>Additional classes</source>

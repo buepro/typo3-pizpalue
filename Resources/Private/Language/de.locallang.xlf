@@ -22,23 +22,29 @@
 			</trans-unit>
 
 			<trans-unit id="ppCefAnimation1">
-				<source>Angepasste Animation 1</source>
-			</trans-unit>
-			<trans-unit id="ppCefAnimation2">
-				<source>Angepasste Animation 2</source>
-			</trans-unit>
-			<trans-unit id="ppCefAnimation3">
-				<source>Angepasste Animation 3</source>
-			</trans-unit>
-			<trans-unit id="ppCefScrollAnimation1">
-				<source>Angepasste Scrollanimation 1</source>
-			</trans-unit>
-			<trans-unit id="ppCefScrollAnimation2">
-				<source>Angepasste Scrollanimation 2</source>
-			</trans-unit>
-			<trans-unit id="ppCefScrollAnimation3">
-				<source>Angepasste Scrollanimation 3</source>
-			</trans-unit>
+                <source>Custom animation 1</source>
+                <target state="translated">Angepasste Animation 1</target>
+            </trans-unit>
+            <trans-unit id="ppCefAnimation2">
+                <source>Custom animation 2</source>
+                <target state="translated">Angepasste Animation 2</target>
+            </trans-unit>
+            <trans-unit id="ppCefAnimation3">
+                <source>Custom animation 3</source>
+                <target state="translated">Angepasste Animation 3</target>
+            </trans-unit>
+            <trans-unit id="ppCefScrollAnimation1">
+                <source>Custom scroll animation 1</source>
+                <target state="translated">Angepasste Scrollanimation 1</target>
+            </trans-unit>
+            <trans-unit id="ppCefScrollAnimation2">
+                <source>Custom scroll animation 2</source>
+                <target state="translated">Angepasste Scrollanimation 2</target>
+            </trans-unit>
+            <trans-unit id="ppCefScrollAnimation3">
+                <source>Custom scroll animation 3</source>
+                <target state="translated">Angepasste Scrollanimation 3</target>
+            </trans-unit>
 
 			<trans-unit id="cookieconsent.common.header">
                 <source>Cookies used on the website!</source>
