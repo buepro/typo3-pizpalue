@@ -19,7 +19,7 @@ Consider to review the below mentioned entries in the installtool.
    $GLOBALS['TYPO3_CONF_VARS']['SYS']['ddmmyy'] = 'd.m.y';
    $GLOBALS['TYPO3_CONF_VARS']['SYS']['hhmm'] = 'H:i';
    $GLOBALS['TYPO3_CONF_VARS']['SYS']['phpTimeZone'] = 'Europe/Zurich';
-   $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLocale'] = 'de_CH.utf8'; 
+   $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLocale'] = 'de_CH.utf8';
 
 
 .. _config_seo:
@@ -117,3 +117,22 @@ Further configurations regarding the cookie dialog can be found und "PIZPALUE: C
 .. code-block:: xml
 
    <f:render partial="Structure/CookieConsent" arguments="{_all}" />
+
+
+.. _socialNetwork:
+
+Social networks
+---------------
+
+Links to social networks can easyly be embedded by using the string ###SocialNetwork###
+some where in a content element.
+
+By default the `"Font Awesome" <https://fontawesome.com/>`__ library is used for
+this purpose. This library provides an extensive icon set. Even the `TYPO3 logo
+<https://fontawesome.com/icons?d=gallery&q=typo3>`__ is available.
+
+Many icons are as well available with the `Ionicon library <https://ionicons.com/>`__
+provided by the bootstrap_package. Unfortunatly the TYPO3-icon as well as the
+Xing-icon are missing. In case those icons aren't needed the "Font Awesome"
+library might be disabled to gain page load speed. The related parameter can be
+found under the "Features" section in the constant editor selecting "PIZPALUE: CUSTOMER".

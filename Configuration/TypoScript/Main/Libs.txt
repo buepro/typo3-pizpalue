@@ -58,59 +58,6 @@ lib.pizpalue.hrefLinkTag {
 
 #===============================================================================
 #
-# customers social network
-#
-#===============================================================================
-lib.pizpalue.contentElement.socialNetwork = FLUIDTEMPLATE
-lib.pizpalue.contentElement.socialNetwork {
-    file = EXT:pizpalue/Resources/Private/Templates/ContentElements/SocialNetwork.html
-    settings {
-        facebook {
-            link = {$pizpalue.customer.socialNetwork.facebook.link}
-            linkTitle = {$pizpalue.customer.socialNetwork.facebook.linkTitle}
-            iconClass = ion ion-social-facebook
-        }
-        twitter {
-            link = {$pizpalue.customer.socialNetwork.twitter.link}
-            linkTitle = {$pizpalue.customer.socialNetwork.twitter.linkTitle}
-            iconClass = ion ion-social-twitter
-        }
-        linkedin {
-            link = {$pizpalue.customer.socialNetwork.linkedin.link}
-            linkTitle = {$pizpalue.customer.socialNetwork.linkedin.linkTitle}
-            iconClass = ion ion-social-linkedin
-        }
-        pinterest {
-            link = {$pizpalue.customer.socialNetwork.pinterest.link}
-            linkTitle = {$pizpalue.customer.socialNetwork.pinterest.linkTitle}
-            iconClass = ion ion-social-pinterest
-        }
-        instagram {
-            link = {$pizpalue.customer.socialNetwork.instagram.link}
-            linkTitle = {$pizpalue.customer.socialNetwork.instagram.linkTitle}
-            iconClass = ion ion-social-instagram
-        }
-        custom1 {
-            link = {$pizpalue.customer.socialNetwork.custom1.link}
-            linkTitle = {$pizpalue.customer.socialNetwork.custom1.linkTitle}
-            iconClass = {$pizpalue.customer.socialNetwork.custom1.iconClass}
-        }
-        custom2 {
-            link = {$pizpalue.customer.socialNetwork.custom2.link}
-            linkTitle = {$pizpalue.customer.socialNetwork.custom2.linkTitle}
-            iconClass = {$pizpalue.customer.socialNetwork.custom2.iconClass}
-        }
-        custom3 {
-            link = {$pizpalue.customer.socialNetwork.custom3.link}
-            linkTitle = {$pizpalue.customer.socialNetwork.custom3.linkTitle}
-            iconClass = {$pizpalue.customer.socialNetwork.custom3.iconClass}
-        }
-    }
-}
-
-
-#===============================================================================
-#
 # pass constants to content elements
 #
 #===============================================================================

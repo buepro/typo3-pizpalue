@@ -22,8 +22,7 @@
     "typo3-ter/brt-videourlreplace": "~1.2.4",
     "typo3-ter/slickcarousel": "~2.0.0",
     "typo3-ter/ws-flexslider": "~1.5.5",
-    "typo3-ter/url-forwarding": "~1.3.1",
-    "typo3-ter/typoscript2ce": "~1.2.3"
+    "typo3-ter/url-forwarding": "~1.3.1"
   },
   "replace": {
     "pizpalue": "*"

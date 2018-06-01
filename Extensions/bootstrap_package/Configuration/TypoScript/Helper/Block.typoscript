@@ -49,6 +49,11 @@ lib.block {
             as = theme
             key = page.theme
         }
+        2 = Buepro\Pizpalue\DataProcessing\ConstantsProcessor
+        2 {
+            as = pizpalue
+            key = pizpalue
+        }
     }
 
 }

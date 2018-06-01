@@ -100,6 +100,20 @@ page {
                 frame.revealFooter = {$pizpalue.frame.revealFooter}
             }
         }
+
+        # blocks
+        stdWrap.replacement {
+            # 1-99 so far used by bootstrap_package
+            1010 {
+                search = ###SocialNetwork###
+                replace {
+                    cObject < lib.block
+                    cObject.templateName = SocialNetwork
+                }
+            }
+        }
+
+        # pass config to fluid
         dataProcessing {
             2 = Buepro\Pizpalue\DataProcessing\ConstantsProcessor
             2 {
@@ -149,6 +163,23 @@ page {
     includeJSFooter {
         Aos = EXT:pizpalue/Contrib/Aos/dist/aos.js
         PizpalueCeScrollAnimation = EXT:pizpalue/Resources/Public/JavaScripts/CeScrollAnimation.js
+    }
+}
+[global]
+
+
+#--------------#
+# font awesome #
+#--------------#
+[globalString = LIT:1 = {$pizpalue.features.fontAwesome.enable}]
+page {
+    includeCSSLibs {
+        FontAwesome = https://use.fontawesome.com/releases/v5.0.13/css/all.css
+        FontAwesome {
+            external = 1
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
     }
 }
 [global]

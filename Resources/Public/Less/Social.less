@@ -1,14 +1,11 @@
-.pp-social-link {
-	white-space: nowrap;
-	transition: color 0.7s;
-}
-
-.pp-ion-social-bar {
+.pp-social-bar {
 	padding: 0;
-	font-size: 28px;
-	line-height: 28px;
-	li {
-		margin: 0 0.2em;
+	font-size: @pp-social-icon-height;
+	line-height: @pp-social-icon-height;
+	.pp-social-link {
+		margin: 0 @pp-social-icon-margin;
+		white-space: nowrap;
+		transition: color 0.7s;
 		&:first-child {
 			margin-left: 0;
 		}

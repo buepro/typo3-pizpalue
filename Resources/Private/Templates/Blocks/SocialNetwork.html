@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    {f:variable(name: 'networks', value: '{pizpalue.customer.socialNetwork}')}
+
+    <f:if condition="{networks -> f:count()}">
+        <span class="pp-social-bar {f:if(condition: '{pizpalue.features.fontAwesome.enable}', then: 'fontawesome', else: 'ionicon')}">
+            <f:for each="{networks}" as="network" key="name">
+                <f:if condition="{network.link}">
+                    <f:if condition="{pizpalue.features.fontAwesome.enable}">
+                        <f:then>
+                            <f:if condition="{network.iconFaClass}">
+                                <f:link.external class="pp-social-link" uri="{network.link}" title="{network.linkTitle}" target="_blank">
+                                    <i class="{network.iconFaClass}"></i>
+                                </f:link.external>
+                            </f:if>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{network.iconIonClass}">
+                                <f:link.external class="pp-social-link" uri="{network.link}" title="{network.linkTitle}" target="_blank">
+                                    <i class="{network.iconIonClass}"></i>
+                                </f:link.external>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:if>
+            </f:for>
+        </span>
+    </f:if>
+</f:spaceless>
+</html>

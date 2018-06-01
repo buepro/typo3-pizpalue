@@ -1,28 +1,27 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
-{f:variable(name: 'scrollAttr1', value: '{pizpalue.features.scrollAnimation.frame1Attributes -> f:format.stripTags()}')}
-{f:variable(name: 'scrollAttr2', value: '{pizpalue.features.scrollAnimation.frame2Attributes -> f:format.stripTags()}')}
-{f:variable(name: 'scrollAttr3', value: '{pizpalue.features.scrollAnimation.frame3Attributes -> f:format.stripTags()}')}
-
-<f:switch expression="{data.frame_class}">
-    <f:defaultCase>{f:variable(name: 'scrollAttr', value: '')}</f:defaultCase>
-    <f:case value="pp-scrollanimation1">{f:variable(name: 'scrollAttr', value: '{scrollAttr1}')}</f:case>
-    <f:case value="pp-scrollanimation2">{f:variable(name: 'scrollAttr', value: '{scrollAttr2}')}</f:case>
-    <f:case value="pp-scrollanimation3">{f:variable(name: 'scrollAttr', value: '{scrollAttr3}')}</f:case>
-</f:switch>
-
-{f:variable(name: 'ppClasses', value: '')}
-{f:variable(name: 'ppClasses', value: ' {data.tx_pizpalue_classes -> f:format.stripTags()}') -> f:if(condition: '{data.tx_pizpalue_classes}')}
-
-{f:variable(name: 'ppStyle', value: '')}
-{f:variable(name: 'ppStyle', value: '{data.tx_pizpalue_style -> f:format.stripTags()}') -> f:if(condition: '{data.tx_pizpalue_style}')}
-{f:variable(name: 'ppStyleAttr', value: '')}
-{f:variable(name: 'ppStyleAttr', value: ' style="{ppStyle}" ') -> f:if(condition: '{ppStyle}')}
-
-{f:variable(name: 'ppAttr', value: '')}
-{f:variable(name: 'ppAttr', value: ' {data.tx_pizpalue_attributes  -> f:format.stripTags()} ') -> f:if(condition:'{data.tx_pizpalue_attributes}')}
-
 <f:spaceless>
+    {f:variable(name: 'scrollAttr1', value: '{pizpalue.features.scrollAnimation.frame1Attributes -> f:format.stripTags()}')}
+    {f:variable(name: 'scrollAttr2', value: '{pizpalue.features.scrollAnimation.frame2Attributes -> f:format.stripTags()}')}
+    {f:variable(name: 'scrollAttr3', value: '{pizpalue.features.scrollAnimation.frame3Attributes -> f:format.stripTags()}')}
+
+    <f:switch expression="{data.frame_class}">
+        <f:defaultCase>{f:variable(name: 'scrollAttr', value: '')}</f:defaultCase>
+        <f:case value="pp-scrollanimation1">{f:variable(name: 'scrollAttr', value: '{scrollAttr1}')}</f:case>
+        <f:case value="pp-scrollanimation2">{f:variable(name: 'scrollAttr', value: '{scrollAttr2}')}</f:case>
+        <f:case value="pp-scrollanimation3">{f:variable(name: 'scrollAttr', value: '{scrollAttr3}')}</f:case>
+    </f:switch>
+
+    {f:variable(name: 'ppClasses', value: '')}
+    {f:variable(name: 'ppClasses', value: ' {data.tx_pizpalue_classes -> f:format.stripTags()}') -> f:if(condition: '{data.tx_pizpalue_classes}')}
+
+    {f:variable(name: 'ppStyle', value: '')}
+    {f:variable(name: 'ppStyle', value: '{data.tx_pizpalue_style -> f:format.stripTags()}') -> f:if(condition: '{data.tx_pizpalue_style}')}
+    {f:variable(name: 'ppStyleAttr', value: '')}
+    {f:variable(name: 'ppStyleAttr', value: ' style="{ppStyle}" ') -> f:if(condition: '{ppStyle}')}
+
+    {f:variable(name: 'ppAttr', value: '')}
+    {f:variable(name: 'ppAttr', value: ' {data.tx_pizpalue_attributes  -> f:format.stripTags()} ') -> f:if(condition:'{data.tx_pizpalue_attributes}')}
+
     <f:if condition="{data.frame_class} != none">
         <f:then>
 
@@ -75,5 +74,4 @@
         </f:else>
     </f:if>
 </f:spaceless>
-
 </html>
