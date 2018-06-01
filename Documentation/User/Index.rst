@@ -31,6 +31,7 @@ This functionality has been added by introducing additional fields to the conten
 rendering accordingly. The new fields are available under the appearance tab in the "Attributes" palette.
 
 .. figure:: ../Images/User/ContentElementAttributes.jpg
+   :width: 500px
    :alt: Palette "Attributes" under the appearance tab in the content element form
 
    Palette "Attributes" under the appearance tab in the content element form
@@ -44,6 +45,7 @@ Grid elements
 The add new content element wizards shows a tab called "Grid Elements":
 
 .. figure:: ../Images/User/GridElements_Wizard.jpg
+   :width: 500px
    :alt: "Grid Elements"-tab in new content element wizard
 
    "Grid Elements"-tab in new content element wizard
@@ -77,6 +79,7 @@ render the image on top of the text (`see example <https://www.pizpalue.buechler
 
    News template to render image on top
 
+
 .. _user-customframes:
 
 Custom frames
@@ -91,6 +94,7 @@ Additional frames can be selected for content elements (`see example <https://ww
 
 As for the time beeing the custom animations (Custom animation 1..3) aren't
 implemented yet.
+
 
 .. _user-inlineLocalization:
 
@@ -110,6 +114,7 @@ curly brackets within the editor (`see example <https://www.pizpalue.buechler.pr
    You might reference other content as defined by the
    `"getText" data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html>`__.
 
+
 .. _user-flexContentWidth:
 
 Flexible content width
@@ -125,6 +130,7 @@ fix container" and "Full with container" grid elements:
    "Full width" page layout
 
 .. figure:: ../Images/User/ContentWidth_Container.jpg
+   :width: 500px
    :alt: Container grid element
 
    Container grid element
@@ -135,12 +141,33 @@ fix container" and "Full with container" grid elements:
    "General"-tab:
 
    .. figure:: ../Images/User/ContentWidth_ContainerOptions.jpg
+      :width: 500px
       :alt: Container grid element plugin options
 
       Container grid element plugin options
 
 
-.. _usr-revealFooter
+.. _usr-scrollanimation:
+
+Scroll animation
+================
+
+The scroll animation feature allows to call further attention to content elements while the user is scrolling on the
+page. Typically content elements are moved in from the side of the page.
+
+To use this feature follow these steps:
+
+1. Make sure the feature is enabled for the page where it is used (:ref:`see scroll animation configuration <config_scrollanimation>`)
+2. Select a "Custom scroll animation" as a frame or specify the data attributes in the appearance tab from the content element
+
+.. figure:: ../Images/User/ScrollAnimation_Appearance.png
+   :width: 500px
+   :alt: Define the scroll animation either with a frame or withe data attributes
+
+   Define the scroll animation either with a frame or withe data attributes
+
+
+.. _usr-revealFooter:
 
 Reveal footer
 =============
@@ -161,7 +188,8 @@ editor. The constant can be found in "PIZPALUE: Customer - Frame".
    sibling element. In any case the element having "transform: translateZ(0)"
    assigned should be higher than the footer.
 
-.. _usr-ppClasses
+
+.. _usr-ppClasses:
 
 Piz Palue classes
 =================

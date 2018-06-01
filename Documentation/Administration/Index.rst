@@ -6,7 +6,7 @@
 Administration
 ==============
 
-.. _development
+.. _development:
 
 Development
 -----------
@@ -49,5 +49,5 @@ PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
    Constant editor
 
 
-.. _tip
-For further configurations the related extension configurations might be adjusted.
+.. _tip:
+   For further configurations the related extension configurations might be adjusted.

@@ -1,12 +1,28 @@
 .. include:: ../Includes.txt
 
 
-.. _configuration:
+.. _config:
 
 Configuration
 ==============
 
-.. _seo:
+
+.. _installtool:
+
+Install tool
+------------
+
+Consider to review the below mentioned entries in the installtool.
+
+.. code-block:: php
+
+   $GLOBALS['TYPO3_CONF_VARS']['SYS']['ddmmyy'] = 'd.m.y';
+   $GLOBALS['TYPO3_CONF_VARS']['SYS']['hhmm'] = 'H:i';
+   $GLOBALS['TYPO3_CONF_VARS']['SYS']['phpTimeZone'] = 'Europe/Zurich';
+   $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLocale'] = 'de_CH.utf8'; 
+
+
+.. _config_seo:
 
 SEO
 ---
@@ -28,7 +44,8 @@ You might follow these steps to setup seo features:
 
    SEO related constants in "PIZPALUE CUSTOMER" category
 
-.. _404:
+
+.. _config_404:
 
 404-Handling
 ------------
@@ -42,15 +59,13 @@ Parameter                                  Value
 [FE][pageNotFound_handling_statheader]     HTTP/1.0 404 Not Found
 ========================================== ===================================================
 
-.. _scrollanimation:
+
+.. _config_scrollanimation:
 
 Scroll animation
 ----------------
 
-The scroll animation feature allows to call further attention to content elements while the user is scrolling on the
-page. Typically content elements are moved in from the side of the page.
-
-The feature can be enabled in the constant editor (PIZPALUE: CUSTOMER - Features).
+The feature can be enabled in the constant editor (:ref:`PIZPALUE: CUSTOMER - Features <ScrollAnimation_ConstantEditor>`).
 
 Since this feature is based on the dimensions from the visible area and the content element problems might come up
 where the content element dimensions change upon scrolling, like it is the case with the lazy image loading feature.
@@ -61,7 +76,28 @@ overwritten with the following TS:
 
    lib.contentElement.settings.preload.images = 0
 
-.. _cookieconsent:
+
+Enable scroll animation
+~~~~~~~~~~~~~~~~~~~~~~~
+
+To enable the scroll animation for a certain page follow these steps:
+
+1. Create extension template for page
+
+.. figure:: ../Images/Configuration/ScrollAnimation_ExtensionTemplate.png
+   :width: 500px
+   :alt: Create extension template for page
+
+.. _ScrollAnimation_ConstantEditor:
+
+2. Enable scroll animation in constant editor
+
+.. figure:: ../Images/Configuration/ScrollAnimation_ConstantEditor.png
+   :width: 500px
+   :alt: Enable scroll animation in constant editor
+
+
+.. _config_cookieconsent:
 
 Cookie consent
 --------------
@@ -71,13 +107,13 @@ under "PIZPALUE: CUSTOMER"). As well a link to a privacy policy page can be set 
 
 Further configurations regarding the cookie dialog can be found und "PIZPALUE: CUSTOMER VARIOUS" in the constant editor.
 
-.. _info
-For Google Analytics a control block can be embedded by using the string ###GoogleAnalyticsStatus### in a content
-element.
+.. _info:
+   For Google Analytics a control block can be embedded by using the string ###GoogleAnalyticsStatus### in a content
+   element.
 
-.. _note
-The cookie dialog is rendered with a partial. You might need to update your template by embedding
+.. _note:
+   The cookie dialog is rendered with a partial. You might need to update your template by embedding
 
-.. code-block:: fluid
+.. code-block:: xml
 
    <f:render partial="Structure/CookieConsent" arguments="{_all}" />
