@@ -6,7 +6,7 @@
 Administration
 ==============
 
-.. _development:
+.. _admin_development:
 
 Development
 -----------
@@ -21,7 +21,7 @@ moved before the root page where the code debugging can be enabled by activating
 the debug mode in the "PIZPALUE: AGENCY" category from the constant editor.
 
 
-.. _configuration:
+.. _admin_configuration:
 
 Configuration
 -------------
@@ -49,5 +49,5 @@ PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
    Constant editor
 
 
-.. _tip:
+.. tip::
    For further configurations the related extension configurations might be adjusted.

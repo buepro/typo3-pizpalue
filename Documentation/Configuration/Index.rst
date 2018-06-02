@@ -1,13 +1,13 @@
 .. include:: ../Includes.txt
 
 
-.. _config:
+.. _configuration:
 
 Configuration
 ==============
 
 
-.. _installtool:
+.. _config_installtool:
 
 Install tool
 ------------
@@ -65,7 +65,7 @@ Parameter                                  Value
 Scroll animation
 ----------------
 
-The feature can be enabled in the constant editor (:ref:`PIZPALUE: CUSTOMER - Features <ScrollAnimation_ConstantEditor>`).
+The feature can be enabled in the constant editor (:ref:`PIZPALUE: CUSTOMER - Features <config_ScrollAnimation_ConstantEditor>`).
 
 Since this feature is based on the dimensions from the visible area and the content element problems might come up
 where the content element dimensions change upon scrolling, like it is the case with the lazy image loading feature.
@@ -88,7 +88,7 @@ To enable the scroll animation for a certain page follow these steps:
    :width: 500px
    :alt: Create extension template for page
 
-.. _ScrollAnimation_ConstantEditor:
+.. _config_ScrollAnimation_ConstantEditor:
 
 2. Enable scroll animation in constant editor
 
@@ -107,16 +107,16 @@ under "PIZPALUE: CUSTOMER"). As well a link to a privacy policy page can be set 
 
 Further configurations regarding the cookie dialog can be found und "PIZPALUE: CUSTOMER VARIOUS" in the constant editor.
 
-.. _info:
+.. note::
    For Google Analytics a control block can be embedded by using the string ###GoogleAnalyticsStatus### in a content
    element.
 
-.. _note:
+.. note::
    The cookie dialog is rendered with a partial. You might need to update your template by embedding
 
-.. code-block:: xml
+   .. code-block:: xml
 
-   <f:render partial="Structure/CookieConsent" arguments="{_all}" />
+      <f:render partial="Structure/CookieConsent" arguments="{_all}" />
 
 
 .. _socialNetwork:
