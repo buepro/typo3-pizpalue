@@ -91,7 +91,7 @@ plugin.bootstrap_package.settings.less {
     cookieconsent-zindex = 1080
 
     # cat=pizpalue: customer style/1080/1020; type=string; label= Cookie consent panel background
-    cookieconsent-bg = @gray-darker
+    cookieconsent-bg = @gray-lighter
 
     # cat=pizpalue: customer style/1080/1030; type=string; label= Cookie consent panel color
     cookieconsent-color = contrast(@cookieconsent-bg, black, white, 43%)

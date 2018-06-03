@@ -22,6 +22,7 @@ $(function () {
     }
 });
 
+
 $(document).ready(function () {
 
     /**
@@ -55,6 +56,39 @@ $(document).ready(function () {
     });
 
     /**
+     * cookie consent adjustments
+     *
+     */
+    +function() {
+        if (!$('#cookieconsent').length) return;
+        var $originalHeaderMargin = $('.body-bg > header').css('margin-top');
+        var $originalFooterMargin = $('footer').css('margin-bottom');
+        var $ccTop = $('#cookieconsent .cc-banner.cc-top');
+        var $ccBottom = $('#cookieconsent .cc-banner.cc-bottom');
+        if (!$('#cookieconsent .cc-invisible').length && !$('#cookieconsent .cc-static').length) {
+            if ($ccTop.length) {
+                $('.body-bg > header').css('margin-top',$ccTop.outerHeight(true));
+            }
+            if ($ccBottom.length) {
+                $('footer').css('margin-bottom',$ccBottom.outerHeight(true));
+            }
+        }
+
+        window.addEventListener('pizpalue.cookie.popupclose',function(){
+            if ($ccTop.length) {
+                $('.body-bg > header')
+                    .css('transition', 'margin-top 0.5s 0.5s')
+                    .css('margin-top',$originalHeaderMargin);
+            }
+            if ($ccBottom.length) {
+                $('footer')
+                    .css('transition', 'margin-bottom 0.5s 0.5s')
+                    .css('margin-bottom',$originalFooterMargin);
+            }
+        });
+    }();
+
+    /**
      * reveal footer
      *
      * js is used because the bottom margin from the content container
@@ -66,9 +100,9 @@ $(document).ready(function () {
         var originalMargin = $('#content').css('margin-bottom');
         function revealFooter () {
             if (ppFrameRevealFooter) {
-                var footerHeight = $('footer').height();
-                var contentHeight = $(window).height();
-                if($('.navbar-fixed-top').length) contentHeight -= $('.navbar-fixed-top').height();
+                var footerHeight = $('footer').outerHeight(true);
+                var contentHeight = $(window).outerHeight(true);
+                if($('.navbar-fixed-top').length) contentHeight -= $('.navbar-fixed-top').outerHeight(true);
                 if (footerHeight < contentHeight) {
                     $('#content').addClass('pp-reveal-footer')
                         .css('margin-bottom',footerHeight);
