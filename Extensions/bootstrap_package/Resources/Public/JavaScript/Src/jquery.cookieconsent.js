@@ -140,11 +140,6 @@
             event.initEvent('pizpalue.cookie.popupclose', true, true);
             window.dispatchEvent(event);
         };
-        cookieConsentOptions.onPopupOpen = function () {
-            var event = document.createEvent('Event');
-            event.initEvent('pizpalue.cookie.popupopen', true, true);
-            window.dispatchEvent(event);
-        };
 
         // Initialize
         cookieConsentOptions.container = document.getElementById("cookieconsent");
