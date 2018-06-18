@@ -79,7 +79,9 @@ page {
     }
     jsFooterInline {
         1010 = TEXT
-        1010.stdWrap.dataWrap = var ppFrameRevealFooter = {$pizpalue.frame.revealFooter}
+        1010.value (
+var ppFrameRevealFooter = {$pizpalue.frame.revealFooter};
+        )
     }
     includeJSFooter {
         PizpalueBootstrap = EXT:pizpalue/Resources/Public/JavaScripts/Bootstrap.js
@@ -163,6 +165,15 @@ page {
     includeJSFooter {
         Aos = EXT:pizpalue/Contrib/Aos/dist/aos.js
         PizpalueCeScrollAnimation = EXT:pizpalue/Resources/Public/JavaScripts/CeScrollAnimation.js
+    }
+    jsFooterInline {
+        1020 = TEXT
+        1020.value (
+
+var ppFeaturesScrollAnimationInitObject = {
+   {$pizpalue.features.scrollAnimation.initParams}
+};
+        )
     }
 }
 [global]

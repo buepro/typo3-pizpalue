@@ -152,6 +152,8 @@ pizpalue.features {
         frame2Attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
         # cat=pizpalue: customer various/1510/0350; type=string; label=Custom scroll animation frame 3 attributes
         frame3Attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
+        # cat=pizpalue: customer various/1510/0360; type=string; label= Scroll animation init parameters
+        initParams = easing: 'ease-in-out-sine'
 	}
     fontAwesome {
         # cat=pizpalue: customer/1510/0302; type=boolean; label=Enable embedding from "Font Awesome"

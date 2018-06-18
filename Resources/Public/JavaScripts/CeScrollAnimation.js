@@ -35,9 +35,13 @@
 
     $(document).ready(function () {
         window.setTimeout(function(){
-            AOS.init({
-                easing: 'ease-in-out-sine',
-            });
+            if (typeof ppFeaturesScrollAnimationInitObject === 'object') {
+                AOS.init(ppFeaturesScrollAnimationInitObject);
+            } else {
+                AOS.init({
+                    easing: 'ease-in-out-sine',
+                });
+            }
             //console.log('aos initialized');
         }, 500);
     });
