@@ -1,14 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roman
- * Date: 02/06/2018
- * Time: 10:17
+
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
  */
 
-use TYPO3\CMS\Extbase\Object\ObjectManager;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extensionmanager\Utility\InstallUtility;
 
 class ext_update
@@ -77,20 +78,20 @@ class ext_update
      * @return string
      * @see fluid InfoboxViewHelper.php
      */
-    private function getDialog($severity,$title,$message)
+    private function getDialog($severity, $title, $message)
     {
         return  '<div class="callout callout-' . $this->classes[$severity] . '">' .
                     '<div class="media">' .
                         $this->getDialogIcon($severity) .
                         '<div class="media-body">' .
-                            $this->getDialogTitle($title).
+                            $this->getDialogTitle($title) .
                             '<div class="callout-body">' . $message . '</div>' .
                         '</div>' .
                     '</div>' .
                 '</div>';
     }
 
-    function main()
+    public function main()
     {
         $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $this->installTool = $this->objectManager->get(InstallUtility::class);
@@ -103,15 +104,14 @@ class ext_update
         }
         if ($extTablesSqlContent !== '') {
             $this->installTool->updateDbWithExtTablesSql($extTablesSqlContent);
-            return $this->getDialog(SEVERITY_OK,'Database updated','The database has been updated with the current table definition.');
+            return $this->getDialog(SEVERITY_OK, 'Database updated', 'The database has been updated with the current table definition.');
         } else {
-            return $this->getDialog(SEVERITY_ERROR,'Database update','The database update failed due to a missing table definition file');
+            return $this->getDialog(SEVERITY_ERROR, 'Database update', 'The database update failed due to a missing table definition file');
         }
     }
 
-    function access()
+    public function access()
     {
-        return TRUE;
+        return true;
     }
-
 }
