@@ -35,7 +35,7 @@ pizpalue.customer.socialNetwork {
         linkTitle = Besuchen Sie uns auf Linkedin
         # cat=pizpalue: customer social; type=string; label=Linkedin icon ion-class
         iconIonClass = ion ion-social-linkedin
-        # cat=pizpalue: customer social; type=string; label=Twitter icon fontawesome-class
+        # cat=pizpalue: customer social; type=string; label=Linkedin icon fontawesome-class
         iconFaClass = fab fa-linkedin-in
     }
     pinterest {

@@ -11,20 +11,6 @@ if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
-/***************
- * PageTs
- */
-
-// Add BackendLayouts BackendLayouts for the BackendLayout DataProvider
-if (!is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package'])) {
-    $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package'] = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package']);
-}
-if (!$GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package']['disablePageTsBackendLayouts']) {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Extensions/bootstrap_package/Configuration/PageTS/Mod/web_layout.txt">');
-}
-if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package'])) {
-    $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package'] = serialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package']);
-}
 
 /***************
  * Static templates
