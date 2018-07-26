@@ -90,6 +90,8 @@ var ppFrameRevealFooter = {$pizpalue.frame.revealFooter};
     }
     10 {
         templateName.stdWrap.cObject {
+            pagets__fullwidth_default = TEXT
+            pagets__fullwidth_default.value = FullwidthDefault
             pagets__fullwidth_clean = TEXT
             pagets__fullwidth_clean.value = FullwidthClean
         }

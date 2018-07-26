@@ -10,8 +10,12 @@
 			</trans-unit>
 
 			<trans-unit id="backend_layout.fullwidth_clean">
-				<source>Full width</source>
+				<source>Full width clean</source>
 			</trans-unit>
+
+			<trans-unit id="backend_layout.fullwidth_default">
+                <source>Full width default</source>
+            </trans-unit>
 
 		</body>
 	</file>
