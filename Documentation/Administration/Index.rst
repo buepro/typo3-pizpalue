@@ -6,6 +6,23 @@
 Administration
 ==============
 
+.. _admin_customize:
+
+Customize
+---------
+
+The suggested way to customize the distribution for customer projects is to create an extension (e.g. user_customer)
+and define the customer theme and functions in it (`see TYPO3 documentation
+<https://docs.typo3.org/typo3cms/ExtbaseFluidBook/4-FirstExtension/Index.html>`__).
+
+An example extension for that purpose is delivered and activated with the distribution. You might use it as your
+starting point.
+
+.. figure:: ../Images/Administration/Admin_Customize.jpg
+   :alt: Customize the distribution for customer projects
+
+   Customize the distribution for customer projects
+
 .. _admin_development:
 
 Development
