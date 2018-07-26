@@ -12,6 +12,12 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extensionmanager\Utility\InstallUtility;
 
+/**
+ * Class ext_update
+ *
+ * This class provides methods to update pizpalue-installations through the extension manager. Currently it supports
+ * updating the data base structure.
+ */
 class ext_update
 {
     const SEVERITY_NOTICE = -2;
@@ -93,6 +99,7 @@ class ext_update
 
     public function main()
     {
+        // update data base structure
         $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $this->installTool = $this->objectManager->get(InstallUtility::class);
 
