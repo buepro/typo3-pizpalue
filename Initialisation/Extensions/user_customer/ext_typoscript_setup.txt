@@ -1,0 +1,2 @@
+plugin.tx_form.settings.yamlConfigurations.300 = EXT:user_customer/Configuration/Form/CustomFormSetup.yaml
+module.tx_form.settings.yamlConfigurations.300 = EXT:user_customer/Configuration/Form/CustomFormSetup.yaml

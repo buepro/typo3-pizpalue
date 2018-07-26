@@ -1,0 +1,53 @@
+#-------------#
+# lib object  #
+#-------------#
+
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+    layoutRootPaths {
+        30 = {$user_customer.contentElement.fluidtemplate.layoutRootPath}
+    }
+    templateRootPaths {
+        30 = {$user_customer.contentElement.fluidtemplate.templateRootPath}
+    }
+    partialRootPaths {
+        30 = {$user_customer.contentElement.fluidtemplate.partialRootPath}
+    }
+}
+
+
+#-------------#
+# page object #
+#-------------#
+page {
+    includeCSS {
+        #ucCss = EXT:user_customer/Resources/Public/Css/General.css
+        ucLess = EXT:user_customer/Resources/Public/Less/General.less
+        #ucBootstrapLess = EXT:user_customer/Resources/Public/Less/Bootstrap.less
+        #ucPluginsLess = EXT:user_customer/Resources/Public/Less/Plugins.less
+    }
+    #includeJSFooter.ucGeneral = EXT:user_customer/Resources/Public/JavaScripts/General.js
+
+    10 {
+        layoutRootPaths.3 = {$user_customer.page.fluidtemplate.layoutRootPath}
+        templateRootPaths.3 = {$user_customer.page.fluidtemplate.templateRootPath}
+        partialRootPaths.3 = {$user_customer.page.fluidtemplate.partialRootPath}
+    }
+}
+
+# in case more fonts are needed:
+# page.includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family=Exo:700i|Hind:400,700
+# popup.includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family=Exo:700i|Hind:400,700
+
+
+#-------------#
+# various     #
+#-------------#
+
+# under construction page
+[page|uid = 59]
+page.10.dataProcessing.10.as = no-mainnavigation
+page.10.variables.rootPage >
+page.10.variables.rootPage = TEXT
+page.10.variables.rootPage.value = 59
+[end]

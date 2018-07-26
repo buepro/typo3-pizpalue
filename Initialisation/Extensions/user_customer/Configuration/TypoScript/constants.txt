@@ -1,0 +1,238 @@
+# ---------------------------------------------------------- #
+# bootstrap_package font
+# ---------------------------------------------------------- #
+
+plugin.bootstrap_package {
+    settings {
+        less {
+            #google-webfont = "Hind"
+            #google-webfont-weight = 400,700
+        }
+    }
+}
+#pizpalue.style.google-webfontfamily = {$plugin.bootstrap_package.settings.less.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
+
+
+# ---------------------------------------------------------- #
+# bootstrap_package colors
+# ---------------------------------------------------------- #
+
+plugin.bootstrap_package {
+    settings {
+        less {
+            #border-radius-base = 0px
+
+            #body-bg = #fff
+            #navbar-default-bg =
+            #footer-bg =
+
+            #text-color = @gray-dark
+            #link-color = @brand-primary
+            #link-hover-color = darken(@link-color, 15%)
+
+            #navbar-height = 70px
+            #navbar-margin-bottom = @line-height-computed
+            #navbar-default-color = #333
+            #navbar-default-border = darken(@navbar-default-bg, 6.5%)
+            #navbar-default-link-color =
+            #navbar-default-link-hover-color =
+            #navbar-default-link-active-color =
+            #navbar-default-brand-color = @navbar-default-link-color
+            #navbar-default-brand-hover-color = @navbar-default-link-active-color
+            #navbar-default-toggle-hover-bg = transparent
+            #navbar-default-toggle-icon-bar-bg = @navbar-default-link-color
+            #navbar-default-toggle-border-color = transparent
+
+            #jumbotron-color = contrast(@brand-primary)
+            #link-color = @brand-complementary
+            #dropdown-link-hover-color = contrast(@brand-primary)
+            #btn-primary-color = contrast(@brand-primary)
+
+            #cookieconsent-zindex = 1080;
+            #cookieconsent-bg = @gray-lighter;
+            #cookieconsent-color = contrast(@cookieconsent-bg, black, white, 43%);
+            #cookieconsent-link-color = @brand-primary;
+        }
+    }
+}
+
+# ---------------------------------------------------------- #
+# templates
+# ---------------------------------------------------------- #
+user_customer {
+    page.fluidtemplate {
+        #layoutRootPath = EXT:user_customer/Resources/Private/Layouts/Page/
+        #partialRootPath = EXT:user_customer/Resources/Private/Partials/Page/
+        #templateRootPath = EXT:user_customer/Resources/Private/Templates/Page/
+    }
+    contentElement.fluidtemplate {
+        #layoutRootPath = EXT:user_customer/Resources/Private/Layouts/ContentElements/
+        #partialRootPath = EXT:user_customer/Resources/Private/Partials/ContentElements/
+        #templateRootPath = EXT:user_customer/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+# ---------------------------------------------------------- #
+# agency
+# ---------------------------------------------------------- #
+
+#pizpalue.agency.isDebugMode = 1
+#pizpalue.agency.reference = <span class="pp-agency-reference">Eine Webseite von <a href="http://www.buechler.pro/" title="buechler.pro | TYPO3 Webseiten" target="_blank">buechler.pro</a></span>
+
+
+# ---------------------------------------------------------- #
+# customer
+# ---------------------------------------------------------- #
+
+pizpalue.customer {
+    #commonName = Allgemeiner Kundenname
+    #commonEmail = info@domain.ch
+}
+
+
+# ---------------------------------------------------------- #
+# frame
+# ---------------------------------------------------------- #
+
+pizpalue.frame {
+    revealFooter = 1
+}
+
+[treeLevel = 0]
+pizpalue.menu.main {
+    navigationstyle = default-transition
+    navigationtype = top
+}
+[end]
+
+
+# ---------------------------------------------------------- #
+# colors
+# ---------------------------------------------------------- #
+
+plugin.bootstrap_package.settings.less {
+    #brand-primary = #1E9A00
+    #brand-secundary = #5300FF
+    #brand-complementary = #FF0000
+}
+
+# ---------------------------------------------------------- #
+# logo
+# ---------------------------------------------------------- #
+
+pizpalue.logo {
+    #file = EXT:user_customer/Resources/Public/Images/logo.png
+    #fileInverted = EXT:user_customer/Resources/Public/Images/logo_white.png
+    #width = 300
+    #height = 300
+}
+
+
+# ---------------------------------------------------------- #
+# menu
+# ---------------------------------------------------------- #
+
+pizpalue.menu {
+
+    main {
+        #navigationstyle = default-transition
+        #navigationtype = top
+    }
+
+    meta {
+        #enable = 1
+        #navigationValue = 66
+        #navigationType = directory
+    }
+
+    language {
+        #enable = 1
+        #languageValue = 0,1,2
+        #codeOptionSplit = de || fr || en
+        #linkOptionSplit = &L=0 || &L=1 || &L=2
+        #useSrLanguageMenu = 0
+    }
+
+}
+
+#plugin.bootstrap_package.settings.less.navbar-height = 100px
+
+
+# ---------------------------------------------------------- #
+# appicons
+# ---------------------------------------------------------- #
+
+pizpalue.appIcon {
+
+    headerData (
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=zXd0483NpM">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=zXd0483NpM">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=zXd0483NpM">
+<link rel="manifest" href="/manifest.json?v=zXd0483NpM">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=zXd0483NpM" color="#1e9a00">
+<link rel="shortcut icon" href="/favicon.ico?v=zXd0483NpM">
+<meta name="theme-color" content="#1e9a00">
+     )
+
+}
+
+
+# ---------------------------------------------------------- #
+# storage
+# ---------------------------------------------------------- #
+
+pizpalue.storage {
+
+    #feUserPid = 2
+
+}
+
+
+# ---------------------------------------------------------- #
+# seo
+# ---------------------------------------------------------- #
+
+pizpalue.seo {
+    #metaDescription =
+    #metaKeywords =
+    #metaAuthor =
+    #google.siteVerification =
+    #google.trackingID =
+}
+
+
+# ---------------------------------------------------------- #
+# features
+# ---------------------------------------------------------- #
+
+pizpalue.features {
+	#useStyle = 1
+	#useCeAnimation = 0
+	#useCeScrollAnimation = 1
+}
+
+
+# ---------------------------------------------------------- #
+# social icons
+# ---------------------------------------------------------- #
+
+pizpalue.customer.socialNetwork.facebook.link =
+pizpalue.customer.socialNetwork.twitter.link =
+pizpalue.customer.socialNetwork.linkedin.link =
+pizpalue.customer.socialNetwork.pinterest.link =
+pizpalue.customer.socialNetwork.instagram.link =
+pizpalue.customer.socialNetwork.xing.link =
+
+
+# ---------------------------------------------------------- #
+# various
+# ---------------------------------------------------------- #
+
+plugin.bootstrap_package_contentelements.header.defaultHeaderType = 1
+page.theme.cookieconsent {
+    enable = 0
+    content.href = 10
+}
+
+
