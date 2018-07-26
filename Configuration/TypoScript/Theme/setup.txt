@@ -16,9 +16,9 @@ page {
 #=============#
 
 # under construction page
-[page|uid = 59]
+[globalString = LIT:1 = {$pizpalue.agency.isMaintenancePage}]
 page.10.dataProcessing.10.as = no-mainnavigation
 page.10.variables.rootPage >
 page.10.variables.rootPage = TEXT
 page.10.variables.rootPage.value = 59
-[end]
+[global]

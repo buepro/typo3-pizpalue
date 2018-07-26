@@ -8,6 +8,9 @@ pizpalue.agency {
 
 	# cat=pizpalue: agency/1010/0020; type=boolean; label=Activate debug mode?
     isDebugMode = 0
+
+    # cat=pizpalue: agency/1010/0030; type=boolean; label=Is maintenance page?
+    isMaintenancePage = 0
 }
 
 plugin.bootstrap_package.settings.cssSourceMapping = {$pizpalue.agency.isDebugMode}
