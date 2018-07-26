@@ -19,10 +19,12 @@ if (!defined('TYPO3_MODE')) {
     'Configuration/TypoScript/Main',
     'Pizpalue - Main'
 );
+
+// obsolete 180726
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
     'Configuration/TypoScript/Theme',
-    'Pizpalue - Theme'
+    'Pizpalue - Theme (obsolete, use extension user_customer instead)'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
