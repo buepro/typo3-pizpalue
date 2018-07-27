@@ -49,7 +49,7 @@ $(document).ready(function () {
      */
     function sizeToRowHeight() {
         // get rows
-        var $rows = $('.pp-row-height').parents('.row');
+        var $rows = $('.pp-row-height').closest('.row');
         $rows.each(function() {
             var maxHeight = 0;
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
      */
     function sizeChildrenToRowHeight() {
         // get rows
-        var $rows = $('.pp-row-child-height').parents('.row');
+        var $rows = $('.pp-row-child-height').closest('.row');
         $rows.each(function() {
             var $elements = $('.pp-row-child-height',$(this));
             var childCount = $elements.first().children().length;
