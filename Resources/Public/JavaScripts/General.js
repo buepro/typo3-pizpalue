@@ -31,14 +31,83 @@ $(document).ready(function () {
      *
      */
     function sizeToParentHeight() {
-        $('.pp-parentheight').height(0);
-        $('.pp-parentheight').each(function () {
+        $('.pp-parentheight,.pp-parent-height').height(0);
+        $('.pp-parentheight,.pp-parent-height').each(function () {
             $(this).height($(this).parent().height());
         });
-    };
-    sizeToParentHeight();
+    }
+    $(window).on('load,resize',sizeToParentHeight);
+    $('img').on('load',sizeToParentHeight);
 
-    $(window).resize(sizeToParentHeight);
+
+    /**
+     * size the element height to the embedding row height (e.g. a content element in a column will be as high as
+     * the row it belongs to). the class pp-row-height is used for that purpose.
+     *
+     * currently just one nesting level is supported.
+     *
+     */
+    function sizeToRowHeight() {
+        // get rows
+        var $rows = $('.pp-row-height').parents('.row');
+        $rows.each(function() {
+            var maxHeight = 0;
+
+            // reset heights
+            var $elements = $('.pp-row-height',$(this)).css('height','auto');
+
+            // get max height
+            $elements.each(function() {
+                var $this = $(this);
+                if ($this.height() > maxHeight) maxHeight = $this.height();
+            });
+
+            // set max height
+            $elements.height(maxHeight);
+        });
+    }
+    $(window).on('load,resize',sizeToRowHeight);
+    $('img').on('load',sizeToRowHeight);
+
+
+    /**
+     * harmonize children heights for a column element in a row. the result is that all column elements have the same
+     * appearance (each child element has the same height). an example are column elements consisting of a header,
+     * an image and a text. some elements might have the header spanning more than one line. with this function all
+     * header elements in a row would have the same height.
+     *
+     */
+    function sizeChildrenToRowHeight() {
+        // get rows
+        var $rows = $('.pp-row-child-height').parents('.row');
+        $rows.each(function() {
+            var $elements = $('.pp-row-child-height',$(this));
+            var childCount = $elements.first().children().length;
+            var maxHeights = [];
+            maxHeights.length = childCount;
+            maxHeights.fill(0);
+
+            // reset height
+            $elements.children().css('height','auto');
+
+            // get max heights
+            $elements.each(function() {
+                $(this).children().each(function(iChild) {
+                    var $this = $(this);
+                    if($this.height() > maxHeights[iChild]) maxHeights[iChild] = $this.height();
+                });
+            });
+
+            // set max heights
+            $elements.each(function(){
+                $(this).children().each(function(iChild) {
+                    $(this).height(maxHeights[iChild]);
+                });
+            });
+        });
+    }
+    $(window).on('load,resize',sizeChildrenToRowHeight);
+    $('img').on('load',sizeChildrenToRowHeight);
 
 
     /**

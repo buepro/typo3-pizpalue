@@ -194,10 +194,15 @@ editor. The constant can be found in "PIZPALUE: Customer - Frame".
 Piz Palue classes
 =================
 
-============================= ==================================================
+============================= =======================================================================
 Class                         Usage
-============================= ==================================================
-pp-label-dataprotection       Used in wrapper grid element to define a
-                              replacment text for a data protection notice check
-                              box (see contact page)
-============================= ==================================================
+============================= =======================================================================
+pp-label-dataprotection       Used in wrapper grid element to define a replacement text for a data
+                              protection notice check box (see contact page)
+pp-parent-height              Elements using this class will get the same height as their parent element
+pp-row-height                 Elements in a row using this class will have the same height
+pp-row-child-height           Elements in a row using this class will have their direct child elements
+                              harmonized. Each child element will have the same height as its neighbour
+                              element in an other column (all headers, all images, all Text blocks
+                              have the same height).
+============================= =======================================================================
