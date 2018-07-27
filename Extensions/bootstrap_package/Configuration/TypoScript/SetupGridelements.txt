@@ -2,7 +2,7 @@
  * this script isn't used yet. first tests weren't successful.
  *
  * this script might be includes in the parent script (<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Extensions/...
- * ...bootstrap_package/Configuration/TypoScript/Gridelements.txt">)
+ * ...bootstrap_package/Configuration/TypoScript/SetupGridelements.txt">)
  *
  * related files: .../Templates/ContentElements/GridElements.html
  *
