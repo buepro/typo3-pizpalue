@@ -33,6 +33,11 @@ if (!defined('TYPO3_MODE')) {
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
+    'Configuration/TypoScript/GridElementsRendering',
+    'Pizpalue - Gridelements rendering (include as last)'
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    $_EXTKEY,
     'Extensions/t3s_jslidernews/Configuration/TypoScript',
     'Pizpalue - t3s_jslidernews 5.0.2 (obsolete)'
 );
