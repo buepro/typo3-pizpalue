@@ -67,7 +67,7 @@ plugin.bootstrap_package_contentelements {
 	view {
 		layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/ContentElements/
 		partialRootPath = EXT:pizpalue/Resources/Private/Partials/ContentElements/
-		#templateRootPath = EXT:pizpalue/Resources/Private/Templates/ContentElements/
+		templateRootPath = EXT:pizpalue/Resources/Private/Templates/ContentElements/
 	}
 }
 
