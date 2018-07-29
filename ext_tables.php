@@ -34,17 +34,17 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
     'Extensions/t3s_jslidernews/Configuration/TypoScript',
-    'Pizpalue - t3s_jslidernews 5.0.2'
+    'Pizpalue - t3s_jslidernews 5.0.2 (obsolete)'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
     'Extensions/powermail/2.17.2/Configuration/TypoScript',
-    'Pizpalue - powermail 2.17.2'
+    'Pizpalue - powermail 2.17.2 (obsolete)'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
     'Extensions/powermail/3.7.0/Configuration/TypoScript',
-    'Pizpalue - powermail 3.7.0'
+    'Pizpalue - powermail 3.7.0 (obsolete)'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
