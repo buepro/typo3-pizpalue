@@ -15,7 +15,7 @@
     "typo3-ter/static-info-tables": "~6.5.1",
     "typo3-ter/vhs": "~5.0.1",
     "typo3-ter/dd-googlesitemap": "~2.1.4",
-    "typo3-ter/gridelements": "8.0.0",
+    "typo3-ter/gridelements": "~8.2.0",
     "typo3-ter/bootstrap-grids": "1.4.0",
     "typo3-ter/sr-language-menu": "~6.4.3",
     "georgringer/news": "~6.3.0",
