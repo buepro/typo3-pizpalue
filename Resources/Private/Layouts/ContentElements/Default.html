@@ -1,23 +1,34 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    <!--
+        @todo Add 3D parallax by adding parallax frame in frame selector dialog
+        @see https://keithclark.co.uk/articles/pure-css-parallax-websites/
+    -->
+</f:comment>
 <f:spaceless>
-    {f:variable(name: 'scrollAttr1', value: '{pizpalue.features.scrollAnimation.frame1Attributes -> f:format.stripTags()}')}
-    {f:variable(name: 'scrollAttr2', value: '{pizpalue.features.scrollAnimation.frame2Attributes -> f:format.stripTags()}')}
-    {f:variable(name: 'scrollAttr3', value: '{pizpalue.features.scrollAnimation.frame3Attributes -> f:format.stripTags()}')}
+    {f:variable(name: 'ppScrollAttr1', value: '{pizpalue.features.scrollAnimation.frame1Attributes -> f:format.stripTags()}')}
+    {f:variable(name: 'ppScrollAttr2', value: '{pizpalue.features.scrollAnimation.frame2Attributes -> f:format.stripTags()}')}
+    {f:variable(name: 'ppScrollAttr3', value: '{pizpalue.features.scrollAnimation.frame3Attributes -> f:format.stripTags()}')}
 
     <f:switch expression="{data.frame_class}">
-        <f:defaultCase>{f:variable(name: 'scrollAttr', value: '')}</f:defaultCase>
-        <f:case value="pp-scrollanimation1">{f:variable(name: 'scrollAttr', value: '{scrollAttr1}')}</f:case>
-        <f:case value="pp-scrollanimation2">{f:variable(name: 'scrollAttr', value: '{scrollAttr2}')}</f:case>
-        <f:case value="pp-scrollanimation3">{f:variable(name: 'scrollAttr', value: '{scrollAttr3}')}</f:case>
+        <f:defaultCase>{f:variable(name: 'ppScrollAttr', value: '')}</f:defaultCase>
+        <f:case value="pp-scrollanimation1">{f:variable(name: 'ppScrollAttr', value: '{ppScrollAttr1}')}</f:case>
+        <f:case value="pp-scrollanimation2">{f:variable(name: 'ppScrollAttr', value: '{ppScrollAttr2}')}</f:case>
+        <f:case value="pp-scrollanimation3">{f:variable(name: 'ppScrollAttr', value: '{ppScrollAttr3}')}</f:case>
     </f:switch>
 
+    {f:variable(name: 'ppBgMedia', value: '')}
+    {f:variable(name: 'ppBgMedia', value: 'background-image: url({f:uri.image(image: tx_pizpalue_bgmedia.0)});') -> f:if(condition: tx_pizpalue_bgmedia)}
+    {f:variable(name: 'ppBgMediaClass', value: '')}
+    {f:variable(name: 'ppBgMediaClass', value: 'pp-ce-background ') -> f:if(condition: tx_pizpalue_bgmedia)}
+
     {f:variable(name: 'ppClasses', value: '')}
-    {f:variable(name: 'ppClasses', value: ' {data.tx_pizpalue_classes -> f:format.stripTags()}') -> f:if(condition: '{data.tx_pizpalue_classes}')}
+    {f:variable(name: 'ppClasses', value: ' {ppBgMediaClass}{data.tx_pizpalue_classes -> f:format.stripTags()}') -> f:if(condition: '{ppBgMediaClass} || {data.tx_pizpalue_classes}')}
 
     {f:variable(name: 'ppStyle', value: '')}
     {f:variable(name: 'ppStyle', value: '{data.tx_pizpalue_style -> f:format.stripTags()}') -> f:if(condition: '{data.tx_pizpalue_style}')}
     {f:variable(name: 'ppStyleAttr', value: '')}
-    {f:variable(name: 'ppStyleAttr', value: ' style="{ppStyle}" ') -> f:if(condition: '{ppStyle}')}
+    {f:variable(name: 'ppStyleAttr', value: ' style="{ppStyle}{ppBgMedia}" ') -> f:if(condition: '{ppStyle} || {ppBgMedia}')}
 
     {f:variable(name: 'ppAttr', value: '')}
     {f:variable(name: 'ppAttr', value: ' {data.tx_pizpalue_attributes  -> f:format.stripTags()} ') -> f:if(condition:'{data.tx_pizpalue_attributes}')}
@@ -25,7 +36,7 @@
     <f:if condition="{data.frame_class} != none">
         <f:then>
 
-            <div id="c{data.uid}" {scrollAttr -> f:format.htmlentitiesDecode()} class="frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, else: ' frame-space-before-none', then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, else: ' frame-space-after-none', then: ' frame-space-after-{data.space_after_class}')}{ppClasses -> f:format.htmlentities()}"{ppAttr -> f:format.htmlentitiesDecode()}{ppStyleAttr -> f:format.htmlentitiesDecode()}>
+            <div id="c{data.uid}" {ppScrollAttr -> f:format.htmlentitiesDecode()} class="frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, else: ' frame-space-before-none', then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, else: ' frame-space-after-none', then: ' frame-space-after-{data.space_after_class}')}{ppClasses -> f:format.htmlentities()}"{ppAttr -> f:format.htmlentitiesDecode()}{ppStyleAttr -> f:format.htmlentitiesDecode()}>
                 <f:if condition="{data._LOCALIZED_UID}">
                     <a id="c{data._LOCALIZED_UID}"></a>
                 </f:if>
@@ -46,31 +57,59 @@
 
         </f:then>
         <f:else>
-
-            <a id="c{data.uid}"></a>
-                <f:if condition="{data._LOCALIZED_UID}">
-                    <a id="c{data._LOCALIZED_UID}"></a>
-                </f:if>
-                <f:if condition="{data.space_before_class}">
-                    <div class="frame-space-before-{data.space_before_class}"></div>
-                </f:if>
-                <f:render section="Before" optional="true">
-                    <f:render partial="DropIn/Before/All" arguments="{_all}" />
-                </f:render>
-                <f:render section="Header" optional="true">
-                    <f:render partial="Header/All" arguments="{_all}" />
-                </f:render>
-                <f:render section="Main" optional="true" />
-                <f:render section="Footer" optional="true">
-                    <f:render partial="Footer/All" arguments="{_all}" />
-                </f:render>
-                <f:render section="After" optional="true">
-                    <f:render partial="DropIn/After/All" arguments="{_all}" />
-                </f:render>
-                <f:if condition="{data.space_after_class}">
-                    <div class="frame-space-after-{data.space_after_class}"></div>
-                </f:if>
-
+            <f:if condition="{ppScrollAttr} || {ppClasses} || {ppAttr} || {ppStyleAttr}">
+                <f:then>
+                    <div id="c{data.uid}" {ppScrollAttr -> f:format.htmlentitiesDecode()} class="{ppClasses -> f:format.htmlentities()}"{ppAttr -> f:format.htmlentitiesDecode()}{ppStyleAttr -> f:format.htmlentitiesDecode()}>
+                        <f:if condition="{data._LOCALIZED_UID}">
+                            <a id="c{data._LOCALIZED_UID}"></a>
+                        </f:if>
+                        <f:if condition="{data.space_before_class}">
+                            <div class="frame-space-before-{data.space_before_class}"></div>
+                        </f:if>
+                        <f:render section="Before" optional="true">
+                            <f:render partial="DropIn/Before/All" arguments="{_all}" />
+                        </f:render>
+                        <f:render section="Header" optional="true">
+                            <f:render partial="Header/All" arguments="{_all}" />
+                        </f:render>
+                        <f:render section="Main" optional="true" />
+                        <f:render section="Footer" optional="true">
+                            <f:render partial="Footer/All" arguments="{_all}" />
+                        </f:render>
+                        <f:render section="After" optional="true">
+                            <f:render partial="DropIn/After/All" arguments="{_all}" />
+                        </f:render>
+                        <f:if condition="{data.space_after_class}">
+                            <div class="frame-space-after-{data.space_after_class}"></div>
+                        </f:if>
+                    </div>
+                </f:then>
+                <f:else>
+                    <a id="c{data.uid}"></a>
+                    <f:if condition="{data._LOCALIZED_UID}">
+                        <a id="c{data._LOCALIZED_UID}"></a>
+                    </f:if>
+                    <f:if condition="{data.space_before_class}">
+                        <div class="frame-space-before-{data.space_before_class}"></div>
+                    </f:if>
+                    <f:render section="Before" optional="true">
+                        <f:render partial="DropIn/Before/All" arguments="{_all}" />
+                    </f:render>
+                    <f:render section="Header" optional="true">
+                        <f:render partial="Header/All" arguments="{_all}" />
+                    </f:render>
+                    <f:render section="Main" optional="true" />
+                    <f:render section="Footer" optional="true">
+                        <f:render partial="Footer/All" arguments="{_all}" />
+                    </f:render>
+                    <f:render section="After" optional="true">
+                        <f:render partial="DropIn/After/All" arguments="{_all}" />
+                    </f:render>
+                    <f:if condition="{data.space_after_class}">
+                        <div class="frame-space-after-{data.space_after_class}"></div>
+                    </f:if>
+                </f:else>
+            </f:if>
         </f:else>
     </f:if>
 </f:spaceless>

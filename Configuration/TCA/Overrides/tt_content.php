@@ -17,6 +17,10 @@ $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_attributes'] = [
     ',
 ];
 
+$GLOBALS['TCA']['tt_content']['palettes']['pizpalue_background'] = [
+    'showitem' => 'tx_pizpalue_bgmedia',
+];
+
 $tmp_pizpalue_columns = [
 
     'tx_pizpalue_classes' => [
@@ -49,12 +53,87 @@ $tmp_pizpalue_columns = [
             'eval' => 'trim'
         ],
     ],
+    'tx_pizpalue_bgmedia' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.bgmedia',
+        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+            'tx_pizpalue_bgmedia',
+            [
+                'appearance' => [
+                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+                ],
+                'foreign_types' => [
+                    '0' => [
+                        'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                        'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                        'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+                        'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+                        'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+                        'showitem' => '
+                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
+                            --palette--;;filePalette'
+                    ]
+                ],
+                'maxitems' => 1,
+                'overrideChildTca' => [
+                    'types' => [
+                        '0' => [
+                            'showitem' => 'crop',
+                        ],
+                        '1' => [
+                            'showitem' => 'crop',
+                        ],
+                        '2' => [
+                            'showitem' => 'crop',
+                        ],
+                        '3' => [
+                            'showitem' => 'crop',
+                        ],
+                        '4' => [
+                            'showitem' => 'crop',
+                        ],
+                        '5' => [
+                            'showitem' => 'crop',
+                        ]
+                    ],
+                ],
+            ],
+            $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+        ),
+    ],
 
 ];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
     'tt_content',
     $tmp_pizpalue_columns
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    '--palette--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background;pizpalue_background,',
+    '',
+    'after: linkToTop'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(

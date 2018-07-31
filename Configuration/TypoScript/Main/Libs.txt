@@ -68,6 +68,13 @@ lib.contentElement {
             as = pizpalue
             key = pizpalue
         }
+        120 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        120 {
+            references {
+                fieldName = tx_pizpalue_bgmedia
+            }
+            as = tx_pizpalue_bgmedia
+        }
     }
 }
 
