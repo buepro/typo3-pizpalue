@@ -23,5 +23,6 @@ tt_content.gridelements_pi1 {
                 setup < temp.pizpalue.gridelements_pi1.setup
             }
         }
+        dataProcessing < lib.pizpalue.contentElement.dataProcessing
 	}
 }

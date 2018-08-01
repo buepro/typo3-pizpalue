@@ -58,11 +58,11 @@ lib.pizpalue.hrefLinkTag {
 
 #===============================================================================
 #
-# pass constants to content elements
+# pass constants and custom fields to content elements
 #
 #===============================================================================
-lib.contentElement {
-    dataProcessing {
+lib.pizpalue.contentElement.dataProcessing < lib.contentElement.dataProcessing
+lib.pizpalue.contentElement.dataProcessing {
         110 = Buepro\Pizpalue\DataProcessing\ConstantsProcessor
         110 {
             as = pizpalue
@@ -75,6 +75,7 @@ lib.contentElement {
             }
             as = tx_pizpalue_bgmedia
         }
-    }
 }
+
+lib.contentElement.dataProcessing < lib.pizpalue.contentElement.dataProcessing
 
