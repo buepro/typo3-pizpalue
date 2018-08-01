@@ -97,23 +97,8 @@ $tmp_pizpalue_columns = [
                 'maxitems' => 1,
                 'overrideChildTca' => [
                     'types' => [
-                        '0' => [
-                            'showitem' => 'crop',
-                        ],
-                        '1' => [
-                            'showitem' => 'crop',
-                        ],
                         '2' => [
-                            'showitem' => 'crop',
-                        ],
-                        '3' => [
-                            'showitem' => 'crop',
-                        ],
-                        '4' => [
-                            'showitem' => 'crop',
-                        ],
-                        '5' => [
-                            'showitem' => 'crop',
+                            'showitem' => 'crop,--palette--;;filePalette',
                         ]
                     ],
                 ],
