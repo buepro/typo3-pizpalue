@@ -52,10 +52,10 @@ plugin.bootstrap_package.settings.less {
 	brand-primary = #4C86B2
 
 	# cat=pizpalue: customer/1032/0012; type=string; label=Secundary brand color
-	brand-secundary = #4A639B
+	brand-secundary = #6DC0FE
 
 	# cat=pizpalue: customer/1032/0014; type=string; label=Complementary brand color
-	brand-complementary = #4898A8
+	brand-complementary = #E8900B
 
 	# cat=pizpalue: customer/1032/0020; type=string; label=Page background color
 	body-bg = #fff
