@@ -26,7 +26,7 @@ $(function () {
 $(document).ready(function () {
 
     /**
-     * size elements using the class pp-parentheight to have the same height
+     * size elements using the class pp-parent-height to have the same height
      * as its parent element
      *
      */
