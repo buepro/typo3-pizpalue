@@ -6,10 +6,10 @@
 Administration
 ==============
 
-.. _admin_customize:
+.. _admin_customization:
 
-Customize
----------
+Customization
+-------------
 
 The suggested way to customize the distribution for customer projects is to create an extension (e.g. user_customer)
 and define the customer theme and functions in it (`see TYPO3 documentation
@@ -22,6 +22,16 @@ starting point.
    :alt: Customize the distribution for customer projects
 
    Customize the distribution for customer projects
+
+The extension might be deactivated by removing its static template.
+
+To uninstall the extension the dependency in the file ext_emconf.php needs to be removed.
+
+.. figure:: ../Images/Administration/Admin_CustomizeUninstall.jpg
+   :alt: Remove or mark as comment the dependency to the extension user_customer
+
+   Remove or mark as comment the dependency to the extension user_customer
+
 
 .. _admin_development:
 
