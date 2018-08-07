@@ -6,6 +6,30 @@
 Administration
 ==============
 
+
+.. _admin_installation:
+
+Installation
+------------
+
+The distribution can be installed from within the distribution list, by uploading the extension and through composer.
+Refer to TYPO3 documentation for further details on handling extensions.
+
+
+.. _admin_update:
+
+Update
+------
+
+If a newer version from this distribution is installed its update script should be executed. It can be started through
+its update button available through the extension manager.
+
+.. figure:: ../Images/Administration/Admin_Update.jpg
+   :alt: Distribution update button
+
+   Distribution update button
+
+
 .. _admin_customization:
 
 Customization
@@ -76,5 +100,4 @@ PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
    Constant editor
 
 
-.. tip::
-   For further configurations the related extension configurations might be adjusted.
+
