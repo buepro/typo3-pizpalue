@@ -77,7 +77,7 @@ user_customer {
 # agency
 # ---------------------------------------------------------- #
 
-pizpalue.agency.isDebugMode = 1
+#pizpalue.agency.isDebugMode = 1
 #pizpalue.agency.reference = <span class="pp-agency-reference">Eine Webseite von <a href="http://www.buechler.pro/" title="buechler.pro | TYPO3 Webseiten" target="_blank">buechler.pro</a></span>
 
 
