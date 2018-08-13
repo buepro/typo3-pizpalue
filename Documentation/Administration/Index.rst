@@ -91,6 +91,7 @@ PIZPALUE: CUSTOMER           Main customer related parameters
 PIZPALUE: CUSTOMER STYLE     More detailed customer style related parameters
 PIZPALUE: CUSTOMER SOCIAL    Definition from references to social networks
 PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
+PIZPALUE: NEWS RSS           Configurations related to news RSS feed
 ============================ ==================================================
 
 
