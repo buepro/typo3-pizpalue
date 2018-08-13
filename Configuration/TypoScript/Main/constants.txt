@@ -17,6 +17,7 @@
 # customsubcategory=1210=Storage
 # customsubcategory=1410=SEO
 # customsubcategory=1510=Features
+# customsubcategory=2010=News RSS feed
 
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Extensions/bootstrap_package/Configuration/TypoScript/constants.txt">
@@ -50,6 +51,7 @@ plugin {
 		languageTitle = 1
 	}
 }
+slick_jquery = 0
 
 
 # ---------------------------------------------------------- #
