@@ -58,6 +58,11 @@ if (!defined('TYPO3_MODE')) {
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
     $_EXTKEY,
+    'Extensions/news/Configuration/TypoScript/RSS',
+    'Pizpalue - news RSS feed'
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    $_EXTKEY,
     'Extensions/newsslider/Configuration/TypoScript',
     'Pizpalue - newsslider 2.0.1'
 );
