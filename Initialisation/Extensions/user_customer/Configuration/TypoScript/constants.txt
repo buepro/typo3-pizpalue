@@ -209,8 +209,10 @@ pizpalue.seo {
 pizpalue.features {
 	#useStyle = 1
 	#useCeAnimation = 0
-	#useCeScrollAnimation = 1
-	scrollAnimation.initParams = easing: 'ease-in-out-sine', disable: 'phone'
+    scrollAnimation {
+        #enable = 0
+        scrollAnimation.initParams = easing: 'ease-in-out-sine', disable: 'phone'
+    }
 }
 
 
