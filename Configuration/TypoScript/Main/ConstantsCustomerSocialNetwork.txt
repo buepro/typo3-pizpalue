@@ -1,6 +1,6 @@
 plugin.bootstrap_package.settings.less {
     # cat=pizpalue: customer social; type=string; label=Social icon height
-    pp-social-icon-height = 24px;
+    pp-social-icon-height = 24px
     # cat=pizpalue: customer social; type=string; label=Social icon half margin
     pp-social-icon-margin = @pp-social-icon-height/4;
 }
