@@ -46,6 +46,108 @@
                 <target state="translated">Angepasste Scrollanimation 3</target>
             </trans-unit>
 
+			<trans-unit id="grids.sheet.options">
+				<source>Options</source>
+				<target state="translated">Optionen</target>
+			</trans-unit>
+			<trans-unit id="grids.label.containerFixedTitle">
+				<source>Content container</source>
+				<target state="translated">Inhalts-Container</target>
+			</trans-unit>
+			<trans-unit id="grids.label.containerFixedDescription">
+				<source>Provides a container covering the content width.</source>
+				<target state="translated">Stellt einen Container zur Verfügung, welcher die volle Inhaltsbreite ausfüllt.</target>
+			</trans-unit>
+			<trans-unit id="grids.label.containerTitle">
+				<source>Page container</source>
+				<target state="translated">Seiten-Container</target>
+			</trans-unit>
+			<trans-unit id="grids.label.containerDescription">
+				<source>Provides container covering the entire page or screen width.</source>
+				<target state="translated">Stellt einen Container zur Verfügung, welcher die gesamte Seitenbreite ausfüllt.</target>
+			</trans-unit>
+			<trans-unit id="grids.label.containerClass">
+				<source>Class</source>
+				<target state="translated">Container-Klassen</target>
+			</trans-unit>
+			<trans-unit id="grids.label.containerAttribute">
+                <source>Attributes</source>
+                <target state="translated">Container-Attribute</target>
+            </trans-unit>
+			<trans-unit id="grids.label.sectionClass">
+				<source>Section class</source>
+				<target state="translated">Abschnitts-Klassen</target>
+			</trans-unit>
+			<trans-unit id="grids.label.wrapSection">
+				<source>Wrap section</source>
+				<target state="translated">Abschnitt mit zusätzlicher Etiquette umschliessen</target>
+			</trans-unit>
+			<trans-unit id="grids.label.isContainerFluid">
+				<source>Is bootstrap fluid container</source>
+				<target state="translated">Ist ein Bootstrap-Fluid Container</target>
+			</trans-unit>
+
+            <trans-unit id="grids.sheet.defaultColumns">
+                <source>Default columns width</source>
+                <target state="translated">Standard Spaltenbreiten</target>
+            </trans-unit>
+            <trans-unit id="grids.sheet.customColumns">
+                <source>Custom columns width (CSS classes)</source>
+                <target state="translated">Angepasste Spaltenbreiten (CSS-Klassen)</target>
+            </trans-unit>
+            <trans-unit id="grids.label.twoColumnTitle">
+                <source>2 Columns</source>
+                <target state="translated">2 Salten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.twoColumnDescription">
+                <source>Two columns with customized width</source>
+                <target state="translated">Zwei Spalten mit abpassbarer Breite.</target>
+            </trans-unit>
+            <trans-unit id="grids.label.threeColumnTitle">
+                <source>3 Columns</source>
+                <target state="translated">3 Spalten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.threeColumnDescription">
+                <source>Three columns with customized width</source>
+                <target state="translated">Drei Spalten mit abpassbarer Breite.</target>
+            </trans-unit>
+            <trans-unit id="grids.label.fourColumnTitle">
+                <source>4 Columns</source>
+                <target state="translated">4 Spalten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.fourColumnDescription">
+                <source>Four columns with customized width</source>
+                <target state="translated">Vier Spalten mit abpassbarer Breite.</target>
+            </trans-unit>
+            <trans-unit id="grids.label.column1">
+                <source>Column 1</source>
+                <target state="translated">Spalte 1</target>
+            </trans-unit>
+            <trans-unit id="grids.label.column2">
+                <source>Column 2</source>
+                <target state="translated">Spalte 2</target>
+            </trans-unit>
+            <trans-unit id="grids.label.column3">
+                <source>Column 3</source>
+                <target state="translated">Spalte 3</target>
+            </trans-unit>
+            <trans-unit id="grids.label.column4">
+                <source>Column 4</source>
+                <target state="translated">Spalte 4</target>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidthNone">
+                <source>None</source>
+                <target state="translated">Keine</target>
+            </trans-unit>
+            <trans-unit id="grids.label.columnHidden">
+                <source>Hidden</source>
+                <target state="translated">Unsichtbar</target>
+            </trans-unit>
+            <trans-unit id="grids.label.columnVisible">
+                <source>Visible</source>
+                <target state="translated">Sichtbar</target>
+            </trans-unit>
+
 			<trans-unit id="cookieconsent.common.header">
                 <source>Cookies used on the website!</source>
                 <target state="translated">Diese Webseite benutzt Cookies!</target>

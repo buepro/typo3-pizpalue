@@ -58,17 +58,14 @@ call_user_func(
         // register icons
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 
-        $iconRegistry->registerIcon(
-            'tx-pizpalue-ppContainerFixed',
-            \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-            ['source' => 'EXT:pizpalue/Resources/Public/Icons/ppContainerFixed.png']
-        );
-
-        $iconRegistry->registerIcon(
-            'tx-pizpalue-ppContainer',
-            \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
-            ['source' => 'EXT:pizpalue/Resources/Public/Icons/ppContainer.png']
-        );
+        $icons = ['ppContainerFixed','ppContainer','ppColumns2','ppColumns3','ppColumns4'];
+        foreach ($icons as $iconName) {
+            $iconRegistry->registerIcon(
+                'tx-pizpalue-' . $iconName,
+                \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+                ['source' => 'EXT:pizpalue/Resources/Public/Icons/' . $iconName . '.png']
+            );
+        }
     },
     $_EXTCONF
 );
