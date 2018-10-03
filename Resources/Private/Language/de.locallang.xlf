@@ -4,6 +4,43 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+			<trans-unit id="label.options">
+				<source>Options</source>
+				<target state="translated">Optionen</target>
+			</trans-unit>
+            <trans-unit id="label.general">
+                <source>General</source>
+                <target state="translated">Allgemein</target>
+            </trans-unit>
+            <trans-unit id="label.style">
+                <source>Style</source>
+                <target state="translated">Stil</target>
+            </trans-unit>
+            <trans-unit id="label.default">
+                <source>Default</source>
+                <target state="translated">Standard</target>
+            </trans-unit>
+            <trans-unit id="label.primary">
+                <source>Primary</source>
+                <target state="translated">Primär</target>
+            </trans-unit>
+            <trans-unit id="label.secondary">
+                <source>Secondary</source>
+                <target state="translated">Sekundär</target>
+            </trans-unit>
+            <trans-unit id="label.complementary">
+                <source>Complementary</source>
+                <target state="translated">Komplementär</target>
+            </trans-unit>
+            <trans-unit id="label.custom">
+                <source>Custom</source>
+                <target state="translated">Angepasst</target>
+            </trans-unit>
+            <trans-unit id="label.legacy">
+                <source>Legacy</source>
+                <target state="translated">Veraltet</target>
+            </trans-unit>
+
 			<trans-unit id="ppCeFrame1">
 				<source>Custom frame 1</source>
 				<target state="translated">Angepasster Rahmen 1</target>
@@ -46,10 +83,6 @@
                 <target state="translated">Angepasste Scrollanimation 3</target>
             </trans-unit>
 
-			<trans-unit id="grids.sheet.options">
-				<source>Options</source>
-				<target state="translated">Optionen</target>
-			</trans-unit>
 			<trans-unit id="grids.label.containerFixedTitle">
 				<source>Content container</source>
 				<target state="translated">Inhalts-Container</target>
@@ -146,6 +179,24 @@
             <trans-unit id="grids.label.columnVisible">
                 <source>Visible</source>
                 <target state="translated">Sichtbar</target>
+            </trans-unit>
+
+            <trans-unit id="grids.label.tabsTitle">
+                <source>Tabs</source>
+                <target state="translated">Register</target>
+            </trans-unit>
+            <trans-unit id="grids.label.tabsDescription">
+                <source>The content elements are accessible through tabs.</source>
+                <target state="translated">Die Inhaltselemente sind über Register verfügbar.</target>
+            </trans-unit>
+
+            <trans-unit id="grids.label.accordionTitle">
+                <source>Accordion</source>
+                <target state="translated">Akkordeon</target>
+            </trans-unit>
+            <trans-unit id="grids.label.accordionDescription">
+                <source>The content elements are accessible in an accordion.</source>
+                <target state="translated">Die Inhaltselemente werden in einem Akkordeon angezeigt.</target>
             </trans-unit>
 
 			<trans-unit id="cookieconsent.common.header">

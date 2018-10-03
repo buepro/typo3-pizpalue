@@ -4,6 +4,34 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+			<trans-unit id="label.options">
+				<source>Options</source>
+			</trans-unit>
+            <trans-unit id="label.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="label.style">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="label.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="label.primary">
+                <source>Primary</source>
+            </trans-unit>
+            <trans-unit id="label.secondary">
+                <source>Secondary</source>
+            </trans-unit>
+            <trans-unit id="label.complementary">
+                <source>Complementary</source>
+            </trans-unit>
+            <trans-unit id="label.custom">
+                <source>Custom</source>
+            </trans-unit>
+            <trans-unit id="label.legacy">
+                <source>Legacy</source>
+            </trans-unit>
+
 			<trans-unit id="ppCeFrame1">
 				<source>Custom frame 1</source>
 			</trans-unit>
@@ -36,9 +64,6 @@
 				<source>Custom scroll animation 3</source>
 			</trans-unit>
 
-			<trans-unit id="grids.sheet.options">
-				<source>Options</source>
-			</trans-unit>
 			<trans-unit id="grids.label.containerFixedTitle">
 				<source>Content container</source>
 			</trans-unit>
@@ -147,6 +172,20 @@
             </trans-unit>
             <trans-unit id="grids.label.columnVisible">
                 <source>Visible</source>
+            </trans-unit>
+
+            <trans-unit id="grids.label.tabsTitle">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="grids.label.tabsDescription">
+                <source>The content elements are accessible through tabs.</source>
+            </trans-unit>
+
+            <trans-unit id="grids.label.accordionTitle">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="grids.label.accordionDescription">
+                <source>The content elements are accessible in an accordion.</source>
             </trans-unit>
 
             <trans-unit id="cookieconsent.common.header">

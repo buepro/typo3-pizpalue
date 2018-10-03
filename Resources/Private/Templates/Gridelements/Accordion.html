@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="panel-group {f:if(condition:'{data.flexform_style}', then:'{data.flexform_style}')}"
+     id="accordion-{data.uid}" role="tablist" aria-multiselectable="true">
+    <f:for each="{data.tx_gridelements_view_children}" as="content" iteration="iterator">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading{content.uid}">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion-{data.uid}"
+                       href="{f:uri.page(section:'collapse-{content.uid}')}"
+                       {f:if(condition:'{iterator.index}==0', then:'aria-expanded="true"', else:'aria-expanded="false"')}
+                       aria-controls="collapse-{content.uid}">
+                        {content.header}
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-{content.uid}"
+                 class="panel-collapse collapse {f:if(condition:'{iterator.index}==0', then:'in')}"
+                 role="tabpanel" aria-labelledby="heading{content.uid}">
+                <div class="panel-body">
+                    {data.tx_gridelements_view_child_{content.uid}->f:format.htmlentitiesDecode()}
+                </div>
+            </div>
+        </div>
+    </f:for>
+</div>
+</html>

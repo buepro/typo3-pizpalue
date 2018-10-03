@@ -58,7 +58,7 @@ call_user_func(
         // register icons
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 
-        $icons = ['ppContainerFixed','ppContainer','ppColumns2','ppColumns3','ppColumns4'];
+        $icons = ['ppContainerFixed','ppContainer','ppColumns2','ppColumns3','ppColumns4','ppTabs','ppAccordion'];
         foreach ($icons as $iconName) {
             $iconRegistry->registerIcon(
                 'tx-pizpalue-' . $iconName,

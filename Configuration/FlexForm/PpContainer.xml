@@ -7,7 +7,7 @@
         <sDEF>
             <ROOT type="array">
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:grids.sheet.options</sheetTitle>
+                    <sheetTitle>LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:label.options</sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el type="array">

@@ -53,6 +53,20 @@ lib.pizpalue.gridelements {
 		columns.104 < .columns.default
 		columns.104.dataWrap = <div class="{field:flexform_defaultColumn4} {field:flexform_customColumn4}">|</div>
 	}
+	ppTabs < lib.gridelements.defaultGridSetup
+	ppTabs {
+		cObject = FLUIDTEMPLATE
+		cObject {
+			file = EXT:pizpalue/Resources/Private/Templates/Gridelements/Tabs.html
+		}
+	}
+	ppAccordion < lib.gridelements.defaultGridSetup
+	ppAccordion {
+		cObject = FLUIDTEMPLATE
+		cObject {
+			file = EXT:pizpalue/Resources/Private/Templates/Gridelements/Accordion.html
+		}
+	}
 }
 
 
@@ -67,4 +81,6 @@ tt_content.gridelements_pi1.20.10.setup {
 	ppColumns2 < lib.pizpalue.gridelements.ppColumns2
 	ppColumns3 < lib.pizpalue.gridelements.ppColumns3
 	ppColumns4 < lib.pizpalue.gridelements.ppColumns4
+	ppTabs < lib.pizpalue.gridelements.ppTabs
+	ppAccordion < lib.pizpalue.gridelements.ppAccordion
 }
