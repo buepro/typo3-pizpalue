@@ -130,7 +130,7 @@
             </trans-unit>
             <trans-unit id="grids.label.twoColumnTitle">
                 <source>2 Columns</source>
-                <target state="translated">2 Salten</target>
+                <target state="translated">2 Spalten</target>
             </trans-unit>
             <trans-unit id="grids.label.twoColumnDescription">
                 <source>Two columns with customized width</source>
