@@ -1,0 +1,34 @@
+#---------------------------------------------------------#
+# customer base
+#---------------------------------------------------------#
+
+page.logo {
+
+   # cat=6030/1040/0060; type=string; label=Logo image
+   file = EXT:pizpalue/Resources/Public/Images/logo.svg
+
+   # cat=6030/1040/0066; type=int; label=Logo max image height
+   height = 140
+
+   # cat=6030/1040/0064; type=int; label=Logo max image width
+   width = 390
+
+}
+
+
+#---------------------------------------------------------#
+# customer various
+#---------------------------------------------------------#
+
+page.logo {
+
+   # cat=6060/1040/0062; type=string; label=Logo image bright
+   fileInverted = EXT:pizpalue/Resources/Public/Images/logo_inv.svg
+
+   # cat=6060/1040/0018; type=string; label=Alternative text: Text of the alt attribute of the logo image (default: "<website title> logo")
+   alt = {$pizpalue.customer.commonName}
+
+   # cat=6060/1040/0020; type=string; label=Link title: Title of the link attribute of the logo image
+   linktitle = {$pizpalue.customer.commonName}
+
+}

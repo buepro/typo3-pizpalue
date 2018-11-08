@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.options</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <containerClass type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerClass</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </containerClass>
+                    <containerAttribute type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerAttribute</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </containerAttribute>
+                    <wrapSection type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.wrapSection</label>
+                            <config type="array">
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </wrapSection>
+                    <sectionClass type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.sectionClass</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </sectionClass>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

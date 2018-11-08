@@ -1,0 +1,28 @@
+# todo: check template
+
+#---------------------------------------------------------#
+# customer
+#---------------------------------------------------------#
+
+pizpalue.customer {
+   # cat=6030/1020/0010; type=string; label=Common customer name
+   commonName = Allgemeiner Kundenname
+
+   # cat=6030/1020/0014; type=string; label=Common customer email
+   commonEmail =
+}
+
+page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
+
+
+#---------------------------------------------------------#
+# customer various
+#---------------------------------------------------------#
+
+pizpalue.customer {
+   # cat=6060/1020/0018; type=string; label=Domain name
+   domain =
+
+   # cat=6060/1020/0080; type=string; label=Copyright text
+   copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
+}

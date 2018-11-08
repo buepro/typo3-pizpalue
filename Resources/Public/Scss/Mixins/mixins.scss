@@ -1,0 +1,81 @@
+@mixin ppFrameBackground($color) {
+    border-color: ppTint($color, 80%);
+    background: ppTint($color, 80%);
+    background: linear-gradient(20deg, ppTint($color, 70%), ppTint($color, 90%));
+}
+
+@mixin ppAccordionColor($color) {
+    .card {
+        background-color: ppTint($color, 90%);
+        border: ppTint($color, 40%);
+    }
+    .card-header {
+        background-color: ppTint($color, 20%);
+        color: ppContrast(ppTint($color, 20%));
+        border-bottom: ppTint($color, 40%);
+    }
+}
+
+@mixin ppAccordionLightColor($color) {
+    .accordion-title-link {
+        border-left: $color 4px solid;
+        &.collapsed {
+            border-left-color: transparent;
+        }
+    }
+    .accordion-title-link-state {
+        color: $color;
+        font-weight: bold;
+    }
+    .accordion-collapse {
+        border-left: ppTint($color,30%) 4px dotted;
+        &.show {
+            border-left-style: solid;
+        }
+    }
+}
+
+@mixin ppTabColor($color) {
+    $ppTabActiveTabBg: ppTint($color,60%);
+    $ppTabInactiveTabBg: ppTint($color,20%);
+    $ppTabContentBg: ppTint($color,90%);
+    $ppTabBorderColor: ppTint($color,70%);
+    .nav-tabs {
+        border-bottom-color: $ppTabBorderColor;
+        a.nav-link {
+            background: $ppTabInactiveTabBg;
+            color: ppContrast($ppTabInactiveTabBg);
+        }
+        .nav-link {
+            &.active, &:hover {
+                border-color: $ppTabBorderColor $ppTabBorderColor ppTint($color,60%);
+                background: $ppTabActiveTabBg;
+                color: ppContrast($ppTabActiveTabBg);
+            }
+        }
+    }
+    .tab-content {
+        border: $ppTabBorderColor $nav-tabs-border-width solid;
+        border-top: 0;
+        background: $ppTabContentBg;
+        padding-left: $nav-link-padding-x;
+        padding-right: $nav-link-padding-x;
+    }
+}
+
+@mixin ppTabLightColor($color) {
+    .nav-link {
+        padding-top: 1.4 * $nav-link-padding-y;
+        color: $color;
+        &:hover {
+            color: ppShade($color,30%);
+        }
+        &.active {
+            background-image: repeating-linear-gradient($color, $color (0.4 * $nav-link-padding-y),
+                    transparent (0.4 * $nav-link-padding-y),transparent);
+            &:hover {
+                color: $nav-tabs-link-active-color;
+            }
+        }
+    }
+}

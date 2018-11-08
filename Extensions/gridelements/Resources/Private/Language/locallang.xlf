@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="label.options">
+				<source>Options</source>
+			</trans-unit>
+            <trans-unit id="label.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="label.style">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="label.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="label.primary">
+                <source>Primary</source>
+            </trans-unit>
+            <trans-unit id="label.secondary">
+                <source>Secondary</source>
+            </trans-unit>
+            <trans-unit id="label.complementary">
+                <source>Complementary</source>
+            </trans-unit>
+            <trans-unit id="label.custom">
+                <source>Custom</source>
+            </trans-unit>
+            <trans-unit id="label.legacy">
+                <source>Legacy</source>
+            </trans-unit>
+
+			<trans-unit id="grids.label.containerFixedTitle">
+				<source>Content container</source>
+			</trans-unit>
+			<trans-unit id="grids.label.containerFixedDescription">
+				<source>Provides a container covering the content width.</source>
+			</trans-unit>
+			<trans-unit id="grids.label.containerTitle">
+				<source>Page container</source>
+			</trans-unit>
+			<trans-unit id="grids.label.containerDescription">
+				<source>Provides container covering the entire page or screen width.</source>
+			</trans-unit>
+			<trans-unit id="grids.label.containerClass">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="grids.label.containerAttribute">
+                <source>Attributes</source>
+            </trans-unit>
+			<trans-unit id="grids.label.sectionClass">
+				<source>Section class</source>
+			</trans-unit>
+			<trans-unit id="grids.label.wrapSection">
+				<source>Wrap section</source>
+			</trans-unit>
+			<trans-unit id="grids.label.isContainerFluid">
+				<source>Is bootstrap fluid container</source>
+			</trans-unit>
+
+            <trans-unit id="grids.sheet.defaultColumns">
+                <source>Default columns width</source>
+            </trans-unit>
+            <trans-unit id="grids.sheet.customColumns">
+                <source>Custom columns width (CSS classes)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.twoColumnTitle">
+                <source>2 Columns</source>
+            </trans-unit>
+            <trans-unit id="grids.label.twoColumnDescription">
+                <source>Two columns with customized width</source>
+            </trans-unit>
+            <trans-unit id="grids.label.threeColumnTitle">
+                <source>3 Columns</source>
+            </trans-unit>
+            <trans-unit id="grids.label.threeColumnDescription">
+                <source>Three columns with customized width</source>
+            </trans-unit>
+            <trans-unit id="grids.label.fourColumnTitle">
+                <source>4 Columns</source>
+            </trans-unit>
+            <trans-unit id="grids.label.fourColumnDescription">
+                <source>Four columns with customized width</source>
+            </trans-unit>
+            <trans-unit id="grids.label.column1">
+                <source>Column 1</source>
+            </trans-unit>
+            <trans-unit id="grids.label.column2">
+                <source>Column 2</source>
+            </trans-unit>
+            <trans-unit id="grids.label.column3">
+                <source>Column 3</source>
+            </trans-unit>
+            <trans-unit id="grids.label.column4">
+                <source>Column 4</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth1">
+                <source>1/12 (8.3%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth2">
+                <source>2/12 (16.7%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth3">
+                <source>3/12 (25%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth4">
+                <source>4/12 (33%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth5">
+                <source>5/12 (41.7%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth6">
+                <source>6/12 (50%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth7">
+                <source>7/12 (58.3%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth8">
+                <source>8/12 (66.7%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth9">
+                <source>9/12 (75%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth10">
+                <source>10/12 (83.3%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth11">
+                <source>11/12 (91.7%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidth12">
+                <source>12/12 (100%)</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnWidthNone">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnHidden">
+                <source>Hidden</source>
+            </trans-unit>
+            <trans-unit id="grids.label.columnVisible">
+                <source>Visible</source>
+            </trans-unit>
+
+            <trans-unit id="grids.label.tabsTitle">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="grids.label.tabsDescription">
+                <source>The content elements are accessible through tabs.</source>
+            </trans-unit>
+
+            <trans-unit id="grids.label.accordionTitle">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="grids.label.accordionDescription">
+                <source>The content elements are accessible in an accordion.</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,15 +1,10 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. include:: ../Includes.txt
+﻿.. include:: ../Includes.txt
 
 
 .. _user-manual:
 
 ============
-Users Manual
+Users manual
 ============
 
 The content appearance consists of design and animation aspects where design is mainly concerned about

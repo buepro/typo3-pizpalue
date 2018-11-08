@@ -63,8 +63,8 @@ pp-parent-height              Elements using this class will get the same height
 pp-row-height                 Elements in a row using this class will have the same height
 pp-row-child-height           Elements in a row using this class will have their direct child elements
                               harmonized. Each child element will have the same height as its neighbour
-                              element in an other column (all headers, all images, all Text blocks
-                              have the same height).
+                              element in an other column. The class just works with "Text with images"
+                              content elements.
 pp-ce-background              Centers the background and sizes it to cover the area.
 pp-ce-bgfixed                 Fixes the background. The result is a parallax effect. Due to mobile devices
                               not supporting this feature fully it is generally disabled on mobile devices.

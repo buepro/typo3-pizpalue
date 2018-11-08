@@ -3,14 +3,15 @@
 
 .. _configuration:
 
+=============
 Configuration
-==============
+=============
 
 
 .. _config_installtool:
 
 Install tool
-------------
+============
 
 Consider to review the below mentioned entries in the installtool.
 
@@ -25,7 +26,7 @@ Consider to review the below mentioned entries in the installtool.
 .. _config_seo:
 
 SEO
----
+===
 
 You might follow these steps to setup seo features:
 
@@ -48,7 +49,7 @@ You might follow these steps to setup seo features:
 .. _config_404:
 
 404-Handling
-------------
+============
 
 The 404-handling can be configured in the install tool. An example configuration might look as following:
 
@@ -63,7 +64,7 @@ Parameter                                  Value
 .. _config_scrollanimation:
 
 Scroll animation
-----------------
+================
 
 The feature can be enabled in the constant editor (:ref:`PIZPALUE: CUSTOMER - Features <config_ScrollAnimation_ConstantEditor>`).
 
@@ -78,7 +79,7 @@ overwritten with the following TS:
 
 
 Enable scroll animation
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 To enable the scroll animation for a certain page follow these steps:
 
@@ -100,7 +101,7 @@ To enable the scroll animation for a certain page follow these steps:
 .. _config_cookieconsent:
 
 Cookie consent
---------------
+==============
 
 To show a cookie dialog the "Enable Cookie Consent"-parameter has to be set (available through the constant editor
 under "PIZPALUE: CUSTOMER"). As well a link to a privacy policy page can be set in the cookie dialog.
@@ -119,20 +120,15 @@ Further configurations regarding the cookie dialog can be found und "PIZPALUE: C
       <f:render partial="Structure/CookieConsent" arguments="{_all}" />
 
 
-.. _socialNetwork:
+.. _config_appIcons:
 
-Social networks
----------------
+App icons
+=========
 
-Links to social networks can easyly be embedded by using the string ###SocialNetwork###
-some where in a content element.
+In case just a simple favicon is required it can be specified in the category "PIZPALUE - CUSTOMER BASE" from the
+constants editor.
 
-By default the `"Font Awesome" <https://fontawesome.com/>`__ library is used for
-this purpose. This library provides an extensive icon set. Even the `TYPO3 logo
-<https://fontawesome.com/icons?d=gallery&q=typo3>`__ is available.
-
-Many icons are as well available with the `Ionicon library <https://ionicons.com/>`__
-provided by the bootstrap_package. Unfortunatly the TYPO3-icon as well as the
-Xing-icon are missing. In case those icons aren't needed the "Font Awesome"
-library might be disabled to gain page load speed. The related parameter can be
-found under the "Features" section in the constant editor selecting "PIZPALUE: CUSTOMER".
+To get an app icon set for all major platforms the resources might be generated at the
+`"Favicon generator" <https://realfavicongenerator.net/>`__ website. The resulting resources need to be copied to the
+server web directory and the header data assigned to the related field in the app icon section in the category
+"PIZPALUE - CUSTOMER BASE" from the constants editor.

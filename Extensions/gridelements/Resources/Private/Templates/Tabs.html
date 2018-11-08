@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div id="tabpanel-{data.uid}"
+     class="tabpanel {f:if(condition:'{data.flexform_style}', then:'{data.flexform_style}')}"
+     role="tabpanel">
+    <ul class="nav nav-tabs" role="tablist">
+        <f:for each="{data.tx_gridelements_view_children}" as="content" iteration="iterator">
+            <li class="nav-item">
+                <a id="tab-{content.uid}"
+                   class="nav-link {f:if(condition:'{iterator.index}==0',then:'active')}"
+                   href="#tab-content-{content.uid}"
+                   data-toggle="tab"
+                   role="tab"
+                   aria-controls="tab-content-{content.uid}"
+                   aria-selected="{f:if(condition:'{iterator.index}==0',then:'true',else:'false')}">
+                    {content.header}
+                </a>
+            </li>
+        </f:for>
+    </ul>
+    <div class="tab-content">
+        <f:for each="{data.tx_gridelements_view_children}" as="content" iteration="iterator">
+            <div id="tab-content-{content.uid}"
+                 class="tab-pane fade {f:if(condition:'{iterator.index}==0',then:'show active')}"
+                 role="tabpanel"
+                 aria-labelledby="tab-{content.uid}">
+                {data.tx_gridelements_view_child_{content.uid}->f:format.htmlentitiesDecode()}
+            </div>
+        </f:for>
+    </div>
+</div>
+</html>

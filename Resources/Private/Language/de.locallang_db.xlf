@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-05-31T09:11:39Z"
-		  product-name="pizpalue">
-		<header/>
-		<body>
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-05-31T09:11:39Z"
+          product-name="pizpalue">
+        <header/>
+        <body>
             <trans-unit id="tx_pizpalue_ttc.attributes">
-				<source>Attributes</source>
-				<target state="translated">Attribute</target>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes">
-				<source>Additional classes</source>
-				<target state="translated">Zusätzliche Klassen</target>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.style">
+                <source>Attributes</source>
+                <target state="translated">Attribute</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes">
+                <source>Additional classes</source>
+                <target state="translated">Zusätzliche Klassen</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.style">
                 <source>Stieldefinitionen</source>
                 <target state="translated">Inline-Stil</target>
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.additionalAttributes">
-				<source>Additional attributes</source>
-				<target state="translated">Zusätzliche Attribute</target>
-			</trans-unit>
-		</body>
-	</file>
+                <source>Additional attributes</source>
+                <target state="translated">Zusätzliche Attribute</target>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

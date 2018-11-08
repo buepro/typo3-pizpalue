@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2017 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="269px" height="400px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 269 400.37"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#0083C4}
+    .fil0 {fill:white}
+    .fil2 {fill:#29B7FF}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="269" height="400.37"/>
+  <rect class="fil1" x="6.26" y="344.07" width="81.33" height="50.05"/>
+  <rect class="fil1" x="93.84" y="344.07" width="81.33" height="50.05"/>
+  <rect class="fil1" x="181.42" y="344.07" width="81.33" height="50.05"/>
+  <rect class="fil1" x="75.07" y="93.84" width="187.67" height="212.7"/>
+  <rect class="fil1" x="6.26" y="6.26" width="256.49" height="50.05"/>
+  <rect class="fil1" x="6.26" y="312.79" width="256.49" height="25.02"/>
+  <rect class="fil1" x="6.26" y="62.56" width="256.49" height="25.02"/>
+  <rect class="fil2" x="6.26" y="93.84" width="62.56" height="212.7"/>
+ </g>
+</svg>

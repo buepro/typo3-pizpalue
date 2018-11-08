@@ -3,13 +3,14 @@
 
 .. _introduction:
 
+============
 Introduction
 ============
 
 .. _what-it-does:
 
 What does it do?
-----------------
+================
 
 This extension installs a bootstrap based web site with news management.
 It is tailored for the Swiss market featuring German as default language and
@@ -56,10 +57,10 @@ web site.
 .. _screenshots:
 
 Screenshots
------------
+===========
 
 Landing page
-............
+------------
 
 `See example <https://www.pizpalue.buechler.pro/>`__
 
@@ -72,7 +73,7 @@ Landing page
 ----
 
 News embedding
-..............
+--------------
 
 `See example <https://www.pizpalue.buechler.pro/das-plus/news/>`__
 
@@ -85,7 +86,7 @@ News embedding
 ----
 
 Scroll animation
-................
+----------------
 
 `See example <https://www.pizpalue.buechler.pro/das-plus/stilergaenzungen/>`__
 
@@ -98,7 +99,7 @@ Scroll animation
 ----
 
 Flexible content width
-......................
+----------------------
 
 `See example <https://www.pizpalue.buechler.pro/das-plus/flexible-inhaltsbreite/>`__
 

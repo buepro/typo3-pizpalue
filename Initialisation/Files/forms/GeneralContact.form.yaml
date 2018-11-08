@@ -108,6 +108,7 @@ renderables:
         label: Image
       -
         properties:
+          containerClassAttribute: custom-checkbox-multiple pp-dataprotection
           options:
             dataprotectionRead: 'Please confirm that you have read our data protection notice by checking this checkbox'
         type: MultiCheckbox

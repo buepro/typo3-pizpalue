@@ -1,5 +1,11 @@
+#---------------------------------------------------------#
+#
+# Mainly to establish german as default language
+#
 # see https://www.thomaskieslich.de/blog/127-typo3-8x-ckeditor-konfigurieren/
 # see https://www.clickstorm.de/blog/der-neue-typo3-rte-ckeditor/
+#
+#---------------------------------------------------------#
 
 imports:
     - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }

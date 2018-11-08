@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.style</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <style type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.style</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default></default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.default</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.primary</numIndex>
+                                        <numIndex index="1">pp-tabs-primary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.secondary</numIndex>
+                                        <numIndex index="1">pp-tabs-secondary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.complementary</numIndex>
+                                        <numIndex index="1">pp-tabs-complementary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="11" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.custom</numIndex>
+                                        <numIndex index="1">pp-tabs-custom</numIndex>
+                                    </numIndex>
+                                    <numIndex index="21" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.legacy</numIndex>
+                                        <numIndex index="1">tab-v1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </style>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

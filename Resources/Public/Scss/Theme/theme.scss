@@ -1,0 +1,66 @@
+//
+// provide additional functions/mixins
+//
+@import "../Functions/Functions";
+@import "../Mixins/Mixins.scss";
+
+//
+// variables
+//
+@import "variables";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/variables";
+
+//
+// Import needed Bootstrap Files
+//
+@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/bootstrap";
+
+//
+// Components
+//
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/list";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/backendlayouts";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/section";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/footer";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/frame";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/card";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/address";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/buttons";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/body";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/text";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/media";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/blockquote";
+// @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/navbar";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/subnav";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/breadcrumb";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/lazyload";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/gallery";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/figure";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/carousel";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/form";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/textpic";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/textteaser";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/texticon";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/accordion";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/tab";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/icongroup";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/uploads";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/thumbnail-menu";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/link";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/socialmedia";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/timeline";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/cookieconsent";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/well";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/misc";
+
+//
+// complement, add components
+//
+@import "footer";
+@import "navbar";
+@import "plugin";
+
+//
+// Plugins
+//
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/photoswipe";

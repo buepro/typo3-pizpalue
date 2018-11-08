@@ -1,64 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
-		  product-name="pizpalue">
-		<header/>
-		<body>
-			<trans-unit id="label.options">
-				<source>Options</source>
-				<target state="translated">Optionen</target>
-			</trans-unit>
-            <trans-unit id="label.general">
-                <source>General</source>
-                <target state="translated">Allgemein</target>
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+          product-name="pizpalue">
+        <header/>
+        <body>
+            <trans-unit id="ppCeFrame1">
+                <source>Custom frame 1</source>
+                <target state="translated">Angepasster Rahmen 1</target>
             </trans-unit>
-            <trans-unit id="label.style">
-                <source>Style</source>
-                <target state="translated">Stil</target>
+            <trans-unit id="ppCeFrame2">
+                <source>Custom frame 2</source>
+                <target state="translated">Angepasster Rahmen 2</target>
             </trans-unit>
-            <trans-unit id="label.default">
-                <source>Default</source>
-                <target state="translated">Standard</target>
+            <trans-unit id="ppCeFrame3">
+                <source>Custom frame 3</source>
+                <target state="translated">Angepasster Rahmen 3</target>
             </trans-unit>
-            <trans-unit id="label.primary">
-                <source>Primary</source>
-                <target state="translated">Primär</target>
-            </trans-unit>
-            <trans-unit id="label.secondary">
-                <source>Secondary</source>
-                <target state="translated">Sekundär</target>
-            </trans-unit>
-            <trans-unit id="label.complementary">
-                <source>Complementary</source>
-                <target state="translated">Komplementär</target>
-            </trans-unit>
-            <trans-unit id="label.custom">
-                <source>Custom</source>
-                <target state="translated">Angepasst</target>
-            </trans-unit>
-            <trans-unit id="label.legacy">
-                <source>Legacy</source>
-                <target state="translated">Veraltet</target>
+            <trans-unit id="ppCeFrame4">
+                <source>Custom frame 4</source>
+                <target state="translated">Angepasster Rahmen 4</target>
             </trans-unit>
 
-			<trans-unit id="ppCeFrame1">
-				<source>Custom frame 1</source>
-				<target state="translated">Angepasster Rahmen 1</target>
-			</trans-unit>
-			<trans-unit id="ppCeFrame2">
-				<source>Custom frame 2</source>
-				<target state="translated">Angepasster Rahmen 2</target>
-			</trans-unit>
-			<trans-unit id="ppCeFrame3">
-				<source>Custom frame 3</source>
-				<target state="translated">Angepasster Rahmen 3</target>
-			</trans-unit>
-			<trans-unit id="ppCeFrame4">
-				<source>Custom frame 4</source>
-				<target state="translated">Angepasster Rahmen 4</target>
-			</trans-unit>
-
-			<trans-unit id="ppCefAnimation1">
+            <trans-unit id="ppCefAnimation1">
                 <source>Custom animation 1</source>
                 <target state="translated">Angepasste Animation 1</target>
             </trans-unit>
@@ -70,6 +33,7 @@
                 <source>Custom animation 3</source>
                 <target state="translated">Angepasste Animation 3</target>
             </trans-unit>
+
             <trans-unit id="ppCefScrollAnimation1">
                 <source>Custom scroll animation 1</source>
                 <target state="translated">Angepasste Scrollanimation 1</target>
@@ -83,129 +47,15 @@
                 <target state="translated">Angepasste Scrollanimation 3</target>
             </trans-unit>
 
-			<trans-unit id="grids.label.containerFixedTitle">
-				<source>Content container</source>
-				<target state="translated">Inhalts-Container</target>
-			</trans-unit>
-			<trans-unit id="grids.label.containerFixedDescription">
-				<source>Provides a container covering the content width.</source>
-				<target state="translated">Stellt einen Container zur Verfügung, welcher die volle Inhaltsbreite ausfüllt.</target>
-			</trans-unit>
-			<trans-unit id="grids.label.containerTitle">
-				<source>Page container</source>
-				<target state="translated">Seiten-Container</target>
-			</trans-unit>
-			<trans-unit id="grids.label.containerDescription">
-				<source>Provides container covering the entire page or screen width.</source>
-				<target state="translated">Stellt einen Container zur Verfügung, welcher die gesamte Seitenbreite ausfüllt.</target>
-			</trans-unit>
-			<trans-unit id="grids.label.containerClass">
-				<source>Class</source>
-				<target state="translated">Container-Klassen</target>
-			</trans-unit>
-			<trans-unit id="grids.label.containerAttribute">
-                <source>Attributes</source>
-                <target state="translated">Container-Attribute</target>
-            </trans-unit>
-			<trans-unit id="grids.label.sectionClass">
-				<source>Section class</source>
-				<target state="translated">Abschnitts-Klassen</target>
-			</trans-unit>
-			<trans-unit id="grids.label.wrapSection">
-				<source>Wrap section</source>
-				<target state="translated">Abschnitt mit zusätzlicher Etiquette umschliessen</target>
-			</trans-unit>
-			<trans-unit id="grids.label.isContainerFluid">
-				<source>Is bootstrap fluid container</source>
-				<target state="translated">Ist ein Bootstrap-Fluid Container</target>
-			</trans-unit>
-
-            <trans-unit id="grids.sheet.defaultColumns">
-                <source>Default columns width</source>
-                <target state="translated">Standard Spaltenbreiten</target>
-            </trans-unit>
-            <trans-unit id="grids.sheet.customColumns">
-                <source>Custom columns width (CSS classes)</source>
-                <target state="translated">Angepasste Spaltenbreiten (CSS-Klassen)</target>
-            </trans-unit>
-            <trans-unit id="grids.label.twoColumnTitle">
-                <source>2 Columns</source>
-                <target state="translated">2 Spalten</target>
-            </trans-unit>
-            <trans-unit id="grids.label.twoColumnDescription">
-                <source>Two columns with customized width</source>
-                <target state="translated">Zwei Spalten mit abpassbarer Breite.</target>
-            </trans-unit>
-            <trans-unit id="grids.label.threeColumnTitle">
-                <source>3 Columns</source>
-                <target state="translated">3 Spalten</target>
-            </trans-unit>
-            <trans-unit id="grids.label.threeColumnDescription">
-                <source>Three columns with customized width</source>
-                <target state="translated">Drei Spalten mit abpassbarer Breite.</target>
-            </trans-unit>
-            <trans-unit id="grids.label.fourColumnTitle">
-                <source>4 Columns</source>
-                <target state="translated">4 Spalten</target>
-            </trans-unit>
-            <trans-unit id="grids.label.fourColumnDescription">
-                <source>Four columns with customized width</source>
-                <target state="translated">Vier Spalten mit abpassbarer Breite.</target>
-            </trans-unit>
-            <trans-unit id="grids.label.column1">
-                <source>Column 1</source>
-                <target state="translated">Spalte 1</target>
-            </trans-unit>
-            <trans-unit id="grids.label.column2">
-                <source>Column 2</source>
-                <target state="translated">Spalte 2</target>
-            </trans-unit>
-            <trans-unit id="grids.label.column3">
-                <source>Column 3</source>
-                <target state="translated">Spalte 3</target>
-            </trans-unit>
-            <trans-unit id="grids.label.column4">
-                <source>Column 4</source>
-                <target state="translated">Spalte 4</target>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidthNone">
-                <source>None</source>
-                <target state="translated">Keine</target>
-            </trans-unit>
-            <trans-unit id="grids.label.columnHidden">
-                <source>Hidden</source>
-                <target state="translated">Unsichtbar</target>
-            </trans-unit>
-            <trans-unit id="grids.label.columnVisible">
-                <source>Visible</source>
-                <target state="translated">Sichtbar</target>
-            </trans-unit>
-
-            <trans-unit id="grids.label.tabsTitle">
-                <source>Tabs</source>
-                <target state="translated">Register</target>
-            </trans-unit>
-            <trans-unit id="grids.label.tabsDescription">
-                <source>The content elements are accessible through tabs.</source>
-                <target state="translated">Die Inhaltselemente sind über Register verfügbar.</target>
-            </trans-unit>
-
-            <trans-unit id="grids.label.accordionTitle">
-                <source>Accordion</source>
-                <target state="translated">Akkordeon</target>
-            </trans-unit>
-            <trans-unit id="grids.label.accordionDescription">
-                <source>The content elements are accessible in an accordion.</source>
-                <target state="translated">Die Inhaltselemente werden in einem Akkordeon angezeigt.</target>
-            </trans-unit>
-
-			<trans-unit id="cookieconsent.common.header">
+            <trans-unit id="cookieconsent.common.header">
                 <source>Cookies used on the website!</source>
                 <target state="translated">Diese Webseite benutzt Cookies!</target>
             </trans-unit>
             <trans-unit id="cookieconsent.common.message">
                 <source>This website uses cookies to ensure you get the best experience on our website.</source>
-                <target state="translated">Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies eingesetzt.</target>
+                <target state="translated">Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies
+                    eingesetzt.
+                </target>
             </trans-unit>
             <trans-unit id="cookieconsent.common.dismiss">
                 <source>Got it!</source>
@@ -229,8 +79,15 @@
                 <target state="translated">Google Analytics Status</target>
             </trans-unit>
             <trans-unit id="googleanalyticsstatus.description">
-                <source>Here you can object to the anonymous collection by Google Analytics on this website for your browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a different computer or web browser, you will need to re-set the exclusion.</source>
-                <target state="translated">Für diese Webseite können Sie hier, durch ein "Opt-Out-Cookie", die anonymen Datenerfassung durch Google Analytics deaktivieren. Bitte beachten Sie, dass wenn Sie das Ausschluss-Cookie löschen oder einen anderen Computer oder Webbrowser verwenden, den Ausschluss neu setzen müssen.</target>
+                <source>Here you can object to the anonymous collection by Google Analytics on this website for your
+                    browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a
+                    different computer or web browser, you will need to re-set the exclusion.
+                </source>
+                <target state="translated">Für diese Webseite können Sie hier, durch ein "Opt-Out-Cookie", die anonymen
+                    Datenerfassung durch Google Analytics deaktivieren. Bitte beachten Sie, dass wenn Sie das
+                    Ausschluss-Cookie löschen oder einen anderen Computer oder Webbrowser verwenden, den Ausschluss neu
+                    setzen müssen.
+                </target>
             </trans-unit>
             <trans-unit id="googleanalyticsstatus.link.enable">
                 <source>Enable Google Analytics (Opt-In)</source>
@@ -240,6 +97,6 @@
                 <source>Deactivate Google Analytics (Opt-Out)</source>
                 <target state="translated">Google Analytics deaktivieren (Opt-Out)</target>
             </trans-unit>
-		</body>
-	</file>
+        </body>
+    </file>
 </xliff>

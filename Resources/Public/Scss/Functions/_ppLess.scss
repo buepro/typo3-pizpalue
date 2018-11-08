@@ -1,0 +1,11 @@
+@function contrast($color) {
+    @return ppContrast($color);
+}
+
+@function tint($color, $percent){
+    @return ppTint($color, $percent);
+}
+
+@function shade($color, $percent){
+    @return ppShade($color, $percent);
+}

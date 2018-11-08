@@ -1,0 +1,21 @@
+########################
+#### BACKENDLAYOUTS ####
+########################
+
+mod.web_layout.BackendLayouts {
+    # default >
+    # simple >
+    special_feature >
+    special_start >
+    2_columns >
+    2_columns_25_75 >
+    2_columns_50_50 >
+    2_columns_offset_right >
+    3_columns >
+    subnavigation_left >
+    subnavigation_left_2_columns >
+    subnavigation_right >
+    subnavigation_right_2_columns >
+}
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">

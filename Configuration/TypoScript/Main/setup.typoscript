@@ -1,0 +1,185 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/AppIcon.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Plugins.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Libs.typoscript">
+
+
+#=========================================================#
+# Config
+#=========================================================#
+
+config {
+   // Branding
+   headerComment (
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|   Eine Webseite basierend auf der Distribution pizpalue von buechler.pro  |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+)
+}
+
+
+#=========================================================#
+# Page object
+#=========================================================#
+
+#---------------------------------------------------------#
+# General
+#---------------------------------------------------------#
+
+page {
+   #:::::::::::::::::::::::
+   #: FLUIDTEMPLATE
+   #.
+   10 {
+      #:::::::::::::::::::::::
+      #: Pass pizpalue constants to fluid
+      #.
+      dataProcessing.1010 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
+      dataProcessing.1010 {
+         as = pizpalue
+         key = pizpalue
+      }
+      #:::::::::::::::::::::::
+      #: Pass content objects to fluid
+      #.
+      variables {
+         ppCopyright = TEXT
+         ppCopyright.value = {$pizpalue.customer.copyright}
+         ppCopyright.inserData = 1
+      }
+   }
+}
+
+
+#---------------------------------------------------------#
+# Theme and CSS/SCSS
+#---------------------------------------------------------#
+
+#:::::::::::::::::::::::
+#: Load theme with modified features
+#.
+page {
+   includeCSS {
+      theme = EXT:pizpalue/Resources/Public/Scss/Theme/theme.scss
+   }
+}
+
+#:::::::::::::::::::::::
+#: Custom CSS/SCSS
+#.
+[globalString = LIT:1 = {$pizpalue.features.useStyle}]
+   page {
+      includeCSS {
+         pizpalueCustomCss = EXT:pizpalue/Resources/Public/Css/custom.css
+         pizpalueCustomScss = EXT:pizpalue/Resources/Public/Scss/Custom/custom.scss
+      }
+   }
+[global]
+
+#:::::::::::::::::::::::
+#: Font awesome
+#.
+[globalString = LIT:1 = {$pizpalue.features.fontAwesome.enable}]
+   page {
+      includeCSSLibs {
+         FontAwesome = https://use.fontawesome.com/releases/v5.5.0/css/all.css
+         FontAwesome {
+            external = 1
+            excludeFromConcatenation = 1
+            disableCompression = 1
+         }
+      }
+   }
+[global]
+
+
+#---------------------------------------------------------#
+# JS
+#---------------------------------------------------------#
+
+page {
+   includeJSFooterlibs {
+      pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
+      pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.smoothscroll.min.js
+      bootstrap_smoothscroll >
+   }
+}
+
+#:::::::::::::::::::::::
+#: Cookie consent service
+#.
+[globalString = LIT:1 = {$page.theme.cookieconsent.enable}]
+   page {
+      includeJSFooterlibs {
+         pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.cookieconsentservice.min.js
+      }
+   }
+[global]
+
+#:::::::::::::::::::::::
+#: Reveal footer service
+#.
+[globalString = LIT:1 = {$pizpalue.frame.revealFooter}]
+   page {
+      includeJSFooterlibs {
+         pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.revealfooterservice.min.js
+      }
+   }
+[global]
+
+#:::::::::::::::::::::::
+#: Scroll animation
+#.
+[globalString = LIT:1 = {$pizpalue.features.scrollAnimation.enable}]
+   lib.contentElement.settings.preload.images = 1
+   page {
+      includeCSS {
+         Aos = EXT:pizpalue/Contrib/Aos/dist/aos.css
+      }
+      includeJSFooterlibs {
+         Aos = EXT:pizpalue/Contrib/Aos/dist/aos.js
+      }
+      jsFooterInline {
+         1020 = TEXT
+         1020.value (
+
+$(function () {
+   +function ($) {
+      AOS.init({{$pizpalue.features.scrollAnimation.initParams}});
+   }(jQuery);
+});
+         )
+      }
+   }
+[global]
+
+
+#=========================================================#
+# Maintenance page
+#=========================================================#
+
+[globalString = LIT:1 = {$pizpalue.agency.isMaintenancePage}]
+   page.10 {
+      dataProcessing {
+         10.as = no-mainnavigation
+         20.as = no-subnavigation
+         30.as = no-breadcrumb
+         50.as = no-metanavigation
+      }
+      variables {
+         rootPage >
+         rootPage = TEXT
+         rootPage.value.data = page:uid
+      }
+   }
+[global]
+
+
+#=========================================================#
+# Development settings
+#=========================================================#
+
+[globalString = LIT:1 = {$pizpalue.agency.isDebugMode}]
+   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript">
+[global]
+
+

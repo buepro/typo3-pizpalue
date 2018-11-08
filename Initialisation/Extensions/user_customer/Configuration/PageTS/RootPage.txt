@@ -1,3 +1,0 @@
-# include this script to page ts with
-# <INCLUDE_TYPOSCRIPT: source="EXT:user_customer/Configuration/PageTS/RootPage.txt">
-

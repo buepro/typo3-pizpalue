@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
-		  product-name="pizpalue">
-		<header/>
-		<body>
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+          product-name="pizpalue">
+        <header/>
+        <body>
 
-			<trans-unit id="idGeneralContactForm.element.idName.properties.label">
-				<source>Name</source>
-				<target state="translated">Name</target>
-			</trans-unit>
+            <trans-unit id="idGeneralContactForm.element.idName.properties.label">
+                <source>Name</source>
+                <target state="translated">Name</target>
+            </trans-unit>
 
-			<trans-unit id="idGeneralContactForm.element.idEmail.properties.label">
-				<source>Email</source>
-				<target state="translated">Email</target>
-			</trans-unit>
+            <trans-unit id="idGeneralContactForm.element.idEmail.properties.label">
+                <source>Email</source>
+                <target state="translated">Email</target>
+            </trans-unit>
 
-			<trans-unit id="idGeneralContactForm.element.idTelephone.properties.label">
-				<source>Telephone</source>
-				<target state="translated">Telefon</target>
-			</trans-unit>
+            <trans-unit id="idGeneralContactForm.element.idTelephone.properties.label">
+                <source>Telephone</source>
+                <target state="translated">Telefon</target>
+            </trans-unit>
 
-			<trans-unit id="idGeneralContactForm.element.idSubject.properties.label">
-				<source>Subject</source>
-				<target state="translated">Betreff</target>
-			</trans-unit>
+            <trans-unit id="idGeneralContactForm.element.idSubject.properties.label">
+                <source>Subject</source>
+                <target state="translated">Betreff</target>
+            </trans-unit>
 
-			<trans-unit id="idGeneralContactForm.element.idMessage.properties.label">
-				<source>Meassage</source>
-				<target state="translated">Mitteilung</target>
-			</trans-unit>
+            <trans-unit id="idGeneralContactForm.element.idMessage.properties.label">
+                <source>Meassage</source>
+                <target state="translated">Mitteilung</target>
+            </trans-unit>
 
-			<trans-unit id="idGeneralContactForm.element.idFileupload.properties.label">
-				<source>PDF-File</source>
-				<target state="translated">PDF-Datei</target>
-			</trans-unit>
+            <trans-unit id="idGeneralContactForm.element.idFileupload.properties.label">
+                <source>PDF-File</source>
+                <target state="translated">PDF-Datei</target>
+            </trans-unit>
 
-			<trans-unit id="idGeneralContactForm.element.idImageupload.properties.label">
-				<source>Image</source>
-				<target state="translated">Bild</target>
-			</trans-unit>
+            <trans-unit id="idGeneralContactForm.element.idImageupload.properties.label">
+                <source>Image</source>
+                <target state="translated">Bild</target>
+            </trans-unit>
 
-			<trans-unit id="idGeneralContactForm.element.idDataprotectionMultiCheckbox.properties.label">
+            <trans-unit id="idGeneralContactForm.element.idDataprotectionMultiCheckbox.properties.label">
                 <source>Data protection notice</source>
                 <target state="translated">Datenschutzhinweis</target>
             </trans-unit>
 
-			<trans-unit id="element.idGeneralContactForm.renderingOptions.submitButtonLabel">
-				<source>Send</source>
-				<target state="translated">Senden</target>
-			</trans-unit>
+            <trans-unit id="element.idGeneralContactForm.renderingOptions.submitButtonLabel">
+                <source>Send</source>
+                <target state="translated">Senden</target>
+            </trans-unit>
 
-			<trans-unit id="element.idGeneralContactForm.label">
-				<source>General contact form</source>
-				<target state="translated">Allgemeines Kontaktformular</target>
-			</trans-unit>
+            <trans-unit id="element.idGeneralContactForm.label">
+                <source>General contact form</source>
+                <target state="translated">Allgemeines Kontaktformular</target>
+            </trans-unit>
 
-		</body>
-	</file>
+        </body>
+    </file>
 </xliff>

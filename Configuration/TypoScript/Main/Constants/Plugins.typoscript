@@ -1,0 +1,53 @@
+#---------------------------------------------------------#
+# indexedsearch
+#---------------------------------------------------------#
+
+plugin {
+   tx_indexedsearch.settings.rootPidList = -1
+}
+
+
+#---------------------------------------------------------#
+# bootstrap_package
+#---------------------------------------------------------#
+
+plugin {
+   bootstrap_package_contentelements.header.defaultHeaderType = 2
+}
+
+page {
+   preloader {
+      enable = 0
+   }
+}
+
+
+#---------------------------------------------------------#
+# srlangmenu
+#---------------------------------------------------------#
+
+plugin {
+   tx_srlanguagemenu {
+      defaultLanguageISOCode = DE
+      defaultCountryISOCode = DE
+      defaultLanguageTitle = Deutsch
+      languagesUidsList = {$pizpalue.menu.language.languageValue}
+      languageTitle = 1
+   }
+}
+
+
+#---------------------------------------------------------#
+# slick
+#---------------------------------------------------------#
+
+slick_jquery = 0
+
+
+#---------------------------------------------------------#
+# loginform
+#---------------------------------------------------------#
+
+styles {
+   content.loginform.dateFormat = {$pizpalue.general.dateTimeFormat}
+}

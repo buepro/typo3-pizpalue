@@ -1,0 +1,14 @@
+#---------------------------------------------------------#
+#
+# see RTE/Default.yaml
+#
+# see https://www.thomaskieslich.de/blog/127-typo3-8x-ckeditor-konfigurieren/
+# see https://www.clickstorm.de/blog/der-neue-typo3-rte-ckeditor/
+#
+#---------------------------------------------------------#
+
+RTE {
+    default {
+        preset = pizpalue
+    }
+}

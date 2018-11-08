@@ -1,0 +1,61 @@
+#=========================================================#
+# Config
+#=========================================================#
+config {
+
+   # ---------------------------------------------- #
+   #  Css
+   # ---------------------------------------------- #
+   concatenateCss = 0
+   compressCss = 0
+
+   # ---------------------------------------------- #
+   #  Javascript
+   # ---------------------------------------------- #
+   compressJs = 0
+   concatenateJs = 0
+
+   # ---------------------------------------------- #
+   #  Various
+   # ---------------------------------------------- #
+   no_cache = 1
+   admPanel = 0
+
+   # ---------------------------------------------- #
+   #  Extensions
+   # ---------------------------------------------- #
+   tx_realurl_enable = 0
+
+}
+
+
+#=========================================================#
+# Page
+#=========================================================#
+page {
+   includeCSS {
+      PizpalueDevelopLess = EXT:pizpalue/Resources/Public/Scss/develop.scss
+   }
+
+   includeJSFooterlibs {
+      #contrib_cookieconsent = EXT:bootstrap_package/Resources/Public/Contrib/cookieconsent/cookieconsent.min.js
+      #bootstrap_cookieconsent = EXT:bootstrap_package/Resources/Public/JavaScript/Src/jquery.cookieconsent.js
+      #bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Src/bootstrap.smoothscroll.js
+      #pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.cookieconsentservice.js
+      #pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.revealfooterservice.js
+      #pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
+      #pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.smoothscroll.js
+   }
+
+   1 = TEXT
+   1 {
+      value = <div id="setupsetting"></div>
+      stdWrap.typolink {
+         extTarget = _blank
+         parameter = https://www.buechler.pro
+         title = In Arbeit - Eine Weseite von buechler.pro
+      }
+   }
+}
+
+

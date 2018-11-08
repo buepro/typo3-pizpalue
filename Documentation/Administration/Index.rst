@@ -3,6 +3,7 @@
 
 .. _administration:
 
+==============
 Administration
 ==============
 
@@ -10,7 +11,7 @@ Administration
 .. _admin_installation:
 
 Installation
-------------
+============
 
 The distribution can be installed from within the distribution list, by uploading the extension and through composer.
 Refer to TYPO3 documentation for further details on handling extensions.
@@ -19,7 +20,7 @@ Refer to TYPO3 documentation for further details on handling extensions.
 .. _admin_update:
 
 Update
-------
+======
 
 If a newer version from this distribution is installed its update script should be executed. It can be started through
 its update button available through the extension manager.
@@ -30,10 +31,24 @@ its update button available through the extension manager.
    Distribution update button
 
 
+.. _admin_upgrade:
+
+Upgrade
+=======
+
+The following upgrade descriptions are available:
+
+.. toctree::
+   :maxdepth: 2
+
+   UpgradeBootstrap4
+   Upgrade9
+
+
 .. _admin_customization:
 
 Customization
--------------
+=============
 
 The suggested way to customize the distribution for customer projects is to create an extension (e.g. user_customer)
 and define the customer theme and functions in it (`see TYPO3 documentation
@@ -60,7 +75,7 @@ To uninstall the extension the dependency in the file ext_emconf.php needs to be
 .. _admin_development:
 
 Development
------------
+===========
 
 During development or maintenance phase two actions might be of interest:
 
@@ -75,36 +90,37 @@ the debug mode in the "PIZPALUE: AGENCY" category from the constant editor.
 .. _admin_configuration:
 
 Configuration
--------------
+=============
 
 Many aspects from the web site can be configured through the constant editor.
 
 To ease configuration parameters were grouped. The following main categories
 are available:
 
-============================ ==================================================
+============================ =========================================================
 Category                     Description
-============================ ==================================================
-PIZPALUE: GENERAL            A parameter in this category might be used for various module configurations
-PIZPALUE: AGENCY             Everything related to the authority maintaining the site
-PIZPALUE: CUSTOMER           Main customer related parameters
+============================ =========================================================
+PIZPALUE: ADMIN              Everything related to the site administration
+PIZPALUE: CUSTOMER BASE      Main customer related parameters
 PIZPALUE: CUSTOMER STYLE     More detailed customer style related parameters
-PIZPALUE: CUSTOMER SOCIAL    Definition from references to social networks
+PIZPALUE: CUSTOMER SOCIAL    More detailed customer social network related parameters
 PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
-PIZPALUE: NEWS RSS           Configurations related to RSS feed from extension news
-============================ ==================================================
+PIZPALUE: CUSTOMER PLUGINS   More detailed plugin related parameters
+============================ =========================================================
 
 
 .. figure:: ../Images/Administration/Configuration_ConstantEditor.jpg
    :alt: Constant editor
 
-   Constant editor
+
+.. note::
+   Most extensions provide their own configurations. For more detailed configurations consult the related manual.
 
 
-.. _admin_rss_feed:
+.. _admin_news_rss_feed:
 
-RSS Feed
---------
+News RSS Feed
+=============
 
 To provide an RSS feed the following steps could be followed:
 
@@ -117,6 +133,5 @@ To provide an RSS feed the following steps could be followed:
    To embed external feeds the extension rss_display might be used. At the time of writing the extension didn't
    provide a view helper to get the url from enclosed images. The branch enclosure-view-helper from fork
    `chesio/rss_display <https://github.com/chesio/rss_display/tree/enclosure-view-helper>`__ provides one.
-
 
 

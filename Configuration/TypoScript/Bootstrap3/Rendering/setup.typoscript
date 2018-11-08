@@ -1,0 +1,10 @@
+// todo: Might be removed after scss has been defined
+[globalString = LIT:1={$pizpalue.features.useStyle}]
+   page {
+      includeCSS {
+         PizpalueMenuLess = EXT:pizpalue/Resources/Public/Less/Menu.less
+         PizpalueFormsLess = EXT:pizpalue/Resources/Public/Less/Forms.less
+         PizpalueGeneralLess = EXT:pizpalue/Resources/Public/Less/General.less
+      }
+   }
+[global]

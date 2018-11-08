@@ -1,3 +1,0 @@
-plugin.tx_felogin_pi1.dateFormat = {$pizpalue.general.dateTimeFormat}
-
-plugin.tx_slickcarousel.slick_progressbar_color = {$plugin.bootstrap_package.settings.less.brand-primary}

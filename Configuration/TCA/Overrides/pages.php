@@ -13,18 +13,19 @@ if (!defined('TYPO3_MODE')) {
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
     'pizpalue',
-    'Configuration/PageTS/CE.txt',
-    'Pizpalue: Content element'
+    'Configuration/TsConfig/Page/TCEFORM.tsconfig',
+    'Pizpalue: Content elements'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
     'pizpalue',
-    'Configuration/PageTS/Grids.txt',
-    'Pizpalue: Grid content elements'
+    'Extensions/gridelements/Configuration/TsConfig/Page/Pizpalue.tsconfig',
+    'Pizpalue: Extension gridelements'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
     'pizpalue',
-    'Extensions/news/Configuration/PageTS/General.txt',
+    'Extensions/news/Configuration/TsConfig/Page/Pizpalue.tsconfig',
     'Pizpalue: Extension news'
 );
+

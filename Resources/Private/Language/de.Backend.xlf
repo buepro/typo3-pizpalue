@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-10-11T09:11:39Z"
+          product-name="pizpalue">
+        <header/>
+        <body>
+            <trans-unit id="backend_layout.column.subnav">
+                <source>Sub Navigation</source>
+                <target state="translated">Subnavigation</target>
+            </trans-unit>
+
+            <trans-unit id="backend_layout.fullwidth_clean">
+                <source>Full width clean</source>
+                <target state="translated">Volle Breite - einfach</target>
+            </trans-unit>
+
+            <trans-unit id="backend_layout.fullwidth_default">
+                <source>Volle Breite - standard</source>
+                <target state="translated"></target>
+            </trans-unit>
+
+            <trans-unit id="constCategory.admin">
+                <source>pizpalue: admin</source>
+                <target state="translated">pizpalue: Administration</target>
+            </trans-unit>
+            <trans-unit id="constCategory.customerBase">
+                <source>pizpalue: customer base</source>
+                <target state="translated">pizpalue: Kunde Basis</target>
+            </trans-unit>
+            <trans-unit id="constCategory.customerStyle">
+                <source>pizpalue: customer style</source>
+                <target state="translated">pizpalue: Kunde Stil</target>
+            </trans-unit>
+            <trans-unit id="constCategory.customerSocial">
+                <source>pizpalue: customer social</source>
+                <target state="translated">pizpalue: Kunde Soziale Netzwerke</target>
+            </trans-unit>
+            <trans-unit id="constCategory.customerVarious">
+                <source>pizpalue: customer various</source>
+                <target state="translated">pizpalue: Kunde Verschiedenes</target>
+            </trans-unit>
+            <trans-unit id="constCategory.customerPlugins">
+                <source>pizpalue: Plugins</source>
+            </trans-unit>
+
+            <trans-unit id="constSubCategory.general">
+                <source>General</source>
+                <target state="translated">Generell</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.agency">
+                <source>Agency</source>
+                <target state="translated">Agentur</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.customer">
+                <source>Customer</source>
+                <target state="translated">Kunde</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.frame">
+                <source>Frame</source>
+                <target state="translated">Struktur</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.colors">
+                <source>Colors</source>
+                <target state="translated">Farben</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.font">
+                <source>Font</source>
+                <target state="translated">Schrift</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.header">
+                <source>Header</source>
+                <target state="translated">Kopf</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.footer">
+                <source>Footer</source>
+                <target state="translated">Fuss</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.various">
+                <source>Various</source>
+                <target state="translated">Verschiedenes</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.logo">
+                <source>Logo</source>
+                <target state="translated">Logo</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.menu">
+                <source>Menu</source>
+                <target state="translated">Menü</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.cookieConsent">
+                <source>Cookie consent</source>
+                <target state="translated">Cookie-Einwilligung</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.appicon">
+                <source>Appicon</source>
+                <target state="translated">Applikationsicons</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.storage">
+                <source>Storage</source>
+                <target state="translated">Speicherung</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.seo">
+                <source>SEO</source>
+                <target state="translated">Suchmaschinenoptimierung (SEO)</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.features">
+                <source>Features</source>
+                <target state="translated">Funktionen</target>
+            </trans-unit>
+            <trans-unit id="constSubCategory.newsRSSFeed">
+                <source>News RSS feed</source>
+                <target state="translated">News RSS feed</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-10-11T09:11:39Z"
+          product-name="pizpalue">
+        <header/>
+        <body>
+            <trans-unit id="backend_layout.column.subnav">
+                <source>Sub Navigation</source>
+            </trans-unit>
+
+            <trans-unit id="backend_layout.fullwidth_clean">
+                <source>Full width clean</source>
+            </trans-unit>
+
+            <trans-unit id="backend_layout.fullwidth_default">
+                <source>Full width default</source>
+            </trans-unit>
+
+            <trans-unit id="constCategory.admin">
+                <source>pizpalue: administration</source>
+            </trans-unit>
+            <trans-unit id="constCategory.customerBase">
+                <source>pizpalue: customer base</source>
+            </trans-unit>
+            <trans-unit id="constCategory.customerStyle">
+                <source>pizpalue: customer style</source>
+            </trans-unit>
+            <trans-unit id="constCategory.customerSocial">
+                <source>pizpalue: customer social</source>
+            </trans-unit>
+            <trans-unit id="constCategory.customerVarious">
+                <source>pizpalue: customer various</source>
+            </trans-unit>
+            <trans-unit id="constCategory.customerPlugins">
+                <source>pizpalue: plugins</source>
+            </trans-unit>
+
+            <trans-unit id="constSubCategory.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.agency">
+                <source>Agency</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.customer">
+                <source>Customer</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.frame">
+                <source>Frame</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.colors">
+                <source>Colors</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.font">
+                <source>Font</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.footer">
+                <source>Footer</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.various">
+                <source>Various</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.logo">
+                <source>Logo</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.menu">
+                <source>Menu</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.cookieConsent">
+                <source>Cookie consent</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.appicon">
+                <source>Appicon</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.storage">
+                <source>Storage</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.seo">
+                <source>SEO</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.features">
+                <source>Features</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.newsRSSFeed">
+                <source>News RSS feed</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

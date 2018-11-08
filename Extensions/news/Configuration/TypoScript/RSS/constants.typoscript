@@ -1,0 +1,32 @@
+
+plugin.tx_news.rss.channel {
+    # cat=6070/2010/0010; type=string; label=Title:RSS feed title
+    title = News von TYPO3-Pizpalue
+
+    # cat=6070/2010/0010; type=string; label=Description:RSS feed description
+    description =
+
+    # cat=6070/2010/0010; type=string; label=Link:RSS feed link
+    link = http://www.pizpalue.buechler.pro/
+
+    # cat=6070/2010/0010; type=string; label=Language:RSS feed language
+    language = de-ch
+
+    # cat=6070/2010/0010; type=string; label=Copyright:RSS feed copyright
+    copyright = TYPO3 Piz Palü
+
+    # cat=6070/2010/0010; type=string; label=Category:RSS feed category
+    category =
+
+    # cat=6070/2010/0010; type=string; label=Generator:RSS feed generator
+    generator = TYPO3 EXT:news
+
+    # cat=6070/2010/0010; type=int; label=Storage uid:UID from folder containing news records
+    storagePid = 67
+
+    # cat=6070/2010/0010; type=int; label=Detail view uid:UID from page showing news details
+    detailPid = 69
+
+    # cat=6070/2010/0010; type=string; label=Limit:Maximum number of news available in the feed
+    limit = 30
+}

@@ -2,3 +2,5 @@
 *.zip
 Initialisation/data.xml
 Initialisation/data.xml.files
+Lab
+Build/node_modules
