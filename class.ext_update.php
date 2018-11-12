@@ -27,19 +27,19 @@ class ext_update
     const SEVERITY_ERROR = 2;
 
     protected $classes = [
-        SEVERITY_NOTICE => 'notice',
-        SEVERITY_INFO => 'info',
-        SEVERITY_OK => 'success',
-        SEVERITY_WARNING => 'warning',
-        SEVERITY_ERROR => 'danger'
+        self::SEVERITY_NOTICE => 'notice',
+        self::SEVERITY_INFO => 'info',
+        self::SEVERITY_OK => 'success',
+        self::SEVERITY_WARNING => 'warning',
+        self::SEVERITY_ERROR => 'danger'
     ];
 
     protected $icons = [
-        SEVERITY_NOTICE => 'lightbulb-o',
-        SEVERITY_INFO => 'info',
-        SEVERITY_OK => 'check',
-        SEVERITY_WARNING => 'exclamation',
-        SEVERITY_ERROR => 'times'
+        self::SEVERITY_NOTICE => 'lightbulb-o',
+        self::SEVERITY_INFO => 'info',
+        self::SEVERITY_OK => 'check',
+        self::SEVERITY_WARNING => 'exclamation',
+        self::SEVERITY_ERROR => 'times'
     ];
 
     /**
@@ -60,11 +60,11 @@ class ext_update
     private function getDialogIcon($severity)
     {
         return  '<div class="media-left">' .
-                    '<span class="fa-stack fa-lg callout-icon">' .
-                        '<i class="fa fa-circle fa-stack-2x"></i>' .
-                        '<i class="fa fa-' . $this->icons[$severity] . ' fa-stack-1x"></i>' .
-                    '</span>' .
-                '</div>';
+            '<span class="fa-stack fa-lg callout-icon">' .
+            '<i class="fa fa-circle fa-stack-2x"></i>' .
+            '<i class="fa fa-' . $this->icons[$severity] . ' fa-stack-1x"></i>' .
+            '</span>' .
+            '</div>';
     }
 
     /**
@@ -87,14 +87,14 @@ class ext_update
     private function getDialog($severity, $title, $message)
     {
         return  '<div class="callout callout-' . $this->classes[$severity] . '">' .
-                    '<div class="media">' .
-                        $this->getDialogIcon($severity) .
-                        '<div class="media-body">' .
-                            $this->getDialogTitle($title) .
-                            '<div class="callout-body">' . $message . '</div>' .
-                        '</div>' .
-                    '</div>' .
-                '</div>';
+            '<div class="media">' .
+            $this->getDialogIcon($severity) .
+            '<div class="media-body">' .
+            $this->getDialogTitle($title) .
+            '<div class="callout-body">' . $message . '</div>' .
+            '</div>' .
+            '</div>' .
+            '</div>';
     }
 
     public function main()
@@ -110,10 +110,11 @@ class ext_update
             $extTablesSqlContent .= GeneralUtility::getUrl($extTablesSqlFile);
         }
         if ($extTablesSqlContent !== '') {
+            // TODO: substitute depreciated function
             $this->installTool->updateDbWithExtTablesSql($extTablesSqlContent);
-            return $this->getDialog(SEVERITY_OK, 'Database updated', 'The database has been updated with the current table definition.');
+            return $this->getDialog(self::SEVERITY_OK, 'Database updated', 'The database has been updated with the current table definition.');
         } else {
-            return $this->getDialog(SEVERITY_ERROR, 'Database update', 'The database update failed due to a missing table definition file');
+            return $this->getDialog(self::SEVERITY_ERROR, 'Database update', 'The database update failed due to a missing table definition file');
         }
     }
 
