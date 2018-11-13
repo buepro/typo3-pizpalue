@@ -20,13 +20,15 @@ figure {
 .frame-pp1, .frame-pp2, .frame-pp3 {
     border: $border-width solid;
     border-radius: $border-radius;
-    padding: $alert-padding-y 0;
-}
-.container {
-    .frame-pp1, .frame-pp2, .frame-pp3 {
-        padding: $alert-padding-y $alert-padding-y;
+    //padding: $alert-padding-y 0;
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+        @include media-breakpoint-up($breakpoint) {
+            $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+            padding: ($alert-padding-y * $scaling) ($alert-padding-x * $scaling);
+        }
     }
 }
+
 .frame-pp1 {
     @include ppFrameBackground($primary);
 }
