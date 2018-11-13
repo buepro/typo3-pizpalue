@@ -1,24 +1,6 @@
 # @see bootstrap_grids tsconfig.ts
 tx_gridelements {
     setup {
-        ppContainerFixed {
-            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedTitle
-            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedDescription
-            iconIdentifier = tx-pizpalue-ppContainerFixed
-            frame = 0
-            topLevelLayout = 0
-            config {
-                colCount = 1
-                rowCount = 1
-                rows.1 {
-                    columns.1 {
-                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedTitle
-                        colPos = 101
-                    }
-                }
-            }
-            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpContainerFixed.xml
-        }
         ppContainer {
             title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerTitle
             description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerDescription
@@ -126,6 +108,24 @@ tx_gridelements {
                 }
             }
             flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpAccordion.xml
+        }
+        ppContainerFixed {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedDescription
+            iconIdentifier = tx-pizpalue-ppContainerFixed
+            frame = 0
+            topLevelLayout = 0
+            config {
+                colCount = 1
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedTitle
+                        colPos = 101
+                    }
+                }
+            }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpContainerFixed.xml
         }
     }
 }

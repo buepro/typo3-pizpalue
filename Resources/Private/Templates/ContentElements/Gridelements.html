@@ -1,0 +1,7 @@
+<f:layout name="Default"/>
+<f:section name="Header">
+    <f:render partial="Header/All" arguments="{_all}" />
+</f:section>
+<f:section name="Main">
+    {content -> f:format.raw()}
+</f:section>
