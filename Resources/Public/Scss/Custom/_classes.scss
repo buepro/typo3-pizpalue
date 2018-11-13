@@ -4,22 +4,18 @@
 
 /* margin */
 .pp-notopmargin {
-    margin-top: 0;
+  margin-top: 0;
 }
-
 .pp-novertmargin {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
 .pp-topspace {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
 }
-
 .pp-rightspace {
-    margin-right: 0.5em;
+  margin-right: 0.5em;
 }
-
 /********************************/
 /* Public classes               */
 /********************************/
@@ -29,74 +25,71 @@
 //
 .pp-cf:before,
 .pp-cf:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 .pp-cf:after, .clear {
-    clear: both;
+  clear: both;
 }
-
 //
 // Background, spacing
 //
 .pp-ce-background {
-    background-origin: border-box;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
+  background-origin: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 .pp-ce-bgfixed {
-    background-attachment: fixed;
-    @media (hover: none) {
-        & {
-            background-attachment: initial;
-        }
+  background-attachment: fixed;
+  @media (hover: none) {
+    & {
+      background-attachment: initial;
     }
+  }
 }
 .pp-ce-margin {
-    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-        @include media-breakpoint-up($breakpoint) {
-            $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-            margin: ($frame-inner-spacing * $scaling);
-        }
+  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+    @include media-breakpoint-up($breakpoint) {
+      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+      margin: ($frame-inner-spacing * $scaling);
     }
+  }
 }
 .pp-ce-padding {
-    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-        @include media-breakpoint-up($breakpoint) {
-            $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-            padding: ($frame-inner-spacing * $scaling);
-        }
+  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+    @include media-breakpoint-up($breakpoint) {
+      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+      padding: ($frame-inner-spacing * $scaling);
     }
+  }
 }
 .pp-ce-bgwhite70 {
-    background-color: rgba(white,0.7);
+  background-color: rgba(white, 0.7);
 }
 .pp-ce-bggrey70 {
-    background-color: rgba(gray,0.7);
+  background-color: rgba(gray, 0.7);
 }
 .pp-ce-bgblack70 {
-    background-color: rgba(black,0.7);
+  background-color: rgba(black, 0.7);
 }
-
 //
 // Adjustments
 //
 .pp-gallery-item-left {
-    .gallery-item {
-        text-align: left;
-    }
+  .gallery-item {
+    text-align: left;
+  }
 }
 .pp-gallery-item-right {
-    .gallery-item {
-        text-align: left;
-    }
+  .gallery-item {
+    text-align: left;
+  }
 }
-
 //
 // Various
 //
 .pp-label-dataprotection {
-    display: none;
+  display: none;
 }

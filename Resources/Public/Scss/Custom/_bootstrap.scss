@@ -1,40 +1,37 @@
 .pp-accordion-primary {
-    @include ppAccordionLightColor($primary);
+  @include pp-style-accordion-light($primary);
 }
 .pp-accordion-secondary {
-    @include ppAccordionLightColor($secondary);
+  @include pp-style-accordion-light($secondary);
 }
 .pp-accordion-complementary {
-    @include ppAccordionLightColor($complementary);
+  @include pp-style-accordion-light($complementary);
 }
-
 .tab-content {
-    padding: (1.5 * $nav-link-padding-x) 0;
-    padding-bottom: 0.5rem;
+  padding: (1.5 * $nav-link-padding-x) 0;
+  padding-bottom: 0.5rem;
 }
 .pp-tabs-primary {
-    @include ppTabLightColor($primary);
+  @include pp-style-tab-light($primary);
 }
-.pp-tabs-secondary{
-    @include ppTabLightColor($secondary);
+.pp-tabs-secondary {
+  @include pp-style-tab-light($secondary);
 }
 .pp-tabs-complementary {
-    @include ppTabLightColor($complementary);
+  @include pp-style-tab-light($complementary);
 }
 .tab-v1 {
-    @include ppTabColor($pp-tab-v1-background);
+  @include pp-style-tab($pp-tab-v1-background);
 }
-
 .btn-pp-1 {
-    background: $primary;
-    border-color: darken($primary, 10%);
-    color: contrast($primary);
-    &:hover {
-        color: white;
-    }
+  background: $primary;
+  border-color: darken($primary, 10%);
+  color: contrast($primary);
+  &:hover {
+    color: white;
+  }
 }
-
 // fix bug with rendering from multiple media columns in safari
 .gallery-row:before, .gallery-row:after, .gallery-item:before, .gallery-item:after {
-    content: normal;
+  content: normal;
 }

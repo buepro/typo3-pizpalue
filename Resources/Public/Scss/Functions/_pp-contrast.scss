@@ -1,0 +1,10 @@
+//
+// see as well bootstrap function color-yiq
+//
+@function pp-contrast($color) {
+  @if (lightness($color) > 50) {
+    @return #000; // Lighter backgorund, return dark color
+  } @else {
+    @return #fff; // Darker background, return light color
+  }
+}

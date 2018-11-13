@@ -2,15 +2,15 @@
 // Footer Sections
 //
 @each $name, $settings in $footer-sections {
-    $footer-link-hover-color: map-get($settings, 'link-hover-color');
-    $footer-link-hover-decoration: map-get($settings, 'link-hover-decoration');
-    .footer-section-#{$name} {
-        a {
-            &:hover,
-            &:focus {
-                color: $footer-link-hover-color;
-                text-decoration: $footer-link-hover-decoration;
-            }
-        }
+  $footer-link-hover-color: map-get($settings, 'link-hover-color');
+  $footer-link-hover-decoration: map-get($settings, 'link-hover-decoration');
+  .footer-section-#{$name} {
+    a {
+      &:hover,
+      &:focus {
+        color: $footer-link-hover-color;
+        text-decoration: $footer-link-hover-decoration;
+      }
     }
+  }
 }

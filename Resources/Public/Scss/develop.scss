@@ -3,7 +3,6 @@
   50% {background: orange;}
   100% {background: transparent;}
 }
-
 #setupsetting {
   z-index: 10000;
   position: fixed;
@@ -15,7 +14,6 @@
   animation: blink 3s ease-in-out 0s infinite;
   opacity: 0.5;
 }
-
 $pp-colorplate-radius: 100px;
 #colorset {
   display: inline-block;

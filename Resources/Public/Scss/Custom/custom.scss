@@ -5,25 +5,21 @@
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/utilities";
-
-
 //
 // provide additional functions/mixins
 //
 @import "../Functions/functions";
 @import "../Mixins/mixins";
-
 //
 // variables
 //
 @import "../Theme/variables";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/variables";
-
 //
 // Customizations
 //
 @import "framework";
-@import "contentelement";
+@import "content-element";
 @import "bootstrap";
 @import "form";
 @import "classes";

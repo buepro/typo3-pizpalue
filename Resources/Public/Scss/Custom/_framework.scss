@@ -1,24 +1,22 @@
 html {
-    font-size: 100%;
-    // rem ~ px -> has impact on list indents
+  font-size: 100%;
+  // rem ~ px -> has impact on list indents
 }
 #page-content {
-    padding: 1px 0;
-    // for safari
+  padding: 1px 0;
+  // for safari
 }
-
 //
 // no side padding for content elements in columns
 //
 .row > div > .frame > .frame-container {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
-
 //
 // Full width container
 //
 .pp-container .frame-container {
-    max-width : none;
+  max-width: none;
 }
 

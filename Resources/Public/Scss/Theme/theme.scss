@@ -3,18 +3,15 @@
 //
 @import "../Functions/functions";
 @import "../Mixins/mixins";
-
 //
 // variables
 //
 @import "variables";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/variables";
-
 //
 // Import needed Bootstrap Files
 //
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/bootstrap";
-
 //
 // Components
 //
@@ -52,14 +49,12 @@
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/cookieconsent";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/well";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/misc";
-
 //
 // complement, add components
 //
 @import "footer";
 @import "navbar";
 @import "plugin";
-
 //
 // Plugins
 //

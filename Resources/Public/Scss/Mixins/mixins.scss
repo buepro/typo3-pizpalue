@@ -1,82 +1,78 @@
-@mixin ppFrameBackground($color) {
-    border-color: ppTint($color, 80%);
-    background: ppTint($color, 80%);
-    background: linear-gradient(20deg, ppTint($color, 70%), ppTint($color, 90%));
+@mixin pp-make-frame-bg($color) {
+  border-color: pp-tint($color, 80%);
+  background: pp-tint($color, 80%);
+  background: linear-gradient(20deg, pp-tint($color, 70%), pp-tint($color, 90%));
 }
-
-@mixin ppAccordionColor($color) {
-    .card {
-        background-color: ppTint($color, 90%);
-        border: ppTint($color, 40%);
-    }
-    .card-header {
-        background-color: ppTint($color, 20%);
-        color: ppContrast(ppTint($color, 20%));
-        border-bottom: ppTint($color, 40%);
-    }
+@mixin pp-style-accordion($color) {
+  .card {
+    background-color: pp-tint($color, 90%);
+    border: pp-tint($color, 40%);
+  }
+  .card-header {
+    background-color: pp-tint($color, 20%);
+    color: pp-contrast(pp-tint($color, 20%));
+    border-bottom: pp-tint($color, 40%);
+  }
 }
-
-@mixin ppAccordionLightColor($color) {
-    .accordion-title-link {
-        border-left: $color 4px solid;
-        &.collapsed {
-            border-left-color: transparent;
-        }
+@mixin pp-style-accordion-light($color) {
+  .accordion-title-link {
+    border-left: $color 4px solid;
+    &.collapsed {
+      border-left-color: transparent;
     }
-    .accordion-title-link-state {
-        color: $color;
-        font-weight: bold;
+  }
+  .accordion-title-link-state {
+    color: $color;
+    font-weight: bold;
+  }
+  .accordion-collapse {
+    border-left: pp-tint($color, 30%) 4px dotted;
+    &.show {
+      border-left-style: solid;
     }
-    .accordion-collapse {
-        border-left: ppTint($color,30%) 4px dotted;
-        &.show {
-            border-left-style: solid;
-        }
-    }
+  }
 }
-
-@mixin ppTabColor($color) {
-    $ppTabActiveTabBg: ppTint($color,60%);
-    $ppTabInactiveTabBg: ppTint($color,20%);
-    $ppTabContentBg: ppTint($color,90%);
-    $ppTabBorderColor: ppTint($color,70%);
-    .nav-tabs {
-        border-bottom-color: $ppTabBorderColor;
-        a.nav-link {
-            background: $ppTabInactiveTabBg;
-            color: ppContrast($ppTabInactiveTabBg);
-        }
-        .nav-link {
-            &.active, &:hover {
-                border-color: $ppTabBorderColor $ppTabBorderColor ppTint($color,60%);
-                background: $ppTabActiveTabBg;
-                color: ppContrast($ppTabActiveTabBg);
-            }
-        }
+@mixin pp-style-tab($color) {
+  $ppTabActiveTabBg: pp-tint($color, 60%);
+  $ppTabInactiveTabBg: pp-tint($color, 20%);
+  $ppTabContentBg: pp-tint($color, 90%);
+  $ppTabBorderColor: pp-tint($color, 70%);
+  .nav-tabs {
+    border-bottom-color: $ppTabBorderColor;
+    a.nav-link {
+      background: $ppTabInactiveTabBg;
+      color: pp-contrast($ppTabInactiveTabBg);
     }
-    .tab-content {
-        border: $ppTabBorderColor $nav-tabs-border-width solid;
-        border-top: 0;
-        background: $ppTabContentBg;
-        padding-left: $nav-link-padding-x;
-        padding-right: $nav-link-padding-x;
-    }
-}
-
-@mixin ppTabLightColor($color) {
     .nav-link {
-        padding-top: 1.4 * $nav-link-padding-y;
-        color: $color;
-        &:hover {
-            color: ppShade($color,30%);
-        }
-        &.active {
-            background-image: repeating-linear-gradient($color, $color (0.4 * $nav-link-padding-y),
-                    transparent (0.4 * $nav-link-padding-y),transparent);
-            &:hover {
-                color: $nav-tabs-link-active-color;
-            }
-        }
+      &.active, &:hover {
+        border-color: $ppTabBorderColor $ppTabBorderColor pp-tint($color, 60%);
+        background: $ppTabActiveTabBg;
+        color: pp-contrast($ppTabActiveTabBg);
+      }
     }
+  }
+  .tab-content {
+    border: $ppTabBorderColor $nav-tabs-border-width solid;
+    border-top: 0;
+    background: $ppTabContentBg;
+    padding-left: $nav-link-padding-x;
+    padding-right: $nav-link-padding-x;
+  }
+}
+@mixin pp-style-tab-light($color) {
+  .nav-link {
+    padding-top: 1.4 * $nav-link-padding-y;
+    color: $color;
+    &:hover {
+      color: pp-shade($color, 30%);
+    }
+    &.active {
+      background-image: repeating-linear-gradient($color, $color (0.4 * $nav-link-padding-y),
+        transparent (0.4 * $nav-link-padding-y), transparent);
+      &:hover {
+        color: $nav-tabs-link-active-color;
+      }
+    }
+  }
 }
 
