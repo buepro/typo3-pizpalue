@@ -33,7 +33,7 @@
             </trans-unit>
 
 			<trans-unit id="grids.label.containerFixedTitle">
-				<source>Content container</source>
+				<source>Content container (obsolete)</source>
 			</trans-unit>
 			<trans-unit id="grids.label.containerFixedDescription">
 				<source>Provides a container covering the content width.</source>

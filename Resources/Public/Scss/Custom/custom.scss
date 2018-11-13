@@ -11,7 +11,7 @@
 // provide additional functions/mixins
 //
 @import "../Functions/functions";
-@import "../Mixins/mixins.scss";
+@import "../Mixins/mixins";
 
 //
 // variables
@@ -26,4 +26,5 @@
 @import "contentelement";
 @import "bootstrap";
 @import "form";
+@import "classes";
 @import "various";

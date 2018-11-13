@@ -4,6 +4,7 @@
 
 plugin.tx_bootstrap_package._LOCAL_LANG {
    default {
+      readmore = Read more
       cookieconsent.common {
          header = This website uses cookies.
          message = This website uses cookies to ensure you get the best experience on our website.
@@ -20,6 +21,7 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
       }
    }
    de {
+      readmore = Weiter lesen
       cookieconsent.common {
          header = Diese Webseite setzt Cookies ein.
          message = Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies eingesetzt.
@@ -36,6 +38,7 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
       }
    }
    fr {
+      readmore = Continuer à lire
       cookieconsent.common {
          header = Ce site web utilise des cookies.
          message = Les cookies sont utilisés pour vous permettre une utilisation optimale de notre site web.
