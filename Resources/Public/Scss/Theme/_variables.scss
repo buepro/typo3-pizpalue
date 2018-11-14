@@ -15,17 +15,19 @@ $navbar-heights: (
 //
 // Footer
 //
-$footer-bg: #666666 !default;
+// mix($primary,color-yiq($footer-color)) doesn't work
+// mix($primary,pp-contrast($footer-color)) works
+//
 $footer-color: pp-contrast($footer-bg) !default;
 $footer-link-color: mix($primary, $footer-color) !default;
 $footer-link-hover-color: lighten($footer-link-color, 10%) !default;
 $footer-link-hover-decoration: none !default;
 
-$temp-footer-meta-bg: darken($footer-bg, 3%);
-$temp-footer-meta-color: pp-contrast($temp-footer-meta-bg);
-$temp-footer-meta-link-color: mix($primary, $temp-footer-meta-color);
-$temp-footer-meta-link-hover-color: lighten($temp-footer-meta-link-color, 10%) !default;
-$temp-footer-meta-link-hover-decoration: $footer-link-hover-decoration !default;
+$footer-meta-bg: darken($footer-bg, 3%) !default;
+$footer-meta-color: pp-contrast($footer-meta-bg) !default;
+$footer-meta-link-color: mix($primary, $footer-meta-color) !default;
+$footer-meta-link-hover-color: lighten($footer-meta-link-color, 10%) !default;
+$footer-meta-link-hover-decoration: $footer-link-hover-decoration !default;
 
 $footer-sections: () !default;
 $footer-sections: map-merge((
@@ -37,10 +39,10 @@ $footer-sections: map-merge((
     link-hover-decoration: $footer-link-hover-decoration
   ),
   meta: (
-    background: $temp-footer-meta-bg,
-    color: $temp-footer-meta-color,
-    link-color: $temp-footer-meta-link-color,
-    link-hover-color: $temp-footer-meta-link-hover-color,
-    link-hover-decoration: $temp-footer-meta-link-hover-decoration
+    background: $footer-meta-bg,
+    color: $footer-meta-color,
+    link-color: $footer-meta-link-color,
+    link-hover-color: $footer-meta-link-hover-color,
+    link-hover-decoration: $footer-meta-link-hover-decoration
   )
 ), $footer-sections);

@@ -32,6 +32,10 @@ plugin.bootstrap_package.settings.scss {
    # cat=6030/1032/1080; type=string; label=Footer background color
    footer-bg = #333
 
+   footer-meta-bg >
+   # cat=6030/1032/1090; type=string; label=Footer meta section background color
+   footer-meta-bg = darken($footer-bg, 3%)
+
 }
 
 
@@ -71,11 +75,11 @@ plugin.bootstrap_package.settings.scss {
 
    footer-color >
    # cat=6040/1035/1082; type=string; label=Footer text color
-   footer-color = contrast($footer-bg)
+   footer-color = pp-contrast($footer-bg)
 
    footer-link-color >
    # cat=6040/1035/1084; type=string; label=Footer link color
-   footer-link-color = mix($primary,$footer-color)
+   footer-link-color = mix($primary,$footer-color,30%)
 
    footer-link-hover-color >
    # cat=6040/1035/1086; type=string; label=Footer link hover color
@@ -84,6 +88,22 @@ plugin.bootstrap_package.settings.scss {
    footer-link-hover-decoration >
    # cat=6040/1035/1088; type=string; label=Footer link hover decoration
    footer-link-hover-decoration = none
+
+   footer-meta-color >
+   # cat=6040/1035/1092; type=string; label=Footer meta section text color
+   footer-meta-color = pp-contrast($footer-meta-bg)
+
+   footer-meta-link-color >
+   # cat=6040/1035/1094; type=string; label=Footer meta section link color
+   footer-meta-link-color = mix($primary,$footer-meta-color,30%)
+
+   footer-meta-link-hover-color >
+   # cat=6040/1035/1096; type=string; label=Footer meta section link hover color
+   footer-meta-link-hover-color = lighten($footer-meta-link-color, 10%)
+
+   footer-meta-link-hover-decoration >
+   # cat=6040/1035/1098; type=string; label=Footer meta section link hover decoration
+   footer-meta-link-hover-decoration = none
 
    pp-tab-v1-background >
    # cat=6040/2910/1110; type=string; label=Register tabs bar background color

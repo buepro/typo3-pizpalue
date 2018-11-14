@@ -1,10 +1,21 @@
-//
-// see as well bootstrap function color-yiq
-//
+/**
+ * Returns the color with best contrast
+ *
+ * This function is a copy from color-yiq using it with a built in function doesn't work:
+ * > mix($primary,color-yiq($footer-color)) doesn't work
+ * > mix($primary,pp-contrast($footer-color)) works
+ *
+ */
 @function pp-contrast($color) {
-  @if (lightness($color) > 50) {
-    @return #000; // Lighter backgorund, return dark color
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= $yiq-contrasted-threshold) {
+    @return $yiq-text-dark;
   } @else {
-    @return #fff; // Darker background, return light color
+    @return $yiq-text-light;
   }
 }
