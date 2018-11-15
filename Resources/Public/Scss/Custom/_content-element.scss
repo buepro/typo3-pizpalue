@@ -13,27 +13,4 @@ figure {
     text-align: left;
   }
 }
-//
-// Frames
-//
-.frame-pp1, .frame-pp2, .frame-pp3 {
-  border: $border-width solid;
-  border-radius: $border-radius;
-  //padding: $alert-padding-y 0;
-  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-    @include media-breakpoint-up($breakpoint) {
-      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-      padding: ($alert-padding-y * $scaling) ($alert-padding-x * $scaling);
-    }
-  }
-}
-.frame-pp1 {
-  @include pp-make-frame-bg($primary);
-}
-.frame-pp2 {
-  @include pp-make-frame-bg($secondary);
-}
-.frame-pp3 {
-  @include pp-make-frame-bg($complementary);
-}
 

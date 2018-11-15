@@ -46,6 +46,8 @@ tx_gridelements {
             title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.threeColumnTitle
             description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.threeColumnDescription
             iconIdentifier = tx-pizpalue-ppColumns3
+            frame = 0
+            topLevelLayout = 0
             config {
                 colCount = 3
                 rows.1 {
@@ -62,6 +64,8 @@ tx_gridelements {
             title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.fourColumnTitle
             description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.fourColumnDescription
             iconIdentifier = tx-pizpalue-ppColumns4
+            frame = 0
+            topLevelLayout = 0
             config {
                 colCount = 4
                 rows.1 {

@@ -6,17 +6,5 @@ html {
   padding: 1px 0;
   // for safari
 }
-//
-// no side padding for content elements in columns
-//
-.row > div > .frame > .frame-container {
-  padding-left: 0;
-  padding-right: 0;
-}
-//
-// Full width container
-//
-.pp-container .frame-container {
-  max-width: none;
-}
+
 
