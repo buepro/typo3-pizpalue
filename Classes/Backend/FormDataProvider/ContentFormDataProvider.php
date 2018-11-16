@@ -24,11 +24,11 @@ class ContentFormDataProvider implements FormDataProviderInterface
     {
         $isNewGridelement = $result['command'] == 'new' && $result['tableName'] == 'tt_content'
             && $result['recordTypeValue'] == 'gridelements_pi1';
-        $isUndefinedGridelement = $result['tableName'] == 'tt_content'
+        $isContainerGridelement = $result['tableName'] == 'tt_content'
             && $result['recordTypeValue'] == 'gridelements_pi1'
-            && !$result['databaseRow']['tx_gridelements_backend_layout'];
+            && $result['databaseRow']['tx_gridelements_backend_layout'] == 'ppContainer';
 
-        if ($isNewGridelement || $isUndefinedGridelement) {
+        if ($isNewGridelement && $isContainerGridelement) {
             $result['databaseRow']['frame_class'] = 'none';
         }
         return $result;

@@ -46,21 +46,21 @@ lib.pizpalue.gridelements {
    ppColumns2 {
       wrap = <div class="row">|</div>
       columns.101 < .columns.default
-      columns.101.dataWrap = <div class="{field:flexform_defaultColumn1} {field:flexform_customColumn1}">|</div>
+      columns.101.dataWrap = <div class="pp-col {field:flexform_defaultColumn1} {field:flexform_customColumn1}">|</div>
       columns.102 < .columns.default
-      columns.102.dataWrap = <div class="{field:flexform_defaultColumn2} {field:flexform_customColumn2}">|</div>
+      columns.102.dataWrap = <div class="pp-col {field:flexform_defaultColumn2} {field:flexform_customColumn2}">|</div>
    }
 
    ppColumns3 < .ppColumns2
    ppColumns3 {
       columns.103 < .columns.default
-      columns.103.dataWrap = <div class="{field:flexform_defaultColumn3} {field:flexform_customColumn3}">|</div>
+      columns.103.dataWrap = <div class="pp-col {field:flexform_defaultColumn3} {field:flexform_customColumn3}">|</div>
    }
 
    ppColumns4 < .ppColumns3
    ppColumns4 {
       columns.104 < .columns.default
-      columns.104.dataWrap = <div class="{field:flexform_defaultColumn4} {field:flexform_customColumn4}">|</div>
+      columns.104.dataWrap = <div class="pp-col {field:flexform_defaultColumn4} {field:flexform_customColumn4}">|</div>
    }
 
    ppTabs < lib.gridelements.defaultGridSetup
