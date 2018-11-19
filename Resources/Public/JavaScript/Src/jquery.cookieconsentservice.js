@@ -31,13 +31,13 @@
             }
         },
 
-        serviceNeeded: function () {
-            var result = this.$dialog !== null && this.$dialog.length;
-            result = result && !this.$dialog.hasClass('cc-invisible');
-            result = result && !this.$dialog.hasClass('cc-static');
-            return result && !this.$dialog.hasClass('cc-floating');
+        embeddingRequired: function () {
+            var dialogFillsWidth = this.$dialog.outerWidth(true) >= this.$frame.outerWidth(true);
+            return this.$dialog !== null && this.$dialog.length
+                && !this.$dialog.hasClass('cc-invisible')
+                && !this.$dialog.hasClass('cc-static')
+                && dialogFillsWidth;
         },
-
 
         /**
          * Update the frame for that the fixed positioned cookie consent dialog fits in.
@@ -51,7 +51,10 @@
          */
         updateFrame: function () {
             // the height to fit the dialog
-            var newPadding = this.$dialog.hasClass('cc-invisible') ? 0 : this.$dialog.outerHeight(true);
+            var newPadding = this.$dialog.outerHeight(true);
+            if (!this.embeddingRequired() || this.$dialog.hasClass('cc-invisible')) {
+                newPadding = 0;
+            }
             // the height from a fix positioned border element
             if(this.$border.css('position') === 'fixed') {
                 newPadding += this.$border.outerHeight();
@@ -76,14 +79,16 @@
          * @return void
          */
         updateBorder: function () {
-            var newMargin = this.$dialog.hasClass('cc-invisible') ? 0 : this.$dialog.outerHeight(true);
-            // remove height if the element is not fix positioned
+            var newMargin = this.$dialog.outerHeight(true);
+            if (!this.embeddingRequired() || this.$dialog.hasClass('cc-invisible')) {
+                newMargin = 0;
+            }
+            // remove margin if the element is not fix positioned
             if(this.$border.css('position') !== 'fixed') {
                 newMargin = 0;
             }
             var previousMargin = parseFloat(this.$border.css('margin-' + this.dialogPosition));
             // apply an effect in case the margin is removed
-            if (newMargin === 0) this.$border.css('transition', 'margin-' + this.dialogPosition + ' 0.5s 0.5s');
             this.$border.css('margin-' + this.dialogPosition,newMargin);
             // notify about the change
             if (newMargin !== previousMargin) {
@@ -105,13 +110,16 @@
 
         /**
          * Call the update method with delay to ensure the dialog is in stationary state.
+         * Upon calling this method the dialog might not have its final size due to the rendering not being completed
+         * (e.g. due to animations or screen rotation).
          *
          * @see CookiePopup.prototype.fadeIn from cookieconsent.js
          */
-        updateDelayed: function () {
+        updateDelayed: function (delay) {
+            delay = typeof delay !== 'undefined' ? delay : 40;
             window.setTimeout(function ($this) {
                 $this.update();
-            },40,this);
+            },delay,this);
         },
 
         registerEventHandlers: function () {
@@ -123,8 +131,9 @@
                 cookieConsentService.update();
             });
 
-            $(window).resize(function () {
-                cookieConsentService.update();
+            var mediaOrientation = window.matchMedia('(orientation: portrait)');
+            mediaOrientation.addListener(function () {
+                cookieConsentService.updateDelayed(200);
             });
         },
 
@@ -141,9 +150,9 @@
          */
         window.setTimeout(function () {
             cookieConsentService.init();
-            if (!cookieConsentService.serviceNeeded()) return;
-            cookieConsentService.update();
             cookieConsentService.registerEventHandlers();
+            if (!cookieConsentService.embeddingRequired()) return;
+            cookieConsentService.update();
         },40);
     });
 

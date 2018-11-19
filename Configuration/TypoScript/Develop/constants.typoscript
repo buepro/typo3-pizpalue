@@ -1,0 +1,17 @@
+pizpalue {
+   agency.isDebugMode = 1
+   frame.revealFooter = 1
+}
+
+page.theme {
+   cookieconsent{
+      enable = 1
+      position = top
+      static = 0
+      layout = basic
+   }
+   navigation {
+      style = default
+      type = top
+   }
+}

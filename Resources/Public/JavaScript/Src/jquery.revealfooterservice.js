@@ -33,10 +33,11 @@
          * @return {boolean}
          */
         ccDialogFixed: function () {
+            var dialogFillsWidth = this.$ccDialog.outerWidth(true) >= this.$frame.outerWidth(true);
             return this.$ccDialog.length > 0
                 && !this.$ccDialog.hasClass('cc-invisible')
                 && !this.$ccDialog.hasClass('cc-static')
-                && !this.$ccDialog.hasClass('cc-floating')
+                && dialogFillsWidth;
         },
 
         init: function () {

@@ -12,12 +12,9 @@ img.pp-nolazyload {
   transition: all 0s ease 0s !important;
 }
 .pp-reveal-footer {
-  > header, > div, > nav {
+  > header, > div:not(#cookieconsent), > nav {
     z-index: 10;
     position: relative;
-  }
-  > div#cookieconsent {
-    z-index: auto;
   }
   > div {
     background-color: $body-bg;
