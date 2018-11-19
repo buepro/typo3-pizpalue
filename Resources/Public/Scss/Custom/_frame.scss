@@ -14,27 +14,6 @@
   max-width: none;
 }
 //
-// Columns
-//
-// No side padding for content elements in columns
-.pp-col > .frame > .frame-container {
-  padding-left: 0;
-  padding-right: 0;
-}
-// No top space for first element in column
-.pp-col > .frame:first-child {
-  padding-top:0 ;
-}
-// Compensate bottom space
-.frame-type-gridelements_pi1 .row {
-  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-    @include media-breakpoint-up($breakpoint) {
-      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-      margin-bottom: -($frame-inner-spacing * $scaling);
-    }
-  }
-}
-//
 // Custom frames
 //
 .frame-pp1 > div > .frame-inner,

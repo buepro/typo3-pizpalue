@@ -14,3 +14,13 @@ figure {
   }
 }
 
+//
+// Text and image
+//
+.textmedia-below .textmedia-text,
+.textpic-below .textmedia-text,
+.textmedia-below .textpic-text,
+.textpic-below .textpic-text {
+  margin-bottom: 1.5rem;
+}
+

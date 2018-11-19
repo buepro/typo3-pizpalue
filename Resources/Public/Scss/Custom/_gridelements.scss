@@ -1,0 +1,52 @@
+//
+// Columns
+//
+.frame-type-gridelements_pi1 {
+  // No side padding for content elements in columns
+  .pp-col > .frame > .frame-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  // No top space for first element in column
+  .pp-col > .frame:first-child {
+    padding-top: 0 ;
+  }
+  // Compensate bottom space
+  .row {
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        margin-bottom: -($frame-inner-spacing * $scaling);
+      }
+    }
+  }
+}
+
+
+//
+// Tabs
+//
+.frame-type-gridelements_pi1 {
+  // No top space for first element in tab pane
+  .tab-pane > .frame:first-child {
+    padding-top: 0 ;
+  }
+  // No bottom space for last element in tab pane
+  .tab-pane > .frame:last-child {
+    padding-bottom: 0 ;
+  }
+}
+
+//
+// Accordion
+//
+.frame-type-gridelements_pi1 {
+  // No top space for first element in accordion body
+  .accordion-body > .frame:first-child {
+    padding-top: 0 ;
+  }
+  // No bottom space for last element in accordion body
+  .accordion-body > .frame:first-child {
+    padding-bottom: 0 ;
+  }
+}
