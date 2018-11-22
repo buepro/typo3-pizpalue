@@ -20,6 +20,42 @@
                 <source>Additional attributes</source>
                 <target state="translated">Zusätzliche Attribute</target>
             </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.background">
+                <source>Background</source>
+                <target state="translated">Hintergrund</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.bgmedia">
+                <source>Background media</source>
+                <target state="translated">Hintergrundbild (inline)</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.behaviour">
+                <source>Behaviour</source>
+                <target state="translated">Verhalten</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation">
+                <source>Animation</source>
+                <target state="translated">Animation</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animationNone">
+                <source>No animation</source>
+                <target state="translated">Keine Animation</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation1">
+                <source>Animation 1</source>
+                <target state="translated">Animation 1</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation2">
+                <source>Animation 2</source>
+                <target state="translated">Animation 2</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation3">
+                <source>Animation 3</source>
+                <target state="translated">Animation 3</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation4">
+                <source>Animation 4</source>
+                <target state="translated">Animation 4</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

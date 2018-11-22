@@ -7,6 +7,14 @@ TCEFORM.tt_content.frame_class {
       pp2 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame2
       pp3 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame3
       pp4 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame4
+   }
+}
+
+#:::::::::::::::::::::::
+#: depreciated as of 9.0
+#.
+TCEFORM.tt_content.frame_class {
+   addItems {
       pp-animation1 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefAnimation1
       pp-animation2 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefAnimation2
       pp-animation3 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefAnimation3

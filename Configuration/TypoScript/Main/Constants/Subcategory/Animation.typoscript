@@ -1,0 +1,38 @@
+#---------------------------------------------------------#
+# Customer various
+#---------------------------------------------------------#
+
+pizpalue.animation {
+   1 {
+      # cat=6060/1520/0010; type=string; label=Animation 1 classes
+      classes =
+      # cat=6060/1520/0010; type=string; label=Animation 1 inline style
+      style =
+      # cat=6060/1520/0010; type=string; label=Animation 1 attributes
+      attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
+   }
+   2 {
+      # cat=6060/1520/0010; type=string; label=Animation 2 classes
+      classes =
+      # cat=6060/1520/0010; type=string; label=Animation 2 inline style
+      style =
+      # cat=6060/1520/0010; type=string; label=Animation 2 attributes
+      attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
+   }
+   3 {
+      # cat=6060/1520/0010; type=string; label=Animation 3 classes
+      classes =
+      # cat=6060/1520/0010; type=string; label=Animation 3 inline style
+      style =
+      # cat=6060/1520/0010; type=string; label=Animation 3 attributes
+      attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
+   }
+   4 {
+      # cat=6060/1520/0010; type=string; label=Animation 4 classes
+      classes =
+      # cat=6060/1520/0010; type=string; label=Animation 4 inline style
+      style =
+      # cat=6060/1520/0010; type=string; label=Animation 4 attributes
+      attributes = data-aos="flip-up" data-aos-anchor-placement="center-bottom"
+   }
+}

@@ -1,4 +1,8 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
 <f:comment>
     <!--
         @todo Add 3D parallax by adding parallax frame in frame selector dialog
@@ -24,52 +28,106 @@
     <f:variable name="spaceBeforeClass">frame-space-before-{f:if(condition: data.space_before_class, else: 'none', then: data.space_before_class)}</f:variable>
     <f:variable name="spaceAfterClass">frame-space-after-{f:if(condition: data.space_after_class, else: 'none', then: data.space_after_class)}</f:variable>
 
-    <f:comment>====================== Pizpalue variables start ======================</f:comment>
 
-    {f:variable(name: 'ppScrollAttr1', value: '{pizpalue.features.scrollAnimation.frame1Attributes -> f:format.stripTags()}')}
-    {f:variable(name: 'ppScrollAttr2', value: '{pizpalue.features.scrollAnimation.frame2Attributes -> f:format.stripTags()}')}
-    {f:variable(name: 'ppScrollAttr3', value: '{pizpalue.features.scrollAnimation.frame3Attributes -> f:format.stripTags()}')}
+    <f:comment>====================== Pizpalue init attributes ======================</f:comment>
+
+    {f:variable(name:'ppClasses', value:'')}
+    <f:if condition="{data.frame_class} != none">
+        <f:variable name="ppClasses">
+            frame {frameClass} {typeClass} {layoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}
+        </f:variable>
+    </f:if>
+    {f:variable(name:'ppStyles', value:'')}
+    {f:variable(name:'ppAttributes', value:'')}
+
+    <f:comment>====================== Pizpalue scroll animation ======================</f:comment>
 
     <f:switch expression="{data.frame_class}">
-        <f:defaultCase>{f:variable(name: 'ppScrollAttr', value: '')}</f:defaultCase>
-        <f:case value="pp-scrollanimation1">{f:variable(name: 'ppScrollAttr', value: '{ppScrollAttr1}')}</f:case>
-        <f:case value="pp-scrollanimation2">{f:variable(name: 'ppScrollAttr', value: '{ppScrollAttr2}')}</f:case>
-        <f:case value="pp-scrollanimation3">{f:variable(name: 'ppScrollAttr', value: '{ppScrollAttr3}')}</f:case>
+        <f:defaultCase>{f:variable(name:'ppScrollAttr', value:'')}</f:defaultCase>
+        <f:case value="pp-scrollanimation1">
+            <f:variable name="ppScrollAttr">{pizpalue.features.scrollAnimation.frame1Attributes}</f:variable>
+        </f:case>
+        <f:case value="pp-scrollanimation2">
+            <f:variable name="ppScrollAttr">{pizpalue.features.scrollAnimation.frame2Attributes}</f:variable>
+        </f:case>
+        <f:case value="pp-scrollanimation3">
+            <f:variable name="ppScrollAttr">{pizpalue.features.scrollAnimation.frame3Attributes}</f:variable>
+        </f:case>
     </f:switch>
-
-    {f:variable(name: 'ppBgMedia', value: '')}
-    {f:variable(name: 'ppBgMedia', value: 'background-image: url({f:uri.image(image: tx_pizpalue_bgmedia.0)});') -> f:if(condition: tx_pizpalue_bgmedia)}
-    {f:variable(name: 'ppBgMediaClass', value: '')}
-    {f:variable(name: 'ppBgMediaClass', value: 'pp-ce-background') -> f:if(condition: tx_pizpalue_bgmedia)}
-
-    <f:variable name="ppFrameClasses">frame {frameClass} {typeClass} {layoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}</f:variable>
-    {f:variable(name: 'ppClasses', value: '')}
-    <f:if condition="{ppBgMediaClass} || {data.tx_pizpalue_classes}">
-        {f:variable(name: 'ppClasses', value: '{ppBgMediaClass} {data.tx_pizpalue_classes -> f:format.stripTags()}')}
-        <f:variable name="ppFrameClasses">{ppFrameClasses} {ppClasses -> f:format.htmlentities()}</f:variable>
-    </f:if>
-    {f:variable(name:'ppNoFrameClassAttr', value: '')}
-    <f:if condition="{ppClasses}">
-        <f:variable name="ppNoFrameClassAttr">class="{ppClasses}"</f:variable>
+    <f:if condition="{ppScrollAttr}">
+        <f:variable name="ppAttributes">{ppAttributes} {ppScrollAttr}</f:variable>
     </f:if>
 
-    {f:variable(name: 'ppStyle', value: '')}
-    {f:variable(name: 'ppStyle', value: '{data.tx_pizpalue_style -> f:format.stripTags()}') -> f:if(condition: '{data.tx_pizpalue_style}')}
-    {f:variable(name: 'ppStyleAttr', value: '')}
-    <f:if condition="{ppStyle} || {ppBgMedia}">
-        {f:variable(name: 'ppStyleAttr', value: 'style="{ppStyle}{ppBgMedia}"')}
+    <f:comment>====================== Pizpalue background ======================</f:comment>
+
+    <f:if condition="{tx_pizpalue_bgmedia}">
+        <f:variable name="ppStyles">{ppStyles} background-image: url({f:uri.image(image: tx_pizpalue_bgmedia.0)});</f:variable>
+        <f:variable name="ppClasses">{ppClasses} pp-ce-background</f:variable>
     </f:if>
 
-    {f:variable(name: 'ppAttr', value: '')}
-    {f:variable(name: 'ppAttr', value: ' {data.tx_pizpalue_attributes  -> f:format.stripTags()} ') -> f:if(condition:'{data.tx_pizpalue_attributes}')}
+    <f:comment>====================== Pizpalue attributes ======================</f:comment>
 
-    <f:comment>====================== Pizpalue variables end ======================</f:comment>
+    <f:if condition="{data.tx_pizpalue_classes}">
+        <f:variable name="ppClasses">
+            {ppClasses} {data.tx_pizpalue_classes}
+        </f:variable>
+    </f:if>
+
+    <f:if condition="{data.tx_pizpalue_style}">
+        <f:variable name="ppStyles">
+            {ppStyles} {data.tx_pizpalue_style}
+        </f:variable>
+    </f:if>
+
+    <f:if condition="{data.tx_pizpalue_attributes}">
+        <f:variable name="ppAttributes">
+            {ppAttributes} {data.tx_pizpalue_attributes}
+        </f:variable>
+    </f:if>
+
+    <f:comment>====================== Pizpalue animation variables ======================</f:comment>
+
+    <f:if condition="{data.tx_pizpalue_animation}">
+        <f:variable name="ppAnimation">{pizpalue.animation.{data.tx_pizpalue_animation}}</f:variable>
+
+        <f:if condition="{ppAnimation.classes}">
+            <f:variable name="ppClasses">
+                {ppClasses} {ppAnimation.classes}')}
+            </f:variable>
+        </f:if>
+
+        <f:if condition="{ppAnimation.style}">
+            <f:variable name="ppStyles">
+                {ppStyles} {ppAnimation.style}')}
+            </f:variable>
+        </f:if>
+
+        <f:if condition="{ppAnimation.attributes}">
+            <f:variable name="ppAttributes">
+                {ppAttributes} {ppAnimation.attributes}
+            </f:variable>
+        </f:if>
+    </f:if>
+
+    <f:comment>====================== Pizpalue compile attributes ======================</f:comment>
+
+    {f:variable(name:'ppAllAttributes', value:'')}
+    <f:if condition="{ppClasses} || {ppStyles} || {ppAttributes}">
+        <f:variable name="ppAllAttributes">
+            {f:if(condition:'{ppClasses}', then:' class="{ppClasses}"')}
+            {f:if(condition:'{ppStyles}', then:' style="{ppStyles}"')}
+            {f:if(condition:'{ppAttributes}', then:' {ppAttributes}"')}
+        </f:variable>
+    </f:if>
+    
+    <f:comment>====================== Pizpalue end ======================</f:comment>
+    
 
     <f:if condition="{data.frame_class} != none">
         <f:then>
 
             <f:variable name="backgroundImageClass">{f:if(condition: backgroundImage.0, then: 'frame-has-backgroundimage', else: 'frame-no-backgroundimage')}</f:variable>
-            <div id="c{data.uid}" class="{ppFrameClasses}" {ppStyleAttr -> f:format.htmlentitiesDecode()} {ppScrollAttr -> f:format.htmlentitiesDecode()} {ppAttr -> f:format.htmlentitiesDecode()}>
+            <div id="c{data.uid}" {ppAllAttributes -> pp:desarmAttribute()}>
                 <f:render partial="Frame/General/BackgroundImage" arguments="{_all}" />
                 <div class="frame-container">
                     <div class="frame-inner">
@@ -95,9 +153,9 @@
 
         </f:then>
         <f:else>
-            <f:if condition="{ppScrollAttr} || {ppClasses} || {ppAttr} || {ppStyleAttr}">
+            <f:if condition="{ppAllAttributes}">
                 <f:then>
-                    <div id="c{data.uid}" {ppNoFrameClassAttr -> f:format.htmlentitiesDecode()} {ppStyleAttr -> f:format.htmlentitiesDecode()} {ppScrollAttr -> f:format.htmlentitiesDecode()} {ppAttr -> f:format.htmlentitiesDecode()}>
+                    <div id="c{data.uid}" {ppAllAttributes -> pp:desarmAttribute()}>
                         <f:if condition="{data._LOCALIZED_UID}">
                             <a id="c{data._LOCALIZED_UID}"></a>
                         </f:if>

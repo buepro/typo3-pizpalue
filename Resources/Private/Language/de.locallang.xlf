@@ -23,28 +23,28 @@
 
             <trans-unit id="ppCefAnimation1">
                 <source>Custom animation 1</source>
-                <target state="translated">Angepasste Animation 1</target>
+                <target state="translated">Angepasste Animation 1 (veraltet)</target>
             </trans-unit>
             <trans-unit id="ppCefAnimation2">
                 <source>Custom animation 2</source>
-                <target state="translated">Angepasste Animation 2</target>
+                <target state="translated">Angepasste Animation 2 (veraltet)</target>
             </trans-unit>
             <trans-unit id="ppCefAnimation3">
                 <source>Custom animation 3</source>
-                <target state="translated">Angepasste Animation 3</target>
+                <target state="translated">Angepasste Animation 3 (veraltet)</target>
             </trans-unit>
 
             <trans-unit id="ppCefScrollAnimation1">
                 <source>Custom scroll animation 1</source>
-                <target state="translated">Angepasste Scrollanimation 1</target>
+                <target state="translated">Angepasste Scrollanimation 1 (veraltet)</target>
             </trans-unit>
             <trans-unit id="ppCefScrollAnimation2">
                 <source>Custom scroll animation 2</source>
-                <target state="translated">Angepasste Scrollanimation 2</target>
+                <target state="translated">Angepasste Scrollanimation 2 (veraltet)</target>
             </trans-unit>
             <trans-unit id="ppCefScrollAnimation3">
                 <source>Custom scroll animation 3</source>
-                <target state="translated">Angepasste Scrollanimation 3</target>
+                <target state="translated">Angepasste Scrollanimation 3 (veraltet)</target>
             </trans-unit>
 
             <trans-unit id="cookieconsent.common.header">

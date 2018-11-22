@@ -71,8 +71,10 @@
 # customsubcategory=1210=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.storage
 # customsubcategory=1410=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.seo
 # customsubcategory=1510=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.features
+# customsubcategory=1520=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.animation
 # customsubcategory=2010=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.newsRSSFeed
 # customsubcategory=2910=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.various
+# customsubcategory=2990=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.depreciated
 
 
 #---------------------------------------------------------#
@@ -102,6 +104,7 @@ plugin.bootstrap_package.settings.scss.dummyPizpalue = dummyPizpalue()
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Storage.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Seo.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Features.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Animation.typoscript">
 
 
 #---------------------------------------------------------#

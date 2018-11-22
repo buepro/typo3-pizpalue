@@ -18,23 +18,23 @@
             </trans-unit>
 
             <trans-unit id="ppCefAnimation1">
-                <source>Custom animation 1</source>
+                <source>Custom animation 1 (depreciated)</source>
             </trans-unit>
             <trans-unit id="ppCefAnimation2">
-                <source>Custom animation 2</source>
+                <source>Custom animation 2 (depreciated)</source>
             </trans-unit>
             <trans-unit id="ppCefAnimation3">
-                <source>Custom animation 3</source>
+                <source>Custom animation 3 (depreciated)</source>
             </trans-unit>
 
             <trans-unit id="ppCefScrollAnimation1">
-                <source>Custom scroll animation 1</source>
+                <source>Custom scroll animation 1 (depreciated)</source>
             </trans-unit>
             <trans-unit id="ppCefScrollAnimation2">
-                <source>Custom scroll animation 2</source>
+                <source>Custom scroll animation 2 (depreciated)</source>
             </trans-unit>
             <trans-unit id="ppCefScrollAnimation3">
-                <source>Custom scroll animation 3</source>
+                <source>Custom scroll animation 3 (depreciated)</source>
             </trans-unit>
 
             <trans-unit id="cookieconsent.common.header">

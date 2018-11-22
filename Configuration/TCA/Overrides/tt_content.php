@@ -17,8 +17,8 @@ $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_attributes'] = [
     ',
 ];
 
-$GLOBALS['TCA']['tt_content']['palettes']['pizpalue_background'] = [
-    'showitem' => 'tx_pizpalue_bgmedia',
+$GLOBALS['TCA']['tt_content']['palettes']['pizpalue_behaviour'] = [
+    'showitem' => 'tx_pizpalue_animation',
 ];
 
 $tmp_pizpalue_columns = [
@@ -74,6 +74,22 @@ $tmp_pizpalue_columns = [
             $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
         ),
     ],
+    'tx_pizpalue_animation' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'default' => 0,
+            'items' => [
+                ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animationNone', 0],
+                ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation1', 1],
+                ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation2', 2],
+                ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation3', 3],
+                ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation4', 4],
+            ],
+        ],
+    ],
 
 ];
 
@@ -82,16 +98,24 @@ $tmp_pizpalue_columns = [
     $tmp_pizpalue_columns
 );
 
+$GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] .= '
+    --linebreak--,
+    tx_pizpalue_bgmedia,
+';
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
-    '--palette--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background;pizpalue_background',
+    '--palette--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.behaviour;pizpalue_behaviour',
     '',
-    'after: linkToTop'
+    'after: tx_pizpalue_bgmedia'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
     '--palette--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.attributes;pizpalue_attributes',
     '',
-    'after: linkToTop'
+    'before: sectionIndex'
 );
+
+
+

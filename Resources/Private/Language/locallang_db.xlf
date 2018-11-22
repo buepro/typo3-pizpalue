@@ -20,7 +20,28 @@
                 <source>Background</source>
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.bgmedia">
-                <source>Background media</source>
+                <source>Background image (inline)</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.behaviour">
+                <source>Behaviour</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation">
+                <source>Animation</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animationNone">
+                <source>No animation</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation1">
+                <source>Animation 1</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation2">
+                <source>Animation 2</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation3">
+                <source>Animation 3</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation4">
+                <source>Animation 4</source>
             </trans-unit>
         </body>
     </file>

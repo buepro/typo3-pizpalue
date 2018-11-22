@@ -42,7 +42,7 @@
             </trans-unit>
 
 			<trans-unit id="grids.label.containerFixedTitle">
-				<source>Content container (obsolete)</source>
+				<source>Content container (depreciated)</source>
 				<target state="translated">Inhalts-Container (veraltet)</target>
 			</trans-unit>
 			<trans-unit id="grids.label.containerFixedDescription">

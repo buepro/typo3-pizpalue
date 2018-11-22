@@ -4,7 +4,7 @@
 
 pizpalue.features {
    scrollAnimation {
-      # cat=6030/1510/0302; type=boolean; label=Enable content element scroll animation:If selected content element scroll animation will be available. This feature forces the images to be preloaded. Just enable it on pages where scroll animation is desired.
+      # cat=6030/1510/0302; type=boolean; label=Enable content element scroll animation:If selected content element scroll animation will be available. This feature might be required by content animations
       enable = 1
    }
 
@@ -20,23 +20,20 @@ pizpalue.features {
 #---------------------------------------------------------#
 
 pizpalue.features {
-   # cat=6060/1510/0110; type=boolean; label=Use style:If selected a style sheet will be included
+   # cat=6060/1510/0110; type=boolean; label=Use style:If selected a custom style declarations will be included
    useStyle = 1
 
-   # cat=6060/1510/0210; type=boolean; label=Use CE animation:If selected a content element animation will be availabe (js,css - not implemented yet)
-   useCeAnimation = 0
-
    scrollAnimation {
-      # cat=6060/1510/0320; type=string; label=Custom scroll animation frame 1 attributes
+      # cat=6060/2990/0320; type=string; label=Custom scroll animation frame 1 attributes (depreciated as of 9.0)
       frame1Attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
 
-      # cat=6060/1510/0340; type=string; label=Custom scroll animation frame 2 attributes
+      # cat=6060/2990/0340; type=string; label=Custom scroll animation frame 2 attributes (depreciated as of 9.0)
       frame2Attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
 
-      # cat=6060/1510/0350; type=string; label=Custom scroll animation frame 3 attributes
+      # cat=6060/2990/0350; type=string; label=Custom scroll animation frame 3 attributes (depreciated as of 9.0)
       frame3Attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
 
-      # cat=6060/1510/0360; type=string; label= Scroll animation init parameters
+      # cat=6060/2990/0360; type=string; label= Scroll animation init parameters (depreciated as of 9.0)
       initParams = easing: 'ease-in-out-sine', once: true
    }
 }
