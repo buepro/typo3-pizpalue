@@ -30,3 +30,36 @@ lib.contentElement.dataProcessing < lib.pizpalue.contentElement.dataProcessing
 # allows to add curly braces to be treated of type getText in RTE editor
 # @see https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html
 lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 1
+
+
+#=========================================================#
+# Images width when no frame is used for content element
+#=========================================================#
+lib.contentElement {
+   settings {
+      responsiveimages {
+         noFrameVariants {
+            default {
+               breakpoint = 1200
+               width = 2000
+            }
+            large {
+               breakpoint = 992
+               width = 992
+            }
+            medium {
+               breakpoint = 768
+               width = 768
+            }
+            small {
+               breakpoint = 576
+               width = 576
+            }
+            extrasmall {
+               breakpoint = unset
+               width = 374
+            }
+         }
+      }
+   }
+}

@@ -14,7 +14,14 @@
 </f:comment>
 <f:spaceless>
 
-    <bk2k:data.imageVariants as="variants" variants="{settings.responsiveimages.variants}" />
+    <f:if condition="{data.frame_class}=='none'">
+        <f:then>
+            <bk2k:data.imageVariants as="variants" variants="{settings.responsiveimages.noFrameVariants}" />
+        </f:then>
+        <f:else>
+            <bk2k:data.imageVariants as="variants" variants="{settings.responsiveimages.variants}" />
+        </f:else>
+    </f:if>
     <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
     <f:variable name="columnConfig">{backendlayoutConfig.{data.colPos}}</f:variable>
     <f:if condition="{columnConfig}">
@@ -121,7 +128,6 @@
     </f:if>
     
     <f:comment>====================== Pizpalue end ======================</f:comment>
-    
 
     <f:if condition="{data.frame_class} != none">
         <f:then>
