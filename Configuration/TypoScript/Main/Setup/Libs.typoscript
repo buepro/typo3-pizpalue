@@ -45,19 +45,19 @@ lib.contentElement {
             }
             large {
                breakpoint = 992
-               width = 992
+               width = 1092
             }
             medium {
                breakpoint = 768
-               width = 768
+               width = 868
             }
             small {
                breakpoint = 576
-               width = 576
+               width = 676
             }
             extrasmall {
                breakpoint = unset
-               width = 374
+               width = 500
             }
          }
       }
