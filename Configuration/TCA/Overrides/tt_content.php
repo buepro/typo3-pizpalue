@@ -11,8 +11,8 @@ defined('TYPO3_MODE') || die();
 
 $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_attributes'] = [
     'showitem' => '
-        tx_pizpalue_classes,
-        tx_pizpalue_style,
+        tx_pizpalue_classes,--linebreak--,
+        tx_pizpalue_style,--linebreak--,
         tx_pizpalue_attributes
     ',
 ];
@@ -21,6 +21,47 @@ $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_behaviour'] = [
     'showitem' => 'tx_pizpalue_animation',
 ];
 
+// Class items for column definition
+$classesItemsList = 'pp-parent-height,pp-row-height,pp-row-child-height,pp-ce-background,pp-ce-bgfixed,pp-ce-margin,'
+    . 'pp-ce-padding,pp-ce-bgwhite70,pp-ce-bggrey70,pp-ce-bgblack70,pp-gallery-item-left,pp-gallery-item-right,'
+    . 'pp-gallery-item-join';
+$classItems = [];
+foreach(explode(',',$classesItemsList) as $class) {
+    $classItems[] = [
+        'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes.' . $class,
+        $class . ' '
+    ];
+};
+
+// Attribute items for column definition
+$aosFadeList = 'fade,fade-up,fade-down,fade-left,fade-right,fade-up-right,fade-up-left,fade-down-right,fade-down-left';
+$aosFlipList = 'flip-up,flip-down,flip-left,flip-right';
+$aosSlideList = 'slide-up,slide-down,slide-left,slide-right';
+$aosZoomList = 'zoom-in,zoom-in-up,zoom-in-down,zoom-in-left,zoom-in-right,zoom-out,zoom-out-up,zoom-out-down,'
+    . 'zoom-out-left,zoom-out-right';
+$aosAnimation = [];
+foreach(['fade' => $aosFadeList,'flip' => $aosFlipList,'slide' => $aosSlideList,'zoom' => $aosZoomList]
+        as $name => $list) {
+    $aosAnimation[$name] = [];
+    foreach(explode(',',$list) as $animation) {
+        $aosAnimation[$name][] = [$animation, 'data-aos="' . $animation . '" '];
+    }
+}
+
+$aosAnchorPlacementList = 'top-bottom,top-center,top-top,center-bottom,center-center,center-top,bottom-bottom,bottom-center,'
+    . 'bottom-top';
+$aosEasingList = 'linear,ease,ease-in,ease-out,ease-in-out,ease-in-back,ease-out-back,ease-in-out-back,'
+    . 'ease-in-sine,ease-out-sine,ease-in-out-sine,ease-in-quad,ease-out-quad,ease-in-out-quad,'
+    . 'ease-in-cubic, ease-out-cubic,ease-in-out-cubic,ease-in-quart,ease-out-quart,ease-in-out-quart';
+$aosSettings = [];
+foreach(['anchor-placement' => $aosAnchorPlacementList, 'easing' => $aosEasingList] as $name => $list) {
+    $aosSettings[$name] = [];
+    foreach(explode(',',$list) as $setting) {
+        $aosSettings[$name][] = [$setting, 'data-aos-' .$name . '="' . $setting . '" '];
+    }
+}
+
+// Column definition
 $tmp_pizpalue_columns = [
 
     'tx_pizpalue_classes' => [
@@ -28,9 +69,12 @@ $tmp_pizpalue_columns = [
         'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes',
         'config' => [
             'type' => 'input',
-            'size' => 50,
+            'size' => 100,
             'max' => 255,
-            'eval' => 'trim'
+            'valuePicker' => [
+                'mode' => 'append',
+                'items' => $classItems,
+            ],
         ],
     ],
     'tx_pizpalue_style' => [
@@ -38,7 +82,7 @@ $tmp_pizpalue_columns = [
         'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.style',
         'config' => [
             'type' => 'input',
-            'size' => 50,
+            'size' => 100,
             'max' => 255,
             'eval' => 'trim'
         ],
@@ -48,9 +92,27 @@ $tmp_pizpalue_columns = [
         'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.additionalAttributes',
         'config' => [
             'type' => 'input',
-            'size' => 50,
+            'size' => 100,
             'max' => 255,
-            'eval' => 'trim'
+            'valuePicker' => [
+                'mode' => 'append',
+                'items' => array_merge(
+                    $aosAnimation['fade'],
+                    [['---','']],$aosAnimation['flip'],
+                    [['---','']],$aosAnimation['slide'],
+                    [['---','']],$aosAnimation['zoom'],
+                    [['---','']],$aosSettings['anchor-placement'],
+                    [['---','']],$aosSettings['easing'],
+                    [
+                        ['---',''],
+                        ['offset','data-aos-offset="120" '],
+                        ['duration','data-aos-duration="400" '],
+                        ['delay','data-aos-delay="0" '],
+                        ['anchor','data-aos-anchor="null" '],
+                        ['once','data-aos-once="false" ']
+                    ]
+                )
+            ],
         ],
     ],
     'tx_pizpalue_bgmedia' => [

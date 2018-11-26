@@ -43,6 +43,46 @@
             <trans-unit id="tx_pizpalue_ttc.animation4">
                 <source>Animation 4</source>
             </trans-unit>
+
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-parent-height">
+                <source>Parent height</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-row-height">
+                <source>Row height</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-row-child-height">
+                <source>Row children height</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-background">
+                <source>Center background, cover</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgfixed">
+                <source>Fix background</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-margin">
+                <source>Content element margin</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-padding">
+                <source>Content element padding</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgwhite70">
+                <source>White background, 70% opacity</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bggrey70">
+                <source>Grey background, 70% opacity</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgblack70">
+                <source>Black background, 70% opacity</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left">
+                <source>Gallery item left</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-right">
+                <source>Gallery item right</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-join">
+                <source>Gallery item join</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
