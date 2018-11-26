@@ -126,5 +126,14 @@ function getUrlParameter(name) {
         };
     });
 
+
+    /**
+     * AOS scroll animation
+     */
+    $(function () {
+        // Set parent overflow to avoid scroll bars when element (to be animated) is hidden
+        $('[data-aos]').parent().css('overflow','hidden');
+    });
+
 }(jQuery);
 
