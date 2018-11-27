@@ -1,18 +1,31 @@
 //
 // Columns
 //
+//---
+//
+// Ensure spacing is correct when columns are serialized (two visually subsequent content elements just have one
+// padding). Assumes that all content elements in columns have a frame without spacing before.
+//
+.pp-col > .frame.frame-space-before-none:first-child {
+  @extend .frame-collapsible;
+}
+//
+// If columns are realized within a frame
+//
 .frame-type-gridelements_pi1 {
   // No side padding for content elements in columns
   .pp-col > .frame > .frame-container {
     padding-left: 0;
     padding-right: 0;
   }
-  // No top space for first element in column
-  .pp-col > .frame:first-child {
-    padding-top: 0 ;
+  // In case there is a background frame .frame-collapsible needs to be canceled
+  &:not(.frame-background-none) {
+    .pp-col > .frame.frame-space-before-none:first-child {
+      margin-top: 0;
+    }
   }
   // Compensate bottom space
-  .row {
+  > .frame-container > .frame-inner > .row {
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
       @include media-breakpoint-up($breakpoint) {
         $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
@@ -21,7 +34,6 @@
     }
   }
 }
-
 
 //
 // Tabs

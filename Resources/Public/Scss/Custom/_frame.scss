@@ -16,16 +16,17 @@
 //
 // Custom frames
 //
-.frame-pp1 > div > .frame-inner,
-.frame-pp2 > div > .frame-inner,
-.frame-pp3 > div > .frame-inner {
-  border: $border-width solid;
-  border-radius: $border-radius;
-  //padding: $alert-padding-y 0;
-  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-    @include media-breakpoint-up($breakpoint) {
-      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-      padding: ($alert-padding-y * $scaling) ($alert-padding-x * $scaling);
+.frame-pp1 > div,
+.frame-pp2 > div,
+.frame-pp3 > div {
+  > .frame-inner {
+    border: $border-width solid;
+    border-radius: $border-radius;
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        padding: ($alert-padding-y * $scaling) ($alert-padding-x * $scaling);
+      }
     }
   }
 }
@@ -37,4 +38,11 @@
 }
 .frame-pp3 > div > .frame-inner {
   @include pp-make-frame-bg($complementary);
+}
+.pp-row-height {
+  &.frame-pp1, &.frame-pp2, &.frame-pp3 {
+    > div, > div > .frame-inner {
+      height: 100%;
+    }
+  }
 }

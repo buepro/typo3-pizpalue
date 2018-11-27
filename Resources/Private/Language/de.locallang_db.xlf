@@ -67,7 +67,7 @@
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-row-child-height">
                 <source>Row children height</source>
-                <target state="translated">Gleiche Höhe Kindelemente</target>
+                <target state="translated">Gleich hohe Kindelemente</target>
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-background">
                 <source>Center background, cover</source>
