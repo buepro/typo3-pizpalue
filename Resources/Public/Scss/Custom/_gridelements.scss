@@ -1,4 +1,19 @@
 //
+// Content element with background
+//
+.frame-type-gridelements_pi1 {
+  .frame:not(.frame-background-none) {
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        padding-left: ($frame-inner-spacing * $scaling);
+        padding-right: ($frame-inner-spacing * $scaling);
+      }
+    }
+  }
+}
+
+//
 // Columns
 //
 //---
@@ -6,7 +21,7 @@
 // Ensure spacing is correct when columns are serialized (two visually subsequent content elements just have one
 // padding). Assumes that all content elements in columns have a frame without spacing before.
 //
-.pp-col > .frame.frame-space-before-none:first-child {
+.pp-col > .frame.frame-background-none.frame-space-before-none:first-child {
   @extend .frame-collapsible;
 }
 //
@@ -14,7 +29,7 @@
 //
 .frame-type-gridelements_pi1 {
   // No side padding for content elements in columns
-  .pp-col > .frame > .frame-container {
+  .pp-col > .frame.frame-background-none > .frame-container {
     padding-left: 0;
     padding-right: 0;
   }
