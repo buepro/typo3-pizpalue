@@ -34,6 +34,7 @@
     <f:variable name="backgroundClass">frame-background-{f:if(condition: data.background_color_class, else: 'none', then: data.background_color_class)}</f:variable>
     <f:variable name="spaceBeforeClass">frame-space-before-{f:if(condition: data.space_before_class, else: 'none', then: data.space_before_class)}</f:variable>
     <f:variable name="spaceAfterClass">frame-space-after-{f:if(condition: data.space_after_class, else: 'none', then: data.space_after_class)}</f:variable>
+    <f:variable name="backgroundImageClass">{f:if(condition: backgroundImage.0, then: 'frame-has-backgroundimage', else: 'frame-no-backgroundimage')}</f:variable>
 
 
     <f:comment>====================== Pizpalue init attributes ======================</f:comment>
@@ -131,8 +132,6 @@
 
     <f:if condition="{data.frame_class} != none">
         <f:then>
-
-            <f:variable name="backgroundImageClass">{f:if(condition: backgroundImage.0, then: 'frame-has-backgroundimage', else: 'frame-no-backgroundimage')}</f:variable>
             <div id="c{data.uid}" {ppAllAttributes -> pp:desarmAttribute()}>
                 <f:render partial="Frame/General/BackgroundImage" arguments="{_all}" />
                 <div class="frame-container">
@@ -156,7 +155,6 @@
                     </div>
                 </div>
             </div>
-
         </f:then>
         <f:else>
             <f:if condition="{ppAllAttributes}">

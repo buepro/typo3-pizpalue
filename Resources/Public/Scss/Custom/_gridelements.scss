@@ -18,12 +18,6 @@
     padding-left: 0;
     padding-right: 0;
   }
-  // In case there is a background frame .frame-collapsible needs to be canceled
-  &:not(.frame-background-none) {
-    .pp-col > .frame.frame-space-before-none:first-child {
-      margin-top: 0;
-    }
-  }
   // Compensate bottom space
   > .frame-container > .frame-inner > .row {
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
