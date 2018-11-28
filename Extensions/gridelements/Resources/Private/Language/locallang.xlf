@@ -66,6 +66,10 @@
             <trans-unit id="grids.sheet.customColumns">
                 <source>Custom columns width (CSS classes)</source>
             </trans-unit>
+            <trans-unit id="grids.sheet.adjustment">
+                <source>Adjustment</source>
+            </trans-unit>
+
             <trans-unit id="grids.label.twoColumnTitle">
                 <source>2 Columns</source>
             </trans-unit>
@@ -141,6 +145,15 @@
             <trans-unit id="grids.label.columnVisible">
                 <source>Visible</source>
             </trans-unit>
+            <trans-unit id="grids.label.collapseContentElement">
+                <source>Collapse elements</source>
+            </trans-unit>
+            <trans-unit id="grids.label.collapseContentElement">
+                <source>Collapse content elements</source>
+            </trans-unit>
+            <trans-unit id="grids.label.collapseRow">
+                <source>Collapse row</source>
+            </trans-unit>
 
             <trans-unit id="grids.label.tabsTitle">
                 <source>Tabs</source>
@@ -154,6 +167,10 @@
             </trans-unit>
             <trans-unit id="grids.label.accordionDescription">
                 <source>The content elements are accessible in an accordion.</source>
+            </trans-unit>
+
+            <trans-unit id="">
+                <source></source>
             </trans-unit>
 		</body>
 	</file>

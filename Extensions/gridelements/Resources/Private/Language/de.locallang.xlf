@@ -86,6 +86,10 @@
                 <source>Custom columns width (CSS classes)</source>
                 <target state="translated">Angepasste Spaltenbreiten (CSS-Klassen)</target>
             </trans-unit>
+            <trans-unit id="grids.sheet.adjustment">
+                <source>Adjustment</source>
+                <target state="translated">Anpassung</target>
+            </trans-unit>
             <trans-unit id="grids.label.twoColumnTitle">
                 <source>2 Columns</source>
                 <target state="translated">2 Spalten</target>
@@ -137,6 +141,18 @@
             <trans-unit id="grids.label.columnVisible">
                 <source>Visible</source>
                 <target state="translated">Sichtbar</target>
+            </trans-unit>
+            <trans-unit id="grids.label.collapseElement">
+                <source>Collapse elements</source>
+                <target state="translated">Elemente kollabieren</target>
+            </trans-unit>
+            <trans-unit id="grids.label.collapseContentElement">
+                <source>Collapse content elements</source>
+                <target state="translated">Inhaltselemente kollabieren</target>
+            </trans-unit>
+            <trans-unit id="grids.label.collapseRow">
+                <source>Collapse row</source>
+                <target state="translated">Zeile kollabieren</target>
             </trans-unit>
 
             <trans-unit id="grids.label.tabsTitle">

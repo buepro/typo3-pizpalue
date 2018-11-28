@@ -344,5 +344,33 @@
                 </el>
             </ROOT>
         </sCustom>
+        <sAdjust>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.sheet.adjustment</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <collapseElement type="array">
+                        <TCEforms>
+                            <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.collapseElement</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.collapseContentElement</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.collapseRow</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>3</default>
+                                <cols>inline</cols>
+                            </config>
+                        </TCEforms>
+                    </collapseElement>
+                </el>
+            </ROOT>
+        </sAdjust>
     </sheets>
 </T3DataStructure>

@@ -45,22 +45,64 @@ lib.pizpalue.gridelements {
    ppColumns2 < lib.gridelements.defaultGridSetup
    ppColumns2 {
       wrap = <div class="row">|</div>
+      wrap.override = <div class="row pp-row-collapse">|</div>
+      wrap.override.if {
+         isInList.field = flexform_collapseElement
+         value = 2,3
+      }
+      columns.default.wrap = <div class="pp-col###DEFAULT_COLUMN######CUSTOM_COLUMN######COLLAPSE_CONTENT###">|</div>
+      columns.default.wrap.replacement {
+         1 {
+            search = ###DEFAULT_COLUMN###
+            replace.field = flexform_defaultColumn1
+            replace.required = 1
+            replace.noTrimWrap = | ||
+         }
+         2 {
+            search = ###CUSTOM_COLUMN###
+            replace.field = flexform_customColumn1
+            replace.required = 1
+            replace.noTrimWrap = | ||
+         }
+         3 {
+            search = ###COLLAPSE_CONTENT###
+            replace.override = pp-col-collapse
+            replace.override.if {
+               isInList.field = flexform_collapseElement
+               value = 1,3
+            }
+            replace.required = 1
+            replace.noTrimWrap = | ||
+         }
+      }
       columns.101 < .columns.default
-      columns.101.dataWrap = <div class="pp-col {field:flexform_defaultColumn1} {field:flexform_customColumn1}">|</div>
+      columns.101.wrap.replacement {
+         1.replace.field = flexform_defaultColumn1
+         2.repace.field = flexform_customColumn1
+      }
       columns.102 < .columns.default
-      columns.102.dataWrap = <div class="pp-col {field:flexform_defaultColumn2} {field:flexform_customColumn2}">|</div>
+      columns.102.wrap.replacement {
+         1.replace.field = flexform_defaultColumn2
+         2.repace.field = flexform_customColumn2
+      }
    }
 
    ppColumns3 < .ppColumns2
    ppColumns3 {
       columns.103 < .columns.default
-      columns.103.dataWrap = <div class="pp-col {field:flexform_defaultColumn3} {field:flexform_customColumn3}">|</div>
+      columns.103.wrap.replacement {
+         1.replace.field = flexform_defaultColumn3
+         2.repace.field = flexform_customColumn3
+      }
    }
 
    ppColumns4 < .ppColumns3
    ppColumns4 {
       columns.104 < .columns.default
-      columns.104.dataWrap = <div class="pp-col {field:flexform_defaultColumn4} {field:flexform_customColumn4}">|</div>
+      columns.104.wrap.replacement {
+         1.replace.field = flexform_defaultColumn4
+         2.repace.field = flexform_customColumn4
+      }
    }
 
    ppTabs < lib.gridelements.defaultGridSetup
