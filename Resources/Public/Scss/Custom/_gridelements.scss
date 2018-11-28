@@ -30,10 +30,8 @@
   // Ensure spacing is correct when columns are serialized (two visually subsequent content elements just have one
   // padding). Assumes that all content elements in columns have a frame without spacing before.
   //
-  &.frame-background-none {
-    .pp-col.pp-col-collapse > .frame.frame-background-none.frame-space-before-none:first-child {
-      @extend .frame-collapsible;
-    }
+  .pp-col.pp-col-collapse > .frame.frame-background-none.frame-space-before-none:not(.frame-has-backgroundimage):first-child {
+    @extend .frame-collapsible;
   }
   // Compensate bottom space
   > .frame-container > .frame-inner > .row.pp-row-collapse {
