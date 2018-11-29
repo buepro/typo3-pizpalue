@@ -11,4 +11,4 @@ plugin.tx_news {
    }
 }
 
-page.includeCSS.PizpalueNewsLess = EXT:pizpalue/Extensions/news/Resources/Public/Less/General.less
+page.includeCSS.PizpalueNewsScss = EXT:pizpalue/Extensions/news/Resources/Public/Scss/general.scss
