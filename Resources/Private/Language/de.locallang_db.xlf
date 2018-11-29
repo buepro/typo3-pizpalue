@@ -77,23 +77,23 @@
                 <source>Fix background</source>
                 <target state="translated">Hintergrund fixieren</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-margin">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-margin">
                 <source>Content element margin</source>
                 <target state="translated">Inhaltselement Aussenabstand</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-padding">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-padding">
                 <source>Content element padding</source>
                 <target state="translated">Inhaltselement Innenabstand</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgwhite70">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bgwhite70">
                 <source>White background, 70% opacity</source>
                 <target state="translated">Weisser Hintergrund, 70% Deckkraft</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bggrey70">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bggrey70">
                 <source>Grey background, 70% opacity</source>
                 <target state="translated">Grauer Hintergrund, 70% Deckkraft</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgblack70">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bgblack70">
                 <source>Black background, 70% opacity</source>
                 <target state="translated">Schwarzer Hintergrund, 70% Deckkraft</target>
             </trans-unit>

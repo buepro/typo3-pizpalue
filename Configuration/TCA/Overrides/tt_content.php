@@ -22,9 +22,9 @@ $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_behaviour'] = [
 ];
 
 // Class items for column definition
-$classesItemsList = 'pp-parent-height,pp-row-height,pp-row-child-height,pp-ce-background,pp-ce-bgfixed,pp-ce-margin,'
-    . 'pp-ce-padding,pp-ce-bgwhite70,pp-ce-bggrey70,pp-ce-bgblack70,pp-gallery-item-left,pp-gallery-item-right,'
-    . 'pp-gallery-item-join';
+$classesItemsList = 'pp-parent-height,pp-row-height,pp-row-child-height,pp-ce-background,pp-ce-bgfixed,'
+    . 'pp-content-margin,pp-content-padding,pp-content-bgwhite70,pp-content-bggrey70,pp-content-bgblack70,'
+    . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join';
 $classItems = [];
 foreach(explode(',',$classesItemsList) as $class) {
     $classItems[] = [

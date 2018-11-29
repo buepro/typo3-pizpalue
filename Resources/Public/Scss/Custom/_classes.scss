@@ -49,6 +49,7 @@
     }
   }
 }
+// DEPRECIATED as of 29.11.2018
 .pp-ce-margin {
   @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
     @include media-breakpoint-up($breakpoint) {
@@ -57,6 +58,7 @@
     }
   }
 }
+// DEPRECIATED as of 29.11.2018
 .pp-ce-padding {
   @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
     @include media-breakpoint-up($breakpoint) {
@@ -65,14 +67,55 @@
     }
   }
 }
+// DEPRECIATED as of 29.11.2018
 .pp-ce-bgwhite70 {
   background-color: rgba(white, 0.7);
 }
+// DEPRECIATED as of 29.11.2018
 .pp-ce-bggrey70 {
   background-color: rgba(gray, 0.7);
 }
+// DEPRECIATED as of 29.11.2018
 .pp-ce-bgblack70 {
   background-color: rgba(black, 0.7);
+}
+//
+// Content background, spacing
+//
+.pp-content-margin {
+  &.pp-content, > .frame-container > .frame-inner {
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        margin: ($frame-inner-spacing * $scaling);
+      }
+    }
+  }
+}
+.pp-content-padding {
+  &.pp-content, > .frame-container > .frame-inner {
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        padding: ($frame-inner-spacing * $scaling);
+      }
+    }
+  }
+}
+.pp-content-bgwhite70 {
+  &.pp-content, > .frame-container > .frame-inner {
+    background-color: rgba(white, 0.7);
+  }
+}
+.pp-content-bggrey70 {
+  &.pp-content, > .frame-container > .frame-inner {
+    background-color: rgba(gray, 0.7);
+  }
+}
+.pp-content-bgblack70 {
+  &.pp-content, > .frame-container > .frame-inner {
+    background-color: rgba(black, 0.7);
+  }
 }
 //
 // Gallery items

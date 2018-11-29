@@ -101,13 +101,13 @@
 
         <f:if condition="{ppAnimation.classes}">
             <f:variable name="ppClasses">
-                {ppClasses} {ppAnimation.classes}')}
+                {ppClasses} {ppAnimation.classes}
             </f:variable>
         </f:if>
 
         <f:if condition="{ppAnimation.style}">
             <f:variable name="ppStyles">
-                {ppStyles} {ppAnimation.style}')}
+                {ppStyles} {ppAnimation.style}
             </f:variable>
         </f:if>
 
@@ -122,6 +122,11 @@
 
     {f:variable(name:'ppAllAttributes', value:'')}
     <f:if condition="{ppClasses} || {ppStyles} || {ppAttributes}">
+        <f:if condition="{data.frame_class} == none">
+            <f:variable name="ppClasses">
+                pp-content {ppClasses}
+            </f:variable>
+        </f:if>
         <f:variable name="ppAllAttributes">
             {f:if(condition:'{ppClasses}', then:' class="{ppClasses}"')}
             {f:if(condition:'{ppStyles}', then:' style="{ppStyles}"')}

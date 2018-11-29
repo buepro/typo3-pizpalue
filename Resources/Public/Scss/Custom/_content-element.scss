@@ -1,4 +1,13 @@
 //
+// Frame Header
+//
+.frame-header {
+  *:last-child {
+    margin-bottom: 1.5*$spacer;
+  }
+}
+
+//
 // Pictures
 //
 figure {

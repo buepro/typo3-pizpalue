@@ -59,19 +59,19 @@
             <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgfixed">
                 <source>Fix background</source>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-margin">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-margin">
                 <source>Content element margin</source>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-padding">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-padding">
                 <source>Content element padding</source>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgwhite70">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bgwhite70">
                 <source>White background, 70% opacity</source>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bggrey70">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bggrey70">
                 <source>Grey background, 70% opacity</source>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgblack70">
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bgblack70">
                 <source>Black background, 70% opacity</source>
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left">
