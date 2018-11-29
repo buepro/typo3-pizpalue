@@ -1,0 +1,34 @@
+//
+// Subnavigation
+//
+.backendlayout-subnavigation_right,
+.backendlayout-subnavigation_left {
+  .subnav-wrap {
+    display: block;
+    order: 2;
+    .frame-type-subnavigation {
+      display: none;
+    }
+  }
+}
+@include media-breakpoint-up('lg') {
+  .backendlayout-subnavigation_right,
+  .backendlayout-subnavigation_left {
+    .subnav-wrap {
+      .frame-type-subnavigation {
+        display: block;
+      }
+    }
+  }
+  .frame-type-subnavigation + .pp-subnavcont {
+    @extend .frame-collapsible;
+  }
+  .backendlayout-subnavigation_left {
+    .subnav-wrap {
+      order: 1;
+    }
+    .maincontent-wrap {
+      order: 2;
+    }
+  }
+}
