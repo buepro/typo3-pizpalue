@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
-<f:layout name="General"/>
+<f:layout name="General" />
 <!--
 	=====================
 		Templates/News/List.html
@@ -18,19 +18,17 @@
 							<f:then>
 								<f:for each="{news}" as="newsItem" iteration="iterator">
 									<f:render partial="List/ItemImageTop"
-											  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+											  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 								</f:for>
 							</f:then>
 							<f:else>
 								<n:widget.paginate objects="{news}" as="paginatedNews"
 												   configuration="{settings.list.paginate}"
 												   initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
-									<div class="news-list-page">
-										<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-											<f:render partial="List/ItemImageTop"
-													  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
-										</f:for>
-									</div>
+									<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+										<f:render partial="List/ItemImageTop"
+												  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									</f:for>
 								</n:widget.paginate>
 							</f:else>
 						</f:if>
@@ -42,19 +40,17 @@
 							<f:then>
 								<f:for each="{news}" as="newsItem" iteration="iterator">
 									<f:render partial="List/Item"
-											  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
+											  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
 								</f:for>
 							</f:then>
 							<f:else>
 								<n:widget.paginate objects="{news}" as="paginatedNews"
 												   configuration="{settings.list.paginate}"
 												   initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
-									<div class="news-list-page">
-										<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-											<f:render partial="List/Item"
-													  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}"/>
-										</f:for>
-									</div>
+									<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+										<f:render partial="List/Item"
+												  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									</f:for>
 								</n:widget.paginate>
 							</f:else>
 						</f:if>
@@ -64,7 +60,7 @@
 		</f:then>
 		<f:else>
 			<div class="alert ">
-				<f:translate key="list_nonewsfound"/>
+				<f:translate key="list_nonewsfound" />
 			</div>
 		</f:else>
 	</f:if>

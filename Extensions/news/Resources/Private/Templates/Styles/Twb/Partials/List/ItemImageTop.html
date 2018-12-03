@@ -6,28 +6,25 @@
 		Partials/List/ItemImageTop.html
 -->
 <n:excludeDisplayedNews newsItem="{newsItem}"/>
-<div class="news-list-item">
-	<div class="pp-newsimage">
-		<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-			<f:if condition="{newsItem.mediaPreviews}">
-				<f:then>
-					<f:media class="img-responsive" file="{newsItem.mediaPreviews.0}"
-							 title="{mediaElement.originalResource.title}"
-							 alt="{mediaElement.originalResource.alternative}"
-							 width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}"
-							 height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}"/>
-				</f:then>
-				<f:else>
-					<f:if condition="{settings.displayDummyIfNoMedia}">
-						<f:image class="img-dummy img-responsive" src="{settings.list.media.dummyImage}" title="" alt=""
-								 maxWidth="{settings.list.media.image.maxWidth}"
-								 maxHeight="{settings.list.media.image.maxHeight}"/>
-					</f:if>
-				</f:else>
-			</f:if>
-		</n:link>
-	</div>
-
+<div class="news-list-item pp-news-list-item-imagetop">
+	<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+		<f:if condition="{newsItem.mediaPreviews}">
+			<f:then>
+				<f:media class="img-responsive" file="{newsItem.mediaPreviews.0}"
+						 title="{mediaElement.originalResource.title}"
+						 alt="{mediaElement.originalResource.alternative}"
+						 width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}"
+						 height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}"/>
+			</f:then>
+			<f:else>
+				<f:if condition="{settings.displayDummyIfNoMedia}">
+					<f:image class="img-dummy img-responsive" src="{settings.list.media.dummyImage}" title="" alt=""
+							 maxWidth="{settings.list.media.image.maxWidth}"
+							 maxHeight="{settings.list.media.image.maxHeight}"/>
+				</f:if>
+			</f:else>
+		</f:if>
+	</n:link>
 	<div class="pp-newstext articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
 		 itemscope="itemscope" itemtype="http://schema.org/Article">
 		<h3 itemprop="headline">
