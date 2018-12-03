@@ -9,7 +9,15 @@ module.exports = function(grunt) {
             root: '../',
             node: 'node_modules/',
             resources: '<%= paths.root %>Resources/',
+            icons: '<%= paths.resources %>Public/Icons/',
+            fonts: '<%= paths.resources %>Public/Fonts/',
             js: '<%= paths.resources %>Public/JavaScript/'
+        },
+        cssmin: {
+            pizpalueicon: {
+                src: '<%= paths.fonts %>pizpalueicon.css',
+                dest: '<%= paths.fonts %>pizpalueicon.min.css'
+            }
         },
         uglify: {
             options: {
@@ -56,18 +64,40 @@ module.exports = function(grunt) {
             },
 
         },
+        webfont: {
+            glyphicon: {
+                src: '<%= paths.icons %>PizpalueIcon/*.svg',
+                dest: '<%= paths.fonts %>',
+                options: {
+                    font: 'pizpalueicon',
+                    template: 'templates/font.css',
+                    fontFamilyName: 'PizpalueIcon',
+                    engine: 'node',
+                    autoHint: false,
+                    htmlDemo: false,
+                    templateOptions: {
+                        baseClass: 'ppicon',
+                        classPrefix: 'ppicon-'
+                    }
+                }
+            }
+        }
     });
 
     /**
      * Register tasks
      */
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-webfont');
 
     /**
      * Grunt update task
      */
+    grunt.registerTask('css', ['cssmin']);
     grunt.registerTask('js', ['uglify']);
-    grunt.registerTask('default', ['js']);
+    grunt.registerTask('build', ['webfont', 'css', 'js']);
+    grunt.registerTask('default', ['build']);
 
 };

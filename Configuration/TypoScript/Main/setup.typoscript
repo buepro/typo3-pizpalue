@@ -54,12 +54,27 @@ page {
 # Theme and CSS/SCSS
 #---------------------------------------------------------#
 
-#:::::::::::::::::::::::
-#: Load theme with modified features
-#.
 page {
    includeCSS {
+      #:::::::::::::::::::::::
+      #: Load theme with modified features
+      #.
       theme = EXT:pizpalue/Resources/Public/Scss/Theme/theme.scss
+   }
+   includeCSSLibs {
+      #:::::::::::::::::::::::
+      #: Icons (ppicon, bootstrappackageicon, glyphicon)
+      #.
+      bootstrappackageicon >
+      pizpalueicon = EXT:pizpalue/Resources/Public/Fonts/pizpalueicon.min.css
+      pizpalueicon {
+         fontLoader {
+            families {
+               0 = PizpalueIcon
+            }
+            enabled = 1
+         }
+      }
    }
 }
 

@@ -6,22 +6,22 @@ page.theme {
          facebook {
             label = Facebook
             # cat=6050/2910/01_facebook_url; type=string; label=Facebook: Insert the full account url
-            url =
+            url = https://www.facebook.com/typo3/
          }
          twitter {
             label = Twitter
             # cat=6050/2910/02_twitter_url; type=string; label=Twitter: Insert the full account url
-            url =
+            url = https://twitter.com/typo3
          }
          instagram {
             label = Instagram
             # cat=6050/2910/03_instagram_url; type=string; label=Instagram: Insert the full account url
-            url =
+            url = https://www.instagram.com/
          }
          github {
             label = GitHub
             # cat=6050/2910/04_googleplus_url; type=string; label=GitHub: Insert the full account url
-            url =
+            url = https://github.com/buepro/typo3-pizpalue
          }
          googleplus {
             label = Google+
@@ -31,22 +31,27 @@ page.theme {
          linkedin {
             label = LinkedIn
             # cat=6050/2910/05_linkedin_url; type=string; label=LinkedIn: Insert the full account url
-            url =
+            url = https://www.linkedin.com/
          }
          xing {
             label = Xing
             # cat=6050/2910/06_xing_url; type=string; label=Xing: Insert the full account url
-            url =
+            url = https://www.xing.com/
          }
          youtube {
             label = YouTube
             # cat=6050/2910/07_youtube_url; type=string; label=YouTube: Insert the full account url
-            url =
+            url = https://www.youtube.com/user/typo3
          }
          vimeo {
             label = Vimeo
             # cat=6050/2910/08_vimeo_url; type=string; label=Vimeo: Insert the full account url
             url =
+         }
+         pinterest {
+            label = Pinterest
+            # cat=6050/2910/08_pinterest_url; type=string; label=Pinterest: Insert the full account url
+            url = https://www.pinterest.com/
          }
       }
    }

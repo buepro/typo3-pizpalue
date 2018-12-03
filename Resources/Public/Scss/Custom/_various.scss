@@ -11,6 +11,9 @@ img.pp-nolazyload {
   opacity: 1 !important;
   transition: all 0s ease 0s !important;
 }
+//
+// Reveal footer
+//
 .pp-reveal-footer {
   > header, > div:not(#cookieconsent), > nav {
     z-index: 10;
@@ -26,6 +29,9 @@ img.pp-nolazyload {
     z-index: 8;
   }
 }
+//
+// Scroll target
+//
 @keyframes flashonce-primary {
   0% {box-shadow: none;}
   50% {box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px $primary;}
