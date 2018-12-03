@@ -74,7 +74,7 @@ mod {
                         }
                     }
                 }
-                icon = EXT:pizpalue/Resources/Public/Icons/ppPageSubnavLeft.svg
+                icon = EXT:pizpalue/Resources/Public/Icons/BackendLayouts/ppPageSubnavLeft.svg
             }
         }
     }

@@ -47,7 +47,7 @@ mod {
                         }
                     }
                 }
-                icon = EXT:pizpalue/Resources/Public/Icons/ppPageFullWidthClean.svg
+                icon = EXT:pizpalue/Resources/Public/Icons/BackendLayouts/ppPageFullWidthClean.svg
             }
         }
     }

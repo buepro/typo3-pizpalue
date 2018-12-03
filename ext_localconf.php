@@ -70,7 +70,7 @@ if (1) {
         $iconRegistry->registerIcon(
             'tx-pizpalue-' . $iconName,
             \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-            ['source' => 'EXT:pizpalue/Resources/Public/Icons/' . $iconName . '.svg']
+            ['source' => 'EXT:pizpalue/Resources/Public/Icons/Gridelements/' . $iconName . '.svg']
         );
     }
 };
