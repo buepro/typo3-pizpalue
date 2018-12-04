@@ -1,0 +1,4 @@
+slick_jquery = 0
+slick_progressbar_color = {$plugin.bootstrap_package.settings.scss.primary}
+slick_progressbar_strokeWidth = 0.7
+slick_progressbar_trailWidth = 0.7

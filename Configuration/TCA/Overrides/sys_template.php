@@ -48,6 +48,11 @@ call_user_func(
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
+            'Extensions/slickcarousel/Configuration/TypoScript',
+            'Pizpalue - slickcarousel'
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $_EXTKEY,
             'Extensions/news/Configuration/TypoScript/RSS',
             'Pizpalue - news RSS feed'
         );

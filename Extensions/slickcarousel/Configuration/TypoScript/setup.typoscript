@@ -1,0 +1,36 @@
+temp.tt_content.slickcarousel =< lib.contentElement
+temp.tt_content.slickcarousel {
+   templateName = Slickcarouselbasic
+   templateRootPaths {
+      10 = EXT:slickcarousel/Resources/Private/Templates/
+   }
+
+   partialRootPaths {
+      10 = EXT:slickcarousel/Resources/Private/Partials/
+   }
+
+   layoutRootPaths {
+      10 = EXT:slickcarousel/Resources/Private/Layouts/
+      20 = EXT:pizpalue/Resources/Private/Layouts/ContentElements/
+   }
+
+   dataProcessing {
+      10 = Bo\Slickcarousel\DataProcessing\FlexFormProcessor
+      20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      20 {
+         references.fieldName = slickdefault
+         as = slickimages
+      }
+   }
+}
+
+tt_content.slickcarousel < temp.tt_content.slickcarousel
+tt_content.slickcarouselbasic < temp.tt_content.slickcarousel
+tt_content.slickcarouselsync < temp.tt_content.slickcarousel
+tt_content.slickcarouselbgimg < temp.tt_content.slickcarousel
+
+page {
+   includeCSS {
+      pizpalueSlickcarouselScss = EXT:pizpalue/Extensions/slickcarousel/Resources/Public/Scss/general.scss
+   }
+}

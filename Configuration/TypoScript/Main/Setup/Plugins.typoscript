@@ -64,8 +64,3 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
 plugin.tx_felogin_pi1.dateFormat = {$pizpalue.general.dateTimeFormat}
 
 
-#---------------------------------------------------------#
-# Slickcarousel
-#---------------------------------------------------------#
-
-plugin.tx_slickcarousel.slick_progressbar_color = {$pizpalue.colors.primary}
