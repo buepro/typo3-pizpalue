@@ -30,7 +30,7 @@ $EM_CONF[$_EXTKEY] = [
             //'news'                  => '6.0.0-7.0.99',
             //'brt_videourlreplace'   => '1.2.1-1.2.99',
             'slickcarousel'         => '3.0.1-3.0.99',
-            //'ws_flexslider'         => '1.5.3-1.5.99',
+            'ws_flexslider'         => '1.5.6-1.5.99',
             //'url_forwarding'        => '1.3.1-1.3.99',
             //'user_customer'         => '9.0.0-9.99.99'
         ],
