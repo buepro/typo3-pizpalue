@@ -6,7 +6,7 @@ pizpalue {
 page.theme {
    cookieconsent{
       enable = 1
-      position = top
+      position = bottom
       static = 0
       layout = basic
    }

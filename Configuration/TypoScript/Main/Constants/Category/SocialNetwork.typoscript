@@ -1,7 +1,7 @@
 page.theme {
    socialmedia {
       # cat=6050/2910/00_enable; type=boolean; label=Social Media: Enable to display the social media links
-      enable = 1
+      enable = 0
       channels {
          facebook {
             label = Facebook
