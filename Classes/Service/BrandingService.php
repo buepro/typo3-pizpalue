@@ -1,7 +1,10 @@
 <?php
 
-/**
- * Inspired by bootstrap_package from Benjamin Kott
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Buepro\Pizpalue\Service;
@@ -19,7 +22,6 @@ class BrandingService
      */
     const EXT_KEY = 'pizpalue';
 
-
     /**
      * @param string $extension
      */
@@ -32,15 +34,15 @@ class BrandingService
             $backendConfiguration = $extensionConfiguration->get('backend');
 
             if (!isset($backendConfiguration['loginLogo']) || empty(trim($backendConfiguration['loginLogo'])) ||
-                strstr($backendConfiguration['loginLogo'],'bootstrap_package')) {
+                strstr($backendConfiguration['loginLogo'], 'bootstrap_package')) {
                 $backendConfiguration['loginLogo'] = 'EXT:pizpalue/Resources/Public/Images/backend-login-logo.png';
             }
             if (!isset($backendConfiguration['loginBackgroundImage']) || empty(trim($backendConfiguration['loginBackgroundImage'])) ||
-                strstr($backendConfiguration['loginBackgroundImage'],'bootstrap_package')) {
+                strstr($backendConfiguration['loginBackgroundImage'], 'bootstrap_package')) {
                 $backendConfiguration['loginBackgroundImage'] = 'EXT:pizpalue/Resources/Public/Images/backend-login-background.jpg';
             }
             if (!isset($backendConfiguration['backendLogo']) || empty(trim($backendConfiguration['backendLogo'])) ||
-                strstr($backendConfiguration['backendLogo'],'bootstrap_package')) {
+                strstr($backendConfiguration['backendLogo'], 'bootstrap_package')) {
                 $backendConfiguration['backendLogo'] = 'EXT:pizpalue/Resources/Public/Images/backend-logo.svg';
             }
 

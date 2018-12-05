@@ -10,9 +10,7 @@
 /**
  * @see https://docs.typo3.org/typo3cms/extensions/core/Changelog/9.0/Important-82692-GuidelinesForExtensionFiles.html
  */
-
 defined('TYPO3_MODE') or die('Access denied.');
-
 
 /**
  * Configure BackendLayout
@@ -27,21 +25,20 @@ if (1) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">'
         );
-    };
-};
-
+    }
+}
 
 /**
  * Configure RTE
  */
 if (1) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig">');
+            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig">'
+    );
 
     // Add default RTE configuration
     $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
-};
-
+}
 
 /**
  * Backend styling
@@ -55,7 +52,6 @@ if (TYPO3_MODE === 'BE') {
         'setBackendStyling'
     );
 }
-
 
 /**
  * Configure gridelements
@@ -73,7 +69,7 @@ if (1) {
             ['source' => 'EXT:pizpalue/Resources/Public/Icons/Gridelements/' . $iconName . '.svg']
         );
     }
-};
+}
 
 /**
  * Adjust content element form in BE

@@ -1,13 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roman
- * Date: 15/10/2018
- * Time: 10:39
+
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
  */
 
 call_user_func(
-    function($_EXTKEY) {
+    function ($_EXTKEY) {
         /***************
          * Static templates
          */
@@ -71,6 +72,6 @@ call_user_func(
             'Extensions/tt_address/Configuration/TypoScript/3.0.3',
             'Pizpalue - tt_address 3.0.3'
         );
-
-    },'pizpalue'
+    },
+    'pizpalue'
 );

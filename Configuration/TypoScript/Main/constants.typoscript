@@ -121,4 +121,4 @@ config.admPanel = 0
 # Debug
 #=========================================================#
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/constants.typoscript">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/constants.typoscript">

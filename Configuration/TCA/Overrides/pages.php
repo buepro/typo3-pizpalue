@@ -28,4 +28,3 @@ if (!defined('TYPO3_MODE')) {
     'Extensions/news/Configuration/TsConfig/Page/Pizpalue.tsconfig',
     'Pizpalue: Extension news'
 );
-

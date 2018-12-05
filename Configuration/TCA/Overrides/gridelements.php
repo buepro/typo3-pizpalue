@@ -1,10 +1,12 @@
 <?php
 
-/**
- * Set the default frame to none for gridelements
+/*
+ * This file is part of the package buepro/pizpalue.
  *
- * @todo Doesn't work, might be a core bug, Currently solved with ContentFormDataProvider.
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
  */
+
 $columnsOverrides = [];
 $columnsOverrides['frame_class']['config'] = [
     'default' => 'none',

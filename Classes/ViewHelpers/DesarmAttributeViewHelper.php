@@ -1,9 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roman
- * Date: 21/11/2018
- * Time: 10:38
+
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Buepro\Pizpalue\ViewHelpers;
@@ -11,7 +12,6 @@ namespace Buepro\Pizpalue\ViewHelpers;
 use TYPO3\CMS\Fluid\ViewHelpers\Format\AbstractEncodingViewHelper;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderStatic;
-
 
 /**
  * Class DesarmAttributeViewHelper
@@ -35,7 +35,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderS
  * {attribute -> pp:desarmAttribute()}
  * ---
  *
- * @package Buepro\Pizpalue\ViewHelpers
  */
 class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
 {
@@ -63,8 +62,13 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
     {
         parent::initializeArguments();
         $this->registerArgument('value', 'string', 'string to format');
-        $this->registerArgument('keepQuotes', 'bool',
-            'If TRUE, single and double quotes won\'t be replaced (sets ENT_NOQUOTES flag).', false, false);
+        $this->registerArgument(
+            'keepQuotes',
+            'bool',
+            'If TRUE, single and double quotes won\'t be replaced (sets ENT_NOQUOTES flag).',
+            false,
+            false
+        );
         $this->registerArgument('encoding', 'string', '');
     }
 
@@ -79,17 +83,17 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
      * @param int $encoding
      * @return string Desarmed attribute definitions
      */
-    private static function desarmAttributes($value,$keepQuotes,$encoding)
+    private static function desarmAttributes($value, $keepQuotes, $encoding)
     {
         // Init
         $htmlEntityFlags = $keepQuotes ? ENT_NOQUOTES : ENT_COMPAT;
 
         // In case some values come from inline notation (escapes values)
-        $value = html_entity_decode($value,$htmlEntityFlags,$encoding);
+        $value = html_entity_decode($value, $htmlEntityFlags, $encoding);
 
         // Remove tabs, line breaks, excessive spaces
         //$value = str_replace(["\t", "\r", "\n"],' ',$value);
-        $value = preg_replace('/[\t\r\n]\s+|\s+/',' ',$value);
+        $value = preg_replace('/[\t\r\n]\s+|\s+/', ' ', $value);
 
         // Get attributes
         $result = preg_match_all('/([\w\-]*)\s*=\s*\"([^\"]*)\"/', $value, $attributes);
@@ -102,7 +106,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
         $desarmedValue = [];
         if (isset($attributes[2])) {
             foreach ($attributes[1] as $attrKey) {
-                $desarmedKey[] = htmlentities($attrKey, $htmlEntityFlags, $encoding);;
+                $desarmedKey[] = htmlentities($attrKey, $htmlEntityFlags, $encoding);
             }
             foreach ($attributes[2] as $attrValue) {
                 $desarmedValue[] = trim(htmlentities($attrValue, $htmlEntityFlags, $encoding));
@@ -111,13 +115,13 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
 
         // Compile desarmed attributes
         $desarmedAttr = [];
-        foreach ($attributes[1] as $key => $attrName ) {
+        foreach ($attributes[1] as $key => $attrName) {
             // Just allow class, style and data attributes
-            if ($attrName === 'class' || $attrName === 'style' || strpos($attrName,'data') === 0) {
+            if ($attrName === 'class' || $attrName === 'style' || strpos($attrName, 'data') === 0) {
                 $desarmedAttr[] = $desarmedKey[$key] . '="' . $desarmedValue[$key] . '"';
             }
-        };
-        return implode(' ',$desarmedAttr);
+        }
+        return implode(' ', $desarmedAttr);
     }
 
     /**
@@ -145,6 +149,6 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
         if ($encoding === null) {
             $encoding = self::resolveDefaultEncoding();
         }
-        return self::desarmAttributes($value,$keepQuotes,$encoding);
+        return self::desarmAttributes($value, $keepQuotes, $encoding);
     }
 }

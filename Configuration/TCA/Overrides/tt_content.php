@@ -26,12 +26,12 @@ $classesItemsList = 'pp-parent-height,pp-row-height,pp-row-child-height,pp-ce-ba
     . 'pp-content-margin,pp-content-padding,pp-content-bgwhite70,pp-content-bggrey70,pp-content-bgblack70,'
     . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join';
 $classItems = [];
-foreach(explode(',',$classesItemsList) as $class) {
+foreach (explode(',', $classesItemsList) as $class) {
     $classItems[] = [
         'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes.' . $class,
         $class . ' '
     ];
-};
+}
 
 // Attribute items for column definition
 $aosFadeList = 'fade,fade-up,fade-down,fade-left,fade-right,fade-up-right,fade-up-left,fade-down-right,fade-down-left';
@@ -40,10 +40,10 @@ $aosSlideList = 'slide-up,slide-down,slide-left,slide-right';
 $aosZoomList = 'zoom-in,zoom-in-up,zoom-in-down,zoom-in-left,zoom-in-right,zoom-out,zoom-out-up,zoom-out-down,'
     . 'zoom-out-left,zoom-out-right';
 $aosAnimation = [];
-foreach(['fade' => $aosFadeList,'flip' => $aosFlipList,'slide' => $aosSlideList,'zoom' => $aosZoomList]
+foreach (['fade' => $aosFadeList, 'flip' => $aosFlipList, 'slide' => $aosSlideList, 'zoom' => $aosZoomList]
         as $name => $list) {
     $aosAnimation[$name] = [];
-    foreach(explode(',',$list) as $animation) {
+    foreach (explode(',', $list) as $animation) {
         $aosAnimation[$name][] = [$animation, 'data-aos="' . $animation . '" '];
     }
 }
@@ -54,10 +54,10 @@ $aosEasingList = 'linear,ease,ease-in,ease-out,ease-in-out,ease-in-back,ease-out
     . 'ease-in-sine,ease-out-sine,ease-in-out-sine,ease-in-quad,ease-out-quad,ease-in-out-quad,'
     . 'ease-in-cubic, ease-out-cubic,ease-in-out-cubic,ease-in-quart,ease-out-quart,ease-in-out-quart';
 $aosSettings = [];
-foreach(['anchor-placement' => $aosAnchorPlacementList, 'easing' => $aosEasingList] as $name => $list) {
+foreach (['anchor-placement' => $aosAnchorPlacementList, 'easing' => $aosEasingList] as $name => $list) {
     $aosSettings[$name] = [];
-    foreach(explode(',',$list) as $setting) {
-        $aosSettings[$name][] = [$setting, 'data-aos-' .$name . '="' . $setting . '" '];
+    foreach (explode(',', $list) as $setting) {
+        $aosSettings[$name][] = [$setting, 'data-aos-' . $name . '="' . $setting . '" '];
     }
 }
 
@@ -98,18 +98,23 @@ $tmp_pizpalue_columns = [
                 'mode' => 'append',
                 'items' => array_merge(
                     $aosAnimation['fade'],
-                    [['---','']],$aosAnimation['flip'],
-                    [['---','']],$aosAnimation['slide'],
-                    [['---','']],$aosAnimation['zoom'],
-                    [['---','']],$aosSettings['anchor-placement'],
-                    [['---','']],$aosSettings['easing'],
+                    [['---', '']],
+                    $aosAnimation['flip'],
+                    [['---', '']],
+                    $aosAnimation['slide'],
+                    [['---', '']],
+                    $aosAnimation['zoom'],
+                    [['---', '']],
+                    $aosSettings['anchor-placement'],
+                    [['---', '']],
+                    $aosSettings['easing'],
                     [
-                        ['---',''],
-                        ['offset','data-aos-offset="120" '],
-                        ['duration','data-aos-duration="400" '],
-                        ['delay','data-aos-delay="0" '],
-                        ['anchor','data-aos-anchor="null" '],
-                        ['once','data-aos-once="false" ']
+                        ['---', ''],
+                        ['offset', 'data-aos-offset="120" '],
+                        ['duration', 'data-aos-duration="400" '],
+                        ['delay', 'data-aos-delay="0" '],
+                        ['anchor', 'data-aos-anchor="null" '],
+                        ['once', 'data-aos-once="false" ']
                     ]
                 )
             ],
@@ -178,6 +183,3 @@ $GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] .= '
     '',
     'before: sectionIndex'
 );
-
-
-
