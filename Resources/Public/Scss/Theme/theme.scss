@@ -19,7 +19,7 @@
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/backendlayouts";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/section";
 //@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/footer";
-@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/frame";
+//@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/frame";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/card";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/address";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/buttons";
@@ -53,6 +53,7 @@
 // complement, add components
 //
 @import "footer";
+@import "frame";
 @import "navbar";
 @import "plugin";
 @import "cookieconsent";
@@ -60,3 +61,4 @@
 // Plugins
 //
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/photoswipe";
+
