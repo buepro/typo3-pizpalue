@@ -25,6 +25,7 @@ $EM_CONF[$_EXTKEY] = [
             'news'                  => '7.0.8-7.0.99',
             'slickcarousel'         => '3.0.1-3.0.99',
             'ws_flexslider'         => '1.5.6-1.5.99',
+            'indexed_search'        => '9.5.1-9.99.99'
             //'brt_videourlreplace'   => '1.2.1-1.2.99',
             //'user_customer'         => '9.0.0-9.99.99'
         ],
