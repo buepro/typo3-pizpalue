@@ -99,23 +99,12 @@ class ext_update
 
     public function main()
     {
-        // update data base structure
         $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $this->installTool = $this->objectManager->get(InstallUtility::class);
 
-        $extensionSitePath = ExtensionManagementUtility::extPath('pizpalue');
-        $extTablesSqlFile = $extensionSitePath . 'ext_tables.sql';
-        $extTablesSqlContent = '';
-        if (file_exists($extTablesSqlFile)) {
-            $extTablesSqlContent .= GeneralUtility::getUrl($extTablesSqlFile);
-        }
-        if ($extTablesSqlContent !== '') {
-            // TODO: substitute depreciated function
-            $this->installTool->updateDbWithExtTablesSql($extTablesSqlContent);
-            return $this->getDialog(self::SEVERITY_OK, 'Database updated', 'The database has been updated with the current table definition.');
-        } else {
-            return $this->getDialog(self::SEVERITY_ERROR, 'Database update', 'The database update failed due to a missing table definition file');
-        }
+        // update data base structure
+        $this->installTool->install('pizpalue');
+        return $this->getDialog(self::SEVERITY_OK, 'Database updated', 'The database has been updated with the current table definition.');
     }
 
     public function access()
