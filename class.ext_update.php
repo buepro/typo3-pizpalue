@@ -7,7 +7,6 @@
  * LICENSE file that was distributed with this source code.
  */
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extensionmanager\Utility\InstallUtility;
@@ -17,6 +16,9 @@ use TYPO3\CMS\Extensionmanager\Utility\InstallUtility;
  *
  * This class provides methods to update pizpalue-installations through the extension manager. Currently it supports
  * updating the data base structure.
+ *
+ * @todo migrate to new update wizard
+ * @see https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/UpdateWizards/Index.html
  */
 class ext_update
 {
