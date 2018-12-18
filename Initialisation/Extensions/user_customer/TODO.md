@@ -1,3 +1,1 @@
 # TODO
-
-- Reconfigure social network

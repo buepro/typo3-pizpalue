@@ -1,0 +1,7 @@
+#=========================================================#
+# Page object
+#=========================================================#
+
+page {
+   #includeJSFooter.ucGeneral = EXT:user_customer/Resources/Public/JavaScripts/Dist/jquery.general.js
+}

@@ -1,6 +1,6 @@
-#-------------#
-# lib object  #
-#-------------#
+#=========================================================#
+# Lib objects
+#=========================================================#
 
 lib.contentElement = FLUIDTEMPLATE
 lib.contentElement {
@@ -16,17 +16,13 @@ lib.contentElement {
 }
 
 
-#-------------#
-# page object #
-#-------------#
+#=========================================================#
+# Page object
+#=========================================================#
+
 page {
-    includeCSS {
-        #ucCss = EXT:user_customer/Resources/Public/Css/General.css
-        ucLess = EXT:user_customer/Resources/Public/Less/General.less
-        #ucBootstrapLess = EXT:user_customer/Resources/Public/Less/Bootstrap.less
-        #ucPluginsLess = EXT:user_customer/Resources/Public/Less/Plugins.less
-    }
-    #includeJSFooter.ucGeneral = EXT:user_customer/Resources/Public/JavaScripts/General.js
+    #includeCSS.ucGeneralScss = EXT:user_customer/Resources/Public/Scss/custom.scss
+    #includeJSFooter.ucGeneral = EXT:user_customer/Resources/Public/JavaScripts/Dist/jquery.general.min.js
 
     10 {
         layoutRootPaths.3 = {$user_customer.page.fluidtemplate.layoutRootPath}
@@ -35,11 +31,23 @@ page {
     }
 }
 
-# in case more fonts are needed:
-# page.includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family=Exo:700i|Hind:400,700
-# popup.includeCSSLibs.googlewebfont = https://fonts.googleapis.com/css?family=Exo:700i|Hind:400,700
+
+#=========================================================#
+# Various
+#=========================================================#
 
 
-#-------------#
-# various     #
-#-------------#
+#=========================================================#
+# Development settings
+#=========================================================#
+
+[globalString = LIT:1 = {$pizpalue.agency.isDebugMode}]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Develop/setup.typoscript">
+[global]
+
+
+#=========================================================#
+# Customization
+#=========================================================#
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Custom/setup.typoscript">

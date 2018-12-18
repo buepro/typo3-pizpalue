@@ -1,64 +1,33 @@
-# ---------------------------------------------------------- #
-# bootstrap_package font
-# ---------------------------------------------------------- #
+#=========================================================#
+# Admin
+#=========================================================#
 
-plugin.bootstrap_package {
-    settings {
-        less {
-            #google-webfont = "Hind"
-            #google-webfont-weight = 400,700
-        }
-    }
+pizpalue.general {
+    #dateFormat = d.m.Y
+    #timeFormat = H:i
+    #dateTimeFormat = d.m.Y H:i
 }
-#pizpalue.style.google-webfontfamily = {$plugin.bootstrap_package.settings.less.google-webfont}:{$plugin.bootstrap_package.settings.less.google-webfont-weight}
-
-
-# ---------------------------------------------------------- #
-# bootstrap_package colors
-# ---------------------------------------------------------- #
-
-plugin.bootstrap_package {
-    settings {
-        less {
-            #border-radius-base = 0px
-
-            #body-bg = #fff
-            #navbar-default-bg =
-            #footer-bg =
-
-            #text-color = @gray-dark
-            #link-color = @brand-primary
-            #link-hover-color = darken(@link-color, 15%)
-
-            #navbar-height = 70px
-            #navbar-margin-bottom = @line-height-computed
-            #navbar-default-color = #333
-            #navbar-default-border = darken(@navbar-default-bg, 6.5%)
-            #navbar-default-link-color =
-            #navbar-default-link-hover-color =
-            #navbar-default-link-active-color =
-            #navbar-default-brand-color = @navbar-default-link-color
-            #navbar-default-brand-hover-color = @navbar-default-link-active-color
-            #navbar-default-toggle-hover-bg = transparent
-            #navbar-default-toggle-icon-bar-bg = @navbar-default-link-color
-            #navbar-default-toggle-border-color = transparent
-
-            #jumbotron-color = contrast(@brand-primary)
-            #link-color = @brand-complementary
-            #dropdown-link-hover-color = contrast(@brand-primary)
-            #btn-primary-color = contrast(@brand-primary)
-
-            #cookieconsent-zindex = 1080;
-            #cookieconsent-bg = @gray-lighter;
-            #cookieconsent-color = contrast(@cookieconsent-bg, black, white, 43%);
-            #cookieconsent-link-color = @brand-primary;
-        }
-    }
+pizpalue.agency {
+    #reference = <span class="pp-agency-reference">Eine Webseite von <a href="https://www.buechler.pro" title="buechler.pro | TYPO3-Webseiten ohne Grenzen, SEO, Informatik" target="_blank">buechler.pro</a></span>
+    #isDebugMode = 0
+    #isMaintenancePage = 0
 }
 
-# ---------------------------------------------------------- #
-# templates
-# ---------------------------------------------------------- #
+
+#=========================================================#
+# Customer
+#=========================================================#
+
+pizpalue.customer {
+    #commonName = Allgemeiner Kundenname
+    #commonEmail =
+}
+
+
+#=========================================================#
+# Templates
+#=========================================================#
+
 user_customer {
     page.fluidtemplate {
         #layoutRootPath = EXT:user_customer/Resources/Private/Layouts/Page/
@@ -73,181 +42,234 @@ user_customer {
 }
 
 
-# ---------------------------------------------------------- #
-# agency
-# ---------------------------------------------------------- #
+#=========================================================#
+# Features
+#=========================================================#
 
-#pizpalue.agency.isDebugMode = 1
-#pizpalue.agency.reference = <span class="pp-agency-reference">Eine Webseite von <a href="http://www.buechler.pro/" title="buechler.pro | TYPO3 Webseiten" target="_blank">buechler.pro</a></span>
-
-
-# ---------------------------------------------------------- #
-# customer
-# ---------------------------------------------------------- #
-
-pizpalue.customer {
-    #commonName = Allgemeiner Kundenname
-    #commonEmail = info@domain.ch
+pizpalue.features {
+    #scrollAnimation.enable = 1
+    #fontAwesome.enable = 0
+    #useStyle = 1
 }
 
 
-# ---------------------------------------------------------- #
-# frame
-# ---------------------------------------------------------- #
+#=========================================================#
+# Frame
+#=========================================================#
 
+plugin.bootstrap_package.settings.scss {
+    #navbar-height = 100px
+}
 pizpalue.frame {
+    #showFooter = 1
     revealFooter = 1
 }
 
-[treeLevel = 0]
-pizpalue.menu.main {
-    navigationstyle = default-transition
-    navigationtype = top
+
+#=========================================================#
+# Menu
+#=========================================================#
+
+page {
+    theme {
+        navigation {
+            style = default
+            type =
+        }
+        meta.enable = 0
+        language.enable = 1
+    }
 }
+
+[treeLevel = 0]
+    page {
+        theme {
+            navigation {
+                style = default-transition
+                type = top
+            }
+        }
+    }
 [end]
 
 
-# ---------------------------------------------------------- #
-# colors
-# ---------------------------------------------------------- #
+#=========================================================#
+# Font
+#=========================================================#
 
-plugin.bootstrap_package.settings.less {
-    #brand-primary = #1E9A00
-    #brand-secundary = #5300FF
-    #brand-complementary = #FF0000
-}
-
-# ---------------------------------------------------------- #
-# logo
-# ---------------------------------------------------------- #
-
-pizpalue.logo {
-    #file = EXT:user_customer/Resources/Public/Images/logo.png
-    #fileInverted = EXT:user_customer/Resources/Public/Images/logo_white.png
-    #width = 300
-    #height = 300
+page.theme.googleFont {
+    #enable = 1
+    #font = Source Sans Pro
+    #weight = 300,400,700
 }
 
 
-# ---------------------------------------------------------- #
-# menu
-# ---------------------------------------------------------- #
+#=========================================================#
+# Colors
+#=========================================================#
 
-pizpalue.menu {
-
-    main {
-        #navigationstyle = default-transition
-        #navigationtype = top
-    }
-
-    meta {
-        #enable = 1
-        #navigationValue = 66
-        #navigationType = directory
-    }
-
-    language {
-        #enable = 1
-        #languageValue = 0,1,2
-        #codeOptionSplit = de || fr || en
-        #linkOptionSplit = &L=0 || &L=1 || &L=2
-        #useSrLanguageMenu = 0
-    }
-
+plugin.bootstrap_package.settings.scss {
+    #primary = #0083C4
+    #secondary = adjust-hue($primary, -33)
+    #complementary = lighten(desaturate(adjust-hue(#0083c4, -167), 10%), 12%)
+    #body-bg = #fff
+    #navbar-light-bg = #e8e8e8
+    #footer-bg = #333
+    #footer-meta-bg = darken($footer-bg, 3%)
+    #navbar-light-color = lighten($navbar-light-active-color,15%)
+    #navbar-light-hover-color = $navbar-light-active-color
+    #navbar-light-hover-bg = transparent
+    #navbar-light-active-color = #333
+    #navbar-light-active-bg = transparent
+    #navbar-light-disabled-color = #ccc
+    #navbar-light-disabled-bg = transparent
+    #footer-color = pp-contrast($footer-bg)
+    #footer-link-color = mix($primary,$footer-color,30%)
+    #footer-link-hover-color = lighten($footer-link-color, 10%)
+    #footer-link-hover-decoration = none
+    #footer-meta-color = pp-contrast($footer-meta-bg)
+    #footer-meta-link-color = mix($primary,$footer-meta-color,30%)
+    #footer-meta-link-hover-color = lighten($footer-meta-link-color, 10%)
+    #footer-meta-link-hover-decoration = none
 }
 
-#plugin.bootstrap_package.settings.less.navbar-height = 100px
+
+#=========================================================#
+# Logo
+#=========================================================#
+
+page.logo {
+    #file = EXT:user_customer/Resources/Public/Images/logo.svg
+    #height = 140
+    #width = 390
+    #fileInverted = EXT:user_customer/Resources/Public/Images/logo_inv.svg
+    #alt = {$pizpalue.customer.commonName}
+    #linktitle = {$pizpalue.customer.commonName}
+}
 
 
-# ---------------------------------------------------------- #
-# appicons
-# ---------------------------------------------------------- #
+#=========================================================#
+# App icon
+#=========================================================#
+# @see https://realfavicongenerator.net/
+
+#page.favicon.file = AppIcon
 
 pizpalue.appIcon {
-
-    headerData (
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=zXd0483NpM">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=zXd0483NpM">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=zXd0483NpM">
-<link rel="manifest" href="/manifest.json?v=zXd0483NpM">
-<link rel="mask-icon" href="/safari-pinned-tab.svg?v=zXd0483NpM" color="#1e9a00">
-<link rel="shortcut icon" href="/favicon.ico?v=zXd0483NpM">
-<meta name="theme-color" content="#1e9a00">
-     )
-
+    #headerData = <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=KmneB3rzMw"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=KmneB3rzMw"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=KmneB3rzMw"><link rel="manifest" href="/site.webmanifest?v=KmneB3rzMw"><link rel="mask-icon" href="/safari-pinned-tab.svg?v=KmneB3rzMw" color="#5bbad5"><link rel="shortcut icon" href="/favicon.ico?v=KmneB3rzMw"><meta name="apple-mobile-web-app-title" content="Piz Pal&uuml;"><meta name="application-name" content="Piz Pal&uuml;"><meta name="msapplication-TileColor" content="#f28c0f"><meta name="theme-color" content="#ffffff">
+    #insertMetaTags = 0
+    #folder = EXT:user_customer/Resources/Public/AppIcons
+    #appName = {$pizpalue.customer.commonName}
+    #androidThemeColor = {$pizpalue.colors.primary}
 }
 
 
-# ---------------------------------------------------------- #
-# storage
-# ---------------------------------------------------------- #
+#=========================================================#
+# Social networks
+#=========================================================#
+
+page.theme {
+    socialmedia {
+        #enable = 0
+        channels {
+            #facebook.url = https://www.facebook.com/typo3/
+            #twitter.url = https://twitter.com/typo3
+            #instagram.url = https://www.instagram.com/
+            #github.url = https://github.com/buepro/typo3-pizpalue
+            #googleplus.url =
+            #linkedin.url = https://www.linkedin.com/
+            #xing.url = https://www.xing.com/
+            #youtube.url = https://www.youtube.com/user/typo3
+            #vimeo.url =
+            #pinterest.url = https://www.pinterest.com/
+
+            #:::::::::::::::::::::::
+            #: To add a new social network the below TS is needed and the icon font needs to be modified
+            #.
+            some_new {
+                label = New social network
+                url =
+            }
+        }
+    }
+}
+
+
+#=========================================================#
+# Cookie consent
+#=========================================================#
+
+page.theme.cookieconsent {
+    #enable = 1
+    #layout = basic
+    #position = bottom
+    #content.href =
+    #static = 0
+    #revokable = 0
+    #location = 0
+    law {
+        #countryCode =
+        #regionalLaw = 1
+    }
+    #type = info
+    #cookie.expiryDays = 365
+}
+
+
+#=========================================================#
+# Storage
+#=========================================================#
 
 pizpalue.storage {
-
     #feUserPid = 2
-
 }
 
 
-# ---------------------------------------------------------- #
-# seo
-# ---------------------------------------------------------- #
+#=========================================================#
+# Animation
+#=========================================================#
 
-pizpalue.seo {
-    #metaDescription =
-    #metaKeywords =
-    #metaAuthor =
-    #google.siteVerification =
-    #google.trackingID =
-}
-
-
-# ---------------------------------------------------------- #
-# features
-# ---------------------------------------------------------- #
-
-pizpalue.features {
-	#useStyle = 1
-	#useCeAnimation = 0
-    scrollAnimation {
-        #enable = 0
-        scrollAnimation.initParams = easing: 'ease-in-out-sine', disable: 'phone'
+pizpalue.animation {
+    1 {
+        classes =
+        style =
+        attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
+    }
+    2 {
+        classes =
+        style =
+        attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
+    }
+    3 {
+        classes =
+        style =
+        attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
+    }
+    4 {
+        classes =
+        style =
+        attributes = data-aos="flip-up" data-aos-anchor-placement="center-bottom"
     }
 }
 
 
-# ---------------------------------------------------------- #
-# social icons
-# ---------------------------------------------------------- #
+#=========================================================#
+# SEO
+#=========================================================#
 
-pizpalue.customer.socialNetwork {
-    # uncomment to inactivate social link
-    #facebook.link =
-    #twitter.link =
-    #linkedin.link =
-    #pinterest.link =
-    #instagram.link =
-    #xing.link =
-
-    custom1 {
-    link = https://github.com/buechlerpro/typo3-pizpalue
-        linkTitle = Besuchen Sie das pizpalue-Projekt bei Github
-        # ion version 3: https://ionicframework.com/docs/ionicons/
-        iconIonClass = logo-github
-        # https://fontawesome.com/icons?d=gallery
-        iconFaClass = fab fa-github
-    }
+page {
+    #meta.google-site-verification =
+    #tracking.google.trackingID = {$pizpalue.seo.google.trackingID}
+}
+page.meta {
+    #description =
+    #keywords =
+    #author =
 }
 
 
-# ---------------------------------------------------------- #
-# various
-# ---------------------------------------------------------- #
+#=========================================================#
+# Customization
+#=========================================================#
 
-plugin.bootstrap_package_contentelements.header.defaultHeaderType = 1
-page.theme.cookieconsent {
-    enable = 0
-    content.href = 10
-}
-
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Custom/constants.typoscript">
