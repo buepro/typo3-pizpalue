@@ -16,11 +16,21 @@ defined('TYPO3_MODE') or die('Access denied.');
  * Configure BackendLayout
  */
 if (1) {
-    // Add BackendLayouts BackendLayouts for the BackendLayout DataProvider
-    $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
-    );
-    $bootstrapPackageConfiguration =  $extensionConfiguration->get('bootstrap_package');
+    if (class_exists(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)) {
+        // Add BackendLayouts BackendLayouts for the BackendLayout DataProvider
+        $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+            \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+        );
+        $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
+
+    } else {
+        // Fallback for TYPO3 V8
+        // @extensionScannerIgnoreLine
+        $bootstrapPackageConfiguration = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_package'];
+        if (!is_array($bootstrapPackageConfiguration)) {
+            $bootstrapPackageConfiguration = unserialize($bootstrapPackageConfiguration);
+        }
+    }
     if (!$bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">'

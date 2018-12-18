@@ -8,7 +8,6 @@
 
 namespace Buepro\Pizpalue\Slot;
 
-use TYPO3\CMS\Core\Core\Environment;
 
 class ExtensionInstallUtility
 {
@@ -23,7 +22,14 @@ class ExtensionInstallUtility
     {
         if ($extensionKey !== 'pizpalue') return;
 
-        $emconfFile = Environment::getPublicPath() . '/typo3conf/ext/pizpalue/ext_emconf.php';
+        if (class_exists(\TYPO3\CMS\Core\Core\Environment::class)) {
+            $emconfFile = TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/typo3conf/ext/pizpalue/ext_emconf.php';
+        } else {
+            // Fallback for TYPO3 V8
+            // @extensionScannerIgnoreLine
+            $emconfFile = PATH_site . 'typo3conf/ext/pizpalue/ext_emconf.php';
+        }
+
         $content = file_get_contents($emconfFile);
         $commentToken = '// commented by install process';
         if (strstr($content,$commentToken) === false) {
