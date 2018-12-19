@@ -84,7 +84,7 @@ page {
 [globalString = LIT:1 = {$pizpalue.features.useStyle}]
    page {
       includeCSS {
-         pizpalueCustomScss = EXT:pizpalue/Resources/Public/Scss/Custom/custom.scss
+         pizpalueCustom = EXT:pizpalue/Resources/Public/Scss/Custom/custom.scss
       }
    }
 [global]

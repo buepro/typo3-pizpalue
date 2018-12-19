@@ -7,10 +7,7 @@ page {
 [globalString = LIT:1={$pizpalue.features.useStyle}]
    page {
       includeCSS {
-         //PizpalueGeneralLess = EXT:pizpalue/Resources/Public/Less/Custom/general.less
-         //PizpalueMenuLess = EXT:pizpalue/Resources/Public/Less/Custom/menu.less
-         //PizpalueFormsLess = EXT:pizpalue/Resources/Public/Less/Custom/forms.less
-         //PizpalueClassesLess = EXT:pizpalue/Resources/Public/Less/Custom/classes.less
+         pizpalueCustom = EXT:pizpalue/Resources/Public/Less/Custom/custom.less
       }
    }
 [global]
