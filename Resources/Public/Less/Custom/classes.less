@@ -1,0 +1,126 @@
+/********************************/
+/* Internal classes             */
+/********************************/
+
+/* margin */
+.pp-notopmargin {
+    margin-top: 0;
+}
+.pp-novertmargin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.pp-topspace {
+    margin-top: 0.5em;
+}
+.pp-rightspace {
+    margin-right: 0.5em;
+}
+/********************************/
+/* Public classes               */
+/********************************/
+
+//
+// external: micro clearfix hack
+//
+.cf:before,
+.cf:after,
+.pp-cf:before,
+.pp-cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after,.pp-cf:after, .clear {
+    clear: both;
+}
+//
+// CE background, spacing
+//
+.pp-ce-background {
+    background-origin: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.pp-ce-bgfixed {
+    background-attachment: fixed;
+    @media (hover: none) {
+        & {
+            background-attachment: initial;
+        }
+    }
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-margin {
+    margin: 3em;
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-padding {
+    padding: 3em;
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-bgwhite70 {
+    background-color: rgba(white, 0.7);
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-bggrey70 {
+    background-color: rgba(gray, 0.7);
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-bgblack70 {
+    background-color: rgba(black, 0.7);
+}
+//
+// Content background, spacing
+//
+.pp-content-margin {
+    margin: 3em;
+}
+.pp-content-padding {
+    padding: 3em;
+}
+.pp-content-bgwhite70 {
+    &.pp-content, > .frame-container > .frame-inner {
+        background-color: rgba(white, 0.7);
+    }
+}
+.pp-content-bggrey70 {
+    &.pp-content, > .frame-container > .frame-inner {
+        background-color: rgba(gray, 0.7);
+    }
+}
+.pp-content-bgblack70 {
+    &.pp-content, > .frame-container > .frame-inner {
+        background-color: rgba(black, 0.7);
+    }
+}
+//
+// Gallery items
+//
+.pp-gallery-item-left {
+    .gallery-item {
+        text-align: left;
+    }
+}
+.pp-gallery-item-right {
+    .gallery-item {
+        text-align: left;
+    }
+}
+.pp-gallery-item-join {
+    overflow: hidden;
+    .gallery-item {
+        margin: 0;
+        padding: 0;
+        figure {
+            margin-bottom: auto;
+        }
+    }
+}
+//
+// Various
+//
+.pp-label-dataprotection {
+    display: none;
+}

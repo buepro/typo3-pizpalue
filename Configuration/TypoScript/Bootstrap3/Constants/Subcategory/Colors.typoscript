@@ -75,7 +75,7 @@ plugin.bootstrap_package.settings.less {
 
    footer-link-color >
    # cat=6040/1035/1084; type=string; label=Footer link color
-   footer-link-color = mix(@primary,@footer-color)
+   footer-link-color = mix(@brand-primary,@footer-color)
 
    footer-link-hover-color >
    # cat=6040/1035/1086; type=string; label=Footer link hover color
@@ -107,7 +107,7 @@ plugin.bootstrap_package.settings.less {
 plugin.bootstrap_package.settings.less {
 
    pp-tab-v1-background-hover = mix(@pp-tab-v1-background,@pp-tab-v1-active-background)
-   nav-tabs-active-link-hover-color = ppContrast(@pp-tab-v1-background)
+   nav-tabs-active-link-hover-color = contrast(@pp-tab-v1-background)
    nav-tabs-active-link-hover-bg = @pp-tab-v1-active-background
    nav-tabs-active-link-hover-border-color = @pp-tab-v1-border-color
    nav-tabs-border-color = @pp-tab-v1-border-color

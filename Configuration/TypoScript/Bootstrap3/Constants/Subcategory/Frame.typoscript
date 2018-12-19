@@ -10,12 +10,3 @@ plugin.bootstrap_package.settings.less {
 
 }
 
-pizpalue.frame {
-   # cat=6030/1030/0020; type=boolean; label=Show footer panel
-   showFooter = 1
-
-   # cat=6030/1030/0030; type=boolean; label=Reveal footer
-   revealFooter = 0
-}
-
-page.theme.footersection.enable = {$pizpalue.frame.showFooter}

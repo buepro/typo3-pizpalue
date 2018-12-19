@@ -19,13 +19,8 @@ call_user_func(
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
-            'Configuration/TypoScript/Bootstrap3/Constants',
-            'Pizpalue - Bootstrap 3 LESS (load less constants only)'
-        );
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
             'Configuration/TypoScript/Bootstrap3/Rendering',
-            'Pizpalue - Bootstrap 3 Rendering'
+            'Pizpalue - Bootstrap 3.x (LESS)'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,

@@ -1,10 +1,16 @@
-// todo: Might be removed after scss has been defined
+page {
+   includeCSS {
+      theme = EXT:pizpalue/Resources/Public/Less/Theme/theme.less
+   }
+}
+
 [globalString = LIT:1={$pizpalue.features.useStyle}]
    page {
       includeCSS {
-         PizpalueMenuLess = EXT:pizpalue/Resources/Public/Less/Menu.less
-         PizpalueFormsLess = EXT:pizpalue/Resources/Public/Less/Forms.less
-         PizpalueGeneralLess = EXT:pizpalue/Resources/Public/Less/General.less
+         //PizpalueGeneralLess = EXT:pizpalue/Resources/Public/Less/Custom/general.less
+         //PizpalueMenuLess = EXT:pizpalue/Resources/Public/Less/Custom/menu.less
+         //PizpalueFormsLess = EXT:pizpalue/Resources/Public/Less/Custom/forms.less
+         //PizpalueClassesLess = EXT:pizpalue/Resources/Public/Less/Custom/classes.less
       }
    }
 [global]

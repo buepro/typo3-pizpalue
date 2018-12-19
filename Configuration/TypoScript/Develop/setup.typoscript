@@ -34,7 +34,7 @@ config {
 #=========================================================#
 page {
    includeCSS {
-      PizpalueDevelopLess = EXT:pizpalue/Resources/Public/Scss/develop.scss
+      pizpalueDevelop = EXT:pizpalue/Resources/Public/Scss/develop.scss
    }
 
    includeJSFooterlibs {
@@ -58,4 +58,6 @@ page {
    }
 }
 
-
+[globalString = LIT:1={$pizpalue.general.useLess}]
+   page.includeCSS.pizpalueDevelop = EXT:pizpalue/Resources/Public/Less/develop.less
+[global]
