@@ -78,12 +78,12 @@ lib.pizpalue.gridelements {
       columns.101 < .columns.default
       columns.101.wrap.replacement {
          1.replace.field = flexform_defaultColumn1
-         2.repace.field = flexform_customColumn1
+         2.replace.field = flexform_customColumn1
       }
       columns.102 < .columns.default
       columns.102.wrap.replacement {
          1.replace.field = flexform_defaultColumn2
-         2.repace.field = flexform_customColumn2
+         2.replace.field = flexform_customColumn2
       }
    }
 
@@ -92,7 +92,7 @@ lib.pizpalue.gridelements {
       columns.103 < .columns.default
       columns.103.wrap.replacement {
          1.replace.field = flexform_defaultColumn3
-         2.repace.field = flexform_customColumn3
+         2.replace.field = flexform_customColumn3
       }
    }
 
@@ -101,7 +101,7 @@ lib.pizpalue.gridelements {
       columns.104 < .columns.default
       columns.104.wrap.replacement {
          1.replace.field = flexform_defaultColumn4
-         2.repace.field = flexform_customColumn4
+         2.replace.field = flexform_customColumn4
       }
    }
 
