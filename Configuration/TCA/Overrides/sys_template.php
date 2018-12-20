@@ -24,8 +24,8 @@ call_user_func(
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
-            'Configuration/TypoScript/Upgrade',
-            'Pizpalue - Upgrade'
+            'Configuration/TypoScript/Upgrade9',
+            'Pizpalue - Upgrade 9'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,

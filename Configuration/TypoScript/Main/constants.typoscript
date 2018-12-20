@@ -15,9 +15,9 @@
 * on where each parameter is used.
 *
 * Considering the above mentioned points parameters that are already available in the bootstrap_package are used
-* directly using a different category and subcategory assignement. Like this parameters can be grouped to better serve.
-* Unfortunatly the constant editor seems to be a bit buggy when already introduced constants are redeclared. Two
-* work arounds were encountered.
+* directly using a different category and subcategory assignment. Like this parameters can be grouped to better serve.
+* Unfortunately the constant editor seems to be a bit buggy when already introduced constants are redeclared. Two
+* workarounds were encountered.
 *
 * Work around 1:
 * Define a dummy parameter before using subcategory assignment (see "todo 181011-1859")
@@ -25,10 +25,10 @@
 * Work around 2:
 * In case a constant is already defined it needs to be cleared (>) for the subcategory assignment to work.
 *
-* As well it has been observed that the order from the main categories depends on the hirarchy where a constant has been
-* defined. In case "some.hirarchy.paramA" has already been defined and belongs to categoryA1 then categoryB1 that would
-* be assigned to "some.other.hirarchy.paramB" would be listed after categoryA1. It would be desirable to have categoryB1
-* listed after all categories belonging to group A (categoryA1, categoryA2, etc.)
+* As well it has been observed that the order from the main categories depends on the hierarchy where a constant has
+* been defined. In case "some.hierarchy.paramA" has already been defined and belongs to categoryA1 then categoryB1 that
+* would be assigned to "some.other.hierarchy.paramB" would be listed after categoryA1. It would be desirable to have
+* categoryB1 listed after all categories belonging to group A (categoryA1, categoryA2, etc.)
 *
 * ======================================================================================================================
 */
@@ -50,7 +50,6 @@
 # customcategory=6050=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerSocial
 # customcategory=6060=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerVarious
 # customcategory=6070=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerPlugins
-
 
 #---------------------------------------------------------#
 # Subcategory (item to be configured)
@@ -82,7 +81,12 @@
 #---------------------------------------------------------#
 
 // todo 181011-1859: dummy constant might be removed (needed to correctly assign subcategories in constant editor)
-plugin.bootstrap_package.settings.scss.dummyPizpalue = dummyPizpalue()
+styles.dummyPizpalue = dummyPizpalue
+page.dummyPizpalue = dummyPizpalue
+config.dummyPizpalue = dummyPizpalue
+plugin.dummyPizpalue = dummyPizpalue
+pizpalue.dummyPizpalue = dummyPizpalue
+
 
 #:::::::::::::::::::::::
 #: Categories

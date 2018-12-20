@@ -33,12 +33,14 @@
 # Customer
 #---------------------------------------------------------#
 
-#cat=6030/1110/010; type=string; label= Favicon: Favicon file. Use "AppIcon" to define it by app icon header data.
+page.favicon.file >
+# cat=6030/1110/010; type=string; label= Favicon: Favicon file. Use "AppIcon" to define it by app icon header data.
 page.favicon.file = AppIcon
 
 pizpalue.appIcon {
 
-   #cat=6030/1110/020; type=string; label=Header data:Create the resources externally (e.g. realfavicongenerator.net) and copy the nedded header data without line breaks here. To get nicer source code paste the code into the constant editor.
+   headerData >
+   # cat=6030/1110/020; type=string; label=Header data:Create the resources externally (e.g. realfavicongenerator.net) and copy the nedded header data without line breaks here. To get nicer source code paste the code into the constant editor.
    headerData = <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=KmneB3rzMw"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=KmneB3rzMw"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=KmneB3rzMw"><link rel="manifest" href="/site.webmanifest?v=KmneB3rzMw"><link rel="mask-icon" href="/safari-pinned-tab.svg?v=KmneB3rzMw" color="#5bbad5"><link rel="shortcut icon" href="/favicon.ico?v=KmneB3rzMw"><meta name="apple-mobile-web-app-title" content="Piz Pal&uuml;"><meta name="application-name" content="Piz Pal&uuml;"><meta name="msapplication-TileColor" content="#f28c0f"><meta name="theme-color" content="#ffffff">
 
 }
@@ -50,15 +52,19 @@ pizpalue.appIcon {
 
 pizpalue.appIcon {
 
+   insertMetaTags >
    #cat=6060/1110/030; type=boolean; label=Insert meta tags
    insertMetaTags = 0
 
+   folder >
    #cat=6060/1110/040; type=string; label=App icon folder (used when insertMetaTags=1)
    folder = EXT:pizpalue/Resources/Public/AppIcons
 
+   appName >
    #cat=6060/1110/050; type=string; label=App name (used when insertMetaTags=1)
    appName = {$pizpalue.customer.commonName}
 
+   androidThemeColor >
    #cat=6060/1110/060; type=string; label=Android theme color (used when insertMetaTags=1)
    androidThemeColor = {$pizpalue.colors.primary}
 

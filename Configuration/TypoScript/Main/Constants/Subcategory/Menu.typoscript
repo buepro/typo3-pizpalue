@@ -44,6 +44,7 @@ page {
          # cat=6060/1060/0130; type=options[List=list, Directory=directory]; label=Meta menu navigation type
          navigationType = directory
 
+         includeNotInMenu >
          # cat=6060/1060/0140; type=boolean; label=Meta Navigation include items not in menu
          includeNotInMenu = 1
       }
@@ -58,6 +59,7 @@ page {
 
 pizpalue.menu {
    language {
+      useSrLanguageMenu >
       # cat=6060/1060/0260; type=boolean; label=Use extension sr_language_menu
       useSrLanguageMenu = 0
    }

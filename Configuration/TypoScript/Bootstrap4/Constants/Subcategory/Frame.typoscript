@@ -11,9 +11,11 @@ plugin.bootstrap_package.settings.scss {
 }
 
 pizpalue.frame {
+   showFooter >
    # cat=6030/1030/0020; type=boolean; label=Show footer panel
    showFooter = 1
 
+   revealFooter >
    # cat=6030/1030/0030; type=boolean; label=Reveal footer
    revealFooter = 0
 }

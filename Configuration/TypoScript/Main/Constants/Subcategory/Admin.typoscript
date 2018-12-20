@@ -3,12 +3,15 @@
 #---------------------------------------------------------#
 
 pizpalue.general {
+   dateFormat >
    # cat=6010/1000/0010; type=string; label=Date format
    dateFormat = d.m.Y
 
+   timeFormat >
    # cat=6010/1000/0020; type=string; label=Time format
    timeFormat = H:i
 
+   dateTimeFormat >
    # cat=6010/1000/0030; type=string; label=Datetime format
    dateTimeFormat = d.m.Y H:i
 }
@@ -19,12 +22,15 @@ pizpalue.general {
 #---------------------------------------------------------#
 
 pizpalue.agency {
+   reference >
    # cat=6010/1010/0010; type=string; label=Agency reference:HTML used to create a reference to the agency
    reference = <span class="pp-agency-reference">Eine Webseite von <a href="https://www.buechler.pro" title="buechler.pro | TYPO3-Webseiten ohne Grenzen, SEO, Informatik" target="_blank">buechler.pro</a></span>
 
+   isDebugMode >
    # cat=6010/1010/0020; type=boolean; label=Activate debug mode?
    isDebugMode = 0
 
+   isMaintenancePage >
    # cat=6010/1010/0030; type=boolean; label=Is maintenance page?
    isMaintenancePage = 0
 }

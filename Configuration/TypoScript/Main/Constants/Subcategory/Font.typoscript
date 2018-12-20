@@ -3,18 +3,22 @@
 #---------------------------------------------------------#
 
 page.theme.googleFont {
+   enable >
    # cat=6040/1033/1006; type=boolean; label=Enable
    enable = 1
 
+   font >
    # cat=6040/1033/1010; type=string; label=Google Webfont
    font = Source Sans Pro
 
+   weight >
    # cat=6040/1033/1012; type=string; label=Google Webfont Weights: Comma separated list of font weights
    weight = 300,400,700
 }
 
 // todo: see bootstrap_package ts setup (includeCSSLibs.googlewebfont)
 pizpalue.style {
+   google-webfontfamily >
    # cat=6040/1033/1014; type=string; label=Google Webfont family declaration: Alter in case more than one font family are used
    google-webfontfamily = {$page.theme.googleFont.font}:{$page.theme.googleFont.weight}
 }

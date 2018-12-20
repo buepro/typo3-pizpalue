@@ -4,11 +4,13 @@
 
 pizpalue.features {
    scrollAnimation {
+      enable >
       # cat=6030/1510/0302; type=boolean; label=Enable content element scroll animation:If selected content element scroll animation will be available. This feature might be required by content animations
       enable = 1
    }
 
    fontAwesome {
+      enable >
       # cat=6030/1510/0302; type=boolean; label=Enable embedding from "Font Awesome"
       enable = 0
    }
@@ -20,19 +22,24 @@ pizpalue.features {
 #---------------------------------------------------------#
 
 pizpalue.features {
+   useStyle >
    # cat=6060/1510/0110; type=boolean; label=Use style:If selected a custom style declarations will be included
    useStyle = 1
 
    scrollAnimation {
+      frame1Attributes >
       # cat=6060/2990/0320; type=string; label=Custom scroll animation frame 1 attributes (depreciated as of 9.0)
       frame1Attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
 
+      frame2Attributes >
       # cat=6060/2990/0340; type=string; label=Custom scroll animation frame 2 attributes (depreciated as of 9.0)
       frame2Attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
 
+      frame3Attributes >
       # cat=6060/2990/0350; type=string; label=Custom scroll animation frame 3 attributes (depreciated as of 9.0)
       frame3Attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
 
+      initParams >
       # cat=6060/2990/0360; type=string; label= Scroll animation init parameters (depreciated as of 9.0)
       initParams = easing: 'ease-in-out-sine', once: true
    }
