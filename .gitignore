@@ -1,5 +1,6 @@
 .idea
 *.zip
+.php_cs.cache
 Initialisation/data.xml
 Initialisation/data.xml.files
 Lab

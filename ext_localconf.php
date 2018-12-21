@@ -22,7 +22,6 @@ if (1) {
             \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
         );
         $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
-
     } else {
         // Fallback for TYPO3 V8
         // @extensionScannerIgnoreLine
@@ -76,6 +75,23 @@ if (TYPO3_MODE === 'BE' && !class_exists(\TYPO3\CMS\Core\Configuration\Extension
     if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'])) {
         $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend'] = serialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['backend']);
     }
+}
+
+/**
+ * Language menu for TYPO3 8
+ */
+if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) < 9000000) {
+    TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(implode(LF, [
+        'config.language.default {',
+        '    enable = 1',
+        '    title = German',
+        '    nav_title = Deutsch',
+        '    locale = de_CH.UTF-8',
+        '    language_isocode = de',
+        '    hreflang = de-CH',
+        '    direction = ltr',
+        '}'
+    ]));
 }
 
 /**
