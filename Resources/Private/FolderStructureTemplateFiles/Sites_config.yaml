@@ -1,0 +1,91 @@
+rootPageId: 1
+base: /
+baseVariants: {  }
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: de
+    locale: de_CH.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-CH
+    direction: ltr
+    flag: de
+  -
+    title: Français
+    enabled: true
+    languageId: '1'
+    base: /fr/
+    typo3Language: fr
+    locale: fr_CH.UTF-8
+    iso-639-1: fr
+    navigationTitle: Français
+    hreflang: fr-CH
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '2,0'
+    flag: fr
+  -
+    title: English
+    enabled: true
+    languageId: '2'
+    base: /en/
+    typo3Language: default
+    locale: en_GB.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-GB
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: gb
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=5'
+routes: {  }
+routeEnhancers:
+  NewsPluginDetail:
+    type: Extbase
+    limitToPages:
+      - 105
+    extension: News
+    plugin: Pi1
+    routes:
+      -
+        routePath: '/{news_title}'
+        _controller: 'News::detail'
+        _arguments:
+          news_title: news
+    defaultController: 'News::detail'
+    aspects:
+      news_title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment
+  NewsPluginList:
+    type: Extbase
+    limitToPages:
+      - 106
+    extension: News
+    plugin: Pi1
+    routes:
+      -
+        routePath: '/{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+    defaultController: 'News::list'
+    defaults:
+      page: '0'
+    requirements:
+      page: \d+
+    aspects:
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
