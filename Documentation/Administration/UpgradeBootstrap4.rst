@@ -16,12 +16,22 @@ Since the preprocessor parser provided by the bootstrap_package doesn't substitu
 requires some manual intervention.
 
 
+.. _administration_upgrade_bottstrap4_staticTemplates:
+
+Static templates
+================
+
+Remove the static templates "Bootstrap Package: Bootstrap 3.x (LESS)", "Pizpalue - Bootstrap 3.x (LESS)" as well as
+all extensions that might use Less-constants (e.g. user_customer).
+
+
 .. _administration_upgrade_bottstrap4_reviewConstants:
 
 Review constants
 ================
 
-The following table lists all the bootstrap constants used by the distribution that might need to be reviewed:
+The following table lists all the bootstrap constants used by the distribution that might need to be reviewed. Constants
+in italic changed name.
 
 Namespace
 ---------
@@ -32,10 +42,10 @@ Bootstrap 3                               Bootstrap 4
 (plugin.bootstrap_package.settings.less)  (plugin.bootstrap_package.settings.scss)
 ========================================= =========================================
 
-Category "customer base"
-------------------------
+Category "PIZPALUE: CUSTOMER BASE"
+----------------------------------
 
-Subcategory "colors"
+Subcategory "Colors"
 ~~~~~~~~~~~~~~~~~~~~
 
 ========================================= =========================================
@@ -49,7 +59,7 @@ body-bg                                   body-bg
 footer-bg                                 footer-bg
 ========================================= =========================================
 
-Subcategory "frame"
+Subcategory "Frame"
 ~~~~~~~~~~~~~~~~~~~
 
 ========================================= =========================================
@@ -58,10 +68,10 @@ Bootstrap 3                               Bootstrap 4
 navbar-height                             navbar-height
 ========================================= =========================================
 
-Category "customer style"
--------------------------
+Category "PIZPALUE: CUSTOMER STYLE"
+-----------------------------------
 
-Subcategory "colors"
+Subcategory "Colors"
 ~~~~~~~~~~~~~~~~~~~~
 
 ========================================= =========================================
@@ -84,13 +94,9 @@ pp-tab-v1-border-color                    pp-tab-v1-border-color
 ========================================= =========================================
 
 
-.. _administration_upgrade_bottstrap4_reviewContent:
+.. _administration_upgrade_bottstrap4_adaptCustomerAdjustments:
 
-Review content
-==============
+Adapt customer related adjustments
+==================================
 
-========================================= =========================================================
-Element/component                         Replacement
-========================================= =========================================================
-Frame Jumbotron                           Has been dropped. Color background might be used instead
-========================================= =========================================================
+In case customer adjustments were using Less they need to be converted to CSS or Scss.

@@ -30,14 +30,15 @@ render the image on top of the text (`see example <https://www.pizpalue.buechler
    News template to render image on top
 
 
-.. _user-inlineLocalization:
+.. _user-data-getText:
 
-Inline localization
-===================
+Data from type getText
+======================
 
-Sometimes it might be handy to have a text used at different locations available
-in several languages. For this users might reference a translated text by using
-curly brackets within the editor (`see example <https://www.pizpalue.buechler.pro/das-plus/lokalisierung/>`__):
+The `getText data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Index.html#gettext>`__ allows
+to get various data from a web site. As an example a translated text might be retrieved depending on the currently
+selected page language. For this users might reference data by using curly brackets within the editor
+(`see example <https://www.pizpalue.buechler.pro/das-plus/gestaltung/attribute/wissenswertes>`__):
 
 .. figure:: ../Images/User/InlineLocalization.jpg
    :alt: Use of localized text within the editor
@@ -57,7 +58,8 @@ Piz Palue classes
 ============================= =============================================================================
 Class                         Usage
 ============================= =============================================================================
-pp-label-dataprotection       Used in wrapper grid element to define a replacement text for a data
+pp-cf                         Micro clearfix hack
+pp-label-dataprotection       Used in content element to define a replacement text for a data
                               protection notice check box (see contact page)
 pp-parent-height              Elements using this class will get the same height as their parent element
 pp-row-height                 Elements in a row using this class will have the same height
@@ -68,9 +70,13 @@ pp-row-child-height           Elements in a row using this class will have their
 pp-ce-background              Centers the background and sizes it to cover the area.
 pp-ce-bgfixed                 Fixes the background. The result is a parallax effect. Due to mobile devices
                               not supporting this feature fully it is generally disabled on mobile devices.
-pp-ce-margin                  Applies a margin to the container
-pp-ce-padding                 Applies a padding to the container
-pp-ce-bgwhite70               Applies a white background with 70% opacity
-pp-ce-gray70                  Applies a gray background with 70% opacity
-pp-ce-bgblack70               Applies a black background with 70% opacity
+pp-content-margin             Applies a margin to the container
+pp-content-padding            Applies a padding to the container
+pp-content-bgwhite70          Applies a white background with 70% opacity
+pp-content-bggrey70           Applies a grey background with 70% opacity
+pp-content-bgblack70          Applies a black background with 70% opacity
+pp-gallery-item-left          Aligns the gallery items (e.g. images) to the left
+pp-gallery-item-right         Aligns the gallery items to the right
+pp-gallery-item-join          Joins the gallery items by removing any margin and padding
 ============================= =============================================================================
+

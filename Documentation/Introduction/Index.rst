@@ -20,9 +20,7 @@ Selected third party extensions further improve the user experience. As a result
 the content might be flexibly arranged in columns, registers or accordions where images
 might be presented in galleries or sliders.
 
-Furthermore everything is on board to start search engine optimization.
-
-Discover the functionality at the `demo site <https://www.pizpalue.buechler.pro/>`__.
+Discover the functionality by browsing through the `demo site <https://www.pizpalue.buechler.pro/>`__.
 
 Take advantage from the strong TYPO3 community and go for a flexible and independent
 web site.
@@ -37,21 +35,11 @@ web site.
 
    - Georg Ringer for the news system
 
-   - Pascal Mayer for bootstrap_grids
-
-   - Dmitry Dulepov for realurl and dd_googlesitemap
-
    - Boris Schauer, Oliver Oertel for slickcarousel
 
    - Sven Wappler for ws_flexslider
 
    - Robert Breithuber for brt_videourlreplace
-
-   - Stanislas Rolland for sr_language_menu
-
-   - Patrick Broens for url_forwarding
-
-   - Alex Kellner for typoscript2ce
 
 
 .. _screenshots:
@@ -72,6 +60,33 @@ Landing page
 
 ----
 
+Structure elements
+------------------
+
+`See example <https://www.pizpalue.buechler.pro/das-plus/strukturemente>`__
+
+.. figure:: ../Images/Introduction/PizPalue_FlexContentWidthPage.jpg
+   :width: 500px
+   :alt: Page embedding contents covering entire page width
+
+   Page embedding contents covering entire page width
+
+----
+
+Scroll animation
+----------------
+
+`See example <https://www.pizpalue.buechler.pro/das-plus/inhaltselemente/animation>`__
+
+.. figure:: ../Images/Introduction/PizPalue_ScrollAnimationPage.jpg
+   :width: 500px
+   :alt: Page embedding scroll animated content
+
+   Page embedding scroll animated content
+
+
+----
+
 News embedding
 --------------
 
@@ -82,29 +97,3 @@ News embedding
    :alt: Page embedding news
 
    Page embedding news
-
-----
-
-Scroll animation
-----------------
-
-`See example <https://www.pizpalue.buechler.pro/das-plus/stilergaenzungen/>`__
-
-.. figure:: ../Images/Introduction/PizPalue_ScrollAnimationPage.jpg
-   :width: 500px
-   :alt: Page embedding scroll animated content
-
-   Page embedding scroll animated content
-
-----
-
-Flexible content width
-----------------------
-
-`See example <https://www.pizpalue.buechler.pro/das-plus/flexible-inhaltsbreite/>`__
-
-.. figure:: ../Images/Introduction/PizPalue_FlexContentWidthPage.jpg
-   :width: 500px
-   :alt: Page embedding contents covering entire page width
-
-   Page embedding contents covering entire page width
