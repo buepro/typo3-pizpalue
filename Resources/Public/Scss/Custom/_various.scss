@@ -19,6 +19,9 @@ img.pp-nolazyload {
     z-index: 10;
     position: relative;
   }
+  > header {
+    z-index: 12;
+  }
   > div {
     background-color: $body-bg;
   }
