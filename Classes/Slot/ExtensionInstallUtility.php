@@ -1,13 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roman
- * Date: 17/12/2018
- * Time: 13:40
+
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Buepro\Pizpalue\Slot;
-
 
 class ExtensionInstallUtility
 {
@@ -20,7 +20,9 @@ class ExtensionInstallUtility
      */
     public function afterExtensionInstall($extensionKey)
     {
-        if ($extensionKey !== 'pizpalue') return;
+        if ($extensionKey !== 'pizpalue') {
+            return;
+        }
 
         if (class_exists(\TYPO3\CMS\Core\Core\Environment::class)) {
             $emconfFile = TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/typo3conf/ext/pizpalue/ext_emconf.php';
@@ -32,11 +34,10 @@ class ExtensionInstallUtility
 
         $content = file_get_contents($emconfFile);
         $commentToken = '// commented by install process';
-        if (strstr($content,$commentToken) === false) {
-            $content = str_replace("'user_customer'",$commentToken . " 'user_customer'",$content);
-            file_put_contents($emconfFile,$content);
+        if (strstr($content, $commentToken) === false) {
+            $content = str_replace("'user_customer'", $commentToken . " 'user_customer'", $content);
+            file_put_contents($emconfFile, $content);
         }
         return;
     }
-
 }
