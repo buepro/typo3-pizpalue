@@ -101,12 +101,32 @@ class ext_update
 
     public function main()
     {
+        $message = '';
+
+        /**
+         * Copy default site configuration (if TYPO3 V9+)
+         */
+        if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) >= 9000000) {
+            if (\Buepro\Pizpalue\Slot\ExtensionInstallUtility::copyDefaultSiteConfig()) {
+                $message = $this->getDialog(self::SEVERITY_OK,'Site configuration',
+                    'A default site configuration has been installed.');
+            } else {
+                $message = $this->getDialog(self::SEVERITY_NOTICE,'Site configuration',
+                    'A default site configuration has not been created because the directory "typo3conf/sites/" '
+                    . 'exists. The default site configuration might be copied manually from "typo3conf/ext/pizpalue/'
+                    . 'Resources/Private/FolderStructureTemplateFiles/Sites_config.yaml". Locate it in a sub folder '
+                    . 'from "typo3conf/sites/" and rename it to "config.yaml".');
+            }
+        }
+
+        /**
+         * Update data base structure
+         */
         $this->objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $this->installTool = $this->objectManager->get(InstallUtility::class);
-
-        // update data base structure
         $this->installTool->install('pizpalue');
-        return $this->getDialog(self::SEVERITY_OK, 'Database updated', 'The database has been updated with the current table definition.');
+        $message .= $this->getDialog(self::SEVERITY_OK, 'Database up to date', 'The database is now up to date reflecting the current table definition.');
+        return $message;
     }
 
     public function access()
