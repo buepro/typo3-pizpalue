@@ -25,7 +25,44 @@ Consider to review the below mentioned entries in the installtool.
 
 .. tip::
    The above mentioned configurations might be part from the file "typo3conf/AdditionalConfiguration.php".
-   A sample file is provided in the directory "typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles".
+   A sample file is provided in the directory "typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles/".
+
+
+.. _config_siteConfiguration:
+
+Site configuration
+==================
+
+With TYPO3 V9 site configuration has been introduced.
+
+The distribution ships with a default site configuration file located in
+"typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles/", named "Sites_config.yaml". In case
+the folder "typo3conf/sites/" doesn't exist the default site configuration file will be added upon installation.
+
+.. note::
+   You might need to adjust the settings for the "Error Handling" as well as for the extension "news" by editing
+   the configuration file (typo3conf/sites/default/config.yaml). Have a look at the following:
+
+   .. code-block:: yaml
+
+      errorContentSource: 't3://page?uid=87' #change this: the number after "uid=" reflects the uid from the 404-page
+
+   .. code-block:: yaml
+
+      routeEnhancers:
+         NewsPluginDetail:
+            type: Extbase
+            limitToPages:
+               - 95 #change this: the number reflects the uid from the news detail page
+
+   .. code-block:: yaml
+
+      routeEnhancers:
+         #...
+         NewsPluginList:
+            type: Extbase
+            limitToPages:
+               - 96 #change this: the number reflects the uid from the news list page
 
 
 .. _config_constantEditor:
