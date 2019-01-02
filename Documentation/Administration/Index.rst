@@ -16,6 +16,9 @@ Installation
 The distribution can be installed from within the distribution list, by uploading the extension and through composer.
 Refer to TYPO3 documentation for further details on handling extensions.
 
+.. note::
+   Due to a bug it is recommended to install the extension news prior installing the distribution.
+
 
 .. _admin_update:
 

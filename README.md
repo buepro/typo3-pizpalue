@@ -20,8 +20,9 @@ Further information can be found through the [TYPO3 extension repository](https:
 ### With TYPO3
 
 1. Go to the extension manager
-2. Select 'Get preconfigured distribution'
-3. Search for "Piz Palü Distribution" and install it
+2. Install extension news
+3. Select 'Get preconfigured distribution'
+4. Search for "Piz Palü Distribution" and install it
 
 ### With composer
 
@@ -45,15 +46,16 @@ Installing TYPO3 with pizpalue-distribution:
         }
     ],
     "require": {
-        "typo3/cms": "^8",
-        "buepro/typo3-pizpalue": "~8.6"
+        "typo3/cms": "^9",
+        "georgringer/news": "~7.0.8",
+        "buepro/typo3-pizpalue": "~9.0"
     },
     "extra": {
-	 		"typo3/cms": {
-			 	"cms-package-dir": "{$vendor-dir}/typo3/cms",
-			 	"web-dir": "web"
-			 }
-	 },
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "web"
+        }
+    },
     "license": "GPL",
     "authors": [
         {
