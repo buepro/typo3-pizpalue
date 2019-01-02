@@ -11,7 +11,6 @@ namespace Buepro\Pizpalue\Slot;
 
 class ExtensionInstallUtility
 {
-
     private function commentUserCustomerDependency()
     {
         if (class_exists(\TYPO3\CMS\Core\Core\Environment::class)) {
@@ -29,10 +28,12 @@ class ExtensionInstallUtility
         }
     }
 
-    static function copyDefaultSiteConfig()
+    public static function copyDefaultSiteConfig()
     {
         // Just copy site configuration in case CMS version is 9
-        if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) < 9000000) return false;
+        if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) < 9000000) {
+            return false;
+        }
         $sourceFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() .
             '/typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles/Sites_config.yaml';
         $siteDirectory = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/typo3conf/sites/';

@@ -1,0 +1,120 @@
+
+renderingOptions:
+  submitButtonLabel: Send
+type: Form
+identifier: idGeneralContactForm
+label: 'General contact form'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{idSubject}'
+      recipientAddress: empfaenger@ihredomain.ch
+      recipientName: 'Ihr Name'
+      senderAddress: '{idEmail}'
+      senderName: '{idName}'
+      replyToAddress: ''
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: html
+      attachUploads: true
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '1'
+      additionalParameters: ''
+    identifier: Redirect
+  -
+    identifier: DeleteUploads
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'previous Page'
+      nextButtonLabel: 'next Page'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: idName
+        label: Name
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: idEmail
+        label: Email
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: idTelephone
+        label: Telephone
+      -
+        defaultValue: ''
+        type: Text
+        identifier: idSubject
+        label: Subject
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: idMessage
+        label: Message
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          saveToFileMount: '1:/user_upload/'
+          allowedMimeTypes:
+            - application/pdf
+        type: FileUpload
+        identifier: idFileupload
+        label: PDF-File
+      -
+        properties:
+          saveToFileMount: '1:/user_upload/'
+          allowedMimeTypes:
+            - image/jpeg
+            - image/png
+            - image/bmp
+        type: ImageUpload
+        identifier: idImageupload
+        label: Image
+      -
+        properties:
+          containerClassAttribute: custom-checkbox-multiple pp-dataprotection
+          options:
+            dataprotectionRead: 'Please confirm that you have read our data protection notice by checking this checkbox'
+        type: MultiCheckbox
+        identifier: idDataprotectionMultiCheckbox
+        label: Data protection notice
+        validators:
+          -
+            identifier: NotEmpty
+        defaultValue: {  }
