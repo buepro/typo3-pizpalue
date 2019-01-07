@@ -46,17 +46,14 @@ Installing TYPO3 with pizpalue-distribution:
         }
     ],
     "require": {
-        "typo3/cms": "^9",
-        "georgringer/news": "~7.0.8",
         "buepro/typo3-pizpalue": "~9.0"
     },
     "extra": {
         "typo3/cms": {
-            "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "web-dir": "web"
         }
     },
-    "license": "GPL",
+    "license": "MIT",
     "authors": [
         {
             "name": "Roman",
