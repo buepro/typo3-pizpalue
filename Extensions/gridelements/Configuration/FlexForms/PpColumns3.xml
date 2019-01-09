@@ -68,15 +68,11 @@
                                     </numIndex>
                                     <numIndex index="100" type="array">
                                         <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnWidthNone</numIndex>
-                                        <numIndex index="1"> </numIndex>
+                                        <numIndex index="1">pp-col-none</numIndex>
                                     </numIndex>
-                                    <numIndex index="110" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnHidden</numIndex>
-                                        <numIndex index="1">hidden-md</numIndex>
-                                    </numIndex>
-                                    <numIndex index="120" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnVisible</numIndex>
-                                        <numIndex index="1">visible-md</numIndex>
+                                    <numIndex index="130" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnAuto</numIndex>
+                                        <numIndex index="1">col-md-auto</numIndex>
                                     </numIndex>
                                 </items>
                             </config>
@@ -139,15 +135,11 @@
                                     </numIndex>
                                     <numIndex index="100" type="array">
                                         <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnWidthNone</numIndex>
-                                        <numIndex index="1"> </numIndex>
+                                        <numIndex index="1">pp-col-none</numIndex>
                                     </numIndex>
-                                    <numIndex index="110" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnHidden</numIndex>
-                                        <numIndex index="1">hidden-md</numIndex>
-                                    </numIndex>
-                                    <numIndex index="120" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnVisible</numIndex>
-                                        <numIndex index="1">visible-md</numIndex>
+                                    <numIndex index="130" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnAuto</numIndex>
+                                        <numIndex index="1">col-md-auto</numIndex>
                                     </numIndex>
                                 </items>
                             </config>
@@ -210,15 +202,11 @@
                                     </numIndex>
                                     <numIndex index="100" type="array">
                                         <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnWidthNone</numIndex>
-                                        <numIndex index="1"> </numIndex>
+                                        <numIndex index="1">pp-col-none</numIndex>
                                     </numIndex>
-                                    <numIndex index="110" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnHidden</numIndex>
-                                        <numIndex index="1">hidden-md</numIndex>
-                                    </numIndex>
-                                    <numIndex index="120" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnVisible</numIndex>
-                                        <numIndex index="1">visible-md</numIndex>
+                                    <numIndex index="130" type="array">
+                                        <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnAuto</numIndex>
+                                        <numIndex index="1">col-md-auto</numIndex>
                                     </numIndex>
                                 </items>
                             </config>

@@ -134,13 +134,9 @@
                 <source>None</source>
                 <target state="translated">Keine</target>
             </trans-unit>
-            <trans-unit id="grids.label.columnHidden">
-                <source>Hidden</source>
-                <target state="translated">Unsichtbar</target>
-            </trans-unit>
-            <trans-unit id="grids.label.columnVisible">
-                <source>Visible</source>
-                <target state="translated">Sichtbar</target>
+            <trans-unit id="grids.label.columnAuto">
+                <source>Auto</source>
+                <target state="translated">Auto</target>
             </trans-unit>
             <trans-unit id="grids.label.collapseElement">
                 <source>Collapse elements</source>

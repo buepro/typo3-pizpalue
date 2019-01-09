@@ -139,11 +139,8 @@
             <trans-unit id="grids.label.columnWidthNone">
                 <source>None</source>
             </trans-unit>
-            <trans-unit id="grids.label.columnHidden">
-                <source>Hidden</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnVisible">
-                <source>Visible</source>
+            <trans-unit id="grids.label.columnAuto">
+                <source>Auto</source>
             </trans-unit>
             <trans-unit id="grids.label.collapseContentElement">
                 <source>Collapse elements</source>
