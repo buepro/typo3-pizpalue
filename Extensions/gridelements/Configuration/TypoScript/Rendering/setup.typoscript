@@ -4,20 +4,9 @@ tt_content.gridelements_pi1 {
    20 = FLUIDTEMPLATE
    20 {
       templateName = Gridelements
-      layoutRootPaths {
-         10 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
-         30 = EXT:pizpalue/Resources/Private/Layouts/ContentElements
-      }
-
-      templateRootPaths {
-         10 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements
-         30 = EXT:pizpalue/Resources/Private/Templates/ContentElements
-      }
-
-      partialRootPaths {
-         10 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements
-         30 = EXT:pizpalue/Resources/Private/Partials/ContentElements
-      }
+      layoutRootPaths < lib.contentElement.layoutRootPaths
+      templateRootPaths < lib.contentElement.templateRootPaths
+      partialRootPaths < lib.contentElement.partialRootPaths
 
       settings < lib.contentElement.settings
 

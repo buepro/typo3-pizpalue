@@ -1,5 +1,6 @@
 # Release
 
+1. Update extension user_customer
 1. Update data base resources (Initialization/data.*)
 1. Update documentation
 1. Run code sniffer
