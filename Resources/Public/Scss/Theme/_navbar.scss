@@ -192,6 +192,7 @@
         color: $navbar-dark-color;
         @include hover-focus {
           color: $navbar-dark-hover-color;
+          background: $navbar-dark-hover-bg;
         }
       }
     }
@@ -445,7 +446,7 @@
 }
 .navbar-inverse {
   @extend .navbar-dark;
-  @extend .bg-dark;
+  background: $navbar-dark-bg;
 }
 
 

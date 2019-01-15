@@ -25,8 +25,12 @@ plugin.bootstrap_package.settings.scss {
    body-bg = #fff
 
    navbar-light-bg >
-   # cat=6030/1032/0040; type=string; label=Header background color
+   # cat=6030/1032/0040; type=string; label=Light header background color (navigation style default)
    navbar-light-bg = #e8e8e8
+
+   navbar-dark-bg >
+   # cat=6030/1032/0040; type=string; label=Dark header background color (navigation style inverse)
+   navbar-dark-bg = #2b2b2b
 
    footer-bg >
    # cat=6030/1032/1080; type=string; label=Footer background color
@@ -50,28 +54,56 @@ plugin.bootstrap_package.settings.scss {
    navbar-light-color = lighten($navbar-light-active-color,15%)
 
    navbar-light-hover-color >
-   # cat=6040/1034/1030; type=string; label=Default link hover color
+   # cat=6040/1034/1022; type=string; label=Default link hover color
    navbar-light-hover-color = $navbar-light-active-color
 
    navbar-light-hover-bg >
-   # cat=6040/1034/1040; type=string; label=Default link hover background
+   # cat=6040/1034/1024; type=string; label=Default link hover background
    navbar-light-hover-bg = transparent
 
    navbar-light-active-color >
-   # cat=6040/1034/1050; type=string; label=Default link active color
+   # cat=6040/1034/1026; type=string; label=Default link active color
    navbar-light-active-color = #333
 
    navbar-light-active-bg >
-   # cat=6040/1034/1060; type=string; label=Default link active background
+   # cat=6040/1034/1028; type=string; label=Default link active background
    navbar-light-active-bg = transparent
 
    navbar-light-disabled-color >
-   # cat=6040/1034/1070; type=string; label=Default link disabled color
+   # cat=6040/1034/1030; type=string; label=Default link disabled color
    navbar-light-disabled-color = #ccc
 
    navbar-light-disabled-bg >
-   # cat=6040/1034/1080; type=string; label=Default link disabled background
+   # cat=6040/1034/1032; type=string; label=Default link disabled background
    navbar-light-disabled-bg = transparent
+
+   navbar-dark-color >
+   # cat=6040/1034/1040; type=string; label=Inverse link color
+   navbar-dark-color = rgba($white, .5)
+
+   navbar-dark-hover-color >
+   # cat=6040/1034/1042; type=string; label=Inverse link hover color
+   navbar-dark-hover-color = $navbar-dark-active-color
+
+   navbar-dark-hover-bg >
+   # cat=6040/1034/1044; type=string; label=Inverse link hover background
+   navbar-dark-hover-bg = transparent
+
+   navbar-dark-active-color >
+   # cat=6040/1034/1046; type=string; label=Inverse link active color
+   navbar-dark-active-color = $white
+
+   navbar-dark-active-bg >
+   # cat=6040/1034/1048; type=string; label=Inverse link active background
+   navbar-dark-active-bg = transparent
+
+   navbar-dark-disabled-color >
+   # cat=6040/1034/1050; type=string; label=Inverse link disabled color
+   navbar-dark-disabled-color = rgba($white, .25)
+
+   navbar-dark-disabled-bg >
+   # cat=6040/1034/1052; type=string; label=Inverse link disabled background
+   navbar-dark-disabled-bg = transparent
 
    footer-color >
    # cat=6040/1035/1082; type=string; label=Footer text color
