@@ -6,5 +6,9 @@ html {
   padding: 1px 0;
   // for safari
 }
+// assign the current color to svg tag
+svg {
+  fill: currentColor;
+}
 
 
