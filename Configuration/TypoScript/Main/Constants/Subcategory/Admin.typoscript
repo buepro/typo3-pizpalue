@@ -22,16 +22,28 @@ pizpalue.general {
 #---------------------------------------------------------#
 
 pizpalue.agency {
+   name >
+   # cat=6010/1010/0010; type=string; label=Agency name:Name or company name from agency
+   name = Agency
+
+   slogan >
+   # cat=6010/1010/0020; type=string; label=Agency slogan
+   slogan = Slogan
+
+   link >
+   # cat=6010/1010/0030; type=string; label=Agency website
+   link = https://www.terve.link
+
    reference >
-   # cat=6010/1010/0010; type=string; label=Agency reference:HTML used to create a reference to the agency
-   reference = <span class="pp-agency-reference">Eine Webseite von <a href="https://www.buechler.pro" title="buechler.pro | TYPO3-Webseiten ohne Grenzen, SEO, Informatik" target="_blank">buechler.pro</a></span>
+   # cat=6010/1010/0040; type=string; label=Agency reference:HTML used to create a reference to the agency
+   reference = <span class="pp-agency-reference">Eine Webseite von <a href="{$pizpalue.agency.link}" title="{$pizpalue.agency.name} | {$pizpalue.agency.slogan}" target="_blank">{$pizpalue.agency.name}</a></span>
 
    isDebugMode >
-   # cat=6010/1010/0020; type=boolean; label=Activate debug mode?
+   # cat=6010/1010/0050; type=boolean; label=Activate debug mode?
    isDebugMode = 0
 
    isMaintenancePage >
-   # cat=6010/1010/0030; type=boolean; label=Is maintenance page?
+   # cat=6010/1010/0060; type=boolean; label=Is maintenance page?
    isMaintenancePage = 0
 }
 

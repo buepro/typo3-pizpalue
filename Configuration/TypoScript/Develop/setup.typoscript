@@ -57,8 +57,10 @@ page {
       value = <div id="setupsetting"></div>
       stdWrap.typolink {
          extTarget = _blank
-         parameter = https://www.buechler.pro
-         title = In Arbeit - Eine Weseite von buechler.pro
+         parameter = {$pizpalue.agency.link}
+         parameter.insertData = 1
+         title = In Arbeit - Eine Weseite von {$pizpalue.agency.name}
+         title.insertData = 1
       }
    }
 }
