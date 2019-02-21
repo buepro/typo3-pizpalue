@@ -1,0 +1,16 @@
+page {
+   includeCSS {
+      fastMenu = EXT:pizpalue/Resources/Public/Scss/fastmenu.scss
+   }
+   includeJSFooterlibs {
+      fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.fastmenu.min.js
+   }
+}
+
+[globalString = LIT:1 = {$pizpalue.agency.isDebugMode}]
+   page {
+      includeJSFooterlibs {
+         fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.fastmenu.js
+      }
+   }
+[global]

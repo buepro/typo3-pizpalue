@@ -63,4 +63,22 @@ pizpalue.menu {
       # cat=6060/1060/0260; type=boolean; label=Use extension sr_language_menu
       useSrLanguageMenu = 0
    }
+   fast {
+      # cat=6060/1060/0310; type=boolean; label=Use fast menu:Shows a fixed menu on the side
+      enable = 0
+      items {
+         login {
+            iconClass = ppicon ppicon-log-in
+            contentUid =
+         }
+         contact {
+            iconClass = ppicon ppicon-call
+            contentUid =
+         }
+         location {
+            iconClass = ppicon ppicon-location
+            pageUid = 1
+         }
+      }
+   }
 }
