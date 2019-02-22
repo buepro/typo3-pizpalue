@@ -8,42 +8,52 @@
   align-items: center;
   transition: right 0.7s;
 
-  .pp-fm-icongroup .ppicon {
-    font-size: 50px;
-    background: lightgrey;
-    margin: 3px 0 3px 3px;
-    padding: 5px;
-    cursor: pointer;
+  .pp-fm-icongroup {
+    .ppicon {
+      font-size: $pp-fastmenu-icon-size;
+      background: $pp-fastmenu-icon-bg;
+      color: $pp-fastmenu-icon-color;
+      margin: 3px 0 3px 3px;
+      padding: 5px;
+      cursor: pointer;
+      transition: color 0.7s;
+      &:hover {
+        color: $pp-fastmenu-icon-hover-color;
+      }
+      &.pp-active {
+        color: $pp-fastmenu-icon-active-color;
+      }
+    }
   }
 
   .pp-fm-handle {
-    font-size: 30px;
-    color: gray;
+    font-size: 0.6 * $pp-fastmenu-icon-size;
+    color: $pp-fastmenu-handle-color;
     cursor: pointer;
     .ppicon {
       transition: transform 0.7s;
     }
   }
+
   &.pp-minimize {
     right: -55px;
     .pp-fm-handle .ppicon {
       transform: rotate(180deg);
     }
   }
+
   .pp-fm-content {
     position: relative;
-    max-width: 400px;
-    border: lightgrey 1px solid;
     margin-right: 20px;
     .pp-fm-item {
       position: relative;
+      overflow: hidden;
       right: -500px;
-      display: none;
-      background: white;
+      background: $pp-fastmenu-content-bg;
+      border: $pp-fastmenu-content-border-color 1px solid;
       transition: right 0.7s;
       &.pp-show {
         right: 0;
-        display: block;
       }
     }
   }

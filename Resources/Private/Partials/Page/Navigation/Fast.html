@@ -28,7 +28,10 @@
                 </f:if>
                 <f:if condition="{item.contentUid}">
                     {f:variable(name:'justShowIcon', value:0)}
-                    <span class="{item.iconClass} pp-fm-contenticon" data-pp-fm-content="pp-fm-content-{item.contentUid}"></span>
+                    <a href="#">
+                        <span class="{item.iconClass} pp-fm-contenticon"
+                              data-pp-fm-content="pp-fm-content-{item.contentUid}"></span>
+                    </a>
                 </f:if>
                 <f:if condition="{justShowIcon}">
                     <span class="{item.iconClass}"></span>

@@ -149,6 +149,38 @@ plugin.bootstrap_package.settings.scss {
    # cat=6040/2910/1130; type=string; label=Register border color
    pp-tab-v1-border-color = #ddd
 
+   pp-fastmenu-icon-bg >
+   # cat=6040/1060/1210; type=string; label= Fastmenu icon background color
+   pp-fastmenu-icon-bg = lightgrey
+
+   pp-fastmenu-icon-color >
+   # cat=6040/1060/1220; type=string; label= Fastmenu icon color
+   pp-fastmenu-icon-color = $link-color
+
+   pp-fastmenu-icon-hover-color >
+   # cat=6040/1060/1230; type=string; label= Fastmenu icon hover color
+   pp-fastmenu-icon-hover-color = $link-hover-color
+
+   pp-fastmenu-icon-active-color >
+   # cat=6040/1060/1240; type=string; label= Fastmenu icon active color
+   pp-fastmenu-icon-active-color = $link-hover-color
+
+   pp-fastmenu-icon-size >
+   # cat=6040/1060/1250; type=string; label= Fastmenu icon size
+   pp-fastmenu-icon-size = 50px
+
+   pp-fastmenu-handle-color >
+   # cat=6040/1060/1260; type=string; label= Fastmenu handle color
+   pp-fastmenu-handle-color = gray
+
+   pp-fastmenu-content-bg >
+   # cat=6040/1060/1270; type=string; label= Fastmenu content background color
+   pp-fastmenu-content-bg = white
+
+   pp-fastmenu-content-border-color >
+   # cat=6040/1060/1280; type=string; label= Fastmenu content border color
+   pp-fastmenu-content-border-color = lightgrey
+
 }
 
 

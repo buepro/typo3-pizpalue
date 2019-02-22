@@ -14,8 +14,16 @@
     }
 
     Plugin.prototype.init = function () {
+        this._setTop();
         this._setHeight();
         this._attachEventHandlers();
+    };
+
+    Plugin.prototype._setTop = function () {
+        $('.pp-fm-content .pp-fm-item', this.element).each( function () {
+            var position = $(this).position();
+            $(this).css('top','-' + position.top + 'px');
+        });
     };
 
     Plugin.prototype._setHeight = function () {
@@ -25,7 +33,7 @@
             if (height > maxHeight) maxHeight = height;
         });
         maxHeight += 'px';
-        $(this.element).css('min-height',maxHeight);
+        $('.pp-fm-content', this.element).css('height',maxHeight);
     };
 
     Plugin.prototype._attachEventHandlers = function () {
@@ -36,10 +44,18 @@
             var id = '#' + $(this).attr('data-pp-fm-content');
             var $content = $(id);
             if ($content.hasClass('pp-show')) {
+                // Hide selected content
                 $content.toggleClass('pp-show');
+                $(this).toggleClass('pp-active');
             } else {
+                // Hide any content
                 $content.siblings().removeClass('pp-show');
-                $content.toggleClass('pp-show');
+                $(this).parentsUntil('.pp-fastmenu','.pp-fm-icongroup')
+                    .find('.pp-fm-contenticon')
+                    .removeClass('pp-active');
+                // Show selected content
+                $content.addClass('pp-show');
+                $(this).addClass('pp-active');
             }
         });
     };
