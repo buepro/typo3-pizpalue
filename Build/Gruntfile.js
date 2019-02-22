@@ -44,6 +44,10 @@ module.exports = function(grunt) {
                 src: '<%= paths.js %>Src/jquery.revealfooterservice.js',
                 dest: '<%= paths.js %>Dist/jquery.revealfooterservice.min.js'
             },
+            fastmenu: {
+                src: '<%= paths.js %>Src/jquery.fastmenu.js',
+                dest: '<%= paths.js %>Dist/jquery.fastmenu.min.js'
+            },
         },
         watch: {
             general: {
