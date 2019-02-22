@@ -1,9 +1,9 @@
 .pp-fastmenu {
   position: fixed;
   z-index: 10;
-  top: 30%;
+  top: 40%;
+  transform:translateY(-50%);
   right: 0;
-  height: 300px;
   display: flex;
   align-items: center;
   transition: right 0.7s;
