@@ -1,2 +1,14 @@
+# Adds general contact form
 plugin.tx_form.settings.yamlConfigurations.200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
 module.tx_form.settings.yamlConfigurations.200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
+
+# Adds finisher to send mail to system
+plugin.tx_form.settings.yamlConfigurations {
+   260 = EXT:pizpalue/Configuration/Form/MailToSystem/Base.yaml
+   264 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEngine.yaml
+}
+module.tx_form.settings.yamlConfigurations {
+   260 = EXT:pizpalue/Configuration/Form/MailToSystem/Base.yaml
+   262 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEditor.yaml
+   264 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEngine.yaml
+}

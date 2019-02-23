@@ -4,7 +4,12 @@
           product-name="pizpalue">
         <header/>
         <body>
-
+            <trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label">
+                <source>Email to system</source>
+            </trans-unit>
+            <trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label">
+                <source>Email to system</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,0 +1,23 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+
+          #===================
+          # Adds localization
+          #===================
+          formEngine:
+            translationFile:
+              10: 'EXT:form/Resources/Private/Language/Database.xlf'
+              110: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
+
+          #======================
+          # Defines the finisher
+          #======================
+          finishersDefinition:
+            EmailToSystem:
+              FormEngine:
+                __inheritances:
+                  10: 'TYPO3.CMS.Form.mixins.FormEngineEmailMixin'
+                label: 'formEditor.elements.Form.editor.finishers.MailToSystem.label'

@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+    <f:comment>
+        <!------------------------------------------------------------------------------------------------------------
+          Creates form field variables with the associated data. The variable name is the field name.
+        ------------------------------------------------------------------------------------------------------------->
+    </f:comment>
+    <formvh:renderAllFormValues renderable="{form.formDefinition}" as="formValue">
+        {formvh:translateElementProperty(element:formValue.element, property:'label') -> f:variable(name:'fieldName')}
+        {f:variable(name:fieldName, value:formValue.processedValue)}
+    </formvh:renderAllFormValues>
+
+    <f:comment>
+        <!------------------------------------------------------------------------------------------------------------
+          Compile content
+        ------------------------------------------------------------------------------------------------------------->
+    </f:comment>
+    #{Name}#{Email}#{Telefon}#{Betreff}#{Mitteilung}#
+
+</f:spaceless>
+
+<f:debug>{_all}</f:debug>
+</html>

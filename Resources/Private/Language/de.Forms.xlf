@@ -55,6 +55,11 @@
                 <target state="translated">Allgemeines Kontaktformular</target>
             </trans-unit>
 
+            <trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label">
+                <source>Email to system</source>
+                <target state="translated">Email an System</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
