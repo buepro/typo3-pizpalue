@@ -1,6 +1,6 @@
 .pp-fastmenu {
   position: fixed;
-  z-index: 10;
+  z-index: 2000;
   top: 40%;
   transform:translateY(-50%);
   right: 0;
@@ -48,10 +48,17 @@
     .pp-fm-item {
       position: relative;
       overflow: hidden;
-      right: -500px;
-      background: $pp-fastmenu-content-bg;
-      border: $pp-fastmenu-content-border-color 1px solid;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      max-width: 500px;
+      right: -700px;
       transition: right 0.7s;
+      .pp-fm-wrap {
+        width: 100%;
+        background: $pp-fastmenu-content-bg;
+        border: $pp-fastmenu-content-border-color 1px solid;
+      }
       &.pp-show {
         right: 0;
       }

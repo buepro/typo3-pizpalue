@@ -10,7 +10,9 @@
         <f:for each="{pizpalue.menu.fast.items}" as="item">
             <f:if condition="{item.contentUid}">
                 <div id="pp-fm-content-{item.contentUid}" class="pp-fm-item">
-                    <v:content.render contentUids="{0: item.contentUid}"/>
+                    <div class="pp-fm-wrap">
+                        <v:content.render contentUids="{0: item.contentUid}"/>
+                    </div>
                 </div>
             </f:if>
         </f:for>

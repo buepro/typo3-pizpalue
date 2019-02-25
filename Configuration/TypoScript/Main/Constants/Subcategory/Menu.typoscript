@@ -94,7 +94,7 @@ pizpalue.menu {
             # cat=6060/1060/0332; type=string; label=Fastmenu third item content uid:Uid from content element being rendered. Leave empty if not used.
             contentUid =
             # cat=6060/1060/0334; type=string; label=Fastmenu third item page uid:Uid from page linked to. Leave empty if not used.
-            pageUid = 1
+            pageUid =
          }
       }
    }
