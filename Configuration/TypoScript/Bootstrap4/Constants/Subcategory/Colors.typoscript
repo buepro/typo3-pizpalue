@@ -166,7 +166,7 @@ plugin.bootstrap_package.settings.scss {
    pp-fastmenu-icon-active-color = $link-hover-color
 
    pp-fastmenu-icon-size >
-   # cat=6040/1060/1250; type=string; label= Fastmenu icon size
+   # cat=6040/1060/1250; type=string; label= Fastmenu icon size (in pixels)
    pp-fastmenu-icon-size = 50px
 
    pp-fastmenu-handle-color >

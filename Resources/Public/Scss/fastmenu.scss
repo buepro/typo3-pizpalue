@@ -36,7 +36,7 @@
   }
 
   &.pp-minimize {
-    right: -55px;
+    right: -($pp-fastmenu-icon-size + 5px);
     .pp-fm-handle .ppicon {
       transform: rotate(180deg);
     }
@@ -48,12 +48,8 @@
     .pp-fm-item {
       position: relative;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      height: 100%;
       max-width: 500px;
-      right: -700px;
-      transition: right 0.7s;
+      right: -10000px;
       .pp-fm-wrap {
         width: 100%;
         background: $pp-fastmenu-content-bg;
@@ -64,4 +60,5 @@
       }
     }
   }
+
 }

@@ -8,7 +8,10 @@ page {
    jsFooterInline.1030 = TEXT
    jsFooterInline.1030.value (
 
-$('.pp-fastmenu').fastMenu();
+$('.pp-fastmenu').fastMenu({
+   animationDuration: 700,
+   iconFontSize: '{$plugin.bootstrap_package.settings.scss.pp-fastmenu-icon-size}'
+});
 )
 }
 

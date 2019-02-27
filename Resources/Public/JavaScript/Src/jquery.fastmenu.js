@@ -2,7 +2,8 @@
 
     var pluginName = 'fastMenu',
         defaults = {
-            animationDuration: 0.7,
+            animationDuration: 700,
+            iconFontSize: '50px',
         };
 
     function Plugin( element, options ) {
@@ -14,50 +15,85 @@
     }
 
     Plugin.prototype.init = function () {
-        this._setTop();
-        this._setHeight();
+        this._initContent();
         this._attachEventHandlers();
     };
 
-    Plugin.prototype._setTop = function () {
+    Plugin.prototype._initContent = function () {
+        // Moves the content right, not too far away
+        var fastmenuWidth = 2 * parseInt(this.options.iconFontSize);
         $('.pp-fm-content .pp-fm-item', this.element).each( function () {
-            var position = $(this).position();
-            $(this).css('top','-' + position.top + 'px');
+            var rightOffset = -$(this).outerWidth() - fastmenuWidth;
+            $(this).css('right',rightOffset + 'px');
         });
+        // Hides contents
+        $('.pp-fm-content .pp-fm-item', this.element).css('display','none');
     };
 
-    Plugin.prototype._setHeight = function () {
-        var maxHeight = 0;
-        $('.pp-fm-content .pp-fm-item', this.element).each( function () {
-            var height = $(this).height();
-            if (height > maxHeight) maxHeight = height;
-        });
-        maxHeight += 'px';
-        $('.pp-fm-content', this.element).css('height',maxHeight);
+    Plugin.prototype._hideContent = function ($content,onHidden,onHiddenArg){
+        var $contentIcon = $('#' + $content.attr('data-pp-fm-contenticon'));
+        var rightOffset = -$(this.element).outerWidth();
+        $content.animate(
+            { right: rightOffset },
+            this.options.animationDuration,
+            $.proxy(function () {
+                $content.css('display','none').removeClass('pp-show');
+                $contentIcon.removeClass('pp-active');
+                if ( onHidden ) {
+                    // This is passed through since nesting $.proxy doesn't work
+                    onHidden(onHiddenArg,this);
+                }
+            },this)
+        );
+    };
+
+    /**
+     * Shows a content
+     *
+     * @param $content The content to be shown
+     * @param plugin The plugin might be passed through when the function is called from within a $.proxy function call
+     * @private
+     */
+    Plugin.prototype._showContent = function ($content,plugin) {
+        var animationDuration = 700;
+        if (plugin) {
+            animationDuration = plugin.options.animationDuration;
+        } else {
+            animationDuration = this.options.animationDuration
+        }
+        var $contentIcon = $('#' + $content.attr('data-pp-fm-contenticon'));
+        $content
+            .css('display','block')
+            .animate({right: '0'},animationDuration,function () {
+                $content.addClass('pp-show');
+                $contentIcon.addClass('pp-active');
+            });
+    };
+
+    Plugin.prototype._contentIconClickHandler = function ( event ) {
+        var $contentIcon = $(event.target);
+        var $content = $('#' + $contentIcon.attr('data-pp-fm-content'));
+        if ( $content.hasClass('pp-show') ) {
+            // Hides selected content
+            this._hideContent($content);
+        } else {
+            var $visibleContent = $('.pp-fm-content .pp-show',this.element);
+            if ( $visibleContent.length ) {
+                this._hideContent($visibleContent,this._showContent,$content)
+            } else {
+                this._showContent($content);
+            }
+        }
     };
 
     Plugin.prototype._attachEventHandlers = function () {
+        // Toggles the icon group
         $('.pp-fm-handle', this.element).click(function () {
             $(this).parent().toggleClass('pp-minimize');
         });
-        $('.pp-fm-contenticon', this.element).click(function () {
-            var id = '#' + $(this).attr('data-pp-fm-content');
-            var $content = $(id);
-            if ($content.hasClass('pp-show')) {
-                // Hide selected content
-                $content.toggleClass('pp-show');
-                $(this).toggleClass('pp-active');
-            } else {
-                // Hide any content
-                $content.siblings().removeClass('pp-show');
-                $(this).parentsUntil('.pp-fastmenu','.pp-fm-icongroup')
-                    .find('.pp-fm-contenticon')
-                    .removeClass('pp-active');
-                // Show selected content
-                $content.addClass('pp-show');
-                $(this).addClass('pp-active');
-            }
-        });
+
+        // Toggles the content
+        $('.pp-fm-contenticon', this.element).click($.proxy(this._contentIconClickHandler,this));
     };
 
     $.fn[pluginName] = function ( options ) {
