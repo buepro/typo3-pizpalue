@@ -28,6 +28,13 @@ page {
    }
 }
 
+pizpalue.menu {
+   fast {
+      # cat=6030/1060/0310; type=boolean; label=Use fast menu:Shows a fixed menu on the side
+      enable = 0
+   }
+}
+
 
 #---------------------------------------------------------#
 # Customer various
@@ -45,7 +52,7 @@ page {
          navigationType = directory
 
          includeNotInMenu >
-         # cat=6060/1060/0140; type=boolean; label=Meta Navigation include items not in menu
+         # cat=6060/1060/0140; type=boolean; label=Meta menu include items not in menu
          includeNotInMenu = 1
       }
 
@@ -60,7 +67,35 @@ page {
 pizpalue.menu {
    language {
       useSrLanguageMenu >
-      # cat=6060/1060/0260; type=boolean; label=Use extension sr_language_menu
+      # cat=6060/1060/0260; type=boolean; label=Language menu use extension sr_language_menu
       useSrLanguageMenu = 0
+   }
+   fast {
+      items {
+         first {
+            # cat=6060/1060/0310; type=string; label=Fastmenu first item icon class
+            iconClass = ppicon ppicon-log-in
+            # cat=6060/1060/0312; type=string; label=Fastmenu first item content uid:Uid from content element being rendered. Leave empty if not used.
+            contentUid =
+            # cat=6060/1060/0314; type=string; label=Fastmenu first item page uid:Uid from page linked to. Leave empty if not used.
+            pageUid =
+         }
+         second {
+            # cat=6060/1060/0320; type=string; label=Fastmenu second item icon class
+            iconClass = ppicon ppicon-call
+            # cat=6060/1060/0322; type=string; label=Fastmenu second item content uid:Uid from content element being rendered. Leave empty if not used.
+            contentUid =
+            # cat=6060/1060/0324; type=string; label=Fastmenu second item page uid:Uid from page linked to. Leave empty if not used.
+            pageUid =
+         }
+         third {
+            # cat=6060/1060/0330; type=string; label=Fastmenu third item icon class
+            iconClass = ppicon ppicon-location
+            # cat=6060/1060/0332; type=string; label=Fastmenu third item content uid:Uid from content element being rendered. Leave empty if not used.
+            contentUid =
+            # cat=6060/1060/0334; type=string; label=Fastmenu third item page uid:Uid from page linked to. Leave empty if not used.
+            pageUid =
+         }
+      }
    }
 }

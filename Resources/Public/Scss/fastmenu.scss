@@ -1,0 +1,67 @@
+.pp-fastmenu {
+  position: fixed;
+  z-index: 2000;
+  top: 40%;
+  transform:translateY(-50%);
+  right: 0;
+  display: flex;
+  align-items: center;
+  transition: right 0.7s;
+
+  .pp-fm-icongroup {
+    .ppicon {
+      font-size: $pp-fastmenu-icon-size;
+      background: $pp-fastmenu-icon-bg;
+      color: $pp-fastmenu-icon-color;
+      margin: 3px 0 3px 3px;
+      padding: 5px;
+      cursor: pointer;
+      transition: color 0.7s;
+      &:hover {
+        color: $pp-fastmenu-icon-hover-color;
+      }
+      &.pp-active {
+        color: $pp-fastmenu-icon-active-color;
+      }
+    }
+  }
+
+  .pp-fm-handle {
+    font-size: 0.6 * $pp-fastmenu-icon-size;
+    color: $pp-fastmenu-handle-color;
+    cursor: pointer;
+    .ppicon {
+      transition: transform 0.7s;
+    }
+  }
+
+  &.pp-minimize {
+    right: -55px;
+    .pp-fm-handle .ppicon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .pp-fm-content {
+    position: relative;
+    margin-right: 20px;
+    .pp-fm-item {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      max-width: 500px;
+      right: -700px;
+      transition: right 0.7s;
+      .pp-fm-wrap {
+        width: 100%;
+        background: $pp-fastmenu-content-bg;
+        border: $pp-fastmenu-content-border-color 1px solid;
+      }
+      &.pp-show {
+        right: 0;
+      }
+    }
+  }
+}

@@ -84,6 +84,5 @@
                 revealFooterService.update();
             });
         });
-
     });
 }(jQuery);

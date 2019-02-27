@@ -1,6 +1,9 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/AppIcon.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Plugins.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Libs.typoscript">
+[globalString = LIT:1 = {$pizpalue.menu.fast.enable}]
+   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/FastMenu.typoscript">
+[global]
 
 
 #=========================================================#
