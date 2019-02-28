@@ -1,8 +1,22 @@
+#==============================
+# Base configuration.
+# Used in module as in plugin.
+#==============================
 TYPO3:
   CMS:
     Form:
       prototypes:
         standard:
+
+          formElementsDefinition:
+            Honeypot:
+              variants:
+                -
+                  condition: 'stepType == "SummaryPage" || finisherIdentifier in ["EmailToSender", "EmailToReceiver", "EmailToSystem"]'
+            Hidden:
+              variants:
+                -
+                  condition: 'stepType == "SummaryPage" || finisherIdentifier in ["EmailToSender", "EmailToReceiver", "EmailToSystem"]'
 
           #======================
           # Defines the finisher
@@ -14,3 +28,10 @@ TYPO3:
               options:
                 templateRootPaths:
                   10: 'EXT:pizpalue/Resources/Private/Templates/Form/Finishers/MailToSystem/'
+
+      mixins:
+        formElementMixins:
+          ReadOnlyFormElementMixin:
+            variants:
+              -
+                condition: 'stepType == "SummaryPage" || finisherIdentifier in ["EmailToSender", "EmailToReceiver", "EmailToSystem"]'

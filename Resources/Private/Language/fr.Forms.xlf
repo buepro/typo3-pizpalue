@@ -55,6 +55,31 @@
                 <target state="translated">Formulaire general de contact</target>
             </trans-unit>
 
+            <trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label">
+                <source>Email to system</source>
+                <target state="translated">Email au système</target>
+            </trans-unit>
+
+            <trans-unit id="formEditor.elements.Form.finisher.EmailToSystem.editor.recipientAddress.label">
+                <source>Systems address</source>
+                <target state="translated">Adresse du système</target>
+            </trans-unit>
+
+            <trans-unit id="formEditor.elements.Form.finisher.EmailToSystem.editor.recipientName.label">
+                <source>Systems name</source>
+                <target state="translated">Nom du système</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.finishersDefinition.EmailToSystem.recipientAddress.label">
+                <source>Email address of the systems</source>
+                <target state="translated">Adresse email du système</target>
+            </trans-unit>
+
+            <trans-unit id="tt_content.finishersDefinition.EmailToSystem.recipientName.label">
+                <source>Human-readable name of the system</source>
+                <target state="translated">Nom du système</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
