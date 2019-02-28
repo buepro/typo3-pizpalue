@@ -7,9 +7,6 @@
             <trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label">
                 <source>Email to system</source>
             </trans-unit>
-            <trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label">
-                <source>Email to system</source>
-            </trans-unit>
             <trans-unit id="formEditor.elements.Form.finisher.EmailToSystem.editor.recipientAddress.label">
                 <source>Systems address</source>
             </trans-unit>
