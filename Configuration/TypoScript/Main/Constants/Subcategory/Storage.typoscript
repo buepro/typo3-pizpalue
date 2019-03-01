@@ -1,9 +1,10 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/CategoryDefinition.typoscript">
+
 #---------------------------------------------------------#
 # Customer various
 #---------------------------------------------------------#
 
 pizpalue.storage {
-   feUserPid >
    #cat=6060/1210/010; type=int; label=FE user storage UID:PID from FE user records
    feUserPid = 2
 }

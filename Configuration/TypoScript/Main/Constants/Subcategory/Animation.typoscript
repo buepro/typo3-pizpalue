@@ -1,49 +1,39 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/CategoryDefinition.typoscript">
+
 #---------------------------------------------------------#
 # Customer various
 #---------------------------------------------------------#
 
 pizpalue.animation {
    1 {
-      classes >
       # cat=6060/1520/0010; type=string; label=Animation 1 classes
       classes =
-      style >
       # cat=6060/1520/0012; type=string; label=Animation 1 inline style
       style =
-      attributes >
       # cat=6060/1520/0014; type=string; label=Animation 1 attributes
       attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
    }
    2 {
-      classes >
       # cat=6060/1520/0020; type=string; label=Animation 2 classes
       classes =
-      style >
       # cat=6060/1520/0022; type=string; label=Animation 2 inline style
       style =
-      attributes >
       # cat=6060/1520/0024; type=string; label=Animation 2 attributes
       attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
    }
    3 {
-      classes >
       # cat=6060/1520/0030; type=string; label=Animation 3 classes
       classes =
-      style >
       # cat=6060/1520/0032; type=string; label=Animation 3 inline style
       style =
-      attributes >
       # cat=6060/1520/0034; type=string; label=Animation 3 attributes
       attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
    }
    4 {
-      classes >
       # cat=6060/1520/0040; type=string; label=Animation 4 classes
       classes =
-      style >
       # cat=6060/1520/0042; type=string; label=Animation 4 inline style
       style =
-      attributes >
       # cat=6060/1520/0044; type=string; label=Animation 4 attributes
       attributes = data-aos="flip-up" data-aos-anchor-placement="center-bottom"
    }

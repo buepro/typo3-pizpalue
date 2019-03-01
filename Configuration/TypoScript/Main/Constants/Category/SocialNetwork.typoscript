@@ -1,66 +1,58 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/CategoryDefinition.typoscript">
 page.theme {
    socialmedia {
-      enable >
+
       # cat=6050/2910/00_enable; type=boolean; label=Social Media: Enable to display the social media links
       enable = 0
+
       channels {
          facebook {
             label = Facebook
-            url >
             # cat=6050/2910/01_facebook_url; type=string; label=Facebook: Insert the full account url
             url = https://www.facebook.com/typo3/
          }
          twitter {
             label = Twitter
-            url >
             # cat=6050/2910/02_twitter_url; type=string; label=Twitter: Insert the full account url
             url = https://twitter.com/typo3
          }
          instagram {
             label = Instagram
-            url >
             # cat=6050/2910/03_instagram_url; type=string; label=Instagram: Insert the full account url
             url = https://www.instagram.com/
          }
          github {
             label = GitHub
-            url >
             # cat=6050/2910/04_googleplus_url; type=string; label=GitHub: Insert the full account url
             url = https://github.com/buepro/typo3-pizpalue
          }
          googleplus {
             label = Google+
-            url >
             # cat=6050/2910/04_googleplus_url; type=string; label=Google+: Insert the full account url
             url =
          }
          linkedin {
             label = LinkedIn
-            url >
             # cat=6050/2910/05_linkedin_url; type=string; label=LinkedIn: Insert the full account url
             url = https://www.linkedin.com/
          }
          xing {
             label = Xing
-            url >
             # cat=6050/2910/06_xing_url; type=string; label=Xing: Insert the full account url
             url = https://www.xing.com/
          }
          youtube {
             label = YouTube
-            url >
             # cat=6050/2910/07_youtube_url; type=string; label=YouTube: Insert the full account url
             url = https://www.youtube.com/user/typo3
          }
          vimeo {
             label = Vimeo
-            url >
             # cat=6050/2910/08_vimeo_url; type=string; label=Vimeo: Insert the full account url
             url =
          }
          pinterest {
             label = Pinterest
-            url >
             # cat=6050/2910/08_pinterest_url; type=string; label=Pinterest: Insert the full account url
             url = https://www.pinterest.com/
          }

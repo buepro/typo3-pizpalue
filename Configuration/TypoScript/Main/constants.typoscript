@@ -16,14 +16,10 @@
 *
 * Considering the above mentioned points parameters that are already available in the bootstrap_package are used
 * directly using a different category and subcategory assignment. Like this parameters can be grouped to better serve.
-* Unfortunately the constant editor seems to be a bit buggy when already introduced constants are redeclared. Two
-* workarounds were encountered.
-*
-* Work around 1:
-* Define a dummy parameter before using subcategory assignment (see "todo 181011-1859")
-*
-* Work around 2:
-* In case a constant is already defined it needs to be cleared (>) for the subcategory assignment to work.
+* Unfortunately the constant editor seems to be a bit buggy when already introduced constants are redeclared. For the
+* categories to be listed correctly in the "Category selector" the category declarations need to preceed the constants
+* (re-) declarations in each file. This is why the file "CategoryDefinitions.typoscript" is included in each constant
+*  definition file.
 *
 * As well it has been observed that the order from the main categories depends on the hierarchy where a constant has
 * been defined. In case "some.hierarchy.paramA" has already been defined and belongs to categoryA1 then categoryB1 that
@@ -33,69 +29,17 @@
 * ======================================================================================================================
 */
 
-#---------------------------------------------------------#
-# Category (page)              Description
-#---------------------------------------------------------#
 
-# PIZPALUE: ADMIN              Everything related to the site administration
-# PIZPALUE: CUSTOMER BASE      Main customer related parameters
-# PIZPALUE: CUSTOMER STYLE     More detailed customer style related parameters
-# PIZPALUE: CUSTOMER SOCIAL    Definition from references to social networks
-# PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
-# PIZPALUE: CUSTOMER PLUGINS   More detailed plugin related parameters
-
-# customcategory=6010=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.admin
-# customcategory=6030=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerBase
-# customcategory=6040=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerStyle
-# customcategory=6050=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerSocial
-# customcategory=6060=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerVarious
-# customcategory=6070=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerPlugins
-
-#---------------------------------------------------------#
-# Subcategory (item to be configured)
-#---------------------------------------------------------#
-
-# customsubcategory=1000=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.general
-# customsubcategory=1010=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.agency
-# customsubcategory=1020=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.customer
-# customsubcategory=1030=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.frame
-# customsubcategory=1032=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.colors
-# customsubcategory=1033=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.font
-# customsubcategory=1034=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.header
-# customsubcategory=1035=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.footer
-# customsubcategory=1040=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.logo
-# customsubcategory=1060=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.menu
-# customsubcategory=1080=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.cookieConsent
-# customsubcategory=1110=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.appicon
-# customsubcategory=1210=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.storage
-# customsubcategory=1410=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.seo
-# customsubcategory=1510=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.features
-# customsubcategory=1520=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.animation
-# customsubcategory=2010=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.newsRSSFeed
-# customsubcategory=2910=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.various
-# customsubcategory=2990=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.depreciated
-
-
-#---------------------------------------------------------#
-# Constant editor
-#---------------------------------------------------------#
-
-// todo 181011-1859: dummy constant might be removed (needed to correctly assign subcategories in constant editor)
-styles.dummyPizpalue = dummyPizpalue
-page.dummyPizpalue = dummyPizpalue
-config.dummyPizpalue = dummyPizpalue
-plugin.dummyPizpalue = dummyPizpalue
-pizpalue.dummyPizpalue = dummyPizpalue
-
-
-#:::::::::::::::::::::::
-#: Categories
-#.
+#=========================================================#
+# Categories
+#=========================================================#
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Category/SocialNetwork.typoscript">
 
-#:::::::::::::::::::::::
-#: Subcategories
-#.
+
+#=========================================================#
+# Subcategories
+#=========================================================#
+
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Admin.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Customer.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Frame.typoscript">
@@ -111,9 +55,9 @@ pizpalue.dummyPizpalue = dummyPizpalue
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Animation.typoscript">
 
 
-#---------------------------------------------------------#
+#=========================================================#
 # Various
-#---------------------------------------------------------#
+#=========================================================#
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Plugins.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Templates.typoscript">
