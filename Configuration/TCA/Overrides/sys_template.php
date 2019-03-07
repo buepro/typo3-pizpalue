@@ -64,8 +64,8 @@ call_user_func(
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
-            'Extensions/tt_address/Configuration/TypoScript/3.0.3',
-            'Pizpalue - tt_address 3.0.3'
+            'Extensions/tt_address/3.0.3/Configuration/TypoScript',
+            'Pizpalue DEPRECIATED - tt_address 3.0.3'
         );
     },
     'pizpalue'

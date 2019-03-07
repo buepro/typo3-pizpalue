@@ -1,5 +1,5 @@
 plugin.tx_ttaddress_pi1 {
-	templatePath = EXT:pizpalue/Extensions/tt_address/Resources/Private/Legacy/
+	templatePath = EXT:pizpalue/Extensions/tt_address/3.0.3/Resources/Private/Legacy/
 	defaultTemplateFileName = default_hcard.htm
 
 	templates.default {
@@ -19,6 +19,6 @@ plugin.tx_ttaddress_pi1 {
 
 page {
 	includeCSS {
-		PizpalueTtaddressCss = EXT:pizpalue/Extensions/tt_address/Resources/Public/Css/General.css
+		PizpalueTtaddressCss = EXT:pizpalue/Extensions/tt_address/3.0.3/Resources/Public/Css/General.css
 	}
 }
