@@ -1,0 +1,13 @@
+.pp-ttaddress-map {
+  width: 100%;
+  height: 600px;
+}
+.pp-ttaddress-maptemplate, .pp-ttaddress-mapimages {
+  display: none;
+}
+.pp-amt-wrap {
+  display: flex;
+  .pp-amt-image {
+    margin-right: 1rem;
+  }
+}

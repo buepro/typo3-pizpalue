@@ -1,0 +1,36 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <div class="tt_address_list">
+        <f:render section="displayMode_{settings.displayMode}" arguments="{_all}" />
+    </div>
+</f:section>
+
+<f:section name="displayMode_list">
+    <!--TYPO3SEARCH_end-->
+    <f:if condition="{settings.hidePagination}">
+        <f:then>
+            <f:for each="{addresses}" as="address" iteration="iterator">
+                <f:render partial="ListItem" arguments="{_all}"/>
+            </f:for>
+        </f:then>
+        <f:else>
+            <f:widget.paginate objects="{addresses}" as="paginatedAdresses" configuration="{settings.paginate}">
+                <f:for each="{paginatedAdresses}" as="address" iteration="iterator">
+                    <f:render partial="ListItem" arguments="{_all}"/>
+                </f:for>
+            </f:widget.paginate>
+        </f:else>
+    </f:if>
+    <!--TYPO3SEARCH_begin-->
+</f:section>
+
+<f:section name="displayMode_single">
+    <f:for each="{addresses}" as="address">
+        <f:render partial="Full" arguments="{_all}"/>
+    </f:for>
+</f:section>
+
+<f:section name="displayMode_googleMap">
+    <f:render partial="GoogleMap" arguments="{_all}"/>
+</f:section>
