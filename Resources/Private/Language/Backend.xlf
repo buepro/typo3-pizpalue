@@ -92,6 +92,9 @@
             <trans-unit id="constSubCategory.newsRSSFeed">
                 <source>News RSS feed</source>
             </trans-unit>
+            <trans-unit id="constSubCategory.ttaddress">
+                <source>Addresses (tt_address)</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

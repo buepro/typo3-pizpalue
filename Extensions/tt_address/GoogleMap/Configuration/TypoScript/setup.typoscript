@@ -12,6 +12,14 @@ plugin.tx_ttaddress {
          20 = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Private/Partials/
       }
    }
+   settings.pizpalue.googleMap {
+      pages = {$pizpalue.plugin.tx_ttaddress.googleMap.pages}
+      fields = {$pizpalue.plugin.tx_ttaddress.googleMap.fields}
+      apiKey = {$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}
+      lat = {$pizpalue.plugin.tx_ttaddress.googleMap.lat}
+      lng = {$pizpalue.plugin.tx_ttaddress.googleMap.lng}
+      zoom = {$pizpalue.plugin.tx_ttaddress.googleMap.zoom}
+   }
 }
 
 
@@ -23,15 +31,29 @@ page {
    includeCSS {
       ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/Scss/main.scss
    }
-   includeJSFooterlibs {
-      ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
-   }
-   includeJSFooter {
-      ttAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key=AIzaSyCrj0axMgLD-gxCgN0TqXe39PMj-PPnsj0&callback=initMap
-      ttAddressGoogleMap {
-         defer = 1
-         async = 1
-      }
-      #ttAddressGoogleMap >
-   }
 }
+
+#---------------------------------------------------------#
+#
+# To optimize page loading time the resources are just
+# embedded after the map has been explicitly enabled for
+# a page.
+#
+# TODO Embed resources automatically (checking for ce)
+#
+#---------------------------------------------------------#
+
+[page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]]
+   page {
+      includeJSFooterlibs {
+         ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
+      }
+      includeJSFooter {
+         ttAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}&callback=initMap
+         ttAddressGoogleMap {
+            defer = 1
+            async = 1
+         }
+      }
+   }
+[END]

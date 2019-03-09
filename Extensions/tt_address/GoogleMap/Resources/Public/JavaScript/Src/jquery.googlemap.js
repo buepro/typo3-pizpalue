@@ -7,11 +7,13 @@
 
     var pluginName = 'ppAddressGoogleMap',
         defaults = {
-        // JSON encoded addresses
-        addresses: null,
-            // Center coordinates from the map
+            // JSON encoded addresses
+            addresses: null,
+            // Map center coordinates
             lat: 46.829,
-            lng: 8.241
+            lng: 8.241,
+            // Map zoom
+            zoom: 8
         };
 
     function Plugin( element, options ) {
@@ -35,7 +37,7 @@
         if (!this.map) {
             var mapCenter = { lat: this.options.lat, lng: this.options.lng };
             this.map = new google.maps.Map(this.element, {
-                zoom: 8,
+                zoom: this.options.zoom,
                 center: mapCenter
             });
         }
@@ -51,11 +53,13 @@
         var addresses = this.options.addresses;
 
         // Replaces the image field with the image uri
-        var $images = $(this.element).siblings('.pp-ttaddress-mapimages');
-        var i;
-        for (i in addresses) {
-            var imageUri = $('[data-pp-ami="' + addresses[i].uid + '"]', $images).html();
-            addresses[i]['image'] = imageUri;
+        if ( addresses[0].image ) {
+            var $images = $(this.element).siblings('.pp-ttaddress-mapimages');
+            var i;
+            for (i in addresses) {
+                var imageUri = $('[data-pp-ami="' + addresses[i].uid + '"]', $images).html();
+                addresses[i]['image'] = imageUri;
+            }
         }
     };
 
@@ -108,7 +112,9 @@
         $('.pp-amt-wrap',$content).attr('data-pp-amt-uid', address['uid']);
 
         // Sets image data attribute
-        $('.pp-amt-image',$content).attr('data-pp-amt',address.image);
+        if ( address.image ) {
+            $('.pp-amt-image',$content).attr('data-pp-amt',address.image);
+        }
 
         // Sets address content
         var field;
