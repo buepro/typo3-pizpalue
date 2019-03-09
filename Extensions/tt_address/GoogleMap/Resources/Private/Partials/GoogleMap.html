@@ -6,9 +6,15 @@
     -> f:format.json(forceObject: 'true')
     -> f:variable(name: 'jsonData')}
 
-<h1>Google map goes here</h1>
-
-<div class="pp-ttaddress-map" data-pp-addresses="{jsonData}">
+<div id="pp-ttaddress-map{contentObjectData.uid}" class="pp-ttaddress-map">
+    <script type="text/javascript">
+        (function () {
+            var jsonData = <f:format.raw>{jsonData}</f:format.raw>;
+            window.addEventListener('buepro.ttaddress.googlemap', function () {
+                $('#pp-ttaddress-map' + {contentObjectData.uid}).ppAddressGoogleMap({'addresses': jsonData});
+            });
+        }) ();
+    </script>
 </div>
 <div class="pp-ttaddress-maptemplate" data-pp-amt-markertitle="company">
     <div class="pp-amt-wrap" data-pp-amt-uid="uid">

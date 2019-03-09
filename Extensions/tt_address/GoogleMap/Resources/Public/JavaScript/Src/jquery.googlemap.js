@@ -7,6 +7,8 @@
 
     var pluginName = 'ppAddressGoogleMap',
         defaults = {
+        // JSON encoded addresses
+        addresses: null,
             // Center coordinates from the map
             lat: 46.829,
             lng: 8.241
@@ -14,12 +16,11 @@
 
     function Plugin( element, options ) {
         this.element = element;
-        this.addresses = null;
-        this.map = null;
-        this.$template = null;
         this.options = $.extend( {}, defaults, options) ;
         this._defaults = defaults;
         this._name = pluginName;
+        this.map = null;
+        this.$template = null;
         this.init();
     }
 
@@ -28,21 +29,6 @@
         this._initTemplate();
         this._initAddresses();
         this._addAddresses();
-    };
-
-    Plugin.prototype._initAddresses = function () {
-        this.addresses = $(this.element).attr('data-pp-addresses');
-        if ( typeof this.addresses === 'string' ) {
-            this.addresses = $.parseJSON(this.addresses);
-        }
-
-        // Replaces the image field with the image uri
-        var $images = $(this.element).siblings('.pp-ttaddress-mapimages');
-        var i;
-        for (i in this.addresses) {
-            var imageUri = $('[data-pp-ami="' + this.addresses[i].uid + '"]', $images).html();
-            this.addresses[i]['image'] = imageUri;
-        }
     };
 
     Plugin.prototype._initMap = function () {
@@ -56,7 +42,21 @@
     };
 
     Plugin.prototype._initTemplate = function () {
-        this.$template = $(this.element).siblings('.pp-ttaddress-maptemplate');
+        if (!this.$template) {
+            this.$template = $(this.element).siblings('.pp-ttaddress-maptemplate');
+        }
+    };
+
+    Plugin.prototype._initAddresses = function () {
+        var addresses = this.options.addresses;
+
+        // Replaces the image field with the image uri
+        var $images = $(this.element).siblings('.pp-ttaddress-mapimages');
+        var i;
+        for (i in addresses) {
+            var imageUri = $('[data-pp-ami="' + addresses[i].uid + '"]', $images).html();
+            addresses[i]['image'] = imageUri;
+        }
     };
 
     Plugin.prototype._addMarker = function ( title, position, content, uid ) {
@@ -80,7 +80,7 @@
     };
 
     Plugin.prototype._addAddresses = function () {
-        var addresses = this.addresses;
+        var addresses = this.options.addresses;
         var address, title, position, content, i;
         for (i in addresses) {
             address = addresses[i];
@@ -186,5 +186,7 @@
  * Google Callback function
  */
 function initMap() {
-    $('.pp-ttaddress-map').ppAddressGoogleMap();
+    var event = document.createEvent('Event');
+    event.initEvent('buepro.ttaddress.googlemap', true, true);
+    window.dispatchEvent(event);
 }
