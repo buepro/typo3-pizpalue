@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <div class="tt_address_list">
+        <f:render section="displayMode_{settings.displayMode}" arguments="{_all}" />
+    </div>
+</f:section>
+
+<f:section name="displayMode_single">
+    <f:render partial="Full" arguments="{_all}"/>
+</f:section>
+
+<f:section name="displayMode_googleMap">
+    <f:render partial="GoogleMap" arguments="{_all}"/>
+</f:section>
+
+</html>
