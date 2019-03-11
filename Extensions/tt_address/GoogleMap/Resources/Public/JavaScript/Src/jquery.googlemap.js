@@ -52,13 +52,14 @@
     Plugin.prototype._initAddresses = function () {
         var addresses = this.options.addresses;
 
-        // Replaces the image field with the image uri
+        // Replaces the image field with the image uri and adds the uri to show details
         if ( addresses[0].image ) {
-            var $images = $(this.element).siblings('.pp-ttaddress-mapimages');
-            var i;
+            var $dataPanel = $(this.element).siblings('.pp-ttaddress-mapdata');
+            var i, $dataItem;
             for (i in addresses) {
-                var imageUri = $('[data-pp-ami="' + addresses[i].uid + '"]', $images).html();
-                addresses[i]['image'] = imageUri;
+                $dataItem = $('[data-pp-ami="' + addresses[i].uid + '"]', $dataPanel);
+                addresses[i]['image'] = $dataItem.attr('data-pp-amd-imageuri');
+                addresses[i]['uri'] = $dataItem.attr('data-pp-amd-uri');
             }
         }
     };
@@ -129,6 +130,7 @@
 
             // Sets links
             if ( $element.attr('href') === '#' ) {
+                $element.attr('href', address[field]);
                 if ( field === 'email' ) {
                     $element.attr('href','mailto:' + address[field]);
                 }

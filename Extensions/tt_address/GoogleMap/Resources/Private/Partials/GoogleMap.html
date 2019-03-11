@@ -59,16 +59,27 @@
                     <a href="#" data-pp-amt="email">Email</a>&nbsp;|&nbsp;
                     <a href="#" target="_blank" data-pp-amt="www">Web</a>
                 </p>
+                <p><a href="#" target="_blank" data-pp-amt="uri">{f:translate(key: 'more')}</a></p>
             </div>
         </div>
     </div>
-    <div class="pp-ttaddress-mapimages">
-        <f:for each="{addresses}" as="address">
-            <f:if condition="{address.image}">
-                <i data-pp-ami="{address.uid}"><f:uri.image image="{address.firstImage}" width="150"/></i>
-            </f:if>
-        </f:for>
-    </div>
+    <f:spaceless>
+        <div class="pp-ttaddress-mapimages pp-ttaddress-mapdata">
+            <f:for each="{addresses}" as="address">
+                {f:uri.action(action: 'show', arguments: {address: address}, pageUid: settings.singlePid)
+                    -> f:variable(name: 'addressUri')
+                    -> f:if(condition: settings.singlePid)}
+                <f:if condition="{address.image}">
+                    {f:uri.image(image: address.firstImage, width: 150) -> f:variable(name:'imageUri')}
+                </f:if>
+                <i data-pp-ami="{address.uid}"
+                   data-pp-amd="{address.uid}"
+                   data-pp-amd-imageuri="{imageUri}"
+                   data-pp-amd-uri="{addressUri}"></i>
+            </f:for>
+        </div>
+    </f:spaceless>
+
 </f:section>
 
 </html>
