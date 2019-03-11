@@ -20,7 +20,7 @@
                  aria-labelledby="accordion-heading-{content.uid}"
                  data-parent="#accordion-{data.uid}">
                 <div class="accordion-body card-body">
-                    {data.tx_gridelements_view_child_{content.uid}->f:format.htmlentitiesDecode()}
+                    {data.tx_gridelements_view_child_{content.uid} -> f:format.htmlentitiesDecode(keepQuotes: 1)}
                 </div>
             </div>
         </div>

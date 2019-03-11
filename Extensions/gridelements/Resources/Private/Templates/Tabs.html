@@ -23,7 +23,7 @@
                  class="tab-pane fade {f:if(condition:'{iterator.index}==0',then:'show active')}"
                  role="tabpanel"
                  aria-labelledby="tab-{content.uid}">
-                {data.tx_gridelements_view_child_{content.uid}->f:format.htmlentitiesDecode()}
+                {data.tx_gridelements_view_child_{content.uid} -> f:format.htmlentitiesDecode(keepQuotes: 1)}
             </div>
         </f:for>
     </div>
