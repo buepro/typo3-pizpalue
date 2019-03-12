@@ -1,0 +1,29 @@
+#=========================================================#
+# Plugin
+#=========================================================#
+
+plugin.tx_ttaddress {
+   view {
+      templateRootPaths {
+         22 = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Private/Templates/
+      }
+
+      partialRootPaths {
+         22 = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Private/Partials/
+      }
+   }
+   settings.pizpalue.teaser {
+      itemCount = 12
+   }
+}
+
+
+#=========================================================#
+# Page
+#=========================================================#
+
+page {
+   includeCSS {
+      ttAddressTeaser = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Public/Scss/main.scss
+   }
+}
