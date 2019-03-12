@@ -46,7 +46,7 @@ page {
 [page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]]
    page {
       includeJSFooterlibs {
-         ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
+         ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js
       }
       includeJSFooter {
          ttAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}&callback=initMap
@@ -56,4 +56,11 @@ page {
          }
       }
    }
+[END]
+
+[page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]] && [{$pizpalue.agency.isDebugMode} == 1]
+   page {
+      includeJSFooterlibs {
+         ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
+      }
 [END]
