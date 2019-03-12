@@ -105,3 +105,14 @@ To provide an RSS feed the following steps could be followed:
    `chesio/rss_display <https://github.com/chesio/rss_display/tree/enclosure-view-helper>`__ provides one.
 
 
+.. _admin_extensions:
+
+Extensions
+==========
+
+For some extensions additional packages are available:
+
+.. toctree::
+   :maxdepth: 2
+
+   TtAddress

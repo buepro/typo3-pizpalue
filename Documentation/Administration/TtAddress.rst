@@ -9,7 +9,10 @@ Extension tt_address
 Google map
 ==========
 
-.. figure:: ../Images/Administration/TtAddressMap.jpg
+This package adds a Google map showing the selected addresses.
+
+.. figure:: ../Images/Administration/TtAddress/GoogleMap/Map.jpg
+   :width: 500px
    :alt: Map showing addresses from table tt_address
 
    Map showing addresses from table tt_address
@@ -22,6 +25,12 @@ Setup
 #. Configure the map in the constant editor (category "PIZPALUE: PLUGINS", section "Addresses (tt_address)")
 #. Add the address plugin to a page and select the "Google Map View" (Plugin options - Display tab -
    Select display mode)
+
+.. figure:: ../Images/Administration/TtAddress/GoogleMap/DisplayMode.jpg
+   :width: 500px
+   :alt: "Google Map View" in the "Display mode" from the plugin content element
+
+   "Google Map View" in the "Display mode" from the plugin content element
 
 .. note::
    This package adds its Fluid templates and partials to index 20
