@@ -11,7 +11,16 @@ module.exports = function(grunt) {
             resources: '<%= paths.root %>Resources/',
             icons: '<%= paths.resources %>Public/Icons/',
             fonts: '<%= paths.resources %>Public/Fonts/',
-            js: '<%= paths.resources %>Public/JavaScript/'
+            js: '<%= paths.resources %>Public/JavaScript/',
+            exts: {
+                ttAddress: {
+                    root: '<%= paths.root %>Extensions/tt_address/',
+                    googleMap: {
+                        resources: '<%= paths.exts.ttAddress.root %>GoogleMap/Resources/',
+                        js: '<%= paths.exts.ttAddress.googleMap.resources %>Public/JavaScript/'
+                    }
+                }
+            }
         },
         cssmin: {
             pizpalueicon: {
@@ -43,6 +52,10 @@ module.exports = function(grunt) {
             revealfooterservice: {
                 src: '<%= paths.js %>Src/jquery.revealfooterservice.js',
                 dest: '<%= paths.js %>Dist/jquery.revealfooterservice.min.js'
+            },
+            addressmap: {
+                src: '<%= paths.exts.ttAddress.googleMap.js %>Src/jquery.googlemap.js',
+                dest: '<%= paths.exts.ttAddress.googleMap.js %>Dist/jquery.googlemap.min.js'
             },
         },
         watch: {
