@@ -57,7 +57,7 @@
             var $dataPanel = $(this.element).siblings('.pp-ttaddress-mapdata');
             var i, $dataItem;
             for (i in addresses) {
-                $dataItem = $('[data-pp-ami="' + addresses[i].uid + '"]', $dataPanel);
+                $dataItem = $('[data-pp-amd-uid="' + addresses[i].uid + '"]', $dataPanel);
                 addresses[i]['image'] = $dataItem.attr('data-pp-amd-imageuri');
                 addresses[i]['uri'] = $dataItem.attr('data-pp-amd-uri');
             }

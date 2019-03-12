@@ -64,7 +64,7 @@
         </div>
     </div>
     <f:spaceless>
-        <div class="pp-ttaddress-mapimages pp-ttaddress-mapdata">
+        <div class="pp-ttaddress-mapdata">
             <f:for each="{addresses}" as="address">
                 {f:uri.action(action: 'show', arguments: {address: address}, pageUid: settings.singlePid)
                     -> f:variable(name: 'addressUri')
@@ -72,8 +72,7 @@
                 <f:if condition="{address.image}">
                     {f:uri.image(image: address.firstImage, width: 150) -> f:variable(name:'imageUri')}
                 </f:if>
-                <i data-pp-ami="{address.uid}"
-                   data-pp-amd="{address.uid}"
+                <i data-pp-amd-uid="{address.uid}"
                    data-pp-amd-imageuri="{imageUri}"
                    data-pp-amd-uri="{addressUri}"></i>
             </f:for>

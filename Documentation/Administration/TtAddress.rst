@@ -9,6 +9,11 @@ Extension tt_address
 Google map
 ==========
 
+.. figure:: ../Images/Administration/TtAddressMap.jpg
+   :alt: Map showing addresses from table tt_address
+
+   Map showing addresses from table tt_address
+
 Setup
 -----
 
@@ -53,23 +58,34 @@ Extensions/tt_address/GoogleMap/Resources/Private/Partials/GoogleMap.html"). The
 Since the data for each address is assigned to a marker through JS some data attributes and class names serve a
 special need.
 
-The data attributes have the following function:
+Template attributes
+~~~~~~~~~~~~~~~~~~~
 
 ========================= ==========================================================================================
-Data-property             Function
+Template attribute        Function
 ========================= ==========================================================================================
 data-pp-amt-markertitle   Defines the address field used for the markers title shown when hovering over the marker
 data-pp-amt-uid           The uid from the address the content is derived from
 data-pp-amt               The value indicates the field used for replacing the tags content
 ========================= ==========================================================================================
 
-The following classes are needed and have the following functions:
+Data attributes
+~~~~~~~~~~~~~~~
+
+========================= ==========================================================================================
+Data attribute            Function
+========================= ==========================================================================================
+data-pp-amd-uid           Specifies the address record uid holding the data for the infowindow
+data-pp-amd-imageuri      The uri from the image to be shown in the infowindow
+data-pp-amd-uri           The uri to show the address details
+========================= ==========================================================================================
+
+Classes
+~~~~~~~
 
 ========================= ==========================================================================================
 Class                     Function
 ========================= ==========================================================================================
 pp-ttaddress-maptemplate  Identifies the template for the marker info window (is sibling from pp-ttaddress-map)
 pp-amt-image              Identifies the image
-
-
 ========================= ==========================================================================================
