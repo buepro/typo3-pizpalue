@@ -37,6 +37,7 @@
 # customsubcategory=1510=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.features
 # customsubcategory=1520=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.animation
 # customsubcategory=2010=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.newsRSSFeed
-# customsubcategory=2020=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.ttaddress
+# customsubcategory=2020=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.ttaddressGoogleMap
+# customsubcategory=2022=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.ttaddressTeaser
 # customsubcategory=2910=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.various
 # customsubcategory=2990=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.depreciated

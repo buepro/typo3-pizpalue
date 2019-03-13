@@ -92,8 +92,11 @@
             <trans-unit id="constSubCategory.newsRSSFeed">
                 <source>News RSS feed</source>
             </trans-unit>
-            <trans-unit id="constSubCategory.ttaddress">
-                <source>Addresses (tt_address)</source>
+            <trans-unit id="constSubCategory.ttaddressGoogleMap">
+                <source>Addresses Google Map (tt_address)</source>
+            </trans-unit>
+            <trans-unit id="constSubCategory.ttaddressTeaser">
+                <source>Addresses Teaser (tt_address)</source>
             </trans-unit>
         </body>
     </file>

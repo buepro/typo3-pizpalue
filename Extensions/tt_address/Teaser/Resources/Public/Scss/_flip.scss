@@ -18,7 +18,7 @@
     content: ' ';
     display: block;
     width: 100%;
-    margin-top: 70%;
+    margin-top: $pp-ttaddress-teaser-relheight + '%';
   }
 }
 
@@ -26,7 +26,11 @@
 .flip-inner {
   transition: 0.6s;
   transform-style: preserve-3d;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /* hide back of pane during swap */
@@ -36,7 +40,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* front pane, placed above back */
