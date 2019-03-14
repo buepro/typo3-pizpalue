@@ -28,7 +28,7 @@ Google map
 
 This package adds a Google map showing the selected addresses.
 
-.. figure:: ../Images/Administration/TtAddress/GoogleMap/Map.jpg
+.. figure:: ../../Images/Administration/TtAddress/GoogleMap/Map.jpg
    :width: 500px
    :alt: Map showing addresses from table tt_address
 
@@ -39,7 +39,7 @@ Setup
 
 Carry out the :ref:`common setup steps <admin_ttaddress_common_setup>`.
 
-.. figure:: ../Images/Administration/TtAddress/GoogleMap/DisplayMode.jpg
+.. figure:: ../../Images/Administration/TtAddress/GoogleMap/DisplayMode.jpg
    :width: 500px
    :alt: "Google Map View" in the "Display mode" from the plugin content element
 
@@ -119,7 +119,7 @@ Teaser
 
 This package provides a teaser showing random address item as flip cards.
 
-.. figure:: ../Images/Administration/TtAddress/Teaser/Teaser.jpg
+.. figure:: ../../Images/Administration/TtAddress/Teaser/Teaser.jpg
    :width: 500px
    :alt: Teaser showing random address item as flip cards
 
@@ -130,7 +130,7 @@ Setup
 
 Carry out the :ref:`common setup steps <admin_ttaddress_common_setup>`.
 
-.. figure:: ../Images/Administration/TtAddress/Teaser/DisplayMode.jpg
+.. figure:: ../../Images/Administration/TtAddress/Teaser/DisplayMode.jpg
    :width: 500px
    :alt: "Teaser View" in the "Display mode" from the plugin content element
 
