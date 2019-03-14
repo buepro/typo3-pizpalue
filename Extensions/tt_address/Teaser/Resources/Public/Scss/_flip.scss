@@ -1,0 +1,58 @@
+//
+// Based on https://davidwalsh.name/css-flip
+//
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flip-inner, .flip-container.hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-container {
+  width: 100%;
+  overflow: hidden;
+  &:after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    margin-top: $pp-ttaddress-teaser-relheight + '%';
+  }
+}
+
+/* flip speed goes here */
+.flip-inner {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}

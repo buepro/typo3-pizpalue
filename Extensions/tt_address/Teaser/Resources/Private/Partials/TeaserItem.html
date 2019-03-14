@@ -1,0 +1,71 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="vcard" itemscope itemtype="http://schema.org/Person">
+    <div class="flip-container">
+        <div class="flip-inner">
+            <div class="front">
+                <div class="front-inner">
+                    <picture>
+                        <f:for each="{teaserConfig.variants}" key="name" as="variant">
+                            <f:variable name="breakpoint">{variant.breakpoint as integer}</f:variable>
+                            {v:math.division(a: variant.item.relativeWidth, b: 100)
+                            -> v:math.product(b: variant.maxWidth)
+                            -> v:math.round()
+                            -> f:variable(name: 'width')}
+                            {v:math.division(a: teaserConfig.item.relativeHeight, b: 100)
+                            -> v:math.product(b: width)
+                            -> v:math.round()
+                            -> f:variable(name: 'height')}
+
+                            <f:if condition="{address.image}">
+                                <f:then>
+                                    {f:uri.image(image: address.firstImage, crop: 0, width: width, height: height, cropVariant: name, maxWidth: width)
+                                        -> f:variable(name: 'imageUri')}
+                                </f:then>
+                                <f:else>
+                                    {f:uri.image(src: teaserConfig.defaultImageUid, crop: 0, width: width, height: height, cropVariant: name, maxWidth: width)
+                                        -> f:variable(name: 'imageUri')}
+                                </f:else>
+                            </f:if>
+                            <source data-variant="{name}" data-maxwidth="{width}" {f:if(condition: breakpoint, then: ' media="(min-width: {breakpoint}px)" ')}srcset="{imageUri}">
+                        </f:for>
+                        <f:if condition="{address.image}">
+                            <f:then>
+                                {f:uri.image(image: address.firstImage, cropVariant: 'small')
+                                    -> f:variable(name: 'imageUri')}
+                            </f:then>
+                            <f:else>
+                                {f:uri.image(src: teaserConfig.defaultImageUid, cropVariant: 'small')
+                                    -> f:variable(name: 'imageUri')}
+                            </f:else>
+                        </f:if>
+                        <img src="{imageUri}"
+                             title="{address.firstImage.title}" alt="{address.firstImage.properties.alternative}">
+                    </picture>
+                </div>
+            </div>
+            <div class="back">
+                <div class="back-inner">
+                    <h5>{address.title} {address.firstName} {address.middleName} {address.lastName}</h5>
+                    <f:if condition="{address.position}">
+                        <p class="position"><em>{address.position}</em></p>
+                    </f:if>
+
+                    <f:render section="address" partial="Address" arguments="{_all}"/>
+                    <f:render section="social" partial="Address" arguments="{_all}"/>
+
+                    <f:if condition="{settings.singlePid}">
+                        <f:link.action action="show" arguments="{address : address}"
+                                       title="{address.title} {address.firstName} {address.middleName} {address.lastName}"
+                                       pageUid="{settings.singlePid}" class="btn btn-default">{f:translate(key:'more')}
+                        </f:link.action>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

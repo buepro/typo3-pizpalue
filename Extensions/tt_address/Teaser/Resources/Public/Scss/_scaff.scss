@@ -1,0 +1,39 @@
+.tt_address_list {
+  .pp-ttaddress-teaser {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    .vcard {
+      display: none;
+      @each $breakpoint in map-keys($pp-ttaddress-teaser-item-count) {
+        $count: map-get($pp-ttaddress-teaser-item-count,$breakpoint);
+        @include media-breakpoint-up($breakpoint) {
+          &:nth-child(-n+#{$count}) {
+            display: block;
+          }
+        }
+      }
+      margin: 0;
+      width: $pp-ttaddress-teaser-relwidth-xs + '%';
+      @each $breakpoint in map-keys($pp-ttaddress-teaser-item-width) {
+        @include media-breakpoint-up($breakpoint) {
+          width: map-get($pp-ttaddress-teaser-item-width, $breakpoint) + '%';
+        }
+      }
+      img {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+    .front {
+      background: $pp-ttaddress-teaser-front-bg;
+    }
+    .back {
+      background: $pp-ttaddress-teaser-back-bg;
+      padding: 1rem;
+    }
+  }
+}
+
+

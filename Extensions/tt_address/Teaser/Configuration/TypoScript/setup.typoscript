@@ -1,0 +1,89 @@
+#=========================================================#
+# Plugin
+#=========================================================#
+
+plugin.tx_ttaddress {
+   view {
+      templateRootPaths {
+         22 = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Private/Templates/
+      }
+      partialRootPaths {
+         22 = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Private/Partials/
+      }
+   }
+   settings.pizpalue.teaser {
+      defaultImageUid = {$pizpalue.plugin.tx_ttaddress.teaser.defaultImageUid}
+      maxItemCount = {$pizpalue.plugin.tx_ttaddress.teaser.maxItemCount}
+      item.relativeHeight = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-relheight}
+      variants {
+         default {
+            breakpoint = 1200
+            maxWidth = {$pizpalue.plugin.tx_ttaddress.teaser.maxWidth}
+            item {
+               count = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-count-xl}
+               relativeWidth = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-relwidth-xl}
+            }
+
+         }
+         large {
+            breakpoint = 992
+            maxWidth = 1200
+            item {
+               count = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-count-lg}
+               relativeWidth = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-relwidth-lg}
+            }
+
+         }
+         medium {
+            breakpoint = 768
+            maxWidth = 992
+            item {
+               count = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-count-md}
+               relativeWidth = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-relwidth-md}
+            }
+
+         }
+         small {
+            breakpoint = 576
+            maxWidth = 768
+            item {
+               count = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-count-sm}
+               relativeWidth = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-relwidth-sm}
+            }
+
+         }
+         extrasmall {
+            breakpoint = unset
+            maxWidth = 576
+            item {
+               count = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-count-xs}
+               relativeWidth = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-relwidth-xs}
+            }
+
+         }
+      }
+   }
+}
+
+
+#=========================================================#
+# Page
+#=========================================================#
+
+page {
+   includeCSS {
+      ttAddressTeaser = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Public/Scss/main.scss
+   }
+   jsFooterInline.1040 = TEXT
+   jsFooterInline.1040.value (
+$('.pp-ttaddress-teaser .flip-container').on('touchstart',function() {
+   var $container = $(this);
+   if ($container.hasClass('hover')) {
+      $('.pp-ttaddress-teaser .flip-container').removeClass('hover');
+   } else {
+      $('.pp-ttaddress-teaser .flip-container').removeClass('hover');
+      $container.addClass('hover');
+   }
+});
+)
+}
