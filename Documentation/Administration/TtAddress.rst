@@ -1,10 +1,27 @@
 .. include:: ../Includes.txt
 
-.. _administration_ttAddress:
+.. _administration_ttaddress:
 
 ====================
 Extension tt_address
 ====================
+
+.. _admin_ttaddress_common_setup:
+
+Common setup steps
+===================
+
+The below mentioned packages are available through the "Display mode" available in the plugin content element.
+
+The setup steps are similar:
+
+#. Add static template "Pizpalue - tt_address [package name]"
+#. Add TypoScript Configuration to resources from page property
+#. Configure the package in the constant editor (category "PIZPALUE: PLUGINS", section "Addresses (tt_address)")
+#. Add the address plugin to a page and select the corresponding view (Plugin options - Display tab -
+   Select display mode)
+
+.. _admin_ttaddress_googlemap:
 
 Google map
 ==========
@@ -20,11 +37,7 @@ This package adds a Google map showing the selected addresses.
 Setup
 -----
 
-#. Add static template "Pizpalue - tt_address Google map"
-#. Add TypoScript Configuration to resources from page property
-#. Configure the map in the constant editor (category "PIZPALUE: PLUGINS", section "Addresses (tt_address)")
-#. Add the address plugin to a page and select the "Google Map View" (Plugin options - Display tab -
-   Select display mode)
+Carry out the :ref:`common setup steps <admin_ttaddress_common_setup>`.
 
 .. figure:: ../Images/Administration/TtAddress/GoogleMap/DisplayMode.jpg
    :width: 500px
@@ -98,3 +111,38 @@ Class                     Function
 pp-ttaddress-maptemplate  Identifies the template for the marker info window (is sibling from pp-ttaddress-map)
 pp-amt-image              Identifies the image
 ========================= ==========================================================================================
+
+.. _admin_ttaddress_teaser:
+
+Teaser
+======
+
+This package provides a teaser showing random address item as flip cards.
+
+.. figure:: ../Images/Administration/TtAddress/Teaser/Teaser.jpg
+   :width: 500px
+   :alt: Teaser showing random address item as flip cards
+
+   Teaser showing random address item as flip cards
+
+Setup
+-----
+
+Carry out the :ref:`common setup steps <admin_ttaddress_common_setup>`.
+
+.. figure:: ../Images/Administration/TtAddress/Teaser/DisplayMode.jpg
+   :width: 500px
+   :alt: "Teaser View" in the "Display mode" from the plugin content element
+
+   "Teaser View" in the "Display mode" from the plugin content element
+
+.. note::
+   This package adds its Fluid templates and partials to index 22
+   (see TS setup "plugin.tx_ttaddress.view.templateRootPaths"). To overrule these files add own resources under a higher
+   index.
+
+Customization
+-------------
+
+The package provides several configuration constants allowing to define the view for different screen sizes. For further
+customizations the template might be overruled.
