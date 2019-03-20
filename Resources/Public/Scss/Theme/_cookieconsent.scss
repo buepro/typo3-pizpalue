@@ -55,6 +55,11 @@ $cookieconsent-button-highlight-bg: transparent;
 //
 // Base
 //
+#cookieconsent {
+  a {
+    cursor: pointer;
+  }
+}
 .cc-window,
 .cc-revoke {
   position: fixed;
