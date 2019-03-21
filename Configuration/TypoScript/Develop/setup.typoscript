@@ -59,7 +59,7 @@ page {
          extTarget = _blank
          parameter = {$pizpalue.agency.link}
          parameter.insertData = 1
-         title = In Arbeit - Eine Weseite von {$pizpalue.agency.name}
+         title = In Arbeit - Eine Webseite von {$pizpalue.agency.name}
          title.insertData = 1
       }
    }
