@@ -16,6 +16,8 @@ plugin.tx_indexedsearch {
    }
 }
 
+tt_content.list.20.indexedsearch_pi2.stdWrap.wrap = <div class="pp-indexed-search">|</div>
+
 page {
    includeCSS {
       indexedSearch = EXT:pizpalue/Extensions/indexed_search/Resources/Public/Scss/main.scss

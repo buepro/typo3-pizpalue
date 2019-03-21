@@ -5,17 +5,19 @@
 //
 // List
 //
-.media {
-  &:nth-of-type(1) {
-    padding-top: 1rem;
-    margin-top: 2rem;
-    border-top: transparentize($primary,70%) 1px solid;
-  }
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: transparentize($primary,70%) 1px solid;
-  &:nth-last-of-type(1) {
-    margin-bottom: 2rem;
+.pp-indexed-search {
+  .media {
+    &:nth-of-type(1) {
+      padding-top: 1rem;
+      margin-top: 2rem;
+      border-top: transparentize($primary,70%) 1px solid;
+    }
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: transparentize($primary,70%) 1px solid;
+    &:nth-last-of-type(1) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
