@@ -1,15 +1,31 @@
+;
+/**
+ * Pizpalue constructor
+ *
+ * Used to avoid naming conflicts.
+ */
+function Pizpalue () {}
+
 /**
  * Return value from a key (name) in the url
  *
  * @see davidwalsh.name/query-string-javascript
  */
-function getUrlParameter(name) {
+Pizpalue.prototype.getUrlParameter = function (name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
+if ( typeof pizpalue !== 'undefined') {
+    alert('JS conflict! The variable pizpalue is already in use. Please check your libraries.');
+} else {
+    var pizpalue = new Pizpalue();
+
+    // @deprecated since pizpalue v9, will be removed in pizpalue v10.0. Use pizpalue.getUrlParameter instead.
+    var getUrlParameter = pizpalue.getUrlParameter;
+}
 
 /**
  * jQuery section
@@ -26,10 +42,11 @@ function getUrlParameter(name) {
          * as its parent element
          */
         function sizeToParentHeight() {
-            $('.pp-parentheight,.pp-parent-height').height(0);
-            $('.pp-parentheight,.pp-parent-height').each(function () {
-                $(this).height($(this).parent().height());
-            });
+            $('.pp-parentheight,.pp-parent-height')
+                .height(0)
+                .each(function () {
+                    $(this).height($(this).parent().height());
+                });
         }
         if ($('.pp-parentheight,.pp-parent-height').length) {
             $(window).on('load,resize', sizeToParentHeight);
@@ -123,7 +140,7 @@ function getUrlParameter(name) {
         if (multiCheckBox.length > 0) {
             var html = $('.pp-label-dataprotection p').html();
             multiCheckBox.find('label > span').html(html);
-        };
+        }
     });
 
 
