@@ -1,5 +1,4 @@
 .idea
 *.zip
 .php_cs.cache
-Lab
 Build/node_modules
