@@ -4,10 +4,10 @@ page {
    }
 }
 
-[globalString = LIT:1={$pizpalue.features.useStyle}]
+[{$pizpalue.features.useStyle} == 1]
    page {
       includeCSS {
          pizpalueCustom = EXT:pizpalue/Resources/Public/Less/Custom/custom.less
       }
    }
-[global]
+[END]

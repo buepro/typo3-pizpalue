@@ -41,9 +41,9 @@ page {
 # Development settings
 #=========================================================#
 
-[globalString = LIT:1 = {$pizpalue.agency.isDebugMode}]
+[{$pizpalue.agency.isDebugMode} == 1]
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Develop/setup.typoscript">
-[global]
+[END]
 
 
 #=========================================================#

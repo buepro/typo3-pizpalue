@@ -82,18 +82,18 @@ page {
 #:::::::::::::::::::::::
 #: Custom CSS/SCSS
 #.
-[globalString = LIT:1 = {$pizpalue.features.useStyle}]
+[{$pizpalue.features.useStyle} == 1]
    page {
       includeCSS {
          pizpalueCustom = EXT:pizpalue/Resources/Public/Scss/Custom/custom.scss
       }
    }
-[global]
+[END]
 
 #:::::::::::::::::::::::
 #: Font awesome
 #.
-[globalString = LIT:1 = {$pizpalue.features.fontAwesome.enable}]
+[{$pizpalue.features.fontAwesome.enable} == 1]
    page {
       includeCSSLibs {
          FontAwesome = https://use.fontawesome.com/releases/v5.5.0/css/all.css
@@ -104,7 +104,7 @@ page {
          }
       }
    }
-[global]
+[END]
 
 
 #---------------------------------------------------------#
@@ -122,29 +122,29 @@ page {
 #:::::::::::::::::::::::
 #: Cookie consent service
 #.
-[globalString = LIT:1 = {$page.theme.cookieconsent.enable}]
+[{$page.theme.cookieconsent.enable} == 1]
    page {
       includeJSFooterlibs {
          pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.cookieconsentservice.min.js
       }
    }
-[global]
+[END]
 
 #:::::::::::::::::::::::
 #: Reveal footer service
 #.
-[globalString = LIT:1 = {$pizpalue.frame.revealFooter}]
+[{$pizpalue.frame.revealFooter} == 1]
    page {
       includeJSFooterlibs {
          pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.revealfooterservice.min.js
       }
    }
-[global]
+[END]
 
 #:::::::::::::::::::::::
 #: Scroll animation
 #.
-[globalString = LIT:1 = {$pizpalue.features.scrollAnimation.enable}]
+[{$pizpalue.features.scrollAnimation.enable} == 1]
    lib.contentElement.settings.preload.images = 1
    page {
       includeCSS {
@@ -165,14 +165,14 @@ $(function () {
          )
       }
    }
-[global]
+[END]
 
 
 #=========================================================#
 # Maintenance page
 #=========================================================#
 
-[globalString = LIT:1 = {$pizpalue.agency.isMaintenancePage}]
+[{$pizpalue.agency.isMaintenancePage} == 1]
    page.10 {
       dataProcessing {
          10.as = no-mainnavigation
@@ -186,15 +186,15 @@ $(function () {
          rootPage.value.data = page:uid
       }
    }
-[global]
+[END]
 
 
 #=========================================================#
 # Development settings
 #=========================================================#
 
-[globalString = LIT:1 = {$pizpalue.agency.isDebugMode}]
+[{$pizpalue.agency.isDebugMode} == 1]
    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript">
-[global]
+[END]
 
 

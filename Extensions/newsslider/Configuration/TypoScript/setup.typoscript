@@ -10,10 +10,10 @@ page {
 #======================#
 # development settings #
 #======================#
-[globalString = LIT:setup = {$pizpalue.page.state}]
+["{$pizpalue.page.state}" == "setup"]
    plugin.tx_newsslider.settings {
        compressJS = FALSE
        compressCSS = FALSE
    }
-[global]
+[END]
 

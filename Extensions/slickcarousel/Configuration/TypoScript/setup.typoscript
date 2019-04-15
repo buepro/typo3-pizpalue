@@ -33,6 +33,6 @@ tt_content.slickcarouselbgimg.templateName = Slickcarouselbgimg
 
 page.includeCSS.pizpalueSlickcarousel = EXT:pizpalue/Extensions/slickcarousel/Resources/Public/Scss/general.scss
 
-[globalString = LIT:1={$pizpalue.general.useLess}]
+[{$pizpalue.general.useLess} == 1]
    page.includeCSS.pizpalueSlickcarousel >
-[global]
+[END]

@@ -1,4 +1,4 @@
-[globalString = LIT:AppIcon = {$page.favicon.file}]
+[{$page.favicon.file} == 1]
    page {
       shortcutIcon >
       headerData.610 = TEXT
@@ -7,13 +7,13 @@
 {$pizpalue.appIcon.headerData}
       )
    }
-[global]
+[END]
 
-[globalString = LIT:1 = {$pizpalue.appIcon.insertMetaTags}]
+[{$pizpalue.appIcon.insertMetaTags} == 1]
    page.meta {
       apple-mobile-web-app-title = {$pizpalue.appIcon.appName}
       applicationName = {$pizpalue.appIcon.appName}
       msapplication-config = {$pizpalue.appIcon.folder}/browserconfig.xml
       theme-color = {$pizpalue.appIcon.androidThemeColor}
    }
-[global]
+[END]

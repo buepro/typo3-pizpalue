@@ -1,4 +1,4 @@
-[globalVar = TSFE:type = 9818]
+[getTSFE().type == 9818]
 config {
     disableAllHeaderCode = 1
     xhtml_cleaning = none
@@ -30,4 +30,4 @@ pageNewsRSS {
         }
     }
 }
-[global]
+[END]
