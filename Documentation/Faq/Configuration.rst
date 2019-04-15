@@ -1,11 +1,10 @@
 .. include:: ../Includes.txt
 
+.. _faq_configuration:
 
-.. _configuration_faq:
-
-=================
-Configuration FAQ
-=================
+=============
+Configuration
+=============
 
 Layout/Design/Theme
 ===================

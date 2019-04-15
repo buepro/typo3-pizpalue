@@ -52,7 +52,7 @@ selected page language. For this users might reference data by using curly brack
 
 .. _usr-ppClasses:
 
-Piz Palue classes
+Pizpalue classes
 =================
 
 ============================= =============================================================================
