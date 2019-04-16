@@ -14,13 +14,18 @@ page {
          type =
       }
 
+      breadcrumb {
+         # cat=6030/1060/0110; type=boolean; label=Breadcrumb: Enable to display the breadcrumb
+         enable = 1
+      }
+
       meta {
-         # cat=6030/1060/0110; type=boolean; label=Show meta menu
+         # cat=6030/1060/0210; type=boolean; label=Show meta menu
          enable = 0
       }
 
       language {
-         # cat=6030/1060/0210; type=boolean; label=Show language menu
+         # cat=6030/1060/0310; type=boolean; label=Show language menu
          enable = 1
       }
    }
