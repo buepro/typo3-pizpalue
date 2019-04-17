@@ -119,6 +119,15 @@
                 <source>News RSS feed</source>
                 <target state="translated">News RSS feed</target>
             </trans-unit>
+
+            <trans-unit id="modal_dialog.title">
+                <source>Modal Dialog</source>
+                <target state="translated">Modaler Dialog</target>
+            </trans-unit>
+            <trans-unit id="modal_dialog.description">
+                <source>Renders a button to show content in a modal dialog window.</source>
+                <target state="translated">Zeigt einen Knopf zur Anzeige von Inhalten in einem modalen Dialogfenster.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

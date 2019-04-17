@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pp-modal-dialog-{data.uid}">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pp-modal-dialog-{data.uid}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <f:if condition="{pizpalue.frame.revealFooter}">
+        <f:comment>
+            The reveal footer feature introduces a new stacking context resulting in the modal dialog
+            to be behind the backdrop used to darken the page background. For the modal dialog to appear
+            correctly the dialog is moved here before the closing body tag.
+
+            See https://philipwalton.com/articles/what-no-one-told-you-about-z-index/
+        </f:comment>
+        <v:asset.script movable="1" namedChunks="1" fluid="1">
+            ;+function($) {
+                $dialog = $('<f:format.raw>#pp-modal-dialog-{data.uid}</f:format.raw>');
+                $(function() {
+                    $dialog.appendTo($('body'));
+                });
+            }(jQuery)
+        </v:asset.script>
+    </f:if>
+
+</f:section>
+</html>

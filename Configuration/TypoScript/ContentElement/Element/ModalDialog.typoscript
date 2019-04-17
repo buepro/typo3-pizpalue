@@ -1,0 +1,7 @@
+tt_content.modal_dialog >
+tt_content.modal_dialog =< lib.contentElement
+tt_content.modal_dialog {
+
+   templateName = ModalDialog
+
+}
