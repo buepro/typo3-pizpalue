@@ -4,6 +4,11 @@
           product-name="pizpalue">
         <header/>
         <body>
+            <trans-unit id="close">
+                <source>Close</source>
+                <target state="translated">Schliessen</target>
+            </trans-unit>
+
             <trans-unit id="ppCeFrame1">
                 <source>Custom frame 1</source>
                 <target state="translated">Angepasster Rahmen 1</target>

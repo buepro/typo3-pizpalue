@@ -120,6 +120,14 @@
                 <target state="translated">News RSS feed</target>
             </trans-unit>
 
+            <trans-unit id="modal_dialog.button_class">
+                <source>Button class</source>
+                <target state="translated">Klassendefinition des Knopfes</target>
+            </trans-unit>
+            <trans-unit id="modal_dialog.dialog_class">
+                <source>Dialog class</source>
+                <target state="translated">Klassendefinition des Dialoges</target>
+            </trans-unit>
             <trans-unit id="modal_dialog.title">
                 <source>Modal Dialog</source>
                 <target state="translated">Modaler Dialog</target>

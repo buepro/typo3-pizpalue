@@ -4,6 +4,11 @@
           product-name="pizpalue">
         <header/>
         <body>
+            <trans-unit id="close">
+                <source>Close</source>
+                <target state="translated">Fermer</target>
+            </trans-unit>
+
             <trans-unit id="cookieconsent.common.header">
                 <source>Cookies used on the website!</source>
                 <target state="translated">Ce site Web utilise des cookies!</target>

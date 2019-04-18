@@ -1,7 +1,11 @@
 tt_content.modal_dialog >
-tt_content.modal_dialog =< lib.contentElement
+tt_content.modal_dialog < tt_content.shortcut
 tt_content.modal_dialog {
 
    templateName = ModalDialog
+
+   dataProcessing {
+      10 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor
+   }
 
 }
