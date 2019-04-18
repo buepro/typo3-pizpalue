@@ -8,7 +8,7 @@
         {data.header}
     </button>
 
-    <div class="modal fade" id="pp-modal-dialog-{data.uid}" tabindex="-1" role="dialog"
+    <div class="modal fade pp-modal-dialog" id="pp-modal-dialog-{data.uid}" tabindex="-1" role="dialog"
          aria-labelledby="pp-modal-dialog-title-{data.uid}" aria-hidden="true">
         <div class="{data.pi_flexform.dialog_class}" role="document">
             <div class="modal-content">
@@ -39,13 +39,13 @@
 
             See https://philipwalton.com/articles/what-no-one-told-you-about-z-index/
         </f:comment>
-        <v:asset.script movable="1" namedChunks="1" fluid="1">
-            ;+function($) {
-                $dialog = $('<f:format.raw>#pp-modal-dialog-{data.uid}</f:format.raw>');
-                $(function() {
-                    $dialog.appendTo($('body'));
-                });
-            }(jQuery)
+        <v:asset.script movable="1" namedChunks="1" fluid="1" name="modal-dialog" overwrite="0">
+;+function($) {
+    $(function() {
+        var $dialogs = $('.pp-modal-dialog');
+        $dialogs.appendTo($('body'));
+    });
+}(jQuery)
         </v:asset.script>
     </f:if>
 
