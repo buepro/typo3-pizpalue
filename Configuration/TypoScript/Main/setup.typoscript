@@ -190,11 +190,18 @@ $(function () {
 
 
 #=========================================================#
-# Development settings
+# Development site mode
 #=========================================================#
 
-[{$pizpalue.agency.isDebugMode} == 1]
+[{$pizpalue.agency.siteMode} == 1]
    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript">
 [END]
 
 
+#=========================================================#
+# Review site mode
+#=========================================================#
+
+[{$pizpalue.agency.siteMode} == 2]
+   page.meta.robots = noindex,nofollow
+[END]

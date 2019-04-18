@@ -1,5 +1,9 @@
+#=========================================================#
+# This script needs to be loaded manually
+#=========================================================#
+
 pizpalue {
-   agency.isDebugMode = 1
+   agency.siteMode = 1
    frame.revealFooter = 1
 }
 

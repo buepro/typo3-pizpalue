@@ -58,7 +58,7 @@ page {
    }
 [END]
 
-[page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]] && [{$pizpalue.agency.isDebugMode} == 1]
+[page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]] && [{$pizpalue.agency.siteMode} > 1]
    page {
       includeJSFooterlibs {
          ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js

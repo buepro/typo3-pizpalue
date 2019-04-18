@@ -9,7 +9,7 @@ pizpalue.general {
 }
 pizpalue.agency {
     #reference = <span class="pp-agency-reference">Eine Webseite von <a href="https://www.buechler.pro" title="buechler.pro | TYPO3-Webseiten ohne Grenzen, SEO, Informatik" target="_blank">buechler.pro</a></span>
-    #isDebugMode = 0
+    #siteMode = 0
     #isMaintenancePage = 0
 }
 

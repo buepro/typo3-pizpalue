@@ -38,6 +38,8 @@ config {
 # Page
 #=========================================================#
 page {
+   meta.robots = noindex,nofollow
+
    includeCSS {
       pizpalueDevelop = EXT:pizpalue/Resources/Public/Scss/develop.scss
    }
