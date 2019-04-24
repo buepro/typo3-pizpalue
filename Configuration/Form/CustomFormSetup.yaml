@@ -13,3 +13,6 @@ TYPO3:
                 translation:
                   translationFile:
                     10: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
+      mixins:
+        finishersEmailMixin:
+          implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'

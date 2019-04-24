@@ -98,3 +98,4 @@ For some extensions additional packages are available:
 
    Extensions/News
    Extensions/TtAddress
+   Extensions/Form
