@@ -59,3 +59,4 @@ Table of Contents
    User/Index
    Changelog/Index
    Faq/Index
+   Contribute/Index
