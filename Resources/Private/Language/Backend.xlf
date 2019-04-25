@@ -111,6 +111,12 @@
             <trans-unit id="modal_dialog.description">
                 <source>Renders a button to show content in a modal dialog window.</source>
             </trans-unit>
+            <trans-unit id="ce_list_categorized_content.title">
+                <source>List categorized content</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.description">
+                <source>Lists content elements from selected categories.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

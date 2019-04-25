@@ -136,6 +136,14 @@
                 <source>Renders a button to show content in a modal dialog window.</source>
                 <target state="translated">Zeigt einen Knopf zur Anzeige von Inhalten in einem modalen Dialogfenster.</target>
             </trans-unit>
+            <trans-unit id="ce_list_categorized_content.title">
+                <source>List categorized content</source>
+                <target state="translated">Liste kategorisierter Inhalte</target>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.description">
+                <source>Lists content elements from selected categories.</source>
+                <target state="translated">Erstellt eine Liste von Inhalselementen ausgewählter Kategorieen.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
