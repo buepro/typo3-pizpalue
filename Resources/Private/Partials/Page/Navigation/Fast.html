@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd"
+      data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+<div class="pp-fastmenu">
+    <div class="pp-fm-content">
+        <f:for each="{pizpalue.menu.fast.items}" as="item">
+            <f:if condition="{item.contentUid}">
+                <div id="pp-fm-content-{item.contentUid}" class="pp-fm-item"
+                     data-pp-fm-contenticon="pp-fm-contenticon-{item.contentUid}">
+                    <div class="pp-fm-wrap">
+                        <v:content.render contentUids="{0: item.contentUid}"/>
+                    </div>
+                </div>
+            </f:if>
+        </f:for>
+    </div>
+    <div class="pp-fm-handle"><span class="ppicon ppicon-dropright"></span></div>
+    <div class="pp-fm-icongroup">
+        <f:for each="{pizpalue.menu.fast.items}" as="item">
+            <div class="pp-fm-item">
+                {f:variable(name:'justShowIcon', value:1)}
+                <f:if condition="{item.pageUid}">
+                    {f:variable(name:'justShowIcon', value:0)}
+                    <f:link.page pageUid="{item.pageUid}">
+                        <span class="{item.iconClass} pp-fm-linkicon"></span>
+                    </f:link.page>
+                </f:if>
+                <f:if condition="{item.contentUid}">
+                    {f:variable(name:'justShowIcon', value:0)}
+                    <a href="#">
+                        <span id="pp-fm-contenticon-{item.contentUid}" class="{item.iconClass} pp-fm-contenticon"
+                              data-pp-fm-content="pp-fm-content-{item.contentUid}"></span>
+                    </a>
+                </f:if>
+                <f:if condition="{justShowIcon}">
+                    <span class="{item.iconClass}"></span>
+                </f:if>
+            </div>
+        </f:for>
+    </div>
+</div>
+</f:spaceless>
+</html>

@@ -57,6 +57,10 @@ module.exports = function(grunt) {
                 src: '<%= paths.exts.ttAddress.googleMap.js %>Src/jquery.googlemap.js',
                 dest: '<%= paths.exts.ttAddress.googleMap.js %>Dist/jquery.googlemap.min.js'
             },
+            fastmenu: {
+                src: '<%= paths.js %>Src/jquery.fastmenu.js',
+                dest: '<%= paths.js %>Dist/jquery.fastmenu.min.js'
+            },
         },
         watch: {
             general: {
