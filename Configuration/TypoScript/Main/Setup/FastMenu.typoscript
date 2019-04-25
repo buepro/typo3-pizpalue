@@ -15,7 +15,7 @@ $('.pp-fastmenu').fastMenu({
 )
 }
 
-[globalString = LIT:1 = {$pizpalue.agency.isDebugMode}]
+[{$pizpalue.agency.siteMode} == 1]
    page {
       includeJSFooterlibs {
          fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.fastmenu.js
