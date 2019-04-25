@@ -83,6 +83,13 @@
             <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-join">
                 <source>Gallery item join</source>
             </trans-unit>
+
+            <trans-unit id="tca.modal_dialog.header">
+                <source>Button text</source>
+            </trans-unit>
+            <trans-unit id="tca.modal_dialog.options">
+                <source>Button options</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

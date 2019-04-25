@@ -99,7 +99,7 @@ if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(
  */
 if (1) {
     /**
-     * Register icons
+     * Register icons for gridelements
      */
     $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
     $icons = ['ppContainerFixed', 'ppContainer', 'ppColumns2', 'ppColumns3', 'ppColumns4', 'ppTabs', 'ppAccordion'];
@@ -110,6 +110,29 @@ if (1) {
             ['source' => 'EXT:pizpalue/Resources/Public/Icons/Gridelements/' . $iconName . '.svg']
         );
     }
+}
+
+/**
+ * Content elements
+ */
+if (1) {
+    /**
+     * Register icons
+     */
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $icons = ['modal-dialog'];
+    foreach ($icons as $icon) {
+        $iconRegistry->registerIcon(
+            'content-pizpalue-' . $icon,
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:pizpalue/Resources/Public/Icons/ContentElements/' . $icon . '.svg']
+        );
+    }
+    /**
+     * Add page tsconfig
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig">');
 }
 
 /**

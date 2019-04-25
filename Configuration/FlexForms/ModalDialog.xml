@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>General</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <button_class>
+                        <TCEforms>
+                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:modal_dialog.button_class
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                                <default>btn btn-primary</default>
+                            </config>
+                        </TCEforms>
+                    </button_class>
+                    <dialog_class>
+                        <TCEforms>
+                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:modal_dialog.dialog_class
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                                <default>modal-dialog modal-dialog-centered modal-dialog-scrollable</default>
+                            </config>
+                        </TCEforms>
+                    </dialog_class>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

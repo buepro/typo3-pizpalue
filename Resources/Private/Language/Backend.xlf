@@ -98,6 +98,19 @@
             <trans-unit id="constSubCategory.ttaddressTeaser">
                 <source>Addresses Teaser (tt_address)</source>
             </trans-unit>
+
+            <trans-unit id="modal_dialog.button_class">
+                <source>Button class</source>
+            </trans-unit>
+            <trans-unit id="modal_dialog.dialog_class">
+                <source>Dialog class</source>
+            </trans-unit>
+            <trans-unit id="modal_dialog.title">
+                <source>Modal Dialog</source>
+            </trans-unit>
+            <trans-unit id="modal_dialog.description">
+                <source>Renders a button to show content in a modal dialog window.</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

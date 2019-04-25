@@ -109,6 +109,15 @@
                 <source>Gallery item join</source>
                 <target state="translated">Galerieelement verbinden</target>
             </trans-unit>
+
+            <trans-unit id="tca.modal_dialog.header">
+                <source>Button text</source>
+                <target state="translated">Knopfbeschriftung</target>
+            </trans-unit>
+            <trans-unit id="tca.modal_dialog.options">
+                <source>Button options</source>
+                <target state="translated">Knopfoptionen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

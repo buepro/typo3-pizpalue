@@ -29,6 +29,11 @@ call_user_func(
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
+            'Configuration/TypoScript/ContentElement',
+            'Pizpalue - Content elements'
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $_EXTKEY,
             'Extensions/gridelements/Configuration/TypoScript',
             'Pizpalue - Gridelements CEs'
         );
