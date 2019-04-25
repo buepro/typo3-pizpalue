@@ -1,0 +1,51 @@
+.pp-list-categorized-content {
+  .ppc-item {
+    border: transparentize($primary,50%) 1px solid;
+    position: relative;
+    overflow: hidden;
+    > .frame {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .ppc-bottom {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(0deg, white 70%, transparent);
+    }
+  }
+  @each $breakpoint in map-keys($pp-frame-outer-spacing-scaling) {
+    @include media-breakpoint-up($breakpoint) {
+      $scaling: map-get($pp-frame-outer-spacing-scaling, $breakpoint);
+      .ppc-item {
+        margin-top: $pp-frame-outer-spacing * $scaling;
+        padding: 0.5rem * $scaling;
+        .ppc-bottom {
+          height: 0.7rem * $scaling;
+        }
+      }
+    }
+  }
+  .ppc-more {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    background: transparentize($primary,50%);
+    cursor: pointer;
+    span {
+      display: block;
+      transition: transform 200ms;
+    }
+    &.open {
+      span {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

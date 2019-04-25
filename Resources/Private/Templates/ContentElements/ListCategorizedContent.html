@@ -4,7 +4,48 @@
 
 <f:section name="Main">
 
-    <h1>"List categorized content" goes here...</h1>
+    <div class="pp-list-categorized-content">
+        <f:for each="{content}" as="ce">
+            <div class="ppc-item">
+                <v:content.render contentUids="{0: ce.data.uid}"/>
+                <div class="ppc-bottom"></div>
+                <div class="ppc-more">
+                    <span>+</span>
+                </div>
+            </div>
+        </f:for>
+    </div>
+
+    <v:asset.script movable="1" namedChunks="1" fluid="1" name="list-categorized-content" overwrite="0">
+;+function($) {
+    var closedHeight = 300;
+    $('.pp-list-categorized-content .ppc-item').css('max-height',closedHeight);
+    $(function() {
+        $('.pp-list-categorized-content .ppc-item').each(function() {
+            $this = $(this);
+            if($this.children().first().outerHeight() < closedHeight) {
+                $('.ppc-more',$this).css('display','none');
+                $('.ppc-bottom',$this).css('display','none');
+            }
+        });
+        $('.pp-list-categorized-content .ppc-more').on('click',function() {
+            var $this = $(this);
+            var $parent = $this.parent();
+            var height = $parent.children().first().outerHeight();
+            if (height < closedHeight) height = closedHeight;
+            if ($this.hasClass('open')) {
+                $parent.animate({'max-height': closedHeight});
+                $('.ppc-bottom',$parent).css('display','block');
+                $this.removeClass('open');
+            } else {
+                $parent.animate({'max-height': height});
+                $('.ppc-bottom',$parent).css('display','none');
+                $this.addClass('open');
+            }
+        });
+    });
+}(jQuery);
+    </v:asset.script>
 
 </f:section>
 </html>
