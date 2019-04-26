@@ -19,15 +19,26 @@
     <v:asset.script movable="1" namedChunks="1" fluid="1" name="list-categorized-content" overwrite="0">
 ;+function($) {
     var closedHeight = 300;
-    $('.pp-list-categorized-content .ppc-item').css('max-height',closedHeight);
+    $('.pp-list-categorized-content .ppc-item').css('max-height', closedHeight);
     $(function() {
-        $('.pp-list-categorized-content .ppc-item').each(function() {
-            $this = $(this);
-            if($this.children().first().outerHeight() < closedHeight) {
-                $('.ppc-more',$this).css('display','none');
-                $('.ppc-bottom',$this).css('display','none');
-            }
-        });
+        function init() {
+            $('.pp-list-categorized-content .ppc-item').each(function() {
+                $this = $(this);
+                if($this.children().first().outerHeight() < closedHeight) {
+                    $('.ppc-more',$this).css('display','none');
+                    $('.ppc-bottom',$this).css('display','none');
+                } else {
+                    $('.ppc-more',$this).css('display','block');
+                    $('.ppc-bottom',$this).css('display','block');
+                }
+            });
+        };
+
+        init();
+        $('.pp-list-categorized-content .ppc-more').animate({'opacity': 1});
+
+        $(window).on('resize',init);
+
         $('.pp-list-categorized-content .ppc-more').on('click',function() {
             var $this = $(this);
             var $parent = $this.parent();

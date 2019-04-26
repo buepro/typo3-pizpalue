@@ -1,8 +1,9 @@
 .pp-list-categorized-content {
   .ppc-item {
-    border: transparentize($primary,50%) 1px solid;
+    border: tint($primary,50%) 1px solid;
     position: relative;
     overflow: hidden;
+    max-height: 0;
     > .frame {
       padding-top: 0;
       padding-bottom: 0;
@@ -28,16 +29,26 @@
     }
   }
   .ppc-more {
+    box-sizing: content-box;
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 3rem;
-    height: 3rem;
-    line-height: 3rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
     font-size: 2rem;
     text-align: center;
-    background: transparentize($primary,50%);
+    border-left: white 10px solid;
+    border-top: white 10px solid;
+    background: tint($primary,50%);
+    color: contrast(tint($primary,50%));
+    opacity: 0;
+    transition: background 200ms, color 200ms, opacity 200ms;
     cursor: pointer;
+    &:hover {
+      background: tint($primary,30%);
+      color: contrast(tint($primary,30%));
+    }
     span {
       display: block;
       transition: transform 200ms;
