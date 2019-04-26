@@ -99,16 +99,16 @@
                 <source>Addresses Teaser (tt_address)</source>
             </trans-unit>
 
-            <trans-unit id="modal_dialog.button_class">
+            <trans-unit id="ce_modal_dialog.button_class">
                 <source>Button class</source>
             </trans-unit>
-            <trans-unit id="modal_dialog.dialog_class">
+            <trans-unit id="ce_modal_dialog.dialog_class">
                 <source>Dialog class</source>
             </trans-unit>
-            <trans-unit id="modal_dialog.title">
+            <trans-unit id="ce_modal_dialog.title">
                 <source>Modal Dialog</source>
             </trans-unit>
-            <trans-unit id="modal_dialog.description">
+            <trans-unit id="ce_modal_dialog.description">
                 <source>Renders a button to show content in a modal dialog window.</source>
             </trans-unit>
             <trans-unit id="ce_list_categorized_content.title">

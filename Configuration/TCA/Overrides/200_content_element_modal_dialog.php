@@ -7,8 +7,8 @@ call_user_func(function ($extensionKey) {
     /**
      * Enables Content Element
      */
-    if (!is_array($GLOBALS['TCA']['tt_content']['types']['modal_dialog'])) {
-        $GLOBALS['TCA']['tt_content']['types']['modal_dialog'] = [];
+    if (!is_array($GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog'])) {
+        $GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog'] = [];
     }
 
     /**
@@ -27,8 +27,8 @@ call_user_func(function ($extensionKey) {
         'tt_content',
         'CType',
         [
-            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:modal_dialog.title',
-            'modal_dialog',
+            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.title',
+            'pp_modal_dialog',
             'content-pizpalue-modal-dialog'
         ]
     );
@@ -36,13 +36,13 @@ call_user_func(function ($extensionKey) {
     /**
      * Assigns Icon to page view
      */
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['modal_dialog'] = 'content-pizpalue-modal-dialog';
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['pp_modal_dialog'] = 'content-pizpalue-modal-dialog';
 
     /**
      * Configures element type
      */
-    $GLOBALS['TCA']['tt_content']['types']['modal_dialog'] = array_replace_recursive(
-        $GLOBALS['TCA']['tt_content']['types']['modal_dialog'],
+    $GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog'] = array_replace_recursive(
+        $GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog'],
         [
             'showitem' => '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
@@ -74,7 +74,7 @@ call_user_func(function ($extensionKey) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:pizpalue/Configuration/FlexForms/ModalDialog.xml',
-        'modal_dialog'
+        'pp_modal_dialog'
     );
 
 },'pizpalue');

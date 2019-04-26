@@ -1,6 +1,6 @@
-tt_content.modal_dialog >
-tt_content.modal_dialog < tt_content.shortcut
-tt_content.modal_dialog {
+tt_content.pp_modal_dialog >
+tt_content.pp_modal_dialog < tt_content.shortcut
+tt_content.pp_modal_dialog {
 
    templateName = ModalDialog
 

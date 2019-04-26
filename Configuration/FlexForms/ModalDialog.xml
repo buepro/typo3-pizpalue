@@ -13,7 +13,7 @@
                 <el>
                     <button_class>
                         <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:modal_dialog.button_class
+                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.button_class
                             </label>
                             <config>
                                 <type>input</type>
@@ -24,7 +24,7 @@
                     </button_class>
                     <dialog_class>
                         <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:modal_dialog.dialog_class
+                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class
                             </label>
                             <config>
                                 <type>input</type>

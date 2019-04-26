@@ -3,14 +3,14 @@
 ####################################
 mod.wizards.newContentElement.wizardItems.interactive {
    elements {
-      modal_dialog {
+      pp_modal_dialog {
          iconIdentifier = content-pizpalue-modal-dialog
-         title = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:modal_dialog.title
-         description = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:modal_dialog.description
+         title = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.title
+         description = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.description
          tt_content_defValues {
-            CType = modal_dialog
+            CType = pp_modal_dialog
          }
       }
    }
-   show := addToList(modal_dialog)
+   show := addToList(pp_modal_dialog)
 }
