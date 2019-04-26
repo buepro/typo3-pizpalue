@@ -11,7 +11,10 @@ tt_content.pp_list_categorized_content {
             table = tt_content
             selectFields = tt_content.*
             groupBy = uid
-            pidInList.data = leveluid : 0
+            pidInList {
+                data = leveluid : 0
+                override.data = field : pages
+            }
             recursive = 99
             join.data = field:selected_categories
             join.wrap = sys_category_record_mm ON tt_content.uid = sys_category_record_mm.uid_foreign AND sys_category_record_mm.uid_local IN(|)

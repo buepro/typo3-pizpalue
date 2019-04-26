@@ -13,7 +13,8 @@
                 <el>
                     <itemHeight>
                         <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height
+                            <label>
+                                LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height
                             </label>
                             <config>
                                 <type>input</type>
@@ -24,7 +25,8 @@
                     </itemHeight>
                     <itemHeightSm>
                         <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height_sm
+                            <label>
+                                LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height_sm
                             </label>
                             <config>
                                 <type>input</type>
@@ -35,7 +37,8 @@
                     </itemHeightSm>
                     <itemHeightMd>
                         <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height_md
+                            <label>
+                                LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height_md
                             </label>
                             <config>
                                 <type>input</type>
@@ -46,7 +49,8 @@
                     </itemHeightMd>
                     <itemHeightLg>
                         <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height_lg
+                            <label>
+                                LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height_lg
                             </label>
                             <config>
                                 <type>input</type>
@@ -57,7 +61,8 @@
                     </itemHeightLg>
                     <itemHeightXl>
                         <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height_xl
+                            <label>
+                                LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_height_xl
                             </label>
                             <config>
                                 <type>input</type>
