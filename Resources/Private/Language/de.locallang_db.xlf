@@ -118,6 +118,10 @@
                 <source>Button options</source>
                 <target state="translated">Knopfoptionen</target>
             </trans-unit>
+            <trans-unit id="tca.list_categorized_content.options">
+                <source>List options</source>
+                <target state="translated">Listenoptionen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

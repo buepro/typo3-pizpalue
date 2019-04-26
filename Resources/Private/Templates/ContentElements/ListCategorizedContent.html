@@ -18,10 +18,26 @@
 
     <v:asset.script movable="1" namedChunks="1" fluid="1" name="list-categorized-content" overwrite="0">
 ;+function($) {
-    var closedHeight = 300;
-    $('.pp-list-categorized-content .ppc-item').css('max-height', closedHeight);
+    var itemHeights = <f:format.raw>{</f:format.raw>
+        '0': {data.pi_flexform.itemHeight},
+        '575': {data.pi_flexform.itemHeightSm},
+        '767': {data.pi_flexform.itemHeightMd},
+        '991': {data.pi_flexform.itemHeightLg},
+        '1199': {data.pi_flexform.itemHeightXl}
+    <f:format.raw>}</f:format.raw>;
+    function getClosedHeight() {
+        var screenWidth = $(window).width(),
+            result = itemHeights[0],
+            minWidth;
+        for (minWidth in itemHeights) {
+            if(itemHeights[minWidth] > 0 && screenWidth > parseInt(minWidth)) result = itemHeights[minWidth]
+        }
+        return result;
+    };
+    $('.pp-list-categorized-content .ppc-item').css('max-height', getClosedHeight());
     $(function() {
         function init() {
+            var closedHeight = getClosedHeight();
             $('.pp-list-categorized-content .ppc-item').each(function() {
                 $this = $(this);
                 if($this.children().first().outerHeight() < closedHeight) {
@@ -40,9 +56,10 @@
         $(window).on('resize',init);
 
         $('.pp-list-categorized-content .ppc-more').on('click',function() {
-            var $this = $(this);
-            var $parent = $this.parent();
-            var height = $parent.children().first().outerHeight();
+            var $this = $(this),
+                $parent = $this.parent(),
+                height = $parent.children().first().outerHeight();
+                closedHeight = getClosedHeight();
             if (height < closedHeight) height = closedHeight;
             if ($this.hasClass('open')) {
                 $parent.animate({'max-height': closedHeight});

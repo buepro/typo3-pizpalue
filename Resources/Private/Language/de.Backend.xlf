@@ -144,6 +144,26 @@
                 <source>Lists content elements from selected categories.</source>
                 <target state="translated">Erstellt eine Liste von Inhalselementen ausgewählter Kategorieen.</target>
             </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height">
+                <source>Height from list item</source>
+                <target state="translated">Höhe eines Listenelementes</target>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_sm">
+                <source>SM-Height from list item (screen width > 575px)</source>
+                <target state="translated">SM-Höhe eines Listenelementes (Bildschirmbreite > 575px)</target>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_md">
+                <source>MD-Height from list item (screen width > 767px)</source>
+                <target state="translated">MD-Höhe eines Listenelementes (Bildschirmbreite > 767px)</target>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_lg">
+                <source>LG-Height from list item (screen width > 991px)</source>
+                <target state="translated">LG-Höhe eines Listenelementes (Bildschirmbreite > 991px)</target>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_xl">
+                <source>XL-Height from list item (screen width > 1199px)</source>
+                <target state="translated">XL-Höhe eines Listenelementes (Bildschirmbreite > 1199px)</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

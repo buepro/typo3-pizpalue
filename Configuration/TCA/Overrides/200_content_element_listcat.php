@@ -51,6 +51,8 @@ call_user_func(function ($extensionKey) {
                     --palette--;;headers,
                     selected_categories,
                     category_field,
+                --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.card.options,
+                    pi_flexform;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.list_categorized_content.options,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                     --palette--;;frames,
                     --palette--;;appearanceLinks,
@@ -68,6 +70,15 @@ call_user_func(function ($extensionKey) {
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
             '
         ]
+    );
+
+    /**
+     * Adds flexForm for content element configuration
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        '*',
+        'FILE:EXT:pizpalue/Configuration/FlexForms/ListCategorizedContent.xml',
+        'pp_list_categorized_content'
     );
 
 

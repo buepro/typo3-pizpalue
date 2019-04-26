@@ -117,6 +117,21 @@
             <trans-unit id="ce_list_categorized_content.description">
                 <source>Lists content elements from selected categories.</source>
             </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height">
+                <source>Height from list item</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_sm">
+                <source>SM-Height from list item (screen width > 575px)</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_md">
+                <source>MD-Height from list item (screen width > 767px)</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_lg">
+                <source>LG-Height from list item (screen width > 991px)</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_xl">
+                <source>XL-Height from list item (screen width > 1199px)</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
