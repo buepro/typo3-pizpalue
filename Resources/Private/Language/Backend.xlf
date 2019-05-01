@@ -105,6 +105,18 @@
             <trans-unit id="ce_modal_dialog.dialog_class">
                 <source>Dialog class</source>
             </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.sm">
+                <source>Small dialog</source>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.md">
+                <source>Default dialog</source>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.lg">
+                <source>Large dialog</source>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.xl">
+                <source>Extra large dialog</source>
+            </trans-unit>
             <trans-unit id="ce_modal_dialog.title">
                 <source>Modal Dialog</source>
             </trans-unit>

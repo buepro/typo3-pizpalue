@@ -128,6 +128,22 @@
                 <source>Dialog class</source>
                 <target state="translated">Klassendefinition des Dialoges</target>
             </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.sm">
+                <source>Small dialog</source>
+                <target state="translated">Kleiner Dialog</target>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.md">
+                <source>Default dialog</source>
+                <target state="translated">Standarddialog</target>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.lg">
+                <source>Large dialog</source>
+                <target state="translated">Grosser Dialog</target>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.xl">
+                <source>Extra large dialog</source>
+                <target state="translated">Extra grosser Dialog</target>
+            </trans-unit>
             <trans-unit id="ce_modal_dialog.title">
                 <source>Modal Dialog</source>
                 <target state="translated">Modaler Dialog</target>
