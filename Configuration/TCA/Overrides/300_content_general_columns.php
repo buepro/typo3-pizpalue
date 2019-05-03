@@ -17,7 +17,7 @@ call_user_func(function() {
     /**
      * Defines columns
      */
-    call_user_func(function() {
+    if(1) {
 
         // Defines available classes for dropdown selector
         $classesItemsList = 'pp-parent-height,pp-row-height,pp-row-child-height,pp-ce-background,pp-ce-bgfixed,'
@@ -163,18 +163,23 @@ call_user_func(function() {
             'tt_content',
             $tmp_pizpalue_columns
         );
-    });
+    };
 
     /**
      * Defines palettes
      */
-    $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_attributes'] = [
-        'showitem' => '
-        tx_pizpalue_classes,--linebreak--,
-        tx_pizpalue_style,--linebreak--,
-        tx_pizpalue_attributes
-    ',
-    ];
+    if(1) {
+        $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_behaviour'] = [
+            'showitem' => 'tx_pizpalue_animation',
+        ];
+        $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_attributes'] = [
+            'showitem' => '
+            tx_pizpalue_classes,--linebreak--,
+            tx_pizpalue_style,--linebreak--,
+            tx_pizpalue_attributes
+        ',
+        ];
+    }
 
     /**
      * Adds background image to frames palette
@@ -187,7 +192,7 @@ call_user_func(function() {
     /**
      * Adds palettes to all content types
      */
-    call_user_func(function() {
+    if(1) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
             'tt_content',
             '--palette--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.behaviour;pizpalue_behaviour',
@@ -200,5 +205,5 @@ call_user_func(function() {
             '',
             'before: sectionIndex'
         );
-    });
+    };
 });
