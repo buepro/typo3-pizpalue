@@ -129,6 +129,18 @@
             <trans-unit id="ce_list_categorized_content.description">
                 <source>Lists content elements from selected categories.</source>
             </trans-unit>
+            <trans-unit id="ce_list_categorized_content.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_count">
+                <source>Item count</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.collapsible">
+                <source>Collapsible</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.collapse">
+                <source>Collapse</source>
+            </trans-unit>
             <trans-unit id="ce_list_categorized_content.item_height">
                 <source>Height from list item</source>
             </trans-unit>

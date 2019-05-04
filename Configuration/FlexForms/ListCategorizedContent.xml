@@ -7,7 +7,44 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>General</sheetTitle>
+                    <sheetTitle>
+                        LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.general
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <itemCount>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.item_count
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                                <default>20</default>
+                            </config>
+                        </TCEforms>
+                    </itemCount>
+                    <collapsible>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.collapsible
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </collapsible>
+                </el>
+            </ROOT>
+        </sDEF>
+        <sCollapse>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.collapse
+                    </sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
@@ -73,6 +110,6 @@
                     </itemHeightXl>
                 </el>
             </ROOT>
-        </sDEF>
+        </sCollapse>
     </sheets>
 </T3DataStructure>

@@ -1,9 +1,10 @@
 .pp-list-categorized-content {
-  .ppc-item {
-    border: tint($primary,50%) 1px solid;
+  .ppc-collapsible {
     position: relative;
     overflow: hidden;
+    box-sizing: content-box;
     max-height: 0;
+    border: tint($primary,50%) 1px solid;
     > .frame {
       padding-top: 0;
       padding-bottom: 0;
@@ -19,7 +20,7 @@
   @each $breakpoint in map-keys($pp-frame-outer-spacing-scaling) {
     @include media-breakpoint-up($breakpoint) {
       $scaling: map-get($pp-frame-outer-spacing-scaling, $breakpoint);
-      .ppc-item {
+      .ppc-collapsible {
         margin-top: $pp-frame-outer-spacing * $scaling;
         padding: 0.5rem * $scaling;
         .ppc-bottom {

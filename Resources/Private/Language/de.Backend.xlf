@@ -160,6 +160,22 @@
                 <source>Lists content elements from selected categories.</source>
                 <target state="translated">Erstellt eine Liste von Inhalselementen ausgewählter Kategorieen.</target>
             </trans-unit>
+            <trans-unit id="ce_list_categorized_content.general">
+                <source>General</source>
+                <target state="translated">Allgemein</target>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_count">
+                <source>Item count</source>
+                <target state="translated">Anzahl Listenelemente</target>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.collapsible">
+                <source>Collapsible</source>
+                <target state="translated">Kollabierbar</target>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.collapse">
+                <source>Collapse</source>
+                <target state="translated">Kollabieren</target>
+            </trans-unit>
             <trans-unit id="ce_list_categorized_content.item_height">
                 <source>Height from list item</source>
                 <target state="translated">Höhe eines Listenelementes</target>

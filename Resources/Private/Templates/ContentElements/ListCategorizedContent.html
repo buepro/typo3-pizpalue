@@ -3,20 +3,23 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-
     <div class="pp-list-categorized-content">
-        <f:for each="{content}" as="ce">
-            <div class="ppc-item">
-                <v:content.render contentUids="{0: ce.data.uid}"/>
-                <div class="ppc-bottom"></div>
-                <div class="ppc-more">
-                    <span>+</span>
+        <f:for each="{content}" as="ce" iteration="iterator">
+            <f:if condition="{iterator.index} < {data.pi_flexform.itemCount}">
+                <div class="ppc-item{f:if(condition: data.pi_flexform.collapsible, then: ' ppc-collapsible')}">
+                    <v:content.render contentUids="{0: ce.data.uid}"/>
+                    <f:if condition="{data.pi_flexform.collapsible}">
+                        <div class="ppc-bottom"></div>
+                        <div class="ppc-more">
+                            <span>+</span>
+                        </div>
+                    </f:if>
                 </div>
-            </div>
+            </f:if>
         </f:for>
     </div>
-
-    <v:asset.script movable="1" namedChunks="1" fluid="1" name="list-categorized-content" overwrite="0">
+    <f:if condition="{data.pi_flexform.collapsible}">
+        <v:asset.script movable="1" namedChunks="1" fluid="1" name="list-categorized-content" overwrite="0">
 ;+function($) {
     var itemHeights = <f:format.raw>{</f:format.raw>
         '0': {data.pi_flexform.itemHeight},
@@ -34,11 +37,11 @@
         }
         return result;
     };
-    $('.pp-list-categorized-content .ppc-item').css('max-height', getClosedHeight());
+    $('.pp-list-categorized-content .ppc-collapsible').css('max-height', getClosedHeight());
     $(function() {
         function init() {
             var closedHeight = getClosedHeight();
-            $('.pp-list-categorized-content .ppc-item').each(function() {
+            $('.pp-list-categorized-content .ppc-collapsible').each(function() {
                 $this = $(this);
                 if($this.children().first().outerHeight() < closedHeight) {
                     $('.ppc-more',$this).css('display','none');
@@ -73,7 +76,8 @@
         });
     });
 }(jQuery);
-    </v:asset.script>
+        </v:asset.script>
+    </f:if>
 
 </f:section>
 </html>
