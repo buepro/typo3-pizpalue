@@ -1,0 +1,83 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="pp-list-categorized-content">
+        <f:for each="{content}" as="ce" iteration="iterator">
+            <f:if condition="{iterator.index} < {data.pi_flexform.itemCount}">
+                <div class="ppc-item{f:if(condition: data.pi_flexform.collapsible, then: ' ppc-collapsible')}">
+                    <v:content.render contentUids="{0: ce.data.uid}"/>
+                    <f:if condition="{data.pi_flexform.collapsible}">
+                        <div class="ppc-bottom"></div>
+                        <div class="ppc-more">
+                            <span>+</span>
+                        </div>
+                    </f:if>
+                </div>
+            </f:if>
+        </f:for>
+    </div>
+    <f:if condition="{data.pi_flexform.collapsible}">
+        <v:asset.script movable="1" namedChunks="1" fluid="1" name="list-categorized-content" overwrite="0">
+;+function($) {
+    var itemHeights = <f:format.raw>{</f:format.raw>
+        '0': {data.pi_flexform.itemHeight},
+        '575': {data.pi_flexform.itemHeightSm},
+        '767': {data.pi_flexform.itemHeightMd},
+        '991': {data.pi_flexform.itemHeightLg},
+        '1199': {data.pi_flexform.itemHeightXl}
+    <f:format.raw>}</f:format.raw>;
+    function getClosedHeight() {
+        var screenWidth = $(window).width(),
+            result = itemHeights[0],
+            minWidth;
+        for (minWidth in itemHeights) {
+            if(itemHeights[minWidth] > 0 && screenWidth > parseInt(minWidth)) result = itemHeights[minWidth]
+        }
+        return result;
+    };
+    $('.pp-list-categorized-content .ppc-collapsible').css('max-height', getClosedHeight());
+    $(function() {
+        function init() {
+            var closedHeight = getClosedHeight();
+            $('.pp-list-categorized-content .ppc-collapsible').each(function() {
+                $this = $(this);
+                if($this.children().first().outerHeight() < closedHeight) {
+                    $('.ppc-more',$this).css('display','none');
+                    $('.ppc-bottom',$this).css('display','none');
+                } else {
+                    $('.ppc-more',$this).css('display','block');
+                    $('.ppc-bottom',$this).css('display','block');
+                }
+            });
+        };
+
+        init();
+        $('.pp-list-categorized-content .ppc-more').animate({'opacity': 1});
+
+        $(window).on('resize',init);
+
+        $('.pp-list-categorized-content .ppc-more').on('click',function() {
+            var $this = $(this),
+                $parent = $this.parent(),
+                height = $parent.children().first().outerHeight();
+                closedHeight = getClosedHeight();
+            if (height < closedHeight) height = closedHeight;
+            if ($this.hasClass('open')) {
+                $parent.animate({'max-height': closedHeight});
+                $('.ppc-bottom',$parent).css('display','block');
+                $this.removeClass('open');
+            } else {
+                $parent.animate({'max-height': height});
+                $('.ppc-bottom',$parent).css('display','none');
+                $this.addClass('open');
+            }
+        });
+    });
+}(jQuery);
+        </v:asset.script>
+    </f:if>
+
+</f:section>
+</html>

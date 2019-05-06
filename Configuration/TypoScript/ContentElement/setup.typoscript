@@ -1,1 +1,1 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/ContentElement/Element/ModalDialog.typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:pizpalue/Configuration/TypoScript/ContentElement/Element" extensions="typoscript">

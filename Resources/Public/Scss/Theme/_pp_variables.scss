@@ -1,0 +1,12 @@
+//
+// Outer spacing
+//
+$pp-frame-outer-spacing: 1rem !default;
+$pp-frame-outer-spacing-scaling: () !default;
+$pp-frame-outer-spacing-scaling: map-merge((
+  xs: map-get($frame-outer-spacing-scaling,extra-small),
+  sm: map-get($frame-outer-spacing-scaling,small),
+  md: map-get($frame-outer-spacing-scaling,medium),
+  lg: map-get($frame-outer-spacing-scaling,large),
+  xl: map-get($frame-outer-spacing-scaling,extra-large)
+), $pp-frame-outer-spacing-scaling);

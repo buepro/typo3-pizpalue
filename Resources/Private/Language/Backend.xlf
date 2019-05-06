@@ -99,17 +99,62 @@
                 <source>Addresses Teaser (tt_address)</source>
             </trans-unit>
 
-            <trans-unit id="modal_dialog.button_class">
+            <trans-unit id="ce_modal_dialog.button_class">
                 <source>Button class</source>
             </trans-unit>
-            <trans-unit id="modal_dialog.dialog_class">
+            <trans-unit id="ce_modal_dialog.dialog_class">
                 <source>Dialog class</source>
             </trans-unit>
-            <trans-unit id="modal_dialog.title">
+            <trans-unit id="ce_modal_dialog.dialog_class.sm">
+                <source>Small dialog</source>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.md">
+                <source>Default dialog</source>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.lg">
+                <source>Large dialog</source>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.dialog_class.xl">
+                <source>Extra large dialog</source>
+            </trans-unit>
+            <trans-unit id="ce_modal_dialog.title">
                 <source>Modal Dialog</source>
             </trans-unit>
-            <trans-unit id="modal_dialog.description">
+            <trans-unit id="ce_modal_dialog.description">
                 <source>Renders a button to show content in a modal dialog window.</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.title">
+                <source>List categorized content</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.description">
+                <source>Lists content elements from selected categories.</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_count">
+                <source>Item count</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.collapsible">
+                <source>Collapsible</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.collapse">
+                <source>Collapse</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height">
+                <source>Height from list item</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_sm">
+                <source>SM-Height from list item (screen width > 575px)</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_md">
+                <source>MD-Height from list item (screen width > 767px)</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_lg">
+                <source>LG-Height from list item (screen width > 991px)</source>
+            </trans-unit>
+            <trans-unit id="ce_list_categorized_content.item_height_xl">
+                <source>XL-Height from list item (screen width > 1199px)</source>
             </trans-unit>
         </body>
     </file>

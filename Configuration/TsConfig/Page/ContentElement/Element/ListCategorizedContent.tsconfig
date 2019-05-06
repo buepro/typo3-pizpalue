@@ -1,0 +1,16 @@
+####################################
+#### NEW CONTENT ELEMENT WIZARD ####
+####################################
+mod.wizards.newContentElement.wizardItems.text {
+    elements {
+        pp_list_categorized_content {
+            iconIdentifier = content-pizpalue-list-categorized-content
+            title = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.title
+            description = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.description
+            tt_content_defValues {
+                CType = pp_list_categorized_content
+            }
+        }
+    }
+    show := addToList(pp_list_categorized_content)
+}

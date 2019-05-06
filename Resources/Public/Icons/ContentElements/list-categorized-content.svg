@@ -8,19 +8,26 @@ viewBox="0 0 611.19 611.19"
   <style type="text/css">
    <![CDATA[
     .str0 {stroke:#9D9E9E;stroke-width:34.19;stroke-miterlimit:22.9256}
-    .str1 {stroke:#00A2F4;stroke-width:3.85;stroke-miterlimit:22.9256}
-    .fil1 {fill:#FEFEFE}
-    .fil0 {fill:#005E8E}
-    .fil3 {fill:#00A2F4}
-    .fil2 {fill:#2B2A29;fill-rule:nonzero}
+    .str1 {stroke:#075E8E;stroke-width:12.82;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:#075E8E}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <rect class="fil0 str0" x="17.1" y="17.1" width="576.99" height="576.99"/>
-  <rect class="fil1" x="98.33" y="121.56" width="419.25" height="352.8"/>
-  <path class="fil2" d="M470.29 175.63l10.13 -14.36 -9.37 -13.37 5.77 0 4.38 6.55c0.82,1.23 1.46,2.23 1.91,3.01 0.79,-1.11 1.5,-2.12 2.13,-3.02l4.61 -6.54 5.75 0 -9.43 13.37 10.04 14.36 -5.72 0 -5.73 -8.54 -1.31 -2.06 -7.41 10.6 -5.75 0z"/>
-  <rect class="fil3 str1" x="329.66" y="387.85" width="160.3" height="62.96"/>
+  <g id="_2359029149072">
+   <rect class="fil0 str1" x="53.22" y="92.14" width="503.16" height="96.85"/>
+   <rect class="fil1" x="508.4" y="141.01" width="47.98" height="47.98"/>
+  </g>
+  <g id="_2359029147952">
+   <rect class="fil0 str1" x="53.22" y="253.7" width="503.16" height="96.85"/>
+   <rect class="fil1" x="508.4" y="302.56" width="47.98" height="47.98"/>
+  </g>
+  <g id="_2359029147792">
+   <rect class="fil0 str1" x="53.22" y="415.25" width="503.16" height="96.85"/>
+   <rect class="fil1" x="508.4" y="464.12" width="47.98" height="47.98"/>
+  </g>
  </g>
 </svg>
