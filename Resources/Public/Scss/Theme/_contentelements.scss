@@ -26,6 +26,9 @@
         .ppc-bottom {
           height: 0.7rem * $scaling;
         }
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
   }
