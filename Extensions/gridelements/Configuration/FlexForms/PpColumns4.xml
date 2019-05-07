@@ -328,6 +328,65 @@
                 </el>
             </ROOT>
         </sCustom>
+        <sRow>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.sheet.row</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <rowClass type="array">
+                        <TCEforms>
+                            <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass</label>
+                            <config>
+                                <type>input</type>
+                                <size>50</size>
+                                <valuePicker>
+                                    <items type="array">
+                                        <numIndex index="0" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.alignItemsStart</numIndex>
+                                            <numIndex index="1">align-items-start</numIndex>
+                                        </numIndex>
+                                        <numIndex index="1" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.alignItemsCenter</numIndex>
+                                            <numIndex index="1">align-items-center</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.alignItemsEnd</numIndex>
+                                            <numIndex index="1">align-items-end</numIndex>
+                                        </numIndex>
+                                        <numIndex index="3" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.justifyContentStart</numIndex>
+                                            <numIndex index="1">justify-content-start</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.justifyContentCenter</numIndex>
+                                            <numIndex index="1">justify-content-center</numIndex>
+                                        </numIndex>
+                                        <numIndex index="5" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.justifyContentEnd</numIndex>
+                                            <numIndex index="1">justify-content-end</numIndex>
+                                        </numIndex>
+                                        <numIndex index="6" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.justifyContentAround</numIndex>
+                                            <numIndex index="1">justify-content-around</numIndex>
+                                        </numIndex>
+                                        <numIndex index="7" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.justifyContentBetween</numIndex>
+                                            <numIndex index="1">justify-content-between</numIndex>
+                                        </numIndex>
+                                        <numIndex index="8" type="array">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.rowClass.noGutters</numIndex>
+                                            <numIndex index="1">no-gutters</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
+                            </config>
+                        </TCEforms>
+                    </rowClass>
+                </el>
+            </ROOT>
+        </sRow>
         <sAdjust>
             <ROOT type="array">
                 <TCEforms>

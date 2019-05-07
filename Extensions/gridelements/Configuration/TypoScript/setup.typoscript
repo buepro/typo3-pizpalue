@@ -44,12 +44,33 @@ lib.pizpalue.gridelements {
 
    ppColumns2 < lib.gridelements.defaultGridSetup
    ppColumns2 {
-      wrap = <div class="row">|</div>
-      wrap.override = <div class="row pp-row-collapse">|</div>
-      wrap.override.if {
-         isInList.field = flexform_collapseElement
-         value = 2,3
+      prepend = TEXT
+      prepend {
+         value = <div class="row
+         orderedStdWrap {
+            10 {
+               append = TEXT
+               append {
+                  field = flexform_rowClass
+                  noTrimWrap = | ||
+                  if.isTrue.field = flexform_rowClass
+               }
+               wrap = |
+            }
+            20 {
+               append = TEXT
+               append {
+                  stdWrap.noTrimWrap = || pp-row-collapse|
+                  if {
+                     isInList.field = flexform_collapseElement
+                     value = 2,3
+                  }
+               }
+               wrap = |
+            }
+         }
       }
+      wrap = ">|</div>
       columns.default.wrap = <div class="pp-col###DEFAULT_COLUMN######CUSTOM_COLUMN######COLLAPSE_CONTENT###">|</div>
       columns.default.wrap.replacement {
          1 {

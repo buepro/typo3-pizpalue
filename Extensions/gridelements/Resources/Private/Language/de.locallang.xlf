@@ -86,6 +86,10 @@
                 <source>Custom columns width (CSS classes)</source>
                 <target state="translated">Angepasste Spaltenbreiten (CSS-Klassen)</target>
             </trans-unit>
+            <trans-unit id="grids.sheet.row">
+                <source>Row</source>
+                <target state="translated">Zeile</target>
+            </trans-unit>
             <trans-unit id="grids.sheet.adjustment">
                 <source>Adjustment</source>
                 <target state="translated">Anpassung</target>
@@ -138,6 +142,48 @@
                 <source>Auto</source>
                 <target state="translated">Auto</target>
             </trans-unit>
+
+            <trans-unit id="grids.label.rowClass">
+                <source>Class</source>
+                <target state="translated">Klasse</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.alignItemsStart">
+                <source>Align columns on top</source>
+                <target state="translated">Spalten oben ausrichten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.alignItemsCenter">
+                <source>Align columns in center</source>
+                <target state="translated">Spalten mittig ausrichten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.alignItemsEnd">
+                <source>Align columns on bottom</source>
+                <target state="translated">Spalten unten ausrichten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentStart">
+                <source>Justify columns at start</source>
+                <target state="translated">Spalten am Start ausrichten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentCenter">
+                <source>Justify columns in center</source>
+                <target state="translated">Spalten mittig ausrichten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentEnd">
+                <source>Justify columns at end</source>
+                <target state="translated">Spalten am Ende ausrichten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentAround">
+                <source>Justify columns with space around</source>
+                <target state="translated">Spalten mit Abstand</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentBetween">
+                <source>Justify columns with space between</source>
+                <target state="translated">Abstand zwischen Spalten</target>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.noGutters">
+                <source>No gutters</source>
+                <target state="translated">Keine Spaltenabstände</target>
+            </trans-unit>
+
             <trans-unit id="grids.label.collapseElement">
                 <source>Collapse elements</source>
                 <target state="translated">Elemente kollabieren</target>

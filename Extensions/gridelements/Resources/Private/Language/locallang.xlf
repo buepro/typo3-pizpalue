@@ -66,6 +66,9 @@
             <trans-unit id="grids.sheet.customColumns">
                 <source>Custom columns width (CSS classes)</source>
             </trans-unit>
+            <trans-unit id="grids.sheet.row">
+                <source>Row</source>
+            </trans-unit>
             <trans-unit id="grids.sheet.adjustment">
                 <source>Adjustment</source>
             </trans-unit>
@@ -142,6 +145,38 @@
             <trans-unit id="grids.label.columnAuto">
                 <source>Auto</source>
             </trans-unit>
+
+            <trans-unit id="grids.label.rowClass">
+                <source>Class</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.alignItemsStart">
+                <source>Align columns on top</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.alignItemsCenter">
+                <source>Align columns in center</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.alignItemsEnd">
+                <source>Align columns on bottom</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentStart">
+                <source>Justify columns at start</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentCenter">
+                <source>Justify columns in center</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentEnd">
+                <source>Justify columns at end</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentAround">
+                <source>Justify columns with space around</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.justifyContentBetween">
+                <source>Justify columns with space between</source>
+            </trans-unit>
+            <trans-unit id="grids.label.rowClass.noGutters">
+                <source>No gutters</source>
+            </trans-unit>
+
             <trans-unit id="grids.label.collapseContentElement">
                 <source>Collapse elements</source>
             </trans-unit>
