@@ -1,0 +1,23 @@
+.pp-ttaddress-teaser .pp-ce-overlaycard {
+  .textpic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .textpic-gallery img {
+    width: 100%;
+    margin: 0;
+  }
+  .textpic-text {
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    border-left: 0;
+    border-right: 0;
+    .ppc-inner {
+      max-height: 100%;
+      overflow: hidden;
+    }
+  }
+}

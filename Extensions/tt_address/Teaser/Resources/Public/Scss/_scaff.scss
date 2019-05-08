@@ -1,37 +1,38 @@
-.tt_address_list {
-  .pp-ttaddress-teaser {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.pp-ttaddress-teaser {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  div.vcard {
+    position: relative;
     overflow: hidden;
-    .vcard {
-      display: none;
-      @each $breakpoint in map-keys($pp-ttaddress-teaser-item-count) {
-        $count: map-get($pp-ttaddress-teaser-item-count,$breakpoint);
-        @include media-breakpoint-up($breakpoint) {
-          &:nth-child(-n+#{$count}) {
-            display: block;
-          }
+    margin: 0;
+    display: none;
+    @each $breakpoint in map-keys($pp-ttaddress-teaser-item-count) {
+      $count: map-get($pp-ttaddress-teaser-item-count,$breakpoint);
+      @include media-breakpoint-up($breakpoint) {
+        &:nth-child(-n+#{$count}) {
+          display: block;
         }
       }
-      margin: 0;
-      width: $pp-ttaddress-teaser-relwidth-xs + '%';
-      @each $breakpoint in map-keys($pp-ttaddress-teaser-item-width) {
-        @include media-breakpoint-up($breakpoint) {
-          width: map-get($pp-ttaddress-teaser-item-width, $breakpoint) + '%';
-        }
-      }
-      img {
-        margin-bottom: 0;
-        width: 100%;
+    }
+    width: $pp-ttaddress-teaser-relwidth-xs + '%';
+    @each $breakpoint in map-keys($pp-ttaddress-teaser-item-width) {
+      @include media-breakpoint-up($breakpoint) {
+        width: map-get($pp-ttaddress-teaser-item-width, $breakpoint) + '%';
       }
     }
-    .front {
-      background: $pp-ttaddress-teaser-front-bg;
+    &:after {
+      content: ' ';
+      display: block;
+      width: 100%;
+      margin-top: $pp-ttaddress-teaser-relheight + '%';
     }
-    .back {
-      background: $pp-ttaddress-teaser-back-bg;
-      padding: 1rem;
+    .ppc-container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
     }
   }
 }
