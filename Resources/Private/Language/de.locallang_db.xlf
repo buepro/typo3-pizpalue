@@ -77,6 +77,10 @@
                 <source>Fix background</source>
                 <target state="translated">Hintergrund fixieren</target>
             </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-overlaycard">
+                <source>Overlay card (use with text &amp; image)</source>
+                <target state="translated">Überlagerungskarte (für Text & Bild)</target>
+            </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-content-margin">
                 <source>Content element margin</source>
                 <target state="translated">Inhaltselement Aussenabstand</target>

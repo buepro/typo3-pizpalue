@@ -152,5 +152,32 @@ if ( typeof pizpalue !== 'undefined') {
         $('[data-aos]').parent().css('overflow','hidden');
     });
 
+
+    /**
+     * Content element with class pp-ce-overlaycard
+     */
+    $(function () {
+        function showOverlay ($this) {
+            $this.addClass('ppc-hover');
+            $('.textpic-text',$this).css('top', 0);
+        }
+        function hideOverlay ($this) {
+            $this.removeClass('ppc-hover');
+            $('.textpic-text',$this).css('top', $this.height());
+        }
+        $('.pp-ce-overlaycard .textpic').hover(
+            function () {
+                showOverlay($(this));
+            },
+            function () {
+                hideOverlay($(this));
+            });
+        $(window).on('resize',function () {
+            $('.pp-ce-overlaycard .textpic').each(function () {
+                hideOverlay($(this));
+            })
+        })
+    });
+
 }(jQuery);
 

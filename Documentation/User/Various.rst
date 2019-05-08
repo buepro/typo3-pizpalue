@@ -70,6 +70,10 @@ pp-row-child-height           Elements in a row using this class will have their
 pp-ce-background              Centers the background and sizes it to cover the area.
 pp-ce-bgfixed                 Fixes the background. The result is a parallax effect. Due to mobile devices
                               not supporting this feature fully it is generally disabled on mobile devices.
+pp-ce-overlaycard             Render an overlay card when being assigned to a text & image content element.
+                              An overlay card is characterized by an animation taking place when the
+                              user hovers over the image. The animation fades in the text from the
+                              content element.
 pp-content-margin             Applies a margin to the container
 pp-content-padding            Applies a padding to the container
 pp-content-bgwhite70          Applies a white background with 70% opacity

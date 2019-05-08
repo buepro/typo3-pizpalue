@@ -21,6 +21,7 @@ call_user_func(function() {
 
         // Defines available classes for dropdown selector
         $classesItemsList = 'pp-parent-height,pp-row-height,pp-row-child-height,pp-ce-background,pp-ce-bgfixed,'
+            . 'pp-ce-overlaycard,'
             . 'pp-content-margin,pp-content-padding,pp-content-bgwhite70,pp-content-bggrey70,pp-content-bgblack70,'
             . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join';
         $classItems = [];

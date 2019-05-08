@@ -1,3 +1,6 @@
+//
+// List categorized content
+//
 .pp-list-categorized-content {
   .ppc-collapsible {
     position: relative;
@@ -60,6 +63,39 @@
     &.open {
       span {
         transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+//
+// Overlay card
+//
+.pp-ce-overlaycard {
+  .textpic {
+    position: relative;
+    overflow: hidden;
+  }
+  .textpic-gallery {
+    margin-bottom: 0;
+    figure {
+      margin-bottom: 0;
+    }
+  }
+  .textpic-text {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top,transparentize(tint($primary,0.9),0.1),transparentize(tint($primary,0.9),0.1));
+    background-clip: padding-box;
+    border-left: 20px transparent solid;
+    border-right: 20px transparent solid;
+    transition: top 0.5s;
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        padding: ($frame-inner-spacing * $scaling * 0.7) ($frame-inner-spacing * $scaling);
       }
     }
   }

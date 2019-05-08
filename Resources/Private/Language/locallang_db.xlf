@@ -59,6 +59,9 @@
             <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgfixed">
                 <source>Fix background</source>
             </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-overlaycard">
+                <source>Overlay card (use with text &amp; image)</source>
+            </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-content-margin">
                 <source>Content element margin</source>
             </trans-unit>
