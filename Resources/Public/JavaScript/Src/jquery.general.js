@@ -1,30 +1,32 @@
 ;
 /**
- * Pizpalue constructor
+ * Module pp
  *
- * Used to avoid naming conflicts.
+ * @see https://addyosmani.com/resources/essentialjsdesignpatterns/book/#highlighter_119636
  */
-function Pizpalue () {}
-
-/**
- * Return value from a key (name) in the url
- *
- * @see davidwalsh.name/query-string-javascript
- */
-Pizpalue.prototype.getUrlParameter = function (name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-};
-
-if ( typeof pizpalue !== 'undefined') {
+if ( typeof pp !== 'undefined' ) {
     alert('JS conflict! The variable pizpalue is already in use. Please check your libraries.');
 } else {
-    var pizpalue = new Pizpalue();
+    var pp = (function ( $ ) {
+        return {
+            /**
+             * Return value from a key (name) in the url
+             *
+             * @see davidwalsh.name/query-string-javascript
+             */
+            getUrlParameter: function (name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+        }
+    }) (jQuery);
 
+    // @deprecated since pizpalue v9, will be removed in pizpalue v10.0. Use pp instead.
+    var pizpalue = pp;
     // @deprecated since pizpalue v9, will be removed in pizpalue v10.0. Use pizpalue.getUrlParameter instead.
-    var getUrlParameter = pizpalue.getUrlParameter;
+    var getUrlParameter = pp.getUrlParameter;
 }
 
 /**
