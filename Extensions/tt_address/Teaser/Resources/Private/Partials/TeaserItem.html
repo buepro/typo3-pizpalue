@@ -20,11 +20,11 @@
 
                             <f:if condition="{address.image}">
                                 <f:then>
-                                    {f:uri.image(image: address.firstImage, crop: 0, width: width, height: height, cropVariant: name, maxWidth: width)
+                                    {f:uri.image(image: address.firstImage, width: width, height: height, cropVariant: name, maxWidth: width)
                                         -> f:variable(name: 'imageUri')}
                                 </f:then>
                                 <f:else>
-                                    {f:uri.image(src: teaserConfig.defaultImageUid, crop: 0, width: width, height: height, cropVariant: name, maxWidth: width)
+                                    {f:uri.image(src: teaserConfig.defaultImageUid, width: width, height: height, cropVariant: name, maxWidth: width)
                                         -> f:variable(name: 'imageUri')}
                                 </f:else>
                             </f:if>
