@@ -69,6 +69,11 @@ call_user_func(
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
+            'Extensions/tt_address/4.3.0/Configuration/TypoScript',
+            'Pizpalue - tt_address 4.3.0'
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $_EXTKEY,
             'Extensions/tt_address/GoogleMap/Configuration/TypoScript',
             'Pizpalue - tt_address Google map'
         );
