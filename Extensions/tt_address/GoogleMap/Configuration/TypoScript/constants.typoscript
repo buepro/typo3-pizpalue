@@ -4,7 +4,7 @@ pizpalue.plugin.tx_ttaddress {
       # cat=6070/2020/0010; type=string; label= Enabled pages:Lists uid from pages where the google map might be embedded(e.g. 2,33)
       pages =
       # cat=6070/2020/0020; type=float; label= Used fields:Lists the fields from table tt_address being used by the google map
-      fields = uid,company,latitude,longitude,title,name,phone,email,www,description,image
+      fields = uid,company,name,address,zip,city,phone,email,www,description,image,latitude,longitude
       # cat=6070/2020/0030; type=string; label= Google API key
       apiKey =
       # cat=6070/2020/0040; type=float; label= Map center latitude
