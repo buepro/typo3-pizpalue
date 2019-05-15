@@ -73,6 +73,36 @@ The extension might be deactivated by removing its static template or uninstalli
    uninstalled with the distribution remaining installed.
 
 
+.. _admin_form:
+
+Form
+====
+
+Data consent
+------------
+
+Currently there isn't a form element available providing a checkbox with a label linking to an other page.
+To customize such a label the classes :css:`pp-label-dataprotection` and :css:`pp-dataprotection` were introduced.
+
+How to use it:
+
+1. Create a content element with the text to be assigned to the checkbox and assign the class
+   :css:`pp-label-dataprotection` to it.
+
+2. In the form definition assign the class :css:`pp-dataprotection` to the checkbox:
+
+   .. code-block:: yaml
+
+   type: Checkbox
+   identifier: privacy
+   label: Datenschutzvereinbarung
+   properties:
+      containerClassAttribute: 'custom-control custom-checkbox pp-dataprotection'
+
+.. note::
+   You might have a loo to the contact form (yaml definition and content element) to see how it could be done.
+
+
 .. _admin_development:
 
 Development
@@ -84,7 +114,7 @@ During development or maintenance phase two actions might be of interest:
 #. Enable code debugging
 
 To temporarily show an under construction page an url redirection might be created to the page "In Arbeit" and the code
-debugging might be enabled by activating the debug mode in the "PIZPALUE: AGENCY" category from the constant editor.
+debugging might be enabled by setting the site mode in the "PIZPALUE: AGENCY" category from the constant editor.
 
 .. _admin_extensions:
 

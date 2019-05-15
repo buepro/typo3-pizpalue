@@ -138,10 +138,20 @@ if ( typeof pp !== 'undefined' ) {
      * Dataprotection label
      */
     $(function () {
-        var multiCheckBox = $('#idGeneralContactForm-idDataprotectionMultiCheckbox > div,.pp-dataprotection > div');
-        if (multiCheckBox.length > 0) {
+        var label;
+        // Backward compatibility
+        label = $('#idGeneralContactForm-idDataprotectionMultiCheckbox > div label');
+        if ( label.length == 0 ) {
+            // In case it is a checkbox-multiple
+            label = $('.pp-dataprotection > div label');
+        }
+        if ( label.length == 0 ) {
+            // In case it is a checkbox (single)
+            label = $('.pp-dataprotection > label');
+        }
+        if ( label.length > 0 ) {
             var html = $('.pp-label-dataprotection p').html();
-            multiCheckBox.find('label > span').html(html);
+            label.find('> span').html(html);
         }
     });
 
