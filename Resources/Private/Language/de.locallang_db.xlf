@@ -79,7 +79,7 @@
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-overlaycard">
                 <source>Overlay card (use with text &amp; image)</source>
-                <target state="translated">Überlagerungskarte (für Text & Bild)</target>
+                <target state="translated">Überlagerungskarte (für Text &amp; Bild)</target>
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-content-margin">
                 <source>Content element margin</source>
