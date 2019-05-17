@@ -1,0 +1,90 @@
+#============================================================
+# Configures the finisher for the form editor (form module).
+# Used in module.
+#============================================================
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+
+          #===================
+          # Adds localization
+          #===================
+
+          formEditor:
+            translationFile:
+              #----------------------------------------------------------------------------
+              # "10:" is needed since the translation from ext:form is assigned to parent:
+              #    translationFile: 'EXT:form/Resources/Private/Language/Database.xlf'
+              #----------------------------------------------------------------------------
+              10: 'EXT:form/Resources/Private/Language/Database.xlf'
+              110: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
+
+          #================================================
+          # Adds the finisher to the finisher selector box
+          # and defines the available fields
+          #================================================
+          formElementsDefinition:
+            Form:
+              formEditor:
+                #--------------------------------
+                # Adds filter to filter selector
+                #--------------------------------
+                editors:
+                  # 900 is filters select box
+                  900:
+                    selectOptions:
+                      # Adds the filter
+                      110:
+                        value: EmailToSystem
+                        label: 'formEditor.elements.Form.editor.finishers.MailToSystem.label'
+
+                #-----------------------------
+                # Defines available fields
+                #-----------------------------
+                propertyCollections:
+                  finishers:
+                    110:
+                      __inheritances:
+                        10: 'TYPO3.CMS.Form.mixins.formElementMixins.formEmailFinisherMixin'
+                      identifier: EmailToSystem
+                      editors:
+                        # Header label
+                        100:
+                          label: 'formEditor.elements.Form.editor.finishers.MailToSystem.label'
+                        300:
+                          label: 'formEditor.elements.Form.finisher.EmailToSystem.editor.recipientAddress.label'
+                          fieldExplanationText:
+                        400:
+                          label: 'formEditor.elements.Form.finisher.EmailToSystem.editor.recipientName.label'
+                          fieldExplanationText:
+
+          #======================
+          # Defines the finisher
+          #======================
+          finishersDefinition:
+            EmailToSystem:
+
+              #------------------------
+              # Defines default values
+              #------------------------
+              formEditor:
+                iconIdentifier: 'form-finisher'
+                label: 'Email to system (formEditor)'
+                predefinedDefaults:
+                  options:
+                    #------------------------------------------------------------------
+                    # Fields to be shown in form editor as well as in plugin flex form
+                    # need an empty string assignment
+                    #------------------------------------------------------------------
+                    subject: ''
+                    recipientAddress: ''
+                    recipientName: ''
+                    senderAddress: ''
+                    senderName: ''
+                    replyToAddress: ''
+                    carbonCopyAddress: ''
+                    blindCarbonCopyAddress: ''
+                    format: 'plaintext'
+                    attachUploads: false

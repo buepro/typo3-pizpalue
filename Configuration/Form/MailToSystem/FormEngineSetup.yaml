@@ -1,0 +1,36 @@
+#=====================================================
+# Configures the finisher for the flex form (plugin).
+# Used in module as in plugin.
+#=====================================================
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+
+          #===================
+          # Adds localization
+          #===================
+          formEngine:
+            translationFile:
+              #----------------------------------------------------------------------------
+              # "10:" is needed since the translation from ext:form is assigned to parent:
+              #    translationFile: 'EXT:form/Resources/Private/Language/Database.xlf'
+              #----------------------------------------------------------------------------
+              10: 'EXT:form/Resources/Private/Language/Database.xlf'
+              110: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
+
+          #======================
+          # Defines the finisher
+          #======================
+          finishersDefinition:
+            EmailToSystem:
+              FormEngine:
+                __inheritances:
+                  10: 'TYPO3.CMS.Form.mixins.FormEngineEmailMixin'
+                label: 'formEditor.elements.Form.editor.finishers.MailToSystem.label'
+                elements:
+                  recipientAddress:
+                    label: 'tt_content.finishersDefinition.EmailToSystem.recipientAddress.label'
+                  recipientName:
+                    label: 'tt_content.finishersDefinition.EmailToSystem.recipientName.label'
