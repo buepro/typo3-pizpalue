@@ -23,7 +23,6 @@ $EM_CONF[$_EXTKEY] = [
             'vhs'                   => '5.2.0-5.2.99',
             'gridelements'          => '9.2.1-9.2.99',
             'news'                  => '7.2.0-7.2.99',
-            'tt_address'            => '4.3.0-4.3.99',
             'slickcarousel'         => '3.0.2-3.0.99',
             'ws_flexslider'         => '1.5.9-1.5.99',
             'indexed_search'        => '9.5.6-9.5.99',
