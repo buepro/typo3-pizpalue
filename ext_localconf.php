@@ -55,8 +55,8 @@ if (1) {
 if (TYPO3_MODE === 'BE') {
     $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
     $signalSlotDispatcher->connect(
-        \TYPO3\CMS\Extensionmanager\Service\ExtensionManagementService::class,
-        'hasInstalledExtensions',
+        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,
+        'afterExtensionInstall',
         \Buepro\Pizpalue\Service\BrandingService::class,
         'setBackendStyling'
     );

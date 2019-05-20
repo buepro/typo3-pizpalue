@@ -26,7 +26,6 @@ $EM_CONF[$_EXTKEY] = [
             'slickcarousel'         => '3.0.2-3.0.99',
             'ws_flexslider'         => '1.5.9-1.5.99',
             'indexed_search'        => '9.5.6-9.5.99',
-            'user_customer'         => '8.0.0-9.99.99',
         ],
         'conflicts' => [],
         'suggests'  => [],

@@ -196,6 +196,11 @@
                 <source>XL-Height from list item (screen width > 1199px)</source>
                 <target state="translated">XL-Höhe eines Listenelementes (Bildschirmbreite > 1199px)</target>
             </trans-unit>
+
+            <trans-unit id="ext_conf.installCustomerExtension">
+                <source>Install pizpalue with customer extension</source>
+                <target state="translated">Pizpalue mit Kundenerweiterung installieren</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

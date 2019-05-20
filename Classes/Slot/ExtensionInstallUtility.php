@@ -9,24 +9,13 @@
 
 namespace Buepro\Pizpalue\Slot;
 
+use TYPO3\CMS\Core\Core\Environment,
+    TYPO3\CMS\Core\Utility\GeneralUtility,
+    TYPO3\CMS\Extensionmanager\Utility\InstallUtility,
+    TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+
 class ExtensionInstallUtility
 {
-    private function commentUserCustomerDependency()
-    {
-        if (class_exists(\TYPO3\CMS\Core\Core\Environment::class)) {
-            $emconfFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/typo3conf/ext/pizpalue/ext_emconf.php';
-        } else {
-            // Fallback for TYPO3 V8
-            // @extensionScannerIgnoreLine
-            $emconfFile = PATH_site . 'typo3conf/ext/pizpalue/ext_emconf.php';
-        }
-        $content = file_get_contents($emconfFile);
-        $commentToken = '// commented by install process';
-        if (strstr($content, $commentToken) === false) {
-            $content = str_replace("'user_customer'", $commentToken . " 'user_customer'", $content);
-            file_put_contents($emconfFile, $content);
-        }
-    }
 
     public static function copyDefaultSiteConfig()
     {
@@ -34,17 +23,35 @@ class ExtensionInstallUtility
         if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) < 9000000) {
             return false;
         }
-        $sourceFile = \TYPO3\CMS\Core\Core\Environment::getPublicPath() .
+        $sourceFile = Environment::getPublicPath() .
             '/typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles/Sites_config.yaml';
-        $siteDirectory = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/typo3conf/sites/';
+        $siteDirectory = Environment::getPublicPath() . '/typo3conf/sites/';
         $targetDirectory = $siteDirectory . 'default/';
         // Just copy default configuration in case no site configuration exists yet
         if (!is_dir($siteDirectory)) {
-            \TYPO3\CMS\Core\Utility\GeneralUtility::mkdir_deep($targetDirectory);
-            \TYPO3\CMS\Core\Utility\GeneralUtility::upload_copy_move($sourceFile, $targetDirectory . 'config.yaml');
+            GeneralUtility::mkdir_deep($targetDirectory);
+            GeneralUtility::upload_copy_move($sourceFile, $targetDirectory . 'config.yaml');
             return true;
         }
         return false;
+    }
+
+    /**
+     * Installs the extension user_customer. In case it isn't available under typo3conf/ext it will be copied from
+     * the folder EXT/pizpalue/Initialisation/Extensions/
+     */
+    private function installCustomerExtension() {
+        $destination = Environment::getPublicPath() . '/typo3conf/ext/user_customer';
+        if (!file_exists($destination)) {
+            GeneralUtility::copyDirectory(
+                'typo3conf/ext/pizpalue/Initialisation/Extensions/user_customer',
+                $destination
+            );
+        }
+        $installUtility = GeneralUtility::makeInstance(
+            InstallUtility::class
+        );
+        $installUtility->install('user_customer');
     }
 
     /**
@@ -58,7 +65,11 @@ class ExtensionInstallUtility
         if ($extensionKey !== 'pizpalue') {
             return;
         }
-        $this->commentUserCustomerDependency();
+        $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
+        if ($extensionConfiguration->get('pizpalue', 'installCustomerExtension')) {
+            $this->installCustomerExtension();
+            $extensionConfiguration->set('pizpalue', 'installCustomerExtension', 0);
+        }
         $this->copyDefaultSiteConfig();
     }
 }
