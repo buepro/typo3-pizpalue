@@ -9,6 +9,7 @@
   transition: right 0.7s;
 
   .pp-fm-icongroup {
+    z-index: 1;
     .ppicon {
       font-size: $pp-fastmenu-icon-size;
       background: $pp-fastmenu-icon-bg;
@@ -27,6 +28,7 @@
   }
 
   .pp-fm-handle {
+    z-index: 1;
     font-size: 0.6 * $pp-fastmenu-icon-size;
     color: $pp-fastmenu-handle-color;
     cursor: pointer;

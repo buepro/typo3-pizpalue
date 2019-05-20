@@ -42,7 +42,7 @@ if (1) {
  */
 if (1) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig">'
+        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig">'
     );
 
     // Add default RTE configuration

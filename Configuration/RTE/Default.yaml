@@ -8,10 +8,10 @@
 #---------------------------------------------------------#
 
 imports:
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
-    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
-    - { resource: "EXT:bootstrap_package/Configuration/RTE/Default.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+  - { resource: "EXT:bootstrap_package/Configuration/RTE/Default.yaml" }
 
 editor:
   config:
@@ -19,3 +19,5 @@ editor:
     defaultLanguage: "de"
     allowedContent : true
     extraAllowedContent : "span"
+    stylesSet:
+      - { name: "Complementary", element: "span", attributes: { 'class': 'text-complementary' } }
