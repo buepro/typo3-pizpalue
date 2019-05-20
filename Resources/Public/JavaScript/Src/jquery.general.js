@@ -157,15 +157,6 @@ if ( typeof pp !== 'undefined' ) {
 
 
     /**
-     * AOS scroll animation
-     */
-    $(function () {
-        // Set parent overflow to avoid scroll bars when element (to be animated) is hidden
-        $('[data-aos]').parent().css('overflow','hidden');
-    });
-
-
-    /**
      * Content element with class pp-ce-overlaycard
      */
     $(function () {

@@ -160,11 +160,13 @@ page {
          1020 = TEXT
          1020.value (
 
-$(function () {
-   +function ($) {
+;+function ($) {
+   $(function () {
       AOS.init({{$pizpalue.features.scrollAnimation.initParams}});
-   }(jQuery);
-});
+      // Avoids scroll bars when element is hidden
+      $('[data-aos]').parent().css('overflow','hidden');
+   });
+}(jQuery);
          )
       }
    }
