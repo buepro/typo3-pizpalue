@@ -18,7 +18,7 @@ The following configurations are available:
 Category                     Purpose
 ============================ =========================================================================================
 PIZPALUE:CUSTOMER BASE       To enable and disable the menu
-PIZPALUE:CUSTOMER VARIOUS    To define the icon and referenced content/page
+PIZPALUE:CUSTOMER EXTENDED   To define the icon and referenced content/page
 PIZPALUE:CUSTOMER STYLE      To define colors
 ============================ =========================================================================================
 

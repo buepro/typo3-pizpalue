@@ -35,9 +35,9 @@
                 <source>pizpalue: customer social</source>
                 <target state="translated">pizpalue: Kunde Soziale Netzwerke</target>
             </trans-unit>
-            <trans-unit id="constCategory.customerVarious">
-                <source>pizpalue: customer various</source>
-                <target state="translated">pizpalue: Kunde Verschiedenes</target>
+            <trans-unit id="constCategory.customerExtended">
+                <source>pizpalue: customer extended</source>
+                <target state="translated">pizpalue: Kunde Erweitert</target>
             </trans-unit>
             <trans-unit id="constCategory.customerPlugins">
                 <source>pizpalue: Plugins</source>

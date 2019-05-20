@@ -28,8 +28,8 @@
             <trans-unit id="constCategory.customerSocial">
                 <source>pizpalue: customer social</source>
             </trans-unit>
-            <trans-unit id="constCategory.customerVarious">
-                <source>pizpalue: customer various</source>
+            <trans-unit id="constCategory.customerExtended">
+                <source>pizpalue: customer extended</source>
             </trans-unit>
             <trans-unit id="constCategory.customerPlugins">
                 <source>pizpalue: plugins</source>

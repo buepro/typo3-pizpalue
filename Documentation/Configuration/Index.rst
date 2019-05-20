@@ -82,7 +82,7 @@ PIZPALUE: ADMIN              Everything related to the site administration
 PIZPALUE: CUSTOMER BASE      Main customer related parameters
 PIZPALUE: CUSTOMER STYLE     More detailed customer style related parameters
 PIZPALUE: CUSTOMER SOCIAL    More detailed customer social network related parameters
-PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
+PIZPALUE: CUSTOMER EXTENDED  More detailed customer related parameters
 PIZPALUE: CUSTOMER PLUGINS   More detailed plugin related parameters
 ============================ =========================================================
 
@@ -173,11 +173,11 @@ This feature is using the `AOS-library <http://michalsnik.github.io/aos/>`__ and
 animate content elements while the page is being scrolled.
 
 Use the constant editor to disable the feature (category "PIZPALUE: CUSTOMER BASE - Features") or configure it
-further (category "PIZPALUE: CUSTOMER VARIOUS - Animation").
+further (category "PIZPALUE: CUSTOMER EXTENDED - Animation").
 
 Four preconfigured animations are available in the animation dropdown menu from the appearance tab in the content
 element properties dialog. Those animations might be configured as well in the constant editor (category "PIZPALUE:
-CUSTOMER VARIOUS - Animation").
+CUSTOMER EXTENDED - Animation").
 
 
 .. _config_cookieconsent:
@@ -189,7 +189,7 @@ To show a cookie dialog the "Enable Cookie Consent"-parameter has to be set (con
 CUSTOMER BASE - Cookie consent"). As well a link to a privacy policy page can be set for the cookie dialog.
 
 Further configurations regarding the cookie dialog can be found in the constant editor by selecting the category
-"PIZPALUE: CUSTOMER VARIOUS" under the section "Cookie consent".
+"PIZPALUE: CUSTOMER EXTENDED" under the section "Cookie consent".
 
 .. note::
    For Google Analytics a control block can be embedded by using the string ###GoogleAnalyticsStatus### in a content

@@ -1,4 +1,4 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/CategoryDefinition.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript">
 
 #---------------------------------------------------------#
 # Customer
@@ -33,7 +33,7 @@ page {
 
 pizpalue.menu {
    fast {
-      # cat=6030/1060/0310; type=boolean; label=Use fast menu:Shows a fixed menu on the side
+      # cat=6030/1060/0310; type=boolean; label=Show fast menu:Shows a fixed menu on the side
       enable = 0
    }
 }

@@ -6,14 +6,14 @@
 # PIZPALUE: CUSTOMER BASE      Main customer related parameters
 # PIZPALUE: CUSTOMER STYLE     More detailed customer style related parameters
 # PIZPALUE: CUSTOMER SOCIAL    Definition from references to social networks
-# PIZPALUE: CUSTOMER VARIOUS   More detailed customer related parameters
+# PIZPALUE: CUSTOMER EXTENDED  More detailed customer related parameters
 # PIZPALUE: CUSTOMER PLUGINS   More detailed plugin related parameters
 
 # customcategory=6010=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.admin
 # customcategory=6030=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerBase
 # customcategory=6040=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerStyle
 # customcategory=6050=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerSocial
-# customcategory=6060=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerVarious
+# customcategory=6060=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerExtended
 # customcategory=6070=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constCategory.customerPlugins
 
 #---------------------------------------------------------#
