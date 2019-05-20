@@ -5,7 +5,7 @@
   "readme": "../README.md",
   "homepage": "https://www.pizpalue.buechler.pro",
   "author": "Roman Büchler",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.3",
@@ -13,8 +13,5 @@
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-webfont": "^1.7.2"
-  },
-  "dependencies": {
-    "npm": "^6.4.1"
   }
 }
