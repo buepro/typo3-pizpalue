@@ -160,6 +160,9 @@
             <trans-unit id="ext_conf.installCustomerExtension">
                 <source>Install pizpalue with customer extension</source>
             </trans-unit>
+            <trans-unit id="ext_conf.addSiteConfiguration">
+                <source>Add default site configuration</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
