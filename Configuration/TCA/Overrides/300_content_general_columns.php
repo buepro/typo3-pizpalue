@@ -12,12 +12,12 @@ defined('TYPO3_MODE') || die();
 /**
  * Adds fields to content elements
  */
-call_user_func(function() {
+call_user_func(function () {
 
     /**
      * Defines columns
      */
-    if(1) {
+    if (1) {
 
         // Defines available classes for dropdown selector
         $classesItemsList = 'pp-parent-height,pp-row-height,pp-row-child-height,pp-ce-background,pp-ce-bgfixed,'
@@ -164,12 +164,12 @@ call_user_func(function() {
             'tt_content',
             $tmp_pizpalue_columns
         );
-    };
+    }
 
     /**
      * Defines palettes
      */
-    if(1) {
+    if (1) {
         $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_behaviour'] = [
             'showitem' => 'tx_pizpalue_animation',
         ];
@@ -193,7 +193,7 @@ call_user_func(function() {
     /**
      * Adds palettes to all content types
      */
-    if(1) {
+    if (1) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
             'tt_content',
             '--palette--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.behaviour;pizpalue_behaviour',
@@ -206,5 +206,5 @@ call_user_func(function() {
             '',
             'before: sectionIndex'
         );
-    };
+    }
 });

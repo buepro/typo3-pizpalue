@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 defined('TYPO3_MODE') || die();
 
 call_user_func(function ($extensionKey) {
@@ -80,6 +87,4 @@ call_user_func(function ($extensionKey) {
         'FILE:EXT:pizpalue/Configuration/FlexForms/ListCategorizedContent.xml',
         'pp_list_categorized_content'
     );
-
-
-},'pizpalue');
+}, 'pizpalue');

@@ -132,7 +132,8 @@ if (1) {
      * Add page tsconfig
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig">');
+        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig">'
+    );
 }
 
 /**

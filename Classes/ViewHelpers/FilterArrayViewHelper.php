@@ -1,17 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: roman
- * Date: 07/03/2019
- * Time: 19:48
+
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
  */
 
 namespace Buepro\Pizpalue\ViewHelpers;
 
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
-use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * This ViewHelper filters an array for that it just holds elements belonging to a key present in the
@@ -24,7 +24,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  *
  * filtered would now be {0: {name: 'Luna', points: 10}, 1: {name: 'Roman', points: 7}}
  *
- * @package Buepro\Pizpalue\ViewHelpers
  */
 class FilterArrayViewHelper extends AbstractViewHelper
 {
@@ -33,9 +32,10 @@ class FilterArrayViewHelper extends AbstractViewHelper
     /**
      * @return void
      */
-    public function initializeArguments() {
+    public function initializeArguments()
+    {
         $this->registerArgument('source', 'array', 'Array to be reduced');
-        $this->registerArgument('keylist', 'string', 'Comma separated list from required keys', TRUE);
+        $this->registerArgument('keylist', 'string', 'Comma separated list from required keys', true);
     }
 
     /**
@@ -47,21 +47,21 @@ class FilterArrayViewHelper extends AbstractViewHelper
     {
         $source = $this->arguments['source'];
         $keylist = $this->arguments['keylist'];
-        if ($source === NULL) {
+        if ($source === null) {
             return $source;
         }
-        $keys = GeneralUtility::trimExplode(',',$keylist,true);
+        $keys = GeneralUtility::trimExplode(',', $keylist, true);
         $keys = array_flip($keys);
         $filtered = [];
-        foreach($source as $element) {
+        foreach ($source as $element) {
             if (is_array($element)) {
-                $filtered[] = array_intersect_key($element,$keys);
+                $filtered[] = array_intersect_key($element, $keys);
             }
             if (is_object($element)) {
                 $newElement = [];
                 foreach ($keys as $key => $v) {
                     $method = 'get' . ucfirst($key);
-                    if (method_exists($element,$method)) {
+                    if (method_exists($element, $method)) {
                         $newElement[$key] = call_user_func([$element, $method]);
                     }
                 }
