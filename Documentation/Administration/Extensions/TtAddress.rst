@@ -1,6 +1,6 @@
-.. include:: ../Includes.txt
+.. include:: ../../Includes.txt
 
-.. _administration_ttaddress:
+.. _admin_ttaddress:
 
 ====================
 Extension tt_address

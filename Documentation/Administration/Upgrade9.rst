@@ -1,6 +1,6 @@
 .. include:: ../Includes.txt
 
-.. _administration_upgrade_9:
+.. _admin_upgrade_9:
 
 ======================
 Upgrade to version 9.0
@@ -90,7 +90,7 @@ Upgrade bootstrap (using Bootstrap 4.x (SCSS))
 Upgrading bootstrap isn't required. To use bootstrap 4 follow these steps:
 
 -  Carry out the :ref:`basic upgrade procedure<upgrade9_basic_upgrade_procedure>`
--  Follow the description as outlined in :ref:`"Upgrade to Bootstrap 4"<administration_upgrade_bottstrap4>`.
+-  Follow the description as outlined in :ref:`"Upgrade to Bootstrap 4"<admin_upgrade_bottstrap4>`.
 
 
 Reviewing

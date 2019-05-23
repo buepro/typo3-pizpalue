@@ -1,7 +1,7 @@
 .. include:: ../Includes.txt
 
 
-.. _administration_upgrade_bottstrap4:
+.. _admin_upgrade_bottstrap4:
 
 ======================
 Upgrade to bootstrap 4
@@ -16,7 +16,7 @@ Since the preprocessor parser provided by the bootstrap_package doesn't substitu
 requires some manual intervention.
 
 
-.. _administration_upgrade_bottstrap4_staticTemplates:
+.. _admin_upgrade_bottstrap4_staticTemplates:
 
 Static templates
 ================
@@ -25,7 +25,7 @@ Remove the static templates "Bootstrap Package: Bootstrap 3.x (LESS)", "Pizpalue
 all extensions that might use Less-constants (e.g. user_customer).
 
 
-.. _administration_upgrade_bottstrap4_reviewConstants:
+.. _admin_upgrade_bottstrap4_reviewConstants:
 
 Review constants
 ================
@@ -94,7 +94,7 @@ pp-tab-v1-border-color                    pp-tab-v1-border-color
 ========================================= =========================================
 
 
-.. _administration_upgrade_bottstrap4_adaptCustomerAdjustments:
+.. _admin_upgrade_bottstrap4_adaptCustomerAdjustments:
 
 Adapt customer related adjustments
 ==================================

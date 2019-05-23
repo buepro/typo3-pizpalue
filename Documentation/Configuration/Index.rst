@@ -44,7 +44,7 @@ Copying of the default site configuration might be disabled in the extension con
 
 .. note::
    You might need to adjust the settings for the "Error Handling" as well as for the extension "news" by editing
-   the configuration file (typo3conf/sites/default/config.yaml). Have a look at the following:
+   the configuration file (typo3conf/sites/pizpalue/config.yaml). Have a look at the following:
 
    .. code-block:: yaml
 
@@ -211,3 +211,42 @@ To get an app icon set for all major platforms the resources might be generated 
 `"Favicon generator" <https://realfavicongenerator.net/>`__ website. The resulting resources need to be copied to the
 server web directory and the header data assigned to the related field in the app icon section in the category
 "PIZPALUE - CUSTOMER BASE" from the constants editor. Remove any line breaks.
+
+
+.. _config_fastmenu:
+
+Fastmenu
+========
+
+By enabling the fastmenu an icon menu is shown on the right page border.
+
+The menu items can be associated with a page or a content. In case a content is referenced it will be shown beside
+the menu.
+
+The following configurations are available:
+
+================================ =====================================================================================
+Category                         Purpose
+================================ =====================================================================================
+PIZPALUE:CUSTOMER BASE           To enable and disable the menu
+PIZPALUE:CUSTOMER EXTENDED       To define the icon and referenced content/page
+PIZPALUE:CUSTOMER STYLE          To define colors
+================================ =====================================================================================
+
+.. note::
+
+   The amount of menu items can be adjusted through TS. To add a new item the following code might be used.
+
+   .. code-block:: typoscript
+
+      pizpalue.menu.fast.items {
+         newItem {
+            iconClass = ppicon ppicon-log-in
+            contentUid =
+            pageUid =
+         }
+      }
+
+.. note::
+
+   Embed new icons by generating your own icon font.
