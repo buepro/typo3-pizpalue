@@ -5,15 +5,14 @@
   "readme": "../README.md",
   "homepage": "",
   "author": "Roman Büchler",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.3",
+    "grunt-changelog": "^0.3.2",
+    "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-webfont": "^1.7.2"
-  },
-  "dependencies": {
-    "npm": "^6.4.1"
   }
 }

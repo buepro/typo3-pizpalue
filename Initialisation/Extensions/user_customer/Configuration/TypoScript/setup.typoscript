@@ -1,53 +1,12 @@
 #=========================================================#
-# Lib objects
+# Customizations
+# --------------
+# To ease rebasing this file won't be touched by the
+# master branch.
 #=========================================================#
 
-lib.contentElement = FLUIDTEMPLATE
-lib.contentElement {
-    layoutRootPaths {
-        30 = {$user_customer.contentElement.fluidtemplate.layoutRootPath}
-    }
-    templateRootPaths {
-        30 = {$user_customer.contentElement.fluidtemplate.templateRootPath}
-    }
-    partialRootPaths {
-        30 = {$user_customer.contentElement.fluidtemplate.partialRootPath}
-    }
-}
-
-
 #=========================================================#
-# Page object
+# Default
 #=========================================================#
 
-page {
-    includeCSS.ucGeneralScss = EXT:user_customer/Resources/Public/Scss/custom.scss
-    #includeJSFooter.ucGeneral = EXT:user_customer/Resources/Public/JavaScripts/Dist/jquery.general.min.js
-
-    10 {
-        layoutRootPaths.3 = {$user_customer.page.fluidtemplate.layoutRootPath}
-        templateRootPaths.3 = {$user_customer.page.fluidtemplate.templateRootPath}
-        partialRootPaths.3 = {$user_customer.page.fluidtemplate.partialRootPath}
-    }
-}
-
-
-#=========================================================#
-# Various
-#=========================================================#
-
-
-#=========================================================#
-# Development settings
-#=========================================================#
-
-[{$pizpalue.agency.siteMode} == 1]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Develop/setup.typoscript">
-[END]
-
-
-#=========================================================#
-# Customization
-#=========================================================#
-
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Custom/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Default/setup.typoscript">

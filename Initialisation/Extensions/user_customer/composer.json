@@ -1,0 +1,37 @@
+{
+  "name": "buepro/typo3-user_customer",
+  "type": "typo3-cms-extension",
+  "description": "TYPO3 user_customer extension to customize websites using the distribution pizpalue.",
+  "keywords": [
+    "TYPO3 CMS",
+    "bootstrap",
+    "pizpalue",
+    "responsive",
+    "frontend",
+    "theme",
+    "web"
+  ],
+  "homepage": "https://github.com/buepro/typo3-user_customer",
+  "authors": [
+    {
+      "name": "Roman Büchler",
+      "email": "rb@buechler.pro",
+      "homepage": "https://www.buechler.pro/",
+      "role": "Developer"
+    }
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Buepro\\UserCustomer\\": "Classes"
+    }
+  },
+  "replace": {
+    "user_customer": "self.version"
+  },
+  "extra": {
+    "typo3/cms": {
+      "web-dir": ""
+    }
+  }
+}

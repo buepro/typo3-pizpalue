@@ -1,0 +1,5 @@
+<IfModule mod_authz_core.c>
+	<If "%{REQUEST_URI} =~ m#(?i:/\.|/\x23.*\x23|/(?:ChangeLog|ToDo|Readme|License)(?:\.md|\.txt)?|.*(?:~|rc))$#">
+		Require all granted
+	</If>
+</IfModule>

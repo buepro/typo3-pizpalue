@@ -1,0 +1,35 @@
+//
+// Footer
+//
+@include media-breakpoint-down(xs) {
+  footer {
+    .text-right,
+    .frame-type-social_links .sociallinks-list {
+      text-align: left !important;
+    }
+  }
+}
+
+//
+// Forms
+//
+.frame-type-form_formframework {
+  fieldset {
+    border: tint($primary,80%) 1px solid;
+    background: tint($primary,94%);
+    padding: 1em;
+    margin: 1.5em 0;
+  }
+  legend {
+    margin-bottom: 1em;
+  }
+}
+
+//
+// Carousel
+//
+.carousel-item-type-header, .carousel-item-type-text_and_image {
+  .carousel-header, .carousel-subheader, .carousel-text {
+    @include pp-make-text-shadow-outline();
+  }
+}

@@ -3,5 +3,5 @@
 #=========================================================#
 
 page {
-   #includeJSFooter.ucGeneral = EXT:user_customer/Resources/Public/JavaScripts/Dist/jquery.general.js
+   includeJSFooter.ucGeneral = EXT:user_customer/Resources/Public/JavaScript/Src/jquery.general.js
 }
