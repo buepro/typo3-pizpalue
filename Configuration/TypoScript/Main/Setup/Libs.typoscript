@@ -33,11 +33,25 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 1
 
 
 #=========================================================#
-# Images width when no frame is used for content element
+# Images width
 #=========================================================#
+
 lib.contentElement {
    settings {
       responsiveimages {
+
+         #---------------------------------------------------------#
+         # Small screens
+         #---------------------------------------------------------#
+         variants {
+            extrasmall {
+               width = 576
+            }
+         }
+
+         #---------------------------------------------------------#
+         # When no frame is used for content element
+         #---------------------------------------------------------#
          noFrameVariants {
             default {
                breakpoint = 1200
