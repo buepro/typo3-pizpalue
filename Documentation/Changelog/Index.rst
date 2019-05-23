@@ -15,6 +15,7 @@ Releases
 .. toctree::
    :maxdepth: 1
 
+   Release: 9.3.0 (23.5.2019) <9.3.0>
    Release: 9.0.0 (2.1.2019) <9.0.0>
    Release: 8.6.0 (3.10.2018) <8.6.0>
    Release: 8.5.0 (7.8.2018) <8.5.0>

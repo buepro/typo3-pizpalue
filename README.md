@@ -46,7 +46,7 @@ Installing TYPO3 with pizpalue-distribution:
         }
     ],
     "require": {
-        "buepro/typo3-pizpalue": "~9.0"
+        "buepro/typo3-pizpalue": "~9.3"
     },
     "extra": {
         "typo3/cms": {
