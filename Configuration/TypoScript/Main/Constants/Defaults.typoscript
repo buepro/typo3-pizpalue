@@ -1,0 +1,11 @@
+#=========================================================#
+#
+# Adds default configurations.
+#
+# Without default configuration log entries for ts conditions
+# are generated in "typo3temo/var/log" where the tested
+# constant isn't defined.
+#
+#=========================================================#
+
+pizpalue.general.useLess = 0

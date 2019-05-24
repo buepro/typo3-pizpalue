@@ -31,6 +31,13 @@
 
 
 #=========================================================#
+# Defaults
+#=========================================================#
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Defaults.typoscript">
+
+
+#=========================================================#
 # Categories
 #=========================================================#
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Category/SocialNetwork.typoscript">

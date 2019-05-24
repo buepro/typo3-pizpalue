@@ -73,6 +73,6 @@ page {
 # Development settings
 #=========================================================#
 
-[{$pizpalue.agency.isDebugMode} == 1]
+[{$pizpalue.agency.siteMode} == 1]
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Develop/setup.typoscript">
 [END]
