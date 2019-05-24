@@ -55,6 +55,64 @@ selected page language. For this users might reference data by using curly brack
 Pizpalue classes
 =================
 
+General
+-------
+
+These classes act on the element they are assigned to.
+
+============================= =============================================================================
+Class                         Usage
+============================= =============================================================================
+pp-bg-primary                 Applies the primary color to the background
+pp-bg-secondary               Applies the secondary color to the background
+pp-bg-complementary           Applies the complementary color to the background
+pp-bg-light                   Applies the light color to the background
+pp-bg-dark                    Applies the dark color to the background
+pp-ce-background              Centers the background and sizes it to cover the area.
+pp-ce-bgfixed                 Fixes the background. The result is a parallax effect. Due to mobile devices
+                              not supporting this feature fully it is generally disabled on mobile devices.
+============================= =============================================================================
+
+
+Content elements
+----------------
+
+These classes are mainly used in content elements and might change the style from child elements.
+
+============================= =============================================================================
+Class                         Usage
+============================= =============================================================================
+pp-ce-overlaycard             Render an overlay card when being assigned to a text & image content element.
+                              An overlay card is characterized by an animation taking place when the
+                              user hovers over the image. The animation fades in the text from the
+                              content element.
+pp-content-margin             Applies a margin to the container
+pp-content-padding            Applies a padding to the container
+pp-content-bgwhite70          Applies a white background with 70% opacity
+pp-content-bggrey70           Applies a grey background with 70% opacity
+pp-content-bgblack70          Applies a black background with 70% opacity
+============================= =============================================================================
+
+
+Gallery items
+-------------
+
+These classes are used in conjunction with galleries (images, text & images)
+
+============================= =============================================================================
+Class                         Usage
+============================= =============================================================================
+pp-gallery-item-left          Aligns the gallery items (e.g. images) to the left
+pp-gallery-item-right         Aligns the gallery items to the right
+pp-gallery-item-join          Joins the gallery items by removing any margin and padding
+============================= =============================================================================
+
+
+Utility
+-------
+
+These classes are used in templating or together with JS.
+
 ============================= =============================================================================
 Class                         Usage
 ============================= =============================================================================
@@ -67,20 +125,5 @@ pp-row-child-height           Elements in a row using this class will have their
                               harmonized. Each child element will have the same height as its neighbour
                               element in an other column. The class just works with "Text with images"
                               content elements.
-pp-ce-background              Centers the background and sizes it to cover the area.
-pp-ce-bgfixed                 Fixes the background. The result is a parallax effect. Due to mobile devices
-                              not supporting this feature fully it is generally disabled on mobile devices.
-pp-ce-overlaycard             Render an overlay card when being assigned to a text & image content element.
-                              An overlay card is characterized by an animation taking place when the
-                              user hovers over the image. The animation fades in the text from the
-                              content element.
-pp-content-margin             Applies a margin to the container
-pp-content-padding            Applies a padding to the container
-pp-content-bgwhite70          Applies a white background with 70% opacity
-pp-content-bggrey70           Applies a grey background with 70% opacity
-pp-content-bgblack70          Applies a black background with 70% opacity
-pp-gallery-item-left          Aligns the gallery items (e.g. images) to the left
-pp-gallery-item-right         Aligns the gallery items to the right
-pp-gallery-item-join          Joins the gallery items by removing any margin and padding
 ============================= =============================================================================
 
