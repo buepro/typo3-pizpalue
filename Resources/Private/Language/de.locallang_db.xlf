@@ -69,37 +69,57 @@
                 <source>Row children height</source>
                 <target state="translated">Gleich hohe Kindelemente</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-background">
-                <source>Center background, cover</source>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-primary">
+                <source>Background with primary color</source>
+                <target state="translated">Hintergrund mit primärer Farbe</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-secondary">
+                <source>Background with secondary color</source>
+                <target state="translated">Hintergrund mit sekundärer Farbe</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-complementary">
+                <source>Background with complementary color</source>
+                <target state="translated">Hintergrund mit komplementärer Farbe</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-light">
+                <source>Background with light color</source>
+                <target state="translated">Hintergrund mit heller Farbe</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-dark">
+                <source>Background dark color</source>
+                <target state="translated">Hintergrund mit dunkler Farbe</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-centercover">
+                <source>Background centered, cover</source>
                 <target state="translated">Hintergrund zentrieren, füllen</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-bgfixed">
-                <source>Fix background</source>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-fixed">
+                <source>Background fix</source>
                 <target state="translated">Hintergrund fixieren</target>
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-overlaycard">
                 <source>Overlay card (use with text &amp; image)</source>
                 <target state="translated">Überlagerungskarte (für Text &amp; Bild)</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-margin">
-                <source>Content element margin</source>
-                <target state="translated">Inhaltselement Aussenabstand</target>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-margin">
+                <source>Inner element with margin</source>
+                <target state="translated">Aussenabstand des inneren Elementes</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-padding">
-                <source>Content element padding</source>
-                <target state="translated">Inhaltselement Innenabstand</target>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-padding">
+                <source>Inner element with padding</source>
+                <target state="translated">Innenabstand des inneren Elementes</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bgwhite70">
-                <source>White background, 70% opacity</source>
-                <target state="translated">Weisser Hintergrund, 70% Deckkraft</target>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bgwhite70">
+                <source>Inner element with white background, 70% opacity</source>
+                <target state="translated">Inneres Element mit weissem Hintergrund, 70% Deckkraft</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bggrey70">
-                <source>Grey background, 70% opacity</source>
-                <target state="translated">Grauer Hintergrund, 70% Deckkraft</target>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bggrey70">
+                <source>Inner element with grey background, 70% opacity</source>
+                <target state="translated">Inneres Element mit grauem Hintergrund, 70% Deckkraft</target>
             </trans-unit>
-            <trans-unit id="tx_pizpalue_ttc.classes.pp-content-bgblack70">
-                <source>Black background, 70% opacity</source>
-                <target state="translated">Schwarzer Hintergrund, 70% Deckkraft</target>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bgblack70">
+                <source>Inner element with black background, 70% opacity</source>
+                <target state="translated">Inneres Element mit schwarzem Hintergrund, 70% Deckkraft</target>
             </trans-unit>
             <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left">
                 <source>Gallery item left</source>

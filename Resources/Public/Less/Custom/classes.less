@@ -36,14 +36,14 @@
 //
 // CE background, spacing
 //
-.pp-ce-background {
+.pp-ce-background, .pp-bg-centercover {
     background-origin: border-box;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
 }
-.pp-ce-bgfixed {
+.pp-ce-bgfixed, .pp-bg-fixed {
     background-attachment: fixed;
     @media (hover: none) {
         & {
@@ -77,20 +77,23 @@
 .pp-content-margin {
     margin: 3em;
 }
-.pp-content-padding {
+.pp-content-padding, .pp-ce-padding {
     padding: 3em;
 }
-.pp-content-bgwhite70 {
+// .pp-content-bgwhite70 DEPRECIATED as of 25.5.2019
+.pp-content-bgwhite70, .pp-inner-bgwhite70 {
     &.pp-content, > .frame-container > .frame-inner {
         background-color: fade(white,70);
     }
 }
-.pp-content-bggrey70 {
+// .pp-content-bggrey70 DEPRECIATED as of 25.5.2019
+.pp-content-bggrey70, .pp-inner-bggrey70 {
     &.pp-content, > .frame-container > .frame-inner {
         background-color: fade(gray,70);
     }
 }
-.pp-content-bgblack70 {
+// .pp-content-bgblack70 DEPRECIATED as of 25.5.2019
+.pp-content-bgblack70, .pp-inner-bgblack70 {
     &.pp-content, > .frame-container > .frame-inner {
         background-color: fade(black,70);
     }

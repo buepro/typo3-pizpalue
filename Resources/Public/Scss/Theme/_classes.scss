@@ -1,3 +1,18 @@
+//
+// external: micro clearfix hack
+//
+.pp-cf:before,
+.pp-cf:after {
+  content: " ";
+  display: table;
+}
+.pp-cf:after, .clear {
+  clear: both;
+}
+
+//
+// General: Classes act on element they are assigned to
+//
 .pp-bg-primary {
   background-color: $primary;
 }
@@ -12,4 +27,126 @@
 }
 .pp-bg-dark {
   background-color: $dark;
+}
+// .pp-ce-background DEPRECIATED as of 25.5.2019
+.pp-ce-background, .pp-bg-centercover {
+  background-origin: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+// .pp-ce-bgfixed DEPRECIATED as of 25.5.2019
+.pp-ce-bgfixed, .pp-bg-fixed {
+  background-attachment: fixed;
+  @media (hover: none) {
+    & {
+      background-attachment: initial;
+    }
+  }
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-margin {
+  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+    @include media-breakpoint-up($breakpoint) {
+      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+      margin: ($frame-inner-spacing * $scaling);
+    }
+  }
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-padding {
+  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+    @include media-breakpoint-up($breakpoint) {
+      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+      padding: ($frame-inner-spacing * $scaling);
+    }
+  }
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-bgwhite70 {
+  background-color: rgba(white, 0.7);
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-bggrey70 {
+  background-color: rgba(gray, 0.7);
+}
+// DEPRECIATED as of 29.11.2018
+.pp-ce-bgblack70 {
+  background-color: rgba(black, 0.7);
+}
+
+//
+// Content inner: act on inner container
+//
+// ..pp-content-margin DEPRECIATED as of 25.5.2019
+.pp-content-margin, .pp-inner-margin {
+  &.pp-content, > .frame-container > .frame-inner {
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        margin: ($frame-inner-spacing * $scaling);
+      }
+    }
+  }
+}
+// ..pp-content-padding DEPRECIATED as of 25.5.2019
+.pp-content-padding, .pp-inner-padding {
+  &.pp-content, > .frame-container > .frame-inner {
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        padding: ($frame-inner-spacing * $scaling);
+      }
+    }
+  }
+}
+// .pp-content-bgwhite70 DEPRECIATED as of 25.5.2019
+.pp-content-bgwhite70, .pp-inner-bgwhite70 {
+  &.pp-content, > .frame-container > .frame-inner {
+    background-color: rgba(white, 0.7);
+  }
+}
+// .pp-content-bggrey70 DEPRECIATED as of 25.5.2019
+.pp-content-bggrey70, .pp-inner-bggrey70 {
+  &.pp-content, > .frame-container > .frame-inner {
+    background-color: rgba(gray, 0.7);
+  }
+}
+// .pp-content-bgblack70 DEPRECIATED as of 25.5.2019
+.pp-content-bgblack70, .pp-inner-bgblack70 {
+  &.pp-content, > .frame-container > .frame-inner {
+    background-color: rgba(black, 0.7);
+  }
+}
+
+//
+// Gallery items
+//
+.pp-gallery-item-left {
+  .gallery-item {
+    text-align: left;
+  }
+}
+.pp-gallery-item-right {
+  .gallery-item {
+    text-align: left;
+  }
+}
+.pp-gallery-item-join {
+  overflow: hidden;
+  .gallery-item {
+    margin: 0;
+    padding: 0;
+    figure {
+      margin-bottom: auto;
+    }
+  }
+}
+
+//
+// Various
+//
+.pp-label-dataprotection {
+  display: none;
 }

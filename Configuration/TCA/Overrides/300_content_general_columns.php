@@ -20,10 +20,12 @@ call_user_func(function () {
     if (1) {
 
         // Defines available classes for dropdown selector
-        $classesItemsList = 'pp-parent-height,pp-row-height,pp-row-child-height,pp-ce-background,pp-ce-bgfixed,'
+        $classesItemsList = 'pp-bg-primary,pp-bg-secondary,pp-bg-complementary,pp-bg-light,pp-bg-dark,'
+            . 'pp-bg-centercover,pp-bg-fixed,'
+            . 'pp-inner-margin,pp-inner-padding,pp-inner-bgwhite70,pp-inner-bggrey70,pp-inner-bgblack70,'
+            . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,'
             . 'pp-ce-overlaycard,'
-            . 'pp-content-margin,pp-content-padding,pp-content-bgwhite70,pp-content-bggrey70,pp-content-bgblack70,'
-            . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join';
+            . 'pp-parent-height,pp-row-height,pp-row-child-height';
         $classItems = [];
         foreach (explode(',', $classesItemsList) as $class) {
             $classItems[] = [
