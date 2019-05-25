@@ -33,6 +33,10 @@
     </f:for>
 </f:section>
 
+<f:section name="displayMode_map">
+    <f:render partial="Maps" section="{settings.map.rendering}" arguments="{_all}"/>
+</f:section>
+
 <f:section name="displayMode_googleMap">
     <f:render partial="GoogleMap" arguments="{_all}"/>
 </f:section>
