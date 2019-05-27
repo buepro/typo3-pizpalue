@@ -28,13 +28,8 @@ Refer to TYPO3 documentation for further details on handling extensions.
 Update
 ======
 
-If a newer version from this distribution is installed its update script should be executed. It can be started through
-the update button available in the extension manager.
-
-.. figure:: ../Images/Administration/Update.jpg
-   :alt: Distribution update button
-
-   Distribution update button
+After updating this distribution in the extension manager the data base structure should be analysed in the maintenance
+module.
 
 
 .. _admin_upgrade:
