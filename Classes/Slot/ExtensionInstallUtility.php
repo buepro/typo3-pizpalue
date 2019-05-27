@@ -55,8 +55,8 @@ class ExtensionInstallUtility
     }
 
     /**
-     * Comment the dependency to extension user_customer.
-     * The object is just to install user_customer once on the system.
+     * Handles the installation from the extension user_customer as well as the copying from a default
+     * site configuration.
      *
      * @param $extensionKey
      */
