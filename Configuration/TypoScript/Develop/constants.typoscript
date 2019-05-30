@@ -4,7 +4,7 @@
 
 pizpalue {
    agency.siteMode = 1
-   frame.revealFooter = 1
+   features.revealFooter = 1
 }
 
 page.theme {

@@ -47,10 +47,18 @@
 # Subcategories
 #=========================================================#
 
+#---------------------------------------------------------#
+# Bootstrap4
+#---------------------------------------------------------#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Scaffold.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Colors.typoscript">
+
+#---------------------------------------------------------#
+# Pizpalue
+#---------------------------------------------------------#
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Admin.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Customer.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Frame.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Colors.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Scaffold.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Font.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Logo.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Menu.typoscript">
@@ -70,6 +78,13 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Templates.typoscript">
 
 config.admPanel = 0
+
+
+#=========================================================#
+# DEPRECIATED constants
+#=========================================================#
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Depreciated.typoscript">
 
 
 #=========================================================#

@@ -23,7 +23,7 @@
 # customsubcategory=1000=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.general
 # customsubcategory=1010=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.agency
 # customsubcategory=1020=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.customer
-# customsubcategory=1030=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.frame
+# customsubcategory=1030=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.scaffold
 # customsubcategory=1032=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.colors
 # customsubcategory=1033=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.font
 # customsubcategory=1034=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:constSubCategory.header

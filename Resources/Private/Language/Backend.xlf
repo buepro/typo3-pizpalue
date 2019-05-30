@@ -44,8 +44,8 @@
             <trans-unit id="constSubCategory.customer">
                 <source>Customer</source>
             </trans-unit>
-            <trans-unit id="constSubCategory.frame">
-                <source>Frame</source>
+            <trans-unit id="constSubCategory.scaffold">
+                <source>Scaff</source>
             </trans-unit>
             <trans-unit id="constSubCategory.colors">
                 <source>Colors</source>

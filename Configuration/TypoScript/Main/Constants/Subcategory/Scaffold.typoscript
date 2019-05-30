@@ -1,0 +1,10 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript">
+
+#---------------------------------------------------------#
+# customer
+#---------------------------------------------------------#
+
+pizpalue.scaffold {
+  # cat=6030/1030/0020; type=boolean; label=Show footer panel
+  showFooter = 1
+}

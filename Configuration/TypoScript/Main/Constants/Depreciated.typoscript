@@ -1,0 +1,4 @@
+# DEPRECIATED as of 30.5.2019
+pizpalue.frame.revealFooter = {$pizpalue.features.revealFooter}
+# DEPRECIATED as of 30.5.2019
+pizpalue.frame.showFooter = {$pizpalue.scaffold.showFooter}

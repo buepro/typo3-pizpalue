@@ -70,9 +70,12 @@ pizpalue.features {
 plugin.bootstrap_package.settings.scss {
     #navbar-height = 100px
 }
-pizpalue.frame {
+pizpalue.scaffold {
     #showFooter = 1
-    revealFooter = 1
+}
+
+pizpalue.features {
+  revealFooter = 1
 }
 
 

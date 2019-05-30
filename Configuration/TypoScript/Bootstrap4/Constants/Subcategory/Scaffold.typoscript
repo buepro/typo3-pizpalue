@@ -1,0 +1,10 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript">
+
+#---------------------------------------------------------#
+# customer
+#---------------------------------------------------------#
+
+plugin.bootstrap_package.settings.scss {
+   # cat=6030/1030/0010; type=string; label=Header panel height (px)
+   navbar-height = 100px
+}

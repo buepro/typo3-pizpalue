@@ -55,9 +55,9 @@
                 <source>Customer</source>
                 <target state="translated">Kunde</target>
             </trans-unit>
-            <trans-unit id="constSubCategory.frame">
-                <source>Frame</source>
-                <target state="translated">Struktur</target>
+            <trans-unit id="constSubCategory.scaffold">
+                <source>Scaff</source>
+                <target state="translated">Gerüst</target>
             </trans-unit>
             <trans-unit id="constSubCategory.colors">
                 <source>Colors</source>

@@ -11,9 +11,12 @@ pizpalue.features {
    }
 
    fontAwesome {
-      # cat=6030/1510/0302; type=boolean; label=Enable embedding from "Font Awesome"
+      # cat=6030/1510/0304; type=boolean; label=Enable embedding from "Font Awesome"
       enable = 0
    }
+
+  # cat=6030/1510/0306; type=boolean; label=Reveal footer
+  revealFooter = 0
 }
 
 

@@ -136,7 +136,7 @@ page {
 #:::::::::::::::::::::::
 #: Reveal footer service
 #.
-[{$pizpalue.frame.revealFooter} == 1]
+[{$pizpalue.features.revealFooter} == 1]
    page {
       includeJSFooterlibs {
          pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.revealfooterservice.min.js
