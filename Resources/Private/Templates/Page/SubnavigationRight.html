@@ -14,8 +14,16 @@
             <div class="section-row">
                 <div class="section-column subnav-wrap">
                     <f:render partial="Navigation/Subnavigation" arguments="{_all}" />
-                    {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{pageUid: data.uid, colPos: 2}')
-                        -> f:variable(name: 'navcontent')}
+                    <f:if condition="{pizpalue.features.slideNavContent}">
+                        <f:then>
+                            {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{pageUid: data.uid,
+                                colPos: 2, slide: "-1"}') -> f:variable(name: 'navcontent')}
+                        </f:then>
+                        <f:else>
+                            {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{pageUid: data.uid,
+                                colPos: 2}') -> f:variable(name: 'navcontent')}
+                        </f:else>
+                    </f:if>
                     <f:if condition="{navcontent} != ''">
                         <div class="pp-complementary pp-subnavcont" role="complementary">
                             {navcontent -> f:format.htmlentitiesDecode()}
