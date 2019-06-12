@@ -1,4 +1,4 @@
-[{$page.favicon.file} == 1]
+["{$page.favicon.file}" == "AppIcon"]
    page {
       shortcutIcon >
       headerData.610 = TEXT
