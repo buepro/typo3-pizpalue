@@ -43,8 +43,8 @@ BOOTSTRAP PACKAGE: NAVIGATION (constant title "Breadcrumb").
 
 **Q**: How can I use an other font in the main menu?
 
-**A**: Additional fonts might be added by TS. To add two additional google fonts (e.g. `Amatic SC` and `Indie Flower`)
-the following TS setup might be used:
+**A**: Additional fonts might be added by TS. To add two additional google fonts (e.g. ::`Amatic SC` and
+::`Indie Flower`) the following TS setup might be used:
 
 .. code-block:: typoscript
 
@@ -78,7 +78,7 @@ Fastmenu
 
 Example TS:
 
-   .. code-block:: typoscript
+.. code-block:: typoscript
 
       pizpalue.menu.fast.items {
          newItem {
@@ -88,7 +88,7 @@ Example TS:
 
 Example CSS:
 
-   .. code-block:: css
+.. code-block:: css
 
       .uc-fastmenu-icon1 {
          background-image: url(path/to/icon.svg)

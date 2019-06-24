@@ -3,7 +3,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Libs.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Constants.typoscript">
 [{$pizpalue.menu.fast.enable}]
-   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/FastMenu.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/FastMenu.typoscript">
 [END]
 
 
@@ -12,8 +12,8 @@
 #=========================================================#
 
 config {
-   // Branding
-   headerComment (
+// Branding
+headerComment (
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
 |   Eine Webseite basierend auf der Distribution pizpalue von buechler.pro  |
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
@@ -30,27 +30,27 @@ config {
 #---------------------------------------------------------#
 
 page {
-   #:::::::::::::::::::::::
-   #: FLUIDTEMPLATE
-   #.
-   10 {
-      #:::::::::::::::::::::::
-      #: Pass pizpalue constants to fluid
-      #.
-      dataProcessing.1010 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
-      dataProcessing.1010 {
-         as = pizpalue
-         key = pizpalue
-      }
-      #:::::::::::::::::::::::
-      #: Pass content objects to fluid
-      #.
-      variables {
-         ppCopyright = TEXT
-         ppCopyright.value = {$pizpalue.customer.copyright}
-         ppCopyright.inserData = 1
-      }
-   }
+  #:::::::::::::::::::::::
+  #: FLUIDTEMPLATE
+  #.
+  10 {
+    #:::::::::::::::::::::::
+    #: Pass pizpalue constants to fluid
+    #.
+    dataProcessing.1010 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
+    dataProcessing.1010 {
+      as = pizpalue
+      key = pizpalue
+    }
+    #:::::::::::::::::::::::
+    #: Pass content objects to fluid
+    #.
+    variables {
+      ppCopyright = TEXT
+      ppCopyright.value = {$pizpalue.customer.copyright}
+      ppCopyright.inserData = 1
+    }
+  }
 }
 
 
@@ -59,54 +59,61 @@ page {
 #---------------------------------------------------------#
 
 page {
-   includeCSS {
-      #:::::::::::::::::::::::
-      #: Load theme with modified features
-      #.
-      theme = EXT:pizpalue/Resources/Public/Scss/Theme/theme.scss
-   }
-   includeCSSLibs {
-      #:::::::::::::::::::::::
-      #: Icons (ppicon, bootstrappackageicon, glyphicon)
-      #.
-      bootstrappackageicon >
-      pizpalueicon = EXT:pizpalue/Resources/Public/Fonts/pizpalueicon.min.css
-      pizpalueicon {
-         fontLoader {
-            families {
-               0 = PizpalueIcon
-            }
-            enabled = 1
-         }
+  includeCSS {
+    #:::::::::::::::::::::::
+    #: Load theme with modified features
+    #.
+    theme = EXT:pizpalue/Resources/Public/Scss/Theme/theme.scss
+  }
+  includeCSSLibs {
+    #:::::::::::::::::::::::
+    #: Icons (ppicon, bootstrappackageicon, glyphicon)
+    #.
+    bootstrappackageicon >
+    pizpalueicon = EXT:pizpalue/Resources/Public/Fonts/pizpalueicon.min.css
+    pizpalueicon {
+      fontLoader {
+        families {
+          0 = PizpalueIcon
+        }
+        enabled = 1
       }
-   }
+    }
+  }
 }
 
 #:::::::::::::::::::::::
 #: Custom CSS/SCSS
 #.
 [{$pizpalue.features.useStyle} == 1]
-   page {
-      includeCSS {
-         pizpalueCustom = EXT:pizpalue/Resources/Public/Scss/Custom/custom.scss
-      }
-   }
+page {
+  includeCSS {
+    pizpalueCustom = EXT:pizpalue/Resources/Public/Scss/Custom/custom.scss
+  }
+}
 [END]
 
 #:::::::::::::::::::::::
 #: Font awesome
 #.
 [{$pizpalue.features.fontAwesome.enable} == 1]
-   page {
-      includeCSSLibs {
-         FontAwesome = https://use.fontawesome.com/releases/v5.5.0/css/all.css
-         FontAwesome {
-            external = 1
-            excludeFromConcatenation = 1
-            disableCompression = 1
-         }
+page {
+  includeCSSLibs {
+    FontAwesome = https://use.fontawesome.com/releases/v5.5.0/css/all.css
+    FontAwesome {
+      external = 1
+      excludeFromConcatenation = 1
+      disableCompression = 1
+      fontLoader {
+        families {
+          0 = Font Awesome 5 Free:400,900
+          1 = Font Awesome 5 Brands
+        }
+        enabled = 1
       }
-   }
+    }
+  }
+}
 [END]
 
 
@@ -115,61 +122,61 @@ page {
 #---------------------------------------------------------#
 
 page {
-   includeJSFooterlibs {
-      pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
-      pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.smoothscroll.min.js
-      bootstrap_smoothscroll >
-   }
+includeJSFooterlibs {
+    pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
+    pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.smoothscroll.min.js
+    bootstrap_smoothscroll >
+  }
 }
 
 #:::::::::::::::::::::::
 #: Cookie consent service
 #.
 [{$page.theme.cookieconsent.enable} == 1]
-   page {
-      includeJSFooterlibs {
-         pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.cookieconsentservice.min.js
-      }
-   }
+page {
+  includeJSFooterlibs {
+    pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.cookieconsentservice.min.js
+  }
+}
 [END]
 
 #:::::::::::::::::::::::
 #: Reveal footer service
 #.
 [{$pizpalue.features.revealFooter} == 1]
-   page {
-      includeJSFooterlibs {
-         pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.revealfooterservice.min.js
-      }
-   }
+page {
+  includeJSFooterlibs {
+    pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.revealfooterservice.min.js
+  }
+}
 [END]
 
 #:::::::::::::::::::::::
 #: Scroll animation
 #.
 [{$pizpalue.features.scrollAnimation.enable} == 1]
-   lib.contentElement.settings.preload.images = 1
-   page {
-      includeCSS {
-         Aos = EXT:pizpalue/Contrib/Aos/dist/aos.css
-      }
-      includeJSFooterlibs {
-         Aos = EXT:pizpalue/Contrib/Aos/dist/aos.js
-      }
-      jsFooterInline {
-         1020 = TEXT
-         1020.value (
+lib.contentElement.settings.preload.images = 1
+page {
+  includeCSS {
+    Aos = EXT:pizpalue/Contrib/Aos/dist/aos.css
+  }
+  includeJSFooterlibs {
+    Aos = EXT:pizpalue/Contrib/Aos/dist/aos.js
+  }
+  jsFooterInline {
+    1020 = TEXT
+    1020.value (
 
-;+function ($) {
-   $(function () {
-      AOS.init({{$pizpalue.features.scrollAnimation.initParams}});
-      // Avoids scroll bars when element is hidden
-      $('[data-aos]').parent().css('overflow','hidden');
-   });
-}(jQuery);
-         )
-      }
-   }
+  ;+function ($) {
+     $(function () {
+        AOS.init({{$pizpalue.features.scrollAnimation.initParams}});
+        // Avoids scroll bars when element is hidden
+        $('[data-aos]').parent().css('overflow','hidden');
+     });
+  }(jQuery);
+)
+  }
+}
 [END]
 
 
@@ -178,19 +185,19 @@ page {
 #=========================================================#
 
 [{$pizpalue.agency.isMaintenancePage} == 1]
-   page.10 {
-      dataProcessing {
-         10.as = no-mainnavigation
-         20.as = no-subnavigation
-         30.as = no-breadcrumb
-         50.as = no-metanavigation
-      }
-      variables {
-         rootPage >
-         rootPage = TEXT
-         rootPage.value.data = page:uid
-      }
-   }
+page.10 {
+  dataProcessing {
+    10.as = no-mainnavigation
+    20.as = no-subnavigation
+    30.as = no-breadcrumb
+    50.as = no-metanavigation
+  }
+  variables {
+    rootPage >
+    rootPage = TEXT
+    rootPage.value.data = page:uid
+  }
+}
 [END]
 
 
@@ -199,7 +206,7 @@ page {
 #=========================================================#
 
 [{$pizpalue.agency.siteMode} == 1]
-   <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript">
 [END]
 
 
@@ -208,5 +215,5 @@ page {
 #=========================================================#
 
 [{$pizpalue.agency.siteMode} == 2]
-   page.meta.robots = noindex,nofollow
+page.meta.robots = noindex,nofollow
 [END]
