@@ -289,7 +289,7 @@ pizpalue.animation {
 
 page {
     #meta.google-site-verification =
-    #tracking.google.trackingID = {$pizpalue.seo.google.trackingID}
+    #tracking.google.trackingID =
 }
 page.meta {
     #description =

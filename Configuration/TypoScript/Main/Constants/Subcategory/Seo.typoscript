@@ -9,7 +9,7 @@ page {
    meta.google-site-verification =
 
    # cat=6030/1410/020; type=string; label=Google tracking ID
-   tracking.google.trackingID = {$pizpalue.seo.google.trackingID}
+   tracking.google.trackingID =
 }
 
 
