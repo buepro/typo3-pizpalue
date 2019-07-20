@@ -84,6 +84,7 @@ For some extensions additional packages are available:
    Extensions/Form
    Extensions/News
    Extensions/TtAddress
+   Extensions/Felogin
 
 
 .. _admin_development:

@@ -1,0 +1,66 @@
+#=========================================================#
+# Localization
+#
+# TODO Contribute to translation server at https://translation.typo3.org/fr/TYPO3.core.felogin/
+#=========================================================#
+
+plugin.tx_felogin_pi1._LOCAL_LANG {
+    #:::::::::::::::::::::::
+    #: Default used for debugging purposes
+    #.
+#    default {
+#        ll_welcome_message 	= ll_welcome_message
+#        ll_logout_header    = ll_logout_header
+#        ll_logout_message 	= ll_logout_message
+#        ll_error_header 	= ll_error_header
+#        ll_error_message 	= ll_error_message
+#        ll_success_header 	= ll_success_header
+#        ll_success_message 	= ll_success_message
+#        ll_status_header 	= ll_status_header
+#        ll_status_message 	= ll_status_message
+#        cookie_warning 	= cookie_warning
+#        username 	= username
+#        password 	= password
+#        login 	= login
+#        permalogin 	= permalogin
+#        logout 	= logout
+#        send_password 	= send_password
+#        reset_password 	= reset_password
+#        ll_change_password_header 	= ll_change_password_header
+#        ll_change_password_message 	= ll_change_password_message
+#        ll_change_password_nolinkprefix_message 	= ll_change_password_nolinkprefix_message
+#        ll_change_password_notvalid_message 	= ll_change_password_notvalid_message
+#        ll_change_password_notequal_message 	= ll_change_password_notequal_message
+#        ll_change_password_tooshort_message 	= ll_change_password_tooshort_message
+#        ll_change_password_done_message 	= ll_change_password_done_message
+#        change_password 	= change_password
+#        newpassword_label1 	= newpassword_label1
+#        newpassword_label2 	= newpassword_label2
+#        your_email 	= your_email
+#        ll_forgot_header 	= ll_forgot_header
+#        ll_forgot_validate_reset_password 	= ll_forgot_validate_reset_password
+#        ll_forgot_message_emailSent 	= ll_forgot_message_emailSent
+#        ll_forgot_reset_message 	= ll_forgot_reset_message
+#        ll_forgot_reset_message_emailSent 	= ll_forgot_reset_message_emailSent
+#        ll_forgot_reset_message_error 	= ll_forgot_reset_message_error
+#        ll_forgot_header_backToLogin 	= ll_forgot_header_backToLogin
+#        ll_enter_your_data 	= ll_enter_your_data
+#        oLabel_header_welcome 	= oLabel_header_welcome
+#    }
+    de {
+        ll_welcome_header = Anmeldung
+        ll_welcome_message = Für den erweiterten Webseitenzugriff geben Sie bitte nachfolgend Ihren Benutzernamen sowie das Passwort ein.
+        ll_error_header = Anmeldefehler
+        ll_error_message = Beim Anmelden ist ein Fehler aufgetreten. Wahrscheinlich haben Sie den Benutzernamen oder das Passwort nicht korrekt eingegeben. Achten Sie darauf, dass Sie sie genau so eingeben, wie sie sind, einschließlich Groß-/Kleinschreibung. Eine weitere Möglichkeit ist, dass Cookies in Ihrem Webbrowser deaktiviert sein können.
+        ll_status_header = Aktueller Status
+        ll_status_message = Sie sind angemeldet.
+    }
+    fr {
+        ll_welcome_header = Connexion
+        ll_welcome_message = Pour un accès étendu au site Web, veuillez entrer votre nom d'utilisateur et votre mot de passe ci-dessous.
+        ll_error_header = Erreur de connexion
+        ll_error_message = Une erreur s'est produite lors de la connexion. Vous n'avez probablement pas saisi correctement le nom d'utilisateur ou le mot de passe. Assurez-vous de les entrer exactement comme ils sont, y compris les majuscules et les minuscules. Une autre possibilité est que les cookies soient désactivés dans votre navigateur web.
+        ll_status_header = Situation actuelle
+        ll_status_message = Vous êtes connecté.
+    }
+}

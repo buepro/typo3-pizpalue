@@ -1,0 +1,7 @@
+#=========================================================#
+# Template
+#=========================================================#
+
+styles.content.loginform {
+    templateFile = EXT:pizpalue/Extensions/felogin/Resources/Private/Templates/FrontendLogin.html
+}
