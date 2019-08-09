@@ -54,6 +54,29 @@ plugin.tx_felogin_pi1._LOCAL_LANG {
         ll_error_message = Beim Anmelden ist ein Fehler aufgetreten. Wahrscheinlich haben Sie den Benutzernamen oder das Passwort nicht korrekt eingegeben. Achten Sie darauf, dass Sie sie genau so eingeben, wie sie sind, einschließlich Groß-/Kleinschreibung. Eine weitere Möglichkeit ist, dass Cookies in Ihrem Webbrowser deaktiviert sein können.
         ll_status_header = Aktueller Status
         ll_status_message = Sie sind angemeldet.
+        ll_forgot_header 	= Passwort vergessen?
+        ll_forgot_validate_reset_password (
+Ihr neues Passwort
+Guten Tag %s,
+
+Über unsere Webseite wurde, mit Hilfe Ihrer Email-Adresse, ein neues Passwort angefordert. Mit nachfolgendem Link kann dieses neu definiert werden:
+
+%s
+
+Aus Sicherheitsgründen ist dieser Link nur bis %s gültig.
+
+Freundliche Grüsse
+        )
+        ll_change_password_header = Passwort neu definieren
+        ll_change_password_message = Bitte geben Sie Ihr Passwort in die Nachfolgenden Felder ein. Das Passwort sollte mindestens %s Zeichen beinhalten.
+        ll_change_password_tooshort_message = Das Passwort hat zu wenige Zeichen. Das Passwort sollte mindestens %s Zeichen beinhalten.
+        ll_change_password_notequal_message = Das Passwort wurde nicht zweimal gleich eingegeben. Bitte geben Sie das Passwort zwei Mal ein und beachten Sie, dass es mindestens %s Zeichen beinhaltet.
+        ll_change_password_done_message = Ihr Passwort wurde gespeichert. Sie können sich nun mit ihrem neuen Passwort anmelden.
+        ll_change_password_notvalid_message = Der von Ihnen aufgerufene Link ist nicht mehr gültig. Bitte starten sie den Vorgang, um das Passwort zurückzusetzen, neu.
+        ll_forgot_reset_message = Geben Sie Ihren Benutzernamen oder Ihre Email-Adresse im nchstehenden Feld ein und klicken Sie auf "Passwort zurücksetzen".
+        ll_enter_your_data = Benutzername oder Email
+        ll_forgot_reset_message_emailSent = Eine Nachricht wurde an Ihre Email-Adresse versendet.
+        ll_forgot_header_backToLogin = Zurück zum Login
     }
     fr {
         ll_welcome_header = Connexion
@@ -62,5 +85,28 @@ plugin.tx_felogin_pi1._LOCAL_LANG {
         ll_error_message = Une erreur s'est produite lors de la connexion. Vous n'avez probablement pas saisi correctement le nom d'utilisateur ou le mot de passe. Assurez-vous de les entrer exactement comme ils sont, y compris les majuscules et les minuscules. Une autre possibilité est que les cookies soient désactivés dans votre navigateur web.
         ll_status_header = Situation actuelle
         ll_status_message = Vous êtes connecté.
+        ll_forgot_header = Oublié votre mot de passe?
+        ll_forgot_validate_reset_password (
+Votre nouveau mot de passe
+Bonne journée %s,
+
+Un nouveau mot de passe a été demandé via notre site web en utilisant votre adresse e-mail. Avec le lien suivant, vous pouvez redéfinir votre mot de passe :
+
+%s
+
+Pour des raisons de sécurité, ce lien n'est valable que jusqu'au %s.
+
+Salutations amicales
+        )
+        ll_change_password_header = Définir un nouveau mot de passe
+        ll_change_password_message = Veuillez entrer votre mot de passe dans les champs ci-dessous. Le mot de passe doit contenir au moins %s caractères.
+        ll_change_password_tooshort_message = Le mot de passe a trop peu de caractères. Le mot de passe doit contenir au moins %s caractères.
+        ll_change_password_notequal_message = Le mot de passe n'a pas été saisi deux fois de la même façon. Veuillez entrer le mot de passe deux fois et assurez-vous qu'il contient au moins %s caractères.
+        ll_change_password_done_message = Votre mot de passe a été enregistré. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.
+        ll_change_password_notvalid_message = Le lien auquel vous avez accédé n'est plus valide. Veuillez recommencer le processus pour réinitialiser votre mot de passe.
+        ll_forgot_reset_message = Entrez votre nom d'utilisateur ou votre adresse e-mail dans le champ ci-dessous et cliquez sur "Réinitialiser mot de passe".
+        ll_enter_your_data = Nom d'utilisateur ou email
+        ll_forgot_reset_message_emailSent = Un message a été envoyé à votre adresse e-mail.
+        ll_forgot_header_backToLogin = Retour à Connexion
     }
 }
