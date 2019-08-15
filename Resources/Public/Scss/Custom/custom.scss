@@ -1,24 +1,28 @@
 //
-// bootstrap
+// Bootstrap
 //
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/functions";
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/utilities";
+
 //
-// provide additional functions/mixins
+// Provides additional functions/mixins
 //
 @import "../Functions/functions";
 @import "../Mixins/mixins";
+
 //
-// variables
+// Variables
 //
 @import "../Theme/variables";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/variables";
+
 //
 // Dependencies
 //
-@import "../Theme/frame";
+@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/frame";
+
 //
 // Customizations
 //
