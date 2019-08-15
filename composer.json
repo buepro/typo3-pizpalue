@@ -25,11 +25,11 @@
     "typo3/cms-core": "~9.5.6",
     "typo3/cms-indexed-search": "~9.5.6",
     "typo3/cms-impexp": "~9.5.0",
-    "bk2k/bootstrap-package": "~10.0.6",
+    "bk2k/bootstrap-package": "~10.0.7",
     "fluidtypo3/vhs": "~5.2.0",
     "gridelementsteam/gridelements": "~9.2.1",
     "bo/slickcarousel": "~3.0.2",
-    "svewap/ws-flexslider": "~1.5.9"
+    "svewap/ws-flexslider": "~1.5.10"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master"
