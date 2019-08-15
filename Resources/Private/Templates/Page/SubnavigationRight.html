@@ -2,28 +2,23 @@
 <f:layout name="Default" />
 <f:section name="Border">
 
-    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '3'}" />
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '3', slide: '{theme.pagelayout.{pagelayout}.colPos.3.slide}'}" />
 
 </f:section>
 <f:section name="Main">
 
-    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '8'}" />
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '8', slide: '{theme.pagelayout.{pagelayout}.colPos.8.slide}'}" />
 
     <div class="section section-default">
         <div class="container">
             <div class="section-row">
                 <div class="section-column subnav-wrap">
                     <f:render partial="Navigation/Subnavigation" arguments="{_all}" />
-                    <f:if condition="{pizpalue.features.slideNavContent}">
-                        <f:then>
-                            {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{pageUid: data.uid,
-                                colPos: 2, slide: "-1"}') -> f:variable(name: 'navcontent')}
-                        </f:then>
-                        <f:else>
-                            {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{pageUid: data.uid,
-                                colPos: 2}') -> f:variable(name: 'navcontent')}
-                        </f:else>
-                    </f:if>
+                    {v:math.product(a: '-1', b: pizpalue.features.slideNavContent)
+                        -> f:variable(name: 'navContentSlideMode')}
+                    {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{pageUid: data.uid,
+                        colPos: 2, slide: navContentSlideMode}')
+                        -> f:variable(name: 'navcontent')}
                     <f:if condition="{navcontent} != ''">
                         <div class="pp-complementary pp-subnavcont" role="complementary">
                             {navcontent -> f:format.htmlentitiesDecode()}
@@ -31,13 +26,13 @@
                     </f:if>
                 </div>
                 <main class="section-column maincontent-wrap" role="main">
-                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}" />
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0', slide: '{theme.pagelayout.{pagelayout}.colPos.0.slide}'}" />
                 </main>
             </div>
         </div>
     </div>
 
-    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '9'}" />
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '9', slide: '{theme.pagelayout.{pagelayout}.colPos.9.slide}'}" />
 
 </f:section>
 <f:section name="Footer">

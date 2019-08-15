@@ -18,7 +18,7 @@ pizpalue.features {
   # cat=6030/1510/0306; type=boolean; label=Reveal footer
   revealFooter = 0
 
-  # cat=6030/1510/0308; type=boolean; label=Slide navigation content
+  # cat=6030/1510/0308; type=options[Back up to site root=1, No slide=0, Only the current level=-1, Up from one level back=-2]; label=Slide mode for navigation content
   slideNavContent = 0
 }
 
