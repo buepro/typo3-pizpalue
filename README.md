@@ -1,6 +1,6 @@
 # TYPO3 distribution pizpalue
 
-This extension installs a bootstrap based web site with news management.
+This extension installs a bootstrap based web site supporting news, address and time management.
 It is tailored for the Swiss market featuring German as default language and
 additional translations to French and English.
 
@@ -46,7 +46,7 @@ Installing TYPO3 with pizpalue-distribution:
         }
     ],
     "require": {
-        "buepro/typo3-pizpalue": "~9.3"
+        "buepro/typo3-pizpalue": "~9.5"
     },
     "extra": {
         "typo3/cms": {
