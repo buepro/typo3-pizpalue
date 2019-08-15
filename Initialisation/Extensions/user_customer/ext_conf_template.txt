@@ -1,0 +1,6 @@
+#=========================================================#
+# Installation
+#=========================================================#
+
+# cat=Installation; type=boolean; label=Add additional configuration file (typo3conf/AdditionalConfiguration.php)
+addAdditionalConfiguration = 1

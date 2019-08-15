@@ -18,7 +18,7 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder'     => '0',
     'createDirs'       => '',
     'clearCacheOnLoad' => 0,
-    'version'          => '9.3.0',
+    'version'          => '9.3.1-dev',
     'constraints'      => [
         'depends'   => [
             'typo3'         => '8.7.17-9.99.99'
@@ -26,6 +26,11 @@ $EM_CONF[$_EXTKEY] = [
         'conflicts' => [
         ],
         'suggests'  => [
+        ],
+    ],
+    'autoload' => [
+        'psr-4' => [
+            'Buepro\\UserCustomer\\' => 'Classes'
         ],
     ],
 ];

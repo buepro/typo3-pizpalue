@@ -12,7 +12,7 @@ pizpalue.agency {
     #slogan = Slogan
     #link = https://www.terve.link
     #reference = <span class="pp-agency-reference">Eine Webseite von <a href="{$pizpalue.agency.link}" title="{$pizpalue.agency.name} | {$pizpalue.agency.slogan}" target="_blank">{$pizpalue.agency.name}</a></span>
-    #siteMode = 0
+    siteMode = 1
     #isMaintenancePage = 0
 }
 
@@ -59,12 +59,13 @@ user_customer {
 pizpalue.features {
     #scrollAnimation.enable = 1
     #fontAwesome.enable = 0
+    #revealFooter = 0
     #useStyle = 1
 }
 
 
 #=========================================================#
-# Frame
+# Scaffold
 #=========================================================#
 
 plugin.bootstrap_package.settings.scss {
@@ -72,10 +73,6 @@ plugin.bootstrap_package.settings.scss {
 }
 pizpalue.scaffold {
     #showFooter = 1
-}
-
-pizpalue.features {
-  revealFooter = 1
 }
 
 

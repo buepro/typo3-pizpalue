@@ -6,7 +6,10 @@
 #=========================================================#
 
 #=========================================================#
-# Default
+# Defaults
+# --------
+# To get started you might copy the default settings to
+# this file and remove the below listed include tag.
 #=========================================================#
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:user_customer/Configuration/TypoScript/Default/setup.typoscript">

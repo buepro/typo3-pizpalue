@@ -18,11 +18,11 @@ $EM_CONF[$_EXTKEY] = [
     'author_email'     => 'rb@buechler.pro',
     'constraints'      => [
         'depends'   => [
-            'typo3'                 => '9.5.6-9.99.99',
+            'typo3'                 => '9.5.7-9.99.99',
             'indexed_search'        => '9.5.6-9.5.99',
             'bootstrap_package'     => '10.0.7-10.0.99',
             'vhs'                   => '5.2.0-5.2.99',
-            'gridelements'          => '9.2.1-9.2.99',
+            'gridelements'          => '9.2.2-9.2.99',
             'slickcarousel'         => '3.0.2-3.0.99',
             'ws_flexslider'         => '1.5.10-1.5.99',
         ],
