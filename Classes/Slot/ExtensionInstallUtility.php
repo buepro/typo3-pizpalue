@@ -41,10 +41,14 @@ class ExtensionInstallUtility
     {
         $source = Environment::getPublicPath() . '/typo3conf/ext/pizpalue/Initialisation/Extensions/user_customer';
         $destination = Environment::getPublicPath() . '/typo3conf/ext/user_customer';
-        if (!file_exists($source)) return false;
+        if (!file_exists($source)) {
+            return false;
+        }
         if (!file_exists($destination)) {
             GeneralUtility::copyDirectory($source, $destination);
-            if (!file_exists($destination)) return false;
+            if (!file_exists($destination)) {
+                return false;
+            }
         }
         $installUtility = GeneralUtility::makeInstance(InstallUtility::class);
         if (!$installUtility->isLoaded('user_customer')) {
