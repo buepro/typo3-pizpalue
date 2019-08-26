@@ -1,0 +1,7 @@
+plugin.bootstrap_package.settings.scss {
+
+    #---------------------------------------------------------#
+    # Photoswipe
+    #---------------------------------------------------------#
+    pswp__assets-path = ../../../../../bootstrap_package/Resources/Public/Images/PhotoSwipe/
+}
