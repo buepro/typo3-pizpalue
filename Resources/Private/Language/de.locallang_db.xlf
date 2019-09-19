@@ -133,6 +133,10 @@
                 <source>Gallery item join</source>
                 <target state="translated">Galerieelement verbinden</target>
             </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-shadow">
+                <source>Gallery item shadow</source>
+                <target state="translated">Galerieelement mit Schatten</target>
+            </trans-unit>
 
             <trans-unit id="tca.modal_dialog.header">
                 <source>Button text</source>

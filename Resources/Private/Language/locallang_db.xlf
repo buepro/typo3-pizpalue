@@ -101,6 +101,9 @@
             <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-join">
                 <source>Gallery item join</source>
             </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-shadow">
+                <source>Gallery item shadow</source>
+            </trans-unit>
 
             <trans-unit id="tca.modal_dialog.header">
                 <source>Button text</source>

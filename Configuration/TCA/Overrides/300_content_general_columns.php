@@ -23,7 +23,7 @@ call_user_func(function () {
         $classesItemsList = 'pp-bg-primary,pp-bg-secondary,pp-bg-complementary,pp-bg-light,pp-bg-dark,'
             . 'pp-bg-centercover,pp-bg-fixed,'
             . 'pp-inner-margin,pp-inner-padding,pp-inner-bgwhite70,pp-inner-bggrey70,pp-inner-bgblack70,'
-            . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,'
+            . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,pp-gallery-item-shadow,'
             . 'pp-ce-overlaycard,'
             . 'pp-parent-height,pp-row-height,pp-row-child-height';
         $classItems = [];

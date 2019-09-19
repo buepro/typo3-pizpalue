@@ -101,6 +101,7 @@ Class                         Usage
 pp-gallery-item-left          Aligns the gallery items (e.g. images) to the left
 pp-gallery-item-right         Aligns the gallery items to the right
 pp-gallery-item-join          Joins the gallery items by removing any margin and padding
+pp-gallery-item-shadow        Adds a shadow to the gallery items
 ============================= =============================================================================
 
 
