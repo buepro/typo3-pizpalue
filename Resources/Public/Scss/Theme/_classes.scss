@@ -123,14 +123,14 @@
 //
 // Gallery items
 //
-.pp-gallery-item-left {
+div.pp-gallery-item-left {
   .gallery-item {
     text-align: left;
   }
 }
-.pp-gallery-item-right {
+div.pp-gallery-item-right {
   .gallery-item {
-    text-align: left;
+    text-align: right;
   }
 }
 .pp-gallery-item-join {
