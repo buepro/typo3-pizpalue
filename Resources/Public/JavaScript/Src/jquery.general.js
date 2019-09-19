@@ -168,12 +168,21 @@ if ( typeof pp !== 'undefined' ) {
             $this.removeClass('ppc-hover');
             $('.textpic-text',$this).css('top', $this.height());
         }
-        $('.pp-ce-overlaycard .textpic').hover(
-            function () {
-                showOverlay($(this));
-            },
-            function () {
-                hideOverlay($(this));
+        $('.pp-ce-overlaycard .textpic')
+            .hover(
+                function () {
+                    showOverlay($(this));
+                },
+                function () {
+                    hideOverlay($(this));
+                })
+            .click( function () {
+                var $this = $(this);
+                if (parseInt($('.textpic-text',$this).css('top')) === 0) {
+                    hideOverlay($this);
+                } else {
+                    showOverlay($this);
+                }
             });
         $(window).on('resize',function () {
             $('.pp-ce-overlaycard .textpic').each(function () {
