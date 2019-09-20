@@ -1,3 +1,9 @@
+//----------------------------------------------------------------------------------------------------------------------
+//
+// Theme style adjustments are less likely to be overridden by customer projects
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 //
 // provide additional functions/mixins
 //
@@ -57,14 +63,16 @@
 // Complements, adds components
 //
 @import "pp_variables";
-@import "classes";
+@import "fluid";
+@import "ce_editor";
+@import "ce_appearance";
+@import "ce_appearance_overlaycard";
 @import "footer";
 @import "navbar";
 @import "plugin";
-@import "components";
 @import "contentelements";
 @import "cookieconsent";
-@import "content";
+@import "various";
 
 //
 // Plugins

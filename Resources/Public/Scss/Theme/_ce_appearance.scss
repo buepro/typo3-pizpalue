@@ -1,14 +1,8 @@
+//----------------------------------------------------------------------------------------------------------------------
 //
-// external: micro clearfix hack
+// Classes used in appearance tab from content element
 //
-.pp-cf:before,
-.pp-cf:after {
-  content: " ";
-  display: table;
-}
-.pp-cf:after, .clear {
-  clear: both;
-}
+//----------------------------------------------------------------------------------------------------------------------
 
 //
 // General: Classes act on element they are assigned to
@@ -79,7 +73,7 @@
 //
 // Content inner: act on inner container
 //
-// ..pp-content-margin DEPRECIATED as of 25.5.2019
+// .pp-content-margin DEPRECIATED as of 25.5.2019
 .pp-content-margin, .pp-inner-margin {
   &.pp-content, > .frame-container > .frame-inner {
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
@@ -90,7 +84,7 @@
     }
   }
 }
-// ..pp-content-padding DEPRECIATED as of 25.5.2019
+// .pp-content-padding DEPRECIATED as of 25.5.2019
 .pp-content-padding, .pp-inner-padding {
   &.pp-content, > .frame-container > .frame-inner {
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
