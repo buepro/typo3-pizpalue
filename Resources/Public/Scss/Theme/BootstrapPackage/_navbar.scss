@@ -1,3 +1,9 @@
+//----------------------------------------------------------------------------------------------------------------------
+//
+// Allows to set background colors.
+//
+//----------------------------------------------------------------------------------------------------------------------
+
 //
 // Position Fixed
 //
@@ -425,12 +431,12 @@
     height: 2px;
   }
   .navbar-toggler-icon:before {
-    transition-delay: 0;
+    transition-delay: 0s;
     transform: rotate(0);
     top: -6px;
   }
   .navbar-toggler-icon:after {
-    transition-delay: 0;
+    transition-delay: 0s;
     transform: rotate(0);
     top: 6px;
   }

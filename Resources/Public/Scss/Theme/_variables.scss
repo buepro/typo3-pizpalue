@@ -1,54 +1,12 @@
 //
-// Defines bootstrap variables
+// Outer spacing
 //
-// ATTENTION: Take care when renaming this file since it is as well used by extension user_customer
-//
-
-//
-// Navbar
-//
-$navbar-height: 100px !default;
-$navbar-height-sm: 0.7 * $navbar-height;
-$navbar-height-lg: 1.3 * $navbar-height;
-$navbar-heights: (
-  xs: $navbar-height-sm,
-  sm: $navbar-height-sm,
-  md: $navbar-height,
-  lg: $navbar-height-lg,
-  xl: $navbar-height-lg
-) !default;
-
-//
-// Footer
-//
-// mix($primary,color-yiq($footer-color)) doesn't work
-// mix($primary,pp-contrast($footer-color)) works
-//
-$footer-color: pp-contrast($footer-bg) !default;
-$footer-link-color: mix($primary, $footer-color) !default;
-$footer-link-hover-color: lighten($footer-link-color, 10%) !default;
-$footer-link-hover-decoration: none !default;
-
-$footer-meta-bg: darken($footer-bg, 3%) !default;
-$footer-meta-color: pp-contrast($footer-meta-bg) !default;
-$footer-meta-link-color: mix($primary, $footer-meta-color) !default;
-$footer-meta-link-hover-color: lighten($footer-meta-link-color, 10%) !default;
-$footer-meta-link-hover-decoration: $footer-link-hover-decoration !default;
-
-$footer-sections: () !default;
-$footer-sections: map-merge((
-  content: (
-    background: $footer-bg,
-    color: $footer-color,
-    link-color: $footer-link-color,
-    link-hover-color: $footer-link-hover-color,
-    link-hover-decoration: $footer-link-hover-decoration
-  ),
-  meta: (
-    background: $footer-meta-bg,
-    color: $footer-meta-color,
-    link-color: $footer-meta-link-color,
-    link-hover-color: $footer-meta-link-hover-color,
-    link-hover-decoration: $footer-meta-link-hover-decoration
-  )
-), $footer-sections);
+$pp-frame-outer-spacing: 1rem !default;
+$pp-frame-outer-spacing-scaling: () !default;
+$pp-frame-outer-spacing-scaling: map-merge((
+  xs: map-get($frame-outer-spacing-scaling,extra-small),
+  sm: map-get($frame-outer-spacing-scaling,small),
+  md: map-get($frame-outer-spacing-scaling,medium),
+  lg: map-get($frame-outer-spacing-scaling,large),
+  xl: map-get($frame-outer-spacing-scaling,extra-large)
+), $pp-frame-outer-spacing-scaling);

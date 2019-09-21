@@ -55,12 +55,12 @@
     list-style: none;
     padding-left: 0;
     @include media-breakpoint-up('sm') {
-      margin-left: -0.5em;
-      margin-right: -0.5em;
+      margin-left: -.5em;
+      margin-right: -.5em;
       > li {
         display: inline-block;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        padding-left: .5em;
+        padding-right: .5em;
       }
     }
     .active a {
@@ -79,13 +79,16 @@
     list-style: none;
     padding-left: 0;
     @include media-breakpoint-up('sm') {
-      margin-left: -0.5em;
-      margin-right: -0.5em;
+      margin-left: -.5em;
+      margin-right: -.5em;
       > li {
         display: inline-block;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        padding-left: .5em;
+        padding-right: .5em;
       }
+    }
+    .active a {
+      font-weight: bold;
     }
   }
 }
@@ -98,11 +101,11 @@
     overflow: hidden;
   }
   .sociallinks-list {
-    margin: -0.5rem;
+    margin: -.5rem;
   }
   .sociallinks-item {
     display: inline-block;
-    margin: 0.5rem;
+    margin: .5rem;
     height: 1.5rem;
     width: 1.5rem;
   }
