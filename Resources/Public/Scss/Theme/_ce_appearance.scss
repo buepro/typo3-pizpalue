@@ -120,11 +120,21 @@
 div.pp-gallery-item-left {
   .gallery-item {
     text-align: left;
+    figure {
+      display: inline-block;
+      width: auto;
+      max-width: 100%;
+    }
   }
 }
 div.pp-gallery-item-right {
   .gallery-item {
     text-align: right;
+    figure {
+      display: inline-block;
+      width: auto;
+      max-width: 100%;
+    }
   }
 }
 .pp-gallery-item-join {
