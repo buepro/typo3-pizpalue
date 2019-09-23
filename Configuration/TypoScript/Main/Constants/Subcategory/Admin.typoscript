@@ -5,14 +5,23 @@
 #---------------------------------------------------------#
 
 pizpalue.general {
-   # cat=6010/1000/0010; type=string; label=Date format
-   dateFormat = d.m.Y
+    # cat=6010/1000/0010; type=string; label=Date format (date):Format as used in php function date
+    dateFormat = j. F Y
 
-   # cat=6010/1000/0020; type=string; label=Time format
-   timeFormat = H:i
+    # cat=6010/1000/0016; type=string; label=Date format (strftime):Format as used in php function strftime
+    dateStrftimeFormat = %e. %B %Y
 
-   # cat=6010/1000/0030; type=string; label=Datetime format
-   dateTimeFormat = d.m.Y H:i
+    # cat=6010/1000/0020; type=string; label=Time format (date):Format as used in php function date
+    timeFormat = H:i
+
+    # cat=6010/1000/0026; type=string; label=Time format (strftime):Format as used in php function strftime
+    timeStrftimeFormat = %H:%M
+
+    # cat=6010/1000/0030; type=string; label=Datetime format (date):Format as used in php function date
+    dateTimeFormat = j. F Y -  H:i
+
+    # cat=6010/1000/0036; type=string; label=Datetime format (strftime):Format as used in php function strftime
+    dateTimeStrftimeFormat = %e. %B %Y - %H:%M
 }
 
 
@@ -21,26 +30,26 @@ pizpalue.general {
 #---------------------------------------------------------#
 
 pizpalue.agency {
-   # cat=6010/1010/0010; type=string; label=Agency name:Name or company name from agency
-   name = Agency
+    # cat=6010/1010/0010; type=string; label=Agency name:Name or company name from agency
+    name = Agency
 
-   # cat=6010/1010/0020; type=string; label=Agency slogan
-   slogan = Slogan
+    # cat=6010/1010/0020; type=string; label=Agency slogan
+    slogan = Slogan
 
-   # cat=6010/1010/0030; type=string; label=Agency website
-   link = https://www.terve.link
+    # cat=6010/1010/0030; type=string; label=Agency website
+    link = https://www.terve.link
 
-   # cat=6010/1010/0040; type=string; label=Agency reference:HTML used to create a reference to the agency
-   reference = <span class="pp-agency-reference">Eine Webseite von <a href="{$pizpalue.agency.link}" title="{$pizpalue.agency.name} | {$pizpalue.agency.slogan}" target="_blank">{$pizpalue.agency.name}</a></span>
+    # cat=6010/1010/0040; type=string; label=Agency reference:HTML used to create a reference to the agency
+    reference = <span class="pp-agency-reference">Eine Webseite von <a href="{$pizpalue.agency.link}" title="{$pizpalue.agency.name} | {$pizpalue.agency.slogan}" target="_blank">{$pizpalue.agency.name}</a></span>
 
-   # cat=6010/1010/0050; type=boolean; label=Activate debug mode?
-   siteMode = 0
+    # cat=6010/1010/0050; type=boolean; label=Activate debug mode?
+    siteMode = 0
 
-   # cat=6010/1010/0050; type=options[Production=0, Debug=1, Review=2]; label=Site mode
-   siteMode = 0
+    # cat=6010/1010/0050; type=options[Production=0, Debug=1, Review=2]; label=Site mode
+    siteMode = 0
 
-   # cat=6010/1010/0060; type=boolean; label=Is maintenance page?
-   isMaintenancePage = 0
+    # cat=6010/1010/0060; type=boolean; label=Is maintenance page?
+    isMaintenancePage = 0
 }
 
 plugin.bootstrap_package.settings.cssSourceMapping = {$pizpalue.agency.siteMode}

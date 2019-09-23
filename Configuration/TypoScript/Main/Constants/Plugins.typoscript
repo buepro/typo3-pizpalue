@@ -1,24 +1,27 @@
 #---------------------------------------------------------#
+# bootstrap_package
+#---------------------------------------------------------#
+
+plugin {
+    bootstrap_package_contentelements {
+        header.defaultHeaderType = 2
+        timeline.date.format = {$pizpalue.general.dateStrftimeFormat}
+    }
+}
+
+page {
+    preloader {
+        enable = 0
+    }
+}
+
+
+#---------------------------------------------------------#
 # indexedsearch
 #---------------------------------------------------------#
 
 plugin {
    tx_indexedsearch.settings.rootPidList = -1
-}
-
-
-#---------------------------------------------------------#
-# bootstrap_package
-#---------------------------------------------------------#
-
-plugin {
-   bootstrap_package_contentelements.header.defaultHeaderType = 2
-}
-
-page {
-   preloader {
-      enable = 0
-   }
 }
 
 
