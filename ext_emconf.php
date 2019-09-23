@@ -19,9 +19,9 @@ $EM_CONF[$_EXTKEY] = [
     'constraints'      => [
         'depends'   => [
             'typo3'                 => '9.5.7-10.1.99',
-            'bootstrap_package'     => '10.0.7-11.1.99',
+            'bootstrap_package'     => '11.0.0-11.1.99',
             'vhs'                   => '5.2.0-5.2.99',
-            'gridelements'          => '9.2.2-9.2.99',
+            'gridelements'          => '9.3.0-9.3.99',
             'slickcarousel'         => '3.0.2-3.0.99',
             'ws_flexslider'         => '1.5.10-1.5.99',
         ],
