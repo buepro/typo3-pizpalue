@@ -26,6 +26,15 @@ figure {
 //
 // Text and image
 //
+.textpic {
+  .gallery-item img, .gallery-item picture {
+    width: auto;
+  }
+}
+
+//
+// Text and image/media
+//
 .textmedia-below .textmedia-text,
 .textpic-below .textmedia-text,
 .textmedia-below .textpic-text,
