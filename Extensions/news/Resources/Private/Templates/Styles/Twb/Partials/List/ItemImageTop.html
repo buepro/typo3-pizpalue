@@ -20,7 +20,8 @@
 				<f:if condition="{settings.displayDummyIfNoMedia}">
 					<f:image class="img-dummy img-responsive" src="{settings.list.media.dummyImage}" title="" alt=""
 							 maxWidth="{settings.list.media.image.maxWidth}"
-							 maxHeight="{settings.list.media.image.maxHeight}"/>
+							 maxHeight="{settings.list.media.image.maxHeight}"
+							 additionalAttributes="{loading: 'lazy'}" />
 				</f:if>
 			</f:else>
 		</f:if>

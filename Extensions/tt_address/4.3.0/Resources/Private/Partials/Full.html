@@ -11,7 +11,7 @@
                                  class="figure-img img-fluid img-thumbnail rounded"
                                  alt="{img.originalResource.alt}"
                                  title="{img.originalResource.title}"
-                                 additionalAttributes="{itemprop:'image'}"/>
+                                 additionalAttributes="{itemprop:'image', loading: 'lazy'}" />
                         <f:if condition="{address.firstImage.originalResource.description}">
                             <figcaption class="figure-caption">
                                 {address.firstImage.originalResource.description ->
@@ -76,7 +76,7 @@
                                                      alt="{img.originalResource.alt}"
                                                      title="{img.originalResource.title}"
                                                      class="figure-img img-fluid img-thumbnail rounded"
-                                                     additionalAttributes="{itemprop:'image'}"/>
+                                                     additionalAttributes="{itemprop:'image', loading: 'lazy'}"/>
                                         </f:link.typolink>
                                     </f:then>
                                     <f:else>
@@ -89,7 +89,7 @@
                                                      alt="{img.originalResource.alt}"
                                                      title="{img.originalResource.title}"
                                                      class="figure-img img-fluid img-thumbnail rounded"
-                                                     additionalAttributes="{itemprop:'image'}"/>
+                                                     additionalAttributes="{itemprop:'image', loading: 'lazy'}"/>
                                         </a>
                                     </f:else>
                                 </f:if>
