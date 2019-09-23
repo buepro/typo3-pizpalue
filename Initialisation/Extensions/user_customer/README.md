@@ -1,5 +1,10 @@
 # TYPO3 user_customer
 
+[![Latest Version](https://badgen.net/packagist/v/buepro/typo3-user_customer)](https://github.com/buepro/typo3-user_customer/releases)
+[![Extension repository](https://badgen.net/badge/TYPO3/pizpalue/orange)](https://extensions.typo3.org/extension/pizpalue/)
+
+---
+
 This extension serves as a base to customize a TYPO3-website using the distribution 
 [pizpalue](https://github.com/buepro/typo3-pizpalue).
 

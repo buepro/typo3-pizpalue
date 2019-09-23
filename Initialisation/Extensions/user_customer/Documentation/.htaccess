@@ -1,15 +1,18 @@
+RewriteEngine on
+
 # Access block for files
-# Apache < 2.3
+# Apache < 2.3 (not tested)
 <IfModule !mod_authz_core.c>
-	<FilesMatch "(?i:^\.|^#.*#|^(?:ChangeLog|ToDo|Readme|License)(?:\.md|\.txt)?|.*(?:~|rc))$">
+	<FilesMatch "(?i:^\.|^#.*#|^*(?:\.md|\.txt))$">
 		Order allow,deny
 		Allow from all
 		Satisfy All
 	</FilesMatch>
 </IfModule>
+
 # Apache ≥ 2.3
 <IfModule mod_authz_core.c>
-	<If "%{REQUEST_URI} =~ m#(?i:/\.|/\x23.*\x23|/(?:ChangeLog|ToDo|Readme|License)(?:\.md|\.txt)?|.*(?:~|rc))$#">
+	<If "%{REQUEST_URI} =~ m#(?i:/\.|/\x23.*\x23|/*(?:\.md|\.txt))$#">
 		Require all granted
 	</If>
 </IfModule>
