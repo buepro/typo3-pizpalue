@@ -11,20 +11,3 @@ page {
    # cat=6030/1410/020; type=string; label=Google tracking ID
    tracking.google.trackingID =
 }
-
-
-#---------------------------------------------------------#
-# Customer various
-#---------------------------------------------------------#
-
-page.meta {
-   # cat=6060/1410/0070; type=string; label=Default meta description:Default meta description used when not defined on a page (< 160 chars)
-   description =
-
-   # cat=6060/1410/0072; type=string; label=Default meta keywords:Default meta keywords used when no keywords are defined on a page (3-6)
-   keywords =
-
-   # cat=6060/1410/0074; type=string; label=Default meta author
-   author =
-
-}
