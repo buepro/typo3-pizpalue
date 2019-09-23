@@ -19,7 +19,6 @@ $EM_CONF[$_EXTKEY] = [
     'constraints'      => [
         'depends'   => [
             'typo3'                 => '9.5.7-10.1.99',
-            'indexed_search'        => '9.5.6-9.5.99',
             'bootstrap_package'     => '10.0.7-11.1.99',
             'vhs'                   => '5.2.0-5.2.99',
             'gridelements'          => '9.2.2-9.2.99',

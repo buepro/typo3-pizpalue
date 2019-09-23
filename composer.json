@@ -23,7 +23,6 @@
   "license": "MIT",
   "require": {
     "typo3/cms-core": "~9.5.6",
-    "typo3/cms-indexed-search": "~9.5.6",
     "typo3/cms-impexp": "~9.5.0",
     "bk2k/bootstrap-package": "~10.0.7",
     "fluidtypo3/vhs": "~5.2.0",
