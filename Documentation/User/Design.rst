@@ -54,13 +54,30 @@ grid elements can be found in the new content element wizard under the "Grid Ele
 Content element
 ===============
 
-The appearance aspects from a content elements can be defined in the content element properties dialog under the
-appearance tab.
+.. _user-design-image-tab:
+
+Images tab
+----------
+
+Image variants
+~~~~~~~~~~~~~~
+
+Usually the images are used in a content element using the content width. To optimize page loading time and reducing
+the data bandwidth the image sizes are adapted to the content width. This works fine for most cases.
+
+In case one likes to use images in a content element spanning a different width (e.g. the full page width) the
+resolution might result to be too small resulting in not sharp images. For this situation the image variant selector
+has been introduced allowing to adapt the image rendering to different sizes (e.g. "Full page width").
+
+.. _user-design-appearance-tab:
+
+Appearance tab
+--------------
 
 .. _user-design-customframes:
 
 Custom frames
--------------
+~~~~~~~~~~~~~
 
 Additional frames can be selected for content elements
 (`see example <https://www.pizpalue.buechler.pro/das-plus/gestaltung/rahmen/>`__):
@@ -77,7 +94,7 @@ Additional frames can be selected for content elements
 .. _user-design-background:
 
 Background
-----------
+~~~~~~~~~~
 
 The bootstrap package as well as this distribution provide a way to assign a background to a content element.
 
@@ -92,7 +109,7 @@ selected the content is wrapped allowing always to have a background image.
 .. _user-design-attributes:
 
 Attributes
-----------
+~~~~~~~~~~
 
 Sometimes it would be handy to directly alter attributes from a content element. For example to assign additional
 classes, some inline style or new attributes.

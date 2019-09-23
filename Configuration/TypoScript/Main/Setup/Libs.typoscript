@@ -4,20 +4,20 @@
 
 lib.pizpalue.contentElement.dataProcessing < lib.contentElement.dataProcessing
 lib.pizpalue.contentElement.dataProcessing {
-   110 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
-   110 {
-      as = pizpalue
-      key = pizpalue
-   }
+    110 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
+    110 {
+        as = pizpalue
+        key = pizpalue
+    }
 
-   120 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-   120 {
-      references {
-         fieldName = tx_pizpalue_bgmedia
-      }
+    120 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    120 {
+        references {
+            fieldName = tx_pizpalue_bgmedia
+        }
 
-      as = tx_pizpalue_bgmedia
-   }
+        as = tx_pizpalue_bgmedia
+    }
 }
 
 lib.contentElement.dataProcessing < lib.pizpalue.contentElement.dataProcessing
@@ -37,43 +37,49 @@ lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 1
 #=========================================================#
 
 lib.contentElement {
-   settings {
-      responsiveimages {
+    settings {
+        responsiveimages {
 
-         #---------------------------------------------------------#
-         # Small screens
-         #---------------------------------------------------------#
-         variants {
-            extrasmall {
-               width = 576
+            #---------------------------------------------------------#
+            # Default variants adjustments for small screens
+            #---------------------------------------------------------#
+            variants {
+                extrasmall {
+                    width = 576
+                }
             }
-         }
 
-         #---------------------------------------------------------#
-         # When no frame is used for content element
-         #---------------------------------------------------------#
-         noFrameVariants {
-            default {
-               breakpoint = 1200
-               width = 2000
+            #---------------------------------------------------------#
+            # Full page width variants
+            #---------------------------------------------------------#
+            pageVariants {
+                default {
+                    breakpoint = 1200
+                    width = 2000
+                }
+
+                large {
+                    breakpoint = 992
+                    width = 1092
+                }
+
+                medium {
+                    breakpoint = 768
+                    width = 868
+                }
+
+                small {
+                    breakpoint = 576
+                    width = 676
+                }
+
+                extrasmall {
+                    breakpoint = unset
+                    width = 500
+                }
             }
-            large {
-               breakpoint = 992
-               width = 1092
-            }
-            medium {
-               breakpoint = 768
-               width = 868
-            }
-            small {
-               breakpoint = 576
-               width = 676
-            }
-            extrasmall {
-               breakpoint = unset
-               width = 500
-            }
-         }
-      }
-   }
+            # DEPRECIATED as of 23.09.2019
+            noFrameVariants < .pageVariants
+        }
+    }
 }

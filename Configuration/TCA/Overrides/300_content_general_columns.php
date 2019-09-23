@@ -159,6 +159,19 @@ call_user_func(function () {
                     ],
                 ],
             ],
+            'tx_pizpalue_image_variants' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'default' => 'variants',
+                    'items' => [
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.content', 'variants'],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
+                    ],
+                ],
+            ],
 
         ];
 
@@ -207,6 +220,12 @@ call_user_func(function () {
             '--palette--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.attributes;pizpalue_attributes',
             '',
             'before: sectionIndex'
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'tx_pizpalue_image_variants',
+            '',
+            'after: filelink_sorting'
         );
     }
 });

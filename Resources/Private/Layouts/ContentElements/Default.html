@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
@@ -13,15 +14,8 @@
     -->
 </f:comment>
 <f:spaceless>
+    <bk2k:data.imageVariants as="variants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_image_variants}')}" />
 
-    <f:if condition="{data.frame_class}=='none'">
-        <f:then>
-            <bk2k:data.imageVariants as="variants" variants="{settings.responsiveimages.noFrameVariants}" />
-        </f:then>
-        <f:else>
-            <bk2k:data.imageVariants as="variants" variants="{settings.responsiveimages.variants}" />
-        </f:else>
-    </f:if>
     <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
     <f:variable name="columnConfig">{backendlayoutConfig.{data.colPos}}</f:variable>
     <f:if condition="{columnConfig}">

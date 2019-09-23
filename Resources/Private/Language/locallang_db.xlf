@@ -44,6 +44,16 @@
                 <source>Animation 4</source>
             </trans-unit>
 
+            <trans-unit id="tx_pizpalue_ttc.image_variants">
+                <source>Image variants</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.image_variants.content">
+                <source>Default (content width)</source>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.image_variants.page">
+                <source>Full page width</source>
+            </trans-unit>
+
             <trans-unit id="tx_pizpalue_ttc.classes.pp-parent-height">
                 <source>Parent height</source>
             </trans-unit>

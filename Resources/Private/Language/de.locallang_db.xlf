@@ -57,6 +57,19 @@
                 <target state="translated">Animation 4</target>
             </trans-unit>
 
+            <trans-unit id="tx_pizpalue_ttc.image_variants">
+                <source>Image variants</source>
+                <target state="translated">Bildvarianten</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.image_variants.content">
+                <source>Default (content width)</source>
+                <target state="translated">Standard (Inhaltsbreite)</target>
+            </trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.image_variants.page">
+                <source>Full page width</source>
+                <target state="translated">Ganze Seitenbreite</target>
+            </trans-unit>
+
             <trans-unit id="tx_pizpalue_ttc.classes.pp-parent-height">
                 <source>Parent height</source>
                 <target state="translated">Höhe wie Elternelement</target>
