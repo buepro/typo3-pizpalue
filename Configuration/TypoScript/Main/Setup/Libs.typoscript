@@ -1,6 +1,6 @@
-#===============================================================================
-# pass constants and custom fields to content elements
-#===============================================================================
+#=========================================================#
+# Passes constants and custom fields to content elements
+#=========================================================#
 
 lib.pizpalue.contentElement.dataProcessing < lib.contentElement.dataProcessing
 lib.pizpalue.contentElement.dataProcessing {
@@ -23,9 +23,9 @@ lib.pizpalue.contentElement.dataProcessing {
 lib.contentElement.dataProcessing < lib.pizpalue.contentElement.dataProcessing
 
 
-#===============================================================================
+#=========================================================#
 # RTE
-#===============================================================================
+#=========================================================#
 
 # allows to add curly braces to be treated of type getText in RTE editor
 # @see https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html

@@ -3,7 +3,7 @@
 # Adds default configurations.
 #
 # Without default configuration log entries for ts conditions
-# are generated in "typo3temo/var/log" where the tested
+# are generated in "typo3temp/var/log" where the tested
 # constant isn't defined.
 #
 #=========================================================#
