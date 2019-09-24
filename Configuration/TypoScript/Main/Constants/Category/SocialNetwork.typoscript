@@ -1,61 +1,82 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript">
 page.theme {
-   socialmedia {
+    socialmedia {
 
-      # cat=6050/2910/00_enable; type=boolean; label=Social Media: Enable to display the social media links
-      enable = 0
+        # cat=6050/2910/00_enable; type=boolean; label=Social Media: Enable to display the social media links
+        enable = 0
 
-      channels {
-         facebook {
-            label = Facebook
-            # cat=6050/2910/01_facebook_url; type=string; label=Facebook: Insert the full account url
-            url = https://www.facebook.com/typo3/
-         }
-         twitter {
-            label = Twitter
-            # cat=6050/2910/02_twitter_url; type=string; label=Twitter: Insert the full account url
-            url = https://twitter.com/typo3
-         }
-         instagram {
-            label = Instagram
-            # cat=6050/2910/03_instagram_url; type=string; label=Instagram: Insert the full account url
-            url = https://www.instagram.com/
-         }
-         github {
-            label = GitHub
-            # cat=6050/2910/04_googleplus_url; type=string; label=GitHub: Insert the full account url
-            url = https://github.com/buepro/typo3-pizpalue
-         }
-         googleplus {
-            label = Google+
-            # cat=6050/2910/04_googleplus_url; type=string; label=Google+: Insert the full account url
-            url =
-         }
-         linkedin {
-            label = LinkedIn
-            # cat=6050/2910/05_linkedin_url; type=string; label=LinkedIn: Insert the full account url
-            url = https://www.linkedin.com/
-         }
-         xing {
-            label = Xing
-            # cat=6050/2910/06_xing_url; type=string; label=Xing: Insert the full account url
-            url = https://www.xing.com/
-         }
-         youtube {
-            label = YouTube
-            # cat=6050/2910/07_youtube_url; type=string; label=YouTube: Insert the full account url
-            url = https://www.youtube.com/user/typo3
-         }
-         vimeo {
-            label = Vimeo
-            # cat=6050/2910/08_vimeo_url; type=string; label=Vimeo: Insert the full account url
-            url =
-         }
-         pinterest {
-            label = Pinterest
-            # cat=6050/2910/08_pinterest_url; type=string; label=Pinterest: Insert the full account url
-            url = https://www.pinterest.com/
-         }
-      }
-   }
+        channels {
+            facebook {
+                label = Facebook
+                # cat=6050/2910/01_facebook_url; type=string; label=Facebook: Insert the full account url
+                url = https://www.facebook.com/typo3/
+            }
+
+            twitter {
+                label = Twitter
+                # cat=6050/2910/02_twitter_url; type=string; label=Twitter: Insert the full account url
+                url = https://twitter.com/typo3
+            }
+
+            instagram {
+                label = Instagram
+                # cat=6050/2910/03_instagram_url; type=string; label=Instagram: Insert the full account url
+                url = https://www.instagram.com/
+            }
+
+            github {
+                label = GitHub
+                # cat=6050/2910/04_github_url; type=string; label=GitHub: Insert the full account url
+                url = https://github.com/buepro/typo3-pizpalue
+            }
+
+            googleplus {
+                label = Google+
+                # cat=6050/2910/05_googleplus_url; type=string; label=Google+: Insert the full account url
+                url =
+            }
+
+            linkedin {
+                label = LinkedIn
+                # cat=6050/2910/06_linkedin_url; type=string; label=LinkedIn: Insert the full account url
+                url = https://www.linkedin.com/
+            }
+
+            xing {
+                label = Xing
+                # cat=6050/2910/07_xing_url; type=string; label=Xing: Insert the full account url
+                url = https://www.xing.com/
+            }
+
+            youtube {
+                label = YouTube
+                # cat=6050/2910/08_youtube_url; type=string; label=YouTube: Insert the full account url
+                url = https://www.youtube.com/user/typo3
+            }
+
+            pinterest {
+                label = Pinterest
+                # cat=6050/2910/09_pinterest_url; type=string; label=Pinterest: Insert the full account url
+                url = https://www.pinterest.com/
+            }
+
+            vk {
+                label = VK
+                # cat=6050/2910/10_vk_url; type=string; label=VK: Insert the full account url
+                url = https://vk.com/
+            }
+
+            vimeo {
+                label = Vimeo
+                # cat=6050/2910/11_vimeo_url; type=string; label=Vimeo: Insert the full account url
+                url =
+            }
+
+            rss {
+                label = RSS
+                # cat=6050/2910/12_rss_url; type=string; label=RSS: Insert the full url
+                url = https://www.srf.ch/allgemeines/rss-feeds-von-srf
+            }
+        }
+    }
 }
