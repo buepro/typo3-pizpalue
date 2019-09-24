@@ -1,5 +1,11 @@
 # TYPO3 distribution pizpalue
 
+[![Extension repository](https://badgen.net/badge/TYPO3/pizpalue/orange)](https://extensions.typo3.org/extension/pizpalue/)
+[![Extension documentation](https://badgen.net/badge/Documentation/pizpalue/orange)](https://docs.typo3.org/p/buepro/typo3-pizpalue/master/en-us/)
+[![Latest Version](https://badgen.net/packagist/v/buepro/typo3-pizpalue)](https://github.com/buepro/typo3-timelog/releases)
+
+---
+
 This extension installs a bootstrap based web site supporting news, address and time management.
 It is tailored for the Swiss market featuring German as default language and
 additional translations to French and English.
@@ -17,51 +23,4 @@ Further information can be found through the [TYPO3 extension repository](https:
 
 ## Installation
 
-### With TYPO3
-
-1. Go to the extension manager
-2. Install extension news
-3. Select 'Get preconfigured distribution'
-4. Search for "Piz Palü Distribution" and install it
-
-### With composer
-
-Adding the extension to a composer based installation:
-
-```
-composer require buepro/typo3-pizpalue
-```
-
-Installing TYPO3 with pizpalue-distribution:
-
-```
-{
-    "name": "buepro/typo3-cms-pizpalue",
-    "description": "TYPO3 with pizpalue distribution",
-    "type": "project",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
-        }
-    ],
-    "require": {
-        "buepro/typo3-pizpalue": "~9.5"
-    },
-    "extra": {
-        "typo3/cms": {
-            "web-dir": "web"
-        }
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Roman",
-            "email": "rb@buechler.pro"
-        }
-    ],
-    "minimum-stability": "stable"
-}
-```
-
-After the extension has been added install it in the extension manager.
+Please refer to the [installation instructions from the manual](https://docs.typo3.org/p/buepro/typo3-pizpalue/master/en-us/Administration/Index.html#installation).

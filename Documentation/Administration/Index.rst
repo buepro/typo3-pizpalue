@@ -16,13 +16,10 @@ Installation
 The distribution can be installed from within the distribution list, by uploading the extension and through composer.
 Refer to TYPO3 documentation for further details on handling extensions.
 
-
-.. _admin_supported_extensions:
+.. _admin_installation_supported_extensions:
 
 Supported extensions
 --------------------
-
-The following extensions are supported and just need to be installed.
 
 ================================ ================
 Extension                        Version tested
@@ -34,8 +31,76 @@ timelog                          1.2.1
 ================================ ================
 
 .. note::
+
+   In case one of the supported extensions is being used it should be installed prior installing this distribution.
+   This ensures that already predefined records for supported extensions are being imported during installing the
+   distribution.
+
+.. warning::
+
    In case an other extension version is used it is recommended to create a backup before installing it.
 
+.. _admin_installation_with_typo3:
+
+With TYPO3
+----------
+
+Follow these steps to install supported extension with the distribution:
+
+1. Go to the extension manager
+1. Install ``supported extensions (news, tt_address, timelog)`` as needed
+1. Select 'Get preconfigured distribution'
+1. Search for ``Piz Palü Distribution`` and install it
+
+.. _admin_installation_with_composer:
+
+With composer
+-------------
+
+Adding the extension to a composer based installation:
+
+
+.. highlight:: bash
+
+::
+
+   composer require buepro/typo3-pizpalue
+
+Installing TYPO3 with pizpalue-distribution:
+
+.. highlight:: json
+
+::
+
+   {
+       "name": "buepro/typo3-cms-pizpalue",
+       "description": "TYPO3 with pizpalue distribution",
+       "type": "project",
+       "repositories": [
+           {
+               "type": "composer",
+               "url": "https://composer.typo3.org/"
+           }
+       ],
+       "require": {
+           "buepro/typo3-pizpalue": "~11.0"
+       },
+       "extra": {
+           "typo3/cms": {
+               "web-dir": "web"
+           }
+       },
+       "license": "MIT",
+       "authors": [
+           {
+               "name": "Roman",
+               "email": "rb@buechler.pro"
+           }
+       ],
+       "minimum-stability": "stable"
+   }
+
+After the extension has been added install it in the extension manager.
 
 .. _admin_update:
 
@@ -57,6 +122,7 @@ The following upgrade descriptions are available:
    :maxdepth: 2
 
    Upgrade9
+   Upgrade11
    UpgradeBootstrap4
 
 
