@@ -16,11 +16,25 @@ Installation
 The distribution can be installed from within the distribution list, by uploading the extension and through composer.
 Refer to TYPO3 documentation for further details on handling extensions.
 
-.. note::
-   Due to a bug it is recommended to install the extension news prior installing the distribution.
+
+.. _admin_supported_extensions:
+
+Supported extensions
+--------------------
+
+The following extensions are supported and just need to be installed.
+
+================================ ================
+Extension                        Version tested
+================================ ================
+indexed_search                   9.5.8
+news                             7.3.1
+tt_address                       4.3.0
+timelog                          1.2.1
+================================ ================
 
 .. note::
-   In case the extension tt_address should be used the extension should be installed prior installing the distribution.
+   In case an other extension version is used it is recommended to create a backup before installing it.
 
 
 .. _admin_update:

@@ -3,6 +3,7 @@
 1. Update extension user_customer
 1. Update data base resources (Initialization/data.*)
 1. Update documentation
+1. Update supported extension information in documentation (Administration)
 1. Run code sniffer
 1. Update version in ext_emconf.php
 1. Update version in documentation/Settings.cfg
