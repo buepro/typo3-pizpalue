@@ -77,12 +77,9 @@ starting point.
 
    Customize the distribution for customer projects
 
-The extension might be deactivated by removing its static template or uninstalling it.
-
-.. note::
-   The sample extension "user_customer" is being installed by adding an extension dependency to the ext_emconf.php file.
-   By finalizing the installation this dependency is removed (commented) to enable the extension "user_customer" being
-   uninstalled with the distribution remaining installed.
+The extension might be deactivated by removing its static template or by uninstalling it. To prevent the extension
+``user_customer`` from being installed the checkbox ``Install pizpalue with customer extension`` in the ``Extension
+Configuration`` from the settings module might be deactivated.
 
 
 .. _admin_extensions:
