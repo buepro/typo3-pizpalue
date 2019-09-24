@@ -5,6 +5,6 @@
 #---------------------------------------------------------#
 
 plugin.bootstrap_package.settings.scss {
-   # cat=6030/1030/0010; type=string; label=Header panel height (px)
-   navbar-height = 100px
+    # cat=6030/1030/0010; type=string; label=Header panel height (px)
+    navbar-height = 100px
 }

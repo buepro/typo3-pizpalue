@@ -3,9 +3,9 @@
 #---------------------------------------------------------#
 
 pizpalue.colors {
-   primary = {$plugin.bootstrap_package.settings.less.brand-primary}
-   secondary = {$plugin.bootstrap_package.settings.less.brand-secondary}
-   complementary = {$plugin.bootstrap_package.settings.less.brand-complementary}
+    primary = {$plugin.bootstrap_package.settings.less.brand-primary}
+    secondary = {$plugin.bootstrap_package.settings.less.brand-secondary}
+    complementary = {$plugin.bootstrap_package.settings.less.brand-complementary}
 }
 
 
@@ -14,34 +14,34 @@ pizpalue.colors {
 #---------------------------------------------------------#
 
 page.theme {
-   socialmedia {
-      channels {
-         facebook {
-            label = {$pizpalue.customer.socialNetwork.facebook.linkTitle}
-            url = {$pizpalue.customer.socialNetwork.facebook.link}
-         }
+    socialmedia {
+        channels {
+            facebook {
+                label = {$pizpalue.customer.socialNetwork.facebook.linkTitle}
+                url = {$pizpalue.customer.socialNetwork.facebook.link}
+            }
 
-         twitter {
-            label = {$pizpalue.customer.socialNetwork.twitter.linkTitle}
-            url = {$pizpalue.customer.socialNetwork.twitter.link}
-         }
+            twitter {
+                label = {$pizpalue.customer.socialNetwork.twitter.linkTitle}
+                url = {$pizpalue.customer.socialNetwork.twitter.link}
+            }
 
-         instagram {
-            label = {$pizpalue.customer.socialNetwork.instagram.linkTitle}
-            url = {$pizpalue.customer.socialNetwork.instagram.link}
-         }
+            instagram {
+                label = {$pizpalue.customer.socialNetwork.instagram.linkTitle}
+                url = {$pizpalue.customer.socialNetwork.instagram.link}
+            }
 
-         linkedin {
-            label = {$pizpalue.customer.socialNetwork.linkedin.linkTitle}
-            url = {$pizpalue.customer.socialNetwork.linkedin.link}
-         }
+            linkedin {
+                label = {$pizpalue.customer.socialNetwork.linkedin.linkTitle}
+                url = {$pizpalue.customer.socialNetwork.linkedin.link}
+            }
 
-         xing {
-            label = {$pizpalue.customer.socialNetwork.xing.linkTitle}
-            url = {$pizpalue.customer.socialNetwork.xing.link}
-         }
-      }
-   }
+            xing {
+                label = {$pizpalue.customer.socialNetwork.xing.linkTitle}
+                url = {$pizpalue.customer.socialNetwork.xing.link}
+            }
+        }
+    }
 }
 
 
@@ -51,21 +51,21 @@ page.theme {
 
 pizpalue.menu {
 
-   main {
-      navigationstyle = {$page.theme.navigation.style}
-      navigationtype = {$page.theme.navigation.type}
-   }
+    main {
+        navigationstyle = {$page.theme.navigation.style}
+        navigationtype = {$page.theme.navigation.type}
+    }
 
-   meta {
-      enable = {$page.theme.meta.enable}
-      navigationValue = {$page.theme.meta.navigationValue}
-      navigationType = {$page.theme.meta.navigationType}
-   }
+    meta {
+        enable = {$page.theme.meta.enable}
+        navigationValue = {$page.theme.meta.navigationValue}
+        navigationType = {$page.theme.meta.navigationType}
+    }
 
-   language {
-      enable = {$page.theme.language.enable}
-      languageValue = {$page.theme.language.languageValue}
-   }
+    language {
+        enable = {$page.theme.language.enable}
+        languageValue = {$page.theme.language.languageValue}
+    }
 
 }
 
@@ -75,6 +75,6 @@ pizpalue.menu {
 #---------------------------------------------------------#
 
 pizpalue.seo {
-   google.siteVerification = {$page.meta.google-site-verification}
-   google.trackingID = {$page.tracking.google.trackingID}
+    google.siteVerification = {$page.meta.google-site-verification}
+    google.trackingID = {$page.tracking.google.trackingID}
 }

@@ -3,19 +3,20 @@
 #=========================================================#
 
 pizpalue {
-   agency.siteMode = 1
-   features.revealFooter = 1
+    agency.siteMode = 1
+    features.revealFooter = 1
 }
 
 page.theme {
-   cookieconsent{
-      enable = 1
-      position = bottom
-      static = 0
-      layout = basic
-   }
-   navigation {
-      style = default
-      type = top
-   }
+    cookieconsent {
+        enable = 1
+        position = bottom
+        static = 0
+        layout = basic
+    }
+
+    navigation {
+        style = default
+        type = top
+    }
 }

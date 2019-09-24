@@ -3,28 +3,28 @@
 #=========================================================#
 config {
 
-   # ---------------------------------------------- #
-   #  Css
-   # ---------------------------------------------- #
-   concatenateCss = 0
-   compressCss = 0
+    # ---------------------------------------------- #
+    #  Css
+    # ---------------------------------------------- #
+    concatenateCss = 0
+    compressCss = 0
 
-   # ---------------------------------------------- #
-   #  Javascript
-   # ---------------------------------------------- #
-   compressJs = 0
-   concatenateJs = 0
+    # ---------------------------------------------- #
+    #  Javascript
+    # ---------------------------------------------- #
+    compressJs = 0
+    concatenateJs = 0
 
-   # ---------------------------------------------- #
-   #  Various
-   # ---------------------------------------------- #
-   no_cache = 1
-   admPanel = 0
+    # ---------------------------------------------- #
+    #  Various
+    # ---------------------------------------------- #
+    no_cache = 1
+    admPanel = 0
 
-   # ---------------------------------------------- #
-   #  Debugging (get error trace)
-   # ---------------------------------------------- #
-   contentObjectExceptionHandler = 0
+    # ---------------------------------------------- #
+    #  Debugging (get error trace)
+    # ---------------------------------------------- #
+    contentObjectExceptionHandler = 0
 
 }
 
@@ -33,35 +33,35 @@ config {
 # Page
 #=========================================================#
 page {
-   meta.robots = noindex,nofollow
+    meta.robots = noindex,nofollow
 
-   includeCSS {
-      pizpalueDevelop = EXT:pizpalue/Resources/Public/Scss/develop.scss
-   }
+    includeCSS {
+        pizpalueDevelop = EXT:pizpalue/Resources/Public/Scss/develop.scss
+    }
 
-   includeJSFooterlibs {
-      #contrib_cookieconsent = EXT:bootstrap_package/Resources/Public/Contrib/cookieconsent/cookieconsent.min.js
-      #bootstrap_cookieconsent = EXT:bootstrap_package/Resources/Public/JavaScript/Src/jquery.cookieconsent.js
-      #bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Src/bootstrap.smoothscroll.js
-      #pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.cookieconsentservice.js
-      #pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.revealfooterservice.js
-      #pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
-      #pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.smoothscroll.js
-   }
+    includeJSFooterlibs {
+        #contrib_cookieconsent = EXT:bootstrap_package/Resources/Public/Contrib/cookieconsent/cookieconsent.min.js
+        #bootstrap_cookieconsent = EXT:bootstrap_package/Resources/Public/JavaScript/Src/jquery.cookieconsent.js
+        #bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Src/bootstrap.smoothscroll.js
+        #pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.cookieconsentservice.js
+        #pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.revealfooterservice.js
+        #pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
+        #pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.smoothscroll.js
+    }
 
-   1 = TEXT
-   1 {
-      value = <div id="setupsetting"></div>
-      stdWrap.typolink {
-         extTarget = _blank
-         parameter = {$pizpalue.agency.link}
-         parameter.insertData = 1
-         title = In Arbeit - Eine Webseite von {$pizpalue.agency.name}
-         title.insertData = 1
-      }
-   }
+    1 = TEXT
+    1 {
+        value = <div id="setupsetting"></div>
+        stdWrap.typolink {
+            extTarget = _blank
+            parameter = {$pizpalue.agency.link}
+            parameter.insertData = 1
+            title = In Arbeit - Eine Webseite von {$pizpalue.agency.name}
+            title.insertData = 1
+        }
+    }
 }
 
 [{$pizpalue.general.useLess} == 1]
-   page.includeCSS.pizpalueDevelop = EXT:pizpalue/Resources/Public/Less/develop.less
+    page.includeCSS.pizpalueDevelop = EXT:pizpalue/Resources/Public/Less/develop.less
 [END]

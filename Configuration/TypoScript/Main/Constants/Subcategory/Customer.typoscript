@@ -7,26 +7,26 @@
 #---------------------------------------------------------#
 
 pizpalue.customer {
-   # cat=6030/1020/0010; type=string; label=Common customer name (used in copyright)
-   commonName = Allgemeiner Kundenname
+    # cat=6030/1020/0010; type=string; label=Common customer name (used in copyright)
+    commonName = Allgemeiner Kundenname
 
-   # cat=6030/1020/0012; type=string; label=Common customer email
-   commonEmail = info@customer.com
+    # cat=6030/1020/0012; type=string; label=Common customer email
+    commonEmail = info@customer.com
 
-   # cat=6030/1020/0014; type=string; label=Common customer phone
-   commonPhone = 111
+    # cat=6030/1020/0014; type=string; label=Common customer phone
+    commonPhone = 111
 
-   # cat=6030/1020/0016; type=string; label=Contact name
-   contactName = {pizpalue.customer.commonName}
+    # cat=6030/1020/0016; type=string; label=Contact name
+    contactName = {pizpalue.customer.commonName}
 
-   # cat=6030/1020/0018; type=string; label=Contact address
-   contactAddress = Street 1
+    # cat=6030/1020/0018; type=string; label=Contact address
+    contactAddress = Street 1
 
-   # cat=6030/1020/0024; type=string; label=Contact zip
-   contactZip = 1000
+    # cat=6030/1020/0024; type=string; label=Contact zip
+    contactZip = 1000
 
-   # cat=6030/1020/0026; type=string; label=Contact city
-   contactCity = City
+    # cat=6030/1020/0026; type=string; label=Contact city
+    contactCity = City
 
 }
 
@@ -38,24 +38,24 @@ page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
 #---------------------------------------------------------#
 
 pizpalue.customer {
-   # cat=6060/1020/0018; type=string; label=Domain name
-   domain =
+    # cat=6060/1020/0018; type=string; label=Domain name
+    domain =
 
-   # cat=6060/1020/0020; type=string; label=Contact address addition
-   contactAddressAddition = Floor 4
+    # cat=6060/1020/0020; type=string; label=Contact address addition
+    contactAddressAddition = Floor 4
 
-   # cat=6060/1020/0022; type=string; label=Contact region
-   contactRegion = Region
+    # cat=6060/1020/0022; type=string; label=Contact region
+    contactRegion = Region
 
-   # cat=6060/1020/0028; type=string; label=Contact country
-   contactCountry = Country
+    # cat=6060/1020/0028; type=string; label=Contact country
+    contactCountry = Country
 
-   # cat=6060/1020/0030; type=string; label=Contact email
-   contactEmail =  {$pizpalue.customer.commonEmail}
+    # cat=6060/1020/0030; type=string; label=Contact email
+    contactEmail = {$pizpalue.customer.commonEmail}
 
-   # cat=6060/1020/0032; type=string; label=Contact phone
-   contactPhone =  {$pizpalue.customer.commonPhone}
+    # cat=6060/1020/0032; type=string; label=Contact phone
+    contactPhone = {$pizpalue.customer.commonPhone}
 
-   # cat=6060/1020/0080; type=string; label=Copyright text
-   copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
+    # cat=6060/1020/0080; type=string; label=Copyright text
+    copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
 }

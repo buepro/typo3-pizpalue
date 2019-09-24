@@ -5,21 +5,21 @@
 #---------------------------------------------------------#
 
 pizpalue.features {
-   scrollAnimation {
-      # cat=6030/1510/0302; type=boolean; label=Enable content element scroll animation:If selected content element scroll animation will be available. This feature might be required by content animations
-      enable = 1
-   }
+    scrollAnimation {
+        # cat=6030/1510/0302; type=boolean; label=Enable content element scroll animation:If selected content element scroll animation will be available. This feature might be required by content animations
+        enable = 1
+    }
 
-   fontAwesome {
-      # cat=6030/1510/0304; type=boolean; label=Enable embedding from "Font Awesome"
-      enable = 0
-   }
+    fontAwesome {
+        # cat=6030/1510/0304; type=boolean; label=Enable embedding from "Font Awesome"
+        enable = 0
+    }
 
-  # cat=6030/1510/0306; type=boolean; label=Reveal footer
-  revealFooter = 0
+    # cat=6030/1510/0306; type=boolean; label=Reveal footer
+    revealFooter = 0
 
-  # cat=6030/1510/0308; type=options[Back up to site root=1, No slide=0, Only the current level=-1, Up from one level back=-2]; label=Slide mode for navigation content
-  slideNavContent = 0
+    # cat=6030/1510/0308; type=options[Back up to site root=1, No slide=0, Only the current level=-1, Up from one level back=-2]; label=Slide mode for navigation content
+    slideNavContent = 0
 }
 
 
@@ -28,20 +28,20 @@ pizpalue.features {
 #---------------------------------------------------------#
 
 pizpalue.features {
-   # cat=6060/1510/0110; type=boolean; label=Use style:If selected a custom style declarations will be included
-   useStyle = 1
+    # cat=6060/1510/0110; type=boolean; label=Use style:If selected a custom style declarations will be included
+    useStyle = 1
 
-   scrollAnimation {
-      # cat=6060/2990/0320; type=string; label=Custom scroll animation frame 1 attributes (depreciated as of 9.0)
-      frame1Attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
+    scrollAnimation {
+        # cat=6060/2990/0320; type=string; label=Custom scroll animation frame 1 attributes (depreciated as of 9.0)
+        frame1Attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
 
-      # cat=6060/2990/0340; type=string; label=Custom scroll animation frame 2 attributes (depreciated as of 9.0)
-      frame2Attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
+        # cat=6060/2990/0340; type=string; label=Custom scroll animation frame 2 attributes (depreciated as of 9.0)
+        frame2Attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
 
-      # cat=6060/2990/0350; type=string; label=Custom scroll animation frame 3 attributes (depreciated as of 9.0)
-      frame3Attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
+        # cat=6060/2990/0350; type=string; label=Custom scroll animation frame 3 attributes (depreciated as of 9.0)
+        frame3Attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
 
-      # cat=6060/2990/0360; type=string; label= Scroll animation init parameters (depreciated as of 9.0)
-      initParams = easing: 'ease-in-out-sine', once: true
-   }
+        # cat=6060/2990/0360; type=string; label= Scroll animation init parameters (depreciated as of 9.0)
+        initParams = easing: 'ease-in-out-sine', once: true
+    }
 }

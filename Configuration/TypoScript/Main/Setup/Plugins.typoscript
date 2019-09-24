@@ -3,59 +3,64 @@
 #---------------------------------------------------------#
 
 plugin.tx_bootstrap_package._LOCAL_LANG {
-   default {
-      readmore = Read more
-      cookieconsent.common {
-         header = This website uses cookies.
-         message = This website uses cookies to ensure you get the best experience on our website.
-         dismiss = Got it!
-         allow = Allow
-         deny = Decline
-         link = Learn more
-      }
-      googleanalyticsstatus {
-         title = Google Analytics Status
-         description = Here you can object to the anonymous collection by Google Analytics on this website for your browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a different computer or web browser, you will need to re-set the exclusion.
-         link.enable = Enable Google Analytics (Opt-In)
-         link.disable = Deactivate Google Analytics (Opt-Out)
-      }
-   }
-   de {
-      readmore = Weiter lesen
-      form.selectfile = Datei wählen
-      cookieconsent.common {
-         header = Diese Webseite setzt Cookies ein.
-         message = Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies eingesetzt.
-         dismiss = Alles klar!
-         allow = Cookies erlauben
-         deny = Ablehnen
-         link = Mehr erfahren
-      }
-      googleanalyticsstatus {
-         title = Google Analytics Status
-         description = Für diese Webseite können Sie hier, mittels "Opt-Out-Cookie", die anonymen Datenerfassung durch Google Analytics deaktivieren. Bitte beachten Sie, dass wenn Sie das Ausschluss-Cookie löschen oder einen anderen Computer oder Webbrowser verwenden, den Ausschluss neu setzen müssen.
-         link.enable = Google Analytics aktivieren (Opt-In)
-         link.disable = Google Analytics deaktivieren (Opt-Out)
-      }
-   }
-   fr {
-      readmore = Continuer à lire
-      form.selectfile = Sélectionner le fichier
-      cookieconsent.common {
-         header = Ce site web utilise des cookies.
-         message = Les cookies sont utilisés pour vous permettre une utilisation optimale de notre site web.
-         dismiss = Je l'ai!
-         allow = Autoriser cookies
-         deny = Décliner
-         link = En savoir plus
-      }
-      googleanalyticsstatus {
-         title = Google Analytics Status
-         description = Vous pouvez vous opposer à la collecte anonyme de Google Analytics sur ce site Web pour votre navigateur en utilisant un "Opt-Out-Cookie". Veuillez noter que si vous supprimez le témoin d'exclusion ou si vous utilisez un ordinateur ou un navigateur Web différent, vous devrez réinitialiser l'exclusion.
-         link.enable = Activer Google Analytics (Opt-In)
-         link.disable = Désactiver Google Analytics (Opt-Out)
-      }
-   }
+    default {
+        readmore = Read more
+        cookieconsent.common {
+            header = This website uses cookies.
+            message = This website uses cookies to ensure you get the best experience on our website.
+            dismiss = Got it!
+            allow = Allow
+            deny = Decline
+            link = Learn more
+        }
+
+        googleanalyticsstatus {
+            title = Google Analytics Status
+            description = Here you can object to the anonymous collection by Google Analytics on this website for your browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a different computer or web browser, you will need to re-set the exclusion.
+            link.enable = Enable Google Analytics (Opt-In)
+            link.disable = Deactivate Google Analytics (Opt-Out)
+        }
+    }
+
+    de {
+        readmore = Weiter lesen
+        form.selectfile = Datei wählen
+        cookieconsent.common {
+            header = Diese Webseite setzt Cookies ein.
+            message = Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies eingesetzt.
+            dismiss = Alles klar!
+            allow = Cookies erlauben
+            deny = Ablehnen
+            link = Mehr erfahren
+        }
+
+        googleanalyticsstatus {
+            title = Google Analytics Status
+            description = Für diese Webseite können Sie hier, mittels "Opt-Out-Cookie", die anonymen Datenerfassung durch Google Analytics deaktivieren. Bitte beachten Sie, dass wenn Sie das Ausschluss-Cookie löschen oder einen anderen Computer oder Webbrowser verwenden, den Ausschluss neu setzen müssen.
+            link.enable = Google Analytics aktivieren (Opt-In)
+            link.disable = Google Analytics deaktivieren (Opt-Out)
+        }
+    }
+
+    fr {
+        readmore = Continuer à lire
+        form.selectfile = Sélectionner le fichier
+        cookieconsent.common {
+            header = Ce site web utilise des cookies.
+            message = Les cookies sont utilisés pour vous permettre une utilisation optimale de notre site web.
+            dismiss = Je l'ai!
+            allow = Autoriser cookies
+            deny = Décliner
+            link = En savoir plus
+        }
+
+        googleanalyticsstatus {
+            title = Google Analytics Status
+            description = Vous pouvez vous opposer à la collecte anonyme de Google Analytics sur ce site Web pour votre navigateur en utilisant un "Opt-Out-Cookie". Veuillez noter que si vous supprimez le témoin d'exclusion ou si vous utilisez un ordinateur ou un navigateur Web différent, vous devrez réinitialiser l'exclusion.
+            link.enable = Activer Google Analytics (Opt-In)
+            link.disable = Désactiver Google Analytics (Opt-Out)
+        }
+    }
 }
 
 

@@ -2,10 +2,10 @@ tt_content.pp_modal_dialog >
 tt_content.pp_modal_dialog < tt_content.shortcut
 tt_content.pp_modal_dialog {
 
-   templateName = ModalDialog
+    templateName = ModalDialog
 
-   dataProcessing {
-      10 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor
-   }
+    dataProcessing {
+        10 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor
+    }
 
 }

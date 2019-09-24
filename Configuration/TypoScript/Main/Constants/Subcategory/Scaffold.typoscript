@@ -5,6 +5,6 @@
 #---------------------------------------------------------#
 
 pizpalue.scaffold {
-  # cat=6030/1030/0020; type=boolean; label=Show footer panel
-  showFooter = 1
+    # cat=6030/1030/0020; type=boolean; label=Show footer panel
+    showFooter = 1
 }

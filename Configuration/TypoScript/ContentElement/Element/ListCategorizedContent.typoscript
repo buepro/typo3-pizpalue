@@ -15,6 +15,7 @@ tt_content.pp_list_categorized_content {
                 data = leveluid : 0
                 override.data = field : pages
             }
+
             recursive = 99
             join.data = field:selected_categories
             join.wrap = sys_category_record_mm ON tt_content.uid = sys_category_record_mm.uid_foreign AND sys_category_record_mm.uid_local IN(|)
@@ -28,11 +29,13 @@ tt_content.pp_list_categorized_content {
                 }
             }
         }
+
         90 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
         90 {
             if {
                 isTrue.field = accessibility_bypass
             }
+
             table = tt_content
             pidInList = this
             orderBy = sorting
@@ -40,6 +43,7 @@ tt_content.pp_list_categorized_content {
             where {
                 dataWrap = colPos = {field:colPos} AND sorting > {field:sorting}
             }
+
             as = nextContentElement
         }
     }

@@ -5,9 +5,9 @@
 #---------------------------------------------------------#
 
 page {
-   # cat=6030/1410/010; type=string; label=Google meta tag site verification
-   meta.google-site-verification =
+    # cat=6030/1410/010; type=string; label=Google meta tag site verification
+    meta.google-site-verification =
 
-   # cat=6030/1410/020; type=string; label=Google tracking ID
-   tracking.google.trackingID =
+    # cat=6030/1410/020; type=string; label=Google tracking ID
+    tracking.google.trackingID =
 }

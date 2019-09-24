@@ -8,29 +8,29 @@
 
 plugin.bootstrap_package.settings.less {
 
-   brand-primary >
-   # cat=6030/1032/0010; type=string; label=Primary brand color
-   brand-primary = #4C86B2
+    brand-primary >
+    # cat=6030/1032/0010; type=string; label=Primary brand color
+    brand-primary = #4C86B2
 
-   brand-secondary >
-   # cat=6030/1032/0012; type=string; label=Secondary brand color
-   brand-secondary = #6DC0FE
+    brand-secondary >
+    # cat=6030/1032/0012; type=string; label=Secondary brand color
+    brand-secondary = #6DC0FE
 
-   brand-complementary >
-   # cat=6030/1032/0014; type=string; label=Complementary brand color
-   brand-complementary = #E8900B
+    brand-complementary >
+    # cat=6030/1032/0014; type=string; label=Complementary brand color
+    brand-complementary = #E8900B
 
-   body-bg >
-   # cat=6030/1032/0020; type=string; label=Page background color
-   body-bg = #fff
+    body-bg >
+    # cat=6030/1032/0020; type=string; label=Page background color
+    body-bg = #fff
 
-   navbar-default-bg >
-   # cat=6030/1032/0040; type=string; label=Header background color
-   navbar-default-bg = #e8e8e8
+    navbar-default-bg >
+    # cat=6030/1032/0040; type=string; label=Header background color
+    navbar-default-bg = #e8e8e8
 
-   footer-bg >
-   # cat=6030/1032/1080; type=string; label=Footer background color
-   footer-bg = #333
+    footer-bg >
+    # cat=6030/1032/1080; type=string; label=Footer background color
+    footer-bg = #333
 
 }
 
@@ -41,61 +41,61 @@ plugin.bootstrap_package.settings.less {
 
 plugin.bootstrap_package.settings.less {
 
-   navbar-default-link-color >
-   # cat=6040/1034/1020; type=string; label=Default link color
-   navbar-default-link-color = lighten(@navbar-default-link-active-color,15%)
+    navbar-default-link-color >
+    # cat=6040/1034/1020; type=string; label=Default link color
+    navbar-default-link-color = lighten(@navbar-default-link-active-color,15%)
 
-   navbar-default-link-hover-color >
-   # cat=6040/1034/1030; type=string; label=Default link hover color
-   navbar-default-link-hover-color = @navbar-default-link-active-color
+    navbar-default-link-hover-color >
+    # cat=6040/1034/1030; type=string; label=Default link hover color
+    navbar-default-link-hover-color = @navbar-default-link-active-color
 
-   navbar-default-link-hover-bg >
-   # cat=6040/1034/1040; type=string; label=Default link hover background
-   navbar-default-link-hover-bg = transparent
+    navbar-default-link-hover-bg >
+    # cat=6040/1034/1040; type=string; label=Default link hover background
+    navbar-default-link-hover-bg = transparent
 
-   navbar-default-link-active-color >
-   # cat=6040/1034/1050; type=string; label=Default link active color
-   navbar-default-link-active-color = #333
+    navbar-default-link-active-color >
+    # cat=6040/1034/1050; type=string; label=Default link active color
+    navbar-default-link-active-color = #333
 
-   navbar-default-link-active-bg >
-   # cat=6040/1034/1060; type=string; label=Default link active background
-   navbar-default-link-active-bg = transparent
+    navbar-default-link-active-bg >
+    # cat=6040/1034/1060; type=string; label=Default link active background
+    navbar-default-link-active-bg = transparent
 
-   navbar-default-link-disabled-color >
-   # cat=6040/1034/1070; type=string; label=Default link disabled color
-   navbar-default-link-disabled-color = #ccc
+    navbar-default-link-disabled-color >
+    # cat=6040/1034/1070; type=string; label=Default link disabled color
+    navbar-default-link-disabled-color = #ccc
 
-   navbar-default-link-disabled-bg >
-   # cat=6040/1034/1080; type=string; label=Default link disabled background
-   navbar-default-link-disabled-bg = transparent
+    navbar-default-link-disabled-bg >
+    # cat=6040/1034/1080; type=string; label=Default link disabled background
+    navbar-default-link-disabled-bg = transparent
 
-   footer-color >
-   # cat=6040/1035/1082; type=string; label=Footer text color
-   footer-color = contrast(@footer-bg)
+    footer-color >
+    # cat=6040/1035/1082; type=string; label=Footer text color
+    footer-color = contrast(@footer-bg)
 
-   footer-link-color >
-   # cat=6040/1035/1084; type=string; label=Footer link color
-   footer-link-color = mix(@brand-primary,@footer-color)
+    footer-link-color >
+    # cat=6040/1035/1084; type=string; label=Footer link color
+    footer-link-color = mix(@brand-primary,@footer-color)
 
-   footer-link-hover-color >
-   # cat=6040/1035/1086; type=string; label=Footer link hover color
-   footer-link-hover-color = lighten(@footer-link-color, 10%)
+    footer-link-hover-color >
+    # cat=6040/1035/1086; type=string; label=Footer link hover color
+    footer-link-hover-color = lighten(@footer-link-color, 10%)
 
-   footer-link-hover-decoration >
-   # cat=6040/1035/1088; type=string; label=Footer link hover decoration
-   footer-link-hover-decoration = underline
+    footer-link-hover-decoration >
+    # cat=6040/1035/1088; type=string; label=Footer link hover decoration
+    footer-link-hover-decoration = underline
 
-   pp-tab-v1-background >
-   # cat=6040/2910/1110; type=string; label=Register tabs bar background color
-   pp-tab-v1-background = @gray-lighter
+    pp-tab-v1-background >
+    # cat=6040/2910/1110; type=string; label=Register tabs bar background color
+    pp-tab-v1-background = @gray-lighter
 
-   pp-tab-v1-active-background >
-   # cat=6040/2910/1120; type=string; label=Active register background color
-   pp-tab-v1-active-background = #fff
+    pp-tab-v1-active-background >
+    # cat=6040/2910/1120; type=string; label=Active register background color
+    pp-tab-v1-active-background = #fff
 
-   pp-tab-v1-border-color >
-   # cat=6040/2910/1130; type=string; label=Register border color
-   pp-tab-v1-border-color = #ddd
+    pp-tab-v1-border-color >
+    # cat=6040/2910/1130; type=string; label=Register border color
+    pp-tab-v1-border-color = #ddd
 
 }
 
@@ -106,11 +106,11 @@ plugin.bootstrap_package.settings.less {
 
 plugin.bootstrap_package.settings.less {
 
-   pp-tab-v1-background-hover = mix(@pp-tab-v1-background,@pp-tab-v1-active-background)
-   nav-tabs-active-link-hover-color = contrast(@pp-tab-v1-background)
-   nav-tabs-active-link-hover-bg = @pp-tab-v1-active-background
-   nav-tabs-active-link-hover-border-color = @pp-tab-v1-border-color
-   nav-tabs-border-color = @pp-tab-v1-border-color
-   nav-tabs-link-hover-border-color = mix(@pp-tab-v1-background,@pp-tab-v1-border-color)
+    pp-tab-v1-background-hover = mix(@pp-tab-v1-background,@pp-tab-v1-active-background)
+    nav-tabs-active-link-hover-color = contrast(@pp-tab-v1-background)
+    nav-tabs-active-link-hover-bg = @pp-tab-v1-active-background
+    nav-tabs-active-link-hover-border-color = @pp-tab-v1-border-color
+    nav-tabs-border-color = @pp-tab-v1-border-color
+    nav-tabs-link-hover-border-color = mix(@pp-tab-v1-background,@pp-tab-v1-border-color)
 
 }

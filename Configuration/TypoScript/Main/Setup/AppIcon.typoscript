@@ -1,19 +1,19 @@
 ["{$page.favicon.file}" == "AppIcon"]
-   page {
-      shortcutIcon >
-      headerData.610 = TEXT
-      headerData.610.value (
+page {
+    shortcutIcon >
+    headerData.610 = TEXT
+    headerData.610.value (
 
 {$pizpalue.appIcon.headerData}
-      )
-   }
+    )
+}
 [END]
 
 [{$pizpalue.appIcon.insertMetaTags} == 1]
-   page.meta {
-      apple-mobile-web-app-title = {$pizpalue.appIcon.appName}
-      applicationName = {$pizpalue.appIcon.appName}
-      msapplication-config = {$pizpalue.appIcon.folder}/browserconfig.xml
-      theme-color = {$pizpalue.appIcon.androidThemeColor}
-   }
+page.meta {
+    apple-mobile-web-app-title = {$pizpalue.appIcon.appName}
+    applicationName = {$pizpalue.appIcon.appName}
+    msapplication-config = {$pizpalue.appIcon.folder}/browserconfig.xml
+    theme-color = {$pizpalue.appIcon.androidThemeColor}
+}
 [END]

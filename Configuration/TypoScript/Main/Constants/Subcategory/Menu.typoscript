@@ -5,37 +5,37 @@
 #---------------------------------------------------------#
 
 page {
-   theme {
-      navigation {
-         # cat=6030/1060/0100; type=options[Default=default, Default Transition=default-transition, Inverse=inverse, Inverse Transition=inverse-transition]; label=Navigation Style
-         style = default
+    theme {
+        navigation {
+            # cat=6030/1060/0100; type=options[Default=default, Default Transition=default-transition, Inverse=inverse, Inverse Transition=inverse-transition]; label=Navigation Style
+            style = default
 
-         # cat=6030/1060/0102; type=options[Default=, Fixed Top=top, Fixed Bottom=bottom]; label=Navigation Type
-         type =
-      }
+            # cat=6030/1060/0102; type=options[Default=, Fixed Top=top, Fixed Bottom=bottom]; label=Navigation Type
+            type =
+        }
 
-      breadcrumb {
-         # cat=6030/1060/0110; type=boolean; label=Breadcrumb: Enable to display the breadcrumb
-         enable = 1
-      }
+        breadcrumb {
+            # cat=6030/1060/0110; type=boolean; label=Breadcrumb: Enable to display the breadcrumb
+            enable = 1
+        }
 
-      meta {
-         # cat=6030/1060/0210; type=boolean; label=Show meta menu
-         enable = 0
-      }
+        meta {
+            # cat=6030/1060/0210; type=boolean; label=Show meta menu
+            enable = 0
+        }
 
-      language {
-         # cat=6030/1060/0310; type=boolean; label=Show language menu
-         enable = 1
-      }
-   }
+        language {
+            # cat=6030/1060/0310; type=boolean; label=Show language menu
+            enable = 1
+        }
+    }
 }
 
 pizpalue.menu {
-   fast {
-      # cat=6030/1060/0310; type=boolean; label=Show fast menu:Shows a fixed menu on the side
-      enable = 0
-   }
+    fast {
+        # cat=6030/1060/0310; type=boolean; label=Show fast menu:Shows a fixed menu on the side
+        enable = 0
+    }
 }
 
 
@@ -44,56 +44,59 @@ pizpalue.menu {
 #---------------------------------------------------------#
 
 page {
-   theme {
-      meta {
-         # cat=6060/1060/0120; type=string; label=Meta menu navigation value
-         navigationValue =
+    theme {
+        meta {
+            # cat=6060/1060/0120; type=string; label=Meta menu navigation value
+            navigationValue =
 
-         # cat=6060/1060/0130; type=options[List=list, Directory=directory]; label=Meta menu navigation type
-         navigationType = directory
+            # cat=6060/1060/0130; type=options[List=list, Directory=directory]; label=Meta menu navigation type
+            navigationType = directory
 
-         # cat=6060/1060/0140; type=boolean; label=Meta Navigation include items not in menu
-         includeNotInMenu = 1
-      }
+            # cat=6060/1060/0140; type=boolean; label=Meta Navigation include items not in menu
+            includeNotInMenu = 1
+        }
 
-      language {
-         # cat=6060/1060/0220; type=string; label=Language Navigation Values: Comma separated list of language uids or set to 'auto' to load all enabled system languages
-         languageValue = auto
-      }
-   }
+        language {
+            # cat=6060/1060/0220; type=string; label=Language Navigation Values: Comma separated list of language uids or set to 'auto' to load all enabled system languages
+            languageValue = auto
+        }
+    }
 }
 
 pizpalue.menu {
-   language {
-      # cat=6060/1060/0260; type=boolean; label=Use extension sr_language_menu
-      useSrLanguageMenu = 0
-   }
-   fast {
-      items {
-         first {
-            # cat=6060/1060/0310; type=string; label=Fastmenu first item icon class
-            iconClass = ppicon ppicon-log-in
-            # cat=6060/1060/0312; type=string; label=Fastmenu first item content uid:Uid from content element being rendered. Leave empty if not used.
-            contentUid =
-            # cat=6060/1060/0314; type=string; label=Fastmenu first item page uid:Uid from page linked to. Leave empty if not used.
-            pageUid =
-         }
-         second {
-            # cat=6060/1060/0320; type=string; label=Fastmenu second item icon class
-            iconClass = ppicon ppicon-call
-            # cat=6060/1060/0322; type=string; label=Fastmenu second item content uid:Uid from content element being rendered. Leave empty if not used.
-            contentUid =
-            # cat=6060/1060/0324; type=string; label=Fastmenu second item page uid:Uid from page linked to. Leave empty if not used.
-            pageUid =
-         }
-         third {
-            # cat=6060/1060/0330; type=string; label=Fastmenu third item icon class
-            iconClass = ppicon ppicon-location
-            # cat=6060/1060/0332; type=string; label=Fastmenu third item content uid:Uid from content element being rendered. Leave empty if not used.
-            contentUid =
-            # cat=6060/1060/0334; type=string; label=Fastmenu third item page uid:Uid from page linked to. Leave empty if not used.
-            pageUid =
-         }
-      }
-   }
+    language {
+        # cat=6060/1060/0260; type=boolean; label=Use extension sr_language_menu
+        useSrLanguageMenu = 0
+    }
+
+    fast {
+        items {
+            first {
+                # cat=6060/1060/0310; type=string; label=Fastmenu first item icon class
+                iconClass = ppicon ppicon-log-in
+                # cat=6060/1060/0312; type=string; label=Fastmenu first item content uid:Uid from content element being rendered. Leave empty if not used.
+                contentUid =
+                # cat=6060/1060/0314; type=string; label=Fastmenu first item page uid:Uid from page linked to. Leave empty if not used.
+                pageUid =
+            }
+
+            second {
+                # cat=6060/1060/0320; type=string; label=Fastmenu second item icon class
+                iconClass = ppicon ppicon-call
+                # cat=6060/1060/0322; type=string; label=Fastmenu second item content uid:Uid from content element being rendered. Leave empty if not used.
+                contentUid =
+                # cat=6060/1060/0324; type=string; label=Fastmenu second item page uid:Uid from page linked to. Leave empty if not used.
+                pageUid =
+            }
+
+            third {
+                # cat=6060/1060/0330; type=string; label=Fastmenu third item icon class
+                iconClass = ppicon ppicon-location
+                # cat=6060/1060/0332; type=string; label=Fastmenu third item content uid:Uid from content element being rendered. Leave empty if not used.
+                contentUid =
+                # cat=6060/1060/0334; type=string; label=Fastmenu third item page uid:Uid from page linked to. Leave empty if not used.
+                pageUid =
+            }
+        }
+    }
 }

@@ -1,14 +1,14 @@
 constants {
-   ppCustomerCommonName = {$pizpalue.customer.commonName}
-   ppCustomerCommonEmail = {$pizpalue.customer.commonEmail}
-   ppCustomerCommonPhone = {$pizpalue.customer.commonPhone}
-   ppCustomerContactName = {$pizpalue.customer.commonName}
-   ppCustomerContactAddress = {$pizpalue.customer.contactAddress}
-   ppCustomerContactAddressAddition = {$pizpalue.customer.contactAddressAddition}
-   ppCustomerContactRegion = {$pizpalue.customer.contactRegion}
-   ppCustomerContactZip = {$pizpalue.customer.contactZip}
-   ppCustomerContactCity = {$pizpalue.customer.contactCity}
-   ppCustomerContactCountry = {$pizpalue.customer.contactCountry}
-   ppCustomerContactEmail =  {$pizpalue.customer.contactEmail}
-   ppCustomerContactPhone =  {$pizpalue.customer.contactPhone}
+    ppCustomerCommonName = {$pizpalue.customer.commonName}
+    ppCustomerCommonEmail = {$pizpalue.customer.commonEmail}
+    ppCustomerCommonPhone = {$pizpalue.customer.commonPhone}
+    ppCustomerContactName = {$pizpalue.customer.commonName}
+    ppCustomerContactAddress = {$pizpalue.customer.contactAddress}
+    ppCustomerContactAddressAddition = {$pizpalue.customer.contactAddressAddition}
+    ppCustomerContactRegion = {$pizpalue.customer.contactRegion}
+    ppCustomerContactZip = {$pizpalue.customer.contactZip}
+    ppCustomerContactCity = {$pizpalue.customer.contactCity}
+    ppCustomerContactCountry = {$pizpalue.customer.contactCountry}
+    ppCustomerContactEmail = {$pizpalue.customer.contactEmail}
+    ppCustomerContactPhone = {$pizpalue.customer.contactPhone}
 }

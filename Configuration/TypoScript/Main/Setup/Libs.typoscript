@@ -78,6 +78,7 @@ lib.contentElement {
                     width = 500
                 }
             }
+
             # DEPRECIATED as of 23.09.2019
             noFrameVariants < .pageVariants
         }

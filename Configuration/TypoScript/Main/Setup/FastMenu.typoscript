@@ -1,24 +1,26 @@
 page {
-   includeCSS {
-      fastMenu = EXT:pizpalue/Resources/Public/Scss/fastmenu.scss
-   }
-   includeJSFooterlibs {
-      fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.fastmenu.min.js
-   }
-   jsFooterInline.1030 = TEXT
-   jsFooterInline.1030.value (
+    includeCSS {
+        fastMenu = EXT:pizpalue/Resources/Public/Scss/fastmenu.scss
+    }
+
+    includeJSFooterlibs {
+        fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.fastmenu.min.js
+    }
+
+    jsFooterInline.1030 = TEXT
+    jsFooterInline.1030.value (
 
 $('.pp-fastmenu').fastMenu({
    animationDuration: 700,
    iconFontSize: '{$plugin.bootstrap_package.settings.scss.pp-fastmenu-icon-size}'
 });
-)
+    )
 }
 
 [{$pizpalue.agency.siteMode} == 1]
-   page {
-      includeJSFooterlibs {
-         fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.fastmenu.js
-      }
-   }
+page {
+    includeJSFooterlibs {
+        fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.fastmenu.js
+    }
+}
 [global]
