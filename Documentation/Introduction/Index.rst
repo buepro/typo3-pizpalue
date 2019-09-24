@@ -12,7 +12,7 @@ Introduction
 What does it do?
 ================
 
-This extension installs a bootstrap based web site with news management.
+This extension installs a bootstrap based web site with news, address and time management.
 It is tailored for the Swiss market featuring German as default language and
 additional translations to French and English.
 
@@ -38,8 +38,6 @@ web site.
    - Boris Schauer, Oliver Oertel for slickcarousel
 
    - Sven Wappler for ws_flexslider
-
-   - Robert Breithuber for brt_videourlreplace
 
 
 .. _screenshots:

@@ -9,7 +9,11 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title'            => 'Piz Palü Distribution',
-    'description'      => 'This distribution is based on the bootstrap package from Benjamin Kott. To provide further flexibility in arranging content the extensions gridelements, news, slickcarousel as well as ws_flexslider are incorporated. The distribution tailors Swiss market featuring German as default language and additional translations to French and English.',
+    'description'      => 'This extension builds upon the bootstrap_package from Benjamin Kott. It installs '
+                            . 'gridelements for better content structuring and some galleries. Indexed_search, news, '
+                            . 'tt_address and timelog are supported and just need to be installed. The distribution '
+                            . 'tailors Swiss market featuring German as default language and additional translations '
+                            . 'to French and English.',
     'category'         => 'distribution',
     'version'          => '11.0.0-dev',
     'state'            => 'stable',
