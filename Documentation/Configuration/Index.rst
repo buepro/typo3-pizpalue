@@ -93,7 +93,7 @@ are available:
 ============================ =========================================================
 Category                     Description
 ============================ =========================================================
-PIZPALUE: ADMIN              Everything related to the site administration
+PIZPALUE: ADMINISTRATION     Everything related to the site administration
 PIZPALUE: CUSTOMER BASE      Main customer related parameters
 PIZPALUE: CUSTOMER STYLE     More detailed customer style related parameters
 PIZPALUE: CUSTOMER SOCIAL    More detailed customer social network related parameters
@@ -122,35 +122,8 @@ Prerequisites
 #. Review seo tags like title-tag and description meta-tag
 
 
-TYPO3 version 8LTS
-------------------
-
-You might follow these steps to setup seo features:
-
-#. Consider installing the extensions realurl, dd_googlesitemap and url_forwarding
-#. Verify 404-handling. You might need to adjust configurations by help of the install tool
-   (e.g. pageNotFound_handling).
-#. Review sitemap by adding `?eID=dd_googlesitemap <https://www.pizpalue.buechler.pro/?eID=dd_googlesitemap>`__ to
-   the domain
-
-
-.. _config_404:
-
-404-Handling
-~~~~~~~~~~~~
-
-The 404-handling can be configured in the install tool. An example configuration might look as following:
-
-========================================== ===================================================
-Parameter                                  Value
-========================================== ===================================================
-[FE][pageNotFound_handling]                REDIRECT:https://www.pizpalue.buechler.pro/404/
-[FE][pageNotFound_handling_statheader]     HTTP/1.0 404 Not Found
-========================================== ===================================================
-
-
-TYPO3 version 9LTS
-------------------
+TYPO3
+-----
 
 You might follow these steps to setup seo features:
 
