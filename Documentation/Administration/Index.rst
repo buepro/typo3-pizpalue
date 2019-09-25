@@ -47,10 +47,10 @@ With TYPO3
 
 Follow these steps to install supported extension with the distribution:
 
-1. Go to the extension manager
-1. Install ``supported extensions (news, tt_address, timelog)`` as needed
-1. Select 'Get preconfigured distribution'
-1. Search for ``Piz Palü Distribution`` and install it
+#. Go to the extension manager
+#. Install ``supported extensions (news, tt_address, timelog)`` as needed
+#. Select 'Get preconfigured distribution'
+#. Search for ``Piz Palü Distribution`` and install it
 
 .. _admin_installation_with_composer:
 
