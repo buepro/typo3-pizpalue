@@ -15,9 +15,9 @@ $EM_CONF[$_EXTKEY] = [
                             . 'tailors Swiss market featuring German as default language and additional translations '
                             . 'to French and English.',
     'category'         => 'distribution',
-    'version'          => '11.0.0-dev',
+    'version'          => '11.0.0',
     'state'            => 'stable',
-    'clearcacheonload' => 1,
+    'clearCacheOnLoad' => 1,
     'author'           => 'Roman Büchler',
     'author_email'     => 'rb@buechler.pro',
     'constraints'      => [
