@@ -51,15 +51,48 @@ The extension ``user_customer`` uses SCSS variables from ``pizpalue`` that were 
 
 .. code-block:: css
 
-      @import "../../../../pizpalue/Resources/Public/Scss/Theme/variables";
+   @import "../../../../pizpalue/Resources/Public/Scss/Theme/variables";
 
 are now available under
 
 .. code-block:: css
 
-      @import "../../../../pizpalue/Resources/Public/Scss/Theme/BootstrapPackage/variables";
+   @import "../../../../pizpalue/Resources/Public/Scss/Theme/BootstrapPackage/variables";
 
 Corrective action
 ~~~~~~~~~~~~~~~~~
 
 Check if the above mentioned variables are used in your installation and change the path accordingly.
+
+In case the extension ``user_customer`` is in use check the file ``user_customer/Resources/Public/Scss/custom.scss`` for
+any occurrence of
+
+.. code-block:: css
+
+   @import "../../../../pizpalue/Resources/Public/Scss/Theme/variables";
+
+and exchange it with
+
+.. code-block:: css
+
+   @import "../../../../pizpalue/Resources/Public/Scss/Theme/BootstrapPackage/variables";
+
+Hints
+=====
+
+Social networks
+---------------
+
+``VK`` abd ``rss`` are now available for configuration. These channels might be disabled in
+``Configuration/TypoScript/constants.typoscript``:
+
+.. code-block:: typoscript
+
+   page.theme {
+     socialmedia {
+       channels {
+         vk.url =
+         rss.url =
+       }
+     }
+   }
