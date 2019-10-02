@@ -8,8 +8,8 @@
 // Navbar
 //
 $navbar-height: 100px !default;
-$navbar-height-sm: 0.7 * $navbar-height;
-$navbar-height-lg: 1.3 * $navbar-height;
+$navbar-height-sm: 0.7 * $navbar-height !default;
+$navbar-height-lg: 1.3 * $navbar-height !default;
 $navbar-heights: (
   xs: $navbar-height-sm,
   sm: $navbar-height-sm,
