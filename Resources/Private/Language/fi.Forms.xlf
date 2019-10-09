@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+    <file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2019-10-09T09:11:39Z"
           product-name="pizpalue">
         <header/>
         <body>
 
             <trans-unit id="idGeneralContactForm.element.idName.properties.label">
                 <source>Name</source>
-                <target state="translated">Name</target>
+                <target state="translated">Nimi</target>
             </trans-unit>
 
             <trans-unit id="idGeneralContactForm.element.idEmail.properties.label">
                 <source>Email</source>
-                <target state="translated">Email</target>
+                <target state="translated">Sähköpostiosoite</target>
             </trans-unit>
 
             <trans-unit id="idGeneralContactForm.element.idTelephone.properties.label">
                 <source>Telephone</source>
-                <target state="translated">Telefon</target>
+                <target state="translated">Matkapuhelin</target>
             </trans-unit>
 
             <trans-unit id="idGeneralContactForm.element.idSubject.properties.label">
                 <source>Subject</source>
-                <target state="translated">Betreff</target>
+                <target state="translated">Aihe</target>
             </trans-unit>
 
             <trans-unit id="idGeneralContactForm.element.idMessage.properties.label">
                 <source>Message</source>
-                <target state="translated">Mitteilung</target>
+                <target state="translated">Viesti</target>
             </trans-unit>
 
             <trans-unit id="idGeneralContactForm.element.idFileupload.properties.label">
                 <source>PDF-File</source>
-                <target state="translated">PDF-Datei</target>
+                <target state="translated">PDF-Tiedosto</target>
             </trans-unit>
 
             <trans-unit id="idGeneralContactForm.element.idImageupload.properties.label">
                 <source>Image</source>
-                <target state="translated">Bild</target>
+                <target state="translated">Kuva</target>
             </trans-unit>
 
             <trans-unit id="idGeneralContactForm.element.idDataprotectionMultiCheckbox.properties.label">
                 <source>Data protection notice</source>
-                <target state="translated">Datenschutzhinweis</target>
+                <target state="translated">Tietosuojailmoitus</target>
             </trans-unit>
 
             <trans-unit id="element.idGeneralContactForm.renderingOptions.submitButtonLabel">
                 <source>Send</source>
-                <target state="translated">Senden</target>
+                <target state="translated">Lähetä</target>
             </trans-unit>
 
             <trans-unit id="element.idGeneralContactForm.label">
                 <source>General contact form</source>
-                <target state="translated">Allgemeines Kontaktformular</target>
+                <target state="translated">Yleinen yhteys tieto lomake</target>
             </trans-unit>
 
             <trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label">
                 <source>Email to system</source>
-                <target state="translated">Email an System</target>
+                <target state="translated">Sähköpostijärjestelmä</target>
             </trans-unit>
 
             <trans-unit id="formEditor.elements.Form.finisher.EmailToSystem.editor.recipientAddress.label">
                 <source>Systems address</source>
-                <target state="translated">Adresse des Systemes</target>
+                <target state="translated">Järjestelmät osoite</target>
             </trans-unit>
 
             <trans-unit id="formEditor.elements.Form.finisher.EmailToSystem.editor.recipientName.label">
                 <source>Systems name</source>
-                <target state="translated">Name des Systemes</target>
+                <target state="translated">Järjestelmien nimi</target>
             </trans-unit>
 
             <trans-unit id="tt_content.finishersDefinition.EmailToSystem.recipientAddress.label">
                 <source>Email address of the systems</source>
-                <target state="translated">Emailadresse des Systemes</target>
+                <target state="translated">Järjestelmien sähköpostiosoite</target>
             </trans-unit>
 
             <trans-unit id="tt_content.finishersDefinition.EmailToSystem.recipientName.label">
                 <source>Human-readable name of the system</source>
-                <target state="translated">Name des Systemes</target>
+                <target state="translated">Järjestelmän ihmisen luettavissa oleva nimi</target>
             </trans-unit>
 
         </body>
