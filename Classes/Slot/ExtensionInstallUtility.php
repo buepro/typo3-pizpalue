@@ -19,6 +19,8 @@ class ExtensionInstallUtility
 
     /**
      * Copies the site configuration delivered with the extension to the site configuration directory.
+     *
+     * @return bool false if default site config couldn't be copied
      */
     public static function copyDefaultSiteConfig()
     {
@@ -28,7 +30,11 @@ class ExtensionInstallUtility
                 'typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles/sites',
                 $destination
             );
+            if (!file_exists($destination)) {
+                return false;
+            }
         }
+        return true;
     }
 
     /**
@@ -36,6 +42,7 @@ class ExtensionInstallUtility
      * the folder EXT/pizpalue/Initialisation/Extensions/
      *
      * @return bool true if extension user_customer could be installed
+     * @throws \TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException
      */
     private function installCustomerExtension()
     {
@@ -74,6 +81,7 @@ class ExtensionInstallUtility
                 return false;
             }
         }
+        return true;
     }
 
     /**
@@ -81,6 +89,9 @@ class ExtensionInstallUtility
      * site configuration.
      *
      * @param $extensionKey
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
+     * @throws \TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException
      */
     public function afterExtensionInstall($extensionKey)
     {
@@ -92,7 +103,7 @@ class ExtensionInstallUtility
             $this->installCustomerExtension();
         }
         if ($extensionConfiguration->get('pizpalue', 'addSiteConfiguration')) {
-            $this->copyDefaultSiteConfig();
+            self::copyDefaultSiteConfig();
         }
         $this->copyBootstrapPackageTranslations();
     }
