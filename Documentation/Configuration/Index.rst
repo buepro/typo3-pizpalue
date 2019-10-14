@@ -48,11 +48,8 @@ Site configuration
 With TYPO3 V9 site configuration has been introduced.
 
 The distribution ships with a default site configuration file located in
-"typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles/sites". In case
-the folder "typo3conf/sites/pizpalue" doesn't the default site configuration file will be added to that directory
-upon installation.
-
-Copying of the default site configuration might be disabled in the extension configuration found in the settings module.
+`typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles/sites`. This default configuration won't be
+installed automatically.
 
 .. note::
    You might need to adjust the settings for the "Error Handling" as well as for the extension "news" by editing

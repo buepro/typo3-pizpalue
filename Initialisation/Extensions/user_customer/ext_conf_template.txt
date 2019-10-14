@@ -2,5 +2,8 @@
 # Installation
 #=========================================================#
 
-# cat=Installation; type=boolean; label=Add additional configuration file (typo3conf/AdditionalConfiguration.php)
+# cat=Installation; type=boolean; label=LLL:EXT:user_customer/Resources/Private/Language/Backend.xlf:ext_conf.addSiteConfiguration
+addSiteConfiguration = 1
+
+# cat=Installation; type=boolean; label=LLL:EXT:user_customer/Resources/Private/Language/Backend.xlf:ext_conf.addAdditionalConfiguration
 addAdditionalConfiguration = 1

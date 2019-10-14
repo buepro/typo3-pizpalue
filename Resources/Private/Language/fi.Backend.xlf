@@ -109,8 +109,6 @@
 
             <trans-unit id="ext_conf.installCustomerExtension" approved="yes">
                 <source>Install pizpalue with customer extension</source> <target state="translated">Asenna pizpalue asiakaslaajennuksen kanssa</target></trans-unit>
-            <trans-unit id="ext_conf.addSiteConfiguration" approved="yes">
-                <source>Add default site configuration</source> <target state="translated">Lisää oletussivun kokoonpano</target></trans-unit>
         </body>
     </file>
 </xliff>

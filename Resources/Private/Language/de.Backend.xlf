@@ -201,10 +201,6 @@
                 <source>Install pizpalue with customer extension</source>
                 <target state="translated">Pizpalue mit Kundenerweiterung installieren</target>
             </trans-unit>
-            <trans-unit id="ext_conf.addSiteConfiguration">
-                <source>Add default site configuration</source>
-                <target state="translated">Standard Site-Konfiguration hinzufügen</target>
-            </trans-unit>
         </body>
     </file>
 </xliff>

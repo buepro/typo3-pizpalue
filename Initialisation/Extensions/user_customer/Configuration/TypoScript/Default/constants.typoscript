@@ -211,6 +211,8 @@ page.theme {
             #youtube.url = https://www.youtube.com/user/typo3
             #vimeo.url =
             #pinterest.url = https://www.pinterest.com/
+            #vk.url = https://vk.com/
+            #rss.url = https://www.srf.ch/allgemeines/rss-feeds-von-srf
 
             #:::::::::::::::::::::::
             #: To add a new social network the below TS is needed and the icon font needs to be modified

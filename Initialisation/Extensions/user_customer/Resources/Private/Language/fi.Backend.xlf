@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2019-10-14T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="ext_conf.addSiteConfiguration" approved="yes">
+				<source>Add default site configuration</source>
+				<target state="translated">Lisää oletussivun kokoonpano</target>
+			</trans-unit>
+			<trans-unit id="ext_conf.addAdditionalConfiguration">
+				<source>Add additional configuration file (typo3conf/AdditionalConfiguration.php)</source>
+				<target state="translated">Lisää määritys tiedosto (typo3conf/AdditionalConfiguration. php)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

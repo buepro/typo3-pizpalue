@@ -18,26 +18,6 @@ class ExtensionInstallUtility
 {
 
     /**
-     * Copies the site configuration delivered with the extension to the site configuration directory.
-     *
-     * @return bool false if default site config couldn't be copied
-     */
-    public static function copyDefaultSiteConfig()
-    {
-        $destination = Environment::getPublicPath() . '/typo3conf/sites/pizpalue';
-        if (!file_exists($destination)) {
-            GeneralUtility::copyDirectory(
-                'typo3conf/ext/pizpalue/Resources/Private/FolderStructureTemplateFiles/sites',
-                $destination
-            );
-            if (!file_exists($destination)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    /**
      * Installs the extension user_customer. In case it isn't available under typo3conf/ext it will be copied from
      * the folder EXT/pizpalue/Initialisation/Extensions/
      *
@@ -101,9 +81,6 @@ class ExtensionInstallUtility
         $extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
         if ($extensionConfiguration->get('pizpalue', 'installCustomerExtension')) {
             $this->installCustomerExtension();
-        }
-        if ($extensionConfiguration->get('pizpalue', 'addSiteConfiguration')) {
-            self::copyDefaultSiteConfig();
         }
         $this->copyBootstrapPackageTranslations();
     }
