@@ -14,7 +14,7 @@ What does it do?
 
 This extension installs a bootstrap based web site with news, address and time management.
 It is tailored for the Swiss market featuring German as default language and
-additional translations to French and English.
+additional translations to French, English and Finnish.
 
 Selected third party extensions further improve the user experience. As a result
 the content might be flexibly arranged in columns, registers or accordions where images

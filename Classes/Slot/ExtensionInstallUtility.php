@@ -59,6 +59,24 @@ class ExtensionInstallUtility
     }
 
     /**
+     * Copies the translation files for the bootstrap_package to the typo3conf/l10n directory.
+     *
+     * @return bool false if translation files couldn't be copied
+     */
+    private function copyBootstrapPackageTranslations()
+    {
+        $source = Environment::getPublicPath() . '/typo3conf/ext/pizpalue/Resources/Private/'
+            . 'FolderStructureTemplateFiles/l10n/fi/bootstrap_package';
+        $destination = Environment::getPublicPath() . '/typo3conf/l10n/fi/bootstrap_package';
+        if (!file_exists($destination)) {
+            GeneralUtility::copyDirectory($source, $destination);
+            if (!file_exists($destination)) {
+                return false;
+            }
+        }
+    }
+
+    /**
      * Handles the installation from the extension user_customer as well as the copying from a default
      * site configuration.
      *
@@ -76,5 +94,6 @@ class ExtensionInstallUtility
         if ($extensionConfiguration->get('pizpalue', 'addSiteConfiguration')) {
             $this->copyDefaultSiteConfig();
         }
+        $this->copyBootstrapPackageTranslations();
     }
 }

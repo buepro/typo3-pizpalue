@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2019-10-13T09:11:39Z" product-name="pizpalue">
+        <header/>
+        <body>
+            <trans-unit id="close" approved="yes">
+                <source>Close</source> <target state="translated">Sulje</target></trans-unit>
+
+            <trans-unit id="ppCeFrame1" approved="yes">
+                <source>Custom frame 1</source> <target state="translated">Oma kehys 1</target></trans-unit>
+            <trans-unit id="ppCeFrame2" approved="yes">
+                <source>Custom frame 2</source> <target state="translated">Oma kehys 2</target></trans-unit>
+            <trans-unit id="ppCeFrame3" approved="yes">
+                <source>Custom frame 3</source> <target state="translated">Oma kehys 3</target></trans-unit>
+            <trans-unit id="ppCeFrame4" approved="yes">
+                <source>Custom frame 4</source> <target state="translated">Oma kehys 4</target></trans-unit>
+
+            <trans-unit id="ppCefAnimation1" approved="yes">
+                <source>Custom animation 1 (depreciated)</source> <target state="translated">Oma animaatio 1 (poistettu)</target></trans-unit>
+            <trans-unit id="ppCefAnimation2" approved="yes">
+                <source>Custom animation 2 (depreciated)</source> <target state="translated">Oma animaatio 2 (poistettu)</target></trans-unit>
+            <trans-unit id="ppCefAnimation3" approved="yes">
+                <source>Custom animation 3 (depreciated)</source> <target state="translated">Oma animaatio 3 (poistettu)</target></trans-unit>
+
+            <trans-unit id="ppCefScrollAnimation1" approved="yes">
+                <source>Custom scroll animation 1 (depreciated)</source> <target state="translated">Oma Selausanimaatio 1 (poistettu)</target></trans-unit>
+            <trans-unit id="ppCefScrollAnimation2" approved="yes">
+                <source>Custom scroll animation 2 (depreciated)</source> <target state="translated">Oma selausanimaatio 2 (poistettu)</target></trans-unit>
+            <trans-unit id="ppCefScrollAnimation3" approved="yes">
+                <source>Custom scroll animation 3 (depreciated)</source> <target state="translated">Oma selausanimaatio 3 (poistettu)</target></trans-unit>
+
+            <trans-unit id="cookieconsent.common.header" approved="yes">
+                <source>Cookies used on the website!</source> <target state="translated">Evästeiden käyttö nettisivuilla!</target></trans-unit>
+            <trans-unit id="cookieconsent.common.message" approved="yes">
+                <source>This website uses cookies to ensure you get the best experience on our website.</source> <target state="translated">Käytämme evästeitä varmistaaksemme sinulle parhaan kokemuksen sivuillamme.</target></trans-unit>
+            <trans-unit id="cookieconsent.common.dismiss" approved="yes">
+                <source>Got it!</source> <target state="translated">Ymmärsin!</target></trans-unit>
+            <trans-unit id="cookieconsent.common.allow" approved="yes">
+                <source>Allow cookies</source> <target state="translated">Salli evästeet</target></trans-unit>
+            <trans-unit id="cookieconsent.common.deny" approved="yes">
+                <source>Decline</source> <target state="translated">Hylkää</target></trans-unit>
+            <trans-unit id="cookieconsent.common.link" approved="yes">
+                <source>Learn more</source> <target state="translated">Lue lisää</target></trans-unit>
+
+            <trans-unit id="googleanalyticsstatus.title" approved="yes">
+                <source>Google Analytics Status</source> <target state="translated">Google analytiikan tila</target></trans-unit>
+            <trans-unit id="googleanalyticsstatus.description" approved="yes">
+                <source>Here you can object to the anonymous collection by Google Analytics on this website for your browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a different computer or web browser, you will need to re-set the exclusion.</source> <target state="translated">Täällä voit kieltää selaimesi Google Analyticsin tuntematonta kokoelmaa tällä verkkosivustollasi käyttämällä poissulkemisevästettä. Huomaa, että jos poistat poissulkemisevästeen tai käytät toista tietokonetta tai verkkoselainta, sinun on asetettava poissulkeminen uudelleen.</target></trans-unit>
+            <trans-unit id="googleanalyticsstatus.link.enable" approved="yes">
+                <source>Enable Google Analytics (Opt-In)</source> <target state="translated">Salli Google analytiikka (Sisäänkirjautuminen)</target></trans-unit>
+            <trans-unit id="googleanalyticsstatus.link.disable" approved="yes">
+                <source>Deactivate Google Analytics (Opt-Out)</source> <target state="translated">Poista Google analytiikka (Poissulkeminen)</target></trans-unit>
+        </body>
+    </file>
+</xliff>

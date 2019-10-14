@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2019-10-13T09:11:39Z" product-name="pizpalue">
+        <header/>
+        <body>
+            <trans-unit id="tx_pizpalue_ttc.attributes" approved="yes">
+                <source>Attributes</source> <target state="translated">Ominaisuudet</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes" approved="yes">
+                <source>Additional classes</source> <target state="translated">Lisäluokat</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.style" approved="yes">
+                <source>Inline style</source> <target state="translated">Määritetty tyyli</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.additionalAttributes" approved="yes">
+                <source>Additional attributes</source> <target state="translated">Lisäominaisuudet</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.background" approved="yes">
+                <source>Background</source> <target state="translated">Tausta</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.bgmedia" approved="yes">
+                <source>Background image (inline)</source> <target state="translated">Taustakuva (määritetty)</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.behaviour" approved="yes">
+                <source>Behaviour</source> <target state="translated">Toiminta</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation" approved="yes">
+                <source>Animation</source> <target state="translated">Animaatio</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animationNone" approved="yes">
+                <source>No animation</source> <target state="translated">Ei animointia</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation1" approved="yes">
+                <source>Animation 1</source> <target state="translated">Animaatio 1</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation2" approved="yes">
+                <source>Animation 2</source> <target state="translated">Animaatio 2</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation3" approved="yes">
+                <source>Animation 3</source> <target state="translated">Animaatio 3</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.animation4" approved="yes">
+                <source>Animation 4</source> <target state="translated">Animaatio 4</target></trans-unit>
+
+            <trans-unit id="tx_pizpalue_ttc.image_variants" approved="yes">
+                <source>Image variants</source> <target state="translated">Kuvan muodot</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.image_variants.content" approved="yes">
+                <source>Default (content width)</source> <target state="translated">Oletus (sisällön leveys)</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.image_variants.page" approved="yes">
+                <source>Full page width</source> <target state="translated">Koko sivun leveys</target></trans-unit>
+
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-parent-height" approved="yes">
+                <source>Parent height</source> <target state="translated">Päävalikon korkeus</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-row-height" approved="yes">
+                <source>Row height</source> <target state="translated">Rivin korkeus</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-row-child-height" approved="yes">
+                <source>Row children height</source> <target state="translated">Rivin alakorkeus</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-primary" approved="yes">
+                <source>Background with primary color</source> <target state="translated">Tausta päävärillä</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-secondary" approved="yes">
+                <source>Background with secondary color</source> <target state="translated">Tausta toissijaisella värillä</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-complementary" approved="yes">
+                <source>Background with complementary color</source> <target state="translated">Tausta vastavärillä</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-light" approved="yes">
+                <source>Background with light color</source> <target state="translated">Tausta vaalea</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-dark" approved="yes">
+                <source>Background with dark color</source> <target state="translated">Tausta tumma</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-centercover" approved="yes">
+                <source>Background centered, cover</source> <target state="translated">Tausta keskitetty, peittävä</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-fixed" approved="yes">
+                <source>Background fix</source> <target state="translated">Tausta asetettu</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-ce-overlaycard" approved="yes">
+                <source>Overlay card (use with text &amp; image)</source> <target state="translated">Peitä kortti (käytä takstiä ja kuvaa)</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-margin" approved="yes">
+                <source>Inner element with margin</source> <target state="translated">Sisempi elementti marginaalilla</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-padding" approved="yes">
+                <source>Inner element with padding</source> <target state="translated">Sisempi elementti täytöllä</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bgwhite70" approved="yes">
+                <source>Inner element with white background, 70% opacity</source> <target state="translated">Sisempi elementti valkoisella taustalla, 70% läpinäkyvyys</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bggrey70" approved="yes">
+                <source>Inner element with grey background, 70% opacity</source> <target state="translated">Sisempi elementti harmaalla taustalla, 70% läpinäkyvyys</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bgblack70" approved="yes">
+                <source>Inner element with black background, 70% opacity</source> <target state="translated">Sisempi elementti mustalla taustalla, 70% läpinäkyvyys</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left" approved="yes">
+                <source>Gallery item left</source> <target state="translated">Galleria kohde vasemmalla</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-right" approved="yes">
+                <source>Gallery item right</source> <target state="translated">Galleria kohde oikealla</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-join" approved="yes">
+                <source>Gallery item join</source> <target state="translated">Galleria kohde yhdistämällä</target></trans-unit>
+            <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-shadow" approved="yes">
+                <source>Gallery item shadow</source> <target state="translated">Galleria kohde varjolla</target></trans-unit>
+
+            <trans-unit id="tca.modal_dialog.header" approved="yes">
+                <source>Button text</source> <target state="translated">Painikkeen teksti</target></trans-unit>
+            <trans-unit id="tca.modal_dialog.options" approved="yes">
+                <source>Button options</source> <target state="translated">Painikevalinnat</target></trans-unit>
+            <trans-unit id="tca.list_categorized_content.options" approved="yes">
+                <source>List options</source> <target state="translated">Luettelovalinnat</target></trans-unit>
+
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,659 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2019-10-13T09:11:39Z" product-name="bootstrap_package">
+        <header/>
+        <body>
+
+            <trans-unit id="theme_name">
+                <source>Bootstrap Package</source> <target>Bootstrap Package</target></trans-unit>
+
+            <trans-unit id="pages.nav_icon" approved="yes">
+                <source>Navigation Icon</source> <target state="translated">Navigointi Kuvake</target></trans-unit>
+            <trans-unit id="pages.thumbnail" approved="yes">
+                <source>Thumbnail</source> <target state="translated">Esikatselukuva</target></trans-unit>
+
+            <trans-unit id="backend_layout.default" approved="yes">
+                <source>Default</source> <target state="translated">Oletus</target></trans-unit>
+            <trans-unit id="backend_layout.simple" approved="yes">
+                <source>Simple</source> <target state="translated">Yksinkertainen</target></trans-unit>
+            <trans-unit id="backend_layout.2_columns" approved="yes">
+                <source>2 Columns</source> <target state="translated">2 palstaa</target></trans-unit>
+            <trans-unit id="backend_layout.2_columns_25_75" approved="yes">
+                <source>2 Columns 25/75</source> <target state="translated">2 Palstaa 25/75</target></trans-unit>
+            <trans-unit id="backend_layout.2_columns_50_50" approved="yes">
+                <source>2 Columns 50/50</source> <target state="translated">2 Palstaa 50/50</target></trans-unit>
+            <trans-unit id="backend_layout.2_columns_offset_right" approved="yes">
+                <source>2 Columns, Offset Right</source> <target state="translated">2 Palstaa, Vastakkainen oikea</target></trans-unit>
+            <trans-unit id="backend_layout.3_columns" approved="yes">
+                <source>3 Columns</source> <target state="translated">3 palstaa</target></trans-unit>
+            <trans-unit id="backend_layout.subnavigation_right" approved="yes">
+                <source>Subnavigation Right</source> <target state="translated">Alavalikko oikea</target></trans-unit>
+            <trans-unit id="backend_layout.subnavigation_right_2_columns" approved="yes">
+                <source>Subnavigation Right and 2 Columns</source> <target state="translated">Alavalikko oikea ja 2 palstaa</target></trans-unit>
+            <trans-unit id="backend_layout.subnavigation_left" approved="yes">
+                <source>Subnavigation Left</source> <target state="translated">Alavalikko vasen</target></trans-unit>
+            <trans-unit id="backend_layout.subnavigation_left_2_columns" approved="yes">
+                <source>Subnavigation Left and 2 Columns</source> <target state="translated">Alavalikko vasen ja 2 palstaa</target></trans-unit>
+            <trans-unit id="backend_layout.special_start" approved="yes">
+                <source>Special Startpage</source> <target state="translated">Erikois aloitussivu</target></trans-unit>
+            <trans-unit id="backend_layout.special_feature" approved="yes">
+                <source>Special Feature</source> <target state="translated">Erityisominaisuus</target></trans-unit>
+
+            <trans-unit id="backend_layout.column.subnav" approved="yes">
+                <source>Sub Navigation (NOEDIT)</source> <target state="translated">Alavalikko (Ei muokkausta)</target></trans-unit>
+
+            <trans-unit id="backend_layout.column.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasen reuna</target></trans-unit>
+            <trans-unit id="backend_layout.column.normal" approved="yes">
+                <source>Normal</source> <target state="translated">Normaali</target></trans-unit>
+            <trans-unit id="backend_layout.column.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikea reuna</target></trans-unit>
+            <trans-unit id="backend_layout.column.border" approved="yes">
+                <source>Border</source> <target state="translated">Reuna</target></trans-unit>
+
+            <trans-unit id="backend_layout.column.middle1" approved="yes">
+                <source>Middle: Left</source> <target state="translated">Keskellä: Vasen</target></trans-unit>
+            <trans-unit id="backend_layout.column.middle2" approved="yes">
+                <source>Middle: Center</source> <target state="translated">Keskellä: Keski</target></trans-unit>
+            <trans-unit id="backend_layout.column.middle3" approved="yes">
+                <source>Middle: Right</source> <target state="translated">Keskellä: oikea</target></trans-unit>
+
+            <trans-unit id="backend_layout.column.main2" approved="yes">
+                <source>Normal 2</source> <target state="translated">Normaali 2</target></trans-unit>
+
+            <trans-unit id="backend_layout.column.contentbefore" approved="yes">
+                <source>Before Content</source> <target state="translated">Ennen sisältöä</target></trans-unit>
+            <trans-unit id="backend_layout.column.contentafter" approved="yes">
+                <source>After Content</source> <target state="translated">Sisällön jälkeen</target></trans-unit>
+
+            <trans-unit id="backend_layout.column.special1" approved="yes">
+                <source>Special 1</source> <target state="translated">Erikoisasetukset 1</target></trans-unit>
+            <trans-unit id="backend_layout.column.special2" approved="yes">
+                <source>Special 2</source> <target state="translated">Erikoisasetukset 2</target></trans-unit>
+            <trans-unit id="backend_layout.column.special3" approved="yes">
+                <source>Special 3</source> <target state="translated">Erikoisasetukset 3</target></trans-unit>
+            <trans-unit id="backend_layout.column.special4" approved="yes">
+                <source>Special 4</source> <target state="translated">Erikoisasetukset 4</target></trans-unit>
+            <trans-unit id="backend_layout.column.special5" approved="yes">
+                <source>Special 5</source> <target state="translated">Erikoisasetukset 5</target></trans-unit>
+            <trans-unit id="backend_layout.column.special6" approved="yes">
+                <source>Special 6</source> <target state="translated">Erikoisasetukset 6</target></trans-unit>
+            <trans-unit id="backend_layout.column.special7" approved="yes">
+                <source>Special 7</source> <target state="translated">Erikoisasetukset 7</target></trans-unit>
+            <trans-unit id="backend_layout.column.special8" approved="yes">
+                <source>Special 8</source> <target state="translated">Erikoisasetukset 8</target></trans-unit>
+            <trans-unit id="backend_layout.column.special9" approved="yes">
+                <source>Special 9</source> <target state="translated">Erikoisasetukset 9</target></trans-unit>
+            <trans-unit id="backend_layout.column.special10" approved="yes">
+                <source>Special 10</source> <target state="translated">Erikoisasetukset 10</target></trans-unit>
+
+            <trans-unit id="backend_layout.column.footer1" approved="yes">
+                <source>Footer: Left</source> <target state="translated">Alatunniste vasemmalla</target></trans-unit>
+            <trans-unit id="backend_layout.column.footer2" approved="yes">
+                <source>Footer: Center</source> <target state="translated">Alatunniste: Keskellä</target></trans-unit>
+            <trans-unit id="backend_layout.column.footer3" approved="yes">
+                <source>Footer: Right</source> <target state="translated">Alatunniste oikealla</target></trans-unit>
+
+            <trans-unit id="menu.card_dir" approved="yes">
+                <source>Cards of subpages</source> <target state="translated">Alavalikon kortit</target></trans-unit>
+            <trans-unit id="menu.card_dir.description" approved="yes">
+                <source>Insert menu to display subpages as cards</source> <target state="translated">Lisää valikko näyttääksesi alavalikot kortteina</target></trans-unit>
+            <trans-unit id="menu.card_list" approved="yes">
+                <source>Cards</source> <target state="translated">Kortit</target></trans-unit>
+            <trans-unit id="menu.card_list.description" approved="yes">
+                <source>Insert menu to display selected pages as cards</source> <target state="translated">Lisää valikko näyttääksesi sivut kortteina</target></trans-unit>
+
+            <trans-unit id="menu.card.options" approved="yes">
+                <source>Options</source> <target state="translated">Vaihtoehdot</target></trans-unit>
+            <trans-unit id="menu.card.columns" approved="yes">
+                <source>Columns</source> <target state="translated">Palstat</target></trans-unit>
+            <trans-unit id="menu.card.align" approved="yes">
+                <source>Alignment</source> <target state="translated">Tasaus</target></trans-unit>
+            <trans-unit id="menu.card.align.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasen reuna</target></trans-unit>
+            <trans-unit id="menu.card.align.center" approved="yes">
+                <source>Center</source> <target state="translated">Keskitys</target></trans-unit>
+            <trans-unit id="menu.card.align.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikea reuna</target></trans-unit>
+
+            <trans-unit id="menu.thumbnail_dir" approved="yes">
+                <source>Thumbnails of subpages</source> <target state="translated">Alavalikon kuvakkeet</target></trans-unit>
+            <trans-unit id="menu.thumbnail_dir.description" approved="yes">
+                <source>Insert menu to display subpages as thumbnail</source> <target state="translated">Lisää valikko näyttääksesi alavalikot kuvakkeina</target></trans-unit>
+            <trans-unit id="menu.thumbnail_list" approved="yes">
+                <source>Thumbnails</source> <target state="translated">Kuvakkeet</target></trans-unit>
+            <trans-unit id="menu.thumbnail_list.description" approved="yes">
+                <source>Insert menu to display selected pages as thumbnail</source> <target state="translated">Lisää valikko näyttääksesi sivut kuvakkeina</target></trans-unit>
+
+            <trans-unit id="menu.thumbnail.options" approved="yes">
+                <source>Options</source> <target state="translated">Valinnat</target></trans-unit>
+            <trans-unit id="menu.thumbnail.columns" approved="yes">
+                <source>Columns</source> <target state="translated">Palstat</target></trans-unit>
+            <trans-unit id="menu.thumbnail.align" approved="yes">
+                <source>Alignment</source> <target state="translated">Tasaus</target></trans-unit>
+            <trans-unit id="menu.thumbnail.align.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasen reuna</target></trans-unit>
+            <trans-unit id="menu.thumbnail.align.center" approved="yes">
+                <source>Center</source> <target state="translated">Keskitys</target></trans-unit>
+            <trans-unit id="menu.thumbnail.align.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikea reuna</target></trans-unit>
+
+            <trans-unit id="content_group.interactive" approved="yes">
+                <source>Interactive</source> <target state="translated">Vuorovaikutteinen</target></trans-unit>
+            <trans-unit id="content_group.media" approved="yes">
+                <source>Media</source> <target state="translated">Mediatiedostot</target></trans-unit>
+            <trans-unit id="content_group.data" approved="yes">
+                <source>Data</source> <target state="translated">Tiedot</target></trans-unit>
+            <trans-unit id="content_group.text" approved="yes">
+                <source>Text</source> <target state="translated">Teksti</target></trans-unit>
+            <trans-unit id="content_group.social_media" approved="yes">
+                <source>Social Media</source> <target state="translated">Sosiaalinen media</target></trans-unit>
+
+            <trans-unit id="content_element.csv">
+                <source>CSV</source> <target>CSV</target></trans-unit>
+            <trans-unit id="content_element.csv.description" approved="yes">
+                <source>Render a table from a CSV file.</source> <target state="translated">Muunna taulukko CSV-tiedostosta</target></trans-unit>
+
+            <trans-unit id="content_element.media">
+                <source>Media</source> <target>Media</target></trans-unit>
+            <trans-unit id="content_element.media.description" approved="yes">
+                <source>Any number of youtube and vimeo videos in columns and rows with a caption.</source> <target state="translated">Mikä tahansa määrä youtube- ja vimeo-videoita sarakkeissa ja riveissä kuvatekstin kanssa.</target></trans-unit>
+
+            <trans-unit id="content_element.audio" approved="yes">
+                <source>Audio</source> <target state="translated">Äänet</target></trans-unit>
+            <trans-unit id="content_element.audio.description" approved="yes">
+                <source>Insert Audio files</source> <target state="translated">Lisää ääni-tiedosto</target></trans-unit>
+
+            <trans-unit id="content_element.panel" approved="yes">
+                <source>Panel</source> <target state="translated">Paneeli</target></trans-unit>
+            <trans-unit id="content_element.panel.description" approved="yes">
+                <source>Insert Panelelement with simple text</source> <target state="translated">Lisää paneelielementti yksinkertaisella tekstillä</target></trans-unit>
+
+            <trans-unit id="content_element.carousel" approved="yes">
+                <source>Carousel</source> <target state="translated">Karuselli</target></trans-unit>
+            <trans-unit id="content_element.carousel.description" approved="yes">
+                <source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source> <target state="translated">Lisää karusellielementti erilaisilla sisällöillä (otsikko / kuva tekstillä / aito HTML)</target></trans-unit>
+
+            <trans-unit id="content_element.carousel_small" approved="yes">
+                <source>Carousel Small</source> <target state="translated">Karuselli pieni</target></trans-unit>
+            <trans-unit id="content_element.carousel_small.description" approved="yes">
+                <source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source> <target state="translated">Lisää karusellielementti erilaisilla sisällöillä (otsikko / kuva tekstillä / aito HTML)</target></trans-unit>
+
+            <trans-unit id="content_element.carousel_fullscreen" approved="yes">
+                <source>Carousel Fullscreen</source> <target state="translated">Karuselli koko näyttö</target></trans-unit>
+            <trans-unit id="content_element.carousel_fullscreen.description" approved="yes">
+                <source>Insert Carouselelement with different contents (header / text with image / pure HTML)</source> <target state="translated">Lisää karusellielementti erilaisilla sisällöillä (otsikko / kuva tekstillä / aito HTML )</target></trans-unit>
+
+            <trans-unit id="content_element.textcolumn" approved="yes">
+                <source>Text in Columns</source> <target state="translated">Teksti sarakkkeissa</target></trans-unit>
+            <trans-unit id="content_element.textcolumn.description" approved="yes">
+                <source>Insert Text in Columns</source> <target state="translated">Lisää tekstisarake</target></trans-unit>
+
+            <trans-unit id="content_element.textteaser" approved="yes">
+                <source>Text with Teaser</source> <target state="translated">Teksti esittelyllä</target></trans-unit>
+            <trans-unit id="content_element.textteaser.description" approved="yes">
+                <source>Insert Text with Teaser</source> <target state="translated">Lisää teksti esittelyllä</target></trans-unit>
+
+            <trans-unit id="content_element.texticon" approved="yes">
+                <source>Text and Icon</source> <target state="translated">Teksti ja kuvake</target></trans-unit>
+            <trans-unit id="content_element.texticon.description" approved="yes">
+                <source>Insert Bootstrap Icon with Text</source> <target state="translated">Lisää ohjelmakehikon kuvake tekstillä</target></trans-unit>
+
+            <trans-unit id="content_element.accordion" approved="yes">
+                <source>Accordion</source> <target state="translated">Haitari</target></trans-unit>
+            <trans-unit id="content_element.accordion.description" approved="yes">
+                <source>Insert several Accordionelement(s) with headline and text</source> <target state="translated">Lisää haitarielementti otsikolla ja tekstillä</target></trans-unit>
+
+            <trans-unit id="content_element.tab" approved="yes">
+                <source>Tab</source> <target state="translated">Välilehti</target></trans-unit>
+            <trans-unit id="content_element.tab.description" approved="yes">
+                <source>Insert several Tabelement(s) with headline and text</source> <target state="translated">Lisää välilehtielementtejä otsikolla ja tekstillä</target></trans-unit>
+
+            <trans-unit id="content_element.card_group" approved="yes">
+                <source>Card Group</source> <target state="translated">Korttiryhmä</target></trans-unit>
+            <trans-unit id="content_element.card_group.description" approved="yes">
+                <source>Insert a element with several content cards</source> <target state="translated">Lisää elementtejä sisältöön korttina</target></trans-unit>
+            <trans-unit id="content_element.card_group.options" approved="yes">
+                <source>Options</source> <target state="translated">Valinnat</target></trans-unit>
+            <trans-unit id="content_element.card_group.columns" approved="yes">
+                <source>Columns</source> <target state="translated">Palstat</target></trans-unit>
+            <trans-unit id="content_element.card_group.align" approved="yes">
+                <source>Alignment</source> <target state="translated">Tasaus</target></trans-unit>
+            <trans-unit id="content_element.card_group.align.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasen reuna</target></trans-unit>
+            <trans-unit id="content_element.card_group.align.center" approved="yes">
+                <source>Center</source> <target state="translated">Keskitetty</target></trans-unit>
+            <trans-unit id="content_element.card_group.align.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikea reuna</target></trans-unit>
+
+            <trans-unit id="card_group_item" approved="yes">
+                <source>Card</source> <target state="translated">Kortti</target></trans-unit>
+            <trans-unit id="card_group_item.tt_content" approved="yes">
+                <source>Card Group</source> <target state="translated">Korttiryhmä</target></trans-unit>
+            <trans-unit id="card_group_item.header" approved="yes">
+                <source>Header</source> <target state="translated">Otsikko</target></trans-unit>
+            <trans-unit id="card_group_item.subheader" approved="yes">
+                <source>Subheader</source> <target state="translated">Alaotsikko</target></trans-unit>
+            <trans-unit id="card_group_item.image" approved="yes">
+                <source>Image</source> <target state="translated">Kuva</target></trans-unit>
+            <trans-unit id="card_group_item.bodytext" approved="yes">
+                <source>Text</source> <target state="translated">Teksti</target></trans-unit>
+            <trans-unit id="card_group_item.link" approved="yes">
+                <source>Link</source> <target state="translated">Linkki</target></trans-unit>
+            <trans-unit id="card_group_item.link_title" approved="yes">
+                <source>Title</source> <target state="translated">Otsikko</target></trans-unit>
+            <trans-unit id="card_group_item.link_icon" approved="yes">
+                <source>Icon</source> <target state="translated">Kuvake</target></trans-unit>
+            <trans-unit id="card_group_item.link_class" approved="yes">
+                <source>Color</source> <target state="translated">Väri</target></trans-unit>
+
+            <trans-unit id="content_element.icon_group" approved="yes">
+                <source>Icon Group</source> <target state="translated">Kuvakeryhmä</target></trans-unit>
+            <trans-unit id="content_element.icon_group.description" approved="yes">
+                <source>Insert a element with several icons</source> <target state="translated">Lisää elementti kuvakkeilla</target></trans-unit>
+            <trans-unit id="content_element.icon_group.options" approved="yes">
+                <source>Options</source> <target state="translated">Valinnat</target></trans-unit>
+            <trans-unit id="content_element.icon_group.columns" approved="yes">
+                <source>Columns</source> <target state="translated">Palstat</target></trans-unit>
+            <trans-unit id="content_element.icon_group.columns.auto" approved="yes">
+                <source>Automatic</source> <target state="translated">Automaattinen</target></trans-unit>
+            <trans-unit id="content_element.icon_group.align" approved="yes">
+                <source>Alignment</source> <target state="translated">Tasaus</target></trans-unit>
+            <trans-unit id="content_element.icon_group.align.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasen reuna</target></trans-unit>
+            <trans-unit id="content_element.icon_group.align.center" approved="yes">
+                <source>Center</source> <target state="translated">Keskitetty</target></trans-unit>
+            <trans-unit id="content_element.icon_group.align.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikea reuna</target></trans-unit>
+            <trans-unit id="content_element.icon_group.icon_position" approved="yes">
+                <source>Icon Position</source> <target state="translated">Kuvakkeen sijainti</target></trans-unit>
+            <trans-unit id="content_element.icon_group.icon_position.left-top" approved="yes">
+                <source>Left: Top</source> <target state="translated">Ylävasen</target></trans-unit>
+            <trans-unit id="content_element.icon_group.icon_position.left-center" approved="yes">
+                <source>Left: Center</source> <target state="translated">Keskivasen</target></trans-unit>
+            <trans-unit id="content_element.icon_group.icon_position.right-top" approved="yes">
+                <source>Right: Top</source> <target state="translated">Yläoikea</target></trans-unit>
+            <trans-unit id="content_element.icon_group.icon_position.right-center" approved="yes">
+                <source>Right: Center</source> <target state="translated">Keskioikea</target></trans-unit>
+            <trans-unit id="content_element.icon_group.icon_position.above" approved="yes">
+                <source>Above</source> <target state="translated">Yläpuolella</target></trans-unit>
+            <trans-unit id="content_element.icon_group.icon_position.below" approved="yes">
+                <source>Below</source> <target state="translated">Alapuolella</target></trans-unit>
+
+            <trans-unit id="content_element.listgroup" approved="yes">
+                <source>List Group</source> <target state="translated">Listaa ryhmä</target></trans-unit>
+            <trans-unit id="content_element.listgroup.description" approved="yes">
+                <source>Insert simple Listgroupelement</source> <target state="translated">Lisää yksinkertainen listaryhmäelementti</target></trans-unit>
+
+            <trans-unit id="content_element.external_media" approved="yes">
+                <source>External Media</source> <target state="translated">Ulkoinen media</target></trans-unit>
+            <trans-unit id="content_element.external_media.description" approved="yes">
+                <source>Insert external media from YouTube or Vimeo</source> <target state="translated">Lisää ulkoinen media kohteesta YouTube tai Vimeo</target></trans-unit>
+
+            <trans-unit id="content_element.textmedia" approved="yes">
+                <source>Text &amp; Media</source> <target state="translated">Teksti &amp; Media</target></trans-unit>
+
+            <trans-unit id="content_element.quote" approved="yes">
+                <source>Quote</source> <target state="translated">Lainaus</target></trans-unit>
+            <trans-unit id="content_element.quote.description" approved="yes">
+                <source>Insert Quotation</source> <target state="translated">Lisää lähdeviite</target></trans-unit>
+
+            <trans-unit id="quote.text" approved="yes">
+                <source>Quote Text</source> <target state="translated">Lähdeteksti</target></trans-unit>
+            <trans-unit id="quote.link" approved="yes">
+                <source>Quote Link</source> <target state="translated">Lähdelinkki</target></trans-unit>
+            <trans-unit id="quote.source" approved="yes">
+                <source>Quote Source</source> <target state="translated">Tietolähde</target></trans-unit>
+
+            <trans-unit id="content_element.social_links" approved="yes">
+                <source>Social Links</source> <target state="translated">Sosiaalisen median linkit</target></trans-unit>
+            <trans-unit id="content_element.social_links.description" approved="yes">
+                <source>Insert a element to display configured social media channels</source> <target state="translated">Lisää elementti näyttääksesi määritetyt sosiaalisen median kanavat</target></trans-unit>
+
+            <trans-unit id="content_element.timeline" approved="yes">
+                <source>Timeline</source> <target state="translated">Aikajana</target></trans-unit>
+            <trans-unit id="content_element.timeline.description" approved="yes">
+                <source>Insert a element to display a timeline</source> <target state="translated">Lisää elementti näyttääksesi aikajana</target></trans-unit>
+
+            <trans-unit id="carousel.options" approved="yes">
+                <source>Carousel Options</source> <target state="translated">Karusellivalinnat</target></trans-unit>
+            <trans-unit id="carousel.interval" approved="yes">
+                <source>Interval in ms</source> <target state="translated">Aikaväli millisekunneissa</target></trans-unit>
+            <trans-unit id="carousel.transition" approved="yes">
+                <source>Transition</source> <target state="translated">Siirtymä</target></trans-unit>
+            <trans-unit id="carousel.transition.slide" approved="yes">
+                <source>Slide</source> <target state="translated">Liu’utus</target></trans-unit>
+            <trans-unit id="carousel.transition.fade" approved="yes">
+                <source>Fade</source> <target state="translated">Häivytys</target></trans-unit>
+            <trans-unit id="carousel.wrap" approved="yes">
+                <source>Wrap</source> <target state="translated">Kierrä</target></trans-unit>
+            <trans-unit id="carousel.wrap.description" approved="yes">
+                <source>Start the Carousel from the beginning once it has arrived at the end.</source> <target state="translated">Aloita karuselli alusta sen päättyessä.</target></trans-unit>
+            <trans-unit id="carousel.show_nav_title" approved="yes">
+                <source>Show Navigation Title</source> <target state="translated">Näytä navigointiotsikko</target></trans-unit>
+            <trans-unit id="carousel.show_nav_title.description" approved="yes">
+                <source>Show the navigation title of the records instead of the bubbles.</source> <target state="translated">Näytä navigointiotsikot äänitteistä kuplien sijaan.</target></trans-unit>
+
+            <trans-unit id="carousel_item" approved="yes">
+                <source>Carousel Item</source> <target state="translated">Karuselli tuote</target></trans-unit>
+            <trans-unit id="carousel_item.tt_content" approved="yes">
+                <source>Carousel</source> <target state="translated">Karuselli</target></trans-unit>
+            <trans-unit id="carousel_item.link" approved="yes">
+                <source>Link</source> <target state="translated">Linkki</target></trans-unit>
+            <trans-unit id="carousel_item.header" approved="yes">
+                <source>Header</source> <target state="translated">Ylätunniste</target></trans-unit>
+            <trans-unit id="carousel_item.header_layout" approved="yes">
+                <source>Header Layout</source> <target state="translated">Ylätunniste suunnitelma</target></trans-unit>
+            <trans-unit id="carousel_item.header_class" approved="yes">
+                <source>Header Class</source> <target state="translated">Ylätunniste luokka</target></trans-unit>
+            <trans-unit id="carousel_item.header_position" approved="yes">
+                <source>Header Position</source> <target state="translated">Ylätunnisteen sijainti</target></trans-unit>
+            <trans-unit id="carousel_item.header_position.default" approved="yes">
+                <source>Default</source> <target state="translated">Oletus</target></trans-unit>
+            <trans-unit id="carousel_item.header_position.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasemmalla</target></trans-unit>
+            <trans-unit id="carousel_item.header_position.center" approved="yes">
+                <source>Center</source> <target state="translated">Keskellä</target></trans-unit>
+            <trans-unit id="carousel_item.header_position.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikealla</target></trans-unit>
+            <trans-unit id="carousel_item.subheader" approved="yes">
+                <source>Subheader</source> <target state="translated">Alaylätunniste</target></trans-unit>
+            <trans-unit id="carousel_item.subheader_layout" approved="yes">
+                <source>Subheader Layout</source> <target state="translated">Alatunnisteen suunnitelma</target></trans-unit>
+            <trans-unit id="carousel_item.subheader_class" approved="yes">
+                <source>Subheader Class</source> <target state="translated">Alatunnisteen luokka</target></trans-unit>
+            <trans-unit id="carousel_item.nav_title" approved="yes">
+                <source>Navigation Title</source> <target state="translated">Navigointiotsikko</target></trans-unit>
+            <trans-unit id="carousel_item.button_text" approved="yes">
+                <source>Button Text</source> <target state="translated">Painikkeen teksti</target></trans-unit>
+            <trans-unit id="carousel_item.bodytext" approved="yes">
+                <source>Text</source> <target state="translated">Teksti</target></trans-unit>
+            <trans-unit id="carousel_item.text_color" approved="yes">
+                <source>Text Color</source> <target state="translated">Tekstin väri</target></trans-unit>
+            <trans-unit id="carousel_item.image" approved="yes">
+                <source>Image</source> <target state="translated">Kuva</target></trans-unit>
+            <trans-unit id="carousel_item.background_color" approved="yes">
+                <source>Background Color</source> <target state="translated">Taustaväri</target></trans-unit>
+            <trans-unit id="carousel_item.background_image" approved="yes">
+                <source>Background Image</source> <target state="translated">Taustakuva</target></trans-unit>
+            <trans-unit id="carousel_item.background_image_options" approved="yes">
+                <source>Background Image Options</source> <target state="translated">Taustakuva valinnat</target></trans-unit>
+
+            <trans-unit id="carousel_item.item_type.header" approved="yes">
+                <source>Header</source> <target state="translated">Ylätunniste</target></trans-unit>
+            <trans-unit id="carousel_item.item_type.text" approved="yes">
+                <source>Text</source> <target state="translated">Teksti</target></trans-unit>
+            <trans-unit id="carousel_item.item_type.calltoaction" approved="yes">
+                <source>Call to Action</source> <target state="translated">Aktivoi</target></trans-unit>
+            <trans-unit id="carousel_item.item_type.image" approved="yes">
+                <source>Image</source> <target state="translated">Kuva</target></trans-unit>
+            <trans-unit id="carousel_item.item_type.textandimage" approved="yes">
+                <source>Text and Image</source> <target state="translated">Teksti ja kuva</target></trans-unit>
+            <trans-unit id="carousel_item.item_type.backgroundimage" approved="yes">
+                <source>Background Image</source> <target state="translated">Taustakuva</target></trans-unit>
+            <trans-unit id="carousel_item.item_type.html" approved="yes">
+                <source>HTML</source> <target state="translated">HTML</target></trans-unit>
+
+            <trans-unit id="accordion.options" approved="yes">
+                <source>Accordion Options</source> <target state="translated">Haitari valinnat</target></trans-unit>
+            <trans-unit id="accordion.default_element" approved="yes">
+                <source>Default Element</source> <target state="translated">Oletuselementti</target></trans-unit>
+
+            <trans-unit id="accordion_item" approved="yes">
+                <source>Accordion Item</source> <target state="translated">Haitari</target></trans-unit>
+            <trans-unit id="accordion_item.tt_content" approved="yes">
+                <source>Accordion</source> <target state="translated">Haitari</target></trans-unit>
+            <trans-unit id="accordion_item.header" approved="yes">
+                <source>Header</source> <target state="translated">Ylätunniste</target></trans-unit>
+            <trans-unit id="accordion_item.bodytext" approved="yes">
+                <source>Text</source> <target state="translated">Teksti</target></trans-unit>
+            <trans-unit id="accordion_item.media" approved="yes">
+                <source>Media</source> <target state="translated">Mediatiedostot</target></trans-unit>
+            <trans-unit id="accordion_item.mediaposition" approved="yes">
+                <source>Media position</source> <target state="translated">Median sijainti</target></trans-unit>
+            <trans-unit id="accordion_item.imagecols" approved="yes">
+                <source>Columns</source> <target state="translated">Palstat</target></trans-unit>
+            <trans-unit id="accordion_item.image_zoom" approved="yes">
+                <source>Enlarge on Click</source> <target state="translated">Suurenna klikkaamalla</target></trans-unit>
+            <trans-unit id="accordion_item.mediaorient" approved="yes">
+                <source>Orientation</source> <target state="translated">Sijainti</target></trans-unit>
+            <trans-unit id="accordion_item.mediaorient.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasemmalla</target></trans-unit>
+            <trans-unit id="accordion_item.mediaorient.top" approved="yes">
+                <source>Top</source> <target state="translated">Ylhäällä</target></trans-unit>
+            <trans-unit id="accordion_item.mediaorient.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikealla</target></trans-unit>
+            <trans-unit id="accordion_item.mediaorient.bottom" approved="yes">
+                <source>Bottom</source> <target state="translated">Alhaalla</target></trans-unit>
+
+            <trans-unit id="tab.options" approved="yes">
+                <source>Tab Options</source> <target state="translated">Välilehtiasetukset</target></trans-unit>
+            <trans-unit id="tab.default_tab" approved="yes">
+                <source>Default Tab</source> <target state="translated">Oletusvälilehti</target></trans-unit>
+
+            <trans-unit id="tab_item" approved="yes">
+                <source>Tab Item</source> <target state="translated">Välilehti kohde</target></trans-unit>
+            <trans-unit id="tab_item.tt_content" approved="yes">
+                <source>Tab</source> <target state="translated">Välilehti</target></trans-unit>
+            <trans-unit id="tab_item.active" approved="yes">
+                <source>Set as default</source> <target state="translated">Aseta oletukseksi</target></trans-unit>
+            <trans-unit id="tab_item.header" approved="yes">
+                <source>Header</source> <target state="translated">Ylätunniste</target></trans-unit>
+            <trans-unit id="tab_item.bodytext" approved="yes">
+                <source>Text</source> <target state="translated">Teksti</target></trans-unit>
+            <trans-unit id="tab_item.media" approved="yes">
+                <source>Media</source> <target state="translated">Mediatiedostot</target></trans-unit>
+            <trans-unit id="tab_item.mediaposition" approved="yes">
+                <source>Media position</source> <target state="translated">Median sijainti</target></trans-unit>
+            <trans-unit id="tab_item.imagecols" approved="yes">
+                <source>Columns</source> <target state="translated">Palstat</target></trans-unit>
+            <trans-unit id="tab_item.image_zoom" approved="yes">
+                <source>Enlarge on Click</source> <target state="translated">Suurenna klikkaamalla</target></trans-unit>
+            <trans-unit id="tab_item.mediaorient" approved="yes">
+                <source>Orientation</source> <target state="translated">Sijainti</target></trans-unit>
+            <trans-unit id="tab_item.mediaorient.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasemmalla</target></trans-unit>
+            <trans-unit id="tab_item.mediaorient.top" approved="yes">
+                <source>Top</source> <target state="translated">Ylhäällä</target></trans-unit>
+            <trans-unit id="tab_item.mediaorient.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikealla</target></trans-unit>
+            <trans-unit id="tab_item.mediaorient.bottom" approved="yes">
+                <source>Bottom</source> <target state="translated">Alhaalla</target></trans-unit>
+
+            <trans-unit id="timeline.options" approved="yes">
+                <source>Timeline Options</source> <target state="translated">Aikajanavalinnat</target></trans-unit>
+            <trans-unit id="timeline.sorting" approved="yes">
+                <source>Sorting</source> <target state="translated">Lajittelu</target></trans-unit>
+            <trans-unit id="timeline.sorting.asc" approved="yes">
+                <source>Ascending</source> <target state="translated">Nouseva</target></trans-unit>
+            <trans-unit id="timeline.sorting.desc" approved="yes">
+                <source>Descending</source> <target state="translated">Laskeva</target></trans-unit>
+
+            <trans-unit id="timeline_item" approved="yes">
+                <source>Timeline Item</source> <target state="translated">Aikajanan kohde</target></trans-unit>
+            <trans-unit id="timeline_item.tt_content" approved="yes">
+                <source>Timeline</source> <target state="translated">Aikajana</target></trans-unit>
+            <trans-unit id="timeline_item.date" approved="yes">
+                <source>Date</source> <target state="translated">Päivämäärä</target></trans-unit>
+            <trans-unit id="timeline_item.header" approved="yes">
+                <source>Header</source> <target state="translated">Ylätunniste</target></trans-unit>
+            <trans-unit id="timeline_item.bodytext" approved="yes">
+                <source>Text</source> <target state="translated">Teksti</target></trans-unit>
+            <trans-unit id="timeline_item.icon_file" approved="yes">
+                <source>Icon File</source> <target state="translated">Kuvaketiedosto</target></trans-unit>
+            <trans-unit id="timeline_item.image" approved="yes">
+                <source>Image</source> <target state="translated">Kuva</target></trans-unit>
+
+            <trans-unit id="icon_group_item" approved="yes">
+                <source>Icon Group Item</source> <target state="translated">Kuvakeryhmä kohde</target></trans-unit>
+            <trans-unit id="icon_group_item.tt_content" approved="yes">
+                <source>Icon Group</source> <target state="translated">Kuvakeryhmä</target></trans-unit>
+            <trans-unit id="icon_group_item.header" approved="yes">
+                <source>Header</source> <target state="translated">Ylätunniste</target></trans-unit>
+            <trans-unit id="icon_group_item.subheader" approved="yes">
+                <source>Subheader</source> <target state="translated">Alatunniste</target></trans-unit>
+            <trans-unit id="icon_group_item.bodytext" approved="yes">
+                <source>Text</source> <target state="translated">Teksti</target></trans-unit>
+            <trans-unit id="icon_group_item.link" approved="yes">
+                <source>Link</source> <target state="translated">Linkki</target></trans-unit>
+            <trans-unit id="icon_group_item.icon_file" approved="yes">
+                <source>Icon File</source> <target state="translated">Kuvaketiedosto</target></trans-unit>
+
+            <trans-unit id="field.panel_class" approved="yes">
+                <source>Panel Class</source> <target state="translated">Paneeliluokka</target></trans-unit>
+
+            <trans-unit id="external_media" approved="yes">
+                <source>External Media</source> <target state="translated">Ulkoinen media</target></trans-unit>
+            <trans-unit id="field.external_media_source" approved="yes">
+                <source>External Media Source</source> <target state="translated">Ulkoisen median lähde</target></trans-unit>
+            <trans-unit id="field.external_media_ratio" approved="yes">
+                <source>Ratio</source> <target state="translated">Suhde</target></trans-unit>
+
+            <trans-unit id="field.icon" approved="yes">
+                <source>Icon</source> <target state="translated">Kuvake</target></trans-unit>
+            <trans-unit id="field.icon_set" approved="yes">
+                <source>Icon Set</source> <target state="translated">Kuvakevalinta</target></trans-unit>
+            <trans-unit id="field.icon_file" approved="yes">
+                <source>Icon File</source> <target state="translated">Kuvaketiedosto</target></trans-unit>
+            <trans-unit id="field.icon_position" approved="yes">
+                <source>Position</source> <target state="translated">Sijainti</target></trans-unit>
+            <trans-unit id="field.icon_type" approved="yes">
+                <source>Type</source> <target state="translated">Tyyppi</target></trans-unit>
+            <trans-unit id="field.icon_size" approved="yes">
+                <source>Size</source> <target state="translated">Koko</target></trans-unit>
+            <trans-unit id="field.icon_background" approved="yes">
+                <source>Background</source> <target state="translated">Tausta</target></trans-unit>
+            <trans-unit id="field.icon_color" approved="yes">
+                <source>Color</source> <target state="translated">Väri</target></trans-unit>
+            <trans-unit id="field.icon_background" approved="yes">
+                <source>Background</source> <target state="translated">Tausta</target></trans-unit>
+
+            <trans-unit id="field.background_color_class" approved="yes">
+                <source>Background Color</source> <target state="translated">Taustaväri</target></trans-unit>
+            <trans-unit id="field.background_image" approved="yes">
+                <source>Background Image</source> <target state="translated">Taustakuva</target></trans-unit>
+            <trans-unit id="field.background_image_options" approved="yes">
+                <source>Background Image Options</source> <target state="translated">Taustakuvavalinnat</target></trans-unit>
+
+            <trans-unit id="field.teaser" approved="yes">
+                <source>Teaser</source> <target state="translated">Esikatselu</target></trans-unit>
+            <trans-unit id="field.file_folder" approved="yes">
+                <source>File Folder</source> <target state="translated">Tiedostokansio</target></trans-unit>
+
+            <trans-unit id="field.imageorient.125" approved="yes">
+                <source>Beside Text, Centered Right</source> <target state="translated">Tekstin vieressä, keskitetty oikealle</target></trans-unit>
+            <trans-unit id="field.imageorient.126" approved="yes">
+                <source>Beside Text, Centered Left</source> <target state="translated">Tekstin vieressä, keskitetty vasemmalle</target></trans-unit>
+
+            <trans-unit id="option.background_image.parallax" approved="yes">
+                <source>Parallax</source> <target state="translated">Selaus</target></trans-unit>
+            <trans-unit id="option.background_image.parallax.description" approved="yes">
+                <source>Enable Parallax effect</source> <target state="translated">Salli selausefekti</target></trans-unit>
+            <trans-unit id="option.background_image.fade" approved="yes">
+                <source>Fade</source> <target state="translated">Häivytys</target></trans-unit>
+            <trans-unit id="option.background_image.fade.description" approved="yes">
+                <source>Enable Fade effect</source> <target state="translated">Salli häivytysefekti</target></trans-unit>
+            <trans-unit id="option.background_image.filter" approved="yes">
+                <source>Filter</source> <target state="translated">Suodatin</target></trans-unit>
+            <trans-unit id="option.background_image.filter.none" approved="yes">
+                <source>None</source> <target state="translated">Ei mitään</target></trans-unit>
+            <trans-unit id="option.background_image.filter.blur" approved="yes">
+                <source>Blur</source> <target state="translated">Sumenna</target></trans-unit>
+            <trans-unit id="option.background_image.filter.grayscale" approved="yes">
+                <source>Grayscale</source> <target state="translated">Harmaasävy</target></trans-unit>
+            <trans-unit id="option.background_image.filter.sepia" approved="yes">
+                <source>Sepia</source> <target state="translated">Seepia</target></trans-unit>
+
+            <trans-unit id="option.default" approved="yes">
+                <source>Default</source> <target state="translated">Oletus</target></trans-unit>
+            <trans-unit id="option.none" approved="yes">
+                <source>None</source> <target state="translated">Ei mitään</target></trans-unit>
+            <trans-unit id="option.left" approved="yes">
+                <source>Left</source> <target state="translated">Vasemmalla</target></trans-unit>
+            <trans-unit id="option.top" approved="yes">
+                <source>Top</source> <target state="translated">Ylhäällä</target></trans-unit>
+            <trans-unit id="option.right" approved="yes">
+                <source>Right</source> <target state="translated">Oikealla</target></trans-unit>
+            <trans-unit id="option.bottom" approved="yes">
+                <source>Bottom</source> <target state="translated">Alhaalla</target></trans-unit>
+            <trans-unit id="option.default" approved="yes">
+                <source>Default</source> <target state="translated">Oletus</target></trans-unit>
+            <trans-unit id="option.square" approved="yes">
+                <source>Square</source> <target state="translated">Neliö</target></trans-unit>
+            <trans-unit id="option.circle" approved="yes">
+                <source>Circle</source> <target state="translated">Ympyrä</target></trans-unit>
+            <trans-unit id="option.extrasmall" approved="yes">
+                <source>Extra Small</source> <target state="translated">Erittäin pieni</target></trans-unit>
+            <trans-unit id="option.small" approved="yes">
+                <source>Small</source> <target state="translated">Pieni</target></trans-unit>
+            <trans-unit id="option.medium" approved="yes">
+                <source>Medium</source> <target state="translated">Keskikokoinen</target></trans-unit>
+            <trans-unit id="option.large" approved="yes">
+                <source>Large</source> <target state="translated">Suuri</target></trans-unit>
+            <trans-unit id="option.awesome" approved="yes">
+                <source>Awesome</source> <target state="translated">Mahtava</target></trans-unit>
+            <trans-unit id="option.primary" approved="yes">
+                <source>Primary</source> <target state="translated">Ensisijainen</target></trans-unit>
+            <trans-unit id="option.success" approved="yes">
+                <source>Success</source> <target state="translated">Valmis</target></trans-unit>
+            <trans-unit id="option.info" approved="yes">
+                <source>Info</source> <target state="translated">Tiedot</target></trans-unit>
+            <trans-unit id="option.warning" approved="yes">
+                <source>Warning</source> <target state="translated">Varoitus</target></trans-unit>
+            <trans-unit id="option.danger" approved="yes">
+                <source>Danger</source> <target state="translated">Vaara</target></trans-unit>
+
+            <trans-unit id="ratio.16_9" approved="yes">
+                <source>16:9</source> <target state="translated">16:9</target></trans-unit>
+            <trans-unit id="ratio.4_3" approved="yes">
+                <source>4:3</source> <target state="translated">4:3</target></trans-unit>
+            <trans-unit id="ratio.1_1" approved="yes">
+                <source>1:1</source> <target state="translated">1:1</target></trans-unit>
+            <trans-unit id="ratio.free" approved="yes">
+                <source>Free</source> <target state="translated">Vapaa</target></trans-unit>
+
+            <trans-unit id="tablelayout.default" approved="yes">
+                <source>Default</source> <target state="translated">Oletus</target></trans-unit>
+            <trans-unit id="tablelayout.basic" approved="yes">
+                <source>Basic</source> <target state="translated">Perusasetukset</target></trans-unit>
+            <trans-unit id="tablelayout.striped" approved="yes">
+                <source>Striped rows</source> <target state="translated">Viivoitetut rivit</target></trans-unit>
+            <trans-unit id="tablelayout.bordered" approved="yes">
+                <source>Bordered table</source> <target state="translated">Rajattu taulukko</target></trans-unit>
+            <trans-unit id="tablelayout.hover" approved="yes">
+                <source>Hover rows</source> <target state="translated">Näytä rivit</target></trans-unit>
+            <trans-unit id="tablelayout.condensed" approved="yes">
+                <source>Condensed table</source> <target state="translated">Tiivistetty taulukko</target></trans-unit>
+
+            <trans-unit id="uploadslayout.default" approved="yes">
+                <source>Default</source> <target state="translated">Oletus</target></trans-unit>
+            <trans-unit id="uploadslayout.icons" approved="yes">
+                <source>Display Icons</source> <target state="translated">Näytä kuvakkeet</target></trans-unit>
+            <trans-unit id="uploadslayout.iconsandpreview" approved="yes">
+                <source>Display Icons and Preview Images</source> <target state="translated">Näytä kuvakkeet ja esikatsele kuvat</target></trans-unit>
+
+            <trans-unit id="field.assets" approved="yes">
+                <source>Media elements</source> <target state="translated">Mediaelementit</target></trans-unit>
+
+            <trans-unit id="tabs.background" approved="yes">
+                <source>Background</source> <target state="translated">Tausta</target></trans-unit>
+            <trans-unit id="tabs.icon" approved="yes">
+                <source>Icon</source> <target state="translated">Kuvake</target></trans-unit>
+
+            <trans-unit id="colorpicker" approved="yes">
+                <source>Colorpicker</source> <target state="translated">Värinvalitsin</target></trans-unit>
+
+            <trans-unit id="advanced" approved="yes">
+                <source>Advanced</source> <target state="translated">Lisäasetukset</target></trans-unit>
+            <trans-unit id="settings" approved="yes">
+                <source>Settings</source> <target state="translated">Asetukset</target></trans-unit>
+
+            <trans-unit id="palette.alignment" approved="yes">
+                <source>Alignment</source> <target state="translated">Tasaus</target></trans-unit>
+
+            <trans-unit id="field.readmore_label" approved="yes">
+                <source>Read More Label</source> <target state="translated">Lue lisää merkki</target></trans-unit>
+
+        </body>
+    </file>
+</xliff>

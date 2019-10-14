@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+    <file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2019-10-13T09:11:39Z" product-name="bootstrap_package">
+        <header/>
+        <body>
+
+            <trans-unit id="skiptomaincontent" approved="yes">
+                <source>Skip to main content</source> <target state="translated">Siirry sisältöön</target></trans-unit>
+
+            <trans-unit id="skipnavigation" approved="yes">
+                <source>Skip navigation block</source> <target state="translated">Ohita navigaatio</target></trans-unit>
+
+            <trans-unit id="scrolltop" approved="yes">
+                <source>Scroll to top</source> <target state="translated">Takaisin ylös</target></trans-unit>
+
+            <trans-unit id="togglenavigation" approved="yes">
+                <source>Toggle navigation</source> <target state="translated">Sivun navigointi</target></trans-unit>
+
+            <trans-unit id="linktop" approved="yes">
+                <source>To top</source> <target state="translated">Ylös</target></trans-unit>
+
+            <trans-unit id="breadcrumb" approved="yes">
+                <source>You are here:</source> <target state="translated">Olet täällä:</target></trans-unit>
+            <trans-unit id="breadcrumb.label" approved="yes">
+                <source>Breadcrumb</source> <target state="translated">Valikko</target></trans-unit>
+
+            <trans-unit id="previous" approved="yes">
+                <source>Previous</source> <target state="translated">Edellinen</target></trans-unit>
+
+            <trans-unit id="next" approved="yes">
+                <source>Next</source> <target state="translated">Seuraava</target></trans-unit>
+
+            <trans-unit id="readmore" approved="yes">
+                <source>Read more</source> <target state="translated">Lue lisää</target></trans-unit>
+
+            <trans-unit id="externalmediaunsupported" approved="yes">
+                <source>The external media source %s is not supported. Please provide a valid YouTube or Vimeo URL.</source> <target state="translated">Ulkoinen medialähde ei ole %s tuettu.Ole hyvä ja valitse voimassaoleva YouTube tai Vimeo URL.</target></trans-unit>
+
+            <trans-unit id="form.browse" approved="yes">
+                <source>Browse</source> <target state="translated">Selaa</target></trans-unit>
+            <trans-unit id="form.selectfile" approved="yes">
+                <source>Select File</source> <target state="translated">Valitse tiedosto</target></trans-unit>
+
+            <trans-unit id="element.contactform.renderingOptions.submitButtonLabel" approved="yes">
+                <source>Submit</source> <target state="translated">Lähetä</target></trans-unit>
+             <trans-unit id="contactform.element.mandatory.properties.label" approved="yes">
+                <source>Your personal data</source> <target state="translated">Henkilökohtaiset tietosi</target></trans-unit>
+            <trans-unit id="contactform.element.mandatory.properties.text" approved="yes">
+                <source>* Mandatory fields</source> <target state="translated">* Pakolliset kentät</target></trans-unit>
+            <trans-unit id="contactform.element.fullname.properties.label" approved="yes">
+                <source>Full name and surname</source> <target state="translated">Etunimi ja sukunimi</target></trans-unit>
+            <trans-unit id="contactform.element.fullname.properties.placeholder" approved="yes">
+                <source>Full name and surname</source> <target state="translated">Etunimi ja sukunimi</target></trans-unit>
+            <trans-unit id="contactform.element.company.properties.label" approved="yes">
+                <source>Company</source> <target state="translated">Yritys</target></trans-unit>
+            <trans-unit id="contactform.element.company.properties.placeholder" approved="yes">
+                <source>Company</source> <target state="translated">Yritys</target></trans-unit>
+            <trans-unit id="contactform.element.email.properties.label" approved="yes">
+                <source>Email</source> <target state="translated">Sähköposti</target></trans-unit>
+            <trans-unit id="contactform.element.email.properties.placeholder" approved="yes">
+                <source>Email</source> <target state="translated">Sähköposti</target></trans-unit>
+            <trans-unit id="contactform.element.subject.properties.label" approved="yes">
+                <source>Subject</source> <target state="translated">Aihe</target></trans-unit>
+            <trans-unit id="contactform.element.subject.properties.placeholder" approved="yes">
+                <source>Subject</source> <target state="translated">Aihe</target></trans-unit>
+            <trans-unit id="contactform.element.message.properties.label" approved="yes">
+                <source>Message</source> <target state="translated">Viesti</target></trans-unit>
+            <trans-unit id="contactform.element.message.properties.placeholder" approved="yes">
+                <source>Message</source> <target state="translated">Viesti</target></trans-unit>
+            <trans-unit id="contactform.element.summary.properties.label" approved="yes">
+                <source>Summary</source> <target state="translated">Yhteenveto</target></trans-unit>
+
+            <trans-unit id="cookieconsent.common.header" approved="yes">
+                <source>Cookies used on the website!</source> <target state="translated">Evästeiden käyttö nettisivuilla!</target></trans-unit>
+            <trans-unit id="cookieconsent.common.message" approved="yes">
+                <source>This website uses cookies to ensure you get the best experience on our website.</source> <target state="translated">Käytämme evästeitä parhaan mahdollisen kokemuksen luomiseksi sivuillamme.</target></trans-unit>
+            <trans-unit id="cookieconsent.common.dismiss" approved="yes">
+                <source>Got it!</source> <target state="translated">Ymmärsin!</target></trans-unit>
+            <trans-unit id="cookieconsent.common.allow" approved="yes">
+                <source>Allow cookies</source> <target state="translated">Salli evästeet</target></trans-unit>
+            <trans-unit id="cookieconsent.common.deny" approved="yes">
+                <source>Decline</source> <target state="translated">Älä salli</target></trans-unit>
+            <trans-unit id="cookieconsent.common.link" approved="yes">
+                <source>Learn more</source> <target state="translated">Lue lisää</target></trans-unit>
+
+            <trans-unit id="googleanalyticsstatus.title" approved="yes">
+                <source>Google Analytics Status</source> <target state="translated">Google analytiikka</target></trans-unit>
+            <trans-unit id="googleanalyticsstatus.description" approved="yes">
+                <source>Here you can object to the anonymous collection by Google Analytics on this website for your browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a different computer or web browser, you will need to re-set the exclusion.</source> <target state="translated">Täällä voit kieltää selaimesi Google Analyticsin tuntematonta kokoelmaa tällä verkkosivustollasi käyttämällä poissulkemisevästettä. Huomaa, että jos poistat poissulkemisevästeen tai käytät toista tietokonetta tai verkkoselainta, sinun on asetettava poissulkeminen uudelleen.</target></trans-unit>
+            <trans-unit id="googleanalyticsstatus.link.enable" approved="yes">
+                <source>Enable Google Analytics (Opt-In)</source> <target state="translated">Salli Google analytiikka (Opt-In)</target></trans-unit>
+            <trans-unit id="googleanalyticsstatus.link.disable" approved="yes">
+                <source>Deactivate Google Analytics (Opt-Out)</source> <target state="translated">Poista Google Analytiikka (Opt-Out)</target></trans-unit>
+
+        </body>
+    </file>
+</xliff>
