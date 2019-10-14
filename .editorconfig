@@ -55,12 +55,31 @@ indent_size = 3
 indent_style = space
 indent_size = 4
 
+# TSconfig
+[*.tsconfig]
+indent_style = space
+indent_size = 4
+
 # YML-Files
 [{*.yml,*.yaml}]
 indent_style = space
 indent_size = 4
 
-# package.json, composer.json or .travis.yml
-[{package.json,composer.json,.travis.yml}]
+# package.json
+[package.json]
 indent_style = space
+indent_size = 2
+
+# composer.json
+[composer.json]
+indent_style = space
+indent_size = 4
+
+# XLF-Files
+[*.xlf]
+indent_style = tab
+
+# SQL-Files
+[*.sql]
+indent_style = tab
 indent_size = 2
