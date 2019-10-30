@@ -48,13 +48,14 @@
     bottom: 0;
     width: 2.2rem;
     height: 2.2rem;
+    box-shadow: -3px -3px 6px white;
     line-height: 2.2rem;
     font-size: 2rem;
     text-align: center;
-    border-left: white 10px solid;
-    border-top: white 10px solid;
+    border-left: white 6px solid;
+    border-top: white 6px solid;
     background: tint($primary,50%);
-    color: contrast(tint($primary,50%));
+    color: color-yiq(tint($primary,50%));
     opacity: 0;
     transition: background 200ms, color 200ms, opacity 200ms;
     cursor: pointer;
