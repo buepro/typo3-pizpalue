@@ -28,7 +28,7 @@ if (1) {
 if (1) {
 
     // Add BackendLayouts for the BackendLayout DataProvider
-    if (!$bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
+    if (!(bool) $bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">'
         );

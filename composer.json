@@ -1,49 +1,50 @@
 {
-  "name": "buepro/typo3-pizpalue",
-  "type": "typo3-cms-extension",
-  "description": "TYPO3 pizpalue package",
-  "keywords": [
-    "TYPO3 CMS",
-    "sitepackage",
-    "bootstrap",
-    "responsive",
-    "frontend",
-    "theme",
-    "web"
-  ],
-  "homepage": "https://github.com/buepro/typo3-pizpalue",
-  "authors": [
-    {
-      "name": "Roman Büchler",
-      "email": "rb@buechler.pro",
-      "homepage": "https://www.buechler.pro/",
-      "role": "Developer"
+    "name": "buepro/typo3-pizpalue",
+    "type": "typo3-cms-extension",
+    "description": "TYPO3 pizpalue package",
+    "keywords": [
+        "TYPO3 CMS",
+        "sitepackage",
+        "bootstrap",
+        "responsive",
+        "frontend",
+        "theme",
+        "web"
+    ],
+    "homepage": "https://github.com/buepro/typo3-pizpalue",
+    "authors": [
+        {
+            "name": "Roman Büchler",
+            "email": "rb@buechler.pro",
+            "homepage": "https://www.buechler.pro/",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "typo3/cms-core": "^9.5",
+        "typo3/cms-impexp": "^9.5",
+        "bk2k/bootstrap-package": "^11.0",
+        "fluidtypo3/vhs": "^6.0",
+        "gridelementsteam/gridelements": "^9.4.2",
+        "bo/slickcarousel": "^3.0.2",
+        "svewap/ws-flexslider": "^1.5.12"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Buepro\\Pizpalue\\": "Classes"
+        }
+    },
+    "replace": {
+        "typo3-ter/pizpalue": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "pizpalue",
+            "web-dir": ""
+        }
     }
-  ],
-  "license": "MIT",
-  "require": {
-    "typo3/cms-core": "^9.5 || ~10.0.0 || 10.0.*@dev || 10.1.*@dev",
-    "typo3/cms-impexp": "^9.5 || ~10.0.0 || 10.0.*@dev || 10.1.*@dev",
-    "bk2k/bootstrap-package": "11.0 - 11.1",
-    "fluidtypo3/vhs": "~5.2.0",
-    "gridelementsteam/gridelements": "~9.3.0",
-    "bo/slickcarousel": "~3.0.2",
-    "svewap/ws-flexslider": "~1.5.10"
-  },
-  "require-dev": {
-    "roave/security-advisories": "dev-master"
-  },
-  "autoload": {
-    "psr-4": {
-      "Buepro\\Pizpalue\\": "Classes"
-    }
-  },
-  "replace": {
-    "pizpalue": "self.version"
-  },
-  "extra": {
-    "typo3/cms": {
-      "web-dir": ""
-    }
-  }
 }
