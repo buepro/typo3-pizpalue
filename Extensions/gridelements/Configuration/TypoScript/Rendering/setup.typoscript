@@ -1,3 +1,11 @@
+#===============================================================================================================
+#
+# DEPRECIATED since 11.1.2, will be removed in 12.0.0
+#
+# File will be removed.
+#
+#===============================================================================================================
+
 temp.pizpalue.gridelements_pi1.setup < tt_content.gridelements_pi1.20.10.setup
 tt_content.gridelements_pi1 {
    20 >

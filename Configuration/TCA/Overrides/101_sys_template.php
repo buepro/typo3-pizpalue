@@ -8,6 +8,9 @@
  */
 
 call_user_func(
+    /**
+     * @param $_EXTKEY
+     */
     function ($_EXTKEY) {
         /***************
          * Static templates
@@ -31,16 +34,6 @@ call_user_func(
             $_EXTKEY,
             'Configuration/TypoScript/ContentElement',
             'Pizpalue - Content elements'
-        );
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
-            'Extensions/gridelements/Configuration/TypoScript',
-            'Pizpalue - Gridelements CEs'
-        );
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
-            'Extensions/gridelements/Configuration/TypoScript/Rendering',
-            'Pizpalue - Gridelements rendering (include as last)'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
@@ -94,8 +87,37 @@ call_user_func(
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
-            'Extensions/tt_address/3.0.3/Configuration/TypoScript',
-            'Pizpalue DEPRECIATED - tt_address 3.0.3'
+            'Extensions/gridelements/Configuration/TypoScript/DataProcessingLibContentElement',
+            'Pizpalue - gridelements w/DataProcessing'
+        );
+        call_user_func(
+        /**
+         * @deprecated since version 11.1.2, will be removed in version 12.0.0
+         */
+            function ($_EXTKEY) {
+                $context = \TYPO3\CMS\Core\Core\Environment::getContext();
+                trigger_error(
+                    'Static extension templates are deprecated since version 11.1.2, will be removed in \
+                    version 12.0.0',
+                    E_USER_DEPRECATED
+                );
+                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+                    $_EXTKEY,
+                    'Extensions/gridelements/Configuration/TypoScript',
+                    'Pizpalue DEPRECIATED - Gridelements CEs'
+                );
+                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+                    $_EXTKEY,
+                    'Extensions/gridelements/Configuration/TypoScript/Rendering',
+                    'Pizpalue DEPRECIATED - Gridelements rendering (include as last)'
+                );
+                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+                    $_EXTKEY,
+                    'Extensions/tt_address/3.0.3/Configuration/TypoScript',
+                    'Pizpalue DEPRECIATED - tt_address 3.0.3'
+                );
+            },
+            $_EXTKEY
         );
     },
     'pizpalue'

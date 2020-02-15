@@ -16,11 +16,8 @@ tx_gridelements {
                }
             }
          }
-
-
          flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpContainer.xml
       }
-
 
       ppColumns2 {
          title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.twoColumnTitle
@@ -35,15 +32,12 @@ tx_gridelements {
                   name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column1
                   colPos = 101
                }
-
-
                columns.2 {
                   name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column2
                   colPos = 102
                }
             }
          }
-
          flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns2.xml
       }
 
@@ -62,7 +56,6 @@ tx_gridelements {
                }
             }
          }
-
          flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns3.xml
       }
 
@@ -81,7 +74,6 @@ tx_gridelements {
                }
             }
          }
-
          flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns4.xml
       }
 
@@ -100,7 +92,6 @@ tx_gridelements {
                }
             }
          }
-
          flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpTabs.xml
       }
 
@@ -119,7 +110,6 @@ tx_gridelements {
                }
             }
          }
-
          flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpAccordion.xml
       }
 
@@ -138,7 +128,6 @@ tx_gridelements {
                }
             }
          }
-
          flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpContainerFixed.xml
       }
    }

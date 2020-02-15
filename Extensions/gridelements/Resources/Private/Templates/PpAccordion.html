@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="accordion {f:if(condition:'{data.flexform_style}', then:'{data.flexform_style}')}"
+         id="accordion-{data.uid}">
+        <f:for each="{children}" as="content" iteration="iterator">
+            <div class="accordion-item card">
+                <div id="accordion-heading-{content.data.uid}" class="accordion-header card-header">
+                    <h4 class="accordion-title">
+                        <a class="accordion-title-link {f:if(condition:'{iterator.index}!=0', then:'collapsed')}"
+                           href="#accordion-{content.data.uid}"
+                           data-toggle="collapse" data-parent="#accordion-{data.uid}"
+                           aria-expand="{f:if(condition:'{iterator.index}==0', then:'true', else:'false')}"
+                           aria-controls="accordion-{content.data.uid}">
+                            <span class="accordion-title-link-text">{content.data.header}</span>
+                            <span class="accordion-title-link-state"></span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="accordion-{content.data.uid}"
+                     class="accordion-collapse collapse {f:if(condition:'{iterator.index}==0', then:'show')}"
+                     aria-labelledby="accordion-heading-{content.data.uid}"
+                     data-parent="#accordion-{data.uid}">
+                    <div class="accordion-body card-body">
+                        <v:content.render contentUids="{0: content.data.uid}"/>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</f:section>
+</html>

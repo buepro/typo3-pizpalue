@@ -1,3 +1,11 @@
+#===============================================================================================================
+#
+# DEPRECIATED since 11.1.2, will be removed in 12.0.0
+#
+# File will be removed.
+#
+#===============================================================================================================
+
 #============#
 # lib        #
 #============#
@@ -130,7 +138,7 @@ lib.pizpalue.gridelements {
    ppTabs {
       cObject = FLUIDTEMPLATE
       cObject {
-         file = EXT:pizpalue/Extensions/gridelements/Resources/Private/Templates/Tabs.html
+         file = EXT:pizpalue/Extensions/gridelements/Resources/Private/Templates/Depreciated/Tabs.html
       }
    }
 
@@ -138,7 +146,7 @@ lib.pizpalue.gridelements {
    ppAccordion {
       cObject = FLUIDTEMPLATE
       cObject {
-         file = EXT:pizpalue/Extensions/gridelements/Resources/Private/Templates/Accordion.html
+         file = EXT:pizpalue/Extensions/gridelements/Resources/Private/Templates/Depreciated/Accordion.html
       }
    }
 }

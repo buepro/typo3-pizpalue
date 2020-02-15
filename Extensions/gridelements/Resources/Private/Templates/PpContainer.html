@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+<f:section name="Main">
+    <f:if condition="{data.flexform_wrapSection} == '1'">
+        <f:then>
+            <div class="section section-default{f:if(condition: data.flexform_sectionClass, then: ' {data.flexform_sectionClass}')}">
+                <f:render section="renderContent" arguments="{_all}" />
+            </div>
+        </f:then>
+        <f:else>
+            <f:render section="renderContent" arguments="{_all}" />
+        </f:else>
+    </f:if>
+</f:section>
+<f:section name="renderContent">
+    {f:variable(name: 'css', value: ' {data.flexform_containerClass}') -> f:if(condition: data.flexform_containerClass)}
+    {f:variable(name: 'css', value: '{css} container-fluid') -> f:if(condition: '{data.flexform_isContainerFluid} == "1"')}
+    <div class="pp-container{css}" {data.flexform_containerAttribute -> f:format.htmlentitiesDecode()}>
+        <f:for each="{children}" as="item">
+            <v:content.render contentUids="{0: item.data.uid}"/>
+        </f:for>
+    </div>
+</f:section>
+</html>

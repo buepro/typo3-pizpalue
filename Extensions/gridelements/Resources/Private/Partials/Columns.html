@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+{f:variable(name: 'css', value: ' {data.flexform_rowClass}') -> f:if(condition: data.flexform_rowClass)}
+{f:variable(name: 'css', value: '{css} pp-row-collapse')
+    -> f:if(condition: '{data.flexform_collapseElement} > 1')}
+{f:variable(name: 'collapse', value: 1)
+    -> f:if(condition: '{data.flexform_collapseElement} == 1 || {data.flexform_collapseElement} == 3')}
+
+<div class="row{css}">
+    {f:render(partial: 'Column', arguments: '{content: children.1.101, defaultCss: data.flexform_defaultColumn1,
+        customCss: data.flexform_customColumn1, collapse: collapse}') -> f:if(condition: children.1.101)}
+    {f:render(partial: 'Column', arguments: '{content: children.1.102, defaultCss: data.flexform_defaultColumn2,
+        customCss: data.flexform_customColumn2, collapse: collapse}') -> f:if(condition: children.1.102)}
+    {f:render(partial: 'Column', arguments: '{content: children.1.103, defaultCss: data.flexform_defaultColumn3,
+        customCss: data.flexform_customColumn3, collapse: collapse}') -> f:if(condition: children.1.103)}
+    {f:render(partial: 'Column', arguments: '{content: children.1.104, defaultCss: data.flexform_defaultColumn4,
+        customCss: data.flexform_customColumn4, collapse: collapse}') -> f:if(condition: children.1.104)}
+</div>
+</html>

@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+{f:variable(name: 'css', value: ' {defaultCss}') -> f:if(condition: defaultCss)}
+{f:variable(name: 'css', value: '{css} {customCss}') -> f:if(condition: customCss)}
+{f:variable(name: 'css', value: '{css} pp-col-collapse') -> f:if(condition: collapse)}
+
+<div class="pp-col{css}">
+    <f:for each="{content}" as="item">
+        <v:content.render contentUids="{0: item.data.uid}"/>
+    </f:for>
+</div>
+</html>

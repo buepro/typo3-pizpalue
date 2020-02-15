@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div id="tabpanel-{data.uid}"
+         class="tabpanel {f:if(condition:'{data.flexform_style}', then:'{data.flexform_style}')}"
+         role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+            <f:for each="{children}" as="content" iteration="iterator">
+                <li class="nav-item">
+                    <a id="tab-{content.data.uid}"
+                       class="nav-link {f:if(condition:'{iterator.index}==0',then:'active')}"
+                       href="#tab-content-{content.data.uid}"
+                       data-toggle="tab"
+                       role="tab"
+                       aria-controls="tab-content-{content.data.uid}"
+                       aria-selected="{f:if(condition:'{iterator.index}==0',then:'true',else:'false')}">
+                        {content.data.header}
+                    </a>
+                </li>
+            </f:for>
+        </ul>
+        <div class="tab-content">
+            <f:for each="{children}" as="content" iteration="iterator">
+                <div id="tab-content-{content.data.uid}"
+                     class="tab-pane fade {f:if(condition:'{iterator.index}==0',then:'show active')}"
+                     role="tabpanel"
+                     aria-labelledby="tab-{content.data.uid}">
+                    <v:content.render contentUids="{0: content.data.uid}"/>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</f:section>
+</html>

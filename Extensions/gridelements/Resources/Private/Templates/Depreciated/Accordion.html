@@ -1,4 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:comment>
+    DEPRECIATED since 11.1.2, will be removed in 12.0.0
+</f:comment>
 <div class="accordion {f:if(condition:'{data.flexform_style}', then:'{data.flexform_style}')}"
      id="accordion-{data.uid}">
     <f:for each="{data.tx_gridelements_view_children}" as="content" iteration="iterator">

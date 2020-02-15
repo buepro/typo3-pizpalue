@@ -1,0 +1,36 @@
+tt_content.gridelements_pi1 {
+    templateRootPaths {
+        20 = EXT:pizpalue/Extensions/gridelements/Resources/Private/Templates/
+    }
+    partialRootPaths {
+        20 = EXT:pizpalue/Extensions/gridelements/Resources/Private/Partials/
+    }
+    dataProcessing {
+        10 {
+            ppContainer {
+                options {
+                    respectRows = 0
+                    respectColumns = 0
+                }
+            }
+            ppContainerFixed {
+                options {
+                    respectRows = 0
+                    respectColumns = 0
+                }
+            }
+            ppTabs {
+                options {
+                    respectRows = 0
+                    respectColumns = 0
+                }
+            }
+            ppAccordion {
+                options {
+                    respectRows = 0
+                    respectColumns = 0
+                }
+            }
+        }
+    }
+}
