@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /*
  * This file is part of the package buepro/pizpalue.
@@ -9,8 +10,7 @@
 
 namespace Buepro\Pizpalue\Extensions\Form\Finishers;
 
-use
-    TYPO3\CMS\Fluid\View\StandaloneView;
+use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\CMS\Form\Domain\Finishers\Exception\FinisherException;
 use TYPO3\CMS\Form\Domain\Runtime\FormRuntime;
 
