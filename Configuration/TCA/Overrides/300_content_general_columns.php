@@ -12,8 +12,7 @@ defined('TYPO3_MODE') || die();
 /**
  * Adds fields to content elements
  */
-call_user_func(function () {
-
+(function () {
     /**
      * Defines columns
      */
@@ -239,4 +238,4 @@ call_user_func(function () {
             'after: filelink_sorting'
         );
     }
-});
+})();

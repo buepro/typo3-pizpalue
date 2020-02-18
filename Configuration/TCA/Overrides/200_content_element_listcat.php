@@ -9,8 +9,7 @@
 
 defined('TYPO3_MODE') || die();
 
-call_user_func(function ($extensionKey) {
-
+(function ($extensionKey) {
     /**
      * Enables Content Element
      */
@@ -87,4 +86,4 @@ call_user_func(function ($extensionKey) {
         'FILE:EXT:pizpalue/Configuration/FlexForms/ListCategorizedContent.xml',
         'pp_list_categorized_content'
     );
-}, 'pizpalue');
+})('pizpalue');
