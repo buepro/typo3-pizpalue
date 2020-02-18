@@ -45,7 +45,7 @@ page.theme {
         }
 
         # cat=6060/1080/1290; type=options[Informal=info, Opt-In=opt-in, Opt-Out=opt-out]; label=Compliance: The informal confirmation does not require any further adjustments to your JavaScript. The Opt-In and Opt-Out options are not out-of-the-box solutions, manual adjustments to your software are necessary. For your support we provide the events bk2k.cookie.enable, bk2k.cookie.disable and bk2k.cookie.revoke. These events allow you to let your application react to them and to set or remove cookies accordingly. The cookie that contains the current status is called cookieconsent_status.
-        type = info
+        type = opt-in
 
         cookie {
             # cat=6060/1080/1300; type=int; label=Expiry Days: The cookies expire date, specified in days (specify -1 for no expiry)

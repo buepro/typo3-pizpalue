@@ -7,10 +7,10 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
         readmore = Read more
         cookieconsent.common {
             header = This website uses cookies.
-            message = This website uses cookies to ensure you get the best experience on our website.
+            message = This website might use cookies to ensure you get the best experience on our website.
             dismiss = Got it!
-            allow = Allow
-            deny = Decline
+            allow = Allow cookies
+            deny = Decline cookies
             link = Learn more
         }
 
@@ -27,10 +27,10 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
         form.selectfile = Datei wählen
         cookieconsent.common {
             header = Diese Webseite setzt Cookies ein.
-            message = Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies eingesetzt.
+            message = Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, können Cookies eingesetzt werden.
             dismiss = Alles klar!
             allow = Cookies erlauben
-            deny = Ablehnen
+            deny = Cookies ablehnen
             link = Mehr erfahren
         }
 
@@ -47,11 +47,11 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
         form.selectfile = Sélectionner le fichier
         cookieconsent.common {
             header = Ce site web utilise des cookies.
-            message = Les cookies sont utilisés pour vous permettre une utilisation optimale de notre site web.
+            message = Afin de vous permettre d'utiliser notre site web de manière optimale, des cookies peuvent être utilisés.
             dismiss = Je l'ai!
             allow = Autoriser cookies
-            deny = Décliner
-            link = En savoir plus
+            deny = Décliner cookies
+            link = Refuser cookies
         }
 
         googleanalyticsstatus {
@@ -59,6 +59,26 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
             description = Vous pouvez vous opposer à la collecte anonyme de Google Analytics sur ce site Web pour votre navigateur en utilisant un "Opt-Out-Cookie". Veuillez noter que si vous supprimez le témoin d'exclusion ou si vous utilisez un ordinateur ou un navigateur Web différent, vous devrez réinitialiser l'exclusion.
             link.enable = Activer Google Analytics (Opt-In)
             link.disable = Désactiver Google Analytics (Opt-Out)
+        }
+    }
+
+    fi {
+        readmore = Lue lisää
+        form.selectfile = Valitse tiedosto
+        cookieconsent.common {
+            header = Tämä sivusto käyttää evästeitä.
+            message = Tämä sivusto saattaa käyttää evästeitä saavuttaaksesi parhaan kokemuksen sivustollamme.
+            dismiss = Ymmärsin!
+            allow = Salli evästeet
+            deny = Älä salli evästeitä
+            link = Opi lisää
+        }
+
+        googleanalyticsstatus {
+            title = Google analytiikan tila
+            description = Täällä voit estää selaintasi käyttämästä Google Analytiikkaa tällä verkkosivustollasi käyttämällä poissulkemisevästettä. Huomaa, että jos poistat poissulkemisevästeen tai käytät toista tietokonetta tai verkkoselainta, sinun on asetettava poissulkeminen uudelleen.
+            link.enable = Hyväksy Google analytiikka(hyväksy valinta)
+            link.disable = Hylkää Google analytiikka (poista valinta)
         }
     }
 }
