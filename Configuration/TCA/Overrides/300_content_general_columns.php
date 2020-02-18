@@ -172,6 +172,14 @@ call_user_func(function () {
                     ],
                 ],
             ],
+            'tx_pizpalue_image_scaling' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_scaling',
+                'config' => [
+                    'type' => 'text',
+                    'default' => implode(','.chr(10),['xl: 1.0', 'lg: 1.0', 'md: 1.0', 'sm: 1.0', 'xs: 1.0']),
+                ]
+            ],
 
         ];
 
@@ -194,6 +202,9 @@ call_user_func(function () {
             tx_pizpalue_style,--linebreak--,
             tx_pizpalue_attributes
         ',
+        ];
+        $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_imagesize'] = [
+            'showitem' => 'tx_pizpalue_image_scaling, tx_pizpalue_image_variants',
         ];
     }
 
@@ -223,7 +234,7 @@ call_user_func(function () {
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
             'tt_content',
-            'tx_pizpalue_image_variants',
+            '--palette--;;pizpalue_imagesize',
             '',
             'after: filelink_sorting'
         );

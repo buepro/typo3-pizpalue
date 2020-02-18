@@ -27,7 +27,7 @@ pizpalue
       pizpalue, distribution, bootstrap, bootstrap_package
 
    :Copyright:
-      2017-2019
+      2017-2020
 
    :Author:
       Roman Büchler
@@ -47,8 +47,7 @@ pizpalue
 
 
 
-Table of Contents
-=================
+   ***Table of Contents***
 
 .. toctree::
    :maxdepth: 2

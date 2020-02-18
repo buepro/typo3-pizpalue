@@ -69,6 +69,29 @@ In case one likes to use images in a content element spanning a different width 
 resolution might result to be too small resulting in not sharp images. For this situation the image variant selector
 has been introduced allowing to adapt the image rendering to different sizes (e.g. "Full page width").
 
+Image scaling
+~~~~~~~~~~~~~
+
+The image sizes for the different screen sizes are defined by the selected image variants as well as the image column
+count.
+
+Some times an editor adds additional elements for structuring the content area resulting in a smaller available space
+for images. To deliver the optimal image size under such conditions a scaling can be defined.
+
+As an example consider adding a two column grid element with the first column being 33% and the second column 67% from
+the content width. Let's assume the two columns to be next to each other for screen sizes bigger than md. Now when
+adding an image to the first column (33% width) the rendered image would be two times bigger than needed (due to the
+system not knowing how much space is available in the column). To deliver optimal sized images the following scaling
+definition could be used:
+
+.. code-block:: text
+
+   xl: 0.33,
+   lg: 0.33,
+   md: 0.33,
+   sm: 1.0,
+   xs: 1.0
+
 .. _user-design-appearance-tab:
 
 Appearance tab

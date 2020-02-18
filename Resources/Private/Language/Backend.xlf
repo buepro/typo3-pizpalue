@@ -1,165 +1,165 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2018-10-11T09:11:39Z"
-          product-name="pizpalue">
-        <header/>
-        <body>
-            <trans-unit id="backend_layout.column.subnav">
-                <source>Sub Navigation</source>
-            </trans-unit>
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-10-11T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="backend_layout.column.subnav">
+				<source>Sub Navigation</source>
+			</trans-unit>
 
-            <trans-unit id="backend_layout.fullwidth_clean">
-                <source>Full width clean</source>
-            </trans-unit>
+			<trans-unit id="backend_layout.fullwidth_clean">
+				<source>Full width clean</source>
+			</trans-unit>
 
-            <trans-unit id="backend_layout.fullwidth_default">
-                <source>Full width default</source>
-            </trans-unit>
+			<trans-unit id="backend_layout.fullwidth_default">
+				<source>Full width default</source>
+			</trans-unit>
 
-            <trans-unit id="constCategory.admin">
-                <source>pizpalue: administration</source>
-            </trans-unit>
-            <trans-unit id="constCategory.customerBase">
-                <source>pizpalue: customer base</source>
-            </trans-unit>
-            <trans-unit id="constCategory.customerStyle">
-                <source>pizpalue: customer style</source>
-            </trans-unit>
-            <trans-unit id="constCategory.customerSocial">
-                <source>pizpalue: customer social</source>
-            </trans-unit>
-            <trans-unit id="constCategory.customerExtended">
-                <source>pizpalue: customer extended</source>
-            </trans-unit>
-            <trans-unit id="constCategory.customerPlugins">
-                <source>pizpalue: plugins</source>
-            </trans-unit>
+			<trans-unit id="constCategory.admin">
+				<source>pizpalue: administration</source>
+			</trans-unit>
+			<trans-unit id="constCategory.customerBase">
+				<source>pizpalue: customer base</source>
+			</trans-unit>
+			<trans-unit id="constCategory.customerStyle">
+				<source>pizpalue: customer style</source>
+			</trans-unit>
+			<trans-unit id="constCategory.customerSocial">
+				<source>pizpalue: customer social</source>
+			</trans-unit>
+			<trans-unit id="constCategory.customerExtended">
+				<source>pizpalue: customer extended</source>
+			</trans-unit>
+			<trans-unit id="constCategory.customerPlugins">
+				<source>pizpalue: plugins</source>
+			</trans-unit>
 
-            <trans-unit id="constSubCategory.general">
-                <source>General</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.agency">
-                <source>Agency</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.customer">
-                <source>Customer</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.scaffold">
-                <source>Scaff</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.colors">
-                <source>Colors</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.font">
-                <source>Font</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.header">
-                <source>Header</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.footer">
-                <source>Footer</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.various">
-                <source>Various</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.depreciated">
-                <source>Depreciated</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.logo">
-                <source>Logo</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.menu">
-                <source>Menu</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.cookieConsent">
-                <source>Cookie consent</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.appicon">
-                <source>Appicon</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.storage">
-                <source>Storage</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.seo">
-                <source>SEO</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.features">
-                <source>Features</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.animation">
-                <source>Animation</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.newsRSSFeed">
-                <source>News RSS feed</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.ttaddressGoogleMap">
-                <source>Addresses Google Map (tt_address)</source>
-            </trans-unit>
-            <trans-unit id="constSubCategory.ttaddressTeaser">
-                <source>Addresses Teaser (tt_address)</source>
-            </trans-unit>
+			<trans-unit id="constSubCategory.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.agency">
+				<source>Agency</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.customer">
+				<source>Customer</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.scaffold">
+				<source>Scaff</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.colors">
+				<source>Colors</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.font">
+				<source>Font</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.footer">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.various">
+				<source>Various</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.depreciated">
+				<source>Depreciated</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.menu">
+				<source>Menu</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.cookieConsent">
+				<source>Cookie consent</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.appicon">
+				<source>Appicon</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.storage">
+				<source>Storage</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.seo">
+				<source>SEO</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.features">
+				<source>Features</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.animation">
+				<source>Animation</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.newsRSSFeed">
+				<source>News RSS feed</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.ttaddressGoogleMap">
+				<source>Addresses Google Map (tt_address)</source>
+			</trans-unit>
+			<trans-unit id="constSubCategory.ttaddressTeaser">
+				<source>Addresses Teaser (tt_address)</source>
+			</trans-unit>
 
-            <trans-unit id="ce_modal_dialog.button_class">
-                <source>Button class</source>
-            </trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class">
-                <source>Dialog class</source>
-            </trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class.sm">
-                <source>Small dialog</source>
-            </trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class.md">
-                <source>Default dialog</source>
-            </trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class.lg">
-                <source>Large dialog</source>
-            </trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class.xl">
-                <source>Extra large dialog</source>
-            </trans-unit>
-            <trans-unit id="ce_modal_dialog.title">
-                <source>Modal Dialog</source>
-            </trans-unit>
-            <trans-unit id="ce_modal_dialog.description">
-                <source>Renders a button to show content in a modal dialog window.</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.title">
-                <source>List categorized content</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.description">
-                <source>Lists content elements from selected categories.</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.general">
-                <source>General</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_count">
-                <source>Item count</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.collapsible">
-                <source>Collapsible</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.collapse">
-                <source>Collapse</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height">
-                <source>Height from list item</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height_sm">
-                <source>SM-Height from list item (screen width > 575px)</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height_md">
-                <source>MD-Height from list item (screen width > 767px)</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height_lg">
-                <source>LG-Height from list item (screen width > 991px)</source>
-            </trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height_xl">
-                <source>XL-Height from list item (screen width > 1199px)</source>
-            </trans-unit>
+			<trans-unit id="ce_modal_dialog.button_class">
+				<source>Button class</source>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class">
+				<source>Dialog class</source>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class.sm">
+				<source>Small dialog</source>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class.md">
+				<source>Default dialog</source>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class.lg">
+				<source>Large dialog</source>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class.xl">
+				<source>Extra large dialog</source>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.title">
+				<source>Modal Dialog</source>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.description">
+				<source>Renders a button to show content in a modal dialog window.</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.title">
+				<source>List categorized content</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.description">
+				<source>Lists content elements from selected categories.</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_count">
+				<source>Item count</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.collapsible">
+				<source>Collapsible</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.collapse">
+				<source>Collapse</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height">
+				<source>Height from list item</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height_sm">
+				<source>SM-Height from list item (screen width > 575px)</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height_md">
+				<source>MD-Height from list item (screen width > 767px)</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height_lg">
+				<source>LG-Height from list item (screen width > 991px)</source>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height_xl">
+				<source>XL-Height from list item (screen width > 1199px)</source>
+			</trans-unit>
 
-            <trans-unit id="ext_conf.installCustomerExtension">
-                <source>Install pizpalue with customer extension</source>
-            </trans-unit>
-        </body>
-    </file>
+			<trans-unit id="ext_conf.installCustomerExtension">
+				<source>Install pizpalue with customer extension</source>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>

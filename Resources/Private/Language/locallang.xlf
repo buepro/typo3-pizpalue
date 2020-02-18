@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
-          product-name="pizpalue">
-        <header/>
-        <body>
-            <trans-unit id="close">
-                <source>Close</source>
-            </trans-unit>
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="close">
+				<source>Close</source>
+			</trans-unit>
 
-            <trans-unit id="ppCeFrame1">
-                <source>Custom frame 1</source>
-            </trans-unit>
-            <trans-unit id="ppCeFrame2">
-                <source>Custom frame 2</source>
-            </trans-unit>
-            <trans-unit id="ppCeFrame3">
-                <source>Custom frame 3</source>
-            </trans-unit>
-            <trans-unit id="ppCeFrame4">
-                <source>Custom frame 4</source>
-            </trans-unit>
+			<trans-unit id="ppCeFrame1">
+				<source>Custom frame 1</source>
+			</trans-unit>
+			<trans-unit id="ppCeFrame2">
+				<source>Custom frame 2</source>
+			</trans-unit>
+			<trans-unit id="ppCeFrame3">
+				<source>Custom frame 3</source>
+			</trans-unit>
+			<trans-unit id="ppCeFrame4">
+				<source>Custom frame 4</source>
+			</trans-unit>
 
-            <trans-unit id="ppCefAnimation1">
-                <source>Custom animation 1 (depreciated)</source>
-            </trans-unit>
-            <trans-unit id="ppCefAnimation2">
-                <source>Custom animation 2 (depreciated)</source>
-            </trans-unit>
-            <trans-unit id="ppCefAnimation3">
-                <source>Custom animation 3 (depreciated)</source>
-            </trans-unit>
+			<trans-unit id="ppCefAnimation1">
+				<source>Custom animation 1 (depreciated)</source>
+			</trans-unit>
+			<trans-unit id="ppCefAnimation2">
+				<source>Custom animation 2 (depreciated)</source>
+			</trans-unit>
+			<trans-unit id="ppCefAnimation3">
+				<source>Custom animation 3 (depreciated)</source>
+			</trans-unit>
 
-            <trans-unit id="ppCefScrollAnimation1">
-                <source>Custom scroll animation 1 (depreciated)</source>
-            </trans-unit>
-            <trans-unit id="ppCefScrollAnimation2">
-                <source>Custom scroll animation 2 (depreciated)</source>
-            </trans-unit>
-            <trans-unit id="ppCefScrollAnimation3">
-                <source>Custom scroll animation 3 (depreciated)</source>
-            </trans-unit>
+			<trans-unit id="ppCefScrollAnimation1">
+				<source>Custom scroll animation 1 (depreciated)</source>
+			</trans-unit>
+			<trans-unit id="ppCefScrollAnimation2">
+				<source>Custom scroll animation 2 (depreciated)</source>
+			</trans-unit>
+			<trans-unit id="ppCefScrollAnimation3">
+				<source>Custom scroll animation 3 (depreciated)</source>
+			</trans-unit>
 
-            <trans-unit id="cookieconsent.common.header">
-                <source>Cookies used on the website!</source>
-            </trans-unit>
-            <trans-unit id="cookieconsent.common.message">
-                <source>This website uses cookies to ensure you get the best experience on our website.</source>
-            </trans-unit>
-            <trans-unit id="cookieconsent.common.dismiss">
-                <source>Got it!</source>
-            </trans-unit>
-            <trans-unit id="cookieconsent.common.allow">
-                <source>Allow cookies</source>
-            </trans-unit>
-            <trans-unit id="cookieconsent.common.deny">
-                <source>Decline</source>
-            </trans-unit>
-            <trans-unit id="cookieconsent.common.link">
-                <source>Learn more</source>
-            </trans-unit>
+			<trans-unit id="cookieconsent.common.header">
+				<source>Cookies used on the website!</source>
+			</trans-unit>
+			<trans-unit id="cookieconsent.common.message">
+				<source>This website uses cookies to ensure you get the best experience on our website.</source>
+			</trans-unit>
+			<trans-unit id="cookieconsent.common.dismiss">
+				<source>Got it!</source>
+			</trans-unit>
+			<trans-unit id="cookieconsent.common.allow">
+				<source>Allow cookies</source>
+			</trans-unit>
+			<trans-unit id="cookieconsent.common.deny">
+				<source>Decline</source>
+			</trans-unit>
+			<trans-unit id="cookieconsent.common.link">
+				<source>Learn more</source>
+			</trans-unit>
 
-            <trans-unit id="googleanalyticsstatus.title">
-                <source>Google Analytics Status</source>
-            </trans-unit>
-            <trans-unit id="googleanalyticsstatus.description">
-                <source>Here you can object to the anonymous collection by Google Analytics on this website for your
-                    browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a
-                    different computer or web browser, you will need to re-set the exclusion.
-                </source>
-            </trans-unit>
-            <trans-unit id="googleanalyticsstatus.link.enable">
-                <source>Enable Google Analytics (Opt-In)</source>
-            </trans-unit>
-            <trans-unit id="googleanalyticsstatus.link.disable">
-                <source>Deactivate Google Analytics (Opt-Out)</source>
-            </trans-unit>
-        </body>
-    </file>
+			<trans-unit id="googleanalyticsstatus.title">
+				<source>Google Analytics Status</source>
+			</trans-unit>
+			<trans-unit id="googleanalyticsstatus.description">
+				<source>Here you can object to the anonymous collection by Google Analytics on this website for your
+					browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a
+					different computer or web browser, you will need to re-set the exclusion.
+				</source>
+			</trans-unit>
+			<trans-unit id="googleanalyticsstatus.link.enable">
+				<source>Enable Google Analytics (Opt-In)</source>
+			</trans-unit>
+			<trans-unit id="googleanalyticsstatus.link.disable">
+				<source>Deactivate Google Analytics (Opt-Out)</source>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>

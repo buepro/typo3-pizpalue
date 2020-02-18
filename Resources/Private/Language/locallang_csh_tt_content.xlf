@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-02-17T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="tx_pizpalue_image_scaling.description">
+				<source>Allows to define a scaling for the available screen sizes.</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_image_scaling.details">
+				<source>The image sizes for the different screen sizes are defined by the selected image variants as well as the image column count.
+
+Some times an editor adds additional elements for structuring the content area resulting in a smaller available space for images. To deliver the optimal image size under such conditions a scaling can be defined.
+
+As an example consider adding a two column grid element with the first column being 33% and the second column 67% from the content width. Let's assume the two columns to be next to each other for screen sizes bigger than md. Now when adding an image to the first column (33% width) the rendered image would be two times bigger than needed (due to the system not knowing how much space is available in the column). To deliver optimal sized images the following scaling definition could be used:
+
+xl: 0.33,
+lg: 0.33,
+md: 0.33,
+sm: 1.0,
+xs: 1.0
+				</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

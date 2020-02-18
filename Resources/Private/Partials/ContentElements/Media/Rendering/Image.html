@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+{v:format.trim(content: data.tx_pizpalue_image_scaling)
+    -> v:iterator.explode(glue: ',')
+    -> v:iterator.filter(nullFilter: 1, invert: 1)
+    -> f:variable(name: 'scalingLines')}
+
+{f:variable(name: 'scaling', value: '{xs: 0, sm: 0, md: 0, lg: 0, xl: 0}')}
+<f:for each="{scalingLines}" as="scalingLine" key="key">
+    {v:iterator.explode(content: scalingLine, glue: ':') -> f:variable(name: 'scalingParts')}
+    {v:format.trim(content: scalingParts.0) -> f:variable(name: 'scalingIndex')}
+    {v:format.trim(content: scalingParts.1) -> v:variable.set(name: 'scaling.{scalingIndex}')}
+</f:for>
+<f:variable name="scaling" value="{
+    default: scaling.xl,
+    large: scaling.lg,
+    medium: scaling.md,
+    small: scaling.sm,
+    extrasmall: scaling.xs
+}" />
+<picture>
+    <f:for each="{variants}" key="name" as="variant">
+        <f:variable name="breakpoint">{variant.breakpoint as integer}</f:variable>
+        <f:variable name="width">{variant.width as integer}</f:variable>
+        <f:if condition="{width}">
+            <f:variable name="mediaQuery">{f:if(condition: breakpoint, then: 'media="(min-width: {breakpoint}px)"')}</f:variable>
+            <f:if condition="{variant.sizes}">
+                <f:variable name="srcset" value="" />
+                <f:for each="{variant.sizes}" key="sizeKey" as="sizeConfig" iteration="iteration">
+                    <f:variable name="sizeWidth">{sizeConfig.multiplier as float}</f:variable>
+                    <f:variable name="sizeWidth">{sizeWidth * width}</f:variable>
+                    <f:variable name="sizeWidth">{v:math.product(a: sizeWidth, b: '{scaling.{name}}')}</f:variable>
+                    <f:variable name="srcset">{srcset}{f:uri.image(image: file, cropVariant: name, maxWidth: sizeWidth)} {sizeKey}{f:if(condition: iteration.isLast, else: ',')}</f:variable>
+                </f:for>
+            </f:if>
+            <source data-variant="{name}" data-maxwidth="{width}" {mediaQuery->f:format.raw()} srcset="{srcset}">
+        </f:if>
+    </f:for>
+    {v:math.product(a: variants.default.width, b: scaling.default) -> f:variable(name: 'defaultMaxWidth')}
+    <img loading="lazy" src="{f:uri.image(image: file, cropVariant: 'default', maxWidth: defaultMaxWidth)}" width="{bk2k:lastImageInfo(property: 'width')}" height="{bk2k:lastImageInfo(property: 'height')}" intrinsicsize="{bk2k:lastImageInfo(property: 'width')}x{bk2k:lastImageInfo(property: 'height')}" title="{file.properties.title}" alt="{file.properties.alternative}">
+</picture>
+</html>

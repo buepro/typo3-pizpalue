@@ -1,114 +1,216 @@
 <?xml version='1.0' encoding='utf-8'?>
 <xliff version="1.0">
-    <file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2019-10-13T09:11:39Z" product-name="pizpalue">
-        <header/>
-        <body>
-            <trans-unit id="backend_layout.column.subnav" approved="yes">
-                <source>Sub Navigation</source> <target state="translated">Alanavigointi</target></trans-unit>
+	<file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2019-10-13T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="backend_layout.column.subnav" approved="yes">
+				<source>Sub Navigation</source>
+				<target state="translated">Alanavigointi</target>
+			</trans-unit>
 
-            <trans-unit id="backend_layout.fullwidth_clean" approved="yes">
-                <source>Full width clean</source> <target state="translated">Koko leveys puhdas</target></trans-unit>
+			<trans-unit id="backend_layout.fullwidth_clean" approved="yes">
+				<source>Full width clean</source>
+				<target state="translated">Koko leveys puhdas</target>
+			</trans-unit>
 
-            <trans-unit id="backend_layout.fullwidth_default" approved="yes">
-                <source>Full width default</source> <target state="translated">Koko leveys oletus</target></trans-unit>
+			<trans-unit id="backend_layout.fullwidth_default" approved="yes">
+				<source>Full width default</source>
+				<target state="translated">Koko leveys oletus</target>
+			</trans-unit>
 
-            <trans-unit id="constCategory.admin" approved="yes">
-                <source>pizpalue: administration</source> <target state="translated">pizpalue: Ylläpito</target></trans-unit>
-            <trans-unit id="constCategory.customerBase" approved="yes">
-                <source>pizpalue: customer base</source> <target state="translated">Pizpalue: Asiakaspohja</target></trans-unit>
-            <trans-unit id="constCategory.customerStyle" approved="yes">
-                <source>pizpalue: customer style</source> <target state="translated">Pizpalue: Asiakastyyli</target></trans-unit>
-            <trans-unit id="constCategory.customerSocial" approved="yes">
-                <source>pizpalue: customer social</source> <target state="translated">Pizpalue: Asiakas sosiaalinen</target></trans-unit>
-            <trans-unit id="constCategory.customerExtended" approved="yes">
-                <source>pizpalue: customer extended</source> <target state="translated">Pizpalue: Asiakas jatkettu</target></trans-unit>
-            <trans-unit id="constCategory.customerPlugins" approved="yes">
-                <source>pizpalue: plugins</source> <target state="translated">Pizpalue: Lisäosat</target></trans-unit>
+			<trans-unit id="constCategory.admin" approved="yes">
+				<source>pizpalue: administration</source>
+				<target state="translated">pizpalue: Ylläpito</target>
+			</trans-unit>
+			<trans-unit id="constCategory.customerBase" approved="yes">
+				<source>pizpalue: customer base</source>
+				<target state="translated">Pizpalue: Asiakaspohja</target>
+			</trans-unit>
+			<trans-unit id="constCategory.customerStyle" approved="yes">
+				<source>pizpalue: customer style</source>
+				<target state="translated">Pizpalue: Asiakastyyli</target>
+			</trans-unit>
+			<trans-unit id="constCategory.customerSocial" approved="yes">
+				<source>pizpalue: customer social</source>
+				<target state="translated">Pizpalue: Asiakas sosiaalinen</target>
+			</trans-unit>
+			<trans-unit id="constCategory.customerExtended" approved="yes">
+				<source>pizpalue: customer extended</source>
+				<target state="translated">Pizpalue: Asiakas jatkettu</target>
+			</trans-unit>
+			<trans-unit id="constCategory.customerPlugins" approved="yes">
+				<source>pizpalue: plugins</source>
+				<target state="translated">Pizpalue: Lisäosat</target>
+			</trans-unit>
 
-            <trans-unit id="constSubCategory.general" approved="yes">
-                <source>General</source> <target state="translated">Yleiset</target></trans-unit>
-            <trans-unit id="constSubCategory.agency" approved="yes">
-                <source>Agency</source> <target state="translated">Toimisto</target></trans-unit>
-            <trans-unit id="constSubCategory.customer" approved="yes">
-                <source>Customer</source> <target state="translated">Asiakas</target></trans-unit>
-            <trans-unit id="constSubCategory.scaffold" approved="yes">
-                <source>Scaff</source> <target state="translated">Kehys</target></trans-unit>
-            <trans-unit id="constSubCategory.colors" approved="yes">
-                <source>Colors</source> <target state="translated">Värit</target></trans-unit>
-            <trans-unit id="constSubCategory.font" approved="yes">
-                <source>Font</source> <target state="translated">Fontti</target></trans-unit>
-            <trans-unit id="constSubCategory.header" approved="yes">
-                <source>Header</source> <target state="translated">Ylätunniste</target></trans-unit>
-            <trans-unit id="constSubCategory.footer" approved="yes">
-                <source>Footer</source> <target state="translated">Alatunniste</target></trans-unit>
-            <trans-unit id="constSubCategory.various" approved="yes">
-                <source>Various</source> <target state="translated">Lisäosat</target></trans-unit>
-            <trans-unit id="constSubCategory.depreciated" approved="yes">
-                <source>Depreciated</source> <target state="translated">Poistetut</target></trans-unit>
-            <trans-unit id="constSubCategory.logo" approved="yes">
-                <source>Logo</source> <target state="translated">Logo</target></trans-unit>
-            <trans-unit id="constSubCategory.menu" approved="yes">
-                <source>Menu</source> <target state="translated">Valikko</target></trans-unit>
-            <trans-unit id="constSubCategory.cookieConsent" approved="yes">
-                <source>Cookie consent</source> <target state="translated">Eväste suostumus</target></trans-unit>
-            <trans-unit id="constSubCategory.appicon" approved="yes">
-                <source>Appicon</source> <target state="translated">Sovelluskuvake</target></trans-unit>
-            <trans-unit id="constSubCategory.storage" approved="yes">
-                <source>Storage</source> <target state="translated">Tallennus</target></trans-unit>
-            <trans-unit id="constSubCategory.seo" approved="yes">
-                <source>SEO</source> <target state="translated">SEO</target></trans-unit>
-            <trans-unit id="constSubCategory.features" approved="yes">
-                <source>Features</source> <target state="translated">Ominaisuudet</target></trans-unit>
-            <trans-unit id="constSubCategory.animation" approved="yes">
-                <source>Animation</source> <target state="translated">Animaatio</target></trans-unit>
-            <trans-unit id="constSubCategory.newsRSSFeed" approved="yes">
-                <source>News RSS feed</source> <target state="translated">Uutiset RSS syöte</target></trans-unit>
-            <trans-unit id="constSubCategory.ttaddressGoogleMap" approved="yes">
-                <source>Addresses Google Map (tt_address)</source> <target state="translated">Osoitteet Google Map ( tt_osoite)</target></trans-unit>
-            <trans-unit id="constSubCategory.ttaddressTeaser" approved="yes">
-                <source>Addresses Teaser (tt_address)</source> <target state="translated">Osoiteet Esikatselu (tt_osoite)</target></trans-unit>
+			<trans-unit id="constSubCategory.general" approved="yes">
+				<source>General</source>
+				<target state="translated">Yleiset</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.agency" approved="yes">
+				<source>Agency</source>
+				<target state="translated">Toimisto</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.customer" approved="yes">
+				<source>Customer</source>
+				<target state="translated">Asiakas</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.scaffold" approved="yes">
+				<source>Scaff</source>
+				<target state="translated">Kehys</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.colors" approved="yes">
+				<source>Colors</source>
+				<target state="translated">Värit</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.font" approved="yes">
+				<source>Font</source>
+				<target state="translated">Fontti</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.header" approved="yes">
+				<source>Header</source>
+				<target state="translated">Ylätunniste</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.footer" approved="yes">
+				<source>Footer</source>
+				<target state="translated">Alatunniste</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.various" approved="yes">
+				<source>Various</source>
+				<target state="translated">Lisäosat</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.depreciated" approved="yes">
+				<source>Depreciated</source>
+				<target state="translated">Poistetut</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.logo" approved="yes">
+				<source>Logo</source>
+				<target state="translated">Logo</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.menu" approved="yes">
+				<source>Menu</source>
+				<target state="translated">Valikko</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.cookieConsent" approved="yes">
+				<source>Cookie consent</source>
+				<target state="translated">Eväste suostumus</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.appicon" approved="yes">
+				<source>Appicon</source>
+				<target state="translated">Sovelluskuvake</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.storage" approved="yes">
+				<source>Storage</source>
+				<target state="translated">Tallennus</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.seo" approved="yes">
+				<source>SEO</source>
+				<target state="translated">SEO</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.features" approved="yes">
+				<source>Features</source>
+				<target state="translated">Ominaisuudet</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.animation" approved="yes">
+				<source>Animation</source>
+				<target state="translated">Animaatio</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.newsRSSFeed" approved="yes">
+				<source>News RSS feed</source>
+				<target state="translated">Uutiset RSS syöte</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.ttaddressGoogleMap" approved="yes">
+				<source>Addresses Google Map (tt_address)</source>
+				<target state="translated">Osoitteet Google Map ( tt_osoite)</target>
+			</trans-unit>
+			<trans-unit id="constSubCategory.ttaddressTeaser" approved="yes">
+				<source>Addresses Teaser (tt_address)</source>
+				<target state="translated">Osoiteet Esikatselu (tt_osoite)</target>
+			</trans-unit>
 
-            <trans-unit id="ce_modal_dialog.button_class" approved="yes">
-                <source>Button class</source> <target state="translated">Painikeluokka</target></trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class" approved="yes">
-                <source>Dialog class</source> <target state="translated">Valintaikkunaluokka</target></trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class.sm" approved="yes">
-                <source>Small dialog</source> <target state="translated">Pieni valintaikkuna</target></trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class.md" approved="yes">
-                <source>Default dialog</source> <target state="translated">Oletusvalintaikkuna</target></trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class.lg" approved="yes">
-                <source>Large dialog</source> <target state="translated">Suuri valintaikkuna</target></trans-unit>
-            <trans-unit id="ce_modal_dialog.dialog_class.xl" approved="yes">
-                <source>Extra large dialog</source> <target state="translated">Erittäin suuri valintaikkuna</target></trans-unit>
-            <trans-unit id="ce_modal_dialog.title" approved="yes">
-                <source>Modal Dialog</source> <target state="translated">Ykityiskohtainen valintaikkuna</target></trans-unit>
-            <trans-unit id="ce_modal_dialog.description" approved="yes">
-                <source>Renders a button to show content in a modal dialog window.</source> <target state="translated">Muunna painike näyttämään sisältö yksityiskohtaisessa valintaikkunassa.</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.title" approved="yes">
-                <source>List categorized content</source> <target state="translated">Listaa kategorioitu sisältö</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.description" approved="yes">
-                <source>Lists content elements from selected categories.</source> <target state="translated">Listaa sisällön elementit valituista kategorioista.</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.general" approved="yes">
-                <source>General</source> <target state="translated">Yleiset</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_count" approved="yes">
-                <source>Item count</source> <target state="translated">Kohteiden lukumäärä</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.collapsible" approved="yes">
-                <source>Collapsible</source> <target state="translated">Tiivistettävä</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.collapse" approved="yes">
-                <source>Collapse</source> <target state="translated">Tiivistä</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height" approved="yes">
-                <source>Height from list item</source> <target state="translated">Listakohteen korkeus</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height_sm" approved="yes">
-                <source>SM-Height from list item (screen width &gt; 575px)</source> <target state="translated">SM-korkeus kohdelistasta (Näytön leveys &gt; 575px)</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height_md" approved="yes">
-                <source>MD-Height from list item (screen width &gt; 767px)</source> <target state="translated">MD-korkeus kohdelistasta (Näytön leveys &gt; 767px)</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height_lg" approved="yes">
-                <source>LG-Height from list item (screen width &gt; 991px)</source> <target state="translated">LG-korkeus kohdelistasta (Näytön leveys &gt; 991px)</target></trans-unit>
-            <trans-unit id="ce_list_categorized_content.item_height_xl" approved="yes">
-                <source>XL-Height from list item (screen width &gt; 1199px)</source> <target state="translated">XL-korkeus kohdelistasta (Näytön leveys &gt; 1199px)</target></trans-unit>
+			<trans-unit id="ce_modal_dialog.button_class" approved="yes">
+				<source>Button class</source>
+				<target state="translated">Painikeluokka</target>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class" approved="yes">
+				<source>Dialog class</source>
+				<target state="translated">Valintaikkunaluokka</target>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class.sm" approved="yes">
+				<source>Small dialog</source>
+				<target state="translated">Pieni valintaikkuna</target>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class.md" approved="yes">
+				<source>Default dialog</source>
+				<target state="translated">Oletusvalintaikkuna</target>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class.lg" approved="yes">
+				<source>Large dialog</source>
+				<target state="translated">Suuri valintaikkuna</target>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.dialog_class.xl" approved="yes">
+				<source>Extra large dialog</source>
+				<target state="translated">Erittäin suuri valintaikkuna</target>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.title" approved="yes">
+				<source>Modal Dialog</source>
+				<target state="translated">Ykityiskohtainen valintaikkuna</target>
+			</trans-unit>
+			<trans-unit id="ce_modal_dialog.description" approved="yes">
+				<source>Renders a button to show content in a modal dialog window.</source>
+				<target state="translated">Muunna painike näyttämään sisältö yksityiskohtaisessa valintaikkunassa.
+				</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.title" approved="yes">
+				<source>List categorized content</source>
+				<target state="translated">Listaa kategorioitu sisältö</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.description" approved="yes">
+				<source>Lists content elements from selected categories.</source>
+				<target state="translated">Listaa sisällön elementit valituista kategorioista.</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.general" approved="yes">
+				<source>General</source>
+				<target state="translated">Yleiset</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_count" approved="yes">
+				<source>Item count</source>
+				<target state="translated">Kohteiden lukumäärä</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.collapsible" approved="yes">
+				<source>Collapsible</source>
+				<target state="translated">Tiivistettävä</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.collapse" approved="yes">
+				<source>Collapse</source>
+				<target state="translated">Tiivistä</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height" approved="yes">
+				<source>Height from list item</source>
+				<target state="translated">Listakohteen korkeus</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height_sm" approved="yes">
+				<source>SM-Height from list item (screen width &gt; 575px)</source>
+				<target state="translated">SM-korkeus kohdelistasta (Näytön leveys &gt; 575px)</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height_md" approved="yes">
+				<source>MD-Height from list item (screen width &gt; 767px)</source>
+				<target state="translated">MD-korkeus kohdelistasta (Näytön leveys &gt; 767px)</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height_lg" approved="yes">
+				<source>LG-Height from list item (screen width &gt; 991px)</source>
+				<target state="translated">LG-korkeus kohdelistasta (Näytön leveys &gt; 991px)</target>
+			</trans-unit>
+			<trans-unit id="ce_list_categorized_content.item_height_xl" approved="yes">
+				<source>XL-Height from list item (screen width &gt; 1199px)</source>
+				<target state="translated">XL-korkeus kohdelistasta (Näytön leveys &gt; 1199px)</target>
+			</trans-unit>
 
-            <trans-unit id="ext_conf.installCustomerExtension" approved="yes">
-                <source>Install pizpalue with customer extension</source> <target state="translated">Asenna pizpalue asiakaslaajennuksen kanssa</target></trans-unit>
-        </body>
-    </file>
+			<trans-unit id="ext_conf.installCustomerExtension" approved="yes">
+				<source>Install pizpalue with customer extension</source>
+				<target state="translated">Asenna pizpalue asiakaslaajennuksen kanssa</target>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>
