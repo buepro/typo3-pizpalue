@@ -53,6 +53,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Configuration.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Scaffold.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Colors.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Various.typoscript">
 
 #---------------------------------------------------------#
 # Pizpalue

@@ -45,7 +45,7 @@
 				<source>Customer</source>
 			</trans-unit>
 			<trans-unit id="constSubCategory.scaffold">
-				<source>Scaff</source>
+				<source>Scaffold</source>
 			</trans-unit>
 			<trans-unit id="constSubCategory.colors">
 				<source>Colors</source>

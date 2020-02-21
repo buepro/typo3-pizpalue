@@ -1,134 +1,155 @@
-# @see bootstrap_grids tsconfig.ts
 tx_gridelements {
-   setup {
-      ppContainer {
-         title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerTitle
-         description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerDescription
-         iconIdentifier = tx-pizpalue-ppContainer
-         topLevelLayout = 0
-         config {
-            colCount = 1
-            rowCount = 1
-            rows.1 {
-               columns.1 {
-                  name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerTitle
-                  colPos = 101
-               }
+    setup {
+        ppContainer {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerDescription
+            iconIdentifier = tx-pizpalue-ppContainer
+            topLevelLayout = 0
+            config {
+                colCount = 1
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerTitle
+                        colPos = 101
+                    }
+                }
             }
-         }
-         flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpContainer.xml
-      }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpContainer.xml
+        }
 
-      ppColumns2 {
-         title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.twoColumnTitle
-         description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.twoColumnDescription
-         iconIdentifier = tx-pizpalue-ppColumns2
-         topLevelLayout = 0
-         config {
-            colCount = 2
-            rowCount = 1
-            rows.1 {
-               columns.1 {
-                  name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column1
-                  colPos = 101
-               }
-               columns.2 {
-                  name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column2
-                  colPos = 102
-               }
+        ppColumns2 {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.twoColumnTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.twoColumnDescription
+            iconIdentifier = tx-pizpalue-ppColumns2
+            topLevelLayout = 0
+            config {
+                colCount = 2
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column1
+                        colPos = 101
+                    }
+                    columns.2 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column2
+                        colPos = 102
+                    }
+                }
             }
-         }
-         flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns2.xml
-      }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns2.xml
+        }
 
-      ppColumns3 < .ppColumns2
-      ppColumns3 {
-         title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.threeColumnTitle
-         description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.threeColumnDescription
-         iconIdentifier = tx-pizpalue-ppColumns3
-         topLevelLayout = 0
-         config {
-            colCount = 3
-            rows.1 {
-               columns.3 {
-                  name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column3
-                  colPos = 103
-               }
+        ppColumns3 < .ppColumns2
+        ppColumns3 {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.threeColumnTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.threeColumnDescription
+            iconIdentifier = tx-pizpalue-ppColumns3
+            topLevelLayout = 0
+            config {
+                colCount = 3
+                rows.1 {
+                    columns.3 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column3
+                        colPos = 103
+                    }
+                }
             }
-         }
-         flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns3.xml
-      }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns3.xml
+        }
 
-      ppColumns4 < .ppColumns3
-      ppColumns4 {
-         title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.fourColumnTitle
-         description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.fourColumnDescription
-         iconIdentifier = tx-pizpalue-ppColumns4
-         topLevelLayout = 0
-         config {
-            colCount = 4
-            rows.1 {
-               columns.4 {
-                  name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column4
-                  colPos = 104
-               }
+        ppColumns4 < .ppColumns3
+        ppColumns4 {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.fourColumnTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.fourColumnDescription
+            iconIdentifier = tx-pizpalue-ppColumns4
+            topLevelLayout = 0
+            config {
+                colCount = 4
+                rows.1 {
+                    columns.4 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.column4
+                        colPos = 104
+                    }
+                }
             }
-         }
-         flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns4.xml
-      }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpColumns4.xml
+        }
 
-      ppTabs {
-         title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tabsTitle
-         description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tabsDescription
-         iconIdentifier = tx-pizpalue-ppTabs
-         topLevelLayout = 0
-         config {
-            colCount = 1
-            rowCount = 1
-            rows.1 {
-               columns.1 {
-                  name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tabsTitle
-                  colPos = 101
-               }
+        ppTabs {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tabsTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tabsDescription
+            iconIdentifier = tx-pizpalue-ppTabs
+            topLevelLayout = 0
+            config {
+                colCount = 1
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tabsTitle
+                        colPos = 101
+                    }
+                }
             }
-         }
-         flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpTabs.xml
-      }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpTabs.xml
+        }
 
-      ppAccordion {
-         title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.accordionTitle
-         description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.accordionDescription
-         iconIdentifier = tx-pizpalue-ppAccordion
-         topLevelLayout = 0
-         config {
-            colCount = 1
-            rowCount = 1
-            rows.1 {
-               columns.1 {
-                  name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.accordionTitle
-                  colPos = 101
-               }
+        ppAccordion {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.accordionTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.accordionDescription
+            iconIdentifier = tx-pizpalue-ppAccordion
+            topLevelLayout = 0
+            config {
+                colCount = 1
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.accordionTitle
+                        colPos = 101
+                    }
+                }
             }
-         }
-         flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpAccordion.xml
-      }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpAccordion.xml
+        }
 
-      ppContainerFixed {
-         title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedTitle
-         description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedDescription
-         iconIdentifier = tx-pizpalue-ppContainerFixed
-         topLevelLayout = 0
-         config {
-            colCount = 1
-            rowCount = 1
-            rows.1 {
-               columns.1 {
-                  name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedTitle
-                  colPos = 101
-               }
+        ppTileUnit {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tileUnitTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tileUnitDescription
+            iconIdentifier = tx-pizpalue-ppTileUnit
+            topLevelLayout = 0
+            config {
+                colCount = 2
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tileUnitLeft
+                        colPos = 101
+                    }
+                    columns.2 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.tileUnitRight
+                        colPos = 102
+                    }
+                }
             }
-         }
-         flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpContainerFixed.xml
-      }
-   }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpTileUnit.xml
+        }
+
+        ppContainerFixed {
+            title = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedTitle
+            description = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedDescription
+            iconIdentifier = tx-pizpalue-ppContainerFixed
+            topLevelLayout = 0
+            config {
+                colCount = 1
+                rowCount = 1
+                rows.1 {
+                    columns.1 {
+                        name = LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.containerFixedTitle
+                        colPos = 101
+                    }
+                }
+            }
+            flexformDS = FILE:EXT:pizpalue/Extensions/gridelements/Configuration/FlexForms/PpContainerFixed.xml
+        }
+    }
 }

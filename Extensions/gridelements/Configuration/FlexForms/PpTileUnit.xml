@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+<meta>
+    <langDisable>1</langDisable>
+</meta>
+<sheets>
+    <sDEF>
+        <ROOT type="array">
+            <TCEforms>
+                <sheetTitle>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.sheet.columns</sheetTitle>
+            </TCEforms>
+            <type>array</type>
+            <el type="array">
+                <columnsDistribution>
+                    <TCEforms type="array">
+                        <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnDistribution</label>
+                        <config type="array">
+                            <type>select</type>
+                            <default>11</default>
+                            <items type="array">
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">33% | 67%</numIndex>
+                                    <numIndex index="1">12</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">50% | 50%</numIndex>
+                                    <numIndex index="1">11</numIndex>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <numIndex index="0">67% | 33%</numIndex>
+                                    <numIndex index="1">21</numIndex>
+                                </numIndex>
+                                <numIndex index="4" type="array">
+                                    <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:label.custom</numIndex>
+                                    <numIndex index="1">0</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </TCEforms>
+                </columnsDistribution>
+                <columnsBreakpoint>
+                    <TCEforms type="array">
+                        <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.columnBreakpoint</label>
+                        <config type="array">
+                            <type>select</type>
+                            <default>md</default>
+                            <items type="array">
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.extrasmall</numIndex>
+                                    <numIndex index="1">0</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.small</numIndex>
+                                    <numIndex index="1">sm</numIndex>
+                                </numIndex>
+                                <numIndex index="3" type="array">
+                                    <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.medium</numIndex>
+                                    <numIndex index="1">md</numIndex>
+                                </numIndex>
+                                <numIndex index="4" type="array">
+                                    <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.large</numIndex>
+                                    <numIndex index="1">lg</numIndex>
+                                </numIndex>
+                                <numIndex index="5" type="array">
+                                    <numIndex index="0">LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.extralarge</numIndex>
+                                    <numIndex index="1">xl</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </TCEforms>
+                </columnsBreakpoint>
+                <customColumn1 type="array">
+                    <TCEforms type="array">
+                        <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.customClassColumn1</label>
+                        <config type="array">
+                            <type>input</type>
+                            <size>100</size>
+                        </config>
+                    </TCEforms>
+                </customColumn1>
+                <customColumn2 type="array">
+                    <TCEforms type="array">
+                        <label>LLL:EXT:pizpalue/Extensions/gridelements/Resources/Private/Language/locallang.xlf:grids.label.customClassColumn2</label>
+                        <config type="array">
+                            <type>input</type>
+                            <size>100</size>
+                        </config>
+                    </TCEforms>
+                </customColumn2>
+            </el>
+        </ROOT>
+    </sDEF>
+</sheets>
+</T3DataStructure>

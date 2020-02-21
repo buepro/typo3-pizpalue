@@ -1,0 +1,12 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript">
+
+#=========================================================#
+# Various scss parameters
+#=========================================================#
+
+plugin.bootstrap_package.settings.scss {
+
+    # cat=6040/2910/0010; type=string; label=Tile gutter
+    pp-tile-gutter = 5px
+
+}

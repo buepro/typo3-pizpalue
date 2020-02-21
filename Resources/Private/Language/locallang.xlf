@@ -75,6 +75,16 @@
 			<trans-unit id="googleanalyticsstatus.link.disable">
 				<source>Deactivate Google Analytics (Opt-Out)</source>
 			</trans-unit>
+
+			<trans-unit id="tt_content.layout.tile21">
+				<source>Tile with side ratio 2:1</source>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.tile11">
+				<source>Tile with side ratio 1:1</source>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.tile12">
+				<source>Tile with side ratio 1:2</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

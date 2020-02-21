@@ -154,6 +154,10 @@
 				<source>Gallery item shadow</source>
 				<target state="translated">Galleria kohde varjolla</target>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-tile-scroll-y">
+				<source>Tile with vertical scrollbar</source>
+				<target state="translated">Laatta pystysuunnassa vierityspalkilla</target>
+			</trans-unit>
 
 			<trans-unit id="tca.modal_dialog.header" approved="yes">
 				<source>Button text</source>

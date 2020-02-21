@@ -112,13 +112,26 @@
         </f:if>
     </f:if>
 
+
+    <f:comment>====================== Pizpalue tiles ======================</f:comment>
+
+    {f:variable(name: 'rendersTile', value: 0)}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout} == "pp-tile-21"')}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout} == "pp-tile-11"')}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout} == "pp-tile-12"')}
+    <f:if condition="{rendersTile}">
+        <f:variable name="ppClasses">
+            {ppClasses} pp-tile {data.layout}
+        </f:variable>
+    </f:if>
+
     <f:comment>====================== Pizpalue compile attributes ======================</f:comment>
 
     {f:variable(name:'ppAllAttributes', value:'')}
     <f:if condition="{ppClasses} || {ppStyles} || {ppAttributes}">
         <f:if condition="{data.frame_class} == none">
             <f:variable name="ppClasses">
-                pp-content {ppClasses} {spaceBeforeClass} {spaceAfterClass}
+                pp-content {ppClasses} pp-type-{data.CType} {spaceBeforeClass} {spaceAfterClass}
             </f:variable>
         </f:if>
         <f:variable name="ppAllAttributes">
@@ -160,6 +173,10 @@
             <f:if condition="{ppAllAttributes}">
                 <f:then>
                     <div id="c{data.uid}" {ppAllAttributes -> pp:desarmAttribute()}>
+                        <f:if condition="{rendersTile}">
+                            <div class="frame-container">
+                                <div class="frame-inner">
+                        </f:if>
                         <f:if condition="{data._LOCALIZED_UID}">
                             <a id="c{data._LOCALIZED_UID}"></a>
                         </f:if>
@@ -176,6 +193,10 @@
                         <f:render section="After" optional="true">
                             <f:render partial="DropIn/After/All" arguments="{_all}" />
                         </f:render>
+                        <f:if condition="{rendersTile}">
+                                </div>
+                            </div>
+                        </f:if>
                     </div>
                 </f:then>
                 <f:else>

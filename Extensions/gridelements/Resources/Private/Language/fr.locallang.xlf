@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="grids.label.tileUnitTitle">
+				<source>Tile unit</source>
+				<target state="translated">Unité de carrelage</target>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitDescription">
+				<source>A tile unit consists of a left and a right column. Each column can hold content elements or other tile units.</source>
+				<target state="translated">Une unité de carrelage se compose d'une colonne gauche et d'une colonne droite. Chaque colonne peut contenir des éléments de contenu ou d'autres unités de carrelage.</target>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitLeft">
+				<source>Tile unit left</source>
+				<target state="translated">Unité de carrelage à gauche</target>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitRight">
+				<source>Tile unit right</source>
+				<target state="translated">Unité de carrelage à droite</target>
+			</trans-unit>
+			<trans-unit id="grids.label.columnDistribution">
+				<source>Column distribution</source>
+				<target state="translated">Répartition des colonnes</target>
+			</trans-unit>
+			<trans-unit id="grids.label.customClassColumn1">
+				<source>Custom class column 1</source>
+				<target state="translated">Classe personnalisée, colonne 1</target>
+			</trans-unit>
+			<trans-unit id="grids.label.customClassColumn2">
+				<source>Custom class column 2</source>
+				<target state="translated">Classe personnalisée, colonne 2</target>
+			</trans-unit>
+			<trans-unit id="grids.label.columnBreakpoint">
+				<source>Column break point</source>
+				<target state="translated">Point de rupture de la colonne</target>
+			</trans-unit>
+			<trans-unit id="grids.label.extrasmall">
+				<source>Extra small</source>
+				<target state="translated">Extra petit</target>
+			</trans-unit>
+			<trans-unit id="grids.label.small">
+				<source>Small</source>
+				<target state="translated">Petit</target>
+			</trans-unit>
+			<trans-unit id="grids.label.medium">
+				<source>Medium</source>
+				<target state="translated">Moyen</target>
+			</trans-unit>
+			<trans-unit id="grids.label.large">
+				<source>Large</source>
+				<target state="translated">Grand</target>
+			</trans-unit>
+			<trans-unit id="grids.label.extralarge">
+				<source>Extra large</source>
+				<target state="translated">Extra grand</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

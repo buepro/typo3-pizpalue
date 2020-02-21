@@ -1,0 +1,63 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    {f:variable(name: 'breakpoint', value: '-{data.flexform_columnsBreakpoint}')
+        -> f:if(condition: data.flexform_columnsBreakpoint)}
+    {data.flexform_customColumn1 -> v:format.trim() -> f:variable(name: 'cssCol1')}
+    {data.flexform_customColumn2 -> v:format.trim() -> f:variable(name: 'cssCol2')}
+    <f:if condition="{data.flexform_columnsDistribution} != 0">
+        {f:variable(name: 'cssCol1', value: ' {cssCol1}') -> f:if(condition: cssCol1)}
+        {f:variable(name: 'cssCol2', value: ' {cssCol2}') -> f:if(condition: cssCol2)}
+        <f:switch expression="{data.flexform_columnsDistribution}">
+            <f:case value="12">
+                {f:variable(name: 'cssCol1', value: 'col{breakpoint}-4{cssCol1}')}
+                {f:variable(name: 'cssCol2', value: 'col{breakpoint}-8{cssCol2}')}
+            </f:case>
+            <f:case value="11">
+                {f:variable(name: 'cssCol1', value: 'col{breakpoint}-6{cssCol1}')}
+                {f:variable(name: 'cssCol2', value: 'col{breakpoint}-6{cssCol2}')}
+            </f:case>
+            <f:case value="21">
+                {f:variable(name: 'cssCol1', value: 'col{breakpoint}-8{cssCol1}')}
+                {f:variable(name: 'cssCol2', value: 'col{breakpoint}-4{cssCol2}')}
+            </f:case>
+        </f:switch>
+    </f:if>
+    <div class="pp-tile-row row no-gutters">
+        <div class="pp-tile-col {cssCol1}">
+            <f:for each="{children.1.101}" as="item">
+                <v:content.render contentUids="{0: item.data.uid}"/>
+            </f:for>
+        </div>
+        <div class="pp-tile-col {cssCol2}">
+            <f:for each="{children.1.102}" as="item">
+                <v:content.render contentUids="{0: item.data.uid}"/>
+            </f:for>
+        </div>
+    </div>
+</f:section>
+<f:section name="tile">
+    {f:variable(name: 'rendersTile', value: 0)}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{item.layout} == "pp-tile-21"')}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{item.layout} == "pp-tile-11"')}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{item.layout} == "pp-tile-12"')}
+    <f:if condition="{rendersTile} && {item.frame_class} == 'none'">
+        <f:then>
+            <div class="pp-tile {item.layout}">
+                <div class="frame-container">
+                    <div class="frame-inner">
+                        <v:content.render contentUids="{0: item.uid}"/>
+                    </div>
+                </div>
+            </div>
+        </f:then>
+        <f:else>
+            <v:content.render contentUids="{0: item.uid}"/>
+        </f:else>
+    </f:if>
+</f:section>
+</html>

@@ -6,8 +6,8 @@
 conf.py:
   copyright: 2017
   project: Pizpalue
-  version: 11.2.0
-  release: 11.2.0
+  version: 11.3.0
+  release: 11.3.0
   latex_documents:
   - - Index
     - Pizpalue.tex

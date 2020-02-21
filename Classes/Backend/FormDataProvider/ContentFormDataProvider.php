@@ -15,7 +15,7 @@ use TYPO3\CMS\Backend\Form\FormDataProviderInterface;
 class ContentFormDataProvider implements FormDataProviderInterface
 {
     /**
-     * Add form data to result array
+     * Sets frame to none for selected content elements.
      *
      * @param array $result Initialized result array
      * @return array Result filled with more data
@@ -26,11 +26,10 @@ class ContentFormDataProvider implements FormDataProviderInterface
     {
         $isNewGridelement = $result['command'] == 'new' && $result['tableName'] == 'tt_content'
             && $result['recordTypeValue'] == 'gridelements_pi1';
-        $isContainerGridelement = $result['tableName'] == 'tt_content'
-            && $result['recordTypeValue'] == 'gridelements_pi1'
-            && $result['databaseRow']['tx_gridelements_backend_layout'] == 'ppContainer';
+        $isContainerGridelement = $result['databaseRow']['tx_gridelements_backend_layout'] == 'ppContainer';
+        $isTileUnitGridelement = $result['databaseRow']['tx_gridelements_backend_layout'] == 'ppTileUnit';
 
-        if ($isNewGridelement && $isContainerGridelement) {
+        if ($isNewGridelement && ($isContainerGridelement || $isTileUnitGridelement)) {
             $result['databaseRow']['frame_class'] = 'none';
         }
         return $result;

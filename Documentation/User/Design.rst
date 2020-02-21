@@ -31,7 +31,7 @@ appearance tab. See as well `demo site <https://www.pizpalue.buechler.pro/das-pl
    The page layouts with a navigation menu on the side allow to add content too.
 
 
-.. _user-structurelements:
+.. _user-design-structurelements:
 
 Structure elements
 ==================
@@ -47,6 +47,32 @@ grid elements can be found in the new content element wizard under the "Grid Ele
    :alt: "Grid Elements"-tab in new content element wizard
 
    "Grid Elements"-tab in new content element wizard
+
+
+.. _user-design-tile-units
+
+Tile units
+----------
+
+With tile units a tile view can be composed where tiles can have one of the following side ratios: 2:1, 1:1, 1:2.
+
+Combine any number of tile units to get the desired horizontal column distribution followed by adding content
+elements having a tile layout (tab ``appearance`` from content element properties dialog) selected. By assigning
+a tile layout, the content element becomes a tile.
+
+Additional cropping side ratios (2:1, 1:2) assist in defining the desired image area.
+
+.. note::
+   When defining an image crop area with the same side ratio (e.g. 2:1) as used for the content element layout the
+   image might not fill the entire tile area. This is due to the fact that the tile area is having the exact side
+   ratio where the images side ratio deviates from that due to the tile border. After approximating the image area
+   with the exact tile ratio select the free side ratio to fine adjust the area.
+
+.. note::
+   The tile border width can be adjusted in the constant editor (``PIZPALUE: CLIENT STYLE - Tile gutter``).
+
+.. note::
+   In case a tile content needs to be vertically scrolled the class ``pp-tile-scroll-y`` might be assigned to the tile.
 
 
 .. _user-design-contentElement:

@@ -69,7 +69,8 @@ defined('TYPO3_MODE') || die();
          * Register icons for gridelements
          */
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-        $icons = ['ppContainerFixed', 'ppContainer', 'ppColumns2', 'ppColumns3', 'ppColumns4', 'ppTabs', 'ppAccordion'];
+        $icons = ['ppContainerFixed', 'ppContainer', 'ppColumns2', 'ppColumns3', 'ppColumns4', 'ppTabs', 'ppAccordion',
+            'ppTileUnit'];
         foreach ($icons as $iconName) {
             $iconRegistry->registerIcon(
                 'tx-pizpalue-' . $iconName,

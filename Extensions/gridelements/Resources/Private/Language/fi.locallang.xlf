@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fi" datatype="plaintext" original="messages" date="2020-02-20T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="grids.label.tileUnitTitle">
+				<source>Tile unit</source>
+				<target state="translated">Laattalaite</target>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitDescription">
+				<source>A tile unit consists of a left and a right column. Each column can hold content elements or other tile units.</source>
+				<target state="translated">Laattayksikkö koostuu vasemmasta ja oikeasta sarakkeesta. Jokaisessa sarakkeessa voi olla sisältöelementtejä tai muita laattayksiköitä.</target>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitLeft">
+				<source>Tile unit left</source>
+				<target state="translated">Laatoitusyksikkö vasemmalle</target>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitRight">
+				<source>Tile unit right</source>
+				<target state="translated">Laatoitusyksikkö oikealla</target>
+			</trans-unit>
+			<trans-unit id="grids.label.columnDistribution">
+				<source>Column distribution</source>
+				<target state="translated">Pylväsjakelu</target>
+			</trans-unit>
+			<trans-unit id="grids.label.customClassColumn1">
+				<source>Custom class column 1</source>
+				<target state="translated">Mukautettu luokan sarake 1</target>
+			</trans-unit>
+			<trans-unit id="grids.label.customClassColumn2">
+				<source>Custom class column 2</source>
+				<target state="translated">Mukautettu luokan sarake 2</target>
+			</trans-unit>
+			<trans-unit id="grids.label.columnBreakpoint">
+				<source>Column break point</source>
+				<target state="translated">Sarakkeen murtopiste</target>
+			</trans-unit>
+			<trans-unit id="grids.label.extrasmall">
+				<source>Extra small</source>
+				<target state="translated">Erittäin pieni</target>
+			</trans-unit>
+			<trans-unit id="grids.label.small">
+				<source>Small</source>
+				<target state="translated">Pieni</target>
+			</trans-unit>
+			<trans-unit id="grids.label.medium">
+				<source>Medium</source>
+				<target state="translated">Keskikokoinen</target>
+			</trans-unit>
+			<trans-unit id="grids.label.large">
+				<source>Large</source>
+				<target state="translated">Suuri</target>
+			</trans-unit>
+			<trans-unit id="grids.label.extralarge">
+				<source>Extra large</source>
+				<target state="translated">Erittäin suuri</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

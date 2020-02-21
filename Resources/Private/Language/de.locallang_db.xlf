@@ -154,6 +154,10 @@
 				<source>Gallery item shadow</source>
 				<target state="translated">Galerieelement mit Schatten</target>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-tile-scroll-y">
+				<source>Tile with vertical scrollbar</source>
+				<target state="translated">Kachel mit vertikalem Scrollbar</target>
+			</trans-unit>
 
 			<trans-unit id="tca.modal_dialog.header">
 				<source>Button text</source>

@@ -59,6 +59,19 @@
 				<source>Deactivate Google Analytics (Opt-Out)</source>
 				<target state="translated">Désactiver Google Analytics (Opt-Out)</target>
 			</trans-unit>
+
+			<trans-unit id="tt_content.layout.tile21">
+				<source>Tile with side ratio 2:1</source>
+				<target state="translated">Carrelage avec rapport de côté 2:1</target>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.tile11">
+				<source>Tile with side ratio 1:1</source>
+				<target state="translated">Carrelage avec un rapport de côtés de 1:1</target>
+			</trans-unit>
+			<trans-unit id="tt_content.layout.tile12">
+				<source>Tile with side ratio 1:2</source>
+				<target state="translated">Carrelage avec un rapport de côtés de 1:2</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -7,30 +7,30 @@
 			<trans-unit id="label.options">
 				<source>Options</source>
 			</trans-unit>
-            <trans-unit id="label.general">
-                <source>General</source>
-            </trans-unit>
-            <trans-unit id="label.style">
-                <source>Style</source>
-            </trans-unit>
-            <trans-unit id="label.default">
-                <source>Default</source>
-            </trans-unit>
-            <trans-unit id="label.primary">
-                <source>Primary</source>
-            </trans-unit>
-            <trans-unit id="label.secondary">
-                <source>Secondary</source>
-            </trans-unit>
-            <trans-unit id="label.complementary">
-                <source>Complementary</source>
-            </trans-unit>
-            <trans-unit id="label.custom">
-                <source>Custom</source>
-            </trans-unit>
-            <trans-unit id="label.legacy">
-                <source>Legacy</source>
-            </trans-unit>
+			<trans-unit id="label.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="label.style">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="label.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="label.primary">
+				<source>Primary</source>
+			</trans-unit>
+			<trans-unit id="label.secondary">
+				<source>Secondary</source>
+			</trans-unit>
+			<trans-unit id="label.complementary">
+				<source>Complementary</source>
+			</trans-unit>
+			<trans-unit id="label.custom">
+				<source>Custom</source>
+			</trans-unit>
+			<trans-unit id="label.legacy">
+				<source>Legacy</source>
+			</trans-unit>
 
 			<trans-unit id="grids.label.containerFixedTitle">
 				<source>Content container (depreciated)</source>
@@ -48,8 +48,8 @@
 				<source>Class</source>
 			</trans-unit>
 			<trans-unit id="grids.label.containerAttribute">
-                <source>Attributes</source>
-            </trans-unit>
+				<source>Attributes</source>
+			</trans-unit>
 			<trans-unit id="grids.label.sectionClass">
 				<source>Section class</source>
 			</trans-unit>
@@ -60,150 +60,189 @@
 				<source>Is bootstrap fluid container</source>
 			</trans-unit>
 
-            <trans-unit id="grids.sheet.defaultColumns">
-                <source>Default columns width</source>
-            </trans-unit>
-            <trans-unit id="grids.sheet.customColumns">
-                <source>Custom columns width (CSS classes)</source>
-            </trans-unit>
-            <trans-unit id="grids.sheet.row">
-                <source>Row</source>
-            </trans-unit>
-            <trans-unit id="grids.sheet.adjustment">
-                <source>Adjustment</source>
-            </trans-unit>
+			<trans-unit id="grids.sheet.defaultColumns">
+				<source>Default columns width</source>
+			</trans-unit>
+			<trans-unit id="grids.sheet.customColumns">
+				<source>Custom columns width (CSS classes)</source>
+			</trans-unit>
+			<trans-unit id="grids.sheet.row">
+				<source>Row</source>
+			</trans-unit>
+			<trans-unit id="grids.sheet.adjustment">
+				<source>Adjustment</source>
+			</trans-unit>
+			<trans-unit id="grids.sheet.columns">
+				<source>Columns</source>
+			</trans-unit>
 
-            <trans-unit id="grids.label.twoColumnTitle">
-                <source>2 Columns</source>
-            </trans-unit>
-            <trans-unit id="grids.label.twoColumnDescription">
-                <source>Two columns with customized width</source>
-            </trans-unit>
-            <trans-unit id="grids.label.threeColumnTitle">
-                <source>3 Columns</source>
-            </trans-unit>
-            <trans-unit id="grids.label.threeColumnDescription">
-                <source>Three columns with customized width</source>
-            </trans-unit>
-            <trans-unit id="grids.label.fourColumnTitle">
-                <source>4 Columns</source>
-            </trans-unit>
-            <trans-unit id="grids.label.fourColumnDescription">
-                <source>Four columns with customized width</source>
-            </trans-unit>
-            <trans-unit id="grids.label.column1">
-                <source>Column 1</source>
-            </trans-unit>
-            <trans-unit id="grids.label.column2">
-                <source>Column 2</source>
-            </trans-unit>
-            <trans-unit id="grids.label.column3">
-                <source>Column 3</source>
-            </trans-unit>
-            <trans-unit id="grids.label.column4">
-                <source>Column 4</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth1">
-                <source>1/12 (8.3%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth2">
-                <source>2/12 (16.7%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth3">
-                <source>3/12 (25%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth4">
-                <source>4/12 (33%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth5">
-                <source>5/12 (41.7%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth6">
-                <source>6/12 (50%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth7">
-                <source>7/12 (58.3%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth8">
-                <source>8/12 (66.7%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth9">
-                <source>9/12 (75%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth10">
-                <source>10/12 (83.3%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth11">
-                <source>11/12 (91.7%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidth12">
-                <source>12/12 (100%)</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnWidthNone">
-                <source>None</source>
-            </trans-unit>
-            <trans-unit id="grids.label.columnAuto">
-                <source>Auto</source>
-            </trans-unit>
+			<trans-unit id="grids.label.twoColumnTitle">
+				<source>2 Columns</source>
+			</trans-unit>
+			<trans-unit id="grids.label.twoColumnDescription">
+				<source>Two columns with customized width</source>
+			</trans-unit>
+			<trans-unit id="grids.label.threeColumnTitle">
+				<source>3 Columns</source>
+			</trans-unit>
+			<trans-unit id="grids.label.threeColumnDescription">
+				<source>Three columns with customized width</source>
+			</trans-unit>
+			<trans-unit id="grids.label.fourColumnTitle">
+				<source>4 Columns</source>
+			</trans-unit>
+			<trans-unit id="grids.label.fourColumnDescription">
+				<source>Four columns with customized width</source>
+			</trans-unit>
+			<trans-unit id="grids.label.column1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="grids.label.column2">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="grids.label.column3">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="grids.label.column4">
+				<source>Column 4</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth1">
+				<source>1/12 (8.3%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth2">
+				<source>2/12 (16.7%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth3">
+				<source>3/12 (25%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth4">
+				<source>4/12 (33%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth5">
+				<source>5/12 (41.7%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth6">
+				<source>6/12 (50%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth7">
+				<source>7/12 (58.3%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth8">
+				<source>8/12 (66.7%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth9">
+				<source>9/12 (75%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth10">
+				<source>10/12 (83.3%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth11">
+				<source>11/12 (91.7%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidth12">
+				<source>12/12 (100%)</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnWidthNone">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnAuto">
+				<source>Auto</source>
+			</trans-unit>
 
-            <trans-unit id="grids.label.rowClass">
-                <source>Class</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.alignItemsStart">
-                <source>Align columns on top</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.alignItemsCenter">
-                <source>Align columns in center</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.alignItemsEnd">
-                <source>Align columns on bottom</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.justifyContentStart">
-                <source>Justify columns at start</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.justifyContentCenter">
-                <source>Justify columns in center</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.justifyContentEnd">
-                <source>Justify columns at end</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.justifyContentAround">
-                <source>Justify columns with space around</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.justifyContentBetween">
-                <source>Justify columns with space between</source>
-            </trans-unit>
-            <trans-unit id="grids.label.rowClass.noGutters">
-                <source>No gutters</source>
-            </trans-unit>
+			<trans-unit id="grids.label.rowClass">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.alignItemsStart">
+				<source>Align columns on top</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.alignItemsCenter">
+				<source>Align columns in center</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.alignItemsEnd">
+				<source>Align columns on bottom</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.justifyContentStart">
+				<source>Justify columns at start</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.justifyContentCenter">
+				<source>Justify columns in center</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.justifyContentEnd">
+				<source>Justify columns at end</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.justifyContentAround">
+				<source>Justify columns with space around</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.justifyContentBetween">
+				<source>Justify columns with space between</source>
+			</trans-unit>
+			<trans-unit id="grids.label.rowClass.noGutters">
+				<source>No gutters</source>
+			</trans-unit>
 
-            <trans-unit id="grids.label.collapseContentElement">
-                <source>Collapse elements</source>
-            </trans-unit>
-            <trans-unit id="grids.label.collapseContentElement">
-                <source>Collapse content elements</source>
-            </trans-unit>
-            <trans-unit id="grids.label.collapseRow">
-                <source>Collapse row</source>
-            </trans-unit>
+			<trans-unit id="grids.label.collapseContentElement">
+				<source>Collapse elements</source>
+			</trans-unit>
+			<trans-unit id="grids.label.collapseContentElement">
+				<source>Collapse content elements</source>
+			</trans-unit>
+			<trans-unit id="grids.label.collapseRow">
+				<source>Collapse row</source>
+			</trans-unit>
 
-            <trans-unit id="grids.label.tabsTitle">
-                <source>Tabs</source>
-            </trans-unit>
-            <trans-unit id="grids.label.tabsDescription">
-                <source>The content elements are accessible through tabs.</source>
-            </trans-unit>
+			<trans-unit id="grids.label.tabsTitle">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="grids.label.tabsDescription">
+				<source>The content elements are accessible through tabs.</source>
+			</trans-unit>
 
-            <trans-unit id="grids.label.accordionTitle">
-                <source>Accordion</source>
-            </trans-unit>
-            <trans-unit id="grids.label.accordionDescription">
-                <source>The content elements are accessible in an accordion.</source>
-            </trans-unit>
+			<trans-unit id="grids.label.accordionTitle">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="grids.label.accordionDescription">
+				<source>The content elements are accessible in an accordion.</source>
+			</trans-unit>
 
-            <trans-unit id="">
-                <source></source>
-            </trans-unit>
+			<trans-unit id="grids.label.tileUnitTitle">
+				<source>Tile unit</source>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitDescription">
+				<source>A tile unit consists of a left and a right column. Each column can hold content elements or other tile units.</source>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitLeft">
+				<source>Tile unit left</source>
+			</trans-unit>
+			<trans-unit id="grids.label.tileUnitRight">
+				<source>Tile unit right</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnDistribution">
+				<source>Column distribution</source>
+			</trans-unit>
+			<trans-unit id="grids.label.customClassColumn1">
+				<source>Custom class column 1</source>
+			</trans-unit>
+			<trans-unit id="grids.label.customClassColumn2">
+				<source>Custom class column 2</source>
+			</trans-unit>
+			<trans-unit id="grids.label.columnBreakpoint">
+				<source>Column break point</source>
+			</trans-unit>
+			<trans-unit id="grids.label.extrasmall">
+				<source>Extra small</source>
+			</trans-unit>
+			<trans-unit id="grids.label.small">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="grids.label.medium">
+				<source>Medium</source>
+			</trans-unit>
+			<trans-unit id="grids.label.large">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="grids.label.extralarge">
+				<source>Extra large</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
