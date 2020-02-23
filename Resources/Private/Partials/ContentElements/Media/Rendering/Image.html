@@ -8,7 +8,7 @@
     -> v:iterator.filter(nullFilter: 1, invert: 1)
     -> f:variable(name: 'scalingLines')}
 
-{f:variable(name: 'scaling', value: '{xs: 0, sm: 0, md: 0, lg: 0, xl: 0}')}
+{f:variable(name: 'scaling', value: '{xs: 1.0, sm: 1.0, md: 1.0, lg: 1.0, xl: 1.0}')}
 <f:for each="{scalingLines}" as="scalingLine" key="key">
     {v:iterator.explode(content: scalingLine, glue: ':') -> f:variable(name: 'scalingParts')}
     {v:format.trim(content: scalingParts.0) -> f:variable(name: 'scalingIndex')}
