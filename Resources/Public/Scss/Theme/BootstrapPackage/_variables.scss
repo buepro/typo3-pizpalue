@@ -52,3 +52,34 @@ $footer-sections: map-merge((
     link-hover-decoration: $footer-meta-link-hover-decoration
   )
 ), $footer-sections);
+
+//
+// Frame Background
+//
+$frame-backgrounds: (
+  primary: (
+    background: $primary,
+    link-color: color-yiq($primary),
+    link-hover-color: color-yiq($primary)
+  ),
+  secondary: (
+    background: $secondary,
+    link-color: color-yiq($secondary),
+    link-hover-color: color-yiq($secondary)
+  ),
+  complementary: (
+    background: $complementary,
+    link-color: color-yiq($complementary),
+    link-hover-color: color-yiq($complementary)
+  ),
+  light: (
+    background: $light,
+    link-color: $link-color,
+    link-hover-color: $link-hover-color
+  ),
+  dark: (
+    background: $dark,
+    link-color: $link-color,
+    link-hover-color: $link-hover-color
+  )
+);

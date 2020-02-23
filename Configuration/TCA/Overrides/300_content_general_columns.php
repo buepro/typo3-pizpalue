@@ -240,3 +240,26 @@ defined('TYPO3_MODE') || die();
         );
     }
 })();
+
+/**
+ * Extends existing fields
+ */
+(function () {
+    /**
+     * Adds complementary class to frame background (after secondary, in case it still exists)
+     */
+    $tcaItems = $GLOBALS['TCA']['tt_content']['columns']['background_color_class']['config']['items'];
+    $items = [];
+    $complementaryAdded = false;
+    foreach ($tcaItems as [$value, $text]) {
+        $items[] = [$value, $text];
+        if ($value === 'secondary') {
+            $items[] = ['complementary', 'complementary'];
+            $complementaryAdded = true;
+        }
+    }
+    if (!$complementaryAdded) {
+        $items[] = ['complementary', 'complementary'];
+    }
+    $GLOBALS['TCA']['tt_content']['columns']['background_color_class']['config']['items'] = $items;
+})();

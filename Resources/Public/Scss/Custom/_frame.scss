@@ -46,3 +46,12 @@
     }
   }
 }
+
+.frame-background-primary, .frame-background-secondary, .frame-background-complementary {
+  a {
+    text-decoration: underline dotted;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
