@@ -11,17 +11,30 @@
   .textpic {
     position: relative;
     overflow: hidden;
-    &.ppc-hover .textpic-gallery:after {
-      opacity: 0;
+    &.ppc-hover {
+      .textpic-gallery {
+        img {
+          filter: grayscale(100%);
+        }
+        &:after {
+          opacity: 0;
+        }
+      }
     }
     &.ppc-hover .textpic-text:before {
       opacity: 1.0;
     }
   }
   .textpic-gallery {
+    z-index: 10;
     margin-bottom: 0;
     figure {
       margin-bottom: 0;
+      img {
+        // needed for chrome loading="lazy"
+        width: 100%;
+        transition: filter 1s;
+      }
     }
     &:after {
       content: "i";
@@ -48,6 +61,7 @@
     }
   }
   .textpic-text {
+    z-index: 20;
     position: absolute;
     top: 100%;
     width: 100.1%; // needed for chrome bug
@@ -55,13 +69,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(to top,transparentize(tint($primary,0.9),0.1),transparentize(tint($primary,0.9),0.1));
+    background: rgba(white, 80%);
     background-clip: padding-box;
     border-left: 20px transparent solid;
     border-right: 20px transparent solid;
     transition: top 0.5s;
     &:before {
-      content: "\02A2F";
+      content: "\2573";
       position: absolute;
       top: 0;
       right: 0;
@@ -72,11 +86,13 @@
       line-height: 2rem;
       text-align: center;
       font-family: sans-serif;
-      font-size: 2rem;
-      color: rgba(0,0,0,0.7);
-      background: rgba(255,255,255,0.5);
+      font-size: 1rem;
+      color: rgba(black,0.7);
+      background: rgba(white,0.5);
+      border: 1px rgba(black, 0.7) solid;
       opacity: 0;
       transition: opacity 1s;
+      cursor: pointer;
     }
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
       @include media-breakpoint-up($breakpoint) {
