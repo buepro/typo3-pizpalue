@@ -2,14 +2,16 @@
 
 .. _admin_upgrade_12:
 
-=======================
-Upgrade to version 12.0
-=======================
+===========================================
+Upgrade to version 12.0 (not available yet)
+===========================================
 
 Breaking changes
 ================
 
 Following breaking changes being introduced since version 11.0.0 will be outlined.
+
+.. _admin_upgrade_12_gridelements:
 
 Static template for ``gridelements``
 ------------------------------------

@@ -49,10 +49,10 @@ grid elements can be found in the new content element wizard under the "Grid Ele
    "Grid Elements"-tab in new content element wizard
 
 
-.. _user-design-tile-units
+.. _user-design-tile-unit
 
-Tile units
-----------
+Tile unit
+---------
 
 With tile units a tile view can be composed where tiles can have one of the following side ratios: 2:1, 1:1, 1:2.
 
@@ -73,6 +73,11 @@ Additional cropping side ratios (2:1, 1:2) assist in defining the desired image 
 
 .. note::
    In case a tile content needs to be vertically scrolled the class ``pp-tile-scroll-y`` might be assigned to the tile.
+
+.. attention::
+   The tile unit gridelement is available using the recommended gridelements static template
+   (``Gridelements w/DataProcessing (recommended)``). Further information can be found on the preliminary
+   :ref:`Upgrade 12 <admin_upgrade_12_gridelements>` documentation.
 
 
 .. _user-design-contentElement:
