@@ -24,10 +24,10 @@ Supported extensions
 ================================ ================
 Extension                        Version tested
 ================================ ================
-indexed_search                   9.5.8
+indexed_search                   9.5.14
 news                             7.3.1
-tt_address                       4.3.0
-timelog                          1.2.1
+tt_address                       5.0.0
+timelog                          1.5.3
 ================================ ================
 
 .. note::

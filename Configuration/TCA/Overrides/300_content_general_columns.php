@@ -177,7 +177,7 @@ defined('TYPO3_MODE') || die();
                 'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_scaling',
                 'config' => [
                     'type' => 'text',
-                    'default' => implode(','.chr(10),['xl: 1.0', 'lg: 1.0', 'md: 1.0', 'sm: 1.0', 'xs: 1.0']),
+                    'default' => implode(',' . chr(10), ['xl: 1.0', 'lg: 1.0', 'md: 1.0', 'sm: 1.0', 'xs: 1.0']),
                 ]
             ],
 
