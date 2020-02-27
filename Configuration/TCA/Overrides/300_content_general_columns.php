@@ -217,7 +217,7 @@ defined('TYPO3_MODE') || die();
     ';
 
     /**
-     * Adds palettes to all content types
+     * Adds palettes content types
      */
     if (1) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
@@ -235,8 +235,8 @@ defined('TYPO3_MODE') || die();
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
             'tt_content',
             '--palette--;;pizpalue_imagesize',
-            '',
-            'after: filelink_sorting'
+            'image,textmedia,textpic',
+            'before: imageorient'
         );
     }
 })();
