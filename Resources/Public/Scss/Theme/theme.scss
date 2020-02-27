@@ -15,6 +15,7 @@
 //
 @import "BootstrapPackage/variables";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/variables";
+@import "variables";
 
 //
 // Imports needed Bootstrap Files
@@ -61,11 +62,11 @@
 //
 // Complements, adds components for pizpalue
 //
-@import "variables";
 @import "Cms/fluid";
 @import "BootstrapPackage/navbar";
 @import "BootstrapPackage/cookieconsent";
 @import "BootstrapPackage/footer";
+@import "BootstrapPackage/adjustments";
 @import "ce_editor";
 @import "ce_appearance";
 @import "ce_appearance_overlaycard";

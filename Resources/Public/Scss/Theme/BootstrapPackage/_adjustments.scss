@@ -1,0 +1,10 @@
+//
+// Carousel
+//
+@include media-breakpoint-up(sm) {
+  .carousel-item-type-text_and_image {
+    .carousel-text {
+      margin-left: 1rem;
+    }
+  }
+}
