@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of the package buepro/user_customer.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 namespace Buepro\UserCustomer\Slot;
 
@@ -42,7 +48,9 @@ class ExtensionInstallUtility
         $source = Environment::getPublicPath()
             . '/typo3conf/ext/user_customer/Resources/Private/FolderStructureTemplateFiles/AdditionalConfiguration.php';
         $destination = Environment::getPublicPath() . '/typo3conf/AdditionalConfiguration.php';
-        if (!file_exists($source)) return false;
+        if (!file_exists($source)) {
+            return false;
+        }
         if (!file_exists($destination)) {
             return GeneralUtility::upload_copy_move($source, $destination);
         }

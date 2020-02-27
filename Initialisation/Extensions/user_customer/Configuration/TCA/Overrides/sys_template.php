@@ -8,12 +8,12 @@
  */
 
 call_user_func(
-    function ($_EXTKEY) {
+    function ($extensionKey) {
         /***************
          * Static templates
          */
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            $extensionKey,
             'Configuration/TypoScript',
             'Customer'
         );
