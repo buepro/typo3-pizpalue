@@ -249,7 +249,7 @@
 			</trans-unit>
 			<trans-unit id="grids.label.columnBreakpoint">
 				<source>Column break point</source>
-				<target state="translated">Spalten Umschaltungspunkt</target>
+				<target state="translated">Spalten Umschaltpunkt</target>
 			</trans-unit>
 			<trans-unit id="grids.label.extrasmall">
 				<source>Extra small</source>

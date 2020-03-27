@@ -1,0 +1,145 @@
+//----------------------------------------------------------------------------------------------------------------------
+//
+// gridelements, flux_elements
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------------------------------------
+// Container
+//
+.pp-container, .fe-container {
+  .frame-container {
+    max-width: none;
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+// Columns
+//
+
+//
+// Content element with background
+//
+.row > div > .frame:not(.frame-background-none) {
+  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+    @include media-breakpoint-up($breakpoint) {
+      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+      padding-left: ($frame-inner-spacing * $scaling);
+      padding-right: ($frame-inner-spacing * $scaling);
+    }
+  }
+}
+
+//
+// If columns are realized within a frame
+//
+.frame-inner {
+  // No side padding for content elements in columns
+  .col > .frame.frame-background-none > .frame-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  //
+  // Ensure spacing is correct when columns are serialized (two visually subsequent content elements just have one
+  // padding). Assumes that all content elements in columns have a frame without spacing before.
+  //
+  .pp-col-collapse, .fe-col-collapse {
+    > .frame.frame-background-none.frame-space-before-none:not(.frame-has-backgroundimage):first-child {
+      @extend .frame-collapsible;
+    }
+  }
+  // Compensate bottom space
+  > .pp-row-collapse, > .fe-row-collapse {
+    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+      @include media-breakpoint-up($breakpoint) {
+        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+        margin-bottom: -($frame-inner-spacing * $scaling);
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+// Accordion
+//
+.pp-accordion-primary, .fe-accordion-primary {
+  @include pp-style-accordion-light($primary);
+}
+.pp-accordion-secondary, .fe-accordion-secondary {
+  @include pp-style-accordion-light($secondary);
+}
+.pp-accordion-complementary, .fe-accordion-complementary {
+  @include pp-style-accordion-light($complementary);
+}
+.pp-accordion-body, .fe-accordion-body  {
+  // No top space for first element in accordion body
+  > .frame:first-child {
+    padding-top: 0 ;
+  }
+  // No bottom space for last element in accordion body
+  > .frame:last-child {
+    padding-bottom: 0 ;
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+// Tabs
+//
+.tab-content {
+  padding: (1.5 * $nav-link-padding-x) 0;
+  padding-bottom: 0.5rem;
+}
+.pp-tabs-primary, .fe-tabs-primary {
+  @include pp-style-tab-light($primary);
+}
+.pp-tabs-secondary, .fe-tabs-secondary {
+  @include pp-style-tab-light($secondary);
+}
+.pp-tabs-complementary, .fe-tabs-complementary {
+  @include pp-style-tab-light($complementary);
+}
+.tab-v1 {
+  @include pp-style-tab($pp-tab-v1-background);
+}
+.pp-tab-pane, .fe-tab-pane {
+  // No top space for first element in tab pane
+  > .frame:first-child {
+    padding-top: 0 ;
+  }
+  // No bottom space for last element in tab pane
+  > .frame:last-child {
+    padding-bottom: 0 ;
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+// Cards
+//
+.fe-card {
+  .card-header, .card-footer {
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+  > img {
+    height: auto;
+  }
+  .fec-image-wrap {
+    .gallery-row {
+      margin: 0;
+    }
+    .gallery-item {
+      padding: 0;
+    }
+    figure {
+      margin: 0;
+    }
+  }
+  .fec-image-col img {
+    height: auto;
+  }
+  .fec-content-col {
+    display: flex;
+    align-items: center;
+  }
+}

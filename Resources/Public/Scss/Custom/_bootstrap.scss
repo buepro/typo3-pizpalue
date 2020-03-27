@@ -1,28 +1,3 @@
-.pp-accordion-primary {
-  @include pp-style-accordion-light($primary);
-}
-.pp-accordion-secondary {
-  @include pp-style-accordion-light($secondary);
-}
-.pp-accordion-complementary {
-  @include pp-style-accordion-light($complementary);
-}
-.tab-content {
-  padding: (1.5 * $nav-link-padding-x) 0;
-  padding-bottom: 0.5rem;
-}
-.pp-tabs-primary {
-  @include pp-style-tab-light($primary);
-}
-.pp-tabs-secondary {
-  @include pp-style-tab-light($secondary);
-}
-.pp-tabs-complementary {
-  @include pp-style-tab-light($complementary);
-}
-.tab-v1 {
-  @include pp-style-tab($pp-tab-v1-background);
-}
 .btn-pp-1 {
   background: $primary;
   border-color: darken($primary, 10%);
