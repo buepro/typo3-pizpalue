@@ -122,6 +122,25 @@
 				<source>Tile with vertical scrollbar</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint">
+				<source>Layout screen breakpoint</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.all">
+				<source>All</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.small">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.medium">
+				<source>Medium</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.large">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.extralarge">
+				<source>Extra large</source>
+			</trans-unit>
+
 			<trans-unit id="tca.modal_dialog.header">
 				<source>Button text</source>
 			</trans-unit>

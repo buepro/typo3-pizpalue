@@ -66,6 +66,22 @@ defined('TYPO3_MODE') || die();
         // Column definition
         $tmp_pizpalue_columns = [
 
+            'tx_pizpalue_layout_breakpoint' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'default' => '',
+                    'items' => [
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint.all', ''],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint.small', 'sm'],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint.medium', 'md'],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint.large', 'lg'],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint.extralarge', 'xl'],
+                    ],
+                ],
+            ],
             'tx_pizpalue_classes' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes',
@@ -211,10 +227,22 @@ defined('TYPO3_MODE') || die();
     /**
      * Adds background image to frames palette
      */
-    $GLOBALS['TCA']['tt_content']['palettes']['frames']['showitem'] .= '
-        --linebreak--,
-        tx_pizpalue_bgmedia,
-    ';
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content',
+        'frames',
+        '--linebreak--, tx_pizpalue_bgmedia',
+        'after: background_image_options'
+    );
+
+    /**
+     * Adds tx_pizpalue_layout_breakpoint after layout field
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content',
+        'frames',
+        'tx_pizpalue_layout_breakpoint,--linebreak--',
+        'after: layout'
+    );
 
     /**
      * Adds palettes content types

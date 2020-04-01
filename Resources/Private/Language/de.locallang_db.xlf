@@ -159,6 +159,31 @@
 				<target state="translated">Kachel mit vertikalem Scrollbar</target>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint">
+				<source>Layout screen breakpoint</source>
+				<target state="translated">Layout Bildschirm-Umschaltpunkt</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.all">
+				<source>All</source>
+				<target state="translated">Alle</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.small">
+				<source>Small</source>
+				<target state="translated">Klein</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.medium">
+				<source>Medium</source>
+				<target state="translated">Mittel</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.large">
+				<source>Large</source>
+				<target state="translated">Gross</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.extralarge">
+				<source>Extra large</source>
+				<target state="translated">Sehr gross</target>
+			</trans-unit>
+
 			<trans-unit id="tca.modal_dialog.header">
 				<source>Button text</source>
 				<target state="translated">Knopfbeschriftung</target>

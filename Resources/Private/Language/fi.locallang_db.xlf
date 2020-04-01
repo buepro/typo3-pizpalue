@@ -159,6 +159,31 @@
 				<target state="translated">Laatta pystysuunnassa vierityspalkilla</target>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint">
+				<source>Layout screen breakpoint</source>
+				<target state="translated">Asettelunäytön väliaika</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.all">
+				<source>All</source>
+				<target state="translated">Kaikki</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.small">
+				<source>Small</source>
+				<target state="translated">Pieni</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.medium">
+				<source>Medium</source>
+				<target state="translated">Keskikokoinen</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.large">
+				<source>Large</source>
+				<target state="translated">Suuri</target>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.extralarge">
+				<source>Extra large</source>
+				<target state="translated">Erittäin suuri</target>
+			</trans-unit>
+
 			<trans-unit id="tca.modal_dialog.header" approved="yes">
 				<source>Button text</source>
 				<target state="translated">Painikkeen teksti</target>
