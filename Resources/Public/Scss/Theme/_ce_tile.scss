@@ -5,12 +5,9 @@
   position: relative;
   overflow: hidden;
   &:before {
-    content: "";
     display: block;
-    margin-top: 100%;
   }
   > .frame-container {
-    position: absolute;
     left: $pp-tile-gutter;
     top: $pp-tile-gutter;
     right: $pp-tile-gutter;
@@ -30,9 +27,50 @@
 .pp-tile-21:before {
   margin-top: 50%;
 }
+.pp-tile-11:before {
+  margin-top: 100%;
+}
 .pp-tile-12:before {
   margin-top: 200%;
 }
+
+//
+// Responsive
+//
+@mixin pp-make-responsive-tile($breakpoint: '') {
+  @if ($breakpoint == '') {
+    .pp-layout {
+      &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
+        &:before {
+          content: "";
+        }
+        > .frame-container {
+          position: absolute;
+        }
+      }
+    }
+
+  } @else {
+    @include media-breakpoint-up($breakpoint) {
+      .pp-layout-#{$breakpoint} {
+        &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
+          &:before {
+            content: "";
+          }
+          > .frame-container {
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+@include pp-make-responsive-tile();
+@include pp-make-responsive-tile('sm');
+@include pp-make-responsive-tile('md');
+@include pp-make-responsive-tile('lg');
+@include pp-make-responsive-tile('xl');
+
 
 //
 // Outer most border (tile unit or tile alone)
@@ -49,6 +87,15 @@
   }
   .pp-tile-row, .fe-tile-row {
     margin: 0;
+  }
+}
+
+//
+// Content padding
+//
+.pp-tile:not(.pp-type-image):not(.pp-type-media):not(.pp-type-external_media) {
+  .frame-inner {
+    margin: $table-cell-padding;
   }
 }
 
@@ -73,7 +120,10 @@
 // Videos
 //
 .pp-tile {
-  &.pp-type-media {
+  &.pp-type-media, &.pp-type-external_media {
+    .frame-inner {
+      width: 100%;
+    }
     figure {
       padding: $table-cell-padding;
     }
@@ -130,7 +180,4 @@
 .pp-tile-scroll-y > .frame-container {
   align-items: flex-start;
   overflow-y: auto;
-  .frame-inner {
-    margin: $table-cell-padding;
-  }
 }
