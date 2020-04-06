@@ -62,25 +62,6 @@ defined('TYPO3_MODE') || die();
     }
 
     /**
-     * Configure gridelements
-     */
-    if (1) {
-        /**
-         * Register icons for gridelements
-         */
-        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-        $icons = ['ppContainerFixed', 'ppContainer', 'ppColumns2', 'ppColumns3', 'ppColumns4', 'ppTabs', 'ppAccordion',
-            'ppTileUnit'];
-        foreach ($icons as $iconName) {
-            $iconRegistry->registerIcon(
-                'tx-pizpalue-' . $iconName,
-                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-                ['source' => 'EXT:pizpalue/Resources/Public/Icons/Gridelements/' . $iconName . '.svg']
-            );
-        }
-    }
-
-    /**
      * Content elements
      */
     if (1) {
@@ -102,25 +83,6 @@ defined('TYPO3_MODE') || die();
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig">'
         );
-    }
-
-    /**
-     * Adjust content element form in BE
-     *
-     * Modify flexform fields since core 8.5 via formEngine: Inject a data provider
-     * between TcaFlexPrepare and TcaFlexProcess
-     *
-     */
-    if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) >= 8005000) {
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['formDataGroup']['tcaDatabaseRecord']
-        [\Buepro\Pizpalue\Backend\FormDataProvider\ContentFormDataProvider::class] = [
-            'depends' => [
-                \TYPO3\CMS\Backend\Form\FormDataProvider\TcaFlexPrepare::class,
-            ],
-            'before' => [
-                \TYPO3\CMS\Backend\Form\FormDataProvider\TcaFlexProcess::class,
-            ],
-        ];
     }
 
     /**

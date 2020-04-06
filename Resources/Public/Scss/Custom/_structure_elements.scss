@@ -115,7 +115,7 @@
 //----------------------------------------------------------------------------------------------------------------------
 // Cards
 //
-.fe-card {
+.fe-card, .pp-card {
   .card-header, .card-footer {
     *:last-child {
       margin-bottom: 0;
@@ -124,7 +124,7 @@
   > img {
     height: auto;
   }
-  .fec-image-wrap {
+  .fec-image-wrap, .ppc-image-wrap {
     .gallery-row {
       margin: 0;
     }
@@ -135,10 +135,10 @@
       margin: 0;
     }
   }
-  .fec-image-col img {
+  .fec-image-col img, .ppc-image-col {
     height: auto;
   }
-  .fec-content-col {
+  .fec-content-col, .ppc-content-col {
     display: flex;
     align-items: center;
   }

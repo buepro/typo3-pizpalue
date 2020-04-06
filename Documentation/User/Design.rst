@@ -39,14 +39,33 @@ Structure elements
 With structure elements the content area might be further organized. Typical elements are containers, columns,
 accordions and tabs. See as well `demo site <https://www.pizpalue.buechler.pro/das-plus/strukturemente>`__.
 
-Currently the content elements provided by the extension gridelements are used as structure elements. The available
-grid elements can be found in the new content element wizard under the "Grid Elements" tab:
+This distribution supports the following extensions providing similar structure elements:
+
+- `Extension pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__ powered by the
+  `extension gridelements <https://extensions.typo3.org/extension/gridelements>`__
+- `Extension flux_elements <https://extensions.typo3.org/extension/flux_elements>`__ powered by the
+  `extension flux <https://extensions.typo3.org/extension/flux>`__
+
+.. tip::
+   Don't work with both extensions in one installation. Choose between `pp_gridelements` and `flux_elements` to
+   minimize maintenance expense.
+
+The available structure elements can be found in the new content element wizard under the `Grid Elements` or
+`Flux content` tab:
 
 .. figure:: ../Images/User/StructureElements_Gridelements.jpg
    :width: 500px
    :alt: "Grid Elements"-tab in new content element wizard
 
    "Grid Elements"-tab in new content element wizard
+
+-----------------------------------------------------------------------------------------------------------------------
+
+.. figure:: ../Images/User/StructureElements_FluxElements.jpg
+   :width: 500px
+   :alt: "Flux content"-tab in new content element wizard
+
+   "Flux content"-tab in new content element wizard
 
 
 .. _user-design-tile-unit
@@ -75,9 +94,9 @@ Additional cropping side ratios (2:1, 1:2) assist in defining the desired image 
    In case a tile content needs to be vertically scrolled the class ``pp-tile-scroll-y`` might be assigned to the tile.
 
 .. attention::
-   The tile unit gridelement is available using the recommended gridelements static template
-   (``Gridelements w/DataProcessing (recommended)``). Further information can be found on the preliminary
-   :ref:`Upgrade 12 <admin_upgrade_12_gridelements>` documentation.
+   When using the extension `pp_gridelements` the tile unit gridelement is available using the recommended gridelements
+   static template (``Gridelements w/DataProcessing (recommended)``). Further information can be found on the
+   preliminary :ref:`Upgrade 12 <admin_upgrade_12_gridelements>` documentation.
 
 
 .. _user-design-contentElement:
