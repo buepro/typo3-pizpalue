@@ -76,10 +76,17 @@ Tile unit
 With tile units a tile view can be composed where tiles can have one of the following side ratios: 2:1, 1:1, 1:2.
 
 Combine any number of tile units to get the desired horizontal column distribution followed by adding content
-elements having a tile layout (tab ``appearance`` from content element properties dialog) selected. By assigning
+elements having a tile layout (tab "Appearance" from content element properties dialog) selected. By assigning
 a tile layout, the content element becomes a tile.
 
-Additional cropping side ratios (2:1, 1:2) assist in defining the desired image area.
+.. figure:: ../Images/User/ContentElement_Tile.jpg
+   :width: 500px
+   :alt: Content element tile layout settings
+
+Sometimes it is desirable to not stick to the tile side ratio on smaller screen sizes. With the field
+"Layout screen breakpoint" it can be defined from what screen size on the tile ratio should be applied.
+
+When working with images as tiles additional cropping side ratios (2:1, 1:2) assist in defining the desired image area.
 
 .. note::
    When defining an image crop area with the same side ratio (e.g. 2:1) as used for the content element layout the

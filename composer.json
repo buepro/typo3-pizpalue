@@ -1,7 +1,7 @@
 {
     "name": "buepro/typo3-pizpalue",
     "type": "typo3-cms-extension",
-    "description": "TYPO3 pizpalue package",
+    "description": "TYPO3 extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  pp_gridelements, flux_elements, timelog, ws_flexslider, slickcarousel, indexed_search, news, tt_address.",
     "keywords": [
         "TYPO3 CMS",
         "sitepackage",
@@ -9,7 +9,10 @@
         "responsive",
         "frontend",
         "theme",
-        "web"
+        "web",
+        "flux",
+        "gridelements",
+        "timelog"
     ],
     "homepage": "https://github.com/buepro/typo3-pizpalue",
     "authors": [
@@ -20,15 +23,12 @@
             "role": "Developer"
         }
     ],
-    "license": "MIT",
+    "license": ["GPL-2.0-or-later"],
     "require": {
         "typo3/cms-core": "^9.5",
         "typo3/cms-impexp": "^9.5",
         "bk2k/bootstrap-package": "^11.0",
-        "fluidtypo3/vhs": "^6.0",
-        "buepro/typo3-pp-gridelements": "^1.0.0",
-        "bo/slickcarousel": "^3.0.3",
-        "svewap/ws-flexslider": "^1.5.12"
+        "fluidtypo3/vhs": "^6.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
@@ -43,8 +43,7 @@
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "pizpalue",
-            "web-dir": ""
+            "extension-key": "pizpalue"
         }
     }
 }

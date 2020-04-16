@@ -1,6 +1,0 @@
-TYPO3:
-    CMS:
-        Form:
-            persistenceManager:
-                allowedFileMounts:
-                    300: 1:/user_customer/customforms/

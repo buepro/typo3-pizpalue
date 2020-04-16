@@ -206,11 +206,6 @@
 				<source>XL-Height from list item (screen width &gt; 1199px)</source>
 				<target state="translated">XL-korkeus kohdelistasta (Näytön leveys &gt; 1199px)</target>
 			</trans-unit>
-
-			<trans-unit id="ext_conf.installCustomerExtension" approved="yes">
-				<source>Install pizpalue with customer extension</source>
-				<target state="translated">Asenna pizpalue asiakaslaajennuksen kanssa</target>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>

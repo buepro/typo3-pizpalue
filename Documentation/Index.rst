@@ -8,9 +8,9 @@
 
 .. _start:
 
-======================
-pizpalue
-======================
+=================
+Template pizpalue
+=================
 
 .. only:: html
 
@@ -47,7 +47,7 @@ pizpalue
 
 
 
-   ***Table of Contents***
+   **Table of Contents**
 
 .. toctree::
    :maxdepth: 2

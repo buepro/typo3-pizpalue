@@ -16,10 +16,11 @@ Layout/Design/Theme
 
 ---
 
-**Q**: I have to adapt more aspects from the distribution for my project. As well it would be good to use Git in the
+**Q**: I have to adapt more aspects from the template for my project. As well it would be good to use Git in the
 work flow. What is the best way to do it?
 
-**A**: For that purpose the extension user_customer could be adjusted and the work progress could be maintained in Git.
+**A**: For that purpose an extension should be used. An example extension is available at
+`Github <https://github.com/buepro/typo3-user_customer>`__.
 
 Header
 ------

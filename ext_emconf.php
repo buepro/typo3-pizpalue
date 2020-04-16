@@ -8,9 +8,9 @@
  */
 
 $EM_CONF[$_EXTKEY] = [
-    'title'            => 'Piz Palü Distribution',
-    'description'      => 'This extension builds upon the bootstrap_package from Benjamin Kott. It installs pp_gridelements and supports flux_elements for better content structuring and some galleries. Indexed_search, news, tt_address and timelog are supported and just need to be installed. The distribution tailors Swiss market featuring German as default language and additional translations to French, English and Finnish.',
-    'category'         => 'distribution',
+    'title'            => 'Pizpalue template',
+    'description'      => 'Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  pp_gridelements, flux_elements, timelog, ws_flexslider, slickcarousel, indexed_search, news, tt_address.',
+    'category'         => 'template',
     'version'          => '11.1.0',
     'state'            => 'stable',
     'clearCacheOnLoad' => 1,
@@ -21,9 +21,6 @@ $EM_CONF[$_EXTKEY] = [
             'typo3'                 => '9.5.7-9.5.99',
             'bootstrap_package'     => '11.0.2-11.99.99',
             'vhs'                   => '6.0.0-6.99.99',
-            'pp_gridelements'       => '1.0.0-1.99.99',
-            'slickcarousel'         => '3.0.3-3.99.99',
-            'ws_flexslider'         => '1.5.12-1.99.99',
         ],
         'conflicts' => [],
         'suggests'  => [],
