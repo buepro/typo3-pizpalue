@@ -128,16 +128,9 @@
     <f:comment>====================== Pizpalue layout breakpoint ======================</f:comment>
 
     <f:if condition="{data.tx_pizpalue_layout_breakpoint}">
-        <f:then>
-            <f:variable name="ppClasses">
-                {ppClasses} pp-layout-{data.tx_pizpalue_layout_breakpoint}
-            </f:variable>
-        </f:then>
-        <f:else>
-            <f:variable name="ppClasses">
-                {ppClasses} pp-layout
-            </f:variable>
-        </f:else>
+        <f:variable name="ppClasses">
+            {ppClasses} pp-layout-{data.tx_pizpalue_layout_breakpoint}
+        </f:variable>
     </f:if>
 
     <f:comment>====================== Pizpalue compile attributes ======================</f:comment>

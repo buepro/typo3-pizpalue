@@ -6,8 +6,10 @@
   overflow: hidden;
   &:before {
     display: block;
+    content: "";
   }
   > .frame-container {
+    position: absolute;
     left: $pp-tile-gutter;
     top: $pp-tile-gutter;
     right: $pp-tile-gutter;
@@ -37,35 +39,34 @@
 //
 // Responsive
 //
-@mixin pp-make-responsive-tile($breakpoint: '') {
-  @if ($breakpoint == '') {
-    .pp-layout {
+@mixin pp-make-responsive-tile($breakpoint: 'md') {
+  @include media-breakpoint-up($breakpoint) {
+    .pp-layout-#{$breakpoint} {
       &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
         &:before {
           content: "";
         }
         > .frame-container {
           position: absolute;
-        }
-      }
-    }
-
-  } @else {
-    @include media-breakpoint-up($breakpoint) {
-      .pp-layout-#{$breakpoint} {
-        &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
-          &:before {
-            content: "";
-          }
-          > .frame-container {
-            position: absolute;
-          }
+          margin: 0;
         }
       }
     }
   }
 }
-@include pp-make-responsive-tile();
+// Disable tile side ratio below screen breakpoint
+.pp-layout-sm, .pp-layout-md, .pp-layout-lg, .pp-layout-xl {
+  &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
+    &:before {
+      content: none;
+    }
+    > .frame-container {
+      position: static;
+      // Add margin because left, right, top, bottom don't apply
+      margin: $pp-tile-gutter;
+    }
+  }
+}
 @include pp-make-responsive-tile('sm');
 @include pp-make-responsive-tile('md');
 @include pp-make-responsive-tile('lg');
@@ -93,7 +94,7 @@
 //
 // Content padding
 //
-.pp-tile:not(.pp-type-image):not(.pp-type-media):not(.pp-type-external_media) {
+.pp-tile:not(.pp-type-image):not(.pp-type-media):not(.pp-type-external_media):not(.pp-ce-overlaycard) {
   .frame-inner {
     margin: $table-cell-padding;
   }
