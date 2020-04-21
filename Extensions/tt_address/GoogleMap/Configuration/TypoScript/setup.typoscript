@@ -51,6 +51,7 @@ page {
       includeJSFooter {
          ttAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}&callback=initMap
          ttAddressGoogleMap {
+            external = 1
             defer = 1
             async = 1
          }
