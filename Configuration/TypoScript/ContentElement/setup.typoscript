@@ -1,1 +1,7 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:pizpalue/Configuration/TypoScript/ContentElement/Element" extensions="typoscript">
+
+lib.contentElement {
+    settings.gallery {
+        imageLoading = {$pizpalue.features.imageLoading}
+    }
+}

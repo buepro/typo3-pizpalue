@@ -40,6 +40,6 @@
         </f:if>
     </f:for>
     {v:math.product(a: variants.default.width, b: scaling.default) -> f:variable(name: 'defaultMaxWidth')}
-    <img loading="lazy" src="{f:uri.image(image: file, cropVariant: 'default', maxWidth: defaultMaxWidth)}" width="{bk2k:lastImageInfo(property: 'width')}" height="{bk2k:lastImageInfo(property: 'height')}" intrinsicsize="{bk2k:lastImageInfo(property: 'width')}x{bk2k:lastImageInfo(property: 'height')}" title="{file.properties.title}" alt="{file.properties.alternative}">
+    <img loading="{settings.gallery.imageLoading}" src="{f:uri.image(image: file, cropVariant: 'default', maxWidth: defaultMaxWidth)}" width="{bk2k:lastImageInfo(property: 'width')}" height="{bk2k:lastImageInfo(property: 'height')}" intrinsicsize="{bk2k:lastImageInfo(property: 'width')}x{bk2k:lastImageInfo(property: 'height')}" title="{file.properties.title}" alt="{file.properties.alternative}">
 </picture>
 </html>
