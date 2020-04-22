@@ -12,12 +12,13 @@
 #=========================================================#
 
 config {
-// Branding
-headerComment (
+    // Branding
+    headerComment (
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
 |   Eine Webseite basierend auf der Distribution pizpalue von buechler.pro  |
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
 )
+    extTarget = _blank
 }
 
 
