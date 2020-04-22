@@ -14,9 +14,9 @@
 config {
     // Branding
     headerComment (
-+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-|   Eine Webseite basierend auf der Distribution pizpalue von buechler.pro  |
-+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|   Eine Webseite basierend auf dem Template pizpalue von buechler.pro  |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
 )
     extTarget = _blank
 }
