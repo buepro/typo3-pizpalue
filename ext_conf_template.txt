@@ -1,0 +1,2 @@
+# cat=Installation; type=boolean; label=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.enableBootstrapPackageBackendLayouts
+enableBootstrapPackageBackendLayouts = 0

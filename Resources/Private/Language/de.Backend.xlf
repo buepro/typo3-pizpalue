@@ -197,6 +197,11 @@
 				<source>XL-Height from list item (screen width > 1199px)</source>
 				<target state="translated">XL-Höhe eines Listenelementes (Bildschirmbreite > 1199px)</target>
 			</trans-unit>
+
+			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
+				<source>Enable bootstrap_package page layouts</source>
+				<target state="translated">Seitenlayouts des bootstrap_package aktivieren</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

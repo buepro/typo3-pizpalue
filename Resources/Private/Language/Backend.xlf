@@ -156,6 +156,10 @@
 			<trans-unit id="ce_list_categorized_content.item_height_xl">
 				<source>XL-Height from list item (screen width > 1199px)</source>
 			</trans-unit>
+
+			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
+				<source>Enable bootstrap_package page layouts</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

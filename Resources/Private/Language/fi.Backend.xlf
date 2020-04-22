@@ -206,6 +206,11 @@
 				<source>XL-Height from list item (screen width &gt; 1199px)</source>
 				<target state="translated">XL-korkeus kohdelistasta (Näytön leveys &gt; 1199px)</target>
 			</trans-unit>
+
+			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
+				<source>Enable bootstrap_package page layouts</source>
+				<target state="translated">Ota käyttöön bootstrap_package -sivun asettelut</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

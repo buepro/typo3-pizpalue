@@ -11,22 +11,29 @@ defined('TYPO3_MODE') || die();
 
 (function () {
     /**
-     * Make bootstrap_package configuration accessible
+     * Make extension configurations accessible
      */
     if (1) {
         $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
             \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
         );
         $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
+        $pizpalueConfiguration = $extensionConfiguration->get('pizpalue');
     }
 
     /**
      * PageTS
      */
     if (1) {
-
         // Add BackendLayouts for the BackendLayout DataProvider
         if (!(bool) $bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
+            // Disable some bootstrap_package backend layouts
+            if (!(bool) $pizpalueConfiguration['enableBootstrapPackageBackendLayouts']) {
+                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                    '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/DisableBackendLayouts.tsconfig">'
+                );
+            }
+            // Pizpalue backend layouts
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
                 '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">'
             );
