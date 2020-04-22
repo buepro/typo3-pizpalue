@@ -116,9 +116,9 @@
     <f:comment>====================== Pizpalue tiles ======================</f:comment>
 
     {f:variable(name: 'rendersTile', value: 0)}
-    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout} == "pp-tile-21"')}
-    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout} == "pp-tile-11"')}
-    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout} == "pp-tile-12"')}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout as string} == "pp-tile-21"')}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout as string} == "pp-tile-11"')}
+    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout as string} == "pp-tile-12"')}
     <f:if condition="{rendersTile}">
         <f:variable name="ppClasses">
             {ppClasses} pp-tile {data.layout}
