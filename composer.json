@@ -39,6 +39,7 @@
         }
     },
     "replace": {
+        "buepro/typo3-pizpalue": "self.version",
         "typo3-ter/pizpalue": "self.version"
     },
     "extra": {
