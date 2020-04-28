@@ -49,7 +49,14 @@ class BrandingService
                 $backendConfiguration['backendLogo'] = 'EXT:pizpalue/Resources/Public/Images/backend-logo.svg';
             }
 
-            $extensionConfiguration->set('backend', '', $backendConfiguration);
+            $reflection = new \ReflectionClass(ExtensionConfiguration::class);
+            $parameters = $reflection->getMethod('set')->getParameters();
+
+            if (count($parameters) === 3) {
+                $extensionConfiguration->set('backend', '', $backendConfiguration);
+            } else {
+                $extensionConfiguration->set('backend', $backendConfiguration);
+            }
         }
     }
 }
