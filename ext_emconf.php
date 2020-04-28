@@ -18,7 +18,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_email'     => 'rb@buechler.pro',
     'constraints'      => [
         'depends'   => [
-            'typo3'                 => '9.5.7-9.5.99',
+            'typo3'                 => '10.4.0-10.4.99',
             'bootstrap_package'     => '11.0.2-11.99.99',
             'vhs'                   => '6.0.0-6.99.99',
         ],

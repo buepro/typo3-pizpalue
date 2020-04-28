@@ -58,9 +58,7 @@
 			</trans-unit>
 			<trans-unit id="cookieconsent.common.message">
 				<source>This website uses cookies to ensure you get the best experience on our website.</source>
-				<target state="translated">Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies
-					eingesetzt.
-				</target>
+				<target state="translated">Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies eingesetzt.</target>
 			</trans-unit>
 			<trans-unit id="cookieconsent.common.dismiss">
 				<source>Got it!</source>

@@ -15,14 +15,14 @@
             -> v:format.replace(substring: 'ö', replacement: 'oe', caseSensitive: 0)
             -> v:format.replace(substring: 'ü', replacement: 'ue', caseSensitive: 0)
             -> f:variable(name:'fieldName')}
-        {f:variable(name:fieldName, value:formValue.processedValue)}
+        {f:variable(name: '_{fieldName}', value: formValue.processedValue)}
     </formvh:renderAllFormValues>
 
     <f:comment>
         <!------------------------------------------------------------------------------------------------------------
-          Compile content after </v:format.eliminate> below
+          Compile content after v:format.eliminate below
         ------------------------------------------------------------------------------------------------------------->
     </f:comment>
 </v:format.eliminate>
-#{Name}#{Email}#{Telefon}#{Betreff}#{Mitteilung}#
+#{_Name}#{_Email}#{_Telefon}#{_Betreff}#{_Mitteilung}#
 </html>

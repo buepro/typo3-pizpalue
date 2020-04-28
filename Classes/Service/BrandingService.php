@@ -25,6 +25,8 @@ class BrandingService
 
     /**
      * @param string $extension
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
      */
     public function setBackendStyling($extension = null)
     {
@@ -48,27 +50,6 @@ class BrandingService
             }
 
             $extensionConfiguration->set('backend', '', $backendConfiguration);
-
-            /**
-             * On certain server environments the call to
-             * ---
-             * $configurationManager->setLocalConfigurationValueByPath('EXT/extConf', $extConfArray);
-             * ---
-             *
-             * in the depreciated block from
-             * ---
-             * $extensionConfiguration->set('backend', '', $backendConfiguration);
-             * ---
-             *
-             * cleared the backend configuration.
-             *
-             * @deprecated since TYPO3 v9, will be removed in TYPO3 v10.0
-             */
-            if (\TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(TYPO3_version) < 10000000) {
-                $configurationManager = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Configuration\ConfigurationManager::class);
-                $configurationManager->setLocalConfigurationValueByPath('EXTENSIONS/backend', $backendConfiguration);
-                $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] = $backendConfiguration;
-            }
         }
     }
 }

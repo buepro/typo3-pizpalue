@@ -11,8 +11,10 @@ TYPO3:
             Form:
               renderingOptions:
                 translation:
-                  translationFile:
+                  translationFiles:
                     10: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
-      mixins:
-        finishersEmailMixin:
-          implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'
+          finishersDefinition:
+            EmailToSender:
+              implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'
+            EmailToReceiver:
+              implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'

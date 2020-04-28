@@ -20,12 +20,13 @@ class EmailFinisher extends \TYPO3\CMS\Form\Domain\Finishers\EmailFinisher
      * In addition to the parents action the finisher options are passed to the template.
      *
      * @param FormRuntime $formRuntime
+     * @param string $format
      * @return StandaloneView
      * @throws FinisherException
      */
-    protected function initializeStandaloneView(FormRuntime $formRuntime): StandaloneView
+    protected function initializeStandaloneView(FormRuntime $formRuntime, string $format): StandaloneView
     {
-        $standaloneView = parent::initializeStandaloneView($formRuntime);
+        $standaloneView = parent::initializeStandaloneView($formRuntime, $format);
         $parsedOptions = [];
         foreach (['senderName', 'senderAddress', 'recipientName', 'recipientAddress', 'subject'] as $key) {
             $parsedOptions[$key] = $this->parseOption($key);

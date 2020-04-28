@@ -11,14 +11,8 @@ TYPO3:
           #===================
           # Adds localization
           #===================
-
           formEditor:
-            translationFile:
-              #----------------------------------------------------------------------------
-              # "10:" is needed since the translation from ext:form is assigned to parent:
-              #    translationFile: 'EXT:form/Resources/Private/Language/Database.xlf'
-              #----------------------------------------------------------------------------
-              10: 'EXT:form/Resources/Private/Language/Database.xlf'
+            translationFiles:
               110: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
 
           #================================================
@@ -46,19 +40,111 @@ TYPO3:
                 propertyCollections:
                   finishers:
                     110:
-                      __inheritances:
-                        10: 'TYPO3.CMS.Form.mixins.formElementMixins.formEmailFinisherMixin'
                       identifier: EmailToSystem
                       editors:
-                        # Header label
                         100:
+                          identifier: header
+                          templateName: Inspector-CollectionElementHeaderEditor
                           label: 'formEditor.elements.Form.editor.finishers.MailToSystem.label'
+                        200:
+                          identifier: subject
+                          templateName: Inspector-TextEditor
+                          label: formEditor.elements.Form.finisher.EmailToReceiver.editor.subject.label
+                          propertyPath: options.subject
+                          enableFormelementSelectionButton: true
+                          propertyValidators:
+                            10: NotEmpty
+                            20: FormElementIdentifierWithinCurlyBracesInclusive
                         300:
+                          identifier: 'recipientAddress'
+                          templateName: 'Inspector-TextEditor'
                           label: 'formEditor.elements.Form.finisher.EmailToSystem.editor.recipientAddress.label'
+                          propertyPath: 'options.recipientAddress'
+                          enableFormelementSelectionButton: true
+                          propertyValidatorsMode: 'OR'
+                          propertyValidators:
+                            10: 'NaiveEmail'
+                            20: 'FormElementIdentifierWithinCurlyBracesExclusive'
                           fieldExplanationText:
                         400:
+                          identifier: 'recipientName'
+                          templateName: 'Inspector-TextEditor'
                           label: 'formEditor.elements.Form.finisher.EmailToSystem.editor.recipientName.label'
+                          propertyPath: 'options.recipientName'
+                          enableFormelementSelectionButton: true
+                          propertyValidators:
+                            10: 'FormElementIdentifierWithinCurlyBracesInclusive'
                           fieldExplanationText:
+                        500:
+                          identifier: 'senderAddress'
+                          templateName: 'Inspector-TextEditor'
+                          label: 'formEditor.elements.Form.finisher.EmailToSender.editor.senderAddress.label'
+                          propertyPath: 'options.senderAddress'
+                          enableFormelementSelectionButton: true
+                          propertyValidatorsMode: 'OR'
+                          propertyValidators:
+                            10: 'NaiveEmail'
+                            20: 'FormElementIdentifierWithinCurlyBracesExclusive'
+                          fieldExplanationText: 'formEditor.elements.Form.finisher.EmailToSender.editor.senderAddress.fieldExplanationText'
+                        600:
+                          identifier: 'senderName'
+                          templateName: 'Inspector-TextEditor'
+                          label: 'formEditor.elements.Form.finisher.EmailToSender.editor.senderName.label'
+                          propertyPath: 'options.senderName'
+                          enableFormelementSelectionButton: true
+                          propertyValidators:
+                            10: 'FormElementIdentifierWithinCurlyBracesInclusive'
+                          fieldExplanationText: 'formEditor.elements.Form.finisher.EmailToSender.editor.senderName.fieldExplanationText'
+                        700:
+                          identifier: 'replyToAddress'
+                          templateName: 'Inspector-TextEditor'
+                          label: 'formEditor.elements.Form.finisher.EmailToSender.editor.replyToAddress.label'
+                          propertyPath: 'options.replyToAddress'
+                          enableFormelementSelectionButton: true
+                          propertyValidatorsMode: 'OR'
+                          propertyValidators:
+                            10: 'NaiveEmailOrEmpty'
+                            20: 'FormElementIdentifierWithinCurlyBracesExclusive'
+                        800:
+                          identifier: 'carbonCopyAddress'
+                          templateName: 'Inspector-TextEditor'
+                          label: 'formEditor.elements.Form.finisher.EmailToSender.editor.carbonCopyAddress.label'
+                          propertyPath: 'options.carbonCopyAddress'
+                          enableFormelementSelectionButton: true
+                          propertyValidatorsMode: 'OR'
+                          propertyValidators:
+                            10: 'NaiveEmailOrEmpty'
+                            20: 'FormElementIdentifierWithinCurlyBracesExclusive'
+                        900:
+                          identifier: 'blindCarbonCopyAddress'
+                          templateName: 'Inspector-TextEditor'
+                          label: 'formEditor.elements.Form.finisher.EmailToSender.editor.blindCarbonCopyAddress.label'
+                          propertyPath: 'options.blindCarbonCopyAddress'
+                          enableFormelementSelectionButton: true
+                          propertyValidatorsMode: 'OR'
+                          propertyValidators:
+                            10: 'NaiveEmailOrEmpty'
+                            20: 'FormElementIdentifierWithinCurlyBracesExclusive'
+                        1000:
+                          identifier: 'format'
+                          templateName: 'Inspector-SingleSelectEditor'
+                          label: 'formEditor.elements.Form.finisher.EmailToSender.editor.format.label'
+                          propertyPath: 'options.format'
+                          selectOptions:
+                            10:
+                              value: 'plaintext'
+                              label: 'formEditor.elements.Form.finisher.EmailToSender.editor.format.1'
+                            20:
+                              value: 'html'
+                              label: 'formEditor.elements.Form.finisher.EmailToSender.editor.format.2'
+                        1100:
+                          identifier: 'attachUploads'
+                          templateName: 'Inspector-CheckboxEditor'
+                          label: 'formEditor.elements.Form.finisher.EmailToSender.editor.attachUploads.label'
+                          propertyPath: 'options.attachUploads'
+                        9999:
+                          identifier: removeButton
+                          templateName: Inspector-RemoveElementEditor
 
           #======================
           # Defines the finisher

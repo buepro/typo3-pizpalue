@@ -13,12 +13,10 @@ defined('TYPO3_MODE') || die();
     /**
      * Adds content element group to content element selector
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItemGroup(
         'tt_content',
         'CType',
-        [
-            'Pizpalue',
-            '--div--'
-        ]
+        'pizpalue',
+        'Pizpalue'
     );
 })();

@@ -9,6 +9,9 @@ TYPO3:
         standard:
 
           formElementsDefinition:
+            StaticText:
+              variants:
+                - condition: 'stepType == "SummaryPage" || finisherIdentifier in ["EmailToSender", "EmailToReceiver", "EmailToSystem"]'
             Honeypot:
               variants:
                 -
@@ -17,21 +20,15 @@ TYPO3:
               variants:
                 -
                   condition: 'stepType == "SummaryPage" || finisherIdentifier in ["EmailToSender", "EmailToReceiver", "EmailToSystem"]'
+            ContentElement:
+              variants:
+                -
+                  condition: 'stepType == "SummaryPage" || finisherIdentifier in ["EmailToSender", "EmailToReceiver", "EmailToSystem"]'
 
-          #======================
-          # Defines the finisher
-          #======================
           finishersDefinition:
             EmailToSystem:
-              __inheritances:
-                10: 'TYPO3.CMS.Form.mixins.finishersEmailMixin'
+              implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'
               options:
+                templateName: '{@format}.html'
                 templateRootPaths:
                   10: 'EXT:pizpalue/Resources/Private/Templates/Form/Finishers/MailToSystem/'
-
-      mixins:
-        formElementMixins:
-          ReadOnlyFormElementMixin:
-            variants:
-              -
-                condition: 'stepType == "SummaryPage" || finisherIdentifier in ["EmailToSender", "EmailToReceiver", "EmailToSystem"]'

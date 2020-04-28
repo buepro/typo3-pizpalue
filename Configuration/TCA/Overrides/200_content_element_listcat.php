@@ -35,7 +35,8 @@ defined('TYPO3_MODE') || die();
         [
             'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.title',
             'pp_list_categorized_content',
-            'content-pizpalue-list-categorized-content'
+            'content-pizpalue-list-categorized-content',
+            'pizpalue'
         ]
     );
 

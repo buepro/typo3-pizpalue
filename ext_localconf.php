@@ -22,6 +22,33 @@ defined('TYPO3_MODE') || die();
     }
 
     /**
+     * TS: Register custom EXT:form configurations
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
+        module.tx_form {
+            settings {
+                yamlConfigurations {
+                    200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
+                    260 = EXT:pizpalue/Configuration/Form/MailToSystem/BaseSetup.yaml
+                    262 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEditorSetup.yaml
+                    264 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEngineSetup.yaml
+                }
+            }
+        }
+        plugin.tx_form {
+            settings {
+                yamlConfigurations {
+                    200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
+                    260 = EXT:pizpalue/Configuration/Form/MailToSystem/BaseSetup.yaml
+                    264 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEngineSetup.yaml
+                }
+            }
+        }
+    '));
+    }
+
+    /**
      * PageTS
      */
     if (1) {
@@ -50,7 +77,7 @@ defined('TYPO3_MODE') || die();
      */
     $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
 
-    /***************
+    /**
      * Register "pp" as global fluid namespace
      */
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['pp'][] = 'Buepro\\Pizpalue\\ViewHelpers';
@@ -93,7 +120,7 @@ defined('TYPO3_MODE') || die();
     }
 
     /**
-     * After extension installation handler
+     * After extension installation handler used to copy translations
      */
     $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
     $signalSlotDispatcher->connect(

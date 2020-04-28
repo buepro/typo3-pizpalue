@@ -35,7 +35,8 @@ defined('TYPO3_MODE') || die();
         [
             'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.title',
             'pp_modal_dialog',
-            'content-pizpalue-modal-dialog'
+            'content-pizpalue-modal-dialog',
+            'pizpalue'
         ]
     );
 
