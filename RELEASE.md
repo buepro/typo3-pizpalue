@@ -1,6 +1,6 @@
 # Release
 
-1. Update documentation
+1. Update documentation (check update, upgrade instructions)
 1. Update installation section in administrator documentation (supported extensions)
 1. Run code sniffer
 1. Update version in ext_emconf.php
