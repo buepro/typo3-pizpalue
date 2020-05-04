@@ -7,6 +7,13 @@
 Introduction
 ============
 
+Preface
+=======
+
+This extension started as a distribution and is now a template serving as a base foundation for new websites.
+The former distribution part became to be a new distribution called `pizpalue_distribution` and can be downloaded from
+`the TYPO3 extension repository <https://extensions.typo3.org/extension/pizpalue_distribution>`__.
+
 What does it do?
 ================
 
