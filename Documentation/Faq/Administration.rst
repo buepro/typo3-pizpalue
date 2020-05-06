@@ -9,7 +9,7 @@ Administration
 Installation
 ============
 
-**Q**: How can the distribution be installed or updated with the source code from Github?
+**Q**: How can the extension be installed or updated with the source code from Github?
 
 **A**: Follow these steps:
 

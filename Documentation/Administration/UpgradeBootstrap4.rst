@@ -30,7 +30,7 @@ all extensions that might use Less-constants (e.g. user_customer).
 Review constants
 ================
 
-The following table lists all the bootstrap constants used by the distribution that might need to be reviewed. Constants
+The following table lists all the bootstrap constants used by the extension that might need to be reviewed. Constants
 in italic changed name.
 
 Namespace

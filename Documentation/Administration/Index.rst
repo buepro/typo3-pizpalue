@@ -38,7 +38,7 @@ timelog                          1.5.3
 Update
 ======
 
-After updating this distribution in the extension manager the data base structure should be analysed in the maintenance
+After updating this extension in the extension manager the data base structure should be analysed in the maintenance
 module.
 
 .. _admin_upgrade:

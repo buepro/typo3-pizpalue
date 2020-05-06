@@ -13,7 +13,7 @@ Various
 Extensions
 ==========
 
-This distribution provides some additions to extensions. Additional information might be found in the manual user
+This extension provides some additions to other extensions. Additional information might be found in the manual user
 section from the related extensions.
 
 .. _user-news:
