@@ -83,6 +83,11 @@ defined('TYPO3_MODE') || die();
         'Extensions/felogin/Configuration/TypoScript',
         'Pizpalue - felogin'
     );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $_EXTKEY,
+        'Configuration/TypoScript/DepreciatedTheme',
+        'Pizpalue - Depreciated theme elements'
+    );
     /**
      * @deprecated since version 11.1.2, will be removed in version 12.0.0
      */

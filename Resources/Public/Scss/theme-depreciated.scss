@@ -1,44 +1,7 @@
-//----------------------------------------------------------------------------------------------------------------------
-//
-// Classes used in appearance tab from content element
-//
-//----------------------------------------------------------------------------------------------------------------------
+@import "functions";
+@import "variables";
+@import "mixins";
 
-//
-// General: Classes act on element they are assigned to
-//
-.pp-bg-primary {
-  background-color: $primary;
-}
-.pp-bg-secondary {
-  background-color: $secondary;
-}
-.pp-bg-complementary {
-  background-color: $complementary;
-}
-.pp-bg-light {
-  background-color: $light;
-}
-.pp-bg-dark {
-  background-color: $dark;
-}
-// .pp-ce-background DEPRECIATED as of 25.5.2019
-.pp-ce-background, .pp-bg-centercover {
-  background-origin: border-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-// .pp-ce-bgfixed DEPRECIATED as of 25.5.2019
-.pp-ce-bgfixed, .pp-bg-fixed {
-  background-attachment: fixed;
-  @media (hover: none) {
-    & {
-      background-attachment: initial;
-    }
-  }
-}
 // DEPRECIATED as of 29.11.2018
 .pp-ce-margin {
   @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
@@ -70,11 +33,26 @@
   background-color: rgba(black, 0.7);
 }
 
-//
-// Content inner: act on inner container
-//
+// .pp-ce-background DEPRECIATED as of 25.5.2019
+.pp-ce-background {
+  background-origin: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+// .pp-ce-bgfixed DEPRECIATED as of 25.5.2019
+.pp-ce-bgfixed {
+  background-attachment: fixed;
+  @media (hover: none) {
+    & {
+      background-attachment: initial;
+    }
+  }
+}
+
 // .pp-content-margin DEPRECIATED as of 25.5.2019
-.pp-content-margin, .pp-inner-margin {
+.pp-content-margin {
   &.pp-content, > .frame-container > .frame-inner {
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
       @include media-breakpoint-up($breakpoint) {
@@ -85,7 +63,7 @@
   }
 }
 // .pp-content-padding DEPRECIATED as of 25.5.2019
-.pp-content-padding, .pp-inner-padding {
+.pp-content-padding {
   &.pp-content, > .frame-container > .frame-inner {
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
       @include media-breakpoint-up($breakpoint) {
@@ -96,66 +74,33 @@
   }
 }
 // .pp-content-bgwhite70 DEPRECIATED as of 25.5.2019
-.pp-content-bgwhite70, .pp-inner-bgwhite70 {
+.pp-content-bgwhite70 {
   &.pp-content, > .frame-container > .frame-inner {
     background-color: rgba(white, 0.7);
   }
 }
 // .pp-content-bggrey70 DEPRECIATED as of 25.5.2019
-.pp-content-bggrey70, .pp-inner-bggrey70 {
+.pp-content-bggrey70 {
   &.pp-content, > .frame-container > .frame-inner {
     background-color: rgba(gray, 0.7);
   }
 }
 // .pp-content-bgblack70 DEPRECIATED as of 25.5.2019
-.pp-content-bgblack70, .pp-inner-bgblack70 {
+.pp-content-bgblack70 {
   &.pp-content, > .frame-container > .frame-inner {
     background-color: rgba(black, 0.7);
   }
 }
 
 //
-// Gallery items
+// external: micro clearfix hack
+// DEPRECIATED as of 6.5.2020
 //
-div.pp-gallery-item-left {
-  .gallery-item {
-    text-align: left;
-    figure {
-      display: inline-block;
-      width: auto;
-      max-width: 100%;
-    }
-  }
+.pp-cf:before,
+.pp-cf:after {
+  content: " ";
+  display: table;
 }
-div.pp-gallery-item-right {
-  .gallery-item {
-    text-align: right;
-    figure {
-      display: inline-block;
-      width: auto;
-      max-width: 100%;
-    }
-  }
-}
-.pp-gallery-item-join {
-  overflow: hidden;
-  .gallery-item {
-    margin: 0;
-    padding: 0;
-    figure {
-      margin-bottom: auto;
-    }
-  }
-}
-.pp-gallery-item-shadow {
-  .gallery-item img {
-    box-shadow: 5px 5px 15px 5px gray;
-  }
-}
-
-//
-// Various
-//
-.pp-label-dataprotection {
-  display: none;
+.pp-cf:after, .clear {
+  clear: both;
 }

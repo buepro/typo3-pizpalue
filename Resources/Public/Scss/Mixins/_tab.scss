@@ -1,39 +1,3 @@
-@mixin pp-make-frame-bg($color) {
-  border-color: pp-tint($color, 80%);
-  background: pp-tint($color, 80%);
-  background: linear-gradient(20deg, pp-tint($color, 70%), pp-tint($color, 90%));
-}
-@mixin pp-style-accordion($color) {
-  .card {
-    background-color: pp-tint($color, 90%);
-    border: pp-tint($color, 40%);
-  }
-  .card-header {
-    background-color: pp-tint($color, 20%);
-    color: pp-contrast(pp-tint($color, 20%));
-    border-bottom: pp-tint($color, 40%);
-  }
-}
-@mixin pp-style-accordion-light($color) {
-  .accordion-title-link {
-    border-left: $color 4px solid;
-    &.collapsed {
-      border-left-color: transparent;
-    }
-  }
-  .accordion-title-link-text, .accordion-title-link-state {
-    color: $body-color;
-  }
-  .accordion-title-link-state {
-    font-weight: bold;
-  }
-  .accordion-collapse {
-    border-left: pp-tint($color, 30%) 4px dotted;
-    &.show {
-      border-left-style: solid;
-    }
-  }
-}
 @mixin pp-style-tab($color) {
   $ppTabActiveTabBg: pp-tint($color, 60%);
   $ppTabInactiveTabBg: pp-tint($color, 20%);
@@ -84,10 +48,3 @@
     }
   }
 }
-@mixin pp-make-text-shadow-outline($thickness: 3px, $color: black, $blur-radius: 5px) {
-  text-shadow: $thickness $thickness $blur-radius $color,
-    $thickness 0-$thickness $blur-radius $color,
-    0-$thickness $thickness $blur-radius $color,
-    0-$thickness 0-$thickness $blur-radius $color
-}
-

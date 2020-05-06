@@ -1,0 +1,27 @@
+//----------------------------------------------------------------------------------------------------------------------
+//
+// Custom theme adjustments are more likely to be overridden by customer projects
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+//
+// Functions
+//
+@import "functions";
+
+//
+// Variables
+// ATTENTION: Variables might use previous defined function
+//
+@import "variables";
+
+//
+// Mixins
+// ATTENTION: Mixins might use previous defined variables.
+//
+@import "mixins";
+
+//
+// pizpalue custom theme elements
+//
+@import "ThemeCustom/elements";

@@ -20,9 +20,6 @@
       }
     }
   }
-  .frame-type-subnavigation + .pp-subnavcont {
-    @extend .frame-collapsible;
-  }
   .backendlayout-subnavigation_left {
     .subnav-wrap {
       order: 1;

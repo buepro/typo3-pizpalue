@@ -64,7 +64,7 @@ page {
         #:::::::::::::::::::::::
         #: Load theme with modified features
         #.
-        theme = EXT:pizpalue/Resources/Public/Scss/Theme/theme.scss
+        theme = EXT:pizpalue/Resources/Public/Scss/theme-main.scss
     }
     includeCSSLibs {
         #:::::::::::::::::::::::
@@ -89,7 +89,7 @@ page {
 [{$pizpalue.features.useStyle} == 1]
 page {
     includeCSS {
-        pizpalueCustom = EXT:pizpalue/Resources/Public/Scss/Custom/custom.scss
+        ppCustomTheme = EXT:pizpalue/Resources/Public/Scss/theme-custom.scss
     }
 }
 [END]

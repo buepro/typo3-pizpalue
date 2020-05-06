@@ -1,0 +1,22 @@
+//
+// Corrects image overflow on webkit engine
+//
+figure.image {
+  width: 100%;
+}
+
+//
+// Nested frame container
+//
+.container-fluid .frame-container,
+.frame-container .frame-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//
+// Full width container
+//
+.container-fluid .frame-container {
+  max-width: none;
+}

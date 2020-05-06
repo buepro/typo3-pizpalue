@@ -1,3 +1,9 @@
+//---------------------------------------------------------------------------------------------------------------------
+// Tile
+// see as well _extensions.scss
+//---------------------------------------------------------------------------------------------------------------------
+//
+
 //
 // Basics
 //
@@ -72,25 +78,6 @@
 @include pp-make-responsive-tile('lg');
 @include pp-make-responsive-tile('xl');
 
-
-//
-// Outer most border (tile unit or tile alone)
-//
-.pp-tile-row, .fe-tile-row,
-:not(.pp-tile-col):not(.fe-tile-col) > .pp-tile {
-  margin-left: -$pp-tile-gutter;
-  margin-right: -$pp-tile-gutter;
-  &:nth-of-type(1) {
-    margin-top: -$pp-tile-gutter;
-  }
-  &:nth-last-of-type(1) {
-    margin-bottom: -$pp-tile-gutter;
-  }
-  .pp-tile-row, .fe-tile-row {
-    margin: 0;
-  }
-}
-
 //
 // Content padding
 //
@@ -104,6 +91,9 @@
 // Images
 //
 .pp-tile {
+  .gallery-row:last-child {
+    margin-bottom: 0;
+  }
   figure {
     margin-bottom: 0;
   }

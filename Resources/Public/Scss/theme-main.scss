@@ -1,0 +1,38 @@
+//----------------------------------------------------------------------------------------------------------------------
+//
+// Main theme adjustments are less likely to be overridden by customer projects
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+//
+// Functions
+//
+@import "functions";
+
+//
+// Variables
+// ATTENTION: Variables might use previous defined function
+//
+@import "variables";
+
+//
+// Mixins
+// ATTENTION: Mixins might use previous defined variables.
+//
+@import "mixins";
+
+//
+// bootstrap framework elements
+//
+@import "Bootstrap/elements";
+
+//
+// bootstrap_package elements
+//
+@import "BootstrapPackage/elements";
+
+//
+// pizpalue main theme elements
+//
+@import "ThemeMain/elements";
+

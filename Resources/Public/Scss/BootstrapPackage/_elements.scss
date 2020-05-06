@@ -1,29 +1,11 @@
 //----------------------------------------------------------------------------------------------------------------------
 //
-// Theme style adjustments are less likely to be overridden by customer projects
+// Core consists of all items except functions, variables and mixins
 //
 //----------------------------------------------------------------------------------------------------------------------
 
 //
-// Provides additional functions/mixins
-//
-@import "../Functions/functions";
-@import "../Mixins/mixins";
-
-//
-// Variables
-//
-@import "BootstrapPackage/variables";
-@import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/variables";
-@import "variables";
-
-//
-// Imports needed Bootstrap Files
-//
-@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/bootstrap";
-
-//
-// Bootstrap_package components
+// Original elements
 //
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/list";
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/backendlayouts";
@@ -60,18 +42,9 @@
 @import "../../../../../bootstrap_package/Resources/Public/Scss/Theme/photoswipe";
 
 //
-// Complements, adds components for pizpalue
+// Adjusted elements
 //
-@import "Cms/fluid";
-@import "BootstrapPackage/navbar";
-@import "BootstrapPackage/cookieconsent";
-@import "BootstrapPackage/footer";
-@import "BootstrapPackage/adjustments";
-@import "ce_editor";
-@import "ce_appearance";
-@import "ce_appearance_overlaycard";
-@import "ce_tile";
-@import "contentelements";
-@import "plugins";
-@import "various";
-
+@import "Elements/navbar";
+@import "Elements/cookieconsent";
+@import "Elements/footer";
+@import "Elements/adjustments";
