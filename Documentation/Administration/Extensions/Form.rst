@@ -32,7 +32,7 @@ How to use it:
 
 .. note::
 
-   You might have a look at the distribution ``pizpalue_distribution`` to see how it can be used. Have a look to the
+   You might have a look at the distribution `pizpalue_distribution` to see how it can be used. Have a look to the
    contact form yaml definition as well as the page where the form is used.
 
 

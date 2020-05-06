@@ -152,9 +152,9 @@ contexts as well.
    `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>` provides the structure element `tile unit`
    that assigns the mentioned classes directly.
 
-   The tile border width can be adjusted in the constant editor (``PIZPALUE: CLIENT STYLE - Tile gutter``).
+   The tile border width can be adjusted in the constant editor (`PIZPALUE: CLIENT STYLE - Tile gutter`).
 
-   In case a tile content needs to be vertically scrolled the class ``pp-tile-scroll-y`` might be assigned to the tile.
+   In case a tile content needs to be vertically scrolled the class `pp-tile-scroll-y` might be assigned to the tile.
 
 
 .. _user-design-customframes:
