@@ -145,11 +145,11 @@ contexts as well.
 
 .. note::
 
-   **Tile vies**
+   **Tile views**
 
    Tile views can be created by arranging tiles in columns. For this the classes `pp-tile-row` and `no-gutters`
    are assigned to the row and `pp-tile-col` to the column tag. The extension
-   `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>` provides the structure element `tile unit`
+   `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__ provides the structure element `tile unit`
    that assigns the mentioned classes directly.
 
    The tile border width can be adjusted in the constant editor (`PIZPALUE: CLIENT STYLE - Tile gutter`).
