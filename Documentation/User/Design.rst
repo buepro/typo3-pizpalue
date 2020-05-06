@@ -39,7 +39,7 @@ Structure elements
 With structure elements the content area might be further organized. Typical elements are containers, columns,
 accordions and tabs. See as well `demo site <https://www.pizpalue.buechler.pro/das-plus/strukturemente>`__.
 
-This distribution supports the following extensions providing similar structure elements:
+This extension supports the following extensions providing similar structure elements:
 
 - `Extension pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__ powered by the
   `extension gridelements <https://extensions.typo3.org/extension/gridelements>`__
@@ -68,44 +68,6 @@ The available structure elements can be found in the new content element wizard 
    "Flux content"-tab in new content element wizard
 
 
-.. _user-design-tile-unit
-
-Tile unit
----------
-
-With tile units a tile view can be composed where tiles can have one of the following side ratios: 2:1, 1:1, 1:2.
-
-Combine any number of tile units to get the desired horizontal column distribution followed by adding content
-elements having a tile layout (tab "Appearance" from content element properties dialog) selected. By assigning
-a tile layout, the content element becomes a tile.
-
-.. figure:: ../Images/User/ContentElement_Tile.jpg
-   :width: 500px
-   :alt: Content element tile layout settings
-
-Sometimes it is desirable to not stick to the tile side ratio on smaller screen sizes. With the field
-"Layout screen breakpoint" it can be defined from what screen size on the tile ratio should be applied.
-
-When working with images as tiles additional cropping side ratios (2:1, 1:2) assist in defining the desired image area.
-
-.. note::
-   When defining an image crop area with the same side ratio (e.g. 2:1) as used for the content element layout the
-   image might not fill the entire tile area. This is due to the fact that the tile area is having the exact side
-   ratio where the images side ratio deviates from that due to the tile border. After approximating the image area
-   with the exact tile ratio select the free side ratio to fine adjust the area.
-
-.. note::
-   The tile border width can be adjusted in the constant editor (``PIZPALUE: CLIENT STYLE - Tile gutter``).
-
-.. note::
-   In case a tile content needs to be vertically scrolled the class ``pp-tile-scroll-y`` might be assigned to the tile.
-
-.. attention::
-   When using the extension `pp_gridelements` the tile unit gridelement is available using the recommended gridelements
-   static template (``Gridelements w/DataProcessing (recommended)``). Further information can be found on the
-   preliminary :ref:`Upgrade 12 <admin_upgrade_12_gridelements>` documentation.
-
-
 .. _user-design-contentElement:
 
 Content element
@@ -115,6 +77,17 @@ Content element
 
 Images tab
 ----------
+
+Image cropping
+~~~~~~~~~~~~~~
+
+To faster crop images to be used in tiles the side ratios 2:1 and 1:2 were added.
+
+.. note::
+   When defining an image crop area with the same side ratio (e.g. 2:1) as used for the content element layout the
+   image might not fill the entire tile area. This is due to the fact that the tile area is having the exact side
+   ratio where the images side ratio deviates from that due to the tile border. After approximating the image area
+   with the exact tile ratio select the free side ratio to fine adjust the area.
 
 Image variants
 ~~~~~~~~~~~~~~
@@ -154,6 +127,36 @@ definition could be used:
 Appearance tab
 --------------
 
+.. _user-design-layouts:
+
+Layouts
+~~~~~~~
+
+Three `tile layouts` and a `Layout screen breakpoint` selector were added.
+
+By selecting a `Layout screen breakpoint` a css class is added to the content element allowing to adjust the layout
+depending on the screen width. This is currently used in conjunction with tile layouts but might be used in other
+contexts as well.
+
+.. figure:: ../Images/User/ContentElement_Layouts.jpg
+   :alt: Content element layouts and layout breakpoints
+
+   Content element layouts and layout breakpoints
+
+.. note::
+
+   **Tile vies**
+
+   Tile views can be created by arranging tiles in columns. For this the classes `pp-tile-row` and `no-gutters`
+   are assigned to the row and `pp-tile-col` to the column tag. The extension
+   `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>` provides the structure element `tile unit`
+   that assigns the mentioned classes directly.
+
+   The tile border width can be adjusted in the constant editor (``PIZPALUE: CLIENT STYLE - Tile gutter``).
+
+   In case a tile content needs to be vertically scrolled the class ``pp-tile-scroll-y`` might be assigned to the tile.
+
+
 .. _user-design-customframes:
 
 Custom frames
@@ -176,13 +179,13 @@ Additional frames can be selected for content elements
 Background
 ~~~~~~~~~~
 
-The bootstrap package as well as this distribution provide a way to assign a background to a content element.
+The bootstrap package as well as this extension provide a way to assign a background to a content element.
 
 The bootstrap package approach uses additional style definitions inside the content element container allowing to
 define different images for different screen sizes. Additionally it provides easy image manipulations. In case no
 frame should be used as well no background image can be assigned.
 
-The distribution is embedding a background image by adding an inline style definition. In case no frame is
+The extension is embedding a background image by adding an inline style definition. In case no frame is
 selected the content is wrapped allowing always to have a background image.
 
 
