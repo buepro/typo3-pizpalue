@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:if condition="{files}">
+    <f:comment>
+        ***********************************************************************************
+        Get configuration and variants for lead image: `_columnConfigLead`, `_variantsLead`
+        ***********************************************************************************
+    </f:comment>
+    <f:variable name="_columnConfigLead">{settings.gallery.columns.1}</f:variable>
+    <bk2k:data.imageVariants as="_variantsLead" variants="{variants}" multiplier="{_columnConfigLead.multiplier}" gutters="{_columnConfigLead.gutters}" corrections="{_columnConfigLead.corrections}" />
+
+    <f:comment>
+        *********************************************************************************
+        Get configuration and variants for remaining images: `_columnConfig`, `_variants`
+        *********************************************************************************
+    </f:comment>
+    <f:variable name="imagecols">1</f:variable>
+    <f:if condition="{files -> f:count()} > 1">
+        <f:variable name="imagecols">{data.imagecols as integer}</f:variable>
+    </f:if>
+    <f:variable name="_columnConfig">{settings.gallery.columns.{imagecols}}</f:variable>
+    <bk2k:data.imageVariants as="_variants" variants="{variants}" multiplier="{_columnConfig.multiplier}" gutters="{_columnConfig.gutters}" corrections="{_columnConfig.corrections}" />
+
+    <f:comment>
+        **************
+        Render gallery
+        **************
+    </f:comment>
+    <div class="gallery-row">
+        <f:for each="{files}" as="file" iteration="fileIteration">
+            <f:if condition="{fileIteration.index} == 0">
+                <f:then>
+                    <div class="gallery-item {_columnConfigLead.class}">
+                        <f:render partial="Media/Type" arguments="{file: file, data: data, settings: settings, variants: _variantsLead}" />
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="gallery-item {_columnConfig.class}">
+                        <f:render partial="Media/Type" arguments="{file: file, data: data, settings: settings, variants: _variants}" />
+                    </div>
+                </f:else>
+            </f:if>
+        </f:for>
+    </div>
+</f:if>
+</html>

@@ -11,7 +11,7 @@ defined('TYPO3_MODE') || die();
 
 (function () {
     /**
-     * Adds content element group to content element selector
+     * Add content element group to content element selector
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItemGroup(
         'tt_content',
@@ -19,4 +19,32 @@ defined('TYPO3_MODE') || die();
         'pizpalue',
         'Pizpalue'
     );
+
+    /**
+     * Add 'tile` layout items
+     */
+    $items = $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
+    $items[] = [
+        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile21',
+        'pp-tile-21'
+    ];
+    $items[] = [
+        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile11',
+        'pp-tile-11'
+    ];
+    $items[] = [
+        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile12',
+        'pp-tile-12'
+    ];
+    $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = $items;
+
+    /**
+     * Add `emphasize media` layout for textmedia contentelement
+     */
+    $items = $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
+    $items[] = [
+        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.emphasize_media',
+        'pp-emphasize-media'
+    ];
+    $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['layout']['config']['items'] = $items;
 })();

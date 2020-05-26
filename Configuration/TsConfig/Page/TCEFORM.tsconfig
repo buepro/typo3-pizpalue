@@ -23,14 +23,3 @@ TCEFORM.tt_content.frame_class {
         pp-scrollanimation3 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCefScrollAnimation3
     }
 }
-
-#:::::::::::::::::::::::
-#: Adds tile layouts
-#.
-TCEFORM.tt_content.layout {
-    addItems {
-        pp-tile-21 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile21
-        pp-tile-11 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile11
-        pp-tile-12 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile12
-    }
-}

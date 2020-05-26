@@ -127,10 +127,10 @@ definition could be used:
 Appearance tab
 --------------
 
-.. _user-design-layouts:
+.. _user-design-tilelayouts:
 
-Layouts
-~~~~~~~
+Tile layouts
+~~~~~~~~~~~~
 
 Three `tile layouts` and a `Layout screen breakpoint` selector were added.
 
@@ -156,6 +156,34 @@ contexts as well.
 
    In case a tile content needs to be vertically scrolled the class `pp-tile-scroll-y` might be assigned to the tile.
 
+.. _user-design-emphasizemedialayout:
+
+`Emphasize media` layout
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+For the content element `Text & media` a `teaser`- and `read more`-field as well as the layout `Emphasize media` has
+been added to stronger draw the users attention to the media.
+
+.. figure:: ../Images/User/ContentElement_EmphasizeMedia.jpg
+   :alt: Emphasize media layout for content element text and media
+
+.. note::
+
+   The layout `Emphasize media` increases the image width by 40%. To adapt the images to the new width the TS
+   configuration `emphasizeMediaMultiplier` has been introduced (`.left.` applies to the image orientation `left`. See
+   as well `right`, `centered_left` and `centered_right` for other orientations):
+
+   .. code-block:: typoscript
+
+      lib.contentElement.settings.responsiveimages.contentelements.textmedia {
+         left.emphasizeMediaMultiplier {
+            default = 0.7
+            large = 0.7
+            medium = 0.7
+         }
+      }
+
+   In case an other with for images is desired the respective configurations should be adapted.
 
 .. _user-design-customframes:
 

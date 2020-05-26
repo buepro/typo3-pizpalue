@@ -85,6 +85,10 @@
 			<trans-unit id="tt_content.layout.tile12">
 				<source>Tile with side ratio 1:2</source>
 			</trans-unit>
+
+			<trans-unit id="tt_content.layout.emphasize_media">
+				<source>Emphasize media</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

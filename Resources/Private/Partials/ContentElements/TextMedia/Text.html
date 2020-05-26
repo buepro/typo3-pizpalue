@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{data.teaser} && {data.bodytext}">
+    <f:then>
+        <div class="ppc-wrap py-3">
+            <f:render partial="Header/All" arguments="{_all}" />
+            <div class="ppc-teaser">
+                <f:format.html>{data.teaser}</f:format.html>
+            </div>
+            <div id="bodytext-{data.uid}" class="ppc-bodytext{f:if(condition: data.readmore_label, then: ' collapse')}">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+            <f:if condition="{data.readmore_label}">
+                <div class="ppc-control">
+                    <a class="ppc-readmore" data-toggle="collapse" href="#bodytext-{data.uid}"
+                       aria-expanded="false" aria-controls="bodytext-{data.uid}">
+                        <span class="ppc-icon mr-2">&xdtri;</span>{data.readmore_label}
+                    </a>
+                </div>
+            </f:if>
+        </div>
+    </f:then>
+    <f:else>
+        <f:render partial="Header/All" arguments="{_all}" />
+        <f:format.html>{data.teaser}</f:format.html>
+        <f:format.html>{data.bodytext}</f:format.html>
+    </f:else>
+</f:if>
+</html>
