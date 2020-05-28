@@ -4,6 +4,37 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+			<trans-unit id="element.idGeneralContactForm.label">
+				<source>General contact form</source>
+			</trans-unit>
+			<trans-unit id="element.idName.properties.label">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="element.idEmail.properties.label">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="element.idTelephone.properties.label">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="element.idSubject.properties.label">
+				<source>Subject</source>
+			</trans-unit>
+			<trans-unit id="element.idMessage.properties.label">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="element.idFileupload.properties.label">
+				<source>PDF-File</source>
+			</trans-unit>
+			<trans-unit id="element.idImageupload.properties.label">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="element.idDataprotectionMultiCheckbox.properties.label">
+				<source>Data protection notice</source>
+			</trans-unit>
+			<trans-unit id="element.Form.renderingOptions.submitButtonLabel">
+				<source>Send</source>
+			</trans-unit>
+
 			<trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label">
 				<source>Email to system</source>
 			</trans-unit>
