@@ -22,6 +22,9 @@ page {
         meta {
             # cat=6030/1060/0210; type=boolean; label=Show meta menu
             enable = 0
+
+            # cat=6030/1060/0220; type=string; label=Meta menu navigation value
+            navigationValue =
         }
 
         language {
@@ -40,20 +43,17 @@ pizpalue.menu {
 
 
 #---------------------------------------------------------#
-# Customer various
+# Customer extended
 #---------------------------------------------------------#
 
 page {
     theme {
         meta {
-            # cat=6060/1060/0120; type=string; label=Meta menu navigation value
-            navigationValue =
-
             # cat=6060/1060/0130; type=options[List=list, Directory=directory]; label=Meta menu navigation type
             navigationType = directory
 
             # cat=6060/1060/0140; type=boolean; label=Meta Navigation include items not in menu
-            includeNotInMenu = 1
+            includeNotInMenu = 0
         }
 
         language {
