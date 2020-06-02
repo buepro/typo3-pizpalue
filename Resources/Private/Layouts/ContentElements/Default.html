@@ -29,6 +29,12 @@
     <f:variable name="spaceBeforeClass">frame-space-before-{f:if(condition: data.space_before_class, else: 'none', then: data.space_before_class)}</f:variable>
     <f:variable name="spaceAfterClass">frame-space-after-{f:if(condition: data.space_after_class, else: 'none', then: data.space_after_class)}</f:variable>
 
+    <f:comment>====================== Pizpalue structure multiplier ======================</f:comment>
+
+    {v:variable.register.get(name: 'structureMultiplier') -> f:variable(name: '_structureMultiplier')}
+    <f:if condition="{_structureMultiplier}">
+        {bk2k:data.imageVariants(as: 'variants', variants: variants, multiplier: _structureMultiplier)}
+    </f:if>
 
     <f:comment>====================== Pizpalue init attributes ======================</f:comment>
 

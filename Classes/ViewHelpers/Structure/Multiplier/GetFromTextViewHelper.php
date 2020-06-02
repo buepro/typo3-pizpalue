@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Buepro\Pizpalue\ViewHelpers;
+namespace Buepro\Pizpalue\ViewHelpers\Structure\Multiplier;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
@@ -9,9 +9,9 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
- * Class GetImageMultiplierViewHelper
+ * Class GetFromTextViewHelper
  */
-class GetImageMultiplierViewHelper extends AbstractViewHelper
+class GetFromTextViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 

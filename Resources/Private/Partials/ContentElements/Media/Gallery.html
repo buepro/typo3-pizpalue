@@ -11,7 +11,7 @@
         Apply additional scaling as defined in field `data.tx_pizpalue_image_scaling`
     -------------------------------------------------------------------------------------------------------------------
     </f:comment>
-    {pp:getImageMultiplier(text: data.tx_pizpalue_image_scaling, as: '_multiplier')}
+    {pp:structure.multiplier.getFromText(text: data.tx_pizpalue_image_scaling, as: '_multiplier')}
     <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{_multiplier}" />
     <f:comment>
     ===================================================================================================================
