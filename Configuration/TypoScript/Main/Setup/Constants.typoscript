@@ -1,7 +1,6 @@
 constants {
-    ppCustomerCommonName = {$pizpalue.customer.commonName}
-    ppCustomerCommonEmail = {$pizpalue.customer.commonEmail}
-    ppCustomerCommonPhone = {$pizpalue.customer.commonPhone}
+    ppCustomerCompany = {$pizpalue.customer.company}
+    ppCustomerDomain = {$pizpalue.customer.domain}
     ppCustomerContactName = {$pizpalue.customer.commonName}
     ppCustomerContactAddress = {$pizpalue.customer.contactAddress}
     ppCustomerContactAddressAddition = {$pizpalue.customer.contactAddressAddition}
@@ -11,4 +10,14 @@ constants {
     ppCustomerContactCountry = {$pizpalue.customer.contactCountry}
     ppCustomerContactEmail = {$pizpalue.customer.contactEmail}
     ppCustomerContactPhone = {$pizpalue.customer.contactPhone}
+    ppCustomerContactFax = {$pizpalue.customer.contactFax}
+    ppRatingValue = {$pizpalue.customer.ratingValue}
+    ppRatingCount = {$pizpalue.customer.ratingCount}
+}
+
+// todo: depreciated as of 11.1.0
+constants {
+    ppCustomerCommonName = {$pizpalue.customer.commonName}
+    ppCustomerCommonEmail = {$pizpalue.customer.commonEmail}
+    ppCustomerCommonPhone = {$pizpalue.customer.commonPhone}
 }

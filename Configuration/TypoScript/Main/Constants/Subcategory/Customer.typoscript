@@ -7,17 +7,14 @@
 #---------------------------------------------------------#
 
 pizpalue.customer {
-    # cat=6030/1020/0010; type=string; label=Common customer name (used in copyright)
-    commonName = Allgemeiner Kundenname
+    # cat=6030/1020/0010; type=string; label=Company name
+    company = Company GmbH
 
-    # cat=6030/1020/0012; type=string; label=Common customer email
-    commonEmail = info@customer.com
-
-    # cat=6030/1020/0014; type=string; label=Common customer phone
-    commonPhone = 111
+    # cat=6030/1020/0012; type=string; label=Domain name
+    domain = domain.ch
 
     # cat=6030/1020/0016; type=string; label=Contact name
-    contactName = {pizpalue.customer.commonName}
+    contactName = Contact name
 
     # cat=6030/1020/0018; type=string; label=Contact address
     contactAddress = Street 1
@@ -28,6 +25,11 @@ pizpalue.customer {
     # cat=6030/1020/0026; type=string; label=Contact city
     contactCity = City
 
+    # cat=6030/1020/0028; type=string; label=Contact phone
+    contactPhone = +41 11 111 11 11
+
+    # cat=6030/1020/0030; type=string; label=Contact email
+    contactEmail = info@domain.ch
 }
 
 page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
@@ -38,9 +40,6 @@ page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
 #---------------------------------------------------------#
 
 pizpalue.customer {
-    # cat=6060/1020/0018; type=string; label=Domain name
-    domain =
-
     # cat=6060/1020/0020; type=string; label=Contact address addition
     contactAddressAddition = Floor 4
 
@@ -50,12 +49,32 @@ pizpalue.customer {
     # cat=6060/1020/0028; type=string; label=Contact country
     contactCountry = Country
 
-    # cat=6060/1020/0030; type=string; label=Contact email
-    contactEmail = {$pizpalue.customer.commonEmail}
+    # cat=6060/1020/0030; type=string; label=Contact fax
+    contactFax = +41 11 111 11 12
 
-    # cat=6060/1020/0032; type=string; label=Contact phone
-    contactPhone = {$pizpalue.customer.commonPhone}
+    # cat=6060/1020/0040; type=string; label=Best rating:The highest value allowed in the rating system
+    bestRating = 100
+
+    # cat=6060/1020/0042; type=string; label=Worst rating:The lowest value allowed in the rating system
+    worstRating = 0
+
+    # cat=6060/1020/0044; type=string; label=Rating value:The obtained rating
+    ratingValue = 85
+
+    # cat=6060/1020/0046; type=string; label=Rating count:The count of total number of ratings
+    ratingCount = 612
+
+    # cat=6060/1020/0048; type=string; label=Review aspect:This Review or Rating is relevant to this part or facet of the itemReviewed
+    reviewAspect = Overall customer satisfation
 
     # cat=6060/1020/0080; type=string; label=Copyright text
-    copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.commonName}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
+    copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.company}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
+}
+
+
+// todo: depreciated as of 11.1.0
+pizpalue.customer {
+    commonName = {$pizpalue.customer.company}
+    commonEmail = {$pizpalue.customer.contactEmail}
+    commonPhone = {$pizpalue.customer.contactPhone}
 }
