@@ -27,6 +27,29 @@
   .textmedia-centered {
     align-items: center;
   }
+  .ppc-readmore {
+    .ppc-more {
+      display: none;
+    }
+    .ppc-less {
+      display: inline-block;
+    }
+    &.collapsed {
+      .ppc-more {
+        display: inline-block;
+      }
+      .ppc-less {
+        display: none;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .textmedia-left, .textmedia-right {
+      .textmedia-text {
+        box-shadow: 0 0 2px $primary;
+      }
+    }
+  }
   @include media-breakpoint-up(lg) {
     .textmedia-left, .textmedia-right {
       .textmedia-gallery {
