@@ -1,0 +1,21 @@
+#---------------------------------------------------------#
+# New content element wizard
+#---------------------------------------------------------#
+mod.wizards.newContentElement.wizardItems.special {
+   elements {
+      pp_schema {
+         iconIdentifier = content-pizpalue-schema
+         title = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.title
+         description = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.description
+         tt_content_defValues {
+            CType = pp_schema
+         }
+      }
+   }
+   show := addToList(pp_schema)
+}
+
+#---------------------------------------------------------#
+# Page preview
+#---------------------------------------------------------#
+mod.web_layout.tt_content.preview.pp_schema = EXT:pizpalue/Resources/Private/Templates/ContentElements/Preview/Schema.html

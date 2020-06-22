@@ -157,6 +157,19 @@
 				<source>XL-Height from list item (screen width > 1199px)</source>
 			</trans-unit>
 
+			<trans-unit id="ce_schema.title">
+				<source>Schema definition</source>
+			</trans-unit>
+			<trans-unit id="ce_schema.description">
+				<source>Structured data in JSON-LD format embedded in a script tag (as used by schema.org)</source>
+			</trans-unit>
+			<trans-unit id="ce_schema.image_width">
+				<source>Image width</source>
+			</trans-unit>
+			<trans-unit id="ce_schema.show_content">
+				<source>Show content</source>
+			</trans-unit>
+
 			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
 				<source>Enable bootstrap_package page layouts</source>
 			</trans-unit>

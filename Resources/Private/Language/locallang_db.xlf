@@ -150,6 +150,12 @@
 			<trans-unit id="tca.list_categorized_content.options">
 				<source>List options</source>
 			</trans-unit>
+			<trans-unit id="tca.schema.jsonLdCode">
+				<source>JSON-LD Code</source>
+			</trans-unit>
+			<trans-unit id="tca.schema.options">
+				<source>Schema options</source>
+			</trans-unit>
 
 		</body>
 	</file>

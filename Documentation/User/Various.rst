@@ -35,9 +35,10 @@ render the image on top of the text (`see example <https://www.pizpalue.buechler
 Data from type getText
 ======================
 
-The `getText data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Index.html#gettext>`__ allows
-to get various data from a web site. As an example a translated text might be retrieved depending on the currently
-selected page language. For this users might reference data by using curly brackets within the editor
+The `getText data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Index.html#gettext>`__ has been
+enabled for the RTE editor. It allows to get various data from a web site. As an example a translated text might be
+retrieved depending on the currently selected page language. For this users might reference data by using curly
+brackets within the editor
 (`see example <https://www.pizpalue.buechler.pro/das-plus/gestaltung/attribute/wissenswertes>`__):
 
 .. figure:: ../Images/User/InlineLocalization.jpg
@@ -49,6 +50,9 @@ selected page language. For this users might reference data by using curly brack
    You might reference other content as defined by the
    `"getText" data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html>`__.
 
+.. note::
+   To disable the :ts:`getText` data type for the RTE editor the following TS can be used:
+   :ts:`lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 0`
 
 .. _usr-ppClasses:
 

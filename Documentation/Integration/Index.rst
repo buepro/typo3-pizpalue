@@ -6,6 +6,8 @@
 Integration
 ===========
 
+.. _integration_templating:
+
 Templating
 ==========
 

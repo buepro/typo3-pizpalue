@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>General</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <image_width>
+                        <TCEforms>
+                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.image_width
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                                <eval>int</eval>
+                                <default>800</default>
+                            </config>
+                        </TCEforms>
+                    </image_width>
+                    <show_content>
+                        <TCEforms>
+                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.show_content
+                            </label>
+                            <config>
+                                <type>check</type>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </show_content>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

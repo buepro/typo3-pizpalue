@@ -103,7 +103,7 @@ defined('TYPO3_MODE') || die();
          * Register icons
          */
         $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-        $icons = ['modal-dialog', 'list-categorized-content'];
+        $icons = ['modal-dialog', 'list-categorized-content', 'schema'];
         foreach ($icons as $icon) {
             $iconRegistry->registerIcon(
                 'content-pizpalue-' . $icon,

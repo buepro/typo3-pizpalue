@@ -122,6 +122,13 @@ definition could be used:
    sm: 1.0,
    xs: 1.0
 
+.. important::
+   Before adjusting the image scaling manually make sure the images aren't yet created with the correct sizes.
+   The extension `pizpalue` supports image scaling for structure elements by providing view helpers (see view helpers
+   `Render/Bootstrap/Column`, `Structure/Wrap/Column` and `Structure/Multiplier/GetForColumn`) and adjusting the
+   content element template. Extensions like `pp_gridelements` might already make use of them and deliver correct image
+   sizes. See as well :ref:`Integration-Templating<integration_templating>`.
+
 .. _user-design-appearance-tab:
 
 Appearance tab
