@@ -73,9 +73,19 @@ defined('TYPO3_MODE') || die();
     }
 
     /**
-     * Add default RTE configuration for pizpalue
+     * RTE
      */
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
+    if (1) {
+        /**
+         * Add default RTE configuration for pizpalue
+         */
+        $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
+
+        /**
+         * Register TelephoneLinkHandler
+         */
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['telephone'] = \Buepro\Pizpalue\Core\LinkHandling\TelephoneLinkHandler::class;
+    }
 
     /**
      * Register "pp" as global fluid namespace
