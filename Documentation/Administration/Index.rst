@@ -23,14 +23,13 @@ Supported extensions
 ================================ ================
 Extension                        Version tested
 ================================ ================
-pp_gridelements                  1.0.0
-flux_elements                    1.0.2
-slickcarousel                    3.0.3
-ws_flexslider                    1.5.12
-indexed_search                   9.5.14
-news                             7.3.1
-tt_address                       5.0.0
-timelog                          1.5.3
+pp_gridelements                  1.1.0
+flux_elements                    1.1.0
+ws_flexslider                    1.5.14
+indexed_search                   10.4.1
+news                             8.3.0
+tt_address                       5.1.2
+timelog                          1.6.0
 ================================ ================
 
 .. _admin_update:
@@ -53,6 +52,7 @@ The following upgrade descriptions are available:
 
    Upgrade9
    Upgrade11
+   Upgrade11.2
    UpgradeBootstrap4
 
 

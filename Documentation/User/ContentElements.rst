@@ -6,6 +6,8 @@
 Content elements
 ================
 
+.. _user-contentElements-schema:
+
 Schema
 ======
 

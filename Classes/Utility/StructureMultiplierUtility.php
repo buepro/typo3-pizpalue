@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 namespace Buepro\Pizpalue\Utility;
 
@@ -35,7 +41,8 @@ class StructureMultiplierUtility
      * @param string $breakpoint
      * @return bool|float|int
      */
-    private static function getColumnFactorForBreakpoint(array $items, int $count, string $breakpoint) {
+    private static function getColumnFactorForBreakpoint(array $items, int $count, string $breakpoint)
+    {
         $factor = false;
         foreach ($items as $item) {
             $parts = GeneralUtility::trimExplode('-', $item, true);
@@ -70,7 +77,8 @@ class StructureMultiplierUtility
      * @param int $count Columns count in row
      * @return array
      */
-    public static function getMultiplierForColumn(array $currentMultiplier = [], string $class = '', int $count = 1): array {
+    public static function getMultiplierForColumn(array $currentMultiplier = [], string $class = '', int $count = 1): array
+    {
         // Set initial multiplier
         $multiplier = array_merge(self::$defaultMultiplier, $currentMultiplier);
         $multiplier = array_intersect_key($multiplier, self::$defaultMultiplier);

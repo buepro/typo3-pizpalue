@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 namespace Buepro\Pizpalue\DataProcessing;
 
@@ -60,7 +66,8 @@ class TextReplacementProcessor implements DataProcessorInterface
      * @param string $text
      * @return string
      */
-    private function replaceConstants(string $text): string {
+    private function replaceConstants(string $text): string
+    {
         // Get constants
         if ($GLOBALS['TSFE']->tmpl->flatSetup === null
             || !is_array($GLOBALS['TSFE']->tmpl->flatSetup)
@@ -99,7 +106,8 @@ class TextReplacementProcessor implements DataProcessorInterface
      * @param ContentObjectRenderer $cObj
      * @return string
      */
-    private function replaceData(string $text, ContentObjectRenderer $cObj): string {
+    private function replaceData(string $text, ContentObjectRenderer $cObj): string
+    {
         if (preg_match_all('/({data:(.*[^}])})/', $text, $matches)) {
             $replacements = [];
             $patterns = [];
@@ -127,7 +135,8 @@ class TextReplacementProcessor implements DataProcessorInterface
      * @param ContentObjectRenderer $cObj
      * @return string
      */
-    private function replaceProcessedData(string $text, array $processedData, ContentObjectRenderer $cObj): string {
+    private function replaceProcessedData(string $text, array $processedData, ContentObjectRenderer $cObj): string
+    {
         if (preg_match_all('/({processedData:(.*[^}])})/', $text, $matches)) {
             $replacements = [];
             $patterns = [];
@@ -164,11 +173,14 @@ class TextReplacementProcessor implements DataProcessorInterface
      * @param string $str
      * @return string
      */
-    private function entityEncodeChars(string $str) {
-        $converted = mb_convert_encoding($str , 'UTF-32', 'UTF-8');
-        $t = unpack("N*", $converted);
-        $t = array_map(function($n) { return "&#$n;"; }, $t);
-        $encoded = implode("", $t);
+    private function entityEncodeChars(string $str)
+    {
+        $converted = mb_convert_encoding($str, 'UTF-32', 'UTF-8');
+        $t = unpack('N*', $converted);
+        $t = array_map(function ($n) {
+            return "&#$n;";
+        }, $t);
+        $encoded = implode('', $t);
         if (html_entity_decode($encoded) === $str) {
             return $encoded;
         }
@@ -182,14 +194,15 @@ class TextReplacementProcessor implements DataProcessorInterface
      * @param string $text
      * @return string
      */
-    private function replaceFunction(string $text): string {
+    private function replaceFunction(string $text): string
+    {
         if (preg_match_all('/({func:(.*)})/', $text, $matches)) {
             $replacements = [];
             $patterns = [];
             foreach ($matches[2] as $key => $funcStatement) {
                 $patterns[] = '/{func:' . $funcStatement . '}/';
-                $parts = GeneralUtility::trimExplode(':', $funcStatement,false,2);
-                if (count($parts) === 2 && method_exists($this, $parts[0])){
+                $parts = GeneralUtility::trimExplode(':', $funcStatement, false, 2);
+                if (count($parts) === 2 && method_exists($this, $parts[0])) {
                     $replacements[] = $this->{$parts[0]}($parts[1]);
                 } else {
                     $replacements[] = '{func:' . $funcStatement . '}';

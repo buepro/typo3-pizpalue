@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 namespace Buepro\Pizpalue\ViewHelpers\Render\Bootstrap;
 
@@ -50,7 +56,7 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
     {
         parent::initializeArguments();
         $this->registerUniversalTagAttributes();
-        $this->registerArgument('count', 'int', 'Column count in row',false, 1);
+        $this->registerArgument('count', 'int', 'Column count in row', false, 1);
         $this->registerArgument('tagName', 'string', 'Tag name', false, 'div');
     }
 

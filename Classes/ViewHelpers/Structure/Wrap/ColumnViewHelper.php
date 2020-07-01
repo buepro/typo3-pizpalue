@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 namespace Buepro\Pizpalue\ViewHelpers\Structure\Render;
 
@@ -33,12 +39,12 @@ class ColumnViewHelper extends AbstractViewHelper
     private static $multiplierStack = [];
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $escapeChildren = false;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $escapeOutput = false;
 

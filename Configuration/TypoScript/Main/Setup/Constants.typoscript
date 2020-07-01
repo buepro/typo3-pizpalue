@@ -1,7 +1,7 @@
 constants {
     ppCustomerCompany = {$pizpalue.customer.company}
     ppCustomerDomain = {$pizpalue.customer.domain}
-    ppCustomerContactName = {$pizpalue.customer.commonName}
+    ppCustomerContactName = {$pizpalue.customer.contactName}
     ppCustomerContactAddress = {$pizpalue.customer.contactAddress}
     ppCustomerContactAddressAddition = {$pizpalue.customer.contactAddressAddition}
     ppCustomerContactRegion = {$pizpalue.customer.contactRegion}

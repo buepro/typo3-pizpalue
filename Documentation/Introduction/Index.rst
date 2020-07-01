@@ -35,11 +35,14 @@ It provides the following main features:
   `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__ or
   `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__. Example structure elements are: columns,
   accordion, tabs, card and tile unit
+- Support for automatic image scaling in structure elements (see :ref:`integration_templating`)
 - Content element fields to optimize image scaling dependent on the screen size.
 - Scroll animation effects
 - Content element fields to assign custom classes, styles and attributes
 - A content element to create modal dialogs
 - A content element to create a list of categorized content elements
+- A content element to create structured content (JSON-LD data, see :ref:`user-contentElements-schema`)
+- A layout for media content elements to emphasize media
 - A form finisher to send emails to a system
 - A teaser and map view from addresses provided by the extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__
 - Configurations for the extensions
@@ -59,19 +62,6 @@ Screenshots
 
 The following screen shots were taken from a website created with the distribution
 `pizpalue_distribution <https://extensions.typo3.org/extension/pizpalue_distribution>`__.
-
-Landing page
-------------
-
-`See example <https://www.pizpalue.buechler.pro/>`__
-
-.. figure:: ../Images/Introduction/LandingPage.jpg
-   :width: 500px
-   :alt: Website landing page
-
-   Website landing page
-
-----
 
 Structure elements
 ------------------
@@ -97,6 +87,16 @@ Scroll animation
 
    Page embedding scroll animated content
 
+----
+
+Modal dialog
+------------
+
+See as well `demo site <https://pizpalue.buechler.pro/das-plus/inhaltselemente/modaler-dialog>`__.
+
+.. figure:: ../Images/Introduction/ModalDialog.jpg
+   :width: 500px
+   :alt: Modal dialog
 
 ----
 

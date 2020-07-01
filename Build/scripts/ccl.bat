@@ -15,7 +15,7 @@ rem *
 rem *=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 set target=Documentation\Changelog\%2.rst
 set gitFeaturesCmd=git log %1.. --pretty^=^"* %%s (%%cd, %%h by %%an)^" --date^=format:%%d.%%m.%%Y --abbrev-commit --grep FEATURE
-set gitBreaksCmd=git log %1.. --pretty^=^"* %%s (%%cd, %%h by %%an)^" --date^=format:%%d.%%m.%%Y --abbrev-commit --grep BREAK
+set gitBreaksCmd=git log %1.. --pretty^=^"* %%s (%%cd, %%h by %%an)^" --date^=format:%%d.%%m.%%Y --abbrev-commit --grep !!!
 set gitBugfixesCmd=git log %1.. --pretty^=^"* %%s (%%cd, %%h by %%an)^" --date^=format:%%d.%%m.%%Y --abbrev-commit --grep BUGFIX
 echo .. include:: ../Includes.txt > %target%
 echo. >> %target%
@@ -53,6 +53,6 @@ echo    %gitBugfixesCmd% >> %target%
 echo    %gitBreaksCmd% >> %target%
 echo. >> %target%
 echo. >> %target%
-echo **Note:** The above list contains just commits marked with FEATURE, BUGFIX, BREAK. Complementary commits are >> %target%
+echo **Note:** The above list contains just commits marked with FEATURE, BUGFIX, !!!. Complementary commits are >> %target%
 echo available at ^`Github ^<https://github.com/buepro/typo3-pizpalue/commits/master)^>^`__. >> %target%
 

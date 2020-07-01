@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 namespace Buepro\Pizpalue\ViewHelpers\Structure\Multiplier;
 
@@ -31,7 +37,6 @@ class GetForColumnViewHelper extends AbstractViewHelper
         $this->registerArgument('multiplier', 'array', 'Initial multiplier', false);
         $this->registerArgument('class', 'string', 'CSS classes used for defining the column', false);
         $this->registerArgument('count', 'int', 'Column count in row', false);
-
     }
 
     /**
@@ -51,5 +56,4 @@ class GetForColumnViewHelper extends AbstractViewHelper
         $multiplier = StructureMultiplierUtility::getMultiplierForColumn($multiplier, $class, $count);
         $renderingContext->getVariableProvider()->add($arguments['as'], $multiplier);
     }
-
 }
