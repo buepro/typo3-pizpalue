@@ -1,5 +1,31 @@
+// Create frame background
 @mixin pp-make-frame-bg($color) {
   border-color: pp-tint($color, 80%);
   background: pp-tint($color, 80%);
   background: linear-gradient(20deg, pp-tint($color, 70%), pp-tint($color, 90%));
+}
+
+// Create responsive frame space
+@mixin pp-make-frame-spaces($value, $valueBreakpoint: xl, $sibling: '.frame', $scaling: $pp-space-scaling) {
+  $breakpointScaling: map_get($scaling, $valueBreakpoint);
+  $space: $value / $breakpointScaling * map_get($scaling, xs);
+  $space: round($space * 100) / 100;
+  padding-top: $space;
+  padding-bottom: $space;
+  & + #{$sibling} {
+    margin-top: -$space;
+  }
+  @each $breakpoint, $scale in $scaling {
+    @if ($breakpoint != xs) {
+      @include media-breakpoint-up($breakpoint) {
+        $space: $value / $breakpointScaling * map_get($scaling, $breakpoint);
+        $space: round($space * 100) / 100;
+        padding-top: $space;
+        padding-bottom: $space;
+        & + #{$sibling} {
+          margin-top: -$space !important;
+        }
+      }
+    }
+  }
 }

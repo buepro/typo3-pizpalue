@@ -1,0 +1,25 @@
+//
+// Create a responsive space.
+// $properties is treated as a list.
+// Usage: pp-make-spaces(padding-top, 3rem) or pp-make-spaces((padding-top, padding-bottom), 3rem)
+//
+@mixin pp-make-spaces($properties, $value, $valueBreakpoint: xl, $scaling: $pp-space-scaling) {
+  $breakpointScaling: map_get($scaling, $valueBreakpoint);
+  $space: $value / $breakpointScaling * map_get($scaling, xs);
+  $space: round($space * 100) / 100;
+  @each $property in $properties {
+    #{$property}: $space;
+  }
+  @each $breakpoint, $scale in $scaling {
+    @if ($breakpoint != xs) {
+      @include media-breakpoint-up($breakpoint) {
+        $space: $value / $breakpointScaling * map_get($scaling, $breakpoint);
+        $space: round($space * 100) / 100;
+        @each $property in $properties {
+          #{$property}: $space;
+        }
+      }
+    }
+  }
+}
+
