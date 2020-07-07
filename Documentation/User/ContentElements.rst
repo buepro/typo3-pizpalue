@@ -49,6 +49,9 @@ Additionally the obtained data can be passed to a function. The following functi
 |                      +------------------------------------------------+ converted to its entity. For example `i`     |
 |                      | `{func:entityEncodeChars:{$cust.email}}`       | will be converted to `&#105;`                |
 +----------------------+------------------------------------------------+----------------------------------------------+
+| `newLineToRn`        | `{func:newLineToRn:{data:field:teaser}}`       | Converts line breaks to the character        |
+|                      |                                                | sequence `\r\n`.                             |
++----------------------+------------------------------------------------+----------------------------------------------+
 
 Content
 -------

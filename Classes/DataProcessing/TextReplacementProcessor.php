@@ -189,6 +189,18 @@ class TextReplacementProcessor implements DataProcessorInterface
     }
 
     /**
+     * Converts line breaks to the character sequence '\r\n'.
+     * Is of interest for text properties.
+     *
+     * @param string $text
+     * @return string|string[]
+     */
+    private function newLineToRn(string $text)
+    {
+        return str_replace([chr(13) . chr(10), chr(10)], '\r\n', $text);
+    }
+
+    /**
      * Replaces text parts defined in the form `{func:someAvailableFunction:argument}` with the value obtained by
      * passing `argument` to `someAvailableFunction`. The following functions are available: `entityEncodeChars`.
      *
