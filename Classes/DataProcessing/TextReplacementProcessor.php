@@ -77,15 +77,15 @@ class TextReplacementProcessor implements DataProcessorInterface
         $constants = $GLOBALS['TSFE']->tmpl->flatSetup;
 
         // Replace constants
-        if (preg_match_all('/({\$(.*[^}])})/', $text, $matches)) {
+        if (preg_match_all('/{\$([\w.\-]+)}/', $text, $matches)) {
             $replacements = [];
             $patterns = [];
-            foreach ($matches[2] as $key => $constantName) {
+            foreach ($matches[1] as $key => $constantName) {
                 $patterns[] = '/{\$' . $constantName . '}/';
                 if (isset($constants[$constantName])) {
                     $replacements[] = $constants[$constantName];
                 } else {
-                    $replacements[] = $matches[1][$key];
+                    $replacements[] = $matches[0][$key];
                 }
             }
             $text = preg_replace($patterns, $replacements, $text);
@@ -108,10 +108,10 @@ class TextReplacementProcessor implements DataProcessorInterface
      */
     private function replaceData(string $text, ContentObjectRenderer $cObj): string
     {
-        if (preg_match_all('/({data:(.*[^}])})/', $text, $matches)) {
+        if (preg_match_all('/{data:([\w.\-:]+)}/', $text, $matches)) {
             $replacements = [];
             $patterns = [];
-            foreach ($matches[2] as $key => $instruction) {
+            foreach ($matches[1] as $key => $instruction) {
                 $patterns[] = '/{data:' . $instruction . '}/';
                 $data = $cObj->getData($instruction, $cObj->data);
                 $replacements[] = strip_tags($data);
@@ -137,10 +137,10 @@ class TextReplacementProcessor implements DataProcessorInterface
      */
     private function replaceProcessedData(string $text, array $processedData, ContentObjectRenderer $cObj): string
     {
-        if (preg_match_all('/({processedData:(.*[^}])})/', $text, $matches)) {
+        if (preg_match_all('/{processedData:([\w.\-:]+)}/', $text, $matches)) {
             $replacements = [];
             $patterns = [];
-            foreach ($matches[2] as $key => $path) {
+            foreach ($matches[1] as $key => $path) {
                 $patterns[] = '/{processedData:' . $path . '}/';
                 $parts = explode('.', $path);
                 $value = $processedData;
@@ -169,6 +169,7 @@ class TextReplacementProcessor implements DataProcessorInterface
 
     /**
      * Encodes every character from $str to its entity.
+     * Might be used for emails to not reveal them at first.
      *
      * @param string $str
      * @return string
@@ -196,10 +197,10 @@ class TextReplacementProcessor implements DataProcessorInterface
      */
     private function replaceFunction(string $text): string
     {
-        if (preg_match_all('/({func:(.*)})/', $text, $matches)) {
+        if (preg_match_all('/{func:([\s\S\r\n][^}]+)}/', $text, $matches)) {
             $replacements = [];
             $patterns = [];
-            foreach ($matches[2] as $key => $funcStatement) {
+            foreach ($matches[1] as $key => $funcStatement) {
                 $patterns[] = '/{func:' . $funcStatement . '}/';
                 $parts = GeneralUtility::trimExplode(':', $funcStatement, false, 2);
                 if (count($parts) === 2 && method_exists($this, $parts[0])) {

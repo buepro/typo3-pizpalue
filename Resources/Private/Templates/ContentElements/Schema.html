@@ -2,7 +2,7 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:asset.script identifier="pp-schema-{data.uid}" type="application/ld+json">
-<f:format.htmlentitiesDecode>{data.bodytext}</f:format.htmlentitiesDecode>
+<f:format.raw>{data.bodytext}</f:format.raw>
 </f:asset.script>
 
 <f:if condition="{data.pi_flexform.show_content}">
