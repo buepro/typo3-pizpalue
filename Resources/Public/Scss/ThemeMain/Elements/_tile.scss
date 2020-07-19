@@ -138,7 +138,8 @@
 .pp-tile.pp-bg-primary, .pp-tile.pp-bg-secondary, .pp-tile.pp-bg-complementary {
   background: transparent;
   a {
-    text-decoration: underline dotted;
+    text-decoration: underline;
+    text-decoration-style: dotted;
     &:hover {
       text-decoration: underline;
     }

@@ -34,7 +34,8 @@
 
 .frame-background-primary, .frame-background-secondary, .frame-background-complementary {
   a:not(.btn) {
-    text-decoration: underline dotted;
+    text-decoration: underline;
+    text-decoration-style: dotted;
     &:hover {
       text-decoration: underline;
     }
