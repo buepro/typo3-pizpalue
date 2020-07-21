@@ -51,6 +51,7 @@ class TextReplacementProcessor implements DataProcessorInterface
         $text = $processedData['data'][$fieldName];
         $text = $this->replaceProcessedData($text, $processedData, $cObj);
         $text = $this->replaceData($text, $cObj);
+        $text = $this->replaceParentData($text, $cObj);
         $text = $this->replaceConstants($text);
         $text = $this->replaceFunction($text);
         $processedData['data'][$fieldName] = $text;
@@ -114,6 +115,29 @@ class TextReplacementProcessor implements DataProcessorInterface
             foreach ($matches[1] as $key => $instruction) {
                 $patterns[] = '/{data:' . $instruction . '}/';
                 $data = $cObj->getData($instruction, $cObj->data);
+                $replacements[] = strip_tags($data);
+            }
+            $text = preg_replace($patterns, $replacements, $text);
+        }
+        return $text;
+    }
+
+    /**
+     * Replaces text parts defined in the form `{parentData:getText}`.
+     * Works like method getData except that it retrieves data from parent record.
+     *
+     * @param string $text
+     * @param ContentObjectRenderer $cObj
+     * @return string
+     */
+    private function replaceParentData(string $text, ContentObjectRenderer $cObj): string
+    {
+        if (preg_match_all('/{parentData:([\w.\-:]+)}/', $text, $matches)) {
+            $replacements = [];
+            $patterns = [];
+            foreach ($matches[1] as $key => $instruction) {
+                $patterns[] = '/{parentData:' . $instruction . '}/';
+                $data = $cObj->getData($instruction, $cObj->parentRecord->data);
                 $replacements[] = strip_tags($data);
             }
             $text = preg_replace($patterns, $replacements, $text);

@@ -31,6 +31,9 @@ tag. It allows to use placeholders in the JSON-LD code for `TS constants`,
 |                                    |                     | key `field` data from the current content record          |
 |                                    |                     | (`tt_content`) is obtained.                               |
 +------------------------------------+---------------------+-----------------------------------------------------------+
+| `{parentData:field.teaser}`        | getText             | Wrap getText definition with `{data:|}`. When using the   |
+|                                    |                     | key `field` data from the parent record is obtained.      |
++------------------------------------+---------------------+-----------------------------------------------------------+
 | `{processedData:schemaImages.0}`   | processedData array | Wrap the processedData array path with `{processedData:|}`|
 |                                    |                     | In case the value from the `processedData` array is an    |
 |                                    |                     | instance of `FileReference` the url to the file is        |
