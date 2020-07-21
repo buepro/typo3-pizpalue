@@ -1,8 +1,9 @@
 <html data-namespace-typo3-fluid="true"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
 <f:asset.script identifier="pp-schema-{data.uid}" type="application/ld+json">
-<f:format.raw>{data.bodytext}</f:format.raw>
+<f:format.raw>{data.bodytext -> v:format.json.decode() -> v:format.json.encode()}</f:format.raw>
 </f:asset.script>
 
 <f:if condition="{data.pi_flexform.show_content}">
