@@ -127,6 +127,8 @@ page {
         pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
         pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.smoothscroll.min.js
         bootstrap_smoothscroll >
+        // Obsolete as of bootstrap_package 11.1.0
+        bootstrap_stickyheader = EXT:pizpalue/Resources/Public/JavaScript/Dist/bootstrap.stickyheader.min
     }
 }
 
