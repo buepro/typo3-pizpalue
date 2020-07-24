@@ -24,6 +24,15 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
  */
 class TextReplacementProcessor implements DataProcessorInterface
 {
+    /**
+     * @var ContentObjectRenderer $cObj
+     */
+    private $cObj;
+
+    /**
+     * @var array $processedData;
+     */
+    private $processedData;
 
     /**
      * Process content object data
@@ -41,6 +50,8 @@ class TextReplacementProcessor implements DataProcessorInterface
         array $processedData
     ) {
         // Init
+        $this->cObj = $cObj;
+        $this->processedData = $processedData;
         $fieldName = 'bodytext';
         if (isset($processorConfiguration['references.']) && !empty($processorConfiguration['references.'])) {
             $referenceConfiguration = $processorConfiguration['references.'];
@@ -148,7 +159,8 @@ class TextReplacementProcessor implements DataProcessorInterface
     /**
      * Replaces text parts defined in the form `{processedData:array.path}`.
      * The text is obtained from the `processedData` array. In case the obtained value is an instance of `FileReference`
-     * the url to the file is inserted.
+     * the url to the file is inserted. In case the array path is `breadcrumb` a breadcrumb markup is obtained (it is
+     * assumed that data is obtained by `MenuProcessor`).
      *
      * **Example:**
      * In case $processedData[schemaImage][0] is an instance of `FileReference` '{proseccedData:schemaImage.0}' becomes
@@ -179,6 +191,9 @@ class TextReplacementProcessor implements DataProcessorInterface
                         $urlPrefix = GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST');
                         $imageResource = $cObj->getImgResource($value, $config);
                         $replacements[] = $urlPrefix . '/' . $imageResource[3];
+                    } elseif ($parts[0] === 'breadcrumb') {
+                        $markup = $this->generateBreadcrumbMarkup($value);
+                        $replacements[] = json_encode($markup, JSON_UNESCAPED_SLASHES);
                     } else {
                         $replacements[] = $value;
                     }
@@ -225,6 +240,40 @@ class TextReplacementProcessor implements DataProcessorInterface
     }
 
     /**
+     * Creates the breadcrumb markup.
+     * Is based on extension brotkrueml/sdbreadcrumb.
+     *
+     * @param array $breadcrumb
+     * @return array
+     */
+    private function generateBreadcrumbMarkup(array $breadcrumb): array
+    {
+        $siteUrl = GeneralUtility::getIndpEnv('TYPO3_SITE_URL');
+        if ($breadcrumb[0]['link'][0] === '/') {
+            $siteUrl = rtrim($siteUrl, '/');
+        }
+
+        $markup = [
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => [],
+        ];
+
+        foreach ($breadcrumb as $index => $item) {
+            $markup['itemListElement'][] = [
+                '@type' => 'ListItem',
+                'position' => $index + 1,
+                'item' => [
+                    '@type' => 'WebPage',
+                    '@id' => $siteUrl . $item['link'],
+                    'name' => $item['title'],
+                ],
+            ];
+        }
+
+        return $markup;
+    }
+
+    /**
      * Replaces text parts defined in the form `{func:someAvailableFunction:argument}` with the value obtained by
      * passing `argument` to `someAvailableFunction`. The following functions are available: `entityEncodeChars`.
      *
@@ -239,8 +288,12 @@ class TextReplacementProcessor implements DataProcessorInterface
             foreach ($matches[1] as $key => $funcStatement) {
                 $patterns[] = '/{func:' . $funcStatement . '}/';
                 $parts = GeneralUtility::trimExplode(':', $funcStatement, false, 2);
-                if (count($parts) === 2 && method_exists($this, $parts[0])) {
-                    $replacements[] = $this->{$parts[0]}($parts[1]);
+                if (method_exists($this, $parts[0])) {
+                    if (count($parts) === 2) {
+                        $replacements[] = $this->{$parts[0]}($parts[1]);
+                    } else {
+                        $replacements[] = $this->{$parts[0]}();
+                    }
                 } else {
                     $replacements[] = '{func:' . $funcStatement . '}';
                 }

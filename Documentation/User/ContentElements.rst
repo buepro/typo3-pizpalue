@@ -27,17 +27,22 @@ tag. It allows to use placeholders in the JSON-LD code for `TS constants`,
 +====================================+=====================+===========================================================+
 | `{$pizpalue.customer.contactName}` | TS Constant         | Used as for TS setup: `{$constantName}`                   |
 +------------------------------------+---------------------+-----------------------------------------------------------+
-| `{data:field.teaser}`              | getText             | Wrap getText definition with `{data:|}`. When using the   |
+| `{data:field:teaser}`              | getText             | Wrap getText definition with `{data:|}`. When using the   |
 |                                    |                     | key `field` data from the current content record          |
 |                                    |                     | (`tt_content`) is obtained.                               |
 +------------------------------------+---------------------+-----------------------------------------------------------+
-| `{parentData:field.teaser}`        | getText             | Wrap getText definition with `{data:|}`. When using the   |
+| `{parentData:field:teaser}`        | getText             | Wrap getText definition with `{data:|}`. When using the   |
 |                                    |                     | key `field` data from the parent record is obtained.      |
 +------------------------------------+---------------------+-----------------------------------------------------------+
 | `{processedData:schemaImages.0}`   | processedData array | Wrap the processedData array path with `{processedData:|}`|
+| `{processedData:breadcrumb}`       |                     |                                                           |
 |                                    |                     | In case the value from the `processedData` array is an    |
 |                                    |                     | instance of `FileReference` the url to the file is        |
 |                                    |                     | obtained.                                                 |
+|                                    |                     |                                                           |
+|                                    |                     | In case the path is `breadcrumb` a breadcrumb json markup |
+|                                    |                     | is obtained, assuming the breadcrumb data has been        |
+|                                    |                     | created with the `MenuProcessor`.                         |
 +------------------------------------+---------------------+-----------------------------------------------------------+
 
 Functions
@@ -65,7 +70,7 @@ placeholders:
 ======== ================================
 Content  Placeholder
 ======== ================================
-Text     `{data:field.teaser}`
+Text     `{data:field:teaser}`
 Image    `{processedData:schemaImages.0}`
 ======== ================================
 

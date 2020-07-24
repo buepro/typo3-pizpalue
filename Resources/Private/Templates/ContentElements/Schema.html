@@ -1,13 +1,14 @@
 <html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
-      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers">
 
 <f:asset.script identifier="pp-schema-{data.uid}" type="application/ld+json">
-<f:format.raw>{data.bodytext -> v:format.json.decode() -> v:format.json.encode()}</f:format.raw>
+{data.bodytext -> pp:format.schema()}
 </f:asset.script>
 
 <f:if condition="{data.pi_flexform.show_content}">
-<pre><code>{data.bodytext}</code></pre>
+<pre><code>{data.bodytext -> pp:format.schema(encodeOptions: 'JSON_PRETTY_PRINT')}</code></pre>
 </f:if>
 
 </html>
