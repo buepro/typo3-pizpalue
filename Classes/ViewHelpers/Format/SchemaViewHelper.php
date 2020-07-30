@@ -41,6 +41,12 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
         $encodeOptions = self::getJsonOptions($arguments['encodeOptions']);
         $value = $renderChildrenClosure();
         $json = json_decode($value, true, 512, $decodeOptions);
+        if (!is_array($json)) {
+            $message = 'Decoding the string to json didn\'t result in a array. Please check if \'decodeOptions\', '
+                . '\'addSlashes\' and \'stripSlashes\' should be further specified.';
+            return $message;
+            //throw new \TYPO3\CMS\Core\Exception($message, 1596124988681);
+        }
         if ($arguments['removeEmptyElements']) {
             $json = ArrayUtility::removeArrayEntryByValue($json, '');
             $json = ArrayUtility::removeNullValuesRecursive($json);
@@ -71,7 +77,13 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
     {
         parent::initializeArguments();
         $this->registerArgument('value', 'string', 'String to format');
-        $this->registerArgument('removeEmptyElements', 'bool', 'If set removes empty elements', false, true);
+        $this->registerArgument(
+            'removeEmptyElements',
+            'bool',
+            'If set removes empty elements',
+            false,
+            true
+        );
         $this->registerArgument('decodeOptions', 'string',
             'Coma separated options for decoding the json string (see php manual for json_decode).', false);
         $this->registerArgument('encodeOptions', 'string',

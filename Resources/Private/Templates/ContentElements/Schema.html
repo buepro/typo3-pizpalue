@@ -4,11 +4,11 @@
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers">
 
 <f:asset.script identifier="pp-schema-{data.uid}" type="application/ld+json">
-{data.bodytext -> pp:format.schema()}
+{data.bodytext -> pp:format.schema(encodeOptions: 'JSON_UNESCAPED_SLASHES')}
 </f:asset.script>
 
 <f:if condition="{data.pi_flexform.show_content}">
-<pre><code>{data.bodytext -> pp:format.schema(encodeOptions: 'JSON_PRETTY_PRINT')}</code></pre>
+<pre><code>{data.bodytext -> pp:format.schema(encodeOptions: 'JSON_PRETTY_PRINT,JSON_UNESCAPED_SLASHES') -> f:format.htmlentities()}</code></pre>
 </f:if>
 
 </html>
