@@ -60,6 +60,9 @@ Additionally the obtained data can be passed to a function. The following functi
 | `newLineToRn`        | `{func:newLineToRn:{data:field:teaser}}`       | Converts line breaks to the character        |
 |                      |                                                | sequence `\r\n`.                             |
 +----------------------+------------------------------------------------+----------------------------------------------+
+| `stripTags`          | `{func:stripTags:{data:field:teaser}}`         | Applies the php function `strip_tags` to the |
+|                      |                                                | content.                                     |
++----------------------+------------------------------------------------+----------------------------------------------+
 
 Content
 -------
@@ -73,6 +76,11 @@ Content  Placeholder
 Text     `{data:field:teaser}`
 Image    `{processedData:schemaImages.0}`
 ======== ================================
+
+.. attention::
+
+   Double quotes can't be used in the teaser text field since they identify the json attribute values. Use single
+   quotes instead or escape them (`\"`).
 
 Example
 -------

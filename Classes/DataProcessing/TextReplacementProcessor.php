@@ -125,8 +125,7 @@ class TextReplacementProcessor implements DataProcessorInterface
             $patterns = [];
             foreach ($matches[1] as $key => $instruction) {
                 $patterns[] = '/{data:' . $instruction . '}/';
-                $data = $cObj->getData($instruction, $cObj->data);
-                $replacements[] = strip_tags($data);
+                $replacements[] = $cObj->getData($instruction, $cObj->data);
             }
             $text = preg_replace($patterns, $replacements, $text);
         }
@@ -148,8 +147,7 @@ class TextReplacementProcessor implements DataProcessorInterface
             $patterns = [];
             foreach ($matches[1] as $key => $instruction) {
                 $patterns[] = '/{parentData:' . $instruction . '}/';
-                $data = $cObj->getData($instruction, $cObj->parentRecord->data);
-                $replacements[] = strip_tags($data);
+                $replacements[] = $cObj->getData($instruction, $cObj->parentRecord->data);
             }
             $text = preg_replace($patterns, $replacements, $text);
         }
@@ -240,6 +238,15 @@ class TextReplacementProcessor implements DataProcessorInterface
     }
 
     /**
+     * @param string $text
+     * @return string
+     */
+    private function stripTags(string $text): string
+    {
+        return strip_tags($text);
+    }
+
+    /**
      * Creates the breadcrumb markup.
      * Is based on extension brotkrueml/sdbreadcrumb.
      *
@@ -286,7 +293,7 @@ class TextReplacementProcessor implements DataProcessorInterface
             $replacements = [];
             $patterns = [];
             foreach ($matches[1] as $key => $funcStatement) {
-                $patterns[] = '/{func:' . $funcStatement . '}/';
+                $patterns[] = '/{func:' . preg_quote($funcStatement, '/') . '}/';
                 $parts = GeneralUtility::trimExplode(':', $funcStatement, false, 2);
                 if (method_exists($this, $parts[0])) {
                     if (count($parts) === 2) {
