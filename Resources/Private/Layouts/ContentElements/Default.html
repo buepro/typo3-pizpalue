@@ -15,6 +15,7 @@
 </f:comment>
 <f:spaceless>
     <bk2k:data.imageVariants as="variants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_image_variants}')}" />
+    <bk2k:data.imageVariants as="backgroundVariants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_background_image_variants}')}" />
 
     <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
     <f:variable name="columnConfig">{backendlayoutConfig.{data.colPos}}</f:variable>
@@ -34,6 +35,7 @@
     {v:variable.register.get(name: 'structureMultiplier') -> f:variable(name: '_structureMultiplier')}
     <f:if condition="{_structureMultiplier}">
         {bk2k:data.imageVariants(as: 'variants', variants: variants, multiplier: _structureMultiplier)}
+        {bk2k:data.imageVariants(as: 'backgroundVariants', variants: backgroundVariants, multiplier: _structureMultiplier)}
     </f:if>
 
     <f:comment>====================== Pizpalue init attributes ======================</f:comment>
@@ -160,7 +162,9 @@
     <f:if condition="{data.frame_class} != none">
         <f:then>
             <div id="c{data.uid}" {ppAllAttributes -> pp:desarmAttribute()}>
-                <f:render partial="Frame/General/BackgroundImage" arguments="{_all}" />
+                {f:variable(name: '_backgroundAll', value: _all)}
+                {backgroundVariants -> v:variable.set(name: '_backgroundAll.variants')}
+                <f:render partial="Frame/General/BackgroundImage" arguments="{_backgroundAll}" />
                 <div class="frame-container">
                     <div class="frame-inner">
                         <f:if condition="{data._LOCALIZED_UID}">

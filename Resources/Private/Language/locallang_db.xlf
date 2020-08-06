@@ -47,6 +47,9 @@
 			<trans-unit id="tx_pizpalue_ttc.image_variants">
 				<source>Image variants</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.background_image_variants">
+				<source>Background image variants</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.image_variants.content">
 				<source>Default (content width)</source>
 			</trans-unit>

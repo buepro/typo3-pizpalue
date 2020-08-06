@@ -209,6 +209,16 @@ Additional frames can be selected for content elements
    The custom frame 4 doesn't have any style definition. You might use it according your needs.
 
 
+.. _user-design-background-variants:
+
+Background variants
+~~~~~~~~~~~~~~~~~~~
+
+As for the images a variants selector has been introduced for the background images allowing to adapt the background
+image size to the container width. In case a content element isn't embedded into a structure element it is likely
+that it should be displayed on the entire display width hence `Full page width` should be selected.
+
+
 .. _user-design-background:
 
 Background

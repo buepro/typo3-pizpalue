@@ -65,7 +65,27 @@ defined('TYPO3_MODE') || die();
 
         // Column definition
         $tmp_pizpalue_columns = [
-
+            'tx_pizpalue_image_scaling' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_scaling',
+                'config' => [
+                    'type' => 'text',
+                    'default' => implode(',' . chr(10), ['xl: 1.0', 'lg: 1.0', 'md: 1.0', 'sm: 1.0', 'xs: 1.0']),
+                ]
+            ],
+            'tx_pizpalue_image_variants' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'default' => 'variants',
+                    'items' => [
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.content', 'variants'],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
+                    ],
+                ],
+            ],
             'tx_pizpalue_layout_breakpoint' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint',
@@ -79,6 +99,58 @@ defined('TYPO3_MODE') || die();
                         ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint.medium', 'md'],
                         ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint.large', 'lg'],
                         ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint.extralarge', 'xl'],
+                    ],
+                ],
+            ],
+            'tx_pizpalue_background_image_variants' => [
+                'exclude' => true,
+                'displayCond' => 'FIELD:frame_class:!=:none',
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background_image_variants',
+                'default' => 'pageVariants',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'default' => 'variants',
+                    'items' => [
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.content', 'variants'],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
+                    ],
+                ],
+            ],
+            'tx_pizpalue_bgmedia' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.bgmedia',
+                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
+                    'tx_pizpalue_bgmedia',
+                    [
+                        'appearance' => [
+                            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+                        ],
+                        'maxitems' => 1,
+                        'overrideChildTca' => [
+                            'types' => [
+                                \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                                    'showitem' => 'crop,--palette--;;filePalette',
+                                ]
+                            ],
+                        ],
+                    ],
+                    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
+                ),
+            ],
+            'tx_pizpalue_animation' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'default' => 0,
+                    'items' => [
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animationNone', 0],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation1', 1],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation2', 2],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation3', 3],
+                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation4', 4],
                     ],
                 ],
             ],
@@ -138,65 +210,6 @@ defined('TYPO3_MODE') || die();
                     ],
                 ],
             ],
-            'tx_pizpalue_bgmedia' => [
-                'exclude' => true,
-                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.bgmedia',
-                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                    'tx_pizpalue_bgmedia',
-                    [
-                        'appearance' => [
-                            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
-                        ],
-                        'maxitems' => 1,
-                        'overrideChildTca' => [
-                            'types' => [
-                                \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                                    'showitem' => 'crop,--palette--;;filePalette',
-                                ]
-                            ],
-                        ],
-                    ],
-                    $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-                ),
-            ],
-            'tx_pizpalue_animation' => [
-                'exclude' => true,
-                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation',
-                'config' => [
-                    'type' => 'select',
-                    'renderType' => 'selectSingle',
-                    'default' => 0,
-                    'items' => [
-                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animationNone', 0],
-                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation1', 1],
-                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation2', 2],
-                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation3', 3],
-                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation4', 4],
-                    ],
-                ],
-            ],
-            'tx_pizpalue_image_variants' => [
-                'exclude' => true,
-                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants',
-                'config' => [
-                    'type' => 'select',
-                    'renderType' => 'selectSingle',
-                    'default' => 'variants',
-                    'items' => [
-                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.content', 'variants'],
-                        ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
-                    ],
-                ],
-            ],
-            'tx_pizpalue_image_scaling' => [
-                'exclude' => true,
-                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_scaling',
-                'config' => [
-                    'type' => 'text',
-                    'default' => implode(',' . chr(10), ['xl: 1.0', 'lg: 1.0', 'md: 1.0', 'sm: 1.0', 'xs: 1.0']),
-                ]
-            ],
-
         ];
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
@@ -209,6 +222,9 @@ defined('TYPO3_MODE') || die();
      * Defines palettes
      */
     if (1) {
+        $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_imagesize'] = [
+            'showitem' => 'tx_pizpalue_image_scaling, tx_pizpalue_image_variants',
+        ];
         $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_behaviour'] = [
             'showitem' => 'tx_pizpalue_animation',
         ];
@@ -219,9 +235,6 @@ defined('TYPO3_MODE') || die();
             tx_pizpalue_attributes
         ',
         ];
-        $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_imagesize'] = [
-            'showitem' => 'tx_pizpalue_image_scaling, tx_pizpalue_image_variants',
-        ];
     }
 
     /**
@@ -230,7 +243,7 @@ defined('TYPO3_MODE') || die();
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, tx_pizpalue_bgmedia',
+        '--linebreak--, tx_pizpalue_background_image_variants, --linebreak--, tx_pizpalue_bgmedia',
         'after: background_image_options'
     );
 
