@@ -30,9 +30,7 @@ module.exports = function(grunt) {
         },
         uglify: {
             options: {
-                compress: {
-                    warnings: false
-                },
+                warnings: false,
                 output: {
                     comments: false
                 }
@@ -107,7 +105,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-webfont');
+    grunt.loadNpmTasks('grunt-webfonts');
 
     /**
      * Grunt update task
