@@ -11,6 +11,19 @@ TCEFORM.tt_content.frame_class {
 }
 
 #:::::::::::::::::::::::
+#: Animations
+#.
+TCEFORM.tt_content.tx_pizpalue_animation {
+    addItems {
+        1 = LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation1
+        2 = LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation2
+        3 = LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation3
+        4 = LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation4
+        11 = LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation11
+    }
+}
+
+#:::::::::::::::::::::::
 #: depreciated as of 9.0
 #.
 TCEFORM.tt_content.frame_class {

@@ -45,7 +45,7 @@ page {
         #bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Src/bootstrap.smoothscroll.js
         #pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.cookieconsentservice.js
         #pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.revealfooterservice.js
-        #pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
+        pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.general.js
         #pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.smoothscroll.js
     }
 

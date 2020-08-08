@@ -141,5 +141,7 @@ pp-row-child-height           Elements in a row using this class will have their
                               harmonized. Each child element will have the same height as its neighbour
                               element in an other column. The class just works with "Text with images"
                               content elements.
+pp-below-header               Used to shift a content element below the page header by applying a negative
+                              top margin.
 ============================= =============================================================================
 

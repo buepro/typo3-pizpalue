@@ -40,4 +40,12 @@ pizpalue.animation {
         # cat=6060/1520/0044; type=string; label=Animation 4 attributes
         attributes = data-aos="flip-up" data-aos-anchor-placement="center-bottom"
     }
+    11 {
+        # cat=6060/1520/0040; type=string; label=Animation 11 classes
+        classes = pp-animate ppc-background-zoom ppc-text-delay
+        # cat=6060/1520/0042; type=string; label=Animation 11 inline style
+        style =
+        # cat=6060/1520/0044; type=string; label=Animation 11 attributes
+        attributes =
+    }
 }

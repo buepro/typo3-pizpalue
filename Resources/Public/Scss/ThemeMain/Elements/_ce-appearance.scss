@@ -117,8 +117,15 @@ div.pp-gallery-item-right {
 }
 
 //
-// Various
+// Various / Utility
 //
 .pp-label-dataprotection {
   display: none;
+}
+.pp-below-header {
+  @each $breakpoint in map-keys($navbar-heights) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      margin-top: -#{map-get($navbar-heights, $breakpoint)};
+    }
+  }
 }

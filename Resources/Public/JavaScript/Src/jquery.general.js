@@ -191,5 +191,14 @@ if ( typeof pp !== 'undefined' ) {
         })
     });
 
+    /**
+     * Add main menu state to header
+     */
+    $(function () {
+        $('#mainnavigation')
+            .on('show.bs.collapse', function () { $('#page-header').addClass('pp-dropdown-active'); })
+            .on('hidden.bs.collapse', function () { $('#page-header').removeClass('pp-dropdown-active'); });
+    });
+
 }(jQuery);
 

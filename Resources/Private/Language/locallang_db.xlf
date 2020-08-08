@@ -32,16 +32,19 @@
 				<source>No animation</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.animation1">
-				<source>Animation 1</source>
+				<source>Fade up right (on scrolling)</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.animation2">
-				<source>Animation 2</source>
+				<source>Fade up left (on scrolling)</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.animation3">
-				<source>Animation 3</source>
+				<source>Zoom in (on scrolling)</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.animation4">
-				<source>Animation 4</source>
+				<source>Flip up (on scrolling)</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.animation11">
+				<source>Zoom background, show text</source>
 			</trans-unit>
 
 			<trans-unit id="tx_pizpalue_ttc.image_variants">
