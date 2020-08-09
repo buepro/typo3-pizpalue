@@ -157,31 +157,24 @@ page {
 
 #:::::::::::::::::::::::
 #: Scroll animation
+#:
+#: Initialize AOS and avoid scroll bars when element is hidden.
 #.
-[{$pizpalue.features.scrollAnimation.enable} == 1]
-lib.contentElement.settings.preload.images = 1
 page {
-    includeCSS {
-        Aos = EXT:pizpalue/Contrib/Aos/dist/aos.css
-    }
-    includeJSFooterlibs {
-        Aos = EXT:pizpalue/Contrib/Aos/dist/aos.js
-    }
     jsFooterInline {
         1020 = TEXT
         1020.value (
-
 ;+function ($) {
  $(function () {
-    AOS.init({{$pizpalue.features.scrollAnimation.initParams}});
-    // Avoids scroll bars when element is hidden
-    $('[data-aos]').parent().css('overflow','hidden');
+    if (typeof AOS !== 'undefined') {
+        AOS.init({{$pizpalue.features.scrollAnimation.initParams}});
+        $('[data-aos]').parent().css('overflow','hidden');
+    }
  });
 }(jQuery);
         )
     }
 }
-[END]
 
 
 #=========================================================#

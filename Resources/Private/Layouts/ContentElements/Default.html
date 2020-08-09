@@ -157,6 +157,14 @@
         </f:variable>
     </f:if>
 
+    <f:comment>====================== Pizpalue AOS assets ======================</f:comment>
+
+    <v:condition.string.contains haystack="{ppAttributes}" needle="data-aos">
+        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
+        <f:asset.css identifier="ppAos" href="EXT:pizpalue/Contrib/Aos/dist/aos.css" />
+        <f:asset.script identifier="ppAos" src="EXT:pizpalue/Contrib/Aos/dist/aos.js" />
+    </v:condition.string.contains>
+
     <f:comment>====================== Pizpalue end ======================</f:comment>
 
     <f:if condition="{data.frame_class} != none">

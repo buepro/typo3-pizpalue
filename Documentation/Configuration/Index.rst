@@ -63,11 +63,8 @@ Follow these steps to setup and register the site at google:
 Scroll animation
 ================
 
-This feature is using the `AOS-library <http://michalsnik.github.io/aos/>`__ and is enabled by default. It allows to
-animate content elements while the page is being scrolled.
-
-Use the constant editor to disable the feature (category "PIZPALUE: CUSTOMER BASE - Features") or configure it
-further (category "PIZPALUE: CUSTOMER EXTENDED - Animation").
+This feature is using the `AOS-library <http://michalsnik.github.io/aos/>`__. It allows to animate content elements
+while the page is being scrolled.
 
 Four preconfigured animations are available in the animation dropdown menu from the appearance tab in the content
 element properties dialog. Those animations might be configured as well in the constant editor (category "PIZPALUE:

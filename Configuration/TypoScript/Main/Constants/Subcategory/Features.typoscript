@@ -5,11 +5,6 @@
 #---------------------------------------------------------#
 
 pizpalue.features {
-    scrollAnimation {
-        # cat=6030/1510/0302; type=boolean; label=Enable content element scroll animation:If selected content element scroll animation will be available. This feature might be required by content animations
-        enable = 1
-    }
-
     fontAwesome {
         # cat=6030/1510/0304; type=boolean; label=Enable embedding from "Font Awesome"
         enable = 0
