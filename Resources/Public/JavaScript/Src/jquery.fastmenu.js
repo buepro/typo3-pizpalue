@@ -17,6 +17,7 @@
     Plugin.prototype.init = function () {
         this._initContent();
         this._attachEventHandlers();
+        this._loadView();
     };
 
     Plugin.prototype._initContent = function () {
@@ -86,15 +87,40 @@
         }
     };
 
+    Plugin.prototype._toggleMenu = function () {
+        $(this.element).toggleClass('pp-minimize');
+        this._saveView();
+    }
+
     Plugin.prototype._attachEventHandlers = function () {
         // Toggles the icon group
-        $('.pp-fm-handle', this.element).click(function () {
-            $(this).parent().toggleClass('pp-minimize');
-        });
+        $('.pp-fm-handle', this.element).click($.proxy(this._toggleMenu,this));
 
         // Toggles the content
         $('.pp-fm-contenticon', this.element).click($.proxy(this._contentIconClickHandler,this));
     };
+
+    /**
+     * Loads the view by respecting the last state (minimized)
+     *
+     * @private
+     */
+    Plugin.prototype._loadView = function () {
+        var minimized = Cookies.get('ppFastMenuMinimized');
+        if (typeof minimized === 'undefined') {
+            this._saveView();
+        }
+        if ( minimized === 'true' ) {
+            $(this.element).addClass('pp-minimize');
+        } else {
+            $(this.element).removeClass('pp-minimize');
+        }
+    }
+
+    Plugin.prototype._saveView = function () {
+        var minimized = String($(this.element).hasClass('pp-minimize'));
+        Cookies.set('ppFastMenuMinimized', minimized, { expires: 365 });
+    }
 
     $.fn[pluginName] = function ( options ) {
         var args = arguments;
