@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 namespace Buepro\Pizpalue\ViewHelpers\Format;
 
@@ -84,9 +90,17 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
             false,
             true
         );
-        $this->registerArgument('decodeOptions', 'string',
-            'Coma separated options for decoding the json string (see php manual for json_decode).', false);
-        $this->registerArgument('encodeOptions', 'string',
-            'Coma separated options for encoding the json array (see php manual for json_encode).', false);
+        $this->registerArgument(
+            'decodeOptions',
+            'string',
+            'Coma separated options for decoding the json string (see php manual for json_decode).',
+            false
+        );
+        $this->registerArgument(
+            'encodeOptions',
+            'string',
+            'Coma separated options for encoding the json array (see php manual for json_encode).',
+            false
+        );
     }
 }
