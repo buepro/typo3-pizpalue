@@ -1,13 +1,13 @@
 //----------------------------------------------------------------------------------------------------------------------
 //
-// gridelements, flux_elements
+// gridelements, flux_elements, container_elements
 //
 //----------------------------------------------------------------------------------------------------------------------
 
 //----------------------------------------------------------------------------------------------------------------------
 // Container
 //
-.pp-container, .fe-container {
+.pp-container, .fe-container, .ce-container {
   .frame-container {
     max-width: none;
   }
@@ -43,13 +43,13 @@
   // Ensure spacing is correct when columns are serialized (two visually subsequent content elements just have one
   // padding). Assumes that all content elements in columns have a frame without spacing before.
   //
-  .pp-col-collapse, .fe-col-collapse {
+  .pp-col-collapse, .fe-col-collapse, .ce-col-collapse {
     > .frame.frame-background-none.frame-space-before-none:not(.frame-has-backgroundimage):first-child {
       @extend .frame-collapsible;
     }
   }
   // Compensate bottom space
-  > .pp-row-collapse, > .fe-row-collapse {
+  > .pp-row-collapse, > .fe-row-collapse, > .ce-row-collapse {
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
       @include media-breakpoint-up($breakpoint) {
         $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
@@ -62,16 +62,16 @@
 //----------------------------------------------------------------------------------------------------------------------
 // Accordion
 //
-.pp-accordion-primary, .fe-accordion-primary {
+.pp-accordion-primary, .fe-accordion-primary, .ce-accordion-primary {
   @include pp-style-accordion-light($primary);
 }
-.pp-accordion-secondary, .fe-accordion-secondary {
+.pp-accordion-secondary, .fe-accordion-secondary, .ce-accordion-secondary {
   @include pp-style-accordion-light($secondary);
 }
-.pp-accordion-complementary, .fe-accordion-complementary {
+.pp-accordion-complementary, .fe-accordion-complementary, .ce-accordion-complementary {
   @include pp-style-accordion-light($complementary);
 }
-.pp-accordion-body, .fe-accordion-body  {
+.pp-accordion-body, .fe-accordion-body, .ce-accordion-body  {
   // No top space for first element in accordion body
   > .frame:first-child {
     padding-top: 0 ;
@@ -89,19 +89,19 @@
   padding: (1.5 * $nav-link-padding-x) 0;
   padding-bottom: 0.5rem;
 }
-.pp-tabs-primary, .fe-tabs-primary {
+.pp-tabs-primary, .fe-tabs-primary, .ce-tabs-primary {
   @include pp-style-tab-light($primary);
 }
-.pp-tabs-secondary, .fe-tabs-secondary {
+.pp-tabs-secondary, .fe-tabs-secondary, .ce-tabs-secondary {
   @include pp-style-tab-light($secondary);
 }
-.pp-tabs-complementary, .fe-tabs-complementary {
+.pp-tabs-complementary, .fe-tabs-complementary, .ce-tabs-complementary {
   @include pp-style-tab-light($complementary);
 }
 .tab-v1 {
   @include pp-style-tab($pp-tab-v1-background);
 }
-.pp-tab-pane, .fe-tab-pane {
+.pp-tab-pane, .fe-tab-pane, .ce-tab-pane {
   // No top space for first element in tab pane
   > .frame:first-child {
     padding-top: 0 ;
@@ -115,7 +115,7 @@
 //----------------------------------------------------------------------------------------------------------------------
 // Cards
 //
-.fe-card, .pp-card {
+.fe-card, .pp-card, .ce-card {
   .card-header, .card-footer {
     *:last-child {
       margin-bottom: 0;
@@ -124,7 +124,7 @@
   > img {
     height: auto;
   }
-  .fec-image-wrap, .ppc-image-wrap {
+  .fec-image-wrap, .ppc-image-wrap, .cec-image-wrap {
     .gallery-row {
       margin: 0;
     }
@@ -135,10 +135,10 @@
       margin: 0;
     }
   }
-  .fec-image-col img, .ppc-image-col {
+  .fec-image-col img, .ppc-image-col, .cec-image-col {
     height: auto;
   }
-  .fec-content-col, .ppc-content-col {
+  .fec-content-col, .ppc-content-col, .cec-content-col {
     display: flex;
     align-items: center;
   }

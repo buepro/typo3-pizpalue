@@ -45,13 +45,14 @@ This extension supports the following extensions providing similar structure ele
   `extension gridelements <https://extensions.typo3.org/extension/gridelements>`__
 - `Extension flux_elements <https://extensions.typo3.org/extension/flux_elements>`__ powered by the
   `extension flux <https://extensions.typo3.org/extension/flux>`__
+- `Extension container_elements <https://extensions.typo3.org/extension/container_elements>`__ powered by the
+  `extension container <https://extensions.typo3.org/extension/container>`__
 
 .. tip::
-   Don't work with both extensions in one installation. Choose between `pp_gridelements` and `flux_elements` to
-   minimize maintenance expense.
+   To minimize maintenance expenses it is recommended to just use one extension providing structure elements.
 
-The available structure elements can be found in the new content element wizard under the `Grid Elements` or
-`Flux content` tab:
+The available structure elements can be found in the new content element wizard under the `Grid Elements`, `Flux content`
+or `Container` tab:
 
 .. figure:: ../Images/User/StructureElements_Gridelements.jpg
    :width: 500px
@@ -66,6 +67,14 @@ The available structure elements can be found in the new content element wizard 
    :alt: "Flux content"-tab in new content element wizard
 
    "Flux content"-tab in new content element wizard
+
+-----------------------------------------------------------------------------------------------------------------------
+
+.. figure:: ../Images/User/StructureElements_ContainerElements.jpg
+   :width: 500px
+   :alt: "Container"-tab in new content element wizard
+
+   "Container"-tab in new content element wizard
 
 
 .. _user-design-contentElement:
@@ -108,7 +117,7 @@ count.
 Some times an editor adds additional elements for structuring the content area resulting in a smaller available space
 for images. To deliver the optimal image size under such conditions a scaling can be defined.
 
-As an example consider adding a two column grid element with the first column being 33% and the second column 67% from
+As an example consider adding a two column structure element with the first column being 33% and the second column 67% from
 the content width. Let's assume the two columns to be next to each other for screen sizes bigger than md. Now when
 adding an image to the first column (33% width) the rendered image would be two times bigger than needed (due to the
 system not knowing how much space is available in the column). To deliver optimal sized images the following scaling

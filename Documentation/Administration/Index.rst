@@ -25,6 +25,7 @@ Extension                        Version tested
 ================================ ================
 pp_gridelements                  1.1.0
 flux_elements                    1.1.0
+container_elements               0.1.0
 ws_flexslider                    1.5.14
 indexed_search                   10.4.1
 news                             8.3.0

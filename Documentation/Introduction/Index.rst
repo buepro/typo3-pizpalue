@@ -30,11 +30,10 @@ while maintaining or improving speed and seo performance.
 It provides the following main features:
 
 - Page layouts allowing to add content in side columns with a menu
-- Support for structure elements  powered by `gridelements <https://extensions.typo3.org/extension/gridelements>`__
-  or `flux <https://extensions.typo3.org/extension/flux>`__ through extensions
-  `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__ or
-  `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__. Example structure elements are: columns,
-  accordion, tabs, card and tile unit
+- Support for structure elements provided by `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__,
+  `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__ or
+  `container_elements <https://extensions.typo3.org/extension/container_elements>`__. Example structure elements are:
+  columns, accordion, tabs, card and tile unit
 - Support for automatic image scaling in structure elements (see :ref:`integration_templating`)
 - Content element fields to optimize image scaling dependent on the screen size.
 - Scroll animation effects
