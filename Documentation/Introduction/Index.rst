@@ -29,19 +29,28 @@ while maintaining or improving speed and seo performance.
 
 It provides the following main features:
 
+**Arranging content**
 - Page layouts allowing to add content in side columns with a menu
 - Support for structure elements provided by `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__,
   `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__ or
   `container_elements <https://extensions.typo3.org/extension/container_elements>`__. Example structure elements are:
   columns, accordion, tabs, card and tile unit
-- Support for automatic image scaling in structure elements (see :ref:`integration_templating`)
-- Content element fields to optimize image scaling dependent on the screen size.
-- Scroll animation effects
-- Content element fields to assign custom classes, styles and attributes
+
+**Enhancing content**
 - A content element to create modal dialogs
 - A content element to create a list of categorized content elements
 - A content element to create structured content (JSON-LD data, see :ref:`user-contentElements-schema`)
 - A layout for media content elements to emphasize media
+- Support for automatic image scaling in structure elements (see :ref:`integration_templating`)
+- Content element fields to optimize image scaling dependent on the screen size.
+- Content element fields to assign custom classes, styles and attributes
+
+**Animating content**
+- Animation effects provided `animate.css <https://github.com/animate-css/animate.css>`__
+- Scroll animation effects provided by `AOS <https://github.com/michalsnik/aos>`__
+- A feature to reveal the footer
+
+**Extending extensions**
 - A form finisher to send emails to a system
 - A teaser and map view from addresses provided by the extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__
 - Configurations for the extensions
@@ -51,8 +60,9 @@ It provides the following main features:
   `news <https://extensions.typo3.org/extension/news>`__,
   `tt_address <https://extensions.typo3.org/extension/tt_address>`__,
   `timelog <https://extensions.typo3.org/extension/timelog>`__
+
+**Various**
 - A menu to be fixed on the side (fastmenu)
-- A feature to reveal the footer
 
 Discover more regarding the features on the `demo site <http://pizpalue.buechler.pro/das-plus/>`__.
 

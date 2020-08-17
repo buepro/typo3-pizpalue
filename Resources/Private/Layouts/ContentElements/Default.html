@@ -165,6 +165,12 @@
         <f:asset.script identifier="ppAos" src="EXT:pizpalue/Contrib/Aos/dist/aos.js" />
     </v:condition.string.contains>
 
+    <f:comment>====================== Pizpalue animate.css assets ======================</f:comment>
+
+    <v:condition.string.contains haystack="{ppClasses}" needle="animate__animated">
+        <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
+    </v:condition.string.contains>
+
     <f:comment>====================== Pizpalue end ======================</f:comment>
 
     <f:if condition="{data.frame_class} != none">

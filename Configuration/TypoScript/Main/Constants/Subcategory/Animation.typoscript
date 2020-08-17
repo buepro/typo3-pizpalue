@@ -4,48 +4,46 @@
 # Customer various
 #---------------------------------------------------------#
 
+# An animation can be defined by classes, styles and attributes:
+# 1 {
+#    classes =
+#    style =
+#    attributes =
+# }
 pizpalue.animation {
     1 {
-        # cat=6060/1520/0010; type=string; label=Animation 1 classes
-        classes =
-        # cat=6060/1520/0012; type=string; label=Animation 1 inline style
-        style =
-        # cat=6060/1520/0014; type=string; label=Animation 1 attributes
+        # cat=6060/1520/0014; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation1
         attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
     }
 
     2 {
-        # cat=6060/1520/0020; type=string; label=Animation 2 classes
-        classes =
-        # cat=6060/1520/0022; type=string; label=Animation 2 inline style
-        style =
-        # cat=6060/1520/0024; type=string; label=Animation 2 attributes
+        # cat=6060/1520/0024; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation2
         attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
     }
 
     3 {
-        # cat=6060/1520/0030; type=string; label=Animation 3 classes
-        classes =
-        # cat=6060/1520/0032; type=string; label=Animation 3 inline style
-        style =
-        # cat=6060/1520/0034; type=string; label=Animation 3 attributes
+        # cat=6060/1520/0034; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation3
         attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
     }
 
     4 {
-        # cat=6060/1520/0040; type=string; label=Animation 4 classes
-        classes =
-        # cat=6060/1520/0042; type=string; label=Animation 4 inline style
-        style =
-        # cat=6060/1520/0044; type=string; label=Animation 4 attributes
+        # cat=6060/1520/0044; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation4
         attributes = data-aos="flip-up" data-aos-anchor-placement="center-bottom"
     }
     11 {
-        # cat=6060/1520/0040; type=string; label=Animation 11 classes
+        # cat=6060/1520/0110; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation11
         classes = pp-animate ppc-background-zoom ppc-text-delay
-        # cat=6060/1520/0042; type=string; label=Animation 11 inline style
-        style =
-        # cat=6060/1520/0044; type=string; label=Animation 11 attributes
-        attributes =
+    }
+    21 {
+        # cat=6060/1520/0210; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation21
+        classes = animate__animated animate__zoomInDown
+    }
+    22 {
+        # cat=6060/1520/0210; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation22
+        classes = animate__animated animate__jackInTheBox
+    }
+    23 {
+        # cat=6060/1520/0210; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation22
+        classes = animate__animated animate__rubberBand
     }
 }

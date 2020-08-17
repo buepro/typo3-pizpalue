@@ -7,6 +7,16 @@
 Animation and effects
 =====================
 
+.. _usr-animation:
+
+Animation
+=========
+
+Content elements can easily be animated by adding animation classes to the field `Additional classes` found in the
+`Appearance` register. Animations are provided by `animate.css <https://github.com/animate-css/animate.css>`__ and the
+available animation classes can be obtained from the `demo site <https://animate.style/>`__.
+
+**Example:** To apply a bouncing effect the following classes could be used: `animate__animated animate__bounce`.
 
 .. _usr-scrollanimation:
 

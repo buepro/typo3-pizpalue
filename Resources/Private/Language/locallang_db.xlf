@@ -46,6 +46,15 @@
 			<trans-unit id="tx_pizpalue_ttc.animation11">
 				<source>Zoom background, show text</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.animation21">
+				<source>Zoom in down</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.animation22">
+				<source>Jack in the box</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.animation23">
+				<source>Rubber band</source>
+			</trans-unit>
 
 			<trans-unit id="tx_pizpalue_ttc.image_variants">
 				<source>Image variants</source>
