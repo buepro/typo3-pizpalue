@@ -275,6 +275,12 @@ defined('TYPO3_MODE') || die();
             'image,textmedia,textpic',
             'before: imageorient'
         );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'tx_pizpalue_image_variants',
+            'carousel,carousel_fullscreen,carousel_small',
+            'after: pi_flexform'
+        );
     }
 })();
 
