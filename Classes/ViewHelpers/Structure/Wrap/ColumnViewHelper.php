@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\ViewHelpers\Structure\Render;
+namespace Buepro\Pizpalue\ViewHelpers\Structure\Wrap;
 
 use Buepro\Pizpalue\Utility\StructureMultiplierUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
@@ -27,7 +27,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *     <div class="col col-md-8 col-xl-6">
  *         <v:content.render contentUids="{0: item.data.uid}" />
  *     </div>
- * </pp.structure.render.column>
+ * </pp.structure.wrap.column>
  */
 class ColumnViewHelper extends AbstractViewHelper
 {

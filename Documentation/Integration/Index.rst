@@ -51,7 +51,7 @@ pp.structure.wrap.column
             <v:content.render contentUids="{0: item.data.uid}" />
          </div>
       </div>
-   </pp.structure.render.column>
+   </pp.structure.wrap.column>
 
 The above code results in:
 
