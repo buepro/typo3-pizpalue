@@ -2,4 +2,4 @@
 #### BACKENDLAYOUTS ####
 ########################
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">
+@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/'

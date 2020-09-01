@@ -34,13 +34,13 @@
 # Defaults
 #=========================================================#
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Defaults.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Defaults.typoscript'
 
 
 #=========================================================#
 # Categories
 #=========================================================#
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Category/SocialNetwork.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Category/SocialNetwork.typoscript'
 
 
 #=========================================================#
@@ -50,34 +50,34 @@
 #---------------------------------------------------------#
 # Bootstrap4
 #---------------------------------------------------------#
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Configuration.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Scaffold.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Colors.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Various.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Configuration.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Scaffold.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Colors.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Various.typoscript'
 
 #---------------------------------------------------------#
 # Pizpalue
 #---------------------------------------------------------#
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Admin.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Customer.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Scaffold.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Font.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Logo.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Menu.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/CookieConsent.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/AppIcon.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Storage.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Seo.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Features.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Animation.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Admin.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Customer.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Scaffold.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Font.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Logo.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Menu.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/CookieConsent.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/AppIcon.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Storage.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Seo.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Features.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Animation.typoscript'
 
 
 #=========================================================#
 # Various
 #=========================================================#
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Plugins.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Templates.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Plugins.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Templates.typoscript'
 
 config.admPanel = 0
 
@@ -86,11 +86,11 @@ config.admPanel = 0
 # DEPRECIATED constants
 #=========================================================#
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/Depreciated.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Depreciated.typoscript'
 
 
 #=========================================================#
 # Debug
 #=========================================================#
 
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/constants.typoscript">
+#@import 'EXT:pizpalue/Configuration/TypoScript/Develop/constants.typoscript'

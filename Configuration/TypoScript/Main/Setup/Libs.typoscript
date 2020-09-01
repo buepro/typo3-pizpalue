@@ -15,7 +15,6 @@ lib.pizpalue.contentElement.dataProcessing {
         references {
             fieldName = tx_pizpalue_bgmedia
         }
-
         as = tx_pizpalue_bgmedia
     }
 }

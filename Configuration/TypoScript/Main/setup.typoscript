@@ -1,9 +1,9 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/AppIcon.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Plugins.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Libs.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/Constants.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/AppIcon.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Plugins.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Libs.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Constants.typoscript'
 [{$pizpalue.menu.fast.enable}]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Setup/FastMenu.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/FastMenu.typoscript'
 [END]
 
 
@@ -204,7 +204,7 @@ page.10 {
 #=========================================================#
 
 [{$pizpalue.agency.siteMode} == 1]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
 [END]
 
 

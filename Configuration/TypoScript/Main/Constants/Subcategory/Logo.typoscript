@@ -1,4 +1,4 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript'
 
 #---------------------------------------------------------#
 # customer base

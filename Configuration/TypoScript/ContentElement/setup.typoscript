@@ -1,4 +1,4 @@
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:pizpalue/Configuration/TypoScript/ContentElement/Element" extensions="typoscript">
+@import 'EXT:pizpalue/Configuration/TypoScript/ContentElement/Element/'
 
 lib.contentElement {
     settings.gallery {

@@ -2,4 +2,4 @@
 # Content elements
 #=========================================================#
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/Element" extensions="tsconfig">
+@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/Element/'

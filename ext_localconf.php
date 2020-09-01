@@ -57,18 +57,18 @@ defined('TYPO3_MODE') || die();
             // Disable some bootstrap_package backend layouts
             if (!(bool) $pizpalueConfiguration['enableBootstrapPackageBackendLayouts']) {
                 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                    '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/DisableBackendLayouts.tsconfig">'
+                    "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/DisableBackendLayouts.tsconfig'"
                 );
             }
             // Pizpalue backend layouts
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">'
+                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig'"
             );
         }
 
         // RTE
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig">'
+            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig'"
         );
     }
 
@@ -125,7 +125,7 @@ defined('TYPO3_MODE') || die();
          * Add page tsconfig
          */
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig">'
+            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig'"
         );
     }
 
