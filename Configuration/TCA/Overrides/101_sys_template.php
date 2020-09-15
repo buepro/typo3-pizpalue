@@ -30,11 +30,6 @@ defined('TYPO3_MODE') || die();
     );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $_EXTKEY,
-        'Configuration/TypoScript/ContentElement',
-        'Pizpalue - Content elements'
-    );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $_EXTKEY,
         'Extensions/news/Configuration/TypoScript',
         'Pizpalue - news'
     );
