@@ -108,6 +108,15 @@ defined('TYPO3_MODE') || die();
     /**
      * Content elements
      */
+    if ((bool) $pizpalueConfiguration['enableDefaultPageTsTceFormConfig']) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
+        );
+    }
+
+    /**
+     * Additional content elements
+     */
     if (1) {
         /**
          * Register icons

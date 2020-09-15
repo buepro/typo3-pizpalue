@@ -173,6 +173,9 @@
 			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
 				<source>Enable bootstrap_package page layouts</source>
 			</trans-unit>
+			<trans-unit id="ext_conf.enableDefaultPageTsTceFormConfig">
+				<source>Enable default pageTS TCEFORM configuration for content elements</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
