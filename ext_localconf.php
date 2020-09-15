@@ -62,7 +62,7 @@ defined('TYPO3_MODE') || die();
             }
             // Pizpalue backend layouts
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig'"
+                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'"
             );
         }
 
