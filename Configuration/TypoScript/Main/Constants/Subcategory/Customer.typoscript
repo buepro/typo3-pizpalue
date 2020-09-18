@@ -49,8 +49,14 @@ pizpalue.customer {
     # cat=6060/1020/0028; type=string; label=Contact country
     contactCountry = Country
 
-    # cat=6060/1020/0030; type=string; label=Contact fax
-    contactFax = +41 11 111 11 12
+    # cat=6060/1020/0030; type=string; label=Alternative contact phone
+    contactPhoneAlt = +41 11 111 11 12
+
+    # cat=6060/1020/0032; type=string; label=Contact fax
+    contactFax = +41 11 111 11 21
+
+    # cat=6060/1020/0034; type=string; label=Contact messenger
+    contactMessenger = ThreemaID
 
     # cat=6060/1020/0040; type=string; label=Best rating:The highest value allowed in the rating system
     bestRating = 100

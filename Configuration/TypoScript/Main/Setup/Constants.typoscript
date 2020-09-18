@@ -10,7 +10,9 @@ constants {
     ppCustomerContactCountry = {$pizpalue.customer.contactCountry}
     ppCustomerContactEmail = {$pizpalue.customer.contactEmail}
     ppCustomerContactPhone = {$pizpalue.customer.contactPhone}
+    ppCustomerContactPhoneAlt = {$pizpalue.customer.contactPhoneAlt}
     ppCustomerContactFax = {$pizpalue.customer.contactFax}
+    ppCustomerContactMessenger = {$pizpalue.customer.contactMessenger}
     ppRatingValue = {$pizpalue.customer.ratingValue}
     ppRatingCount = {$pizpalue.customer.ratingCount}
 }
