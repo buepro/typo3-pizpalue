@@ -1,18 +1,20 @@
 plugin.tx_news {
-   _LOCAL_LANG {
-      es {
-           dateFormat = %d/%m/%Y
-      }
-   }
-   settings {
-      displayDummyIfNoMedia = 1
-      list.media.dummyImage = EXT:pizpalue/Extensions/news/Resources/Public/Images/knewsticker3.png
-      list.media.image.width >
-   }
+    _LOCAL_LANG {
+        es {
+            dateFormat = %d/%m/%Y
+        }
+    }
+
+    settings {
+        displayDummyIfNoMedia = 1
+        list.media.dummyImage = EXT:pizpalue/Extensions/news/Resources/Public/Images/knewsticker3.png
+        list.media.image.width = 400
+        detail.media.image.width = 400
+    }
 }
 
 page.includeCSS.pizpalueNews = EXT:pizpalue/Extensions/news/Resources/Public/Scss/general.scss
 
 [{$pizpalue.general.useLess} == 1]
-   page.includeCSS.pizpalueNews = EXT:pizpalue/Extensions/news/Resources/Public/Less/general.less
+page.includeCSS.pizpalueNews = EXT:pizpalue/Extensions/news/Resources/Public/Less/general.less
 [END]
