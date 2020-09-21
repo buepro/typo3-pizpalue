@@ -29,6 +29,7 @@ TODO.md export-ignore
 *.rst text eol=lf
 *.md text eol=lf
 *.yml text eol=lf
+*.yaml text eol=lf
 *.ts text eol=lf
 *.xlf text eol=lf
 *.sql text eol=lf
@@ -36,3 +37,5 @@ TODO.md export-ignore
 *.txt text eol=lf
 *.typoscript text eol=lf
 *.tsconfig text eol=lf
+*.dist text eol=lf
+*.htaccess text eol=lf
