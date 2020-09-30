@@ -130,7 +130,7 @@ page {
         pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.smoothscroll.min.js
         bootstrap_smoothscroll >
         js-cookie = EXT:pizpalue/Resources/Public/Contrib/js-cookie/js.cookie.min.js
-        // Obsolete as of bootstrap_package 11.1.0
+        //todo Obsolete as of bootstrap_package 11.1.0
         bootstrap_stickyheader = EXT:pizpalue/Resources/Public/JavaScript/Dist/bootstrap.stickyheader.min.js
     }
 }
@@ -156,27 +156,6 @@ page {
     }
 }
 [END]
-
-#:::::::::::::::::::::::
-#: Scroll animation
-#:
-#: Initialize AOS and avoid scroll bars when element is hidden.
-#.
-page {
-    jsFooterInline {
-        1020 = TEXT
-        1020.value (
-;+function ($) {
- $(function () {
-    if (typeof AOS !== 'undefined') {
-        AOS.init({{$pizpalue.features.scrollAnimation.initParams}});
-        $('[data-aos]').parent().css('overflow','hidden');
-    }
- });
-}(jQuery);
-        )
-    }
-}
 
 
 #=========================================================#

@@ -32,6 +32,28 @@ from the content element properties dialog.
 
 They can be further customized by help of the :ref:`constant editor <config_scrollanimation>`.
 
+Currently the libraries `Josh.js <https://github.com/mamunhpath/josh.js>`__ and `AOS <https://github.com/michalsnik/aos>`__
+are supported.
+
+.. warning::
+   AOS didn't get updated for quite some time. This is why it has been marked as deprecated hence shouldn't be used for
+   new projects any more.
+
+Josh.js
+-------
+
+The js library `Josh.js <https://github.com/mamunhpath/josh.js>`__ can be used to animate content elements with the
+css library `Animate.css <https://github.com/animate-css/animate.css>`__. To add a scroll animation the related
+attributes can be added to the field `Additional attributes`. The available data attributes can be looked up at
+`github <https://github.com/mamunhpath/josh.js#advanced-usage>`__.
+
+Example:
+
+.. code-block:: html
+
+   data-josh-anim-name="pulse" data-josh-duration="1500ms" data-josh-delay="3.5s" data-josh-iteration="5"
+
+
 .. _usr-revealFooter:
 
 Reveal footer

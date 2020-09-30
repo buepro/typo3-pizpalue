@@ -30,6 +30,11 @@
     <f:variable name="spaceBeforeClass">frame-space-before-{f:if(condition: data.space_before_class, else: 'none', then: data.space_before_class)}</f:variable>
     <f:variable name="spaceAfterClass">frame-space-after-{f:if(condition: data.space_after_class, else: 'none', then: data.space_after_class)}</f:variable>
 
+    <f:comment>====================== Pizpalue helpers ======================</f:comment>
+
+    {f:variable(name: '_ocb', value: '{')}
+    {f:variable(name: '_ccb', value: '}')}
+
     <f:comment>====================== Pizpalue structure multiplier ======================</f:comment>
 
     {v:variable.register.get(name: 'structureMultiplier') -> f:variable(name: '_structureMultiplier')}
@@ -141,6 +146,36 @@
         </f:variable>
     </f:if>
 
+    <f:comment>====================== Pizpalue AOS assets ======================</f:comment>
+
+    <v:condition.string.contains haystack="{ppAttributes}" needle="data-aos">
+        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
+        <f:asset.css identifier="ppAos" href="EXT:pizpalue/Resources/Public/Contrib/aos/aos.css" />
+        <f:asset.script identifier="ppAos" src="EXT:pizpalue/Resources/Public/Contrib/aos/aos.js" />
+<f:asset.script identifier="ppAosInit">
+AOS.init({_ocb} {pizpalue.animation.aos.initParams -> f:format.raw()} {_ccb});
+$('[data-aos]').parent().css('overflow','hidden');
+</f:asset.script>
+    </v:condition.string.contains>
+
+    <f:comment>====================== Pizpalue josh.js assets ======================</f:comment>
+
+    <v:condition.string.contains haystack="{ppAttributes}" needle="data-josh">
+        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
+        {f:variable(name: 'ppClasses', value: '{ppClasses} josh-js')}
+        <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
+        <f:asset.script identifier="ppJosh" src="EXT:pizpalue/Resources/Public/Contrib/josh.js/dist/josh.min.js" />
+<f:asset.script identifier="ppJoshInit">
+const josh = new Josh({_ocb} {pizpalue.animation.josh.initParams -> f:format.raw()} {_ccb});
+</f:asset.script>
+    </v:condition.string.contains>
+
+    <f:comment>====================== Pizpalue animate.css assets ======================</f:comment>
+
+    <v:condition.string.contains haystack="{ppClasses}" needle="animate__animated">
+        <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
+    </v:condition.string.contains>
+
     <f:comment>====================== Pizpalue compile attributes ======================</f:comment>
 
     {f:variable(name:'ppAllAttributes', value:'')}
@@ -151,25 +186,11 @@
             </f:variable>
         </f:if>
         <f:variable name="ppAllAttributes">
-            {f:if(condition:'{ppClasses}', then:' class="{ppClasses}"')}
-            {f:if(condition:'{ppStyles}', then:' style="{ppStyles}"')}
-            {f:if(condition:'{ppAttributes}', then:' {ppAttributes}"')}
+            {f:if(condition:'{ppClasses}', then:' class="{ppClasses -> v:format.trim()}"')}
+            {f:if(condition:'{ppStyles}', then:' style="{ppStyles -> v:format.trim()}"')}
+            {f:if(condition:'{ppAttributes}', then:' {ppAttributes -> v:format.trim()}"')}
         </f:variable>
     </f:if>
-
-    <f:comment>====================== Pizpalue AOS assets ======================</f:comment>
-
-    <v:condition.string.contains haystack="{ppAttributes}" needle="data-aos">
-        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
-        <f:asset.css identifier="ppAos" href="EXT:pizpalue/Resources/Public/Contrib/aos/aos.css" />
-        <f:asset.script identifier="ppAos" src="EXT:pizpalue/Resources/Public/Contrib/aos/aos.js" />
-    </v:condition.string.contains>
-
-    <f:comment>====================== Pizpalue animate.css assets ======================</f:comment>
-
-    <v:condition.string.contains haystack="{ppClasses}" needle="animate__animated">
-        <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
-    </v:condition.string.contains>
 
     <f:comment>====================== Pizpalue end ======================</f:comment>
 

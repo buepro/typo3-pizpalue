@@ -4,6 +4,9 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+			<trans-unit id="deprecated">
+				<source>deprecated</source>
+			</trans-unit>
 			<trans-unit id="close">
 				<source>Close</source>
 			</trans-unit>

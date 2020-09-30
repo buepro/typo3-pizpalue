@@ -11,24 +11,29 @@
 #    attributes =
 # }
 pizpalue.animation {
+    aos {
+        # cat=6060/1520/0002; type=string; label=AOS initialization parameters
+        initParams = easing: 'ease-in-out-sine', once: true, disable: 'mobile'
+    }
+    josh {
+        # cat=6060/1520/0004; type=string; label=Josh initialization parameters
+        initParams = animateInMobile: false
+    }
     1 {
         # cat=6060/1520/0014; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation1
-        attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
+        attributes = data-josh-anim-name="fadeInBottomLeft"
     }
-
     2 {
         # cat=6060/1520/0024; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation2
-        attributes = data-aos="fade-up-left" data-aos-anchor-placement="center-bottom"
+        attributes = data-josh-anim-name="fadeInBottomRight"
     }
-
     3 {
         # cat=6060/1520/0034; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation3
-        attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
+        attributes = data-josh-anim-name="zoomIn"
     }
-
     4 {
         # cat=6060/1520/0044; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation4
-        attributes = data-aos="flip-up" data-aos-anchor-placement="center-bottom"
+        attributes = data-josh-anim-name="flipInX"
     }
     11 {
         # cat=6060/1520/0110; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation11

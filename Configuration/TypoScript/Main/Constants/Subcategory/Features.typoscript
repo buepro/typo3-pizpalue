@@ -38,8 +38,5 @@ pizpalue.features {
 
         # cat=6060/2990/0350; type=string; label=Custom scroll animation frame 3 attributes (depreciated as of 9.0)
         frame3Attributes = data-aos="zoom-in" data-aos-anchor-placement="center-bottom"
-
-        # cat=6060/2990/0360; type=string; label= Scroll animation init parameters (depreciated as of 9.0)
-        initParams = easing: 'ease-in-out-sine', once: true
     }
 }

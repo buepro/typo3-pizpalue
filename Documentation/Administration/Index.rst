@@ -54,6 +54,7 @@ The following upgrade descriptions are available:
    Upgrade9
    Upgrade11
    Upgrade11.2
+   UpgradeNext
    UpgradeBootstrap4
 
 

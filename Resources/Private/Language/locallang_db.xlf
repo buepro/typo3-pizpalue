@@ -16,6 +16,9 @@
 			<trans-unit id="tx_pizpalue_ttc.additionalAttributes">
 				<source>Additional attributes</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.additionalAttributesDescription">
+				<source>For josh scroll animation see github.com/mamunhpath/josh.js and animate.style</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.background">
 				<source>Background</source>
 			</trans-unit>
@@ -171,7 +174,6 @@
 			<trans-unit id="tca.schema.options">
 				<source>Schema options</source>
 			</trans-unit>
-
 		</body>
 	</file>
 </xliff>
