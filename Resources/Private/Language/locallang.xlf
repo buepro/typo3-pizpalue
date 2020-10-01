@@ -7,6 +7,9 @@
 			<trans-unit id="deprecated">
 				<source>deprecated</source>
 			</trans-unit>
+			<trans-unit id="deprecatedItemNote">
+				<source>DEPRECATED. The item is deprecated and will be removed soon. Please don't use it any more.</source>
+			</trans-unit>
 			<trans-unit id="close">
 				<source>Close</source>
 			</trans-unit>

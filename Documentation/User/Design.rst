@@ -233,15 +233,14 @@ that it should be displayed on the entire display width hence `Full page width` 
 Background
 ~~~~~~~~~~
 
-The bootstrap package as well as this extension provide a way to assign a background to a content element.
+The bootstrap package offers a possibility to add a background image to the content element.
 
-The bootstrap package approach uses additional style definitions inside the content element container allowing to
-define different images for different screen sizes. Additionally it provides easy image manipulations. In case no
-frame should be used as well no background image can be assigned.
+Its configuration has been adapted to enable the background image as well when no frame is used for the
+content element. In this case just a wrapping div is added.
 
-The extension is embedding a background image by adding an inline style definition. In case no frame is
-selected the content is wrapped allowing always to have a background image.
-
+.. warning::
+   This extension provides an alternative way to assign a background to a content element by using the field
+   `Background image (inline)`. To reduce redundancy it has been marked as deprecated and shouldn't be used any more.
 
 .. _user-design-attributes:
 

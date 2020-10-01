@@ -231,9 +231,12 @@ const josh = new Josh({_ocb} {pizpalue.animation.josh.initParams -> f:format.raw
             </div>
         </f:then>
         <f:else>
-            <f:if condition="{ppAllAttributes}">
+            <f:if condition="{ppAllAttributes} || {data.background_image}">
                 <f:then>
                     <div id="c{data.uid}" {ppAllAttributes -> pp:desarmAttribute()}>
+                        {f:variable(name: '_backgroundAll', value: _all)}
+                        {backgroundVariants -> v:variable.set(name: '_backgroundAll.variants')}
+                        <f:render partial="Frame/General/BackgroundImage" arguments="{_backgroundAll}" />
                         <f:if condition="{rendersTile}">
                             <div class="frame-container">
                                 <div class="frame-inner">

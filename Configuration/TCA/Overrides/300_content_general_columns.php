@@ -155,9 +155,12 @@ defined('TYPO3_MODE') || die();
                     ],
                 ],
             ],
+            // @deprecated since 11.4.0
+            // @todo remove support for inline background image
             'tx_pizpalue_bgmedia' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.bgmedia',
+                'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:deprecatedItemNote',
                 'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                     'tx_pizpalue_bgmedia',
                     [
@@ -339,4 +342,12 @@ defined('TYPO3_MODE') || die();
         $items[] = ['complementary', 'complementary'];
     }
     $GLOBALS['TCA']['tt_content']['columns']['background_color_class']['config']['items'] = $items;
+})();
+
+/**
+ * Configure existing fields
+ */
+(function () {
+    unset($GLOBALS['TCA']['tt_content']['columns']['background_image']['displayCond'],
+        $GLOBALS['TCA']['tt_content']['columns']['background_image_options']['displayCond']);
 })();
