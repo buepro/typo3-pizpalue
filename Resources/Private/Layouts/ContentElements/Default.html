@@ -53,7 +53,8 @@
             frame {frameClass} {typeClass} {layoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}
         </f:variable>
     </f:if>
-    {f:variable(name:'ppStyles', value:'')}
+    {f:variable(name:'ppIncludedStyles', value:'')}
+    {f:variable(name:'ppInlineStyles', value:'')}
     {f:variable(name:'ppAttributes', value:'')}
 
     <f:comment>====================== Pizpalue scroll animation ======================</f:comment>
@@ -77,7 +78,7 @@
     <f:comment>====================== Pizpalue background ======================</f:comment>
 
     <f:if condition="{tx_pizpalue_bgmedia}">
-        <f:variable name="ppStyles">{ppStyles} background-image: url({f:uri.image(image: tx_pizpalue_bgmedia.0)});</f:variable>
+        <f:variable name="ppInlineStyles">{ppInlineStyles} background-image: url({f:uri.image(image: tx_pizpalue_bgmedia.0)});</f:variable>
         <f:variable name="ppClasses">{ppClasses} pp-bg-centercover</f:variable>
     </f:if>
 
@@ -90,9 +91,16 @@
     </f:if>
 
     <f:if condition="{data.tx_pizpalue_style}">
-        <f:variable name="ppStyles">
-            {ppStyles} {data.tx_pizpalue_style}
-        </f:variable>
+        <v:condition.string.contains haystack="{data.tx_pizpalue_style}" needle="{">
+            <f:then>
+                <f:asset.css identifier="ppCe{data.uid}" priority="1">{data.tx_pizpalue_style -> v:format.eliminate(whitespace: 1, tabs: 1, unixBreaks: 1, windowsBreaks: 1) -> f:format.raw()}</f:asset.css>
+            </f:then>
+            <f:else>
+                <f:variable name="ppInlineStyles">
+                    {ppInlineStyles} {data.tx_pizpalue_style}
+                </f:variable>
+            </f:else>
+        </v:condition.string.contains>
     </f:if>
 
     <f:if condition="{data.tx_pizpalue_attributes}">
@@ -113,8 +121,8 @@
         </f:if>
 
         <f:if condition="{ppAnimation.style}">
-            <f:variable name="ppStyles">
-                {ppStyles} {ppAnimation.style}
+            <f:variable name="ppInlineStyles">
+                {ppInlineStyles} {ppAnimation.style}
             </f:variable>
         </f:if>
 
@@ -179,7 +187,7 @@ const josh = new Josh({_ocb} {pizpalue.animation.josh.initParams -> f:format.raw
     <f:comment>====================== Pizpalue compile attributes ======================</f:comment>
 
     {f:variable(name:'ppAllAttributes', value:'')}
-    <f:if condition="{ppClasses} || {ppStyles} || {ppAttributes}">
+    <f:if condition="{ppClasses} || {ppInlineStyles} || {ppAttributes}">
         <f:if condition="{data.frame_class} == none">
             <f:variable name="ppClasses">
                 pp-content {ppClasses} pp-type-{data.CType} {spaceBeforeClass} {spaceAfterClass}
@@ -187,7 +195,7 @@ const josh = new Josh({_ocb} {pizpalue.animation.josh.initParams -> f:format.raw
         </f:if>
         <f:variable name="ppAllAttributes">
             {f:if(condition:'{ppClasses}', then:' class="{ppClasses -> v:format.trim()}"')}
-            {f:if(condition:'{ppStyles}', then:' style="{ppStyles -> v:format.trim()}"')}
+            {f:if(condition:'{ppInlineStyles}', then:' style="{ppInlineStyles -> v:format.trim()}"')}
             {f:if(condition:'{ppAttributes}', then:' {ppAttributes -> v:format.trim()}"')}
         </f:variable>
     </f:if>

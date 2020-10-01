@@ -268,3 +268,5 @@ the "Additional attributes" field shows data attributes related to the
    For security reasons all attributes are filtered. Currently just data attributes are allowed in the "Additional
    attributes" field.
 
+.. note::
+   Style definitions will be included to the header when curly brackets are used. Otherwise they will be added inline.

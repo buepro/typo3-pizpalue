@@ -204,11 +204,12 @@ defined('TYPO3_MODE') || die();
             'tx_pizpalue_style' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.style',
+                'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.styleDescription',
                 'config' => [
-                    'type' => 'input',
-                    'size' => 100,
-                    'max' => 255,
-                    'eval' => 'trim'
+                    'type' => 'text',
+                    'renderType' => 't3editor',
+                    'rows' => 6,
+                    'cols' => 50,
                 ],
             ],
             'tx_pizpalue_attributes' => [

@@ -11,7 +11,10 @@
 				<source>Additional classes</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.style">
-				<source>Inline style</source>
+				<source>Additional styles</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.styleDescription">
+				<source>When using curly brackets style definitions are added to the header. Otherwise they will be used inline.</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.additionalAttributes">
 				<source>Additional attributes</source>
