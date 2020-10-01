@@ -93,7 +93,7 @@
     <f:if condition="{data.tx_pizpalue_style}">
         <v:condition.string.contains haystack="{data.tx_pizpalue_style}" needle="{">
             <f:then>
-                <f:asset.css identifier="ppCe{data.uid}" priority="1">{data.tx_pizpalue_style -> v:format.eliminate(whitespace: 1, tabs: 1, unixBreaks: 1, windowsBreaks: 1) -> f:format.raw()}</f:asset.css>
+                <f:asset.css identifier="ppCe{data.uid}" priority="1">{data.tx_pizpalue_style -> v:format.eliminate(tabs: 1, unixBreaks: 1, windowsBreaks: 1) -> f:format.raw()}</f:asset.css>
             </f:then>
             <f:else>
                 <f:variable name="ppInlineStyles">
