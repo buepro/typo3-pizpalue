@@ -1,11 +1,17 @@
+//
 // Create frame background
+//
 @mixin pp-make-frame-bg($color) {
   border-color: pp-tint($color, 80%);
   background: pp-tint($color, 80%);
   background: linear-gradient(20deg, pp-tint($color, 70%), pp-tint($color, 90%));
 }
 
+//
 // Create responsive frame space
+//
+// $value: Nominal space at $valueBreakpoint
+//
 @mixin pp-make-frame-spaces($value, $valueBreakpoint: xl, $sibling: '.frame', $scaling: $pp-space-scaling) {
   $breakpointScaling: map_get($scaling, $valueBreakpoint);
   $space: $value / $breakpointScaling * map_get($scaling, xs);

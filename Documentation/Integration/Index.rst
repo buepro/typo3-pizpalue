@@ -82,3 +82,17 @@ pp:structure.multiplier.getForColumn
          </div>
       </div>
    </div>
+
+SCSS-Mixins
+===========
+
+The extensions provides mixins to assist in customizing a web site. Following the most used ones are listed.
+
+======================================================================================================= ===============================================================================================================================================================================
+Mixin                                                                                                   Description
+======================================================================================================= ===============================================================================================================================================================================
+`pp-make-rainbow-background($start_color, $end_color, $count: 10)`                                      Used to create a background with two overlapping rainbows starting from each bottom corner.
+`pp-make-spaces($properties, $value, $valueBreakpoint: xl, $scaling: $pp-space-scaling)`                Used to create any kind of responsive space (padding or margin). Usage: `pp-make-spaces(margin-top, 1.5rem)`
+`pp-make-frame-spaces($value, $valueBreakpoint: xl, $sibling: '.frame', $scaling: $pp-space-scaling)`   Used to create responsive frame spaces with a space of @value at $valueBreakpoint. The space is controlled by the padding and collapsing is taken into account.
+`pp-make-text-shadow-outline($thickness: 3px, $color: black, $blur-radius: 5px)`                        Used to create text with a shadowed outline
+======================================================================================================= ===============================================================================================================================================================================

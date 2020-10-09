@@ -1,0 +1,30 @@
+//
+// Returns color steps starting from $corner_color passing through $count steps to $peak_color and passing back to
+// $corner_color. Example:
+//
+//   .test {
+//     content: pp-pyramid-gradient(red, green, 1);
+//   }
+//
+// results in
+//
+//   .test {
+//     content: "red 0, #037f00 0%, green 0, green 50%, #037f00 0, #037f00 100%";
+//   }
+//
+// @link https://codepen.io/bennettfeely/pen/jOEjmXK
+// @see pp-make-rainbow-background
+//
+@function pp-pyramid-gradient($corner_color, $peak_color, $count: 10) {
+  $colors: $corner_color + ' 0';
+  @for $i from 0 through (2 * $count) {
+    $n: abs($count - $i);
+    $weight: $n / $count;
+    $base: mix($corner_color, $peak_color, $weight);
+    @if $i > 0 {
+      $colors: $colors + ', #{$base} 0';
+    }
+    $colors: $colors + ', #{$base} ' + $i / (2 * $count) * 100 + '%';
+  }
+  @return $colors
+}

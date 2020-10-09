@@ -1,3 +1,10 @@
+@import "functions";
+@import "variables";
+@import "mixins";
+
+//
+// Under dev indicator
+//
 @keyframes blink {
   0% {background: transparent;}
   50% {background: orange;}
@@ -39,4 +46,20 @@ $pp-colorplate-radius: 100px;
   .complementarycolor {
     background: $complementary;
   }
+}
+
+//
+// Background demo
+//
+.pp-dev-bg-rainbow {
+  @include pp-make-rainbow-background($primary, $secondary, 10);
+}
+.pp-dev-bg-rainbow-primary {
+  @include pp-make-rainbow-background(darken($primary,10%), lighten($primary, 10%));
+}
+.pp-dev-bg-rainbow-secondary {
+  @include pp-make-rainbow-background(darken($secondary, 10%), lighten($secondary, 10%));
+}
+.pp-dev-bg-rainbow-complementary {
+  @include pp-make-rainbow-background(darken($complementary, 10%), lighten($complementary, 10%));
 }
