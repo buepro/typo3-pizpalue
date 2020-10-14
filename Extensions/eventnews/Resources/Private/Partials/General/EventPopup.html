@@ -1,0 +1,16 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+{f:translate(extensionName: 'pizpalue', key: 'moreDetails') -> f:variable(name: '_more')}
+<f:if condition="{settings.templateLayout as integer} !== 21">
+    <f:then>
+        {_more -> f:link.page(additionalParams: '{tx_news_pi1:{overwriteDemand: {month: month.month, year: month.year}}}', rel: 'nofollow', section: 'event{n.uid}') -> f:variable(name: '_more')}
+    </f:then>
+    <f:else>
+        {_more -> n:link(newsItem: n, settings: settings, title: n.title) -> f:variable(name: '_more')}
+    </f:else>
+</f:if>
+<h6>{n.title}</h6>
+<f:format.html>{n.teaser -> f:format.crop(maxCharacters: 120)} {_more -> f:format.htmlentitiesDecode()}</f:format.html>
+</html>

@@ -19,7 +19,7 @@ Page layout
 ===========
 
 With a page layout the coarse page structure is defined. They can be selected in the page properties dialog under the
-appearance tab. See as well `demo site <https://www.pizpalue.buechler.pro/das-plus/seitenlayout>`__.
+appearance tab. See as well `demo site <https://pizpalue.buechler.pro/das-plus/seitenlayout>`__.
 
 .. figure:: ../Images/User/Page_Layouts.jpg
    :width: 500px
@@ -37,7 +37,7 @@ Structure elements
 ==================
 
 With structure elements the content area might be further organized. Typical elements are containers, columns,
-accordions and tabs. See as well `demo site <https://www.pizpalue.buechler.pro/das-plus/strukturemente>`__.
+accordions and tabs. See as well `demo site <https://pizpalue.buechler.pro/das-plus/strukturemente>`__.
 
 This extension supports the following extensions providing similar structure elements:
 
@@ -207,7 +207,7 @@ Custom frames
 ~~~~~~~~~~~~~
 
 Additional frames can be selected for content elements
-(`see example <https://www.pizpalue.buechler.pro/das-plus/gestaltung/rahmen/>`__):
+(`see example <https://pizpalue.buechler.pro/das-plus/gestaltung/rahmen/>`__):
 
 .. figure:: ../Images/User/CustomFrames.jpg
    :alt: Custom frames for content elements

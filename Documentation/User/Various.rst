@@ -22,7 +22,7 @@ News
 ----
 
 For the news system a template "Image on top" is provided. It might be used to
-render the image on top of the text (`see example <https://www.pizpalue.buechler.pro/das-plus/news/>`__).
+render the image on top of the text (`see example <https://pizpalue.buechler.pro/das-plus/news/>`__).
 
 .. figure:: ../Images/User/News_Template_ImageOnTop.jpg
    :alt: News template to render image on top
@@ -39,7 +39,7 @@ The `getText data type <https://docs.typo3.org/typo3cms/TyposcriptReference/Data
 enabled for the RTE editor. It allows to get various data from a web site. As an example a translated text might be
 retrieved depending on the currently selected page language. For this users might reference data by using curly
 brackets within the editor
-(`see example <https://www.pizpalue.buechler.pro/das-plus/gestaltung/attribute/wissenswertes>`__):
+(`see example <https://pizpalue.buechler.pro/das-plus/gestaltung/attribute/wissenswertes>`__):
 
 .. figure:: ../Images/User/InlineLocalization.jpg
    :alt: Use of localized text within the editor

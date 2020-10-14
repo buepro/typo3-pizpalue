@@ -138,3 +138,15 @@ PIZPALUE:CUSTOMER STYLE          To define colors
 .. note::
 
    Embed new icons by generating your own icon font.
+
+.. _config_extensions:
+
+Extensions
+==========
+
+For some extensions additional configurations are available:
+
+.. toctree::
+   :maxdepth: 1
+
+   Extensions/Eventnews

@@ -29,6 +29,7 @@ container_elements               0.1.0
 ws_flexslider                    1.5.14
 indexed_search                   10.4.1
 news                             8.3.0
+eventnews                        4.0.0
 tt_address                       5.1.2
 timelog                          1.6.0
 ================================ ================
@@ -70,6 +71,7 @@ For some extensions additional packages are available:
 
    Extensions/Form
    Extensions/News
+   Extensions/Eventnews
    Extensions/TtAddress
    Extensions/Felogin
 

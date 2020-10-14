@@ -1,0 +1,42 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<f:if condition="{newsItem.isEvent}">
+    <f:then>
+        <f:render partial="General/EventInformation" arguments="{_all}" />
+    </f:then>
+    <f:else>
+        <ul class="extra pp-news-infobar ppc-news ppc-list">
+            <f:if condition="{newsItem.author}">
+                <li>
+                    <span class="glyphicon glyphicon-user"></span>
+                    <f:translate arguments="{0:newsItem.author}" key="author"/>
+                </li>
+            </f:if>
+
+            <li>
+                <span class="glyphicon glyphicon-calendar"> </span>
+                <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" itemprop="datePublished">
+                    <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+                </time>
+            </li>
+
+            <f:if condition="{newsItem.firstCategory}">
+                <li>
+                    <span class="glyphicon glyphicon-tags"></span>
+                    <span class="badge badge-pill badge-info">{newsItem.firstCategory.title}</span>
+                </li>
+            </f:if>
+
+            <f:if condition="{newsItem.tags}">
+                <li>
+                    <span class="glyphicon glyphicon-tags"></span>
+                    <span class="news-list-tags" itemprop="keywords">
+                        <f:for as="tag" each="{newsItem.tags}">
+                            <span class="badge badge-pill badge-info">{tag.title}</span>&nbsp;
+                        </f:for>
+                    </span>
+                </li>
+            </f:if>
+        </ul>
+    </f:else>
+</f:if>
+</html>

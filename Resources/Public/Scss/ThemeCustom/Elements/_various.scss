@@ -40,6 +40,15 @@ img.pp-nolazyload {
   50% {box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px $primary;}
   100% {box-shadow: none;}
 }
-.scrolltarget {
+*:target {
   animation: flashonce-primary 1s ease-in-out 1;
+}
+@keyframes flashonce-mark-primary {
+  0% {box-shadow: none;}
+  50% {box-shadow: 0 0 0 10px $body-bg, 0 0 10px 10px $primary;}
+  100% {box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px mix($body-bg,$primary);}
+}
+.pp-marked-target:target {
+  animation: flashonce-mark-primary 1s ease-in-out 1;
+  box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px mix($body-bg,$primary);
 }

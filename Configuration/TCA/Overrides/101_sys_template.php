@@ -35,6 +35,11 @@ defined('TYPO3_MODE') || die();
     );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $_EXTKEY,
+        'Extensions/eventnews/Configuration/TypoScript',
+        'Pizpalue - eventnews'
+    );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $_EXTKEY,
         'Extensions/slickcarousel/Configuration/TypoScript',
         'Pizpalue - slickcarousel'
     );

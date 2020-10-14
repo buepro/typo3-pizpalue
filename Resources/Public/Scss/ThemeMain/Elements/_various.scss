@@ -20,3 +20,10 @@ figure.image {
 .container-fluid .frame-container {
   max-width: none;
 }
+
+//
+// Bootstrap
+//
+.popover-body *:last-child {
+  margin-bottom: 0;
+}

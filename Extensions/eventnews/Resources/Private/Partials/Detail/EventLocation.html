@@ -1,0 +1,24 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
+
+<div class="ppc-location">
+    <f:if condition="{n.location.link}">
+        <f:then>
+            <f:link.typolink parameter="{n.location.link}">
+                <h5>{f:translate(extensionName: 'eventnews', key: 'location')}: {n.location.title}</h5>
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <h5>{f:translate(extensionName: 'eventnews', key: 'location')}: {n.location.title}{n.locationSimple}</h5>
+        </f:else>
+    </f:if>
+    <f:if condition="{n.location.description}">
+        <f:format.html>{n.organizer.description}</f:format.html>
+    </f:if>
+    <f:if condition="{n.location.link}">
+        <f:link.typolink parameter="{n.location.link}">{f:translate(extensionName: 'pizpalue', key: 'moreDetails')}</f:link.typolink>
+    </f:if>
+</div>
+
+</html>

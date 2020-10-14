@@ -16,6 +16,12 @@
 			<trans-unit id="less">
 				<source>Less</source>
 			</trans-unit>
+			<trans-unit id="events">
+				<source>Events</source>
+			</trans-unit>
+			<trans-unit id="moreDetails">
+				<source>More details</source>
+			</trans-unit>
 
 			<trans-unit id="ppCeFrame1">
 				<source>Custom frame 1</source>

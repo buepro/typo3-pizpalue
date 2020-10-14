@@ -34,9 +34,22 @@
     margin: 1em 0;
   }
 }
-.news-list-tags {
-  margin-left: 0.5em;
+.pp-news-infobar {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    padding-right: 0.7rem;
+    white-space: nowrap;
+  }
+  .glyphicon {
+    margin-right: 0.1em;
+  }
 }
 .news .lead {
   margin: 1em 0;
+}
+.news-single .ppc-teaser {
+  margin-top: 0;
 }

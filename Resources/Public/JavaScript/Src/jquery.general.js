@@ -56,7 +56,6 @@ if ( typeof pp !== 'undefined' ) {
             sizeToParentHeight();
         }
 
-
         /**
          * Size the element height to the embedding row height (e.g. a content element in a column will be as high as
          * the row it belongs to). the class pp-row-height is used for that purpose.
@@ -87,8 +86,6 @@ if ( typeof pp !== 'undefined' ) {
             $('img').on('load', sizeToRowHeight);
             sizeToRowHeight();
         }
-
-
 
         /**
          * Harmonize children heights for a column element in a row. the result is that all column elements have the same
@@ -133,7 +130,6 @@ if ( typeof pp !== 'undefined' ) {
 
     });
 
-
     /**
      * Dataprotection label
      */
@@ -154,7 +150,6 @@ if ( typeof pp !== 'undefined' ) {
             label.find('> span').html(html);
         }
     });
-
 
     /**
      * Content element with class pp-ce-overlaycard
@@ -198,6 +193,36 @@ if ( typeof pp !== 'undefined' ) {
         $('#mainnavigation')
             .on('show.bs.collapse', function () { $('#page-header').addClass('pp-dropdown-active'); })
             .on('hidden.bs.collapse', function () { $('#page-header').removeClass('pp-dropdown-active'); });
+    });
+
+    /**
+     * Bootstrap popovers
+     * ------------------
+     * Ensures just one popover is open at a time and closes all popovers on clicking outside a popover.
+     * Works with popovers bound to elements having the class pp-popover. Example:
+     *
+     * <a class="pp-popover" data-toggle="popover" data-trigger="click" title="Title" data-content="Content">Text</a>
+     */
+    $(function () {
+        var $popovers = $('.pp-popover');
+        if ($popovers.length) {
+            // Just allow one popover to be active at a time
+            $popovers.click(function () {
+                if (!$(this).hasClass('ppc-active')) {
+                    $('.pp-popover.ppc-active').popover('hide').removeClass('ppc-active');
+                }
+                $(this).toggleClass('ppc-active');
+            });
+            // Close popover on clicking outside
+            $(document).click(function (event) {
+                var $target = $(event.target),
+                    isOutsideClick = $target.parents('.popover').length === 0;
+                isOutsideClick = isOutsideClick && !$target.hasClass('pp-popover');
+                if ( isOutsideClick) {
+                    $('.pp-popover').popover('hide').removeClass('ppc-active');
+                }
+            })
+        }
     });
 
 }(jQuery);

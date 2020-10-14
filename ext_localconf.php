@@ -148,4 +148,16 @@ defined('TYPO3_MODE') || die();
         \Buepro\Pizpalue\Slot\ExtensionInstallUtility::class,
         'afterExtensionInstall'
     );
+
+    /**
+     * Extension eventnews
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('eventnews')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+            'plugin.tx_news.view.templateRootPaths.11 = EXT:eventnews/Resources/Private/Templates'
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            "@import 'EXT:pizpalue/Extensions/eventnews/Configuration/TsConfig/Page/Pizpalue.tsconfig'"
+        );
+    }
 })();

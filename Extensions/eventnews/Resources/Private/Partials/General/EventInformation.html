@@ -1,0 +1,67 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+{f:translate(extensionName: 'pizpalue', key: 'moreDetails') -> f:variable(name: '_more')}
+<ul class="extra pp-news-infobar ppc-eventnews ppc-list">
+    <li>
+        <span class="glyphicon glyphicon-calendar"></span>
+        <f:variable name="_startDate">{f:format.date(date: newsItem.datetime, format:'Y-m-d')}T{f:format.date(date: newsItem.datetime, format:'H:i')}</f:variable>
+        <span class="ppc-time" itemprop="startDate" content="{_startDate}">{f:render(partial: 'General/EventSpan', arguments: '{n: newsItem}')}</span>
+    </li>
+
+    <f:if condition="{newsItem.organizer} || {newsItem.organizerSimple}">
+        <li title="{f:translate(extensionName: 'eventnews', key: 'organizer')}">
+            <f:if condition="{newsItem.organizer.title}">
+                <f:variable name="_content"><f:format.html>{newsItem.organizer.description -> f:format.crop(maxCharacters: 120)} {_more -> f:link.typolink(parameter: newsItem.organizer.link) -> f:if(condition: newsItem.organizer.link)}</f:format.html></f:variable>
+                <a tabindex="0"
+                   class="pp-popover ppc-{newsItem.organizer.uid}"
+                   data-toggle="popover"
+                   data-trigger="click"
+                   title="{newsItem.organizer.title}"
+                   data-html="true"
+                   data-content="{_content}"
+                   href="javascript:void(0)"><span class="glyphicon glyphicon-user"></span> {newsItem.organizer.title}</a>
+            </f:if>
+            <f:if condition="{newsItem.organizerSimple}">
+                <span class="glyphicon glyphicon-user"></span> {newsItem.organizerSimple}
+            </f:if>
+        </li>
+    </f:if>
+
+    <f:if condition="{newsItem.location} || {newsItem.locationSimple}">
+        <li title="{f:translate(extensionName: 'eventnews', key: 'location')}">
+            <f:if condition="{newsItem.location.title}">
+                <f:variable name="_content"><f:format.html>{newsItem.location.description -> f:format.crop(maxCharacters: 120)} {_more -> f:link.typolink(parameter: newsItem.location.link) -> f:if(condition: newsItem.location.link)}</f:format.html></f:variable>
+                <a tabindex="0"
+                   class="pp-popover ppc-{newsItem.location.uid}"
+                   data-toggle="popover"
+                   data-trigger="click"
+                   title="{newsItem.location.title}"
+                   data-html="true"
+                   data-content="{_content}"
+                   href="javascript:void(0)"><span class="glyphicon glyphicon-location"></span> {newsItem.location.title}</a>
+            </f:if>
+            <f:if condition="{newsItem.locationSimple}">
+                <span class="glyphicon glyphicon-location"></span> {newsItem.locationSimple}
+            </f:if>
+        </li>
+    </f:if>
+
+    <f:if condition="{newsItem.categories}">
+        <li title="{f:translate(extensionName: 'news', key: 'categories')}">
+            <span class="glyphicon glyphicon-tags"></span>
+            <f:for each="{newsItem.categories}" as="_category">
+                <span class="badge badge-pill badge-info">{_category.title}</span>&nbsp;
+            </f:for>
+        </li>
+    </f:if>
+
+    <f:if condition="{newsItem.tags}">
+        <li title="{f:translate(extensionName: 'news', key: 'tags')}">
+            <span class="glyphicon glyphicon-tags"></span>
+            <f:for as="tag" each="{newsItem.tags}">
+                <span class="badge badge-pill badge-info">{tag.title}</span>&nbsp;
+            </f:for>
+        </li>
+    </f:if>
+</ul>
+</html>

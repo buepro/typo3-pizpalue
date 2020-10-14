@@ -1,0 +1,44 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers">
+
+<div id="event{n.uid}" class="pp-marked-target ppc-item" itemscope="itemscope" itemtype="http://schema.org/Event">
+    <div class="row">
+        <pp:render.bootstrap.column class="d-none d-md-block col-md-4 col-lg-3" count="2">
+            <n:link newsItem="{n}" settings="{settings}" title="{n.title}">
+                <f:if condition="{n.mediaPreviews}">
+                    <f:then>
+                        <f:media class="img-responsive" file="{n.mediaPreviews.0}" title="{n.title}" alt="{n.title}" width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}" height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}" />
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{settings.displayDummyIfNoMedia}">
+                            <f:image class="img-dummy img-responsive" src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </n:link>
+        </pp:render.bootstrap.column>
+        <pp:render.bootstrap.column class="col-md-8 col-lg-9" count="2">
+            {f:variable(name: '_he', value: 6)}
+            {v:math.sum(a: _h, b: 1) -> f:variable(name: '_he') -> f:if(condition: '{_h} < 5')}
+            <h{_he} class="ppc-title">
+            <n:link newsItem="{n}" settings="{settings}"><span itemprop="name">{n.title}</span></n:link>
+            </h{_he}>
+            <f:render partial="General/AdditionalInformation" arguments="{newsItem: n}" />
+            <f:if condition="{n.teaser}">
+                <f:then>
+                    <div itemprop="description">{n.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+                </f:then>
+                <f:else>
+                    <div itemprop="description">{n.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+                </f:else>
+            </f:if>
+            <n:link newsItem="{n}" settings="{settings}" class="btn btn-default btn-read-more" title="{n.title}">
+                <f:translate key="more-link"/>
+            </n:link>
+        </pp:render.bootstrap.column>
+    </div>
+</div>
+</html>

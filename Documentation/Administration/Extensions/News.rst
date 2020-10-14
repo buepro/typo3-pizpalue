@@ -2,9 +2,9 @@
 
 .. _admin_news:
 
-==============
-Extension news
-==============
+================
+Extension `news`
+================
 
 .. _admin_news_rss_feed:
 

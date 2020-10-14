@@ -1,0 +1,71 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<div class="pp-eventnews-filter">
+    <a class="btn btn-primary ppc-toggle-filter collapsed" data-toggle="collapse" href="#pp-eventnews-filter-{contentObjectData.uid}" role="button" aria-expanded="false" aria-controls="pp-eventnews-filter-{contentObjectData.uid}">
+        <span class="ppc-icon glyphicon glyphicon-filter"></span><span class="ppc-icon glyphicon glyphicon-times"></span>
+    </a>
+    <div id="pp-eventnews-filter-{contentObjectData.uid}" class="ppc-formwrap collapse">
+        <f:form class="pp-eventnews-form p-3" method="post" action="month" object="{search}" name="search" arguments="{overwriteDemand:overwriteDemand}">
+            <input type="hidden" name="id" value="{currentPageId}" />
+            <div class="ppc-group ppc-group1">
+                <fieldset class="form-group">
+                    <legend><f:translate key="organizers" extensionName="eventnews" /></legend>
+                    <events:filter.organizer organizers="{allOrganizers}" news="{news}" as="filteredOrganizers">
+                        <f:for each="{filteredOrganizers}" as="organizer">
+                            <div class="custom-control custom-checkbox custom-control-inline ppc-organizer ppc-{organizer.uid}">
+                                <f:form.checkbox id="organizer-{organizer.uid}" class="custom-control-input" property="organizers.{organizer.uid}" value="{organizer.uid}" />
+                                <label class="custom-control-label" for="organizer-{organizer.uid}">{organizer.title}</label>
+                            </div>
+                        </f:for>
+                    </events:filter.organizer>
+                </fieldset>
+                <fieldset class="form-group">
+                    <legend><f:translate key="locations" extensionName="eventnews" /></legend>
+                    <events:filter.location locations="{allLocations}" news="{news}" as="filteredLocations">
+                        <f:for each="{filteredLocations}" as="location">
+                            <div class="custom-control custom-checkbox custom-control-inline ppc-location ppc-{location.uid}">
+                                <f:form.checkbox id="location-{location.uid}" class="custom-control-input" property="locations.{location.uid}" value="{location.uid}" />
+                                <label class="custom-control-label" for="location-{location.uid}">{location.title}</label>
+                            </div>
+                        </f:for>
+                    </events:filter.location>
+                </fieldset>
+                <fieldset class="form-group">
+                    <legend><f:translate key="categories" extensionName="eventnews" /></legend>
+                    <f:for each="{allCategories}" as="category">
+                        <div class="custom-control custom-checkbox custom-control-inline ppc-category ppc-{category.uid}">
+                            <f:form.checkbox id="category-{category.uid}" class="custom-control-input" property="categories.{category.uid}" value="{category.uid}" />
+                            <label class="custom-control-label" for="category-{category.uid}">{category.title}</label>
+                        </div>
+                    </f:for>
+                </fieldset>
+                <fieldset class="form-group">
+                    <legend><f:translate key="tags"/></legend>
+                    <f:for each="{allTags}" as="tag">
+                        <div class="custom-control custom-checkbox custom-control-inline ppc-tag ppc-{tag.uid}">
+                            <f:form.checkbox id="tag-{tag.uid}" class="custom-control-input" property="tags.{tag.uid}" value="{tag.uid}" />
+                            <label class="custom-control-label" for="tag-{tag.uid}">{tag.title}</label>
+                        </div>
+                    </f:for>
+                </fieldset>
+            </div>
+            <div class="ppc-group ppc-group2">
+                <div class="form-group">
+                    <label for="searchDateFrom"><f:translate key="searchDateFrom" extensionName="eventnews" /></label>
+                    <f:form.textfield id="searchDateFrom" class="form-control" property="searchDateFrom" type="date" />
+                </div>
+                <div class="form-group">
+                    <label for="searchDateTo"><f:translate key="searchDateTo" extensionName="eventnews" /></label>
+                    <f:form.textfield id="searchDateTo" class="form-control" property="searchDateTo" type="date" />
+                </div>
+            </div>
+            <f:form.submit value="{f:translate(key:'filter_submit',extensionName:'eventnews')}" class="btn btn-primary" />
+        </f:form>
+    </div>
+</div>
+
+
+</html>

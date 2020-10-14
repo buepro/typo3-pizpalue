@@ -2,9 +2,9 @@
 
 .. _admin_form:
 
-==============
-Extension form
-==============
+================
+Extension `form`
+================
 
 
 .. _admin_dataconsent:

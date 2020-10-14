@@ -29,14 +29,18 @@ while maintaining or improving speed and seo performance.
 
 It provides the following main features:
 
-**Arranging content**
+Arranging content
+-----------------
+
 - Page layouts allowing to add content in side columns with a menu
 - Support for structure elements provided by `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__,
   `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__ or
   `container_elements <https://extensions.typo3.org/extension/container_elements>`__. Example structure elements are:
   columns, accordion, tabs, card and tile unit
 
-**Enhancing content**
+Enhancing content
+-----------------
+
 - A content element to create modal dialogs
 - A content element to create a list of categorized content elements
 - A content element to create structured content (JSON-LD data, see :ref:`user-contentElements-schema`)
@@ -45,23 +49,30 @@ It provides the following main features:
 - Content element fields to optimize image scaling dependent on the screen size.
 - Content element fields to assign custom classes, styles and attributes
 
-**Animating content**
+Animating content
+-----------------
+
 - Animation effects provided `animate.css <https://github.com/animate-css/animate.css>`__
 - Scroll animation effects provided by `AOS <https://github.com/michalsnik/aos>`__
 - A feature to reveal the footer
 
-**Extending extensions**
+Extending extensions
+--------------------
+
 - A form finisher to send emails to a system
 - A teaser and map view from addresses provided by the extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__
 - Configurations for the extensions
-  `indexed_search <https://docs.typo3.org/c/typo3/cms-indexed-search/master/en-us/>`__,
-  `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__,
-  `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__,
-  `news <https://extensions.typo3.org/extension/news>`__,
-  `tt_address <https://extensions.typo3.org/extension/tt_address>`__,
-  `timelog <https://extensions.typo3.org/extension/timelog>`__
+   - `indexed_search <https://docs.typo3.org/c/typo3/cms-indexed-search/master/en-us/>`__
+   - `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__
+   - `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__
+   - `news <https://extensions.typo3.org/extension/news>`__
+   - `eventnews <https://extensions.typo3.org/extension/eventnews>`__
+   - `tt_address <https://extensions.typo3.org/extension/tt_address>`__
+   - `timelog <https://extensions.typo3.org/extension/timelog>`__
 
-**Various**
+Various
+-------
+
 - A menu to be fixed on the side (fastmenu)
 
 Discover more regarding the features on the `demo site <http://pizpalue.buechler.pro/das-plus/>`__.
@@ -75,7 +86,7 @@ The following screen shots were taken from a website created with the distributi
 Structure elements
 ------------------
 
-`See example <https://www.pizpalue.buechler.pro/das-plus/strukturemente>`__
+`See example <https://pizpalue.buechler.pro/das-plus/strukturemente>`__
 
 .. figure:: ../Images/Introduction/StructureElements.jpg
    :width: 500px
@@ -83,20 +94,16 @@ Structure elements
 
    Page embedding contents covering entire page width
 
-----
-
 Scroll animation
 ----------------
 
-`See example <https://www.pizpalue.buechler.pro/das-plus/inhaltselemente/animation>`__
+`See example <https://pizpalue.buechler.pro/das-plus/inhaltselemente/animation>`__
 
 .. figure:: ../Images/Introduction/ScrollAnimationPage.jpg
    :width: 500px
    :alt: Page embedding scroll animated content
 
    Page embedding scroll animated content
-
-----
 
 Modal dialog
 ------------
@@ -107,12 +114,10 @@ See as well `demo site <https://pizpalue.buechler.pro/das-plus/inhaltselemente/m
    :width: 500px
    :alt: Modal dialog
 
+News
 ----
 
-News embedding
---------------
-
-`See example <https://www.pizpalue.buechler.pro/das-plus/news/>`__
+`See example <https://pizpalue.buechler.pro/das-plus/news/>`__
 
 .. figure:: ../Images/Introduction/NewsPage.jpg
    :width: 500px
@@ -120,15 +125,29 @@ News embedding
 
    Page embedding news
 
+News events
+-----------
+
+`See example <https://pizpalue.buechler.pro/das-plus/eventnews/>`__
+
+.. figure:: ../Images/Introduction/Eventnews.jpg
+   :width: 500px
+   :alt: Calendar view from events
+
+   Calendar view from events
+
 Credits
 =======
 
 This extension can be provided thanks to outstanding work from TYPO3 community members. A big thanks goes to:
 
-- Benjamin Kott, `extension bootstrap_package <https://extensions.typo3.org/extension/bootstrap_package>`__
-- Grid Elements Team, `extension gridelements <https://extensions.typo3.org/extension/gridelements>`__
-- FluidTYPO3 Team, `extension flux <https://extensions.typo3.org/extension/flux>`__
-- Georg Ringer, `extension news <https://extensions.typo3.org/extension/news>`__
-- tt_address Development Team, `extension tt_address <https://extensions.typo3.org/extension/tt_address>`__
-- Boris Schauer, `extension slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__
-- Sven Wappler, `extension ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__
+- Benjamin Kott, extension `bootstrap_package <https://extensions.typo3.org/extension/bootstrap_package>`__
+- B13 GmbH, extension `container <https://extensions.typo3.org/extension/container>`__
+- Grid Elements Team, extension `gridelements <https://extensions.typo3.org/extension/gridelements>`__
+- FluidTYPO3 Team, extensions `vhs <https://extensions.typo3.org/extension/vhs>`__,
+  `flux <https://extensions.typo3.org/extension/flux>`__
+- Georg Ringer, extensions `news <https://extensions.typo3.org/extension/news>`__,
+  `eventnews <https://extensions.typo3.org/extension/eventnews>`__
+- tt_address Development Team, extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__
+- Boris Schauer, extension `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__
+- Sven Wappler, extension `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__

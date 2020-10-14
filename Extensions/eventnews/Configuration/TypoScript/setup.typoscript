@@ -1,0 +1,10 @@
+plugin.tx_news {
+    view {
+        templateRootPaths.21 = EXT:pizpalue/Extensions/eventnews/Resources/Private/Templates
+        partialRootPaths.21 = EXT:pizpalue/Extensions/eventnews/Resources/Private/Partials
+    }
+}
+
+page {
+    includeCSS.ppEventNews = EXT:pizpalue/Extensions/eventnews/Resources/Public/Scss/general.scss
+}

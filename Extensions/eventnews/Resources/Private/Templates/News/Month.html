@@ -1,0 +1,145 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:events="http://typo3.org/ns/GeorgRinger/Eventnews/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<f:layout name="General"/>
+
+<f:section name="content">
+    <div class="pp-eventnews-month">
+        <f:if condition="{news} && {settings.templateLayout} = 22">
+            <f:render partial="General/EventFilter" arguments="{_all}" />
+        </f:if>
+        <div class="pp-eventnews-calendar frame-space-after-medium">
+            <events:calendar demand="{demand}" firstDayOfWeek="1" newsList="{newsWithNoDaySupport}">
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered">
+                        <thead>
+                            <tr class="title">
+                                <th colspan="7">
+                                    <ul class="pager">
+                                        <li class="previous">
+                                            <f:link.page additionalParams="{tx_news_pi1:{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}}"
+                                                         pageUid="{currentPageId}"
+                                                         rel="nofollow">
+                                                <span class="ppc-nav"><span>&larr;&nbsp;</span><span>{f:format.date(date:previousMonthData.date,format:'%B %Y')}</span></span>
+                                            </f:link.page>
+                                        </li>
+                                        <li class="text-center">
+                                            <f:link.page additionalParams="{tx_news_pi1:{overwriteDemand:{month:currentMonthData.month,year:currentMonthData.year}}}"
+                                                         pageUid="{currentPageId}"
+                                                         rel="nofollow">
+                                                {f:format.date(date:currentMonthData.date,format:'%B %Y')}
+                                            </f:link.page>
+                                        </li>
+                                        <li class="next text-right">
+                                            <f:link.page additionalParams="{tx_news_pi1:{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}}"
+                                                         pageUid="{currentPageId}"
+                                                         rel="nofollow">
+                                                <span class="ppc-nav"><span>{f:format.date(date:nextMonthData.date,format:'%B %Y')}</span><span>&nbsp;&rarr;</span></span>
+                                            </f:link.page>
+                                        </li>
+                                    </ul>
+                                </th>
+                            </tr>
+                            <tr class="days">
+                                <f:for as="day" each="{weeks.0}">
+                                    <th>
+                                        {f:format.date(date: day.ts, format: '%a')}
+                                    </th>
+                                </f:for>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <f:for as="week" each="{weeks}">
+                                <tr>
+                                    <f:for as="day" each="{week}">
+                                        <f:render arguments="{day:day, month: currentMonthData, settings:settings}" section="calday"/>
+                                    </f:for>
+                                </tr>
+                            </f:for>
+                        </tbody>
+                    </table>
+                </div>
+            </events:calendar>
+        </div>
+        <f:if condition="{news} && {settings.templateLayout} != 21">
+            <div class="pp-eventnews-list">
+                <f:comment>
+                    The default title can be overridden by the `subheader` field in case the `header` field is empty.
+                    It is only rendered if the field ´header type` is not `hidden`. The header type is taken into
+                    account.
+                    @see 1602678897780
+                </f:comment>
+                {f:variable(name: '_h', value: 3)}
+                {contentObjectData.header_layout -> f:variable(name: '_a')}
+                {f:variable(name: '_a', value: 2) -> f:if(condition: '{_a} == 0')}
+                {f:translate(extensionName: 'pizpalue', key: 'events') -> f:variable(name: '_title')}
+                {contentObjectData.subheader -> f:variable(name: '_title')
+                    -> f:if(condition: '!{contentObjectData.header} && {contentObjectData.subheader}')}
+                <f:if condition="{_a as integer} != 100">
+                    {v:math.sum(a: _a, b: 1) -> f:variable(name: '_h')}
+                    <header class="frame-header">
+                        <h{_h} class="element-header "><span>{_title}</span></h{_h}>
+                    </header>
+                </f:if>
+                <div class="ppc-items">
+                    <f:for as="n" each="{news}">
+                        <f:if condition="{overwriteDemand.day}">
+                            <f:then>
+                                <f:if condition="{events:dayCompare(newsItem:n,demand:demand)}">
+                                    <f:render arguments="{_all}" partial="List/EventItem"/>
+                                </f:if>
+                            </f:then>
+                            <f:else>
+                                <f:render arguments="{_all}" partial="List/EventItem"/>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </div>
+            </div>
+        </f:if>
+    </div>
+</f:section>
+
+<f:section name="calday">
+    <td class="day{f:format.date(date: day.ts, format: 'N')} {f:if(condition: day.curmonth, then: 'curmonth', else: 'othermonth')}{f:if(condition: day.news, then: ' hasevents')}{f:if(condition: day.curday, then: ' today')}">
+        <f:if condition="{day.dayBelongsToCurrentMonth}">
+            <f:if condition="{day.news}">
+                <f:then>
+                    <div class="ppc-day">
+                        <strong>
+                            <f:link.action action="month" addQueryString="1"
+                                           additionalParams="{tx_news_pi1:{overwriteDemand:{year:day.year,month:day.month,day:day.day}}}">
+                                {day.day}
+                            </f:link.action>
+                        </strong>
+                    </div>
+                    <f:for as="newsItem" each="{day.news}" iteration="i">
+                        {f:render(partial: 'General/EventSpan', arguments: '{n: newsItem}')
+                            -> v:format.eliminate(unixBreaks: 1, windowsBreaks: 1)
+                            -> f:variable(name: '_eventSpan')}
+                        {f:variable(name: '_location', value: ', {newsItem.locationSimple}') -> f:if(condition: newsItem.locationSimple)}
+                        {f:variable(name: '_location', value: ', {newsItem.location.title}') -> f:if(condition: newsItem.location.title)}
+                        {f:render(partial: 'General/EventPopup', arguments: '{n: newsItem, month: month, settings: settings}')
+                            -> f:variable(name: '_popup')}
+                        {f:format.date(date: newsItem.datetime, format: 'H:i') -> f:variable(name: '_text')}
+                        {f:variable(name: '_text', value: '❮ ❯') -> f:if(condition: newsItem.fullDay)}
+                        <a tabindex="0" class="btn btn-sm btn-primary ppc-time pp-popover ppc-{newsItem.uid} mb-1" role="button"
+                           data-toggle="popover"
+                           data-trigger="click"
+                           title="{_eventSpan}{_location}"
+                           data-html="true"
+                           data-content="{_popup}">{_text}</a>
+                    </f:for>
+                </f:then>
+                <f:else>
+                    <div class="ppc-day">{day.day}</div>
+                </f:else>
+            </f:if>
+        </f:if>
+    </td>
+</f:section>
+
+</html>

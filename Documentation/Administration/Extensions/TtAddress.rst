@@ -2,9 +2,9 @@
 
 .. _admin_ttaddress:
 
-====================
-Extension tt_address
-====================
+======================
+Extension `tt_address`
+======================
 
 .. _admin_ttaddress_common_setup:
 
