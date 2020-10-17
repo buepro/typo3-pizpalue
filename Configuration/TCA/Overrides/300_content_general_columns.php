@@ -91,6 +91,15 @@ defined('TYPO3_MODE') || die();
             );
         }
 
+        // Twikito scroll animation
+        function getTwikitoAttributes() {
+            return [
+                ['Twikito animation', 'data-scroll="animate__pulse" '],
+                ['Twikito repeat', 'data-scroll-repeat="true" '],
+                ['Twikito offset', 'data-scroll-offset="200" '],
+            ];
+        }
+
         // Josh scroll animation (using animate.css)
         function getJoshAttributes () {
             return [
@@ -227,16 +236,22 @@ defined('TYPO3_MODE') || die();
                         'mode' => 'append',
                         'items' => array_merge(
                             [
-                                ['-----------------', ''],
-                                ['Josh', ''],
-                                ['-----------------', '']
+                                ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
+                                [' Twikito', ''],
+                                ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
+                            ],
+                            getTwikitoAttributes(),
+                            [
+                                ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
+                                [' Josh', ''],
+                                ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
                             ],
                             getJoshAttributes(),
                             [
-                                ['-----------------', ''],
-                                ['AOS', ''],
+                                ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
+                                [' AOS', ''],
                                 ['LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:deprecated', ''],
-                                ['-----------------', '']
+                                ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
                             ],
                             getAosAttributes()
                         )

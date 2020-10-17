@@ -178,9 +178,30 @@ const josh = new Josh({_ocb} {pizpalue.animation.josh.initParams -> f:format.raw
 </f:asset.script>
     </v:condition.string.contains>
 
+    <f:comment>====================== Pizpalue Twikito/onscroll-effec assets ======================</f:comment>
+
+    <v:condition.string.contains haystack="{ppAttributes}" needle="data-scroll">
+        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
+        <v:condition.string.contains haystack="{ppAttributes}" needle="animate__">
+            <v:condition.string.contains haystack="{ppAttributes}" needle="animate__animated">
+                <f:else>{v:format.replace(content: ppAttributes, substring: 'animate__', replacement: 'animate__animated animate__', count: 1) -> f:variable(name: 'ppAttributes')}</f:else>
+            </v:condition.string.contains>
+            <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
+        </v:condition.string.contains>
+        <v:condition.string.contains haystack="{ppAttributes}" needle="data-scroll-reverse">
+            <f:else><f:variable name="ppAttributes">{ppAttributes} data-scroll-reverse="true"</f:variable></f:else>
+        </v:condition.string.contains>
+        <f:asset.script identifier="ppTwikitoOnscroll" src="EXT:pizpalue/Resources/Public/Contrib/Twikito/onscroll-effect/dist/onscroll-effect.min.js" />
+        <f:asset.css identifier="twikitoOnscroll" priority="1">[data-scroll].is-outside { transition: none; animation: none; }</f:asset.css>
+    </v:condition.string.contains>
+
     <f:comment>====================== Pizpalue animate.css assets ======================</f:comment>
 
-    <v:condition.string.contains haystack="{ppClasses}" needle="animate__animated">
+    <v:condition.string.contains haystack="{ppClasses}" needle="animate__">
+        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
+        <v:condition.string.contains haystack="{ppClasses}" needle="animate__animated">
+            <f:else>{v:format.replace(content: ppClasses, substring: 'animate__', replacement: 'animate__animated animate__', count: 1) -> f:variable(name: 'ppClasses')}</f:else>
+        </v:condition.string.contains>
         <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
     </v:condition.string.contains>
 

@@ -16,7 +16,10 @@ Content elements can easily be animated by adding animation classes to the field
 `Appearance` register. Animations are provided by `animate.css <https://github.com/animate-css/animate.css>`__ and the
 available animation classes can be obtained from the `demo site <https://animate.style/>`__.
 
-**Example:** To apply a bouncing effect the following classes could be used: `animate__animated animate__bounce`.
+**Example:** To apply a bouncing effect the following classes could be used: `animate__bounce`.
+
+.. note::
+   The class`animate__animated` will be automatically added as soon as an animation class is present.
 
 .. _usr-scrollanimation:
 
@@ -32,12 +35,33 @@ from the content element properties dialog.
 
 They can be further customized by help of the :ref:`constant editor <config_scrollanimation>`.
 
-Currently the libraries `Josh.js <https://github.com/mamunhpath/josh.js>`__ and `AOS <https://github.com/michalsnik/aos>`__
+Currently the libraries `Twikito/onscroll-effect <https://github.com/Twikito/onscroll-effect>`__,
+`Josh.js <https://github.com/mamunhpath/josh.js>`__ and `AOS <https://github.com/michalsnik/aos>`__
 are supported.
 
 .. warning::
    AOS didn't get updated for quite some time. This is why it has been marked as deprecated hence shouldn't be used for
    new projects any more.
+
+.. hint::
+   For performance reasons it is suggested to use just one scroll animation library at a time.
+
+Twikito/onscroll-effect
+-----------------------
+
+With the js library `Twikito/onscroll-effect <https://github.com/Twikito/onscroll-effect>`__ any number of css classes
+can be added to an element hence any third party animation classes can be used. To use with
+`Animate.css <https://github.com/animate-css/animate.css>`__ just add the animation class a `data-scroll` attribute:
+
+.. code-block:: html
+
+   data-scroll="animate__pulse"
+
+.. hint::
+   The class `animate__animated` will be automatically added upon detecting an `Animate.css` animation class.
+
+The library supports other options to further define the behaviour. The details can be found on its
+`documentation page <https://twikito.github.io/onscroll-effect/>`__.
 
 Josh.js
 -------
