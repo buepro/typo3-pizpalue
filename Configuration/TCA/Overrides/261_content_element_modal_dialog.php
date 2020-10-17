@@ -23,7 +23,7 @@ defined('TYPO3_MODE') || die();
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
         'Configuration/TsConfig/Page/ContentElement/Element/ModalDialog.tsconfig',
-        'Pizpalue Content Element: Modal Dialog'
+        'Pizpalue - Content Element: Modal Dialog'
     );
 
     /**

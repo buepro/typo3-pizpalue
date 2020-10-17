@@ -108,7 +108,7 @@ defined('TYPO3_MODE') || die();
     /**
      * Content elements
      */
-    if ((bool) $pizpalueConfiguration['enableDefaultPageTsTceFormConfig']) {
+    if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
         );
@@ -133,9 +133,11 @@ defined('TYPO3_MODE') || die();
         /**
          * Add page tsconfig
          */
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig'"
-        );
+        if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig'"
+            );
+        }
     }
 
     /**
@@ -150,14 +152,27 @@ defined('TYPO3_MODE') || die();
     );
 
     /**
+     * Extension news
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
+        if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                "@import 'EXT:pizpalue/Extensions/news/Configuration/TsConfig/Page/Pizpalue.tsconfig'"
+            );
+        }
+    }
+
+    /**
      * Extension eventnews
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('eventnews')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
             'plugin.tx_news.view.templateRootPaths.11 = EXT:eventnews/Resources/Private/Templates'
         );
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            "@import 'EXT:pizpalue/Extensions/eventnews/Configuration/TsConfig/Page/Pizpalue.tsconfig'"
-        );
+        if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                "@import 'EXT:pizpalue/Extensions/eventnews/Configuration/TsConfig/Page/Pizpalue.tsconfig'"
+            );
+        }
     }
 })();

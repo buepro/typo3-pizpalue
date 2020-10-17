@@ -6,21 +6,33 @@
 Upgrade to version NEXT (not released yet)
 ==========================================
 
-TCEFORM configurations (4bf0c5df)
+PageTS configurations (???)
 =================================
 
-So far TCEFORM configurations configuring content elements (e.g. to add additional frame classes) needed to be included
-manually on the root page resources tab. Now it is added automatically.
+In order to ease usage all pageTS config is now added
+automatically. This applies as well to configurations
+related to TCEFORM, content elements and supported
+extensions.
+
+To manually add the configurations the parameter
+`enableDefaultPageTSconfig` can be disabled and the
+individual configurations can be added through the page
+properties (Field `Page TSconfig`, register `Resources`).
+The parameter `enableDefaultPageTSconfig` can be found
+in the module `Settings`, card `Extension Configuration`,
+section `pizpalue`.
 
 Possible impact
 ---------------
 
-Installations using their own configurations might get their TCEFORM configuration mixed up.
+Installations using their own configurations might get
+their configuration mixed up.
 
 Corrective action
 -----------------
 
-Disable adding default PageTS TCEFORM configurations in the configuration module.
+Disable adding default PageTS configurations in the
+module `Settings`.
 
 Pizpalue content elements (50d55658)
 ====================================

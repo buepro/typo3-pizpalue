@@ -23,7 +23,7 @@ defined('TYPO3_MODE') || die();
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
         'Configuration/TsConfig/Page/ContentElement/Element/ListCategorizedContent.tsconfig',
-        'Pizpalue Content Element: List from categorized content elements'
+        'Pizpalue - Content Element: List from categorized content elements'
     );
 
     /**

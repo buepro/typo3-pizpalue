@@ -1,5 +1,5 @@
 # cat=Installation; type=boolean; label=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.enableBootstrapPackageBackendLayouts
 enableBootstrapPackageBackendLayouts = 0
 
-# cat=Installation; type=boolean; label=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.enableDefaultPageTsTceFormConfig
-enableDefaultPageTsTceFormConfig = 1
+# cat=Installation; type=boolean; label=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.enableDefaultPageTSconfig
+enableDefaultPageTSconfig = 1
