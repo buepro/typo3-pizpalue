@@ -176,6 +176,17 @@
 			<trans-unit id="ext_conf.enableDefaultPageTSconfig">
 				<source>Enable default pageTS configuration. If disabled configurations can be added manually in page properties resources register.</source>
 			</trans-unit>
+
+			<trans-unit id="tx-news-imageOnTop">
+				<source>Image on top</source>
+			</trans-unit>
+
+			<trans-unit id="tx-eventnews-monthCompact">
+				<source>Compact (month)</source>
+			</trans-unit>
+			<trans-unit id="tx-eventnews-monthExtended">
+				<source>Extended (month)</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

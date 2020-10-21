@@ -1,6 +1,5 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-{f:translate(extensionName: 'pizpalue', key: 'moreDetails') -> f:variable(name: '_more')}
 <ul class="extra pp-news-infobar ppc-eventnews ppc-list">
     <li>
         <span class="glyphicon glyphicon-calendar"></span>
@@ -9,9 +8,11 @@
     </li>
 
     <f:if condition="{newsItem.organizer} || {newsItem.organizerSimple}">
+        {f:translate(extensionName: 'pizpalue', key: 'moreDetails') -> f:variable(name: '_moreLabel')}
+        {f:variable(name: '_more', value: '<span class="pp-eventnews-popup-more ppc-organizer">{_moreLabel}</span>')}
         <li title="{f:translate(extensionName: 'eventnews', key: 'organizer')}">
             <f:if condition="{newsItem.organizer.title}">
-                <f:variable name="_content"><f:format.html>{newsItem.organizer.description -> f:format.crop(maxCharacters: 120)} {_more -> f:link.typolink(parameter: newsItem.organizer.link) -> f:if(condition: newsItem.organizer.link)}</f:format.html></f:variable>
+                <f:variable name="_content"><f:format.nl2br>{newsItem.organizer.description -> f:format.crop(maxCharacters: 120)} {_more -> f:link.typolink(parameter: newsItem.organizer.link) -> f:if(condition: newsItem.organizer.link)}</f:format.nl2br></f:variable>
                 <a tabindex="0"
                    class="pp-popover ppc-{newsItem.organizer.uid}"
                    data-toggle="popover"
@@ -28,9 +29,11 @@
     </f:if>
 
     <f:if condition="{newsItem.location} || {newsItem.locationSimple}">
+        {f:translate(extensionName: 'pizpalue', key: 'tx-eventnews-locationDetailLink') -> f:variable(name: '_moreLabel')}
+        {f:variable(name: '_more', value: '<span class="pp-eventnews-popup-more ppc-location">{_moreLabel}</span>')}
         <li title="{f:translate(extensionName: 'eventnews', key: 'location')}">
             <f:if condition="{newsItem.location.title}">
-                <f:variable name="_content"><f:format.html>{newsItem.location.description -> f:format.crop(maxCharacters: 120)} {_more -> f:link.typolink(parameter: newsItem.location.link) -> f:if(condition: newsItem.location.link)}</f:format.html></f:variable>
+                <f:variable name="_content"><f:format.nl2br>{newsItem.location.description -> f:format.crop(maxCharacters: 120)} {_more -> f:link.typolink(parameter: newsItem.location.link) -> f:if(condition: newsItem.location.link)}</f:format.nl2br></f:variable>
                 <a tabindex="0"
                    class="pp-popover ppc-{newsItem.location.uid}"
                    data-toggle="popover"

@@ -12,5 +12,5 @@
     </f:else>
 </f:if>
 <h6>{n.title}</h6>
-<f:format.html>{n.teaser -> f:format.crop(maxCharacters: 120)} {_more -> f:format.htmlentitiesDecode()}</f:format.html>
+<f:format.nl2br>{n.teaser -> f:format.crop(maxCharacters: 120)}</f:format.nl2br> <span class="pp-eventnews-popup-more ppc-event">{_more -> f:format.htmlentitiesDecode()}</span>
 </html>

@@ -11,46 +11,54 @@
         <f:form class="pp-eventnews-form p-3" method="post" action="month" object="{search}" name="search" arguments="{overwriteDemand:overwriteDemand}">
             <input type="hidden" name="id" value="{currentPageId}" />
             <div class="ppc-group ppc-group1">
-                <fieldset class="form-group">
-                    <legend><f:translate key="organizers" extensionName="eventnews" /></legend>
-                    <events:filter.organizer organizers="{allOrganizers}" news="{news}" as="filteredOrganizers">
-                        <f:for each="{filteredOrganizers}" as="organizer">
-                            <div class="custom-control custom-checkbox custom-control-inline ppc-organizer ppc-{organizer.uid}">
-                                <f:form.checkbox id="organizer-{organizer.uid}" class="custom-control-input" property="organizers.{organizer.uid}" value="{organizer.uid}" />
-                                <label class="custom-control-label" for="organizer-{organizer.uid}">{organizer.title}</label>
+                <events:filter.organizer organizers="{allOrganizers}" news="{news}" as="_organizers">
+                    <f:if condition="{_organizers}">
+                        <fieldset class="form-group">
+                            <legend><f:translate key="organizers" extensionName="eventnews" /></legend>
+                            <f:for each="{_organizers}" as="organizer">
+                                <div class="custom-control custom-checkbox custom-control-inline ppc-organizer ppc-{organizer.uid}">
+                                    <f:form.checkbox id="organizer-{organizer.uid}" class="custom-control-input" property="organizers.{organizer.uid}" value="{organizer.uid}" />
+                                    <label class="custom-control-label" for="organizer-{organizer.uid}">{organizer.title}</label>
+                                </div>
+                            </f:for>
+                        </fieldset>
+                    </f:if>
+                </events:filter.organizer>
+                <events:filter.location locations="{allLocations}" news="{news}" as="_locations">
+                    <f:if condition="{_locations}">
+                        <fieldset class="form-group">
+                            <legend><f:translate key="locations" extensionName="eventnews" /></legend>
+                            <f:for each="{_locations}" as="location">
+                                <div class="custom-control custom-checkbox custom-control-inline ppc-location ppc-{location.uid}">
+                                    <f:form.checkbox id="location-{location.uid}" class="custom-control-input" property="locations.{location.uid}" value="{location.uid}" />
+                                    <label class="custom-control-label" for="location-{location.uid}">{location.title}</label>
+                                </div>
+                            </f:for>
+                        </fieldset>
+                    </f:if>
+                </events:filter.location>
+                <f:if condition="{allCategories}">
+                    <fieldset class="form-group">
+                        <legend><f:translate key="categories" extensionName="eventnews" /></legend>
+                        <f:for each="{allCategories}" as="category">
+                            <div class="custom-control custom-checkbox custom-control-inline ppc-category ppc-{category.uid}">
+                                <f:form.checkbox id="category-{category.uid}" class="custom-control-input" property="categories.{category.uid}" value="{category.uid}" />
+                                <label class="custom-control-label" for="category-{category.uid}">{category.title}</label>
                             </div>
                         </f:for>
-                    </events:filter.organizer>
-                </fieldset>
-                <fieldset class="form-group">
-                    <legend><f:translate key="locations" extensionName="eventnews" /></legend>
-                    <events:filter.location locations="{allLocations}" news="{news}" as="filteredLocations">
-                        <f:for each="{filteredLocations}" as="location">
-                            <div class="custom-control custom-checkbox custom-control-inline ppc-location ppc-{location.uid}">
-                                <f:form.checkbox id="location-{location.uid}" class="custom-control-input" property="locations.{location.uid}" value="{location.uid}" />
-                                <label class="custom-control-label" for="location-{location.uid}">{location.title}</label>
+                    </fieldset>
+                </f:if>
+                <f:if condition="{allTags}">
+                    <fieldset class="form-group">
+                        <legend><f:translate key="tags"/></legend>
+                        <f:for each="{allTags}" as="tag">
+                            <div class="custom-control custom-checkbox custom-control-inline ppc-tag ppc-{tag.uid}">
+                                <f:form.checkbox id="tag-{tag.uid}" class="custom-control-input" property="tags.{tag.uid}" value="{tag.uid}" />
+                                <label class="custom-control-label" for="tag-{tag.uid}">{tag.title}</label>
                             </div>
                         </f:for>
-                    </events:filter.location>
-                </fieldset>
-                <fieldset class="form-group">
-                    <legend><f:translate key="categories" extensionName="eventnews" /></legend>
-                    <f:for each="{allCategories}" as="category">
-                        <div class="custom-control custom-checkbox custom-control-inline ppc-category ppc-{category.uid}">
-                            <f:form.checkbox id="category-{category.uid}" class="custom-control-input" property="categories.{category.uid}" value="{category.uid}" />
-                            <label class="custom-control-label" for="category-{category.uid}">{category.title}</label>
-                        </div>
-                    </f:for>
-                </fieldset>
-                <fieldset class="form-group">
-                    <legend><f:translate key="tags"/></legend>
-                    <f:for each="{allTags}" as="tag">
-                        <div class="custom-control custom-checkbox custom-control-inline ppc-tag ppc-{tag.uid}">
-                            <f:form.checkbox id="tag-{tag.uid}" class="custom-control-input" property="tags.{tag.uid}" value="{tag.uid}" />
-                            <label class="custom-control-label" for="tag-{tag.uid}">{tag.title}</label>
-                        </div>
-                    </f:for>
-                </fieldset>
+                    </fieldset>
+                </f:if>
             </div>
             <div class="ppc-group ppc-group2">
                 <div class="form-group">

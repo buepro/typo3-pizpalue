@@ -29,3 +29,7 @@ Various
 .. tip::
    To show events in search results add the following TS to the setup where the plugin is located:
    `plugin.tx_news.settings.overrideFlexformSettingsIfEmpty:= removeFromList(eventRestriction)`
+
+.. tip::
+   To change the label for the location detail link the following TS can be used:
+   `plugin.tx_pizpalue._LOCAL_LANG.default.tx-eventnews-locationDetailLink = Show location`

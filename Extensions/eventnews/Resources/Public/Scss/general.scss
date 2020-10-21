@@ -89,6 +89,10 @@
       margin-right: 2rem;
     }
   }
+  .ppc-group1 fieldset {
+    display: flex;
+    flex-direction: column;
+  }
   .ppc-group1 legend, .ppc-group2 label {
     font-size: 1.2 * $font-size-base;
   }

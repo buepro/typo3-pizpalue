@@ -1,4 +1,4 @@
 tx_news.templateLayouts {
-    21 = LLL:EXT:pizpalue/Extensions/eventnews/Resources/Private/Language/locallang.xlf:monthCompact
-    22 = LLL:EXT:pizpalue/Extensions/eventnews/Resources/Private/Language/locallang.xlf:monthExtended
+    21 = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:tx-eventnews-monthCompact
+    22 = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:tx-eventnews-monthExtended
 }
