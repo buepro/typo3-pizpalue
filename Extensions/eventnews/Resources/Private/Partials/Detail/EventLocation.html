@@ -14,10 +14,10 @@
         </f:else>
     </f:if>
     <f:if condition="{n.location.description}">
-        <f:format.html>{n.organizer.description}</f:format.html>
+        <p><f:format.nl2br>{n.location.description}</f:format.nl2br></p>
     </f:if>
     <f:if condition="{n.location.link}">
-        <f:link.typolink parameter="{n.location.link}">{f:translate(extensionName: 'pizpalue', key: 'moreDetails')}</f:link.typolink>
+        <span class="ppc-more"><f:link.typolink parameter="{n.location.link}">{f:translate(extensionName: 'pizpalue', key: 'tx-eventnews-locationDetailLink')}</f:link.typolink></span>
     </f:if>
 </div>
 

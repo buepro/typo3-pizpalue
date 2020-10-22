@@ -63,7 +63,7 @@
 
 .news-single {
   .ppc-orgloc {
-    margin: 2em 0;
+    //margin: 2em 0;
   }
   .ppc-organizer, .ppc-location {
     padding: 1em 0;
@@ -71,9 +71,6 @@
     *:last-child {
       margin-bottom: 0;
     }
-  }
-  .ppc-location {
-    border-bottom: $table-border-color 1px solid;
   }
 }
 

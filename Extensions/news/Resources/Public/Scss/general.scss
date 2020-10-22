@@ -50,6 +50,32 @@
 .news .lead {
   margin: 1em 0;
 }
-.news-single .ppc-teaser {
-  margin-top: 0;
+.news-single {
+  .ppc-teaser {
+    margin-top: 0;
+  }
+  .news-text-wrap {
+    margin-bottom: 2em;
+  }
+  .ppc-complement {
+    padding: 1em 0;
+    border-top: $table-border-color 1px solid;
+    ul {
+      margin-bottom: 0;
+    }
+    .ppc-info {
+      color: rgba($body-color, 70%);
+      &:before {
+        content: "(";
+      }
+      &:after {
+        content: ")";
+      }
+    }
+  }
+  .ppc-back {
+    //margin-top: 1em;
+    padding: 1em 0;
+    border-top: $table-border-color 1px solid;
+  }
 }
