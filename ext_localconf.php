@@ -65,7 +65,7 @@ defined('TYPO3_MODE') || die();
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'"
             );
         }
-        // Default TCEMAIN and TCEFORM
+        // Default PageTS for TCEMAIN, TCEFORM, RTE
         if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEMAIN.tsconfig'"
@@ -73,11 +73,10 @@ defined('TYPO3_MODE') || die();
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
             );
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig'"
+            );
         }
-        // RTE
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig'"
-        );
     }
 
     /**

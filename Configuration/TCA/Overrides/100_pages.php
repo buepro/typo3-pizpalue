@@ -22,6 +22,11 @@ defined('TYPO3_MODE') || die();
     );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         'pizpalue',
+        'Configuration/TsConfig/Page/RTE.tsconfig',
+        'Pizpalue - RTE'
+    );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+        'pizpalue',
         'Extensions/news/Configuration/TsConfig/Page/Pizpalue.tsconfig',
         'Pizpalue - Extension news'
     );
