@@ -7,28 +7,34 @@
 Various
 =======
 
+.. _user-data-popover:
 
-.. _user-extensions:
+Popover
+=======
 
-Extensions
-==========
+.. figure:: ../Images/User/Various/PopoversFe.jpg
+   :alt: A popover in the front end
 
-This extension provides some additions to other extensions. Additional information might be found in the manual user
-section from the related extensions.
+   A popover in the front end
 
-.. _user-news:
+Popovers show additional information in a small window. Mainly they are associated with a link (see
+`popovers component from bootstrap framework <https://getbootstrap.com/docs/4.5/components/popovers/>`__).
 
-News
-----
+This extension provides an easy way to use popovers by defining them in the RTE editor:
 
-For the news system a template "Image on top" is provided. It might be used to
-render the image on top of the text (`see example <https://pizpalue.buechler.pro/das-plus/news/>`__).
+1. Select the text that should be associated with a popover
+2. Click the create link button
+3. In the link browser dialog select the register `Popover`
+4. Select the class `Popover` and define the title and content
 
-.. figure:: ../Images/User/News_Template_ImageOnTop.jpg
-   :alt: News template to render image on top
+.. figure:: ../Images/User/Various/PopoversLinkBrowser.jpg
+   :alt: Register popover in link browser
 
-   News template to render image on top
+   Register popover in link browser
 
+.. note::
+   The popover content is parsed the same way as the RTE text by using the configuration from `lib.parseFunc_RTE`
+   hence TYPO3 specific links can be used (e.g. `t3://page?uid=6`).
 
 .. _user-data-getText:
 
@@ -41,7 +47,7 @@ retrieved depending on the currently selected page language. For this users migh
 brackets within the editor
 (`see example <https://pizpalue.buechler.pro/das-plus/gestaltung/attribute/wissenswertes>`__):
 
-.. figure:: ../Images/User/InlineLocalization.jpg
+.. figure:: ../Images/User/Various/InlineLocalization.jpg
    :alt: Use of localized text within the editor
 
    Use of localized text within the editor
@@ -121,6 +127,20 @@ pp-ce-overlaycard             Render an overlay card when being assigned to a te
                               An overlay card is characterized by an animation taking place when the
                               user hovers over the image. The animation fades in the text from the
                               content element.
+============================= =============================================================================
+
+
+RTE
+---
+
+The following classes are used in the context of the real text editor.
+
+============================= =============================================================================
+Class                         Usage
+============================= =============================================================================
+pp-popover                    Used to control the behaviour from popovers.
+                              Popovers that were triggered from elements having this class close when the
+                              user clicks outside the popover.
 ============================= =============================================================================
 
 

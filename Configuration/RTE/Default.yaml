@@ -4,6 +4,7 @@
 #
 # see https://www.thomaskieslich.de/blog/127-typo3-8x-ckeditor-konfigurieren/
 # see https://www.clickstorm.de/blog/der-neue-typo3-rte-ckeditor/
+# see https://usetypo3.com/ckeditor.html
 #
 #---------------------------------------------------------#
 
@@ -21,3 +22,52 @@ editor:
     extraAllowedContent : "span"
     stylesSet:
       - { name: "Complementary", element: "span", attributes: { 'class': 'text-complementary' } }
+
+classesAnchor:
+  page-arrow:
+    class: 'link-arrow'
+    type: 'page'
+  folder-arrow:
+    class: 'link-arrow'
+    type: 'folder'
+  file-arrow:
+    class: 'link-arrow'
+    type: 'file'
+  external-arrow:
+    class: 'link-arrow'
+    type: 'url'
+  mail-arrow:
+    class: 'link-arrow'
+    type: 'mail'
+  pppopover-arrow:
+    class: 'link-arrow'
+    type: 'pppopover'
+  pppopover:
+    class: 'pp-popover'
+    type: 'pppopover'
+
+buttons:
+  link:
+    pppopover:
+      properties:
+        class:
+          default: 'pp-popover'
+    properties:
+      class:
+        allowedClasses: 'link-arrow, link-page, link-folder, link-file, link-external, link-mail, pp-popover'
+
+classes:
+  link-arrow:
+    name: 'Arrow link'
+  link-page:
+    name: 'Page link'
+  link-folder:
+    name: 'Folder link'
+  link-file:
+    name: 'File link'
+  link-external:
+    name: 'External link'
+  link-mail:
+    name: 'Mail link'
+  pp-popover:
+    name: 'Popover'

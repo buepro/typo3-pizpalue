@@ -12,6 +12,11 @@ defined('TYPO3_MODE') || die();
 (function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         'pizpalue',
+        'Configuration/TsConfig/Page/TCEMAIN.tsconfig',
+        'Pizpalue - TCEMAIN'
+    );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+        'pizpalue',
         'Configuration/TsConfig/Page/TCEFORM.tsconfig',
         'Pizpalue - TCEFORM'
     );

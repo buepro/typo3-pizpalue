@@ -65,7 +65,15 @@ defined('TYPO3_MODE') || die();
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'"
             );
         }
-
+        // Default TCEMAIN and TCEFORM
+        if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEMAIN.tsconfig'"
+            );
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
+            );
+        }
         // RTE
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             "@import 'EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig'"
@@ -84,7 +92,14 @@ defined('TYPO3_MODE') || die();
         /**
          * Register TelephoneLinkHandler
          */
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['telephone'] = \Buepro\Pizpalue\Core\LinkHandling\TelephoneLinkHandler::class;
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['telephone'] = \Buepro\Pizpalue\Cms\Core\LinkHandling\TelephoneLinkHandler::class;
+
+        /**
+         * Register PopoverLinkHandler, PopoverLinkBuilder, PopoverLinkHook
+         */
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['pppopover'] = \Buepro\Pizpalue\Cms\Core\LinkHandling\PopoverLinkHandler::class;
+        $GLOBALS['TYPO3_CONF_VARS']['FE']['typolinkBuilder']['pppopover'] = \Buepro\Pizpalue\Cms\Frontend\Typolink\PopoverLinkBuilder::class;
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['typoLink_PostProc']['pppopover'] = \Buepro\Pizpalue\Hook\PopoverTypolinkHook::class . '->postProcess';
     }
 
     /**
@@ -102,15 +117,6 @@ defined('TYPO3_MODE') || die();
             'afterExtensionInstall',
             \Buepro\Pizpalue\Service\BrandingService::class,
             'setBackendStyling'
-        );
-    }
-
-    /**
-     * Content elements
-     */
-    if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
         );
     }
 

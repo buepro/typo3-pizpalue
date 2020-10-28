@@ -187,6 +187,17 @@
 			<trans-unit id="tx-eventnews-monthExtended">
 				<source>Extended (month)</source>
 			</trans-unit>
+
+			<trans-unit id="linkhandler-popover-registerTitle">
+				<source>Popover</source>
+			</trans-unit>
+			<trans-unit id="linkhandler-popover-content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="linkhandler-popover-setPopover">
+				<source>Set popover</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>
