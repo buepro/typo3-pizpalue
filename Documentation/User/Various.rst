@@ -20,6 +20,9 @@ Popover
 Popovers show additional information in a small window. Mainly they are associated with a link (see
 `popovers component from bootstrap framework <https://getbootstrap.com/docs/4.5/components/popovers/>`__).
 
+Create a popover
+----------------
+
 This extension provides an easy way to use popovers by defining them in the RTE editor:
 
 1. Select the text that should be associated with a popover
@@ -31,6 +34,16 @@ This extension provides an easy way to use popovers by defining them in the RTE 
    :alt: Register popover in link browser
 
    Register popover in link browser
+
+Adjust a popover
+----------------
+
+To adjust a popovers behaviour related attributes might be added to the link tag. The following link results in a
+popover showing up when hovering over the link text where clicking on it loads the TYPO3 home page.
+
+.. code-block:: html
+
+   <a class="pp-popover" data-trigger="hover" href="t3://pppopover?href=https://typo3.org&amp;content=A+text" title="A title">item</a>
 
 .. note::
    The popover content is parsed the same way as the RTE text by using the configuration from `lib.parseFunc_RTE`
