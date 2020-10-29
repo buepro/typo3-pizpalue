@@ -2,8 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Buepro\Pizpalue\Cms\Recordlist\LinkHandler;
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
+namespace Buepro\Pizpalue\Cms\Recordlist\LinkHandler;
 
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Page\PageRenderer;
@@ -25,7 +31,6 @@ use TYPO3\CMS\Recordlist\LinkHandler\LinkHandlerInterface;
  *
  * Hint: Is used in BE when opening the link browser.
  *
- * @package Buepro\Pizpalue\Cms\Recordlist\LinkHandler
  */
 class PopoverLinkHandler implements LinkHandlerInterface
 {

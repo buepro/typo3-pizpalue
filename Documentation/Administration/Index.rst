@@ -24,13 +24,13 @@ Supported extensions
 Extension                        Version tested
 ================================ ================
 pp_gridelements                  1.1.0
-flux_elements                    1.1.0
-container_elements               0.1.0
+flux_elements                    1.1.1
+container_elements               1.0.0
 ws_flexslider                    1.5.14
-indexed_search                   10.4.1
-news                             8.3.0
+indexed_search                   10.4.9
+news                             8.5.0
 eventnews                        4.0.0
-tt_address                       5.1.2
+tt_address                       5.2.0
 timelog                          1.6.0
 ================================ ================
 
@@ -52,10 +52,10 @@ The following upgrade descriptions are available:
 .. toctree::
    :maxdepth: 2
 
-   Upgrade9
-   Upgrade11
-   Upgrade11.2
-   UpgradeNext
+   Upgrade_9.0
+   Upgrade_11.0
+   Upgrade_11.2
+   Upgrade_11.4
    UpgradeBootstrap4
 
 

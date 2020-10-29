@@ -2,18 +2,24 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Buepro\Pizpalue\Hook;
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Html\HtmlParser;
-use \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 /**
  * Class PopoverTypolinkHook
  *
  * Hint: Is used from FE.
  *
- * @package Buepro\Pizpalue\Hook
  */
 class PopoverTypolinkHook
 {
@@ -27,7 +33,7 @@ class PopoverTypolinkHook
      * @param array $params
      * @param ContentObjectRenderer $ref The calling ContentObjectRenderer
      */
-    public function  postProcess(&$params, &$ref)
+    public function postProcess(&$params, &$ref)
     {
         if (isset($params['linkDetails']['type'], $params['finalTag']) && $params['linkDetails']['type'] === 'pppopover') {
             /** @var HtmlParser $htmlParser */

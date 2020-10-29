@@ -37,7 +37,8 @@ defined('TYPO3_MODE') || die();
         // AOS scroll animations
         // @deprecated since 11.4.0
         // @todo remove support for AOS
-        function getAosAttributes () {
+        function getAosAttributes()
+        {
             // Defines a group of available AOS animations for dropdown selector
             $aosFadeList = 'fade,fade-up,fade-down,fade-left,fade-right,fade-up-right,fade-up-left,fade-down-right,fade-down-left';
             $aosFlipList = 'flip-up,flip-down,flip-left,flip-right';
@@ -92,7 +93,8 @@ defined('TYPO3_MODE') || die();
         }
 
         // Twikito scroll animation
-        function getTwikitoAttributes() {
+        function getTwikitoAttributes()
+        {
             return [
                 ['Twikito animation', 'data-scroll="animate__pulse" '],
                 ['Twikito repeat', 'data-scroll-repeat="true" '],
@@ -101,7 +103,8 @@ defined('TYPO3_MODE') || die();
         }
 
         // Josh scroll animation (using animate.css)
-        function getJoshAttributes () {
+        function getJoshAttributes()
+        {
             return [
                 ['Josh animation', 'data-josh-anim-name="pulse" '],
                 ['Josh duration', 'data-josh-duration="1500ms" '],
