@@ -37,7 +37,7 @@ defined('TYPO3_MODE') || die();
         // AOS scroll animations
         // @deprecated since 11.4.0
         // @todo remove support for AOS
-        function getAosAttributes()
+        $aosAttributes = static function ()
         {
             // Defines a group of available AOS animations for dropdown selector
             $aosFadeList = 'fade,fade-up,fade-down,fade-left,fade-right,fade-up-right,fade-up-left,fade-down-right,fade-down-left';
@@ -90,20 +90,20 @@ defined('TYPO3_MODE') || die();
                     ['AOS once', 'data-aos-once="false" ']
                 ]
             );
-        }
+        };
 
         // Twikito scroll animation
-        function getTwikitoAttributes()
+        $twikitoAttributes = static function()
         {
             return [
                 ['Twikito animation', 'data-scroll="animate__pulse" '],
                 ['Twikito repeat', 'data-scroll-repeat="true" '],
                 ['Twikito offset', 'data-scroll-offset="200" '],
             ];
-        }
+        };
 
         // Josh scroll animation (using animate.css)
-        function getJoshAttributes()
+        $joshAttributes = static function ()
         {
             return [
                 ['Josh animation', 'data-josh-anim-name="pulse" '],
@@ -111,7 +111,7 @@ defined('TYPO3_MODE') || die();
                 ['Josh delay', 'data-josh-delay="3.5s" '],
                 ['Josh iteration', 'data-josh-iteration="infinite" '],
             ];
-        }
+        };
 
         // Column definition
         $tmp_pizpalue_columns = [
@@ -243,20 +243,20 @@ defined('TYPO3_MODE') || die();
                                 [' Twikito', ''],
                                 ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
                             ],
-                            getTwikitoAttributes(),
+                            $twikitoAttributes(),
                             [
                                 ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
                                 [' Josh', ''],
                                 ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
                             ],
-                            getJoshAttributes(),
+                            $joshAttributes(),
                             [
                                 ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
                                 [' AOS', ''],
                                 ['LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:deprecated', ''],
                                 ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
                             ],
-                            getAosAttributes()
+                            $aosAttributes()
                         )
                     ],
                 ],
