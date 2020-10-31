@@ -4,6 +4,25 @@ tt_content.pp_modal_dialog {
 
     templateName = ModalDialog
 
+    variables.shortcuts = RECORDS
+    variables.shortcuts {
+        tables = tt_content
+        conf {
+            pages < lib.dynamicContent
+            pages {
+                5 = LOAD_REGISTER
+                5 {
+                    colPos >
+                    colPos = 0
+                    slide >
+                    slide = 0
+                    pageUid >
+                    pageUid.field = uid
+                }
+            }
+        }
+    }
+
     dataProcessing {
         10 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor
     }

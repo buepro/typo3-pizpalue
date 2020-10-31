@@ -11,11 +11,12 @@ defined('TYPO3_MODE') || die();
 
 (function ($extensionKey) {
     /**
-     * Enables Content Element
+     * Enable content element and allow pages in record field
+     * Note: `$GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog']` needs to be an array for the element to be
+     *       enabled.
      */
-    if (!is_array($GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog'])) {
-        $GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog'] = [];
-    }
+    $GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog']['columnsOverrides']['records']['config']['allowed'] =
+        'pages,tt_content,tx_news_domain_model_news';
 
     /**
      * Adds content element to new content element wizard
