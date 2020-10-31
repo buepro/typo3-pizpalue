@@ -18,6 +18,11 @@
       padding: 5px;
       cursor: pointer;
       transition: color 0.7s;
+      &:before {
+        display: inline-block;
+        width: $pp-fastmenu-icon-size;
+        text-align: center;
+      }
       &:hover {
         color: $pp-fastmenu-icon-hover-color;
       }
