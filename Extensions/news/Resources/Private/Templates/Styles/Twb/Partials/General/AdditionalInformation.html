@@ -19,10 +19,12 @@
                 </time>
             </li>
 
-            <f:if condition="{newsItem.firstCategory}">
-                <li>
+            <f:if condition="{newsItem.categories}">
+                <li title="{f:translate(extensionName: 'news', key: 'categories')}">
                     <span class="glyphicon glyphicon-tags"></span>
-                    <span class="badge badge-pill badge-info">{newsItem.firstCategory.title}</span>
+                    <f:for each="{newsItem.categories}" as="_category">
+                        <span class="badge badge-pill badge-info">{_category.title}</span>
+                    </f:for>
                 </li>
             </f:if>
 
@@ -31,7 +33,7 @@
                     <span class="glyphicon glyphicon-tags"></span>
                     <span class="news-list-tags" itemprop="keywords">
                         <f:for as="tag" each="{newsItem.tags}">
-                            <span class="badge badge-pill badge-info">{tag.title}</span>&nbsp;
+                            <span class="badge badge-pill badge-info">{tag.title}</span>
                         </f:for>
                     </span>
                 </li>
