@@ -41,7 +41,7 @@ defined('TYPO3_MODE') || die();
     /**
      * Add `emphasize media` layout for textmedia contentelement
      */
-    $items = $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
+    $items = $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['layout']['config']['items'] ?? $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
     $items[] = [
         'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.emphasize_media',
         'pp-emphasize-media'
