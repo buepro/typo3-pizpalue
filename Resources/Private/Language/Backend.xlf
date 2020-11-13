@@ -170,6 +170,13 @@
 				<source>Show content</source>
 			</trans-unit>
 
+			<trans-unit id="ce_picoverlay.title">
+				<source>Picture with overlay</source>
+			</trans-unit>
+			<trans-unit id="ce_picoverlay.description">
+				<source>Picture with a footer bar to show an overlaid text</source>
+			</trans-unit>
+
 			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
 				<source>Enable bootstrap_package page layouts</source>
 			</trans-unit>

@@ -3,10 +3,10 @@
 
 @font-face {
     font-family:"PizpalueIcon";
-    src:url("pizpalueicon.eot?694df1579974a06c93de7320db52335d");
-    src:url("pizpalueicon.eot?694df1579974a06c93de7320db52335d#iefix") format("embedded-opentype"),
-		url("pizpalueicon.woff?694df1579974a06c93de7320db52335d") format("woff"),
-		url("pizpalueicon.ttf?694df1579974a06c93de7320db52335d") format("truetype");
+    src:url("pizpalueicon.eot?9e7bd3c406c7f864dcdfa51c5dc697e0");
+    src:url("pizpalueicon.eot?9e7bd3c406c7f864dcdfa51c5dc697e0#iefix") format("embedded-opentype"),
+		url("pizpalueicon.woff?9e7bd3c406c7f864dcdfa51c5dc697e0") format("woff"),
+		url("pizpalueicon.ttf?9e7bd3c406c7f864dcdfa51c5dc697e0") format("truetype");
     font-weight:normal;
     font-style:normal;
 }
@@ -28,183 +28,246 @@
 /* Icons */
 
 
+.ppicon-arrow-down:before,
+.bootstrappackageicon-arrow-down:before,
+.glyphicon-arrow-down:before {
+    content:"\f101";
+}
+
+
+.ppicon-arrow-left:before,
+.bootstrappackageicon-arrow-left:before,
+.glyphicon-arrow-left:before {
+    content:"\f102";
+}
+
+
+.ppicon-arrow-right:before,
+.bootstrappackageicon-arrow-right:before,
+.glyphicon-arrow-right:before {
+    content:"\f103";
+}
+
+
+.ppicon-arrow-up:before,
+.bootstrappackageicon-arrow-up:before,
+.glyphicon-arrow-up:before {
+    content:"\f104";
+}
+
+
 .ppicon-calendar:before,
 .bootstrappackageicon-calendar:before,
 .glyphicon-calendar:before {
-    content:"\f101";
+    content:"\f105";
 }
 
 
 .ppicon-call:before,
 .bootstrappackageicon-call:before,
 .glyphicon-call:before {
-    content:"\f102";
+    content:"\f106";
+}
+
+
+.ppicon-chevron-down:before,
+.bootstrappackageicon-chevron-down:before,
+.glyphicon-chevron-down:before {
+    content:"\f107";
+}
+
+
+.ppicon-chevron-left:before,
+.bootstrappackageicon-chevron-left:before,
+.glyphicon-chevron-left:before {
+    content:"\f108";
+}
+
+
+.ppicon-chevron-right:before,
+.bootstrappackageicon-chevron-right:before,
+.glyphicon-chevron-right:before {
+    content:"\f109";
+}
+
+
+.ppicon-chevron-up:before,
+.bootstrappackageicon-chevron-up:before,
+.glyphicon-chevron-up:before {
+    content:"\f10a";
+}
+
+
+.ppicon-close-round:before,
+.bootstrappackageicon-close-round:before,
+.glyphicon-close-round:before {
+    content:"\f10b";
 }
 
 
 .ppicon-dropright:before,
 .bootstrappackageicon-dropright:before,
 .glyphicon-dropright:before {
-    content:"\f103";
+    content:"\f10c";
 }
 
 
 .ppicon-facebook:before,
 .bootstrappackageicon-facebook:before,
 .glyphicon-facebook:before {
-    content:"\f104";
+    content:"\f10d";
 }
 
 
 .ppicon-file-audio:before,
 .bootstrappackageicon-file-audio:before,
 .glyphicon-file-audio:before {
-    content:"\f105";
+    content:"\f10e";
 }
 
 
 .ppicon-file-image:before,
 .bootstrappackageicon-file-image:before,
 .glyphicon-file-image:before {
-    content:"\f106";
+    content:"\f10f";
 }
 
 
 .ppicon-file-video:before,
 .bootstrappackageicon-file-video:before,
 .glyphicon-file-video:before {
-    content:"\f107";
+    content:"\f110";
 }
 
 
 .ppicon-file:before,
 .bootstrappackageicon-file:before,
 .glyphicon-file:before {
-    content:"\f108";
+    content:"\f111";
 }
 
 
 .ppicon-filter:before,
 .bootstrappackageicon-filter:before,
 .glyphicon-filter:before {
-    content:"\f109";
+    content:"\f112";
 }
 
 
 .ppicon-github:before,
 .bootstrappackageicon-github:before,
 .glyphicon-github:before {
-    content:"\f10a";
+    content:"\f113";
 }
 
 
 .ppicon-googleplus:before,
 .bootstrappackageicon-googleplus:before,
 .glyphicon-googleplus:before {
-    content:"\f10b";
+    content:"\f114";
 }
 
 
 .ppicon-instagram:before,
 .bootstrappackageicon-instagram:before,
 .glyphicon-instagram:before {
-    content:"\f10c";
+    content:"\f115";
 }
 
 
 .ppicon-linkedin:before,
 .bootstrappackageicon-linkedin:before,
 .glyphicon-linkedin:before {
-    content:"\f10d";
+    content:"\f116";
 }
 
 
 .ppicon-location:before,
 .bootstrappackageicon-location:before,
 .glyphicon-location:before {
-    content:"\f10e";
+    content:"\f117";
 }
 
 
 .ppicon-log-in:before,
 .bootstrappackageicon-log-in:before,
 .glyphicon-log-in:before {
-    content:"\f10f";
+    content:"\f118";
 }
 
 
 .ppicon-pinterest:before,
 .bootstrappackageicon-pinterest:before,
 .glyphicon-pinterest:before {
-    content:"\f110";
+    content:"\f119";
 }
 
 
 .ppicon-rss:before,
 .bootstrappackageicon-rss:before,
 .glyphicon-rss:before {
-    content:"\f111";
+    content:"\f11a";
 }
 
 
 .ppicon-tag:before,
 .bootstrappackageicon-tag:before,
 .glyphicon-tag:before {
-    content:"\f112";
+    content:"\f11b";
 }
 
 
 .ppicon-tags:before,
 .bootstrappackageicon-tags:before,
 .glyphicon-tags:before {
-    content:"\f113";
+    content:"\f11c";
 }
 
 
 .ppicon-times:before,
 .bootstrappackageicon-times:before,
 .glyphicon-times:before {
-    content:"\f114";
+    content:"\f11d";
 }
 
 
 .ppicon-twitter:before,
 .bootstrappackageicon-twitter:before,
 .glyphicon-twitter:before {
-    content:"\f115";
+    content:"\f11e";
 }
 
 
 .ppicon-user:before,
 .bootstrappackageicon-user:before,
 .glyphicon-user:before {
-    content:"\f116";
+    content:"\f11f";
 }
 
 
 .ppicon-vimeo:before,
 .bootstrappackageicon-vimeo:before,
 .glyphicon-vimeo:before {
-    content:"\f117";
+    content:"\f120";
 }
 
 
 .ppicon-vk:before,
 .bootstrappackageicon-vk:before,
 .glyphicon-vk:before {
-    content:"\f118";
+    content:"\f121";
 }
 
 
 .ppicon-xing:before,
 .bootstrappackageicon-xing:before,
 .glyphicon-xing:before {
-    content:"\f119";
+    content:"\f122";
 }
 
 
 .ppicon-youtube:before,
 .bootstrappackageicon-youtube:before,
 .glyphicon-youtube:before {
-    content:"\f11a";
+    content:"\f123";
 }

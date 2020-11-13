@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+    {f:variable(name: '_headerLayout', value: data.header_layout)}
+    {f:variable(name: '_headerLayout', value: settings.header.defaultHeaderType) -> f:if(condition: '{data.header_layout as integer} === 0')}
+    {f:variable(name: '_headerPosition', value: ' text-{data.header_position}') -> f:if(condition: data.header_position)}
+    {f:variable(name: '_headerClass', value: ' {data.tx_pizpalue_header_class}') -> f:if(condition: '{data.tx_pizpalue_header_class} != "none"')}
+    <div class="pp-picoverlay">
+        <div class="pp-picoverlay-item pp-picoverlay-gallery">
+            <f:render partial="Media/Gallery" arguments="{_all}" />
+        </div>
+        <div class="pp-picoverlay-item pp-picoverlay-text">
+            <h{_headerLayout} class="ppc-header {settings.header.class}{_headerPosition}{_headerClass}">
+                <span class="ppc-text px-4 px-lg-5">{data.header}</span>
+                <a href="javascript:void(0);"><span class="ppc-icon ppc-show bg-primary px-1"><i class="ppicon ppicon-arrow-up"></i></span></a>
+            </h{_headerLayout}>
+            <div class="ppc-body px-4 px-lg-5 py-2"><f:format.html>{data.bodytext}</f:format.html></div>
+            <h{_headerLayout} class="ppc-footer {settings.header.class}{_headerPosition}{_headerClass} bg-primary">
+                <span class="ppc-text px-4 px-lg-5"><f:link.typolink parameter="{data.header_link}">{data.readmore_label -> f:if(condition: data.header_link)}</f:link.typolink></span>
+                <a href="javascript:void(0);"><span class="ppc-icon ppc-hide px-1"><i class="ppicon ppicon-arrow-down"></i></span></a>
+            </h{_headerLayout}>
+        </div>
+    </div>
+    <f:asset.script identifier="pp-picoverlay" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/contentelement.picoverlay.min.js" />
+</f:section>
+</html>

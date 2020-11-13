@@ -1,0 +1,64 @@
+.pp-picoverlay {
+  position: relative;
+  overflow: hidden;
+  .gallery-row, figure {
+    margin-bottom: 0;
+  }
+  .pp-picoverlay-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(black, 0.63);
+    color: white;
+    transition: all ease-out 0.5s;
+  }
+  .element-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    line-height: 1.5;
+    span {
+      padding-top: 0.2em;
+      padding-bottom: 0.2em;
+    }
+  }
+  a, a:hover {
+    color: white;
+  }
+  .ppc-text {
+    flex-grow: 1;
+  }
+  .ppc-icon {
+    display: none;
+  }
+  &.ppc-init {
+    .pp-picoverlay-text {
+      justify-content: flex-end;
+      height: auto;
+    }
+    .ppc-body, .ppc-footer {
+      display: none;
+    }
+    .ppc-icon {
+      display: block;
+    }
+  }
+  &.ppc-overlay {
+    .pp-picoverlay-text {
+      justify-content: space-between;
+      height: 100%;
+      bottom: auto;
+    }
+    .ppc-body {
+      display: block;
+    }
+    .ppc-footer {
+      display: flex;
+    }
+  }
+}

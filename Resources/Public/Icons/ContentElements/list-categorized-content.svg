@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2017 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="143px" height="143px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 611.19 611.19"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="447px" height="447px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 447 447"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#9D9E9E;stroke-width:34.19;stroke-miterlimit:22.9256}
-    .str1 {stroke:#075E8E;stroke-width:12.82;stroke-miterlimit:22.9256}
-    .fil0 {fill:none}
-    .fil1 {fill:#075E8E}
+    .str2 {stroke:#075E8E;stroke-width:9.38;stroke-miterlimit:22.9256}
+    .str1 {stroke:#9D9E9E;stroke-width:25.01;stroke-miterlimit:22.9256}
+    .str0 {stroke:#2B2A29;stroke-width:2.36;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
+    .fil0 {fill:#FEFEFE}
+    .fil2 {fill:#075E8E}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <rect class="fil0 str0" x="17.1" y="17.1" width="576.99" height="576.99"/>
+  <rect class="fil0 str0" x="12.5" y="12.5" width="421.99" height="421.99"/>
+ </g>
+ <g id="Layer_x0020_1_0">
+  <metadata id="CorelCorpID_1Corel-Layer"/>
+  <rect class="fil1 str1" x="12.5" y="12.5" width="421.99" height="421.99"/>
   <g id="_1849136910928">
-   <rect class="fil0 str1" x="88.56" y="92.14" width="428.65" height="96.85"/>
-   <rect class="fil1" x="476.33" y="141.01" width="40.88" height="47.98"/>
+   <rect class="fil1 str2" x="64.77" y="67.39" width="313.5" height="70.83"/>
+   <rect class="fil2" x="348.37" y="103.13" width="29.9" height="35.09"/>
   </g>
   <g id="_1849136910672">
-   <rect class="fil0 str1" x="88.56" y="253.7" width="428.65" height="96.85"/>
-   <rect class="fil1" x="476.33" y="302.56" width="40.88" height="47.98"/>
+   <rect class="fil1 str2" x="64.77" y="185.55" width="313.5" height="70.83"/>
+   <rect class="fil2" x="348.37" y="221.28" width="29.9" height="35.09"/>
   </g>
   <g id="_1849136912752">
-   <rect class="fil0 str1" x="88.56" y="415.25" width="433.47" height="96.85"/>
-   <rect class="fil1" x="480.7" y="464.12" width="41.34" height="47.98"/>
+   <rect class="fil1 str2" x="64.77" y="303.7" width="317.03" height="70.83"/>
+   <rect class="fil2" x="351.57" y="339.44" width="30.23" height="35.09"/>
   </g>
  </g>
 </svg>

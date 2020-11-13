@@ -1,0 +1,17 @@
+#---------------------------------------------------------#
+# New content element wizard
+#---------------------------------------------------------#
+mod.wizards.newContentElement.wizardItems.interactive {
+   elements {
+      pp_picoverlay {
+         iconIdentifier = content-pizpalue-picoverlay
+         title = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.title
+         description = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.description
+         tt_content_defValues {
+            CType = pp_picoverlay
+         }
+      }
+   }
+   show := addToList(pp_picoverlay)
+}
+
