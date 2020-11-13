@@ -21,6 +21,54 @@ defined('TYPO3_MODE') || die();
     );
 
     /**
+     * Add `tx_pizpalue_header_class`
+     */
+    $items = $GLOBALS['TCA']['tt_content']['columns']['tx_pizpalue_header_class'] = [
+        'exclude' => true,
+        'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.header_class',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                ['', 'none'],
+                ['h1', 'h1'],
+                ['h2', 'h2'],
+                ['h3', 'h3'],
+                ['h4', 'h4'],
+                ['h5', 'h5']
+            ]
+        ],
+        'l10n_mode' => 'exclude',
+    ];
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content', 'headers', 'tx_pizpalue_header_class', 'after:header_layout'
+    );
+
+    /**
+     * Add `tx_pizpalue_subheader_class`
+     */
+    $items = $GLOBALS['TCA']['tt_content']['columns']['tx_pizpalue_subheader_class'] = [
+        'exclude' => true,
+        'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:carousel_item.subheader_class',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                ['', 'none'],
+                ['h1', 'h1'],
+                ['h2', 'h2'],
+                ['h3', 'h3'],
+                ['h4', 'h4'],
+                ['h5', 'h5']
+            ]
+        ],
+        'l10n_mode' => 'exclude',
+    ];
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content', 'headers', 'tx_pizpalue_subheader_class', 'after:subheader'
+    );
+
+    /**
      * Add 'tile` layout items
      */
     $items = $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
