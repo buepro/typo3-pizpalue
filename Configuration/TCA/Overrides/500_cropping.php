@@ -23,6 +23,14 @@ defined('TYPO3_MODE') || die();
         '16:9' => $defaultAspectRatios['16:9'],
         '4:3' => $defaultAspectRatios['4:3'],
         '1:1' => $defaultAspectRatios['1:1'],
+        '3:4' => [
+            'title' => '3:4',
+            'value' => 0.75
+        ],
+        '9:16' => [
+            'title' => '9:16',
+            'value' => 0.5625
+        ],
         '1:2' => [
             'title' => '1:2',
             'value' => 0.5
@@ -33,7 +41,11 @@ defined('TYPO3_MODE') || die();
     /**
      * Assigns side ratios to content elements with images
      */
-    foreach (['image', 'textpic'] as $contentElement) {
+    foreach (['image', 'textpic', 'pp_picoverlay'] as $contentElement) {
+        if (!isset($GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'])) {
+            $GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] =
+                $GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
+        }
         $cropVariants = &$GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
         $cropVariants['default']['allowedAspectRatios'] = $aspectRatios;
         $cropVariants['large']['allowedAspectRatios'] = $aspectRatios;
