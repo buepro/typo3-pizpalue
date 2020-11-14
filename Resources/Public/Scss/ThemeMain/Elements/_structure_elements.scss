@@ -12,6 +12,16 @@
     max-width: none;
   }
 }
+.frame-type-pp_container, .frame-type-fe_container, .frame-type-ce_container {
+  &.frame-background-primary, &.frame-background-secondary, &.frame-background-complementary {
+    > div > div > div > .frame:first-child {
+      padding-top: 0;
+    }
+    > div > div > div > .frame:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
 
 //----------------------------------------------------------------------------------------------------------------------
 // Columns
