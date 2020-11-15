@@ -9,17 +9,15 @@ finishers:
   -
     options:
       subject: '{idSubject}'
-      recipientAddress: empfaenger@ihredomain.ch
-      recipientName: 'Ihr Name'
       senderAddress: '{idEmail}'
       senderName: '{idName}'
-      replyToAddress: ''
-      carbonCopyAddress: ''
-      blindCarbonCopyAddress: ''
-      format: html
       attachUploads: true
       translation:
         language: ''
+      recipients:
+        empfaenger@ihredomain.ch: 'Ihr Name'
+      addHtmlPart: true
+      useFluidEmail: true
     identifier: EmailToReceiver
   -
     options:
@@ -108,13 +106,12 @@ renderables:
         label: Image
       -
         properties:
-          containerClassAttribute: custom-checkbox-multiple pp-dataprotection
+          containerClassAttribute: 'custom-checkbox-multiple pp-dataprotection'
           options:
             dataprotectionRead: 'Please confirm that you have read our data protection notice by checking this checkbox'
         type: MultiCheckbox
         identifier: idDataprotectionMultiCheckbox
-        label: Data protection notice
+        label: 'Data protection notice'
         validators:
           -
             identifier: NotEmpty
-        defaultValue: {  }
