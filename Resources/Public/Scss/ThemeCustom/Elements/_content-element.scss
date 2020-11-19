@@ -10,15 +10,11 @@
 //
 // Pictures
 //
-figure {
-  margin-bottom: 1.7em;
-}
 .frame-type-textpic, .frame-type-image {
   .gallery-item {
     text-align: center;
   }
   figure {
-    display: inline-block;
     text-align: left;
   }
 }
