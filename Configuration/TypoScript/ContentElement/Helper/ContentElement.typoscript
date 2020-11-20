@@ -1,0 +1,35 @@
+lib.contentElement {
+    settings {
+        gallery {
+            imageLoading = {$pizpalue.features.imageLoading}
+        }
+        responsiveimages {
+            backendlayout {
+                subnavigation_left {
+                    1 {
+                        multiplier {
+                            default = 0.25
+                            large = 0.25
+                        }
+                        gutters {
+                            default = 40
+                            large = 40
+                        }
+                    }
+                }
+                subnavigation_right {
+                    2 {
+                        multiplier {
+                            default = 0.25
+                            large = 0.25
+                        }
+                        gutters {
+                            default = 40
+                            large = 40
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,2 @@
 @import 'EXT:pizpalue/Configuration/TypoScript/ContentElement/Element/'
-
-lib.contentElement {
-    settings.gallery {
-        imageLoading = {$pizpalue.features.imageLoading}
-    }
-}
+@import 'EXT:pizpalue/Configuration/TypoScript/ContentElement/Helper/'
