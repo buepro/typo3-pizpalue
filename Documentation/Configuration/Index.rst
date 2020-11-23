@@ -35,27 +35,16 @@ PIZPALUE: CUSTOMER PLUGINS   More detailed plugin related parameters
    Most extensions provide their own configurations. For more detailed configurations consult the related manual.
 
 
-.. _config_seo:
+.. _config_scaffold:
 
-SEO
-===
+Scaffold
+========
 
-Follow these steps to setup and register the site at google:
+Footer columns
+--------------
 
-#. Review content (focus on user experience)
-#. Review seo tags like title-tag and description meta-tag
-#. Create a `site <https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/SiteHandling/Index.html>`__
-#. Register domain as new property at search console
-#. Verify ownership by adding google-site-verification code to the related seo constant (see figure below)
-#. Register sitemap at google search console
-#. Register domain in google analytics
-#. Add google analytics code to the related seo constant (see figure below)
-
-.. figure:: ../Images/Configuration/ConstantEditorSeo.jpg
-   :width: 500px
-   :alt: SEO related constants in "PIZPALUE CUSTOMER" category
-
-   SEO related constants in "PIZPALUE CUSTOMER" category
+The behaviour from the footer columns can be adjusted through the column classes available under the category
+`PIZPALUE: CUSTOMER EXTENDED` in the constant editor.
 
 
 .. _config_scrollanimation:
@@ -63,12 +52,17 @@ Follow these steps to setup and register the site at google:
 Scroll animation
 ================
 
-This feature is using the `AOS-library <http://michalsnik.github.io/aos/>`__. It allows to animate content elements
-while the page is being scrolled.
+This feature is using one of the libraries `Twikito/scroll-effect <https://github.com/Twikito/onscroll-effect>`__ or
+`Josh.js <https://github.com/mamunhpath/josh.js>`__. They allows to animate content elements while the page is being
+scrolled.
 
 Four preconfigured animations are available in the animation dropdown menu from the appearance tab in the content
 element properties dialog. Those animations might be configured as well in the constant editor (category "PIZPALUE:
 CUSTOMER EXTENDED - Animation").
+
+.. hint::
+   Embedding from scroll animation js-libraries is triggered by the presence from the strings `data-scroll` or
+   `data-josh` in a content element attribute field.
 
 
 .. _config_cookieconsent:
@@ -139,6 +133,7 @@ PIZPALUE:CUSTOMER STYLE          To define colors
 
    Embed new icons by generating your own icon font.
 
+
 .. _config_extensions:
 
 Extensions
@@ -151,3 +146,47 @@ For some extensions additional configurations are available:
 
    Extensions/Eventnews
    Extensions/News
+
+
+.. _config_seo:
+
+SEO
+===
+
+#. Review content (focus on user experience)
+#. Review seo tags like title-tag and description meta-tag
+#. Create a `sitemap <https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/XmlSitemap/Index.html>`__
+#. Create a `site <https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/SiteHandling/Index.html>`__
+
+.. hint::
+
+   In the site configuration specify a `robots.txt` as static route containing a sitemap. This helps search engines
+   to crawl the site and further registrations at search engines might not be needed. An example `robots.txt` might
+   look as following:
+
+   ..code-block:: txt
+
+      User-agent: *
+      Disallow: /typo3/
+      Disallow: /typo3_src/
+      Allow: /typo3/sysext/frontend/Resources/Public/*
+
+      Sitemap: https://www.domain.ch/sitemap.xml
+
+
+Google
+------
+
+If needed follow these steps to setup and register the site at google:
+
+#. Register domain as new property at search console
+#. Verify ownership by adding google-site-verification code to the related seo constant (see figure below)
+#. Register sitemap at google search console
+#. Register domain in google analytics
+#. Add google analytics code to the related seo constant (see figure below)
+
+.. figure:: ../Images/Configuration/ConstantEditorSeo.jpg
+   :width: 500px
+   :alt: SEO related constants in "PIZPALUE CUSTOMER" category
+
+   SEO related constants in "PIZPALUE CUSTOMER" category
