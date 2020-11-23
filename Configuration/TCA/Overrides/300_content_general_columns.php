@@ -21,11 +21,13 @@ defined('TYPO3_MODE') || die();
         // Defines available classes for dropdown selector
         $classesItemsList = 'pp-bg-primary,pp-bg-secondary,pp-bg-complementary,pp-bg-light,pp-bg-dark,'
             . 'pp-bg-centercover,pp-bg-fixed,'
+            . 'pp-card-primary,pp-card-secondary,pp-card-complementary,pp-card-light,pp-card-dark,'
             . 'pp-inner-margin,pp-inner-padding,pp-inner-bgwhite70,pp-inner-bggrey70,pp-inner-bgblack70,'
             . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,pp-gallery-item-shadow,'
             . 'pp-ce-overlaycard,'
             . 'pp-parent-height,pp-row-height,pp-row-child-height,'
-            . 'pp-tile-scroll-y';
+            . 'pp-tile-scroll-y,'
+            . 'pp-below-header';
         $classItems = [];
         foreach (explode(',', $classesItemsList) as $class) {
             $classItems[] = [

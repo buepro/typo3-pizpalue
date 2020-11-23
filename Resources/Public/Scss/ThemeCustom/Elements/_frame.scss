@@ -24,6 +24,7 @@
 .frame-pp3 > div > .frame-inner {
   @include pp-make-frame-bg($complementary);
 }
+
 .pp-row-height {
   &.frame-pp1, &.frame-pp2, &.frame-pp3 {
     > div, > div > .frame-inner {
@@ -32,28 +33,8 @@
   }
 }
 
-.frame-background-primary, .frame-background-secondary, .frame-background-complementary {
-  a:not(.btn) {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-.frame-background-primary {
-  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: color-yiq($primary);
-  }
-}
-.frame-background-secondary {
-  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: color-yiq($secondary);
-  }
-}
-.frame-background-complementary {
-  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: color-yiq($complementary);
+@each $name, $settings in $frame-backgrounds {
+  .frame-background-#{$name} {
+    @include pp-make-link($settings);
   }
 }

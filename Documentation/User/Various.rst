@@ -97,6 +97,20 @@ pp-bg-fixed                   Fixes the background. The result is a parallax eff
 ============================= =============================================================================
 
 
+Card backgrounds
+----------------
+
+============================= =============================================================================
+Class                         Usage
+============================= =============================================================================
+pp-card-primary               Applies the primary color to the card background
+pp-card-secondary             Applies the secondary color to the card background
+pp-card-complementary         Applies the complementary color to the card background
+pp-card-light                 Applies the light color to the card background
+pp-card-dark                  Applies the dark color to the card background
+============================= =============================================================================
+
+
 Content element inner
 ---------------------
 
@@ -143,20 +157,6 @@ pp-ce-overlaycard             Render an overlay card when being assigned to a te
 ============================= =============================================================================
 
 
-RTE
----
-
-The following classes are used in the context of the real text editor.
-
-============================= =============================================================================
-Class                         Usage
-============================= =============================================================================
-pp-popover                    Used to control the behaviour from popovers.
-                              Popovers that were triggered from elements having this class close when the
-                              user clicks outside the popover.
-============================= =============================================================================
-
-
 Utility
 -------
 
@@ -178,3 +178,16 @@ pp-below-header               Used to shift a content element below the page hea
                               top margin.
 ============================= =============================================================================
 
+
+RTE
+---
+
+The following classes are used in the context of the real text editor.
+
+============================= =============================================================================
+Class                         Usage
+============================= =============================================================================
+pp-popover                    Used to control the behaviour from popovers.
+                              Popovers that were triggered from elements having this class close when the
+                              user clicks outside the popover.
+============================= =============================================================================

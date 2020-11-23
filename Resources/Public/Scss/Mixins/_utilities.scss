@@ -23,3 +23,41 @@
   }
 }
 
+//
+// Used to create links in elements with a frame background (see $frame-backgrounds)
+// In case `$link-color = inherit` the link is further defined with `inherit-link-style`:
+//    `dotted`: The link is shown with dotted underline (default behaviour, applies if `inherit-link-style` is absent)
+//    `bold`: The link is shown with `font-weight: bold`
+//    `user`: User formats the link separately (nothing special is formatted here)
+//
+@mixin pp-make-link($settings) {
+  $link-color: map-get($settings, 'link-color');
+  $link-hover-color: map-get($settings, 'link-hover-color');
+  $inherit-link-style: map-get($settings, 'inherit-link-style');
+  @if ($link-color == inherit) {
+    a:not(.btn) {
+      color: $link-color;
+      @if ($inherit-link-style == bold) {
+        font-weight: bold;
+      } @else if ($inherit-link-style == user) {
+      } @else {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+      }
+      @include hover-focus-active {
+        color: $link-hover-color;
+        @if ($inherit-link-style == bold or $inherit-link-style == user) {
+        } @else {
+          text-decoration: underline;
+        }
+      }
+    }
+  } @else {
+    a:not(.btn) {
+      color: $link-color;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}

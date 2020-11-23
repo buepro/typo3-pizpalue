@@ -117,6 +117,13 @@ div.pp-gallery-item-right {
 }
 
 //
+// Cards
+//
+@each $name, $settings in $frame-backgrounds {
+  @include pp-make-card($name, $settings);
+}
+
+//
 // Various / Utility
 //
 .pp-label-dataprotection {
