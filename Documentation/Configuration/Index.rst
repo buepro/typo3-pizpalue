@@ -164,7 +164,7 @@ SEO
    to crawl the site and further registrations at search engines might not be needed. An example `robots.txt` might
    look as following:
 
-   ..code-block:: txt
+   .. code-block:: text
 
       User-agent: *
       Disallow: /typo3/
