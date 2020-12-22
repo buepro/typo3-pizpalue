@@ -90,7 +90,7 @@ Images tab
 Image cropping
 ~~~~~~~~~~~~~~
 
-To faster crop images to be used in tiles the side ratios 2:1 and 1:2 were added.
+To faster crop images to be used in tiles the side ratios 2:1, 3:4, 9:16 and 1:2 were added.
 
 .. note::
    When defining an image crop area with the same side ratio (e.g. 2:1) as used for the content element layout the
