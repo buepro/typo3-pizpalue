@@ -269,3 +269,7 @@ the "Additional attributes" field shows data attributes related to the
 
 .. note::
    Style definitions will be included to the header when curly brackets are used. Otherwise they will be added inline.
+
+.. note::
+   When defining styles the key `#self` can be used to refer to the content elements id attribute. Example:
+   `#self .frame-inner { border: red 1px dashed; }`
