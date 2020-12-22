@@ -27,3 +27,10 @@ figure.image {
 .popover-body *:last-child {
   margin-bottom: 0;
 }
+
+//
+// Modal dialog
+//
+.pp-modal-dialog .modal-body {
+  overflow-x: hidden;
+}
