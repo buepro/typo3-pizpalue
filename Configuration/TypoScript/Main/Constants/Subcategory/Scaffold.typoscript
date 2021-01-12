@@ -9,10 +9,12 @@ pizpalue.scaffold {
     showFooter = 1
     footer {
         # cat=6060/1030/0010; type=string; label=Footer left column class
+        rowClass = row
+        # cat=6060/1030/0020; type=string; label=Footer left column class
         leftColumnClass = col-sm-4 ppc-left
-        # cat=6060/1030/0012; type=string; label=Footer middle column class
+        # cat=6060/1030/0022; type=string; label=Footer middle column class
         middleColumnClass = col-sm-4 ppc-middle
-        # cat=6060/1030/0014; type=string; label=Footer right column class
+        # cat=6060/1030/0024; type=string; label=Footer right column class
         rightColumnClass = col-sm-4 ppc-right
     }
 }
