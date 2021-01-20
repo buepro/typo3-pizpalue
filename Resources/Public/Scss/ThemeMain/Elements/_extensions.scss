@@ -26,6 +26,13 @@
 .flexslider .flex-direction-nav li a:before {
   line-height: 1.0;
 }
+// Avoid horizontal scroll bar outside .frame (e.g. when spanning entire screen width)
+.tx-ws-flexslider {
+  overflow: hidden;
+}
+.frame .tx-ws-flexslider {
+  overflow: visible;
+}
 
 //---------------------------------------------------------------------------------------------------------------------
 // Various
