@@ -138,3 +138,11 @@ lib.contentElement {
         }
     }
 }
+
+
+#=========================================================#
+# Various
+#=========================================================#
+
+# Fix missing body class for current language (bootstrap_package #906)
+lib.page.class.30.data = siteLanguage:languageId
