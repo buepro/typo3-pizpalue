@@ -117,6 +117,44 @@ div.pp-gallery-item-right {
 }
 
 //
+// Image with overlay heading
+//
+.pp-image-overlay {
+  position: relative;
+  header {
+    position: absolute;
+    width: calc(100% - #{$grid-gutter-width});
+    left: calc(50% - #{$grid-gutter-width} / 2);
+    top: calc(50% - #{$grid-gutter-width} / 2);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: $grid-gutter-width / 2;
+    padding: $grid-gutter-width / 2;
+    background: rgba($pp-headings-yiq, 0.7);
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+  figure {
+    margin-bottom : 0;
+  }
+}
+@include media-breakpoint-up(md) {
+  .pp-image-overlay {
+    header {
+      width: 70%;
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .pp-image-overlay {
+    header {
+      width: auto;
+    }
+  }
+}
+
+//
 // Cards
 //
 @each $name, $settings in $frame-backgrounds {

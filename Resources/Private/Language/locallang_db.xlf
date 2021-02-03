@@ -127,6 +127,9 @@
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-fixed">
 				<source>Background fix</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-image-overlay">
+				<source>Image with overlay heading</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-ce-overlaycard">
 				<source>Overlay card (use with text &amp; image)</source>
 			</trans-unit>

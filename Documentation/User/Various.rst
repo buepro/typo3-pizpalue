@@ -127,8 +127,8 @@ pp-inner-bgblack70            Applies a black background with 70% opacity to the
 ============================= =============================================================================
 
 
-Gallery items
--------------
+Gallery / Image
+---------------
 
 These classes are used in conjunction with galleries (images, text & images)
 
@@ -139,6 +139,7 @@ pp-gallery-item-left          Aligns the gallery items (e.g. images) to the left
 pp-gallery-item-right         Aligns the gallery items to the right
 pp-gallery-item-join          Joins the gallery items by removing any margin and padding
 pp-gallery-item-shadow        Adds a shadow to the gallery items
+pp-image-overlay              Overlays the heading to the image. Used with image content element
 ============================= =============================================================================
 
 

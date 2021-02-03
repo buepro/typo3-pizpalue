@@ -21,3 +21,11 @@ $pp-space-scaling: (
   lg: 1,
   xl: 1
 ) !default;
+
+//
+// Headings contrast color
+//
+$pp-headings-yiq: color-yiq($body-color);
+@if $headings-color {
+  $pp-headings-yiq: color-yiq($headings-color);
+}
