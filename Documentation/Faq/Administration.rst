@@ -24,3 +24,33 @@ Installation
 #. Install the extension `pizpalue`
 #. Install the extension `user_customer`
 
+
+Translation
+===========
+
+**Q**: How can I translate strings to my language (e.g. for the cookie dialog)?
+
+**A**: To contribute translating an extension consult the chapter
+`Localization with Crowdin <https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Internationalization/TranslationServer/Crowdin.html>`__
+in the `TYPO3 Explained <https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/Index.html>`__ documentation.
+The string to be translated most likely belongs to either the bootstrap_package or the pizpalue extension.
+Alternatively labels can be overridden with TS. For more details see
+`_LOCAL_LANG.[lang-key].[label-key] <https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/TopLevelObjects/Plugin.html#local-lang-lang-key-label-key>`__
+from the
+`plugin chapter <https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/TopLevelObjects/Plugin.html>`__
+in the `TypoScript template reference <https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/Index.html>`__
+manual.
+
+
+Design
+======
+
+**Q**: The browser shows an error related to the favicon. What is wrong?
+
+**A**: Most likely the fav- and appicon files aren't available or the icon header data isn' correct.
+To create and add the icons follow these steps:
+
+#. Create the icons and the header code at `realfavicongenerator.net <https://realfavicongenerator.net/>`__.
+#. Store the assets to the website root directory.
+#. Merge the header code provided by `realfavicongenerator.net <https://realfavicongenerator.net/>`__ to one line.
+#. In the constant editor paste the one line header code to the `Header data` field, section `App icon` from the category `PIZPALUE: CUSTOMER BASE`.
