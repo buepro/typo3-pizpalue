@@ -9,4 +9,7 @@ plugin.bootstrap_package.settings.scss {
     # cat=6040/2910/0010; type=string; label=Tile gutter
     pp-tile-gutter = 5px
 
+    # cat=6040/1034/0020; type=string; label=Header overlay breakpoint:On screens wider than this the header overlays the carousel
+    pp-header-overlay-breakpoint = $grid-float-breakpoint
+
 }

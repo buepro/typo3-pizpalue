@@ -1,8 +1,13 @@
 //----------------------------------------------------------------------------------------------------------------------
 //
-// Allows to set background colors.
+// Allows to:
+// - Set background colors
+// - Overlay the page header on screens wider than $pp-header-overlay-breakpoint (default-transition)
+//   NOTE: It is assumed that $pp-header-overlay-breakpoint  is smaller than $grid-float-breakpoint
 //
 //----------------------------------------------------------------------------------------------------------------------
+
+$pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 
 //
 // Position Fixed
@@ -81,13 +86,13 @@
   + .main-section > .typo3-feedit-element > a + a {
     + .carousel {
       @each $breakpoint in map-keys($navbar-heights) {
-        @media (min-width: $grid-float-breakpoint) and (min-width: map-get($grid-breakpoints, $breakpoint)) {
+        @media (min-width: $pp-header-overlay-breakpoint) and (min-width: map-get($grid-breakpoints, $breakpoint)) {
           margin-top: -#{map-get($navbar-heights, $breakpoint)};
         }
       }
       .carousel-item {
         @each $breakpoint in map-keys($navbar-heights) {
-          @media (min-width: $grid-float-breakpoint) and (min-width: map-get($grid-breakpoints, $breakpoint)) {
+          @media (min-width: $pp-header-overlay-breakpoint) and (min-width: map-get($grid-breakpoints, $breakpoint)) {
             padding-top: calc(#{map-get($navbar-heights, $breakpoint)} / 2);
           }
         }
@@ -95,7 +100,7 @@
     }
     + .carousel-fullscreen,
     + .carousel-fullscreen .carousel-item {
-      @media (min-width: $grid-float-breakpoint) {
+      @media (min-width: $pp-header-overlay-breakpoint) {
         height: 100vh;
       }
     }
@@ -453,6 +458,18 @@
     top: 6px;
   }
 }
+@media (min-width: $pp-header-overlay-breakpoint) and (max-width: $grid-float-breakpoint - 1) {
+  .navbar-default-transition:not(.navbar-transition) {
+    .navbar-toggler-icon {
+      &, &:before, &:after {
+        background: white;
+      }
+    }
+    #mainnavigation {
+      background: $navbar-light-bg;
+    }
+  }
+}
 
 
 //
@@ -487,7 +504,7 @@
     max-height: map-get($navbar-heights, xs) - 30;
   }
 }
-@media (min-width: $grid-float-breakpoint) {
+@media (min-width: $pp-header-overlay-breakpoint) {
   .navbar {
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
   }
@@ -495,19 +512,24 @@
   .navbar-inverse-transition:not(.navbar-transition) {
     background: transparent !important;
     box-shadow: none;
-    .navbar-nav > li {
-      > .nav-link,
-      > .nav-link:hover,
-      > .nav-link:focus {
-        color: #ffffff !important;
-      }
-    }
     .navbar-brand {
       > .navbar-brand-logo-normal {
         display: none;
       }
       > .navbar-brand-logo-inverted {
         display: block;
+      }
+    }
+  }
+}
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-default-transition:not(.navbar-transition),
+  .navbar-inverse-transition:not(.navbar-transition) {
+    .navbar-nav > li {
+      > .nav-link,
+      > .nav-link:hover,
+      > .nav-link:focus {
+        color: #ffffff !important;
       }
     }
   }
