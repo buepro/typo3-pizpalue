@@ -328,9 +328,6 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
   .navbar-nav:last-child {
     margin-left: auto;
   }
-  .navbar-toggler {
-    width: 22px;
-  }
 }
 
 
@@ -402,10 +399,17 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 //
 // Toggler
 //
+$pp-header-toggler-width: 34px !default;
+$pp-header-toggler-padding: 6px !default;
+$pp-header-toggler-line-gap: round($pp-header-toggler-width / 5.67) !default;
+$pp-header-toggler-line-width: $pp-header-toggler-width - 2 * $pp-header-toggler-padding !default;
+$pp-header-toggler-line-height: round($pp-header-toggler-line-width / 11) !default;
+$pp-header-toggler-margin-right: -$pp-header-toggler-padding !default;
 .navbar-toggler {
+  margin-right: $pp-header-toggler-margin-right;
   padding: 0;
-  height: 34px;
-  width: 34px;
+  height: $pp-header-toggler-width;
+  width: $pp-header-toggler-width;
   position: relative;
   border: 0;
   &:focus {
@@ -421,8 +425,8 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
   top: 0;
   background-image: none!important;
   display: inline-block;
-  width: 22px;
-  height: 2px;
+  width: $pp-header-toggler-line-width;
+  height: $pp-header-toggler-line-height;
   background-color: currentColor;
   transition: all 0.3s ease-in;
 }
@@ -445,17 +449,17 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 .navbar-toggler.collapsed {
   .navbar-toggler-icon {
     transition-delay: 0.2s;
-    height: 2px;
+    height: $pp-header-toggler-line-height;
   }
   .navbar-toggler-icon:before {
     transition-delay: 0s;
     transform: rotate(0);
-    top: -6px;
+    top: -$pp-header-toggler-line-gap;
   }
   .navbar-toggler-icon:after {
     transition-delay: 0s;
     transform: rotate(0);
-    top: 6px;
+    top: $pp-header-toggler-line-gap;
   }
 }
 @media (min-width: $pp-header-overlay-breakpoint) and (max-width: $grid-float-breakpoint - 1) {
