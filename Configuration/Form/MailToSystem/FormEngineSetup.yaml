@@ -9,67 +9,20 @@ TYPO3:
         standard:
 
           #===================
-          # Adds localization
+          # Add localization
           #===================
           formEngine:
             translationFiles:
               110: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
 
           #======================
-          # Defines the finisher
+          # Define the finisher
           #======================
           finishersDefinition:
             EmailToSystem:
               FormEngine:
-                label: 'formEditor.elements.Form.editor.finishers.MailToSystem.label'
+                __inheritances:
+                  10: TYPO3.CMS.Form.prototypes.standard.finishersDefinition.EmailToReceiver.FormEngine
+                label: formEditor.elements.Form.editor.finishers.MailToSystem.label
                 elements:
-                  subject:
-                    label: 'tt_content.finishersDefinition.EmailToSender.subject.label'
-                    config:
-                      type: 'input'
-                      eval: 'required'
-                  recipientAddress:
-                    label: 'tt_content.finishersDefinition.EmailToSystem.recipientAddress.label'
-                    config:
-                      type: 'input'
-                      eval: 'required'
-                  recipientName:
-                    label: 'tt_content.finishersDefinition.EmailToSystem.recipientName.label'
-                    config:
-                      type: 'input'
-                  senderAddress:
-                    label: 'tt_content.finishersDefinition.EmailToSender.senderAddress.label'
-                    config:
-                      type: 'input'
-                      eval: 'required'
-                  senderName:
-                    label: 'tt_content.finishersDefinition.EmailToSender.senderName.label'
-                    config:
-                      type: 'input'
-                  replyToAddress:
-                    label: 'tt_content.finishersDefinition.EmailToSender.replyToAddress.label'
-                    config:
-                      type: 'input'
-                  carbonCopyAddress:
-                    label: 'tt_content.finishersDefinition.EmailToSender.carbonCopyAddress.label'
-                    config:
-                      type: 'input'
-                  blindCarbonCopyAddress:
-                    label: 'tt_content.finishersDefinition.EmailToSender.blindCarbonCopyAddress.label'
-                    config:
-                      type: 'input'
-                  format:
-                    label: 'tt_content.finishersDefinition.EmailToSender.format.label'
-                    config:
-                      type: select
-                      renderType: 'selectSingle'
-                      minitems: 1
-                      maxitems: 1
-                      size: 1
-                      items:
-                        10:
-                          0: 'tt_content.finishersDefinition.EmailToSender.format.1'
-                          1: 'html'
-                        20:
-                          0: 'tt_content.finishersDefinition.EmailToSender.format.2'
-                          1: 'plaintext'
+                  title:
