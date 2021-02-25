@@ -15,6 +15,18 @@ Installation
 Refer to TYPO3 documentation for further details on
 `installing extensions <https://docs.typo3.org/m/typo3/guide-installation/master/en-us/ExtensionInstallation/Index.html>`__.
 
+.. _admin_installation_static_templates:
+
+Static templates
+----------------
+
+In an installation using `container_elements`, `news`, `eventnews` and `ws_flexslider` the following static extension
+templates would be included:
+
+.. figure:: ../Images/Administration/Installation_Static_templates.jpg
+   :width: 800px
+   :alt: Included static extension templates
+
 .. _admin_installation_supported_extensions:
 
 Supported extensions
@@ -46,6 +58,12 @@ module.
 
 Upgrade
 =======
+
+.. note::
+   Upgrade tasks are only needed to be carried out in case breaking changes were introduced between the old and new
+   release. Breaking changes are marked with `[!!!]` in the
+   `commit messages <https://github.com/buepro/typo3-pizpalue/commits/master>`__. The :ref:`changelogs <changelog>`
+   might contain a section listing introduced breaking changes.
 
 The following upgrade descriptions are available:
 
