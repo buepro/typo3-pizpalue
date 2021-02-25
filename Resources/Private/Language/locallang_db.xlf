@@ -68,6 +68,9 @@
 			<trans-unit id="tx_pizpalue_ttc.background_image_variants">
 				<source>Background image variants</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.background_image_variants.description">
+				<source>Select "Full page width" when the background image covers the entire page width and select "Default" when it covers the content element width.</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.image_variants.content">
 				<source>Default (content width)</source>
 			</trans-unit>

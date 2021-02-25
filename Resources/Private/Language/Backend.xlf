@@ -205,6 +205,13 @@
 				<source>Set popover</source>
 			</trans-unit>
 
+			<trans-unit id="flash-message-change-setting">
+				<source>Pizpalue changed a setting</source>
+			</trans-unit>
+			<trans-unit id="flash-message-image-variants-changed">
+				<source>The image variants changed. Please check if the current setting is fine.</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

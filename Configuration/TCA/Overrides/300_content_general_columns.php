@@ -159,11 +159,12 @@ defined('TYPO3_MODE') || die();
                 'exclude' => true,
                 'displayCond' => 'FIELD:frame_class:!=:none',
                 'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background_image_variants',
+                'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background_image_variants.description',
                 'default' => 'pageVariants',
                 'config' => [
                     'type' => 'select',
                     'renderType' => 'selectSingle',
-                    'default' => 'variants',
+                    'default' => 'pageVariants',
                     'items' => [
                         ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.content', 'variants'],
                         ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
