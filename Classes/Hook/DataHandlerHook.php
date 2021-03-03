@@ -21,8 +21,8 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
  */
 class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
 {
-    private array $imageContainingTypes = ['image', 'media', 'textpic', 'textmedia', 'carousel'];
-    private array $incomingFieldArray = [];
+    private $imageContainingTypes = ['image', 'media', 'textpic', 'textmedia', 'carousel'];
+    private $incomingFieldArray = [];
 
     /**
      * Hook: processDatamap_preProcessFieldArray
