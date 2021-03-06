@@ -1,6 +1,7 @@
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/AppIcon.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Plugins.typoscript'
-@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Libs.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/RTE.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Various.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Constants.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/ContentElement/Setup.typoscript'
 [{$pizpalue.menu.fast.enable}]

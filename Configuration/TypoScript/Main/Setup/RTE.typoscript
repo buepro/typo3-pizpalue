@@ -1,0 +1,24 @@
+# Allow to add curly braces to be treated of type getText in RTE editor
+# @see https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html
+lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 1
+
+# Allow TS setup constants in links
+lib.parseFunc_RTE {
+    tags {
+        a {
+            typolink.parameter {
+                parseFunc {
+                    constants = 1
+                    plainTextStdWrap.replacement {
+                        10 {
+                            search = #(\s)#i
+                            replace =
+                            useRegExp = 1
+                        }
+                    }
+                }
+            }
+            parseFunc.constants = 1
+        }
+    }
+}
