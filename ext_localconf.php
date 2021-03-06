@@ -107,19 +107,6 @@ defined('TYPO3_MODE') || die();
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['pp'][] = 'Buepro\\Pizpalue\\ViewHelpers';
 
     /**
-     * Backend styling TYPO3 9
-     */
-    if (TYPO3_MODE === 'BE') {
-        $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
-        $signalSlotDispatcher->connect(
-            \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,
-            'afterExtensionInstall',
-            \Buepro\Pizpalue\Service\BrandingService::class,
-            'setBackendStyling'
-        );
-    }
-
-    /**
      * Additional content elements
      */
     if (1) {
@@ -150,17 +137,6 @@ defined('TYPO3_MODE') || die();
      */
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']
         ['pizpalue'] = \Buepro\Pizpalue\Hook\DataHandlerHook::class;
-
-    /**
-     * Signal: After extension installation handler used to copy translations
-     */
-    $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
-    $signalSlotDispatcher->connect(
-        \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,
-        'afterExtensionInstall',
-        \Buepro\Pizpalue\Slot\ExtensionInstallUtility::class,
-        'afterExtensionInstall'
-    );
 
     /**
      * Extension news

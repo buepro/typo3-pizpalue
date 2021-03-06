@@ -8,13 +8,19 @@ declare(strict_types = 1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\Slot;
+namespace Buepro\Pizpalue\Service;
 
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent;
 
-class ExtensionInstallUtility
+class ExtensionInstallService
 {
+    public function __invoke(AfterPackageActivationEvent $event): void
+    {
+        $this->afterExtensionInstall($event->getPackageKey());
+    }
+
     /**
      * Copies the translation files for the bootstrap_package to the typo3conf/l10n directory.
      *
