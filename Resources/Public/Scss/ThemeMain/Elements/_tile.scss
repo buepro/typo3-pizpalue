@@ -14,21 +14,23 @@
     display: block;
     content: "";
   }
-  > .frame-container {
+  > .frame-container, > .frame-backgroundimage-container {
     position: absolute;
     left: $pp-tile-gutter;
     top: $pp-tile-gutter;
     right: $pp-tile-gutter;
     bottom: $pp-tile-gutter;
+    width: auto;
+    height: auto;
+  }
+  > .frame-container {
     overflow: hidden;
     margin: 0;
-    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-
 //
 // Side ratios
 //
