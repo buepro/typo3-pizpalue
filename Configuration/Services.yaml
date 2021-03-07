@@ -4,6 +4,12 @@ services:
       - name: event.listener
         identifier: 'buepro/pizpalue/set-backend-styling'
         event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
+  Buepro\Pizpalue\Backend\ToolbarItem\VersionToolbarItem:
+    tags:
+      -
+        name: event.listener
+        identifier: 'buepro/pizpalue/add-version-information'
+        event: TYPO3\CMS\Backend\Backend\Event\SystemInformationToolbarCollectorEvent
   Buepro\Pizpalue\Service\ExtensionInstallService:
     tags:
       - name: event.listener

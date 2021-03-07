@@ -22,6 +22,16 @@ defined('TYPO3_MODE') || die();
     }
 
     /**
+     * Register icons
+     */
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry->registerIcon(
+        'systeminformation-pizpalue',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:pizpalue/Resources/Public/Icons/SystemInformation/pizpalue.svg']
+    );
+
+    /**
      * TS: Register custom EXT:form configurations
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
@@ -113,7 +123,6 @@ defined('TYPO3_MODE') || die();
         /**
          * Register icons
          */
-        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
         $icons = ['modal-dialog', 'list-categorized-content', 'schema', 'picoverlay'];
         foreach ($icons as $icon) {
             $iconRegistry->registerIcon(
