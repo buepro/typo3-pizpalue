@@ -85,6 +85,7 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
                 );
                 $flashMessageService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Messaging\FlashMessageService::class);
                 $messageQueue = $flashMessageService->getMessageQueueByIdentifier();
+                /** @extensionScannerIgnoreLine */
                 $messageQueue->addMessage($message);
             }
         }
