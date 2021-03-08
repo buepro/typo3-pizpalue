@@ -196,6 +196,24 @@ if ( typeof pp !== 'undefined' ) {
     });
 
     /**
+     * Link parent frame to url defined with anchor using the class `pp-link-frame`
+     */
+    $('.pp-extend-link').each(function () {
+        var $this = $(this);
+        if ($this.attr('href')) {
+            var classAttr = $this.attr('class');
+            var targetClass = 'frame-container';
+            var match = classAttr.match(/ppc-el-([\w|-]+)/);
+            if ( match && match[1] ) targetClass = match[1];
+            $this.closest('.' + targetClass)
+                .css('cursor', 'pointer')
+                .click(function () {
+                    window.location.href = $this.attr('href')
+                });
+        }
+    })
+
+    /**
      * Bootstrap popovers
      * ------------------
      * Ensures just one popover is open at a time and closes all popovers on clicking outside a popover.

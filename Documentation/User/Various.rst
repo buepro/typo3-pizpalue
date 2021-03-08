@@ -177,6 +177,15 @@ pp-row-child-height           Elements in a row using this class will have their
                               content elements.
 pp-below-header               Used to shift a content element below the page header by applying a negative
                               top margin.
+pp-extend-link                Assign this class to a link to make the closest ancestor container with class
+                              `frame-container` linked to the same url. Alternatively the ancestor container
+                              can be defined by the class `ppc-el-[ancestorclass name]`.
+ppc-el-[ancestor class name]  Used in conjunction with the class `pp-extend-link`. Overwrites the default
+                              link ancestor. Replace `[ancestor class name]` with the class used in the
+                              ancestor container. As an example when assigning the classes
+                              `pp-extend-link ppc-el-up-my-container` to an a-tag the closest ancestor from
+                              the link having the class `up-my-container` assigned to will be linked to
+                              the same url as defined in the a-tag.
 ============================= =============================================================================
 
 
