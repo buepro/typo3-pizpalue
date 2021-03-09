@@ -139,6 +139,29 @@ defined('TYPO3_MODE') || die();
                     ],
                 ],
             ],
+            'tx_pizpalue_image_aspect_ratio' => [
+                'exclude' => true,
+                'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_aspect_ratio',
+                'config' => [
+                    'type' => 'input',
+                    'default' => 0.0,
+                    'size' => 6,
+                    'is_in' => '.0123456789',
+                    'eval' => 'is_in,trim',
+                    'valuePicker' => [
+                        'items' => [
+                            ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.undefined', 0.0],
+                            ['2:1', 2.0],
+                            ['16:9', 1.7778],
+                            ['4:3', 1.3333],
+                            ['1:1', 1.0],
+                            ['3:4', 0.75],
+                            ['9:16', 0.5625],
+                            ['1:2', 0.5]
+                        ],
+                    ],
+                ]
+            ],
             'tx_pizpalue_layout_breakpoint' => [
                 'exclude' => true,
                 'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint',
@@ -278,7 +301,7 @@ defined('TYPO3_MODE') || die();
      */
     if (1) {
         $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_imagesize'] = [
-            'showitem' => 'tx_pizpalue_image_scaling, tx_pizpalue_image_variants',
+            'showitem' => 'tx_pizpalue_image_scaling, tx_pizpalue_image_variants, tx_pizpalue_image_aspect_ratio',
         ];
         $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_behaviour'] = [
             'showitem' => 'tx_pizpalue_animation',

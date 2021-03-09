@@ -14,6 +14,7 @@ CREATE TABLE tt_content (
     tx_pizpalue_animation varchar(255) DEFAULT '' NOT NULL,
     tx_pizpalue_image_variants varchar(255) DEFAULT 'variants' NOT NULL,
     tx_pizpalue_background_image_variants varchar(255) DEFAULT 'pageVariants' NOT NULL,
-    tx_pizpalue_image_scaling text
+    tx_pizpalue_image_scaling text,
+    tx_pizpalue_image_aspect_ratio float DEFAULT 0 NOT NULL
 
 );

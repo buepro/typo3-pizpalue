@@ -4,6 +4,9 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+			<trans-unit id="tx_pizpalue_ttc.undefined">
+				<source>Undefined</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.attributes">
 				<source>Attributes</source>
 			</trans-unit>
@@ -62,8 +65,14 @@
 				<source>Rubber band</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.image_scaling">
+				<source>Scaling</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.image_variants">
-				<source>Image variants</source>
+				<source>Variants</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.image_aspect_ratio">
+				<source>Aspect ratio</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.background_image_variants">
 				<source>Background image variants</source>
@@ -76,10 +85,6 @@
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.image_variants.page">
 				<source>Full page width</source>
-			</trans-unit>
-
-			<trans-unit id="tx_pizpalue_ttc.image_scaling">
-				<source>Image scaling</source>
 			</trans-unit>
 
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-parent-height">
