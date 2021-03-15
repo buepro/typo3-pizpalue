@@ -126,6 +126,7 @@ class PopoverLinkHandler implements LinkHandlerInterface
             $content = str_replace(['·', '<br />'], [' ', "\r\n"], $content);
             $this->view->assign('content', $content);
         }
+        /** @extensionScannerIgnoreLine */
         return $this->view->render('PpPopover');
     }
 }
