@@ -33,8 +33,19 @@
   }
 }
 
+//
+// Set headings color and link style
+// Remark: The headings color wasn't correct when $headings-color was defined
+//
 @each $name, $settings in $frame-backgrounds {
   .frame-background-#{$name} {
+    .element-header, .element-subheader {
+      $color: color-yiq(map-get($settings, background));
+      @if (map-get($settings, headings-color)) {
+        $color: map-get($settings, headings-color);
+      }
+      color: $color;
+    }
     @include pp-make-link($settings);
   }
 }
