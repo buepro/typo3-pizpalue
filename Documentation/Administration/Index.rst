@@ -46,6 +46,12 @@ tt_address                       5.2.0
 timelog                          1.6.0
 ================================ ================
 
+Structure elements
+------------------
+
+Currently the extensions `gridelements`, `flux`, and `container` are supported. It is strongly recommended to just
+use one from the mentioned extensions due to possible conflicts that might occur when using them concurrently.
+
 .. _admin_update:
 
 Update

@@ -24,6 +24,37 @@ Installation
 #. Install the extension `pizpalue`
 #. Install the extension `user_customer`
 
+---
+
+**Q**: I have to use `gridelements` and `container` together. After updating `container` to version 1.3.0 the container
+child elements aren't shown any more. How can this be fixed?
+
+**A**: It might be related to the initial installation sequence from the structure extensions. You might try to order
+the package listing in `typo3conf/PackageStates.php`:
+
+.. code-block:: php
+
+   'vhs' => [
+      'packagePath' => 'typo3conf/ext/vhs/',
+   ],
+   'gridelements' => [
+      'packagePath' => 'typo3conf/ext/gridelements/',
+   ],
+   'pp_gridelements' => [
+      'packagePath' => 'typo3conf/ext/pp_gridelements/',
+   ],
+   'flux' => [
+      'packagePath' => 'typo3conf/ext/flux/',
+   ],
+   'flux_elements' => [
+      'packagePath' => 'typo3conf/ext/flux_elements/',
+   ],
+   'container' => [
+      'packagePath' => 'typo3conf/ext/container/',
+   ],
+   'container_elements' => [
+      'packagePath' => 'typo3conf/ext/container_elements/',
+   ],
 
 Translation
 ===========
