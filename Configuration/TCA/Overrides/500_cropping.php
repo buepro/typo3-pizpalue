@@ -65,4 +65,23 @@ defined('TYPO3') || die('Access denied.');
         $cropVariants['small']['allowedAspectRatios'] = $aspectRatios;
         $cropVariants['extrasmall']['allowedAspectRatios'] = $aspectRatios;
     }
+    
+    /**
+     * Assigns side ratios to Extension news
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
+        $cropVariants = &$GLOBALS['TCA']['tx_news_domain_model_news']['types'][0]['columnsOverrides']['fal_media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
+        $cropVariants['default']['title'] = 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default';
+        $cropVariants['default']['allowedAspectRatios'] = $aspectRatios;
+        $cropVariants['large']['title'] = 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large';
+        $cropVariants['large']['allowedAspectRatios'] = $aspectRatios;
+        $cropVariants['medium']['title'] = 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium';
+        $cropVariants['medium']['allowedAspectRatios'] = $aspectRatios;
+        $cropVariants['small']['title'] = 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small';
+        $cropVariants['small']['allowedAspectRatios'] = $aspectRatios;
+        $cropVariants['extrasmall']['title'] = 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.extrasmall';
+        $cropVariants['extrasmall']['allowedAspectRatios'] = $aspectRatios;
+    }
+
+
 })();
