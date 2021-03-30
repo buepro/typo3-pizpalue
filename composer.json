@@ -28,10 +28,10 @@
     ],
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "typo3/cms-core": "^10.4.11 || dev-master",
-        "typo3/cms-impexp": "^10.4 || dev-master",
-        "bk2k/bootstrap-package": "^11.0.2 || dev-master",
-        "fluidtypo3/vhs": "^6.0.3 || dev-master"
+        "typo3/cms-core": "^10.4.11 || 11.*.*@dev",
+        "typo3/cms-impexp": "^10.4 || 11.*.*@dev",
+        "bk2k/bootstrap-package": "^11.0.2 || 12.0.*@dev",
+        "fluidtypo3/vhs": "^6.0.3 || dev-development"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
@@ -48,6 +48,9 @@
     "extra": {
         "typo3/cms": {
             "extension-key": "pizpalue"
+        },
+        "branch-alias": {
+            "dev-master": "12.0.x-dev"
         }
     }
 }
