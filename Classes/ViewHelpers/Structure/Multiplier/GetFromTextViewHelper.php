@@ -16,6 +16,8 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * Class GetFromTextViewHelper
+ *
+ * @deprecated Use pp:data.imageVariantsTextToArray view helper instead. Will be removed in version 12.
  */
 class GetFromTextViewHelper extends AbstractViewHelper
 {

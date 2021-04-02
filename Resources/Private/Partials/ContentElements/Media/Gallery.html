@@ -1,4 +1,7 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 <f:if condition="{files}">
     <f:variable name="imagecols">1</f:variable>
     <f:if condition="{files -> f:count()} > 1">
@@ -11,8 +14,15 @@
         Apply additional scaling as defined in field `data.tx_pizpalue_image_scaling`
     -------------------------------------------------------------------------------------------------------------------
     </f:comment>
-    {pp:structure.multiplier.getFromText(text: data.tx_pizpalue_image_scaling, as: '_multiplier')}
+    {pp:data.imageVariantsTextToArray(as: '_multiplier', text: data.tx_pizpalue_image_scaling, default: 1.0)}
     <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{_multiplier}" />
+    <f:comment>
+    ===================================================================================================================
+        Update image ratios with values defined in `data.tx_pizpalue_image_ratio`
+    -------------------------------------------------------------------------------------------------------------------
+    </f:comment>
+    {pp:data.imageVariantsTextToArray(as: '_aspectRatio', text: data.tx_pizpalue_image_aspect_ratio, default: 0.0)}
+    {pp:data.imageVariants(as: 'variants', variants: variants, aspectRatio: _aspectRatio)}
     <f:comment>
     ===================================================================================================================
     </f:comment>
