@@ -8,7 +8,10 @@
             <f:if condition="{newsItem.author}">
                 <li>
                     <span class="glyphicon glyphicon-user"></span>
-                    <f:translate arguments="{0:newsItem.author}" key="author"/>
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        {f:translate(key:'author_simple')} <span itemprop="name">{newsItem.author}</span>
+                    </span>
+
                 </li>
             </f:if>
 
