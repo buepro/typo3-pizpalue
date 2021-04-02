@@ -27,17 +27,17 @@
         <f:if condition="{settings.detail.showPrevNext}">
             <n:simplePrevNext as="paginated" news="{newsItem}" pidList="{newsItem.pid}" sortField="datetime">
                 <f:if condition="{paginated}">
-                    <ul class="pager">
+                    <ul class="pagination">
                         <f:if condition="{paginated.prev}">
-                            <li class="previous">
-                                <n:link newsItem="{paginated.prev}" settings="{settings}">
+                            <li class="page-item previous">
+                                <n:link class="page-link previous" newsItem="{paginated.prev}" settings="{settings}">
                                     <span aria-hidden="true">&larr; </span>{paginated.prev.title}
                                 </n:link>
                             </li>
                         </f:if>
                         <f:if condition="{paginated.next}">
-                            <li class="next">
-                                <n:link class="next" newsItem="{paginated.next}" settings="{settings}">
+                            <li class="page-item next">
+                                <n:link class="page-link next" newsItem="{paginated.next}" settings="{settings}">
                                     {paginated.next.title} <span aria-hidden="true"> &rarr;</span>
                                 </n:link>
                             </li>
