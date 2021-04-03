@@ -16,17 +16,8 @@
 <f:spaceless>
     <bk2k:data.imageVariants as="variants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_image_variants}')}" />
     <bk2k:data.imageVariants as="backgroundVariants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_background_image_variants}')}" />
-    <f:comment>
-        <!--
-        Use _colPos from register (set in lib.dynamicContent) to identify the page layout colPos.
-        The colPos-value from content elements used in structure elements (e.g. container) doesn't refer to the
-        page layout colPos-value (refers to the structure element).
-        -->
-    </f:comment>
-    {v:variable.register.get(name: 'colPos') -> f:variable(name: '_colPos')}
-
     <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
-    <f:variable name="columnConfig">{backendlayoutConfig.{_colPos}}</f:variable>
+    <f:variable name="columnConfig">{backendlayoutConfig.{backendlayoutColPos}}</f:variable>
     <f:if condition="{columnConfig}">
         <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{columnConfig.multiplier}" gutters="{columnConfig.gutters}" corrections="{columnConfig.corrections}" />
     </f:if>

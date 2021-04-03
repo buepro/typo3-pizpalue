@@ -131,3 +131,20 @@ lib.contentElement {
         }
     }
 }
+
+#=========================================================#
+# Pass colPos from backend layout (bootstrap_package #957)
+#=========================================================#
+lib.contentElement {
+    variables {
+        # This is needed in case the content element is rendered out of the structure context (e.g. in a structure
+        # element like container columns). The register `colPos` is set in `lib.dynamicContent`.
+        backendlayoutColPos = TEXT
+        backendlayoutColPos {
+            # Set default
+            value = 0
+            # Set from register if set
+            override.data = register:colPos
+        }
+    }
+}
