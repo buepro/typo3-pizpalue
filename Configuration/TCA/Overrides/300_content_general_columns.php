@@ -301,7 +301,7 @@ defined('TYPO3') || die('Access denied.');
      */
     if (1) {
         $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_imagesize'] = [
-            'showitem' => 'tx_pizpalue_image_scaling, tx_pizpalue_image_variants, tx_pizpalue_image_aspect_ratio',
+            'showitem' => 'tx_pizpalue_image_variants, tx_pizpalue_image_scaling, tx_pizpalue_image_aspect_ratio',
         ];
         $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_behaviour'] = [
             'showitem' => 'tx_pizpalue_animation',
