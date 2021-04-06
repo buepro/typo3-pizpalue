@@ -24,6 +24,7 @@ $EM_CONF[$_EXTKEY] = [
         ],
         'conflicts' => [],
         'suggests'  => [
+            'news'                  => '',
             'pp_gridelements'       => '',
             'flux_elements'         => '',
             'container_elements'    => '',

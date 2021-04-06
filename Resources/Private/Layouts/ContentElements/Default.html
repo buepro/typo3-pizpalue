@@ -14,6 +14,7 @@
     -->
 </f:comment>
 <f:spaceless>
+    <f:comment>====================== Variants ======================</f:comment>
     <bk2k:data.imageVariants as="variants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_image_variants}')}" />
     <bk2k:data.imageVariants as="backgroundVariants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_background_image_variants}')}" />
     <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
@@ -22,6 +23,11 @@
         <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{columnConfig.multiplier}" gutters="{columnConfig.gutters}" corrections="{columnConfig.corrections}" />
     </f:if>
 
+    <f:comment>---------- Save variants to have them available in plugins ----------</f:comment>
+    {variants -> v:variable.register.set(name: 'variants')}
+    {backgroundVariants -> v:variable.register.set(name: 'backgroundVariants')}
+
+    <f:comment>====================== Class attribute ======================</f:comment>
     <f:variable name="frameClass">frame-{data.frame_class}</f:variable>
     <f:variable name="typeClass">frame-type-{data.CType}</f:variable>
     <f:variable name="layoutClass">frame-layout-{data.layout}</f:variable>

@@ -6,6 +6,11 @@
 
 <f:section name="content">
     <f:if condition="{newsItem}">
+        <f:comment>
+            ==================================================
+            seo related
+            ==================================================
+        </f:comment>
         <n:format.nothing>
             <n:excludeDisplayedNews newsItem="{newsItem}"/>
             <f:if condition="{settings.detail.showMetaTags}">
@@ -24,6 +29,11 @@
                 </f:else>
             </f:if>
         </n:format.nothing>
+        <f:comment>
+            ==================================================
+            prev-next pagination
+            ==================================================
+        </f:comment>
         <f:if condition="{settings.detail.showPrevNext}">
             <n:simplePrevNext as="paginated" news="{newsItem}" pidList="{newsItem.pid}" sortField="datetime">
                 <f:if condition="{paginated}">
@@ -46,6 +56,11 @@
                 </f:if>
             </n:simplePrevNext>
         </f:if>
+        <f:comment>
+            ==================================================
+            main content
+            ==================================================
+        </f:comment>
         <f:if condition="{newsItem.mediaNonPreviews}">
             <f:then>
                 <f:render arguments="{_all}" section="headline"/>
@@ -56,16 +71,11 @@
                     <pp:render.bootstrap.column class="col-md-4" count="2">
                         <f:for as="mediaElement" each="{newsItem.mediaNonPreviews}">
                             <div class="thumbnail">
-                                <f:media alt="{mediaElement.originalResource.alternative}" class="img-responsive"
-                                         file="{mediaElement}"
-                                         height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}"
-                                         title="{mediaElement.originalResource.title}"
-                                         width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.width)}"/>
-                                <f:if condition="{mediaElement.description}">
-                                    <div class="caption">
-                                        {mediaElement.description}
-                                    </div>
-                                </f:if>
+                                <f:render partial="Plugin/RenderMedia" arguments="{
+                                    file: mediaElement.originalResource,
+                                    data: newsItem,
+                                    settings: settings,
+                                    variants: variants}" />
                             </div>
                         </f:for>
                     </pp:render.bootstrap.column>
@@ -75,6 +85,18 @@
                 <f:render arguments="{_all}" section="headline"/>
                 <f:render arguments="{_all}" section="inner-content"/>
             </f:else>
+        </f:if>
+        <f:comment>
+            ==================================================
+            back link
+            ==================================================
+        </f:comment>
+        <f:if condition="{settings.backPid}">
+            <div class="ppc-back">
+                <f:link.page class="btn btn-default" pageUid="{settings.backPid}">
+                    <f:translate key="back-link"/>
+                </f:link.page>
+            </div>
         </f:if>
     </f:if>
 </f:section>
@@ -226,18 +248,6 @@
                     </li>
                 </f:for>
             </ul>
-        </div>
-    </f:if>
-    <f:comment>
-        ==================================================
-        back link
-        ==================================================
-    </f:comment>
-    <f:if condition="{settings.backPid}">
-        <div class="ppc-back">
-            <f:link.page class="btn btn-default" pageUid="{settings.backPid}">
-                <f:translate key="back-link"/>
-            </f:link.page>
         </div>
     </f:if>
 </f:section>

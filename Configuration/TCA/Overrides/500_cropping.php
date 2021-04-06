@@ -11,7 +11,7 @@ defined('TYPO3') || die('Access denied.');
 
 (static function () {
     /**
-     * Defines side ratios
+     * Define side ratios
      */
     $defaultAspectRatios = $GLOBALS['TCA']['tt_content']['columns']['background_image']['config']['overrideChildTca']
         ['columns']['crop']['config']['cropVariants']['default']['allowedAspectRatios'];
@@ -39,7 +39,7 @@ defined('TYPO3') || die('Access denied.');
     ];
 
     /**
-     * Assigns side ratios to content elements with images
+     * Assign side ratios to content elements with images
      */
     foreach (['image', 'textpic', 'pp_picoverlay'] as $contentElement) {
         if (!isset($GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'])) {
@@ -55,14 +55,30 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * Assigns side ratios to content elements with assets
+     * Assign side ratios to content elements with assets
      */
-    foreach (['media', 'textmedia'] as $contentElement) {
+    foreach (['list', 'media', 'textmedia'] as $contentElement) {
+        if (!isset($GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'])) {
+            $GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] =
+                $GLOBALS['TCA']['tt_content']['types']['media']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
+        }
         $cropVariants = &$GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
         $cropVariants['default']['allowedAspectRatios'] = $aspectRatios;
         $cropVariants['large']['allowedAspectRatios'] = $aspectRatios;
         $cropVariants['medium']['allowedAspectRatios'] = $aspectRatios;
         $cropVariants['small']['allowedAspectRatios'] = $aspectRatios;
         $cropVariants['extrasmall']['allowedAspectRatios'] = $aspectRatios;
+    }
+
+    /**
+     * Assign side ratios to extension news
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
+        $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['label'] = 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.dummyAsset';
+        $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['config']['maxitems'] = 1;
+        foreach ([0, 1, 2] as $type) {
+            $GLOBALS['TCA']['tx_news_domain_model_news']['types'][$type]['columnsOverrides']['fal_media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] =
+                $GLOBALS['TCA']['tt_content']['types']['media']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
+        }
     }
 })();

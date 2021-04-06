@@ -53,6 +53,8 @@
     </f:if>
     <f:variable name="finalWidth" value="{bk2k:lastImageInfo(property: 'width')}" />
     <f:variable name="finalHeight" value="{bk2k:lastImageInfo(property: 'height')}" />
-    <img loading="{settings.gallery.imageLoading}" src="{src}" width="{finalWidth}" height="{finalHeight}" intrinsicsize="{finalWidth}x{finalHeight}" title="{file.properties.title}" alt="{file.properties.alternative}">
+    {f:variable(name: '_loading', value: 'lazy')}
+    {f:variable(name: '_loading', value: settings.gallery.imageLoading) -> f:if(condition: settings.gallery.imageLoading)}
+    <img loading="{_loading}" src="{src}" width="{finalWidth}" height="{finalHeight}" intrinsicsize="{finalWidth}x{finalHeight}" title="{file.properties.title}" alt="{file.properties.alternative}">
 </picture>
 </html>

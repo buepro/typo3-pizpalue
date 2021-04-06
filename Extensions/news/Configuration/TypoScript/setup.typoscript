@@ -18,3 +18,12 @@ page.includeCSS.pizpalueNews = EXT:pizpalue/Extensions/news/Resources/Public/Scs
 [{$pizpalue.general.useLess} == 1]
 page.includeCSS.pizpalueNews = EXT:pizpalue/Extensions/news/Resources/Public/Less/general.less
 [END]
+
+
+#=========================================================#
+# Enable responsive images
+#=========================================================#
+plugin.tx_news {
+    view.partialRootPaths.11 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+    view.partialRootPaths.12 = EXT:pizpalue/Resources/Private/Partials/ContentElements/
+}

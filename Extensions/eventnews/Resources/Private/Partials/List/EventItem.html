@@ -10,7 +10,7 @@
             <n:link newsItem="{n}" settings="{settings}" title="{n.title}">
                 <f:if condition="{n.mediaPreviews}">
                     <f:then>
-                        <f:media class="img-responsive" file="{n.mediaPreviews.0}" title="{n.title}" alt="{n.title}" width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}" height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}" />
+                        <f:render partial="Plugin/RenderMedia" arguments="{file: n.mediaPreviews.0.originalResource, data: n, settings: settings, variants: variants}" />
                     </f:then>
                     <f:else>
                         <f:if condition="{settings.displayDummyIfNoMedia}">

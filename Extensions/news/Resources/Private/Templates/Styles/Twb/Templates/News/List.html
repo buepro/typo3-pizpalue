@@ -18,7 +18,7 @@
 							<f:then>
 								<f:for each="{news}" as="newsItem" iteration="iterator">
 									<f:render partial="List/ItemImageTop"
-											  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+											  arguments="{newsItem: newsItem, settings:settings, iterator:iterator, variants: variants}" />
 								</f:for>
 							</f:then>
 							<f:else>
@@ -27,7 +27,7 @@
 												   initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
 									<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
 										<f:render partial="List/ItemImageTop"
-												  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+												  arguments="{newsItem: newsItem, settings:settings, iterator:iterator, variants: variants}" />
 									</f:for>
 								</n:widget.paginate>
 							</f:else>
@@ -40,16 +40,16 @@
 							<f:then>
 								<f:for each="{news}" as="newsItem" iteration="iterator">
 									<f:render partial="List/Item"
-											  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+											  arguments="{newsItem: newsItem, settings:settings, iterator:iterator, variants: variants}" />
 								</f:for>
 							</f:then>
 							<f:else>
 								<n:widget.paginate objects="{news}" as="paginatedNews"
 												   configuration="{settings.list.paginate}"
 												   initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
-									<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+                                    <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
 										<f:render partial="List/Item"
-												  arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+												  arguments="{newsItem: newsItem, settings:settings, iterator:iterator, variants: variants}" />
 									</f:for>
 								</n:widget.paginate>
 							</f:else>

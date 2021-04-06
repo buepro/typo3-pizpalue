@@ -95,4 +95,14 @@ defined('TYPO3') || die('Access denied.');
         'pp-emphasize-media'
     ];
     $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['layout']['config']['items'] = $items;
+
+    /**
+     * Extension news
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
+        $fields = $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['news_pi1'];
+        $fields = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $fields, true);
+        $fields[] = 'assets';
+        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['news_pi1'] = implode(',', $fields);
+    }
 })();

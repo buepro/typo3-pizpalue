@@ -1,7 +1,7 @@
 .news {
   img {
     display: inline-block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 }
@@ -21,7 +21,7 @@
   }
 }
 .news-list-item {
-  img {
+  img.img-dummy {
     margin-bottom: 1.5rem;
   }
   &:nth-last-child(n+2) {

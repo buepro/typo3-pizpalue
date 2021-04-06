@@ -197,6 +197,10 @@
 				<source>Extra large</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.dummyAsset">
+				<source>Dummy asset</source>
+			</trans-unit>
+
 			<trans-unit id="tca.modal_dialog.header">
 				<source>Button text</source>
 			</trans-unit>

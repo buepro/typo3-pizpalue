@@ -363,6 +363,12 @@ defined('TYPO3') || die('Access denied.');
             'carousel,carousel_fullscreen,carousel_small',
             'after: pi_flexform'
         );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            'tx_pizpalue_image_variants',
+            'list',
+            'after: list_type'
+        );
     }
 })();
 
