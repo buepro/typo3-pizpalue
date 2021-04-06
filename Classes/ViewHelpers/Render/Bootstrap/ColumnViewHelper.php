@@ -56,6 +56,8 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
     {
         parent::initializeArguments();
         $this->registerUniversalTagAttributes();
+        $this->registerTagAttribute('itemscope', 'string', 'Itemscope attribute');
+        $this->registerTagAttribute('itemtype', 'string', 'Itemtype attribute');
         $this->registerArgument('count', 'int', 'Column count in row', false, 1);
         $this->registerArgument('tagName', 'string', 'Tag name', false, 'div');
     }

@@ -27,7 +27,8 @@
         </n:link>
     </pp:render.bootstrap.column>
 
-    <div class="col-md-9 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <pp:render.bootstrap.column class="col-md-9 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+                                itemscope="itemscope" itemtype="http://schema.org/Article" count="2">
         <h3 itemprop="headline">
             <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
                 {newsItem.title}
@@ -53,6 +54,6 @@
         <n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-default btn-read-more" title="{newsItem.title}">
             <f:translate key="more-link" />
         </n:link>
-    </div>
+    </pp:render.bootstrap.column>
 </div>
 </html>
