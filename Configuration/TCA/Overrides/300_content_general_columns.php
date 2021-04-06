@@ -11,6 +11,7 @@ defined('TYPO3') || die('Access denied.');
 
 /**
  * Add fields to content elements
+ * @todo Split file into logical groups
  */
 (function () {
     /**
