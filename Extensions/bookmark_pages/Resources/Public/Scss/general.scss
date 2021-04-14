@@ -1,0 +1,40 @@
+.bookmark-pages {
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropdown-item {
+    .bookmark-ajax-submit {
+      margin-left: 1.5em;
+      margin-bottom: 0.2em;
+    }
+  }
+  .btn {
+    &.dropdown-toggle-split:after {
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    &.bookmark-this-page {
+      display: block;
+      +.ppc-bookmarked {
+        display: none;
+      }
+      &.is-bookmarked {
+        display: none;
+        +.ppc-bookmarked {
+          display: block;
+        }
+      }
+    }
+  }
+  .ppicon {
+    text-decoration: none;
+  }
+}
+.bookmarks-list.ppc-complementary {
+  &, & li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

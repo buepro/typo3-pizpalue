@@ -1,0 +1,11 @@
+plugin.tx_bookmarkpages {
+    view {
+        templateRootPaths.20 = EXT:pizpalue/Extensions/bookmark_pages/Resources/Private/Templates
+        partialRootPaths.20 = EXT:pizpalue/Extensions/bookmark_pages/Resources/Private/Partials
+    }
+}
+
+page {
+    includeCSS.pizpalueBookmarkPages = EXT:pizpalue/Extensions/bookmark_pages/Resources/Public/Scss/general.scss
+    includeJSFooterlibs.bookmark_pages_jquery >
+}

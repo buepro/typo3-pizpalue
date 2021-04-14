@@ -92,6 +92,13 @@ defined('TYPO3') || die('Access denied.');
             'Pizpalue - felogin'
         );
     }
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('bookmark_pages')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $_EXTKEY,
+            'Extensions/bookmark_pages/Configuration/TypoScript',
+            'Pizpalue - bookmark_pages'
+        );
+    }
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('indexed_search')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,

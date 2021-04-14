@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:t="http://typo3.org/ns/Helhum/TyposcriptRendering/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="main">
+    <f:if condition="{settings.listType} === 'alternative'">
+        <f:then>
+            <ul class="bookmarks-list ppc-complementary"></ul>
+        </f:then>
+        <f:else>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bookmarks
+                </button>
+                <button type="button" class="btn btn-default bookmark-ajax-submit bookmark-this-page" title="{f:translate(key: 'bookmarkThisPage', extensionName: 'bookmarkPages')}">
+                    <i class="ppicon ppicon-star-regular"></i>
+                </button>
+                <button type="button" class="btn btn-default ppc-bookmarked">
+                    <i class="ppicon ppicon-star-solid"></i>
+                </button>
+                <ul class="bookmarks-list dropdown-menu"></ul>
+                <template id="bookmark-template">
+                    <f:render partial="ListItem" arguments="{bookmark: bookmark}" />
+                </template>
+            </div>
+        </f:else>
+    </f:if>
+</f:section>
+
+</html>
