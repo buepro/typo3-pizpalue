@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /*
  * This file is part of the package buepro/pizpalue.
@@ -14,7 +15,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Used to calculate the structure multiplier.
  */
-class StructureMultiplierUtility
+class StructureUtility
 {
     private static $defaultMultiplier = [
         'extrasmall' => 1,
@@ -70,17 +71,17 @@ class StructureMultiplierUtility
     }
 
     /**
-     * Calculates a new multiplier based on the current one, the column css and the column count
+     * Calculates a new multiplier based on the column css, the column count and a base multiplier
      *
-     * @param array $currentMultiplier
      * @param string $class CSS classes used to define the column
      * @param int $count Columns count in row
+     * @param array $baseMultiplier
      * @return array
      */
-    public static function getMultiplierForColumn(array $currentMultiplier = [], string $class = '', int $count = 1): array
+    public static function getMultiplierForColumn(string $class = '', int $count = 1, array $baseMultiplier = []): array
     {
         // Set initial multiplier
-        $multiplier = array_merge(self::$defaultMultiplier, $currentMultiplier);
+        $multiplier = array_merge(self::$defaultMultiplier, $baseMultiplier);
         $multiplier = array_intersect_key($multiplier, self::$defaultMultiplier);
         // Calculate new multipliers
         $items = GeneralUtility::trimExplode(' ', $class, true);

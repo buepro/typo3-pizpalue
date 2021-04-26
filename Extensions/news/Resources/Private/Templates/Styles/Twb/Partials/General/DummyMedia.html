@@ -4,8 +4,7 @@
 
 <f:if condition="{settings.dummyAsset}">
     <f:then>
-        {v:variable.register.get(name: 'variants') -> f:variable(name: 'variants')}
-        <f:render partial="Plugin/RenderMedia" arguments="{file: settings.dummyAsset.0, settings: settings, variants: variants}" />
+        <f:render partial="Plugin/RenderMedia" arguments="{file: settings.dummyAsset.0, settings: settings}" />
     </f:then>
     <f:else>
         <f:if condition="{settings.list.media.dummyImage}">

@@ -16,26 +16,8 @@
 <f:spaceless>
     <f:comment>====================== Variants ======================</f:comment>
 
-    <bk2k:data.imageVariants as="variants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_image_variants}')}" />
-    <bk2k:data.imageVariants as="backgroundVariants" variants="{v:variable.get(name: 'settings.responsiveimages.{data.tx_pizpalue_background_image_variants}')}" />
-    <f:variable name="backendlayoutConfig">{settings.responsiveimages.backendlayout.{backendlayout}}</f:variable>
-    <f:variable name="columnConfig">{backendlayoutConfig.{backendlayoutColPos}}</f:variable>
-    <f:if condition="{columnConfig}">
-        <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{columnConfig.multiplier}" gutters="{columnConfig.gutters}" corrections="{columnConfig.corrections}" />
-    </f:if>
-
-    <f:comment>---------- Save variants to have them available in plugins ----------</f:comment>
-
-    {variants -> v:variable.register.set(name: 'variants')}
-    {backgroundVariants -> v:variable.register.set(name: 'backgroundVariants')}
-
-    <f:comment>====================== Pizpalue structure multiplier ======================</f:comment>
-
-    {v:variable.register.get(name: 'structureMultiplier') -> f:variable(name: '_structureMultiplier')}
-    <f:if condition="{_structureMultiplier}">
-        {bk2k:data.imageVariants(as: 'variants', variants: variants, multiplier: _structureMultiplier)}
-        {bk2k:data.imageVariants(as: 'backgroundVariants', variants: backgroundVariants, multiplier: _structureMultiplier)}
-    </f:if>
+    {pp:structure.variants(as: 'variants')}
+    {pp:structure.variants(as: 'backgroundVariants', initialVariants: tx_pizpalue_background_image_variants)}
 
     <f:comment>====================== Class attribute ======================</f:comment>
 

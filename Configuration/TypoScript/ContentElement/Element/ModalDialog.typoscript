@@ -4,27 +4,77 @@ tt_content.pp_modal_dialog {
 
     templateName = ModalDialog
 
-    variables.shortcuts = RECORDS
+    variables.shortcuts >
+    variables.shortcuts = COA
     variables.shortcuts {
-        tables = tt_content
-        conf {
-            pages < lib.dynamicContent
-            pages {
-                5 = LOAD_REGISTER
-                5 {
-                    colPos >
-                    colPos = 0
-                    slide >
-                    slide = 0
-                    pageUid >
-                    pageUid.field = uid
+        10 = TEXT
+        10.stdWrap.preUserFunc = Buepro\Pizpalue\Service\ContentElementService->pushVariantsModifier
+        20 < tt_content.shortcut.variables.shortcuts
+        20 {
+            tables = tt_content
+            conf {
+                pages < lib.dynamicContent
+                pages {
+                    5 = LOAD_REGISTER
+                    5 {
+                        colPos >
+                        colPos = 0
+                        slide >
+                        slide = 0
+                        pageUid >
+                        pageUid.field = uid
+                    }
                 }
             }
         }
+        90 = TEXT
+        90.stdWrap.preUserFunc = Buepro\Pizpalue\Service\ContentElementService->popVariantsModifier
     }
 
     dataProcessing {
         10 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor
     }
 
+}
+
+lib.contentElement.settings.responsiveimages.contentelements.pp_modal_dialog {
+    xl {
+        default {
+            breakpoint = 1200
+            width = 1140
+        }
+        large {
+            breakpoint = 992
+            width = 800
+        }
+        medium {
+            breakpoint = 768
+            width = 500
+        }
+        small {
+            breakpoint = 576
+            width = 500
+        }
+        extrasmall {
+            breakpoint = unset
+            width = 542
+        }
+    }
+    lg < .xl
+    lg {
+        default.width = 800
+    }
+    md < .lg
+    md {
+        default.width = 500
+        large.width = 500
+    }
+    sm < .md
+    sm {
+        default.width = 300
+        large.width = 300
+        medium.width = 300
+        small.width = 300
+    }
+    default < .md
 }

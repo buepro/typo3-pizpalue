@@ -1,6 +1,7 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers">
 
 <f:comment>
     ====================================================================================================================
@@ -10,15 +11,11 @@
     - data:     Contains content element related information on how to render the media. For example if it should be
                 enlargeable.
     - settings: Contains more general information on how to render the media. For example if lazy loading should be used.
-    - variants: Holds information about the content available with for each screen category. Might be loaded from
-                register (`{v:variable.register.get(name: 'variants') -> f:variable(name: 'variants')}`)
-
-    The `_structureMultiplier` is updated by the structure elements (e.g. provided by the extension container) and holds
-    information about the content with reduction the parent structure elements introduced.
+    - variants: Holds information about the content width available for each screen category.
     ====================================================================================================================
 </f:comment>
-{v:variable.register.get(name: 'structureMultiplier') -> f:variable(name: '_structureMultiplier')}
-{bk2k:data.imageVariants(as: 'variants', variants: variants, multiplier: _structureMultiplier) -> f:if(condition: _structureMultiplier)}
+
+{pp:structure.variants(as: 'variants') -> f:if(condition: '!{variants}')}
 <f:render partial="Media/Type" arguments="{file: file, data: data, settings: settings, variants: variants}" />
 
 </html>

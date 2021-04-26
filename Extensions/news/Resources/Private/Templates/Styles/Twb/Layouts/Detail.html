@@ -2,8 +2,6 @@
       xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-{v:variable.register.get(name: 'variants') -> f:variable(name: 'variants')}
-{v:variable.register.get(name: 'backgroundVariants') -> f:variable(name: 'backgroundVariants')}
 {pp:data.filesProcessor(data: contentObjectData, field: 'assets') -> v:variable.set(name: 'settings.dummyAsset')}
 <div class="news news-single">
     <div class="article" itemscope="itemscope" itemtype="http://schema.org/Article">

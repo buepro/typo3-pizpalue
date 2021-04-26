@@ -13,8 +13,7 @@
                 <f:render partial="Plugin/RenderMedia" arguments="{
                     file: newsItem.mediaPreviews.0.originalResource,
                     data: newsItem,
-                    settings: settings,
-                    variants: variants}" />
+                    settings: settings}" />
             </f:then>
             <f:else>
                 <f:if condition="{settings.displayDummyIfNoMedia}">

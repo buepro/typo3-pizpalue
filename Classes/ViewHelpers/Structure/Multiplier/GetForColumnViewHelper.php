@@ -9,7 +9,7 @@
 
 namespace Buepro\Pizpalue\ViewHelpers\Structure\Multiplier;
 
-use Buepro\Pizpalue\Utility\StructureMultiplierUtility;
+use Buepro\Pizpalue\Utility\StructureUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
@@ -22,6 +22,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  * Usage:
  * {pp:structure.multiplier.getForColumn(as: 'multiplier', multiplier: multiplier, class: 'col-sm col-md-8 col-lg-10', count: 3)}
+ *
  */
 class GetForColumnViewHelper extends AbstractViewHelper
 {
@@ -53,7 +54,7 @@ class GetForColumnViewHelper extends AbstractViewHelper
         $multiplier = $arguments['multiplier'] ?? [];
         $class = $arguments['class'] ?? '';
         $count = $arguments['count'] ?? 1;
-        $multiplier = StructureMultiplierUtility::getMultiplierForColumn($multiplier, $class, $count);
+        $multiplier = StructureUtility::getMultiplierForColumn($class, $count, $multiplier);
         $renderingContext->getVariableProvider()->add($arguments['as'], $multiplier);
     }
 }

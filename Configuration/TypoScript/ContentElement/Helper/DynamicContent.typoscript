@@ -1,0 +1,17 @@
+lib.dynamicContent {
+    10 = TEXT
+    10.stdWrap.preUserFunc = Buepro\Pizpalue\Service\BackendlayoutService->pushVariantsModifier
+    10.stdWrap.preUserFunc {
+        backendlayout = TEXT
+        backendlayout {
+            data = pagelayout
+            replacement.10 {
+                search = pagets__
+                replace =
+            }
+            ifEmpty = default
+        }
+    }
+    80 = TEXT
+    80.stdWrap.preUserFunc = Buepro\Pizpalue\Service\BackendlayoutService->popVariantsModifier
+}

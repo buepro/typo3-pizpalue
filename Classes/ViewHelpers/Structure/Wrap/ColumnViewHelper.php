@@ -9,7 +9,10 @@
 
 namespace Buepro\Pizpalue\ViewHelpers\Structure\Wrap;
 
-use Buepro\Pizpalue\Utility\StructureMultiplierUtility;
+use Buepro\Pizpalue\Domain\Model\VariantsModifier;
+use Buepro\Pizpalue\Utility\StructureVariantsUtility;
+use Buepro\Pizpalue\Utility\StructureUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
@@ -34,11 +37,6 @@ class ColumnViewHelper extends AbstractViewHelper
     use CompileWithRenderStatic;
 
     /**
-     * @var array
-     */
-    private static $multiplierStack = [];
-
-    /**
      * @var bool
      */
     protected $escapeChildren = false;
@@ -55,6 +53,8 @@ class ColumnViewHelper extends AbstractViewHelper
     {
         $this->registerArgument('class', 'string', 'CSS classes used to define the column', false, '');
         $this->registerArgument('count', 'int', 'Column count in row', false, 1);
+        $this->registerArgument('gutter', 'float|array', 'Space between columns. In case a float is provided it will be used for all screen breakpoints.', false, 0);
+        $this->registerArgument('correction', 'float|array', 'Correction to be subtracted. In case a float is provided it will be used for all screen breakpoints.', false, 0);
     }
 
     /**
@@ -69,35 +69,22 @@ class ColumnViewHelper extends AbstractViewHelper
         RenderingContextInterface $renderingContext
     ) {
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
-            // Initialize
-            $currentMultiplier = self::getCurrentMultiplier();
-
-            // Get multiplier for current structure
-            $multiplier = StructureMultiplierUtility::getMultiplierForColumn(
-                $currentMultiplier,
+            $multiplier = StructureUtility::getMultiplierForColumn(
                 $arguments['class'],
                 $arguments['count']
             );
 
-            // Push multiplier -> render content -> pop multiplier
-            self::$multiplierStack[] = $multiplier;
-            $GLOBALS['TSFE']->register['structureMultiplier'] = $multiplier;
+            // Push variants modifier -> render content -> pop modifier
+            $modifier = GeneralUtility::makeInstance(VariantsModifier::class)
+                ->setMultiplier($multiplier)
+                ->setGutter($arguments['gutter'])
+                ->setCorrection($arguments['correction']);
+            StructureVariantsUtility::pushVariantsModifier($modifier);
             $content = $renderChildrenClosure();
-            array_pop(self::$multiplierStack);
-            $GLOBALS['TSFE']->register['structureMultiplier'] = self::getCurrentMultiplier();
+            StructureVariantsUtility::popVariantsModifier();
             return $content;
         } else {
             return $renderChildrenClosure();
         }
-    }
-
-    private static function getCurrentMultiplier()
-    {
-        $currentMultiplier = [];
-        if (count(self::$multiplierStack)) {
-            $currentMultiplier = array_pop(self::$multiplierStack);
-            self::$multiplierStack[] = $currentMultiplier;
-        }
-        return $currentMultiplier;
     }
 }

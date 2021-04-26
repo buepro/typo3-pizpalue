@@ -9,7 +9,10 @@
 
 namespace Buepro\Pizpalue\ViewHelpers\Render\Bootstrap;
 
-use Buepro\Pizpalue\Utility\StructureMultiplierUtility;
+use Buepro\Pizpalue\Domain\Model\VariantsModifier;
+use Buepro\Pizpalue\Utility\StructureVariantsUtility;
+use Buepro\Pizpalue\Utility\StructureUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
@@ -30,27 +33,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
  */
 class ColumnViewHelper extends AbstractTagBasedViewHelper
 {
-    /**
-     * @var array
-     */
-    private static $multiplierStack = [];
-
     protected $tagName = 'div';
-
-    /**
-     * Returns last added element from $multiplierStack
-     *
-     * @return array|mixed
-     */
-    private static function getCurrentMultiplier()
-    {
-        $currentMultiplier = [];
-        if (count(self::$multiplierStack)) {
-            $currentMultiplier = array_pop(self::$multiplierStack);
-            self::$multiplierStack[] = $currentMultiplier;
-        }
-        return $currentMultiplier;
-    }
 
     public function initializeArguments()
     {
@@ -59,6 +42,8 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
         $this->registerTagAttribute('itemscope', 'string', 'Itemscope attribute');
         $this->registerTagAttribute('itemtype', 'string', 'Itemtype attribute');
         $this->registerArgument('count', 'int', 'Column count in row', false, 1);
+        $this->registerArgument('gutter', 'float|array', 'Space between columns. In case a float is provided it will be used for all screen breakpoints.', false, 0);
+        $this->registerArgument('correction', 'float|array', 'Correction to be subtracted. In case a float is provided it will be used for all screen breakpoints.', false, 0);
         $this->registerArgument('tagName', 'string', 'Tag name', false, 'div');
     }
 
@@ -66,23 +51,20 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
     {
         $this->tagName = $this->arguments['tagName'];
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
-            // Initialize
-            $currentMultiplier = self::getCurrentMultiplier();
-
-            // Get multiplier for current structure
-            $multiplier = StructureMultiplierUtility::getMultiplierForColumn(
-                $currentMultiplier,
+            $multiplier = StructureUtility::getMultiplierForColumn(
                 $this->arguments['class'],
                 $this->arguments['count']
             );
 
-            // Push multiplier -> render content -> pop multiplier
-            self::$multiplierStack[] = $multiplier;
-            $GLOBALS['TSFE']->register['structureMultiplier'] = $multiplier;
+            // Push variants modifier -> render content -> pop modifier
+            $modifier = GeneralUtility::makeInstance(VariantsModifier::class)
+                ->setMultiplier($multiplier)
+                ->setGutter($this->arguments['gutter'])
+                ->setCorrection($this->arguments['correction']);
+            StructureVariantsUtility::pushVariantsModifier($modifier);
             $this->tag->setContent($this->renderChildren());
             $content = $this->tag->render();
-            array_pop(self::$multiplierStack);
-            $GLOBALS['TSFE']->register['structureMultiplier'] = self::getCurrentMultiplier();
+            StructureVariantsUtility::popVariantsModifier();
             return $content;
         } else {
             $this->tag->setContent($this->renderChildren());

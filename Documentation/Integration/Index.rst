@@ -11,16 +11,45 @@ Integration
 Templating
 ==========
 
+Image variants
+--------------
+
+Image variants are used to define the image rendering taking into account different screen width. The available space
+might be further modified by templates, layouts, partials and content elements. The resulting variants when rendering
+a content element can be obtained with the `pp:structure.variants` view helper:
+
+.. code-block:: html
+
+   {pp:structure.variants(as: 'variants')}
+
+.. hint::
+
+   The `pp:structure.variants` view helper can be used with the attribute `initialVariants` to define the base variants
+   to apply the variantsModifiers upon. For more details have a look to the `StructureVariantsUtility` class.
+
+For debugging purposes the `pp:structure.variantsModifierStack` view helper might be used:
+
+.. code-block:: html
+
+   <f:if condition="{data.uid} === 6">
+      {pp:structure.variantsModifierStack(as: '_stack')}
+      <f:debug>{_stack}</f:debug>
+   </f:if>
+
+
+Structure elements
+------------------
+
 When creating templates structures dividing the available width might be defined (e.g. columns). By providing the system
 with information regarding the available space within the structures the content rendering can be optimized. A typical
 scenario is to render images in columns. For this purpose the following view helpers are available:
 
 pp:render.bootstrap.column
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: html
 
-   <pp:render.bootstrap.column class="col col-md-8 col-xl-6" count="2">
+   <pp:render.bootstrap.column class="col col-md-8 col-xl-6" count="2" gutter="40" correction="2">
       <div class="content-from-column">
          <v:content.render contentUids="{0: item.data.uid}" />
       </div>
@@ -40,18 +69,18 @@ The above code results in:
 
    The `count`-attribute is used when the width from the column isn't specified by the classes (e.g. when using `col`)
 
-pp.structure.wrap.column
-------------------------
+pp:structure.wrap.column
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: html
 
-   <pp.structure.wrap.column class="col col-md-8 col-xl-6" count="2">
+   <pp:structure.wrap.column class="col col-md-8 col-xl-6" count="2" gutter="40" correction="2">
       <div class="col col-md-8 col-xl-6">
          <div class="content-from-column">
             <v:content.render contentUids="{0: item.data.uid}" />
          </div>
       </div>
-   </pp.structure.wrap.column>
+   </pp:structure.wrap.column>
 
 The above code results in:
 
@@ -64,7 +93,7 @@ The above code results in:
    </div>
 
 pp:structure.multiplier.getForColumn
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: html
 
