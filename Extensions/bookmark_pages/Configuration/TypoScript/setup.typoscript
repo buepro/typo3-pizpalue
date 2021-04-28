@@ -3,6 +3,9 @@ plugin.tx_bookmarkpages {
         templateRootPaths.20 = EXT:pizpalue/Extensions/bookmark_pages/Resources/Private/Templates
         partialRootPaths.20 = EXT:pizpalue/Extensions/bookmark_pages/Resources/Private/Partials
     }
+    settings {
+        dropdownClass = {$plugin.tx_bookmarkpages.settings.dropdownClass}
+    }
 }
 
 page {

@@ -15,6 +15,10 @@
       margin-left: 0.5rem;
       vertical-align: middle;
     }
+    &.dropdown-toggle-split:before {
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
     &.bookmark-this-page {
       display: block;
       +.ppc-bookmarked {
