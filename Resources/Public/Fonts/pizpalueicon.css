@@ -3,10 +3,10 @@
 
 @font-face {
     font-family:"PizpalueIcon";
-    src:url("pizpalueicon.eot?9e7bd3c406c7f864dcdfa51c5dc697e0");
-    src:url("pizpalueicon.eot?9e7bd3c406c7f864dcdfa51c5dc697e0#iefix") format("embedded-opentype"),
-		url("pizpalueicon.woff?9e7bd3c406c7f864dcdfa51c5dc697e0") format("woff"),
-		url("pizpalueicon.ttf?9e7bd3c406c7f864dcdfa51c5dc697e0") format("truetype");
+    src:url("pizpalueicon.eot?441433a3f0f8a0025584de9a70b9ebae");
+    src:url("pizpalueicon.eot?441433a3f0f8a0025584de9a70b9ebae#iefix") format("embedded-opentype"),
+		url("pizpalueicon.woff?441433a3f0f8a0025584de9a70b9ebae") format("woff"),
+		url("pizpalueicon.ttf?441433a3f0f8a0025584de9a70b9ebae") format("truetype");
     font-weight:normal;
     font-style:normal;
 }
@@ -210,64 +210,92 @@
 }
 
 
+.ppicon-star-regular:before,
+.bootstrappackageicon-star-regular:before,
+.glyphicon-star-regular:before {
+    content:"\f11b";
+}
+
+
+.ppicon-star-solid:before,
+.bootstrappackageicon-star-solid:before,
+.glyphicon-star-solid:before {
+    content:"\f11c";
+}
+
+
 .ppicon-tag:before,
 .bootstrappackageicon-tag:before,
 .glyphicon-tag:before {
-    content:"\f11b";
+    content:"\f11d";
 }
 
 
 .ppicon-tags:before,
 .bootstrappackageicon-tags:before,
 .glyphicon-tags:before {
-    content:"\f11c";
+    content:"\f11e";
+}
+
+
+.ppicon-times-circle:before,
+.bootstrappackageicon-times-circle:before,
+.glyphicon-times-circle:before {
+    content:"\f11f";
 }
 
 
 .ppicon-times:before,
 .bootstrappackageicon-times:before,
 .glyphicon-times:before {
-    content:"\f11d";
+    content:"\f120";
+}
+
+
+.ppicon-trash-alt:before,
+.bootstrappackageicon-trash-alt:before,
+.glyphicon-trash-alt:before {
+    content:"\f121";
 }
 
 
 .ppicon-twitter:before,
 .bootstrappackageicon-twitter:before,
 .glyphicon-twitter:before {
-    content:"\f11e";
+    content:"\f122";
 }
 
 
 .ppicon-user:before,
 .bootstrappackageicon-user:before,
 .glyphicon-user:before {
-    content:"\f11f";
+    content:"\f123";
 }
 
 
 .ppicon-vimeo:before,
 .bootstrappackageicon-vimeo:before,
 .glyphicon-vimeo:before {
-    content:"\f120";
+    content:"\f124";
 }
 
 
 .ppicon-vk:before,
 .bootstrappackageicon-vk:before,
 .glyphicon-vk:before {
-    content:"\f121";
+    content:"\f125";
 }
 
 
 .ppicon-xing:before,
 .bootstrappackageicon-xing:before,
 .glyphicon-xing:before {
-    content:"\f122";
+    content:"\f126";
 }
 
 
 .ppicon-youtube:before,
 .bootstrappackageicon-youtube:before,
 .glyphicon-youtube:before {
-    content:"\f123";
+    content:"\f127";
 }

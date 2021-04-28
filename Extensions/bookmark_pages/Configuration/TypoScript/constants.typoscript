@@ -1,0 +1,4 @@
+plugin.tx_bookmarkpages.settings {
+    # cat=plugin.tx_bookmarkpages/general; type=string; label=Additional class for dropdown (e.g. dropup)
+    dropdownClass =
+}
