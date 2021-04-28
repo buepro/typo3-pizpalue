@@ -10,8 +10,8 @@
 namespace Buepro\Pizpalue\ViewHelpers\Render\Bootstrap;
 
 use Buepro\Pizpalue\Domain\Model\VariantsModifier;
-use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use Buepro\Pizpalue\Utility\StructureUtility;
+use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;

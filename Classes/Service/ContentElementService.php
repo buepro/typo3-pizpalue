@@ -1,8 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Buepro\Pizpalue\Service;
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
+namespace Buepro\Pizpalue\Service;
 
 use BK2K\BootstrapPackage\Utility\ImageVariantsUtility;
 use Buepro\Pizpalue\Domain\Model\VariantsModifier;
@@ -13,7 +19,6 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 /**
  * Class VariantsService
- * @package Buepro\Pizpalue\Service
  */
 class ContentElementService
 {
@@ -68,7 +73,8 @@ class ContentElementService
         $variants = ImageVariantsUtility::getImageVariants();
         if ($this->cObj->getCurrentTable() === 'tt_content' && $data['CType']) {
             $variantsConf = StructureVariantsUtility::getTypoScriptValue(
-                'lib.contentElement.settings.responsiveimages.contentelements.' . $data['CType']);
+                'lib.contentElement.settings.responsiveimages.contentelements.' . $data['CType']
+            );
             if ($variantsConf) {
                 $methodName = 'getVariantsFor' . GeneralUtility::underscoredToUpperCamelCase($data['CType']);
                 if (method_exists($this, $methodName)) {

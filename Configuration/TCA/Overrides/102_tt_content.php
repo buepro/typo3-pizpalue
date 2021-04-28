@@ -44,7 +44,10 @@ defined('TYPO3') || die('Access denied.');
         'l10n_mode' => 'exclude',
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
-        'tt_content', 'headers', 'tx_pizpalue_header_class', 'after:header_layout'
+        'tt_content',
+        'headers',
+        'tx_pizpalue_header_class',
+        'after:header_layout'
     );
 
     /**
@@ -68,7 +71,10 @@ defined('TYPO3') || die('Access denied.');
         'l10n_mode' => 'exclude',
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
-        'tt_content', 'headers', 'tx_pizpalue_subheader_class', 'after:subheader'
+        'tt_content',
+        'headers',
+        'tx_pizpalue_subheader_class',
+        'after:subheader'
     );
 
     /**

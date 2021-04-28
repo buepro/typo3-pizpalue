@@ -1,9 +1,15 @@
 <?php
 declare(strict_types=1);
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Buepro\Pizpalue\ViewHelpers\Structure;
 
-use BK2K\BootstrapPackage\Utility\ImageVariantsUtility;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;

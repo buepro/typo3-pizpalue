@@ -1,8 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Buepro\Pizpalue\Service;
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
+namespace Buepro\Pizpalue\Service;
 
 use Buepro\Pizpalue\Domain\Model\VariantsModifier;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;

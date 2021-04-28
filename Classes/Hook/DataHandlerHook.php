@@ -78,7 +78,8 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
 
             // Notify in case the image variants changed
             if (isset($fieldArray['tx_pizpalue_image_variants']) && $fieldArray['tx_pizpalue_image_variants'] !== $initialVariants) {
-                $message = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Messaging\FlashMessage::class,
+                $message = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+                    \TYPO3\CMS\Core\Messaging\FlashMessage::class,
                     $GLOBALS['LANG']->sL('LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:flash-message-image-variants-changed'),
                     $GLOBALS['LANG']->sL('LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:flash-message-change-setting'),
                     \TYPO3\CMS\Core\Messaging\FlashMessage::NOTICE

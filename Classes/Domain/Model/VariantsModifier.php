@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Buepro\Pizpalue\Domain\Model;
 
 use BK2K\BootstrapPackage\Utility\ImageVariantsUtility;
@@ -59,7 +66,7 @@ class VariantsModifier
     {
         $validatedModifier = [];
         if (is_array($modifier)) {
-            foreach($this->defaultVariants as $breakpoint => $value) {
+            foreach ($this->defaultVariants as $breakpoint => $value) {
                 if (isset($modifier[$breakpoint])) {
                     $validatedModifier[$breakpoint] = (float) $modifier[$breakpoint];
                 }
@@ -86,7 +93,7 @@ class VariantsModifier
      * @param $multiplier
      * @return VariantsModifier
      */
-    public function setMultiplier($multiplier): VariantsModifier
+    public function setMultiplier($multiplier): self
     {
         $this->multiplier = $this->validateModifier($multiplier);
         return $this;
@@ -108,7 +115,7 @@ class VariantsModifier
      * @param $gutter
      * @return VariantsModifier
      */
-    public function setGutter($gutter): VariantsModifier
+    public function setGutter($gutter): self
     {
         $this->gutter = $this->validateModifier($gutter);
         return $this;
@@ -130,7 +137,7 @@ class VariantsModifier
      * @param $correction
      * @return VariantsModifier
      */
-    public function setCorrection($correction): VariantsModifier
+    public function setCorrection($correction): self
     {
         $this->correction = $this->validateModifier($correction);
         return $this;
@@ -152,7 +159,7 @@ class VariantsModifier
      * @param $variants
      * @return VariantsModifier
      */
-    public function setVariants($variants): VariantsModifier
+    public function setVariants($variants): self
     {
         $this->variants = ImageVariantsUtility::getImageVariants($variants);
         return $this;

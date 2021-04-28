@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+/*
+ * This file is part of the package buepro/pizpalue.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Buepro\Pizpalue\Utility;
 
 use BK2K\BootstrapPackage\Utility\ImageVariantsUtility;
@@ -14,7 +21,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 /**
  * Class StructureVariantsUtility
  *
- * @package Buepro\Pizpalue\Service
  */
 class StructureVariantsUtility
 {
@@ -121,7 +127,7 @@ class StructureVariantsUtility
             $initialVariants = self::getInitialVariants((string) $specifier);
         }
         $variants = ImageVariantsUtility::getImageVariants($initialVariants);
-        foreach(self::$variantsModifierStack as $variantsModifier) {
+        foreach (self::$variantsModifierStack as $variantsModifier) {
             $variants = ImageVariantsUtility::getImageVariants(
                 $variantsModifier->getVariants() ?? $variants,
                 $variantsModifier->getMultiplier(),
@@ -155,7 +161,7 @@ class StructureVariantsUtility
             // Variants defined by the current content element
             $result = self::getTypoScriptValue(self::$contentElementData[$specifier]);
         }
-        if (!$result){
+        if (!$result) {
             // Variants from TS ($variants contains TS path or last TS path segment)
             $result = self::getTypoScriptValue($specifier);
         }
@@ -194,7 +200,7 @@ class StructureVariantsUtility
         if (count($parts) === 1 && is_array($setup['lib']['contentElement']['settings']['responsiveimages'][$parts[0]])) {
             $result = $setup['lib']['contentElement']['settings']['responsiveimages'][$parts[0]];
         } else {
-            foreach($parts as $part) {
+            foreach ($parts as $part) {
                 if (is_array($setup)) {
                     $setup = $setup[$part] ?? null;
                 }
