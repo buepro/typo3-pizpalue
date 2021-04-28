@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints'      => [
         'depends'   => [
             'typo3'                 => '10.4.11-10.4.99',
-            'bootstrap_package'     => '11.0.2-11.99.99',
+            'bootstrap_package'     => '11.0.3-11.99.99',
             'vhs'                   => '6.0.3-6.99.99',
         ],
         'conflicts' => [],

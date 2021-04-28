@@ -1,7 +1,6 @@
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/AppIcon.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Plugins.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/RTE.typoscript'
-@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Various.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Constants.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/ContentElement/Setup.typoscript'
 [{$pizpalue.menu.fast.enable}]
@@ -131,8 +130,6 @@ page {
         pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.smoothscroll.min.js
         bootstrap_smoothscroll >
         js-cookie = EXT:pizpalue/Resources/Public/Contrib/js-cookie/js.cookie.min.js
-        //todo Obsolete as of bootstrap_package 11.1.0
-        bootstrap_stickyheader = EXT:pizpalue/Resources/Public/JavaScript/Dist/bootstrap.stickyheader.min.js
     }
 }
 

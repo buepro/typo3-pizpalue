@@ -30,7 +30,7 @@
     "require": {
         "typo3/cms-core": "^10.4.11 || 11.*.*@dev",
         "typo3/cms-impexp": "^10.4 || 11.*.*@dev",
-        "bk2k/bootstrap-package": "^11.0.2 || 12.0.*@dev",
+        "bk2k/bootstrap-package": "^11.0.3 || 12.0.*@dev",
         "fluidtypo3/vhs": "^6.0.3 || ^7@dev"
     },
     "require-dev": {
