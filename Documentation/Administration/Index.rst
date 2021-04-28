@@ -44,6 +44,7 @@ news                             8.5.0
 eventnews                        4.0.0
 tt_address                       5.2.0
 timelog                          1.6.0
+bookmark_pages                   2.0.0
 ================================ ================
 
 Structure elements

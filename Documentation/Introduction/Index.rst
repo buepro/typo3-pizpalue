@@ -70,6 +70,7 @@ Extending extensions
    - `eventnews <https://extensions.typo3.org/extension/eventnews>`__
    - `tt_address <https://extensions.typo3.org/extension/tt_address>`__
    - `timelog <https://extensions.typo3.org/extension/timelog>`__
+   - `bookmark_pages <https://github.com/buepro/typo3-bookmark_pages>`__
 
 Various
 -------
