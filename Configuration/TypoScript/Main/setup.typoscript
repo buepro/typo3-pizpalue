@@ -51,7 +51,7 @@ page {
         variables {
             ppCopyright = TEXT
             ppCopyright.value = {$pizpalue.customer.copyright}
-            ppCopyright.inserData = 1
+            ppCopyright.insertData = 1
         }
     }
 }
