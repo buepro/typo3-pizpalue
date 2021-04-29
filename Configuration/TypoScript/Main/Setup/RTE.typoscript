@@ -1,6 +1,23 @@
 # Allow to add curly braces to be treated of type getText in RTE editor
 # @see https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html
-lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 1
+lib.parseFunc_RTE.nonTypoTagStdWrap {
+    setContentToCurrent = 1
+    override {
+        current = 1
+        if.isTrue = {$pizpalue.features.content.insertData}
+        orderedStdWrap {
+            10.replacement.10 {
+                search = {powermail
+                replace = :pps-powermail:
+            }
+            20.insertData = 1
+            30.replacement.10 {
+                search = :pps-powermail:
+                replace = {powermail
+            }
+        }
+    }
+}
 
 # Allow TS setup constants in links
 lib.parseFunc_RTE {

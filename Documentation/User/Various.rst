@@ -54,7 +54,7 @@ popover showing up when hovering over the link text where clicking on it loads t
 Data from type getText
 ======================
 
-The `getText data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Index.html#gettext>`__ has been
+The `getText data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Index.html#gettext>`__ can be
 enabled for the RTE editor. It allows to get various data from a web site. As an example a translated text might be
 retrieved depending on the currently selected page language. For this users might reference data by using curly
 brackets within the editor
@@ -69,9 +69,11 @@ brackets within the editor
    You might reference other content as defined by the
    `"getText" data type <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html>`__.
 
-.. note::
-   To disable the :ts:`getText` data type for the RTE editor the following TS can be used:
-   :ts:`lib.parseFunc_RTE.nonTypoTagStdWrap.insertData = 0`
+The feature can be enabled through the constant editor selecting the category `PIZPALUE: CUSTOMER EXTENDED`
+(constant: `pizpalue.features.content.insertData`).
+
+.. warning::
+   Enabling this feature allows editors to output sensitive data. Enable it only if security isn't compromised.
 
 .. _usr-ppClasses:
 

@@ -29,6 +29,9 @@ pizpalue.features {
     # cat=6060/1510/0110; type=boolean; label=Use style:If selected a custom style declarations will be included
     useStyle = 1
 
+    # cat=6060/1510/0120; type=boolean; label=Insert data into text:If selected text fields are parsed with insertData-function (see stdWrap.insertData). Be careful enabling this feature since an editor might be able to reveal sensitive data.
+    content.insertData = 0
+
     scrollAnimation {
         # cat=6060/2990/0320; type=string; label=Custom scroll animation frame 1 attributes (depreciated as of 9.0)
         frame1Attributes = data-aos="fade-up-right" data-aos-anchor-placement="center-bottom"
