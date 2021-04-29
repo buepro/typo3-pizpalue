@@ -190,7 +190,11 @@ class StructureVariantsUtility
         return self::$contentElementData;
     }
 
-    public static function getTypoScriptValue(string $tsPath)
+    /**
+     * @param string|null $tsPath
+     * @return array|mixed
+     */
+    public static function getTypoScriptValue($tsPath)
     {
         $result = [];
         /** @var TypoScriptService $typoScriptService */
