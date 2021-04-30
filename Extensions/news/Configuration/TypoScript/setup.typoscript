@@ -10,6 +10,7 @@ plugin.tx_news {
         list.media.dummyImage = EXT:pizpalue/Extensions/news/Resources/Public/Images/knewsticker3.png
         list.media.image.width = 400
         detail.media.image.width = 400
+        alert = danger
     }
 }
 
