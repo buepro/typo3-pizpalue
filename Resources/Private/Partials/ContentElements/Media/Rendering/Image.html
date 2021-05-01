@@ -55,6 +55,6 @@
     <f:variable name="finalHeight" value="{bk2k:lastImageInfo(property: 'height')}" />
     {f:variable(name: '_loading', value: 'lazy')}
     {f:variable(name: '_loading', value: settings.gallery.imageLoading) -> f:if(condition: settings.gallery.imageLoading)}
-    <img loading="{_loading}" src="{src}" width="{finalWidth}" height="{finalHeight}" intrinsicsize="{finalWidth}x{finalHeight}" title="{file.properties.title}" alt="{file.properties.alternative}">
+    <img class="img-responsive img-fluid" loading="{_loading}" src="{src}" width="{finalWidth}" height="{finalHeight}" intrinsicsize="{finalWidth}x{finalHeight}" title="{file.properties.title}" alt="{file.properties.alternative}">
 </picture>
 </html>
