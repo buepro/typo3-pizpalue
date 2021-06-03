@@ -64,4 +64,5 @@ page {
       includeJSFooterlibs {
          ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
       }
+   }
 [END]
