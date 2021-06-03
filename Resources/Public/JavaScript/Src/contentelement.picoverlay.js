@@ -19,6 +19,7 @@
         $('.ppc-show', $text).css('display', 'none');
         setTimeout(function(){
             $text.css('top', 0);
+            $picoverlay.addClass('ppc-active');
         }, 10);
     });
     $('.ppc-hide', $picoverlay).on('click', function () {
@@ -29,6 +30,7 @@
         $text.css('top', top + 'px');
         setTimeout(function(){
             $('.ppc-show', $text).css('display', 'block');
+            $picoverlay.removeClass('ppc-active');
         }, 200);
     });
 })(jQuery);
