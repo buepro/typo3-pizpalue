@@ -13,6 +13,57 @@ TYPO3:
                 translation:
                   translationFiles:
                     10: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
+            AdvancedPassword:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Checkbox:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Date:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            DatePicker:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Email:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            FileUpload:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            ImageUpload:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            MultiCheckbox:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            MultiSelect:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Number:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Password:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            RadioButton:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            SingleSelect:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Telephone:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Text:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Textarea:
+              properties:
+                elementErrorClassAttribute: error is-invalid
+            Url:
+              properties:
+                elementErrorClassAttribute: error is-invalid
           finishersDefinition:
             EmailToSender:
               implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'
