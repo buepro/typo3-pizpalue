@@ -143,13 +143,9 @@ defined('TYPO3') || die('Access denied.');
 
     /**
      * Hook: DataHandler used to set image variants for content elements
-     * To avoid altering content elements when importing data hooking just takes place when a be user is logged in.
      */
-    $context = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(TYPO3\CMS\Core\Context\Context::class);
-    if ($context->getPropertyFromAspect('backend.user', 'isLoggedIn')) {
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']
-            ['pizpalue'] = \Buepro\Pizpalue\Hook\DataHandlerHook::class;
-    }
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']
+        ['pizpalue'] = \Buepro\Pizpalue\Hook\DataHandlerHook::class;
 
     /**
      * Extension news

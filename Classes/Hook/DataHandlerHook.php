@@ -16,12 +16,20 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 /**
  * Class DataHandlerHook
  *
- * Initializes and adjusts the content element.
- *
+ * Sets the image variants when the following conditions are met:
+ *   - The content element type is contained in $this->imageContainingTypes
+ *   - The content element is not inside a structure element
+ *   - The frame class changes between `none` and `default`
  */
 class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
 {
     private $imageContainingTypes = ['image', 'media', 'textpic', 'textmedia', 'carousel'];
+
+    /**
+     * Is initialized in case the imageVariants need to be reviewed.
+     *
+     * @var array
+     */
     private $incomingFieldArray = [];
 
     /**
@@ -34,24 +42,26 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
      */
     public function processDatamap_preProcessFieldArray(&$incomingFieldArray, $table, $id, $dataHandler)
     {
-        if ($table === 'tt_content') {
-            foreach ($incomingFieldArray as $key => $value) {
-                $this->incomingFieldArray[$key] = $value;
+        $this->incomingFieldArray = [];
+        if ($table === 'tt_content' && in_array($incomingFieldArray['CType'], $this->imageContainingTypes, true)) {
+            // Just review imageVariants when a be user conducts a change (not when importing data)
+            $context = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Context\Context::class);
+            if ($context->getPropertyFromAspect('backend.user', 'isLoggedIn')) {
+                foreach ($incomingFieldArray as $key => $value) {
+                    $this->incomingFieldArray[$key] = $value;
+                }
             }
         }
     }
 
     /**
-     * Sets the image variants when the following conditions are met:
-     *   - The content element type is contained in $this->imageContainingTypes
-     *   - The content element is not inside a structure element
-     *   - The frame class changes between `none` and `default`
      *
+     * @param $fieldArray
      * @return void
      */
     private function setImageVariants(&$fieldArray): void
     {
-        if (in_array($this->incomingFieldArray['CType'], $this->imageContainingTypes, true)) {
+        if (isset($this->incomingFieldArray['frame_class'])) {
             // Check if we are inside a container element
             $insideContainer = ExtensionManagementUtility::isLoaded('container') &&
                 isset($this->incomingFieldArray['tx_container_parent']) &&
@@ -105,7 +115,9 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
      */
     public function processDatamap_postProcessFieldArray($status, $table, $id, &$fieldArray, $dataHandler)
     {
-        if ($table === 'tt_content' && ($status === 'new' || $status === 'update') && isset($fieldArray['frame_class'])) {
+        if ($this->incomingFieldArray && $table === 'tt_content' && ($status === 'new' || $status === 'update') &&
+            isset($fieldArray['frame_class'])
+        ) {
             $this->setImageVariants($fieldArray);
         }
     }
