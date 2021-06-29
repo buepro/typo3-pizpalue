@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:if condition="{data.teaser} && {data.bodytext}">
-    <f:then>
-        <div class="ppc-wrap py-3">
+<div class="ppc-wrap">
+    <f:if condition="{data.teaser} && {data.bodytext}">
+        <f:then>
             <f:render partial="Header/All" arguments="{_all}" />
             <div class="ppc-teaser">
                 <f:format.html>{data.teaser}</f:format.html>
@@ -18,12 +18,12 @@
                     </a>
                 </div>
             </f:if>
-        </div>
-    </f:then>
-    <f:else>
-        <f:render partial="Header/All" arguments="{_all}" />
-        <f:format.html>{data.teaser}</f:format.html>
-        <f:format.html>{data.bodytext}</f:format.html>
-    </f:else>
-</f:if>
+        </f:then>
+        <f:else>
+            <f:render partial="Header/All" arguments="{_all}" />
+            <f:format.html>{data.teaser}</f:format.html>
+            <f:format.html>{data.bodytext}</f:format.html>
+        </f:else>
+    </f:if>
+</div>
 </html>
