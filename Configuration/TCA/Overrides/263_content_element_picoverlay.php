@@ -57,6 +57,8 @@ defined('TYPO3') || die('Access denied.');
                     bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
                     image,
+                --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.card.options,
+                    pi_flexform;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.content_element.options,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                     --palette--;;frames,
                     --palette--;;appearanceLinks,
@@ -84,4 +86,13 @@ defined('TYPO3') || die('Access denied.');
             ],
         ]
     ];
+
+    /**
+     * Adds flexForm for content element configuration
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        '*',
+        'FILE:EXT:pizpalue/Configuration/FlexForms/Picoverlay.xml',
+        'pp_picoverlay'
+    );
 })('pizpalue');

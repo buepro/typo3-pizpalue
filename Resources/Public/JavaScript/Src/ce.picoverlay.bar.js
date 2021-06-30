@@ -1,10 +1,10 @@
 /**
- * Controls the overlaying from the picoverlay content element.
+ * Controls the overlaying from the picoverlay bar type content element.
  * Together with the related css the overlay is shown when js is disabled.
  * It takes into account that images might be loaded on demand.
  */
 (function ($) {
-    let $picoverlay = $('.pp-picoverlay');
+    let $picoverlay = $('.pp-picoverlay.ppc-bar');
     // set css considering image isn't loaded yet (lazy loading)
     $picoverlay.addClass('ppc-init');
     $('.ppc-show', $picoverlay).on('click', function () {

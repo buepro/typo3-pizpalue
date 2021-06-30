@@ -59,9 +59,13 @@ module.exports = function(grunt) {
                 src: '<%= paths.js %>Src/jquery.fastmenu.js',
                 dest: '<%= paths.js %>Dist/jquery.fastmenu.min.js'
             },
-            picoverlay: {
-                src: '<%= paths.js %>Src/contentelement.picoverlay.js',
-                dest: '<%= paths.js %>Dist/contentelement.picoverlay.min.js'
+            picoverlayBar: {
+                src: '<%= paths.js %>Src/ce.picoverlay.bar.js',
+                dest: '<%= paths.js %>Dist/ce.picoverlay.bar.min.js'
+            },
+            picoverlayInfo: {
+                src: '<%= paths.js %>Src/ce.picoverlay.info.js',
+                dest: '<%= paths.js %>Dist/ce.picoverlay.info.min.js'
             },
         },
         watch: {

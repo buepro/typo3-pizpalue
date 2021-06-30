@@ -176,6 +176,15 @@
 			<trans-unit id="ce_picoverlay.description">
 				<source>Picture with a footer bar to show an overlaid text</source>
 			</trans-unit>
+			<trans-unit id="ce_picoverlay.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="ce_picoverlay.bar">
+				<source>Bar</source>
+			</trans-unit>
+			<trans-unit id="ce_picoverlay.info">
+				<source>Info</source>
+			</trans-unit>
 
 			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
 				<source>Enable bootstrap_package page layouts</source>

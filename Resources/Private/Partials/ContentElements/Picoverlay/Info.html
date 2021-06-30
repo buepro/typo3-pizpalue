@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="pp-picoverlay-item pp-picoverlay-gallery">
+    <f:render partial="Media/Gallery" arguments="{_all}" />
+    <span class="ppc-show">i</span>
+</div>
+<div class="pp-picoverlay-item pp-picoverlay-text">
+    <h{_headerLayout} class="ppc-header {settings.header.class}{_headerPosition}{_headerClass}">
+    {data.header}
+    </h{_headerLayout}>
+    <div class="ppc-body"><f:format.html>{data.bodytext}</f:format.html></div>
+    <span class="ppc-hide">✕</span>
+</div>
+<f:asset.script identifier="pp-picoverlay-info" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/ce.picoverlay.info.min.js" />
+
+</html>

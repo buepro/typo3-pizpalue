@@ -15,6 +15,7 @@ tt_content.pp_picoverlay {
         20 {
             predefinedList = image
         }
+        30 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor
     }
 
 }
