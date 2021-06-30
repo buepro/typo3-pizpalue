@@ -36,53 +36,53 @@ module.exports = function(grunt) {
                 }
             },
             general: {
-                src: '<%= paths.js %>Src/jquery.general.js',
-                dest: '<%= paths.js %>Dist/jquery.general.min.js'
+                src: '<%= paths.js %>Src/pizpalue.general.js',
+                dest: '<%= paths.js %>Dist/pizpalue.general.min.js'
             },
             smoothscroll: {
-                src: '<%= paths.js %>Src/jquery.smoothscroll.js',
-                dest: '<%= paths.js %>Dist/jquery.smoothscroll.min.js'
+                src: '<%= paths.js %>Src/pizpalue.smoothscroll.js',
+                dest: '<%= paths.js %>Dist/pizpalue.smoothscroll.min.js'
             },
             cookieconsentservice: {
-                src: '<%= paths.js %>Src/jquery.cookieconsentservice.js',
-                dest: '<%= paths.js %>Dist/jquery.cookieconsentservice.min.js'
+                src: '<%= paths.js %>Src/pizpalue.cookieconsentservice.js',
+                dest: '<%= paths.js %>Dist/pizpalue.cookieconsentservice.min.js'
             },
             revealfooterservice: {
-                src: '<%= paths.js %>Src/jquery.revealfooterservice.js',
-                dest: '<%= paths.js %>Dist/jquery.revealfooterservice.min.js'
+                src: '<%= paths.js %>Src/pizpalue.revealfooterservice.js',
+                dest: '<%= paths.js %>Dist/pizpalue.revealfooterservice.min.js'
             },
             addressmap: {
                 src: '<%= paths.exts.ttAddress.googleMap.js %>Src/jquery.googlemap.js',
                 dest: '<%= paths.exts.ttAddress.googleMap.js %>Dist/jquery.googlemap.min.js'
             },
             fastmenu: {
-                src: '<%= paths.js %>Src/jquery.fastmenu.js',
-                dest: '<%= paths.js %>Dist/jquery.fastmenu.min.js'
+                src: '<%= paths.js %>Src/pizpalue.fastmenu.js',
+                dest: '<%= paths.js %>Dist/pizpalue.fastmenu.min.js'
             },
             picoverlayBar: {
-                src: '<%= paths.js %>Src/ce.picoverlay.bar.js',
-                dest: '<%= paths.js %>Dist/ce.picoverlay.bar.min.js'
+                src: '<%= paths.js %>Src/pizpalue.picoverlay.bar.js',
+                dest: '<%= paths.js %>Dist/pizpalue.picoverlay.bar.min.js'
             },
             picoverlayInfo: {
-                src: '<%= paths.js %>Src/ce.picoverlay.info.js',
-                dest: '<%= paths.js %>Dist/ce.picoverlay.info.min.js'
+                src: '<%= paths.js %>Src/pizpalue.picoverlay.info.js',
+                dest: '<%= paths.js %>Dist/pizpalue.picoverlay.info.min.js'
             },
         },
         watch: {
             general: {
-                files: '<%= paths.js %>Src/jquery.general.js',
+                files: '<%= paths.js %>Src/pizpalue.general.js',
                 tasks: 'uglify:general'
             },
             smoothscroll: {
-                files: '<%= paths.js %>Src/jquery.smoothscroll.js',
+                files: '<%= paths.js %>Src/pizpalue.smoothscroll.js',
                 tasks: 'uglify:smoothscroll'
             },
             cookieconsentservice: {
-                files: '<%= paths.js %>Src/jquery.cookieconsentservice.js',
+                files: '<%= paths.js %>Src/pizpalue.cookieconsentservice.js',
                 tasks: 'uglify:cookieconsentservice'
             },
             revealfooterservice: {
-                files: '<%= paths.js %>Src/jquery.revealfooterservice.js',
+                files: '<%= paths.js %>Src/pizpalue.revealfooterservice.js',
                 tasks: 'uglify:revealfooterservice'
             },
 

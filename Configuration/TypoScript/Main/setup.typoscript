@@ -126,8 +126,8 @@ page {
 
 page {
     includeJSFooterlibs {
-        pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.general.min.js
-        pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.smoothscroll.min.js
+        pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.general.min.js
+        pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.smoothscroll.min.js
         bootstrap_smoothscroll >
         js-cookie = EXT:pizpalue/Resources/Public/Contrib/js-cookie/js.cookie.min.js
     }
@@ -139,7 +139,7 @@ page {
 [{$page.theme.cookieconsent.enable} == 1]
 page {
     includeJSFooterlibs {
-        pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.cookieconsentservice.min.js
+        pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.cookieconsentservice.min.js
     }
 }
 [END]
@@ -150,7 +150,7 @@ page {
 [{$pizpalue.features.revealFooter} == 1]
 page {
     includeJSFooterlibs {
-        pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.revealfooterservice.min.js
+        pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.revealfooterservice.min.js
     }
 }
 [END]

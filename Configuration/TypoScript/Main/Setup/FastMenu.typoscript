@@ -4,7 +4,7 @@ page {
     }
 
     includeJSFooterlibs {
-        fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Dist/jquery.fastmenu.min.js
+        fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.fastmenu.min.js
     }
 
     jsFooterInline.1030 = TEXT
@@ -20,7 +20,7 @@ $('.pp-fastmenu').fastMenu({
 [{$pizpalue.agency.siteMode} == 1]
 page {
     includeJSFooterlibs {
-        fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Src/jquery.fastmenu.js
+        fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.fastmenu.js
     }
 }
 [global]
