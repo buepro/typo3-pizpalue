@@ -6,7 +6,7 @@
 .frame-pp3 > div {
   > .frame-inner {
     border: $border-width solid;
-    border-radius: $border-radius;
+    @include border-radius($border-radius);
     @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
       @include media-breakpoint-up($breakpoint) {
         $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
