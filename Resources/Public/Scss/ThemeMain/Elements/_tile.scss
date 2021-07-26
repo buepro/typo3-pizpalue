@@ -154,36 +154,20 @@
 //
 .pp-tile.pp-bg-primary, .pp-tile.pp-bg-secondary, .pp-tile.pp-bg-complementary {
   background: transparent;
-  a {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 .pp-tile.pp-bg-primary {
   > .frame-container {
-    background: $primary;
-  }
-  &, a {
-    color: color-yiq($primary);
+    @include pp-make-background(map-get($frame-backgrounds, primary));
   }
 }
 .pp-tile.pp-bg-secondary {
   > .frame-container {
-    background: $secondary;
-  }
-  &, a {
-    color: color-yiq($secondary);
+    @include pp-make-background(map-get($frame-backgrounds, secondary));
   }
 }
 .pp-tile.pp-bg-complementary {
   > .frame-container {
-    background: $complementary;
-  }
-  &, a {
-    color: color-yiq($complementary);
+    @include pp-make-background(map-get($frame-backgrounds, complementary));
   }
 }
 .pp-tile-scroll-y > .frame-container {
