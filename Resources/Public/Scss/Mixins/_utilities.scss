@@ -61,3 +61,22 @@
     }
   }
 }
+
+//
+// Usage: @include pp-make-background(map-get($frame-backgrounds, primary))
+// Remark: The headings color wasn't correct when $headings-color was defined
+// @see bootstrap_package make-frame-background
+//
+@mixin pp-make-background($settings) {
+  $background: map-get($settings, 'background');
+  background-color: $background;
+  color: color-yiq($background);
+  .element-header, .element-subheader {
+    $color: color-yiq(map-get($settings, background));
+    @if (map-get($settings, headings-color)) {
+      $color: map-get($settings, headings-color);
+    }
+    color: $color;
+  }
+  @include pp-make-link($settings);
+}
