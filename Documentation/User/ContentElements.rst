@@ -101,7 +101,7 @@ For this example an image as well as a text have been added to the content eleme
      "faxNumber": "{$pizpalue.customer.contactFax}",
      "url" : "https://www.{$pizpalue.customer.domain}",
      "logo": "{processedData:schemaImages.0}",
-     "description": "{data:field:teaser}",
+     "description": "{func:newLineToRn:{data:field:teaser}}",
      "address": {
        "@type": "PostalAddress",
        "addressLocality": "{$pizpalue.customer.contactCity}, Switzerland",
@@ -129,7 +129,7 @@ For this example an image as well as a text have been added to the content eleme
      "faxNumber": "111 111 11 12",
      "url" : "https://www.domain.ch",
      "logo": "http://pp10.buechler.pro/fileadmin/_processed_/3/9/csm_geran-de-klerk-136351_2571a74988.jpg",
-     "description": "Development of mobile phones powered by propietary OS to guarantuee privacy.",
+     "description": "Development of mobile phones powered by proprietary OS to guarantee privacy.",
      "address": {
        "@type": "PostalAddress",
        "addressLocality": "Ort, Switzerland",
