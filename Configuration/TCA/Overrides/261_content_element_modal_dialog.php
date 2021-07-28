@@ -19,15 +19,6 @@ defined('TYPO3') || die('Access denied.');
         'pages,tt_content,tx_news_domain_model_news';
 
     /**
-     * Adds content element to new content element wizard
-     */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-        $extensionKey,
-        'Configuration/TsConfig/Page/ContentElement/Element/ModalDialog.tsconfig',
-        'Pizpalue - Content Element: Modal Dialog'
-    );
-
-    /**
      * Adds content element to selector list
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(

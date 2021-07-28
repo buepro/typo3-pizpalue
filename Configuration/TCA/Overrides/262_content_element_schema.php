@@ -18,15 +18,6 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * Adds content element to available objects for `Page TSconfig` in page properties
-     */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-        $extensionKey,
-        'Configuration/TsConfig/Page/ContentElement/Element/Schema.tsconfig',
-        'Pizpalue - Content Element: Schema'
-    );
-
-    /**
      * Adds content element to selector list
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(

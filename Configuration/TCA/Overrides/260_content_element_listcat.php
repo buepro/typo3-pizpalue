@@ -18,15 +18,6 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * Adds content element to new content element wizard
-     */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-        $extensionKey,
-        'Configuration/TsConfig/Page/ContentElement/Element/ListCategorizedContent.tsconfig',
-        'Pizpalue - Content Element: List from categorized content elements'
-    );
-
-    /**
      * Adds content element to selector list
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
