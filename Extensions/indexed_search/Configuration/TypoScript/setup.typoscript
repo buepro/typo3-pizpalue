@@ -20,6 +20,6 @@ tt_content.list.20.indexedsearch_pi2.stdWrap.wrap = <div class="pp-indexed-searc
 
 page {
    includeCSS {
-      indexedSearch = EXT:pizpalue/Extensions/indexed_search/Resources/Public/Scss/main.scss
+      ppIndexedSearch = EXT:pizpalue/Extensions/indexed_search/Resources/Public/Scss/main.scss
    }
 }

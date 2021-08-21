@@ -31,8 +31,8 @@ tt_content.slickcarouselsync.templateName = Slickcarouselsync
 tt_content.slickcarouselbgimg < temp.tt_content.slickcarousel
 tt_content.slickcarouselbgimg.templateName = Slickcarouselbgimg
 
-page.includeCSS.pizpalueSlickcarousel = EXT:pizpalue/Extensions/slickcarousel/Resources/Public/Scss/general.scss
+page.includeCSS.ppSlickcarousel = EXT:pizpalue/Extensions/slickcarousel/Resources/Public/Scss/general.scss
 
 [{$pizpalue.general.useLess} == 1]
-   page.includeCSS.pizpalueSlickcarousel >
+   page.includeCSS.ppSlickcarousel >
 [END]

@@ -29,7 +29,7 @@ plugin.tx_ttaddress {
 
 page {
    includeCSS {
-      ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/Scss/main.scss
+      ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/Scss/main.scss
    }
 }
 
@@ -46,11 +46,11 @@ page {
 [page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]]
    page {
       includeJSFooterlibs {
-         ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js
+         ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js
       }
       includeJSFooter {
-         ttAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}&callback=initMap
-         ttAddressGoogleMap {
+         ppTtAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}&callback=initMap
+         ppTtAddressGoogleMap {
             external = 1
             defer = 1
             async = 1
@@ -62,7 +62,7 @@ page {
 [page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]] && [{$pizpalue.agency.siteMode} > 1]
    page {
       includeJSFooterlibs {
-         ttAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
+         ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
       }
    }
 [END]

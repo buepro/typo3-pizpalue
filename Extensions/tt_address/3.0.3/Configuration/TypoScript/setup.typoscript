@@ -19,6 +19,6 @@ plugin.tx_ttaddress_pi1 {
 
 page {
 	includeCSS {
-		PizpalueTtaddressCss = EXT:pizpalue/Extensions/tt_address/3.0.3/Resources/Public/Css/General.css
+		ppTtAddress = EXT:pizpalue/Extensions/tt_address/3.0.3/Resources/Public/Css/General.css
 	}
 }

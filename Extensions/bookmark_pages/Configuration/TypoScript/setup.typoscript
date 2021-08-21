@@ -9,6 +9,6 @@ plugin.tx_bookmarkpages {
 }
 
 page {
-    includeCSS.pizpalueBookmarkPages = EXT:pizpalue/Extensions/bookmark_pages/Resources/Public/Scss/general.scss
+    includeCSS.ppBookmarkPages = EXT:pizpalue/Extensions/bookmark_pages/Resources/Public/Scss/general.scss
     includeJSFooterlibs.bookmark_pages_jquery >
 }

@@ -72,7 +72,7 @@ plugin.tx_ttaddress {
 
 page {
    includeCSS {
-      ttAddressTeaser = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Public/Scss/main.scss
+      ppTtAddressTeaser = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Public/Scss/main.scss
    }
    jsFooterInline.1040 = TEXT
    jsFooterInline.1040.value (
