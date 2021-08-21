@@ -22,11 +22,6 @@ if ( typeof pp !== 'undefined' ) {
             }
         }
     }) (jQuery);
-
-    // @deprecated since pizpalue v9, will be removed in pizpalue v10.0. Use pp instead.
-    var pizpalue = pp;
-    // @deprecated since pizpalue v9, will be removed in pizpalue v10.0. Use pizpalue.getUrlParameter instead.
-    var getUrlParameter = pp.getUrlParameter;
 }
 
 /**
