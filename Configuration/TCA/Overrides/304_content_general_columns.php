@@ -73,6 +73,6 @@ defined('TYPO3') || die('Access denied.');
         'tt_content',
         '--palette--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.behaviour;pizpalue_behaviour',
         '',
-        'after: tx_pizpalue_bgmedia'
+        'after: tx_pizpalue_background_image_variants'
     );
 })();

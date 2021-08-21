@@ -238,9 +238,6 @@ The bootstrap package offers a possibility to add a background image to the cont
 Its configuration has been adapted to enable the background image as well when no frame is used for the
 content element. In this case just a wrapping div is added.
 
-.. warning::
-   This extension provides an alternative way to assign a background to a content element by using the field
-   `Background image (inline)`. To reduce redundancy it has been marked as deprecated and shouldn't be used any more.
 
 .. _user-design-attributes:
 

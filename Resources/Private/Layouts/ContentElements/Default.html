@@ -35,7 +35,7 @@
 
     <f:comment>====================== Pizpalue init attributes ======================</f:comment>
 
-    <f:variable name="backgroundImageClass">{f:if(condition: '{backgroundImage.0} || {tx_pizpalue_bgmedia}', then: 'frame-has-backgroundimage', else: 'frame-no-backgroundimage')}</f:variable>
+    <f:variable name="backgroundImageClass">{f:if(condition: '{backgroundImage.0}', then: 'frame-has-backgroundimage', else: 'frame-no-backgroundimage')}</f:variable>
 
     {f:variable(name:'ppClasses', value:'')}
     <f:if condition="{data.frame_class} != none">
@@ -63,13 +63,6 @@
     </f:switch>
     <f:if condition="{ppScrollAttr}">
         <f:variable name="ppAttributes">{ppAttributes} {ppScrollAttr}</f:variable>
-    </f:if>
-
-    <f:comment>====================== Pizpalue background ======================</f:comment>
-
-    <f:if condition="{tx_pizpalue_bgmedia}">
-        <f:variable name="ppInlineStyles">{ppInlineStyles} background-image: url({f:uri.image(image: tx_pizpalue_bgmedia.0)});</f:variable>
-        <f:variable name="ppClasses">{ppClasses} pp-bg-centercover</f:variable>
     </f:if>
 
     <f:comment>====================== Pizpalue attributes ======================</f:comment>

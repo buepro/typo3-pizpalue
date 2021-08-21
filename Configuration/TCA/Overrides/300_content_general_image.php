@@ -74,30 +74,6 @@ defined('TYPO3') || die('Access denied.');
                 ],
             ],
         ],
-        // @deprecated since 11.4.0
-        // @todo remove support for inline background image
-        'tx_pizpalue_bgmedia' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.bgmedia',
-            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:deprecatedItemNote',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                'tx_pizpalue_bgmedia',
-                [
-                    'appearance' => [
-                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
-                    ],
-                    'maxitems' => 1,
-                    'overrideChildTca' => [
-                        'types' => [
-                            \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                                'showitem' => 'crop,--palette--;;filePalette',
-                            ]
-                        ],
-                    ],
-                ],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-            ),
-        ],
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
@@ -111,7 +87,7 @@ defined('TYPO3') || die('Access denied.');
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        '--linebreak--, tx_pizpalue_background_image_variants, --linebreak--, tx_pizpalue_bgmedia',
+        '--linebreak--, tx_pizpalue_background_image_variants',
         'after: background_image_options'
     );
 
