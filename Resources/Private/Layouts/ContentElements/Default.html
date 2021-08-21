@@ -47,24 +47,6 @@
     {f:variable(name:'ppInlineStyles', value:'')}
     {f:variable(name:'ppAttributes', value:'')}
 
-    <f:comment>====================== Pizpalue scroll animation ======================</f:comment>
-
-    <f:switch expression="{data.frame_class}">
-        <f:defaultCase>{f:variable(name:'ppScrollAttr', value:'')}</f:defaultCase>
-        <f:case value="pp-scrollanimation1">
-            <f:variable name="ppScrollAttr">{pizpalue.features.scrollAnimation.frame1Attributes}</f:variable>
-        </f:case>
-        <f:case value="pp-scrollanimation2">
-            <f:variable name="ppScrollAttr">{pizpalue.features.scrollAnimation.frame2Attributes}</f:variable>
-        </f:case>
-        <f:case value="pp-scrollanimation3">
-            <f:variable name="ppScrollAttr">{pizpalue.features.scrollAnimation.frame3Attributes}</f:variable>
-        </f:case>
-    </f:switch>
-    <f:if condition="{ppScrollAttr}">
-        <f:variable name="ppAttributes">{ppAttributes} {ppScrollAttr}</f:variable>
-    </f:if>
-
     <f:comment>====================== Pizpalue attributes ======================</f:comment>
 
     <f:if condition="{data.tx_pizpalue_classes}">
