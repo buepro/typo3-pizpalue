@@ -1,3 +1,0 @@
-@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap3/Constants/constants.typoscript'
-
-pizpalue.general.useLess = 1

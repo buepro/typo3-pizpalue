@@ -20,11 +20,6 @@ defined('TYPO3') || die('Access denied.');
     );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $_EXTKEY,
-        'Configuration/TypoScript/Bootstrap3/Rendering',
-        'Pizpalue - Bootstrap 3.x (LESS)'
-    );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $_EXTKEY,
         'Configuration/TypoScript/Upgrade9',
         'Pizpalue - Upgrade 9'
     );
