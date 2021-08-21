@@ -61,8 +61,8 @@ defined('TYPO3') || die('Access denied.');
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('tt_address')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
-            'Extensions/tt_address/4.3.0/Configuration/TypoScript',
-            'Pizpalue - tt_address 4.3.0'
+            'Extensions/tt_address/Configuration/TypoScript',
+            'Pizpalue - tt_address'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
@@ -101,16 +101,4 @@ defined('TYPO3') || die('Access denied.');
         'Configuration/TypoScript/DepreciatedTheme',
         'Pizpalue - Depreciated theme elements'
     );
-    /**
-     * @deprecated since version 11.1.2, will be removed in version 12.0.0
-     */
-    (function ($_EXTKEY) {
-        if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('tt_address')) {
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-                $_EXTKEY,
-                'Extensions/tt_address/3.0.3/Configuration/TypoScript',
-                'Pizpalue DEPRECIATED - tt_address 3.0.3'
-            );
-        }
-    })($_EXTKEY);
 })('pizpalue');

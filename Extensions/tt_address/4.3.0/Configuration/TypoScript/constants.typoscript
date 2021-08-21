@@ -1,5 +1,0 @@
-plugin.tx_ttaddress {
-   view {
-      partialRootPath = EXT:pizpalue/Extensions/tt_address/4.3.0/Resources/Private/Partials/
-   }
-}
