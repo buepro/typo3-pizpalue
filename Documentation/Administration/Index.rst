@@ -80,7 +80,6 @@ The following upgrade descriptions are available:
    Upgrade_11.0
    Upgrade_11.2
    Upgrade_11.4
-   UpgradeBootstrap4
 
 
 .. _admin_extensions:
