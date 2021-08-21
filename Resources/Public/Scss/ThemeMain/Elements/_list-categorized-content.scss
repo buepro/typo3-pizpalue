@@ -10,7 +10,7 @@
     overflow: hidden;
     box-sizing: content-box;
     max-height: 0;
-    border: tint($primary,50%) 1px solid;
+    border: mix(white, $primary, 50%) 1px solid;
     > .frame {
       padding-top: 0;
       padding-bottom: 0;
@@ -51,14 +51,14 @@
     text-align: center;
     border-left: white 6px solid;
     border-top: white 6px solid;
-    background: tint($primary,50%);
-    color: color-yiq(tint($primary,50%));
+    background: mix(white, $primary, 50%);
+    color: color-yiq(mix(white, $primary, 50%));
     opacity: 0;
     transition: background 200ms, color 200ms, opacity 200ms;
     cursor: pointer;
     &:hover {
-      background: tint($primary,30%);
-      color: contrast(tint($primary,30%));
+      background: mix(white, $primary, 30%);
+      color: contrast(mix(white, $primary, 30%));
     }
     span {
       display: block;

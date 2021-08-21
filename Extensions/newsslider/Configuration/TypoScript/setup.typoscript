@@ -4,7 +4,7 @@ plugin.tx_newsslider.settings {
 }
 
 page {
-    includeCSS.ppNewssliderLess = EXT:pizpalue/Extensions/newsslider/Resources/Public/Less/General.less
+    includeCSS.ppNewsslider = EXT:pizpalue/Extensions/newsslider/Resources/Public/Scss/general.scss
 }
 
 #======================#

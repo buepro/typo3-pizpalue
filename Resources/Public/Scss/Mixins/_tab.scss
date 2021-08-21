@@ -1,19 +1,19 @@
 @mixin pp-style-tab($color) {
-  $ppTabActiveTabBg: pp-tint($color, 60%);
-  $ppTabInactiveTabBg: pp-tint($color, 20%);
-  $ppTabContentBg: pp-tint($color, 90%);
-  $ppTabBorderColor: pp-tint($color, 70%);
+  $ppTabActiveTabBg: mix(white, $color, 60%);
+  $ppTabInactiveTabBg: mix(white, $color, 20%);
+  $ppTabContentBg: mix(white, $color, 90%);
+  $ppTabBorderColor: mix(white, $color, 70%);
   .nav-tabs {
     border-bottom-color: $ppTabBorderColor;
     a.nav-link {
       background: $ppTabInactiveTabBg;
-      color: pp-contrast($ppTabInactiveTabBg);
+      color: color-yiq($ppTabInactiveTabBg);
     }
     .nav-link {
       &.active, &:hover {
-        border-color: $ppTabBorderColor $ppTabBorderColor pp-tint($color, 60%);
+        border-color: $ppTabBorderColor $ppTabBorderColor mix(white, $color, 60%);
         background: $ppTabActiveTabBg;
-        color: pp-contrast($ppTabActiveTabBg);
+        color: color-yiq($ppTabActiveTabBg);
       }
     }
   }
@@ -31,7 +31,7 @@
     @if (lightness($color) < 40) {
       color: $color;
       &:hover {
-        color: pp-shade($color, 30%);
+        color: mix(black, $color, 30%);
       }
     } @else {
       &, &:hover {

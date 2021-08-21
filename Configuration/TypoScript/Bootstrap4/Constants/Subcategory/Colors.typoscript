@@ -86,7 +86,7 @@ plugin.bootstrap_package.settings.scss {
     navbar-dark-disabled-bg = transparent
 
     # cat=6040/1035/1082; type=string; label=Footer text color
-    footer-color = pp-contrast($footer-bg)
+    footer-color = color-yiq($footer-bg)
 
     # cat=6040/1035/1084; type=string; label=Footer link color
     footer-link-color = mix($primary,$footer-color,30%)
@@ -98,7 +98,7 @@ plugin.bootstrap_package.settings.scss {
     footer-link-hover-decoration = none
 
     # cat=6040/1035/1092; type=string; label=Footer meta section text color
-    footer-meta-color = pp-contrast($footer-meta-bg)
+    footer-meta-color = color-yiq($footer-meta-bg)
 
     # cat=6040/1035/1094; type=string; label=Footer meta section link color
     footer-meta-link-color = mix($primary,$footer-meta-color,30%)

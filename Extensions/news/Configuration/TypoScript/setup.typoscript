@@ -17,10 +17,6 @@ plugin.tx_news {
 
 page.includeCSS.ppNews = EXT:pizpalue/Extensions/news/Resources/Public/Scss/general.scss
 
-[{$pizpalue.general.useLess} == 1]
-page.includeCSS.ppNews = EXT:pizpalue/Extensions/news/Resources/Public/Less/general.less
-[END]
-
 
 #=========================================================#
 # Enable responsive images

@@ -61,7 +61,3 @@ page {
         }
     }
 }
-
-[{$pizpalue.general.useLess} == 1]
-    page.includeCSS.pizpalueDevelop = EXT:pizpalue/Resources/Public/Less/develop.less
-[END]

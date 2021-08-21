@@ -15,16 +15,13 @@ $navbar-heights: (
 //
 // Footer
 //
-// mix($primary,color-yiq($footer-color)) doesn't work
-// mix($primary,pp-contrast($footer-color)) works
-//
-$footer-color: pp-contrast($footer-bg) !default;
+$footer-color: color-yiq($footer-bg) !default;
 $footer-link-color: mix($primary, $footer-color) !default;
 $footer-link-hover-color: lighten($footer-link-color, 10%) !default;
 $footer-link-hover-decoration: none !default;
 
 $footer-meta-bg: darken($footer-bg, 3%) !default;
-$footer-meta-color: pp-contrast($footer-meta-bg) !default;
+$footer-meta-color: color-yiq($footer-meta-bg) !default;
 $footer-meta-link-color: mix($primary, $footer-meta-color) !default;
 $footer-meta-link-hover-color: lighten($footer-meta-link-color, 10%) !default;
 $footer-meta-link-hover-decoration: $footer-link-hover-decoration !default;
