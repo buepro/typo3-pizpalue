@@ -77,7 +77,6 @@ The following upgrade descriptions are available:
 .. toctree::
    :maxdepth: 2
 
-   Upgrade_9.0
    Upgrade_11.0
    Upgrade_11.2
    Upgrade_11.4
