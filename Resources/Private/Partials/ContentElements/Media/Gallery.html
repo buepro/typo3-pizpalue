@@ -3,10 +3,7 @@
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:if condition="{files}">
-    <f:variable name="imagecols">1</f:variable>
-    <f:if condition="{files -> f:count()} > 1">
-        <f:variable name="imagecols">{data.imagecols as integer}</f:variable>
-    </f:if>
+    <f:variable name="imagecols">{data.imagecols as integer}</f:variable>
     <f:variable name="columnConfig">{settings.gallery.columns.{imagecols}}</f:variable>
     <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{columnConfig.multiplier}" gutters="{columnConfig.gutters}" corrections="{columnConfig.corrections}" />
     <f:comment>
