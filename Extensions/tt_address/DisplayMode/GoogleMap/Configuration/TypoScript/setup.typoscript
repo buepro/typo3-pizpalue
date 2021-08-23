@@ -5,11 +5,11 @@
 plugin.tx_ttaddress {
    view {
       templateRootPaths {
-         20 = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Private/Templates/
+         20 = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Private/Templates/
       }
 
       partialRootPaths {
-         20 = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Private/Partials/
+         20 = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Private/Partials/
       }
    }
    settings.pizpalue.googleMap {
@@ -29,7 +29,7 @@ plugin.tx_ttaddress {
 
 page {
    includeCSS {
-      ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/Scss/main.scss
+      ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/Scss/main.scss
    }
 }
 
@@ -46,7 +46,7 @@ page {
 [page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]]
    page {
       includeJSFooterlibs {
-         ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js
+         ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js
       }
       includeJSFooter {
          ppTtAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}&callback=initMap
@@ -62,7 +62,7 @@ page {
 [page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]] && [{$pizpalue.agency.siteMode} > 1]
    page {
       includeJSFooterlibs {
-         ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
+         ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
       }
    }
 [END]

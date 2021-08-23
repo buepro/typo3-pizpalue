@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                 ttAddress: {
                     root: '<%= paths.root %>Extensions/tt_address/',
                     googleMap: {
-                        resources: '<%= paths.exts.ttAddress.root %>GoogleMap/Resources/',
+                        resources: '<%= paths.exts.ttAddress.root %>DisplayMode/GoogleMap/Resources/',
                         js: '<%= paths.exts.ttAddress.googleMap.resources %>Public/JavaScript/'
                     }
                 }

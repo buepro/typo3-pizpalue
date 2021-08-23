@@ -117,13 +117,13 @@ pp-amt-image              Identifies the image
 Teaser
 ======
 
-This package provides a teaser showing random address item as flip cards.
+This package provides a teaser showing random address item as overlay images.
 
 .. figure:: ../../Images/Administration/TtAddress/Teaser/Teaser.jpg
    :width: 500px
-   :alt: Teaser showing random address item as flip cards
+   :alt: Teaser showing random address item as overlay image
 
-   Teaser showing random address item as flip cards
+   Teaser showing random address item as overlay image
 
 Setup
 -----

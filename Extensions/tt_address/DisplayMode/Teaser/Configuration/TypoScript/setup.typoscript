@@ -5,10 +5,10 @@
 plugin.tx_ttaddress {
    view {
       templateRootPaths {
-         22 = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Private/Templates/
+         22 = EXT:pizpalue/Extensions/tt_address/DisplayMode/Teaser/Resources/Private/Templates/
       }
       partialRootPaths {
-         22 = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Private/Partials/
+         22 = EXT:pizpalue/Extensions/tt_address/DisplayMode/Teaser/Resources/Private/Partials/
       }
    }
    settings.pizpalue.teaser {
@@ -72,7 +72,7 @@ plugin.tx_ttaddress {
 
 page {
    includeCSS {
-      ppTtAddressTeaser = EXT:pizpalue/Extensions/tt_address/Teaser/Resources/Public/Scss/main.scss
+      ppTtAddressTeaser = EXT:pizpalue/Extensions/tt_address/DisplayMode/Teaser/Resources/Public/Scss/main.scss
    }
    jsFooterInline.1040 = TEXT
    jsFooterInline.1040.value (

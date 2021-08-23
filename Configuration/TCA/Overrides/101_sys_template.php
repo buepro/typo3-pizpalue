@@ -66,12 +66,12 @@ defined('TYPO3') || die('Access denied.');
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
-            'Extensions/tt_address/GoogleMap/Configuration/TypoScript',
+            'Extensions/tt_address/DisplayMode/GoogleMap/Configuration/TypoScript',
             'Pizpalue - tt_address Google map'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,
-            'Extensions/tt_address/Teaser/Configuration/TypoScript',
+            'Extensions/tt_address/DisplayMode/Teaser/Configuration/TypoScript',
             'Pizpalue - tt_address Teaser'
         );
     }

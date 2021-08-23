@@ -64,12 +64,12 @@ defined('TYPO3') || die('Access denied.');
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('tt_address')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
             'pizpalue',
-            'Extensions/tt_address/GoogleMap/Configuration/TsConfig/Page.tsconfig',
+            'Extensions/tt_address/DisplayMode/GoogleMap/Configuration/TsConfig/Page.tsconfig',
             'Pizpalue - Extension tt_address Google map'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
             'pizpalue',
-            'Extensions/tt_address/Teaser/Configuration/TsConfig/Page.tsconfig',
+            'Extensions/tt_address/DisplayMode/Teaser/Configuration/TsConfig/Page.tsconfig',
             'Pizpalue - Extension tt_address Teaser'
         );
     }
