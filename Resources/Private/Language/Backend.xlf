@@ -31,9 +31,6 @@
 			<trans-unit id="constCategory.customerExtended">
 				<source>pizpalue: customer extended</source>
 			</trans-unit>
-			<trans-unit id="constCategory.customerPlugins">
-				<source>pizpalue: plugins</source>
-			</trans-unit>
 
 			<trans-unit id="constSubCategory.general">
 				<source>General</source>
