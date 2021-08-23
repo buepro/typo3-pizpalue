@@ -1,5 +1,0 @@
-page {
-    includeCSS {
-        ppDepreciatedTheme = EXT:pizpalue/Resources/Public/Scss/theme-depreciated.scss
-    }
-}
