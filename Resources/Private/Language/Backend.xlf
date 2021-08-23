@@ -59,8 +59,8 @@
 			<trans-unit id="constSubCategory.various">
 				<source>Various</source>
 			</trans-unit>
-			<trans-unit id="constSubCategory.depreciated">
-				<source>Depreciated</source>
+			<trans-unit id="constSubCategory.deprecated">
+				<source>Deprecated</source>
 			</trans-unit>
 			<trans-unit id="constSubCategory.logo">
 				<source>Logo</source>
