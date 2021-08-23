@@ -32,7 +32,7 @@ pizpalue.customer {
     contactEmail = info@domain.ch
 }
 
-page.theme.copyright.text = &copy; {$pizpalue.customer.commonName}
+page.theme.copyright.text = &copy; {$pizpalue.customer.company}
 
 
 #---------------------------------------------------------#
@@ -75,12 +75,4 @@ pizpalue.customer {
 
     # cat=6060/1020/0080; type=string; label=Copyright text
     copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.company}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
-}
-
-
-// todo: depreciated as of 11.1.0
-pizpalue.customer {
-    commonName = {$pizpalue.customer.company}
-    commonEmail = {$pizpalue.customer.contactEmail}
-    commonPhone = {$pizpalue.customer.contactPhone}
 }

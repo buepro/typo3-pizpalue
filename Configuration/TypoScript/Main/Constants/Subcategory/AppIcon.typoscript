@@ -58,7 +58,7 @@ pizpalue.appIcon {
     folder = EXT:pizpalue/Resources/Public/AppIcons
 
     #cat=6060/1110/050; type=string; label=App name (used when insertMetaTags=1)
-    appName = {$pizpalue.customer.commonName}
+    appName = {$pizpalue.customer.company}
 
     #cat=6060/1110/060; type=string; label=Android theme color (used when insertMetaTags=1)
     androidThemeColor = {$pizpalue.colors.primary}

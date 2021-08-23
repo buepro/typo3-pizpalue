@@ -16,10 +16,3 @@ constants {
     ppRatingValue = {$pizpalue.customer.ratingValue}
     ppRatingCount = {$pizpalue.customer.ratingCount}
 }
-
-// todo: depreciated as of 11.1.0
-constants {
-    ppCustomerCommonName = {$pizpalue.customer.commonName}
-    ppCustomerCommonEmail = {$pizpalue.customer.commonEmail}
-    ppCustomerCommonPhone = {$pizpalue.customer.commonPhone}
-}
