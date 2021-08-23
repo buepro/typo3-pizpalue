@@ -12,13 +12,13 @@ plugin.tx_ttaddress {
       }
    }
    settings.pizpalue.teaser {
-      defaultImageUid = {$pizpalue.plugin.tx_ttaddress.teaser.defaultImageUid}
-      maxItemCount = {$pizpalue.plugin.tx_ttaddress.teaser.maxItemCount}
+      defaultImageUid = {$plugin.tx_ttaddress.displayMode.ppTeaser.defaultImageUid}
+      maxItemCount = {$plugin.tx_ttaddress.displayMode.ppTeaser.maxItemCount}
       item.relativeHeight = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-relheight}
       variants {
          default {
             breakpoint = 1200
-            maxWidth = {$pizpalue.plugin.tx_ttaddress.teaser.maxWidth}
+            maxWidth = {$plugin.tx_ttaddress.displayMode.ppTeaser.maxWidth}
             item {
                count = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-count-xl}
                relativeWidth = {$plugin.bootstrap_package.settings.scss.pp-ttaddress-teaser-relwidth-xl}

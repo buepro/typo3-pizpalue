@@ -93,10 +93,10 @@
 				<source>News RSS feed</source>
 			</trans-unit>
 			<trans-unit id="constSubCategory.ttaddressGoogleMap">
-				<source>Addresses Google Map (tt_address)</source>
+				<source>Addresses Google Map (pizpalue)</source>
 			</trans-unit>
 			<trans-unit id="constSubCategory.ttaddressTeaser">
-				<source>Addresses Teaser (tt_address)</source>
+				<source>Addresses Teaser (pizpalue)</source>
 			</trans-unit>
 
 			<trans-unit id="ce_modal_dialog.button_class">

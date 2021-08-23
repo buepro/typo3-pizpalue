@@ -13,12 +13,12 @@ plugin.tx_ttaddress {
       }
    }
    settings.pizpalue.googleMap {
-      pages = {$pizpalue.plugin.tx_ttaddress.googleMap.pages}
-      fields = {$pizpalue.plugin.tx_ttaddress.googleMap.fields}
-      apiKey = {$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}
-      lat = {$pizpalue.plugin.tx_ttaddress.googleMap.lat}
-      lng = {$pizpalue.plugin.tx_ttaddress.googleMap.lng}
-      zoom = {$pizpalue.plugin.tx_ttaddress.googleMap.zoom}
+      pages = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.pages}
+      fields = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.fields}
+      apiKey = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.apiKey}
+      lat = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.lat}
+      lng = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.lng}
+      zoom = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.zoom}
    }
 }
 
@@ -43,13 +43,13 @@ page {
 #
 #---------------------------------------------------------#
 
-[page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]]
+[page["uid"] in [{$plugin.tx_ttaddress.displayMode.ppGoogleMap.pages}]]
    page {
       includeJSFooterlibs {
          ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js
       }
       includeJSFooter {
-         ppTtAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$pizpalue.plugin.tx_ttaddress.googleMap.apiKey}&callback=initMap
+         ppTtAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$plugin.tx_ttaddress.displayMode.ppGoogleMap.apiKey}&callback=initMap
          ppTtAddressGoogleMap {
             external = 1
             defer = 1
@@ -59,7 +59,7 @@ page {
    }
 [END]
 
-[page["uid"] in [{$pizpalue.plugin.tx_ttaddress.googleMap.pages}]] && [{$pizpalue.agency.siteMode} > 1]
+[page["uid"] in [{$plugin.tx_ttaddress.displayMode.ppGoogleMap.pages}]] && [{$pizpalue.agency.siteMode} > 1]
    page {
       includeJSFooterlibs {
          ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js

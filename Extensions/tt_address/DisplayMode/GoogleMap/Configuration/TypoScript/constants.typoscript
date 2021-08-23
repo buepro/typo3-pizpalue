@@ -1,17 +1,16 @@
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript'
-pizpalue.plugin.tx_ttaddress {
-   googleMap {
-      # cat=6070/2020/0010; type=string; label= Enabled pages:Lists uid from pages where the google map might be embedded(e.g. 2,33)
-      pages =
-      # cat=6070/2020/0020; type=float; label= Used fields:Lists the fields from table tt_address being used by the google map
-      fields = uid,company,name,address,zip,city,phone,email,www,description,image,latitude,longitude
-      # cat=6070/2020/0030; type=string; label= Google API key
-      apiKey =
-      # cat=6070/2020/0040; type=float; label= Map center latitude
-      lat = 46.829
-      # cat=6070/2020/0050; type=float; label= Map center longitude
-      lng = 8.241
-      # cat=6070/2020/0060; type=int; label= Map zoom
-      zoom = 8
-   }
+
+plugin.tx_ttaddress.displayMode.ppGoogleMap {
+    # cat=plugin.tx_ttaddress/2020/0010; type=string; label= Enabled pages:Lists uid from pages where the google map might be embedded(e.g. 2,33)
+    pages =
+    # cat=plugin.tx_ttaddress/2020/0020; type=float; label= Used fields:Lists the fields from table tt_address being used by the google map
+    fields = uid,company,name,address,zip,city,phone,email,www,description,image,latitude,longitude
+    # cat=plugin.tx_ttaddress/2020/0030; type=string; label= Google API key
+    apiKey =
+    # cat=plugin.tx_ttaddress/2020/0040; type=float; label= Map center latitude
+    lat = 46.829
+    # cat=plugin.tx_ttaddress/2020/0050; type=float; label= Map center longitude
+    lng = 8.241
+    # cat=plugin.tx_ttaddress/2020/0060; type=int; label= Map zoom
+    zoom = 8
 }

@@ -5,15 +5,13 @@
 # Plugin
 #=========================================================#
 
-pizpalue.plugin.tx_ttaddress {
-   teaser {
-      # cat=6070/2022/0010; type=float; label=Teaser max width (px):The maximum width the teaser might have.
-      maxWidth = 2000
-      # cat=6070/2022/0020; type=int; label=Default image uid:UID from the image that will be shown in case an address doesn't have an image assigned to.
-      defaultImageUid = 905
-      # cat=6070/2022/0030; type=int; label=Maximal item count:Maximum number of items that might be shown in the teaser.
-      maxItemCount = 10
-   }
+plugin.tx_ttaddress.displayMode.ppTeaser {
+    # cat=plugin.tx_ttaddress/2022/0010; type=float; label=Teaser max width (px):The maximum width the teaser might have.
+    maxWidth = 2000
+    # cat=plugin.tx_ttaddress/2022/0020; type=int; label=Default image uid:UID from the image that will be shown in case an address doesn't have an image assigned to.
+    defaultImageUid = 905
+    # cat=plugin.tx_ttaddress/2022/0030; type=int; label=Maximal item count:Maximum number of items that might be shown in the teaser.
+    maxItemCount = 10
 }
 
 
@@ -24,27 +22,27 @@ pizpalue.plugin.tx_ttaddress {
 plugin.bootstrap_package {
    settings {
       scss {
-         # cat=6070/2022/0200; type=float; label=Relative item height (%): The item height relative to the item width
+         # cat=plugin.tx_ttaddress/2022/0200; type=float; label=Relative item height (%): The item height relative to the item width
          pp-ttaddress-teaser-relheight = 70
-         # cat=6070/2022/0211; type=float; label=Item count on xl screen size
+         # cat=plugin.tx_ttaddress/2022/0211; type=float; label=Item count on xl screen size
          pp-ttaddress-teaser-count-xl = 10
-         # cat=6070/2022/0212; type=float; label=Item count on lg screen size
+         # cat=plugin.tx_ttaddress/2022/0212; type=float; label=Item count on lg screen size
          pp-ttaddress-teaser-count-lg = 8
-         # cat=6070/2022/0213; type=float; label=Item count on md screen size
+         # cat=plugin.tx_ttaddress/2022/0213; type=float; label=Item count on md screen size
          pp-ttaddress-teaser-count-md = 6
-         # cat=6070/2022/0214; type=float; label=Item count on sm screen size
+         # cat=plugin.tx_ttaddress/2022/0214; type=float; label=Item count on sm screen size
          pp-ttaddress-teaser-count-sm = 4
-         # cat=6070/2022/0215; type=float; label=Item count on xs screen size
+         # cat=plugin.tx_ttaddress/2022/0215; type=float; label=Item count on xs screen size
          pp-ttaddress-teaser-count-xs = 2
-         # cat=6070/2022/0231; type=float; label=Relative item width for xl screen size (%)
+         # cat=plugin.tx_ttaddress/2022/0231; type=float; label=Relative item width for xl screen size (%)
          pp-ttaddress-teaser-relwidth-xl = 20
-         # cat=6070/2022/0232; type=float; label=Relative item width for lg screen size (%)
+         # cat=plugin.tx_ttaddress/2022/0232; type=float; label=Relative item width for lg screen size (%)
          pp-ttaddress-teaser-relwidth-lg = 25
-         # cat=6070/2022/0233; type=float; label=Relative item width for md screen size (%)
+         # cat=plugin.tx_ttaddress/2022/0233; type=float; label=Relative item width for md screen size (%)
          pp-ttaddress-teaser-relwidth-md = 33.33
-         # cat=6070/2022/0234; type=float; label=Relative item width for sm screen size (%)
+         # cat=plugin.tx_ttaddress/2022/0234; type=float; label=Relative item width for sm screen size (%)
          pp-ttaddress-teaser-relwidth-sm = 50
-         # cat=6070/2022/0235; type=float; label=Relative item width for xs screen size (%)
+         # cat=plugin.tx_ttaddress/2022/0235; type=float; label=Relative item width for xs screen size (%)
          pp-ttaddress-teaser-relwidth-xs = 100
       }
    }
