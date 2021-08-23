@@ -1,5 +1,5 @@
 .idea
 *.zip
-.php_cs.cache
+.php-cs-fixer.cache
 Build/node_modules
 Build/package-lock.json
