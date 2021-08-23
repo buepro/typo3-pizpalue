@@ -42,14 +42,14 @@ defined('TYPO3') || die('Access denied.');
         if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
                 'pizpalue',
-                'Extensions/news/Configuration/TsConfig/Page/Pizpalue.tsconfig',
+                'Extensions/news/Configuration/TsConfig/Page.tsconfig',
                 'Pizpalue - Extension news'
             );
         }
         if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('eventnews')) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
                 'pizpalue',
-                'Extensions/eventnews/Configuration/TsConfig/Page/Pizpalue.tsconfig',
+                'Extensions/eventnews/Configuration/TsConfig/Page.tsconfig',
                 'Pizpalue - Extension eventnews'
             );
         }

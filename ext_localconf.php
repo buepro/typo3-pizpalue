@@ -153,7 +153,7 @@ defined('TYPO3') || die('Access denied.');
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
         if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Extensions/news/Configuration/TsConfig/Page/Pizpalue.tsconfig'"
+                "@import 'EXT:pizpalue/Extensions/news/Configuration/TsConfig/Page.tsconfig'"
             );
         }
     }
@@ -164,7 +164,7 @@ defined('TYPO3') || die('Access denied.');
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('eventnews')) {
         if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Extensions/eventnews/Configuration/TsConfig/Page/Pizpalue.tsconfig'"
+                "@import 'EXT:pizpalue/Extensions/eventnews/Configuration/TsConfig/Page.tsconfig'"
             );
         }
     }
