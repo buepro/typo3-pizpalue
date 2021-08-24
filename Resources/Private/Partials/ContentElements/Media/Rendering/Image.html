@@ -41,7 +41,7 @@
     <f:if condition="{defaultAspectRatio}">
         <f:variable name="aspectRatio">{defaultAspectRatio as float}</f:variable>
         <f:variable name="defaultHeight">{v:math.division(a: defaultWidth, b: aspectRatio)}</f:variable>
-        <f:variable name="defaultHeight">{height as integer}</f:variable>
+        <f:variable name="defaultHeight">{defaultHeight as integer}</f:variable>
     </f:if>
     <f:if condition="{defaultHeight}">
         <f:then>
