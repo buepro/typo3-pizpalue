@@ -62,8 +62,14 @@ defined('TYPO3') || die('Access denied.');
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        'tx_pizpalue_layout_breakpoint,--linebreak--',
-        'after: layout'
+        'tx_pizpalue_layout_breakpoint',
+        'replace:frame_class'
+    );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content',
+        'frames',
+        '--linebreak--,frame_class',
+        'after:space_after_class'
     );
 
     /**

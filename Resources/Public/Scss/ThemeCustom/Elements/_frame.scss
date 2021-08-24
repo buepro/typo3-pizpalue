@@ -1,33 +1,28 @@
 //
 // Custom frames
 //
-.frame-pp1 > div,
-.frame-pp2 > div,
-.frame-pp3 > div {
-  > .frame-inner {
+.frame-pp1,
+.frame-pp2,
+.frame-pp3 {
+   .frame-inner {
     border: $border-width solid;
     @include border-radius($border-radius);
-    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-      @include media-breakpoint-up($breakpoint) {
-        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-        padding: ($alert-padding-y * $scaling) ($alert-padding-x * $scaling);
-      }
-    }
+    padding: calc(var(--pp-frame-spacing) / 2);
   }
 }
-.frame-pp1 > div > .frame-inner {
+.frame-pp1 .frame-inner {
   @include pp-make-frame-bg($primary);
 }
-.frame-pp2 > div > .frame-inner {
+.frame-pp2 .frame-inner {
   @include pp-make-frame-bg($secondary);
 }
-.frame-pp3 > div > .frame-inner {
+.frame-pp3 .frame-inner {
   @include pp-make-frame-bg($complementary);
 }
 
 .pp-row-height {
   &.frame-pp1, &.frame-pp2, &.frame-pp3 {
-    > div, > div > .frame-inner {
+    .frame-group-container, .frame-group-inner, .frame-container .frame-inner {
       height: 100%;
     }
   }

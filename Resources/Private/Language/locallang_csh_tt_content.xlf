@@ -5,7 +5,7 @@
 		<header/>
 		<body>
 			<trans-unit id="tx_pizpalue_image_scaling.description">
-				<source>Allows to define a scaling for the available screen sizes.</source>
+				<source>Define the image scaling for the available screen sizes.</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_image_scaling.details">
 				<source>The image sizes for the different screen sizes are defined by the selected image variants as well as the image column count.
@@ -20,6 +20,9 @@ md: 0.33,
 sm: 1.0,
 xs: 1.0
 				</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_layout_breakpoint.description">
+				<source>Defines the screen breakpoint where the layout behaviour changes.</source>
 			</trans-unit>
 		</body>
 	</file>

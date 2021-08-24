@@ -20,22 +20,15 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      background: linear-gradient(0deg, white 70%, transparent);
+      height: var(--pp-frame-spacing);
+      background: linear-gradient(0deg, white 30%, transparent);
     }
   }
-  @each $breakpoint in map-keys($pp-frame-outer-spacing-scaling) {
-    @include media-breakpoint-up($breakpoint) {
-      $scaling: map-get($pp-frame-outer-spacing-scaling, $breakpoint);
-      .ppc-collapsible {
-        margin-top: $pp-frame-outer-spacing * $scaling;
-        padding: 0.5rem * $scaling;
-        .ppc-bottom {
-          height: 0.7rem * $scaling;
-        }
-        &:first-child {
-          margin-top: 0;
-        }
-      }
+  .ppc-collapsible {
+    margin-top: var(--pp-frame-spacing);
+    padding: var(--pp-frame-spacing);
+    &:first-child {
+      margin-top: 0;
     }
   }
   .ppc-more {

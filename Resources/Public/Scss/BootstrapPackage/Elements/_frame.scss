@@ -1,0 +1,11 @@
+:root {
+  --pp-frame-spacing: var(--frame-spacing-xs);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      --pp-frame-spacing: var(--frame-spacing-#{$breakpoint});
+    }
+  }
+}
+.pp-frame-collapsible {
+  @extend %frame-collapsible
+}

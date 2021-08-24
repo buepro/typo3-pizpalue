@@ -31,13 +31,8 @@
 // Content element with background
 //
 .row > div > .frame:not(.frame-background-none) {
-  @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-    @include media-breakpoint-up($breakpoint) {
-      $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-      padding-left: ($frame-inner-spacing * $scaling);
-      padding-right: ($frame-inner-spacing * $scaling);
-    }
-  }
+  padding-left: var(--pp-frame-spacing);
+  padding-right: var(--pp-frame-spacing);
 }
 
 //
@@ -45,7 +40,7 @@
 //
 .frame-inner {
   // No side padding for content elements in columns
-  .col > .frame.frame-background-none > .frame-container {
+  .col > .frame.frame-background-none > .frame-group-container > .frame-group-inner > .frame-container {
     padding-left: 0;
     padding-right: 0;
   }
@@ -55,17 +50,12 @@
   //
   .pp-col-collapse, .fe-col-collapse, .ce-col-collapse {
     > .frame.frame-background-none.frame-space-before-none:not(.frame-has-backgroundimage):first-child {
-      @extend .frame-collapsible;
+      @extend .pp-frame-collapsible;
     }
   }
   // Compensate bottom space
   > .pp-row-collapse, > .fe-row-collapse, > .ce-row-collapse {
-    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-      @include media-breakpoint-up($breakpoint) {
-        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-        margin-bottom: -($frame-inner-spacing * $scaling);
-      }
-    }
+    margin-bottom: calc(-1 * var(--pp-frame-spacing));
   }
 }
 

@@ -179,7 +179,7 @@
 			</trans-unit>
 
 			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint">
-				<source>Layout screen breakpoint</source>
+				<source>Layout breakpoint</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.all">
 				<source>All</source>
