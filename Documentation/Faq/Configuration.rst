@@ -44,30 +44,7 @@ BOOTSTRAP PACKAGE: NAVIGATION (constant title "Breadcrumb").
 
 **Q**: How can I use an other font in the main menu?
 
-**A**: Additional fonts might be added by TS. To add two additional google fonts (e.g. ::`Amatic SC` and
-::`Indie Flower`) the following TS setup might be used:
-
-.. code-block:: typoscript
-
-   page {
-      includeCSSLibs {
-         ucFonts = https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Indie+Flower
-         ucFonts {
-            external = 1
-            disableCompression = 1
-            excludeFromConcatenation = 1
-            fontLoader {
-               families {
-                  0 = Amatic SC
-                  1 = Indie Flower
-               }
-               enabled = 1
-            }
-         }
-      }
-   }
-
-Once the fonts are available they can be used in css/scss (e.g. `p#test { font-family: 'Amatic SC'; }`).
+**A**: See `bootstrap package wiki pages <https://github.com/benjaminkott/bootstrap_package/wiki>`__
 
 
 Fastmenu
