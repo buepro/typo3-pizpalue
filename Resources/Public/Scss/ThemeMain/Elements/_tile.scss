@@ -1,8 +1,17 @@
 //---------------------------------------------------------------------------------------------------------------------
 // Tile
+//
+// It is assumed that a tile is a normal content element (no structure element) hence doesn't contain further
+// content elements.
+//
 // see as well _extensions.scss
 //---------------------------------------------------------------------------------------------------------------------
 //
+
+//
+// Variables
+//
+$pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 
 //
 // Basics
@@ -14,7 +23,7 @@
     display: block;
     content: "";
   }
-  > .frame-container, > .frame-backgroundimage-container {
+  .frame-container, .frame-backgroundimage-container {
     position: absolute;
     left: $pp-tile-gutter;
     top: $pp-tile-gutter;
@@ -23,7 +32,7 @@
     width: auto;
     height: auto;
   }
-  > .frame-container {
+  .frame-container {
     overflow: hidden;
     margin: 0;
     display: flex;
@@ -54,7 +63,7 @@
         &:before {
           content: "";
         }
-        > .frame-container {
+        .frame-container {
           position: absolute;
           margin: 0;
         }
@@ -68,7 +77,7 @@
     &:before {
       content: none;
     }
-    > .frame-container {
+    .frame-container {
       position: static;
       // Add margin because left, right, top, bottom don't apply
       margin: $pp-tile-gutter;
@@ -85,7 +94,7 @@
 //
 .pp-tile:not(.pp-type-image):not(.pp-type-media):not(.pp-type-external_media):not(.pp-ce-overlaycard):not(.pp-type-pp_picoverlay) {
   .frame-inner {
-    margin: $table-cell-padding;
+    margin: $pp-tile-padding;
   }
 }
 
@@ -133,7 +142,7 @@
       width: 100%;
     }
     figure {
-      padding: $table-cell-padding;
+      padding: $pp-tile-padding;
     }
   }
 }
@@ -156,21 +165,21 @@
   background: transparent;
 }
 .pp-tile.pp-bg-primary {
-  > .frame-container {
+  .frame-container {
     @include pp-make-background(map-get($frame-backgrounds, primary));
   }
 }
 .pp-tile.pp-bg-secondary {
-  > .frame-container {
+  .frame-container {
     @include pp-make-background(map-get($frame-backgrounds, secondary));
   }
 }
 .pp-tile.pp-bg-complementary {
-  > .frame-container {
+  .frame-container {
     @include pp-make-background(map-get($frame-backgrounds, complementary));
   }
 }
-.pp-tile-scroll-y > .frame-container {
+.pp-tile-scroll-y .frame-container {
   align-items: flex-start;
   overflow-y: auto;
 }

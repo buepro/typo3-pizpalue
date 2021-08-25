@@ -42,37 +42,27 @@
 // Content inner: act on inner container
 //
 .pp-inner-margin {
-  &.pp-content, > .frame-container > .frame-inner {
-    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-      @include media-breakpoint-up($breakpoint) {
-        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-        margin: ($frame-inner-spacing * $scaling);
-      }
-    }
+  &.pp-content, .frame-inner {
+    margin: var(--pp-frame-spacing);
   }
 }
 .pp-inner-padding {
-  &.pp-content, > .frame-container > .frame-inner {
-    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-      @include media-breakpoint-up($breakpoint) {
-        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-        padding: ($frame-inner-spacing * $scaling);
-      }
-    }
+  &.pp-content, .frame-inner {
+    padding: var(--pp-frame-spacing);
   }
 }
 .pp-inner-bgwhite70 {
-  &.pp-content, > .frame-container > .frame-inner {
+  &.pp-content, .frame-inner {
     background-color: rgba(white, 0.7);
   }
 }
 .pp-inner-bggrey70 {
-  &.pp-content, > .frame-container > .frame-inner {
+  &.pp-content, .frame-inner {
     background-color: rgba(gray, 0.7);
   }
 }
 .pp-inner-bgblack70 {
-  &.pp-content, > .frame-container > .frame-inner {
+  &.pp-content, .frame-inner {
     background-color: rgba(black, 0.7);
   }
 }
