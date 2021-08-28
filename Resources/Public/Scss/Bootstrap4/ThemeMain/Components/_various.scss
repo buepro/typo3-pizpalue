@@ -1,0 +1,57 @@
+//
+// Corrects image overflow on webkit engine
+//
+figure.image {
+  width: 100%;
+}
+
+//
+// Nested frame container
+//
+.container-fluid .frame-container,
+.frame-container .frame-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//
+// Frame without background
+// Without this nested frames inherit the background from the parent which can result in text being overlaid
+// by child frames when they have a negative margin.
+//
+.frame-background-none {
+  background-color: transparent;
+}
+
+//
+// Full width container
+//
+.container-fluid .frame-container {
+  max-width: none;
+}
+
+//
+// Bootstrap
+//
+.popover-body *:last-child {
+  margin-bottom: 0;
+}
+
+//
+// Modal dialog
+//
+.pp-modal-dialog {
+  .modal-header .close:after {
+    content: "\2715";
+  }
+  .modal-body {
+    overflow-x: hidden;
+  }
+}
+
+//
+// Avoid horizontal scroll bar when using image without frame
+//
+body {
+  overflow-x: hidden;
+}

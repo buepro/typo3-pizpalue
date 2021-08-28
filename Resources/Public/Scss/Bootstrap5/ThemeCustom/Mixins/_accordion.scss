@@ -1,0 +1,32 @@
+@mixin pp-style-accordion-light($color) {
+  .accordion-button {
+    border-left: $color 4px solid;
+    &.collapsed {
+      border-left-color: transparent;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .accordion-collapse {
+    border-left: mix(white, $color, 30%) 4px dotted;
+    &.show {
+      border-left-style: solid;
+    }
+  }
+}
+
+//
+// Deprecated as of 26.8.21, not used
+//
+@mixin pp-style-accordion($color) {
+  .card {
+    background-color: mix(white, $color, 90%);
+    border: mix(white, $color, 40%);
+  }
+  .card-header {
+    background-color: mix(white, $color, 20%);
+    color: color-contrast(mix(white, $color, 20%));
+    border-bottom: mix(white, $color, 40%);
+  }
+}

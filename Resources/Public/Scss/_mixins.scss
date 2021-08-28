@@ -1,16 +1,11 @@
 //
-// bootstrap framework
+// Might be used by site packages
 //
-@import "Bootstrap/mixins";
 
-//
-// pizpalue
-//
-@import "Mixins/frame";
-@import "Mixins/card";
-@import "Mixins/accordion";
-@import "Mixins/tab";
-@import "Mixins/text";
-@import "Mixins/background";
-@import "Mixins/utilities";
+@if ($pp-bootstrap-version == 4) {
+  @import "Bootstrap4/mixins";
+}
+@if ($pp-bootstrap-version == 5) {
+  @import "Bootstrap5/mixins";
+}
 

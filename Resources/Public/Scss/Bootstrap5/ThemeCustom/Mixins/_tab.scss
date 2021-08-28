@@ -1,0 +1,36 @@
+@mixin pp-style-tab-light($color) {
+  .nav-link {
+    &.active {
+      box-shadow: inset 0 (0.4 * $nav-link-padding-y) 0 0 $color;
+    }
+  }
+}
+
+// Deprecated as of 26.8.21, not used
+@mixin pp-style-tab($color) {
+  $ppTabActiveTabBg: mix(white, $color, 60%);
+  $ppTabInactiveTabBg: mix(white, $color, 20%);
+  $ppTabContentBg: mix(white, $color, 90%);
+  $ppTabBorderColor: mix(white, $color, 70%);
+  .nav-tabs {
+    border-bottom-color: $ppTabBorderColor;
+    a.nav-link {
+      background: $ppTabInactiveTabBg;
+      color: color-contrast($ppTabInactiveTabBg);
+    }
+    .nav-link {
+      &.active, &:hover {
+        border-color: $ppTabBorderColor $ppTabBorderColor mix(white, $color, 60%);
+        background: $ppTabActiveTabBg;
+        color: color-contrast($ppTabActiveTabBg);
+      }
+    }
+  }
+  .tab-content {
+    border: $ppTabBorderColor $nav-tabs-border-width solid;
+    border-top: 0;
+    background: $ppTabContentBg;
+    padding-left: $nav-link-padding-x;
+    padding-right: $nav-link-padding-x;
+  }
+}

@@ -29,6 +29,7 @@ lib.contentElement {
                 1 {
                     multiplier {
                         default = 1
+                        xlarge = 1
                         large = 1
                         medium = 1
                         small = 1
@@ -48,10 +49,12 @@ lib.contentElement {
                     1 {
                         multiplier {
                             default = 0.25
+                            xlarge = 0.25
                             large = 0.25
                         }
                         gutters {
                             default = 40
+                            xlarge = 40
                             large = 40
                         }
                     }
@@ -60,10 +63,12 @@ lib.contentElement {
                     2 {
                         multiplier {
                             default = 0.25
+                            xlarge = 0.25
                             large = 0.25
                         }
                         gutters {
                             default = 40
+                            xlarge = 40
                             large = 40
                         }
                     }
@@ -77,6 +82,7 @@ lib.contentElement {
                 textmedia {
                     left.emphasizeMediaMultiplier {
                         default = 0.7
+                        xlarge = 0.7
                         large = 0.7
                         medium = 0.5
                     }
@@ -100,25 +106,25 @@ lib.contentElement {
             #---------------------------------------------------------#
             pageVariants {
                 default {
-                    breakpoint = 1200
+                    breakpoint = 1400
                     width = 2000
                 }
-
+                xlarge {
+                    breakpoint = 1200
+                    width = 1400
+                }
                 large {
                     breakpoint = 992
                     width = 1200
                 }
-
                 medium {
                     breakpoint = 768
                     width = 992
                 }
-
                 small {
                     breakpoint = 576
                     width = 768
                 }
-
                 extrasmall {
                     breakpoint = unset
                     width = 576

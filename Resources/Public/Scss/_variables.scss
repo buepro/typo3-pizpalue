@@ -1,19 +1,18 @@
 //
-// pizpalue preset (independent variables, can be used to set defaults)
+// Might be used by site packages
 //
-@import "Variables/preset";
 
 //
-// bootstrap_package
+// Presets
 //
-@import "BootstrapPackage/variables";
+@import "presets";
 
 //
-// bootstrap framework
+// Variables
 //
-@import "Bootstrap/variables";
-
-//
-// pizpalue postset (dependent variables, can use previously set variables)
-//
-@import "Variables/postset";
+@if ($pp-bootstrap-version == 4) {
+  @import "Bootstrap4/variables";
+}
+@if ($pp-bootstrap-version == 5) {
+  @import "Bootstrap5/variables";
+}

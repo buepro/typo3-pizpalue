@@ -1,0 +1,148 @@
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript'
+
+#=========================================================#
+# Colors (mainly from bootstrap_package - bootstrap 4)
+#=========================================================#
+
+#---------------------------------------------------------#
+# Customer
+#---------------------------------------------------------#
+
+plugin.bootstrap_package.settings.scss {
+
+    # cat=6030/1032/0010; type=string; label=Primary brand color
+    primary = #0083C4
+
+    # cat=6030/1032/0012; type=string; label=Secondary brand color
+    secondary = adjust-hue($primary, -33)
+
+    # cat=6030/1032/0014; type=string; label=Complementary brand color
+    complementary = lighten(desaturate(adjust-hue(#0083c4, -167), 10%), 12%)
+
+    # cat=6030/1032/0020; type=string; label=Page background color
+    body-bg = #fff
+
+    # cat=6030/1032/0040; type=string; label=Light header background color (navigation style default)
+    navbar-light-bg = #e8e8e8
+
+    # cat=6030/1032/0040; type=string; label=Dark header background color (navigation style inverse)
+    navbar-dark-bg = #2b2b2b
+
+    # cat=6030/1032/1080; type=string; label=Footer background color
+    footer-bg = #333
+
+    # cat=6030/1032/1090; type=string; label=Footer meta section background color
+    footer-meta-bg = darken($footer-bg, 3%)
+
+}
+
+
+#---------------------------------------------------------#
+# Customer style
+#---------------------------------------------------------#
+
+plugin.bootstrap_package.settings.scss {
+
+    # cat=6040/1034/1020; type=string; label=Default link color
+    navbar-light-color = lighten($navbar-light-active-color,15%)
+
+    # cat=6040/1034/1022; type=string; label=Default link hover color
+    navbar-light-hover-color = $navbar-light-active-color
+
+    # cat=6040/1034/1024; type=string; label=Default link hover background
+    navbar-light-hover-bg = transparent
+
+    # cat=6040/1034/1026; type=string; label=Default link active color
+    navbar-light-active-color = #333
+
+    # cat=6040/1034/1028; type=string; label=Default link active background
+    navbar-light-active-bg = transparent
+
+    # cat=6040/1034/1030; type=string; label=Default link disabled color
+    navbar-light-disabled-color = #ccc
+
+    # cat=6040/1034/1032; type=string; label=Default link disabled background
+    navbar-light-disabled-bg = transparent
+
+    # cat=6040/1034/1040; type=string; label=Inverse link color
+    navbar-dark-color = rgba($white, .5)
+
+    # cat=6040/1034/1042; type=string; label=Inverse link hover color
+    navbar-dark-hover-color = $navbar-dark-active-color
+
+    # cat=6040/1034/1044; type=string; label=Inverse link hover background
+    navbar-dark-hover-bg = transparent
+
+    # cat=6040/1034/1046; type=string; label=Inverse link active color
+    navbar-dark-active-color = $white
+
+    # cat=6040/1034/1048; type=string; label=Inverse link active background
+    navbar-dark-active-bg = transparent
+
+    # cat=6040/1034/1050; type=string; label=Inverse link disabled color
+    navbar-dark-disabled-color = rgba($white, .25)
+
+    # cat=6040/1034/1052; type=string; label=Inverse link disabled background
+    navbar-dark-disabled-bg = transparent
+
+    # cat=6040/1035/1082; type=string; label=Footer text color
+    footer-color = color-contrast($footer-bg)
+
+    # cat=6040/1035/1084; type=string; label=Footer link color
+    footer-link-color = mix($primary,$footer-color,30%)
+
+    # cat=6040/1035/1086; type=string; label=Footer link hover color
+    footer-link-hover-color = lighten($footer-link-color, 10%)
+
+    # cat=6040/1035/1088; type=string; label=Footer link hover decoration
+    footer-link-hover-decoration = none
+
+    # cat=6040/1035/1092; type=string; label=Footer meta section text color
+    footer-meta-color = color-contrast($footer-meta-bg)
+
+    # cat=6040/1035/1094; type=string; label=Footer meta section link color
+    footer-meta-link-color = mix($primary,$footer-meta-color,30%)
+
+    # cat=6040/1035/1096; type=string; label=Footer meta section link hover color
+    footer-meta-link-hover-color = lighten($footer-meta-link-color, 10%)
+
+    # cat=6040/1035/1098; type=string; label=Footer meta section link hover decoration
+    footer-meta-link-hover-decoration = none
+
+    # cat=6040/2910/1110; type=string; label=Register tabs bar background color
+    pp-tab-v1-background = $gray-400
+
+    # cat=6040/2910/1120; type=string; label=Active register background color
+    pp-tab-v1-active-background = #fff
+
+    # cat=6040/2910/1130; type=string; label=Register border color
+    pp-tab-v1-border-color = #ddd
+
+    # cat=6040/1060/1210; type=string; label= Fastmenu icon background color
+    pp-fastmenu-icon-bg = lightgrey
+
+    # cat=6040/1060/1220; type=string; label= Fastmenu icon color
+    pp-fastmenu-icon-color = $link-color
+
+    # cat=6040/1060/1230; type=string; label= Fastmenu icon hover color
+    pp-fastmenu-icon-hover-color = $link-hover-color
+
+    # cat=6040/1060/1240; type=string; label= Fastmenu icon active color
+    pp-fastmenu-icon-active-color = $link-hover-color
+
+    # cat=6040/1060/1250; type=string; label= Fastmenu icon size (in pixels)
+    pp-fastmenu-icon-size = 50px
+
+    # cat=6040/1060/1260; type=string; label= Fastmenu handle color
+    pp-fastmenu-handle-color = gray
+
+    # cat=6040/1060/1270; type=string; label= Fastmenu content background color
+    pp-fastmenu-content-bg = white
+
+    # cat=6040/1060/1280; type=string; label= Fastmenu content border color
+    pp-fastmenu-content-border-color = lightgrey
+
+}
+
+
+

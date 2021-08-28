@@ -148,6 +148,7 @@ if ( typeof pp !== 'undefined' ) {
 
     /**
      * Content element with class pp-ce-overlaycard
+     * Deprecated since 30.6.2021
      */
     $(function () {
         function showOverlay ($this) {

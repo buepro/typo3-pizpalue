@@ -1,0 +1,14 @@
+plugin.bootstrap_package.settings.scss {
+    #---------------------------------------------------------#
+    # Bootstrap
+    #---------------------------------------------------------#
+    # Bootstrap main branch version
+    pp-bootstrap-version = 5
+    # Presets flag. See `EXT:pizpalue/Resources/Public/Scss/_presets.scss`
+    pp-enable-presets = false
+
+    #---------------------------------------------------------#
+    # Photoswipe
+    #---------------------------------------------------------#
+    pswp__assets-path = ../../../../bootstrap_package/Resources/Public/Images/PhotoSwipe/
+}

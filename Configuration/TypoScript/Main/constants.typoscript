@@ -40,6 +40,7 @@
 #=========================================================#
 # Categories
 #=========================================================#
+
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Category/SocialNetwork.typoscript'
 
 
@@ -48,12 +49,12 @@
 #=========================================================#
 
 #---------------------------------------------------------#
-# Bootstrap4
+# Bootstrap
 #---------------------------------------------------------#
-@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Configuration.typoscript'
-@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Scaffold.typoscript'
-@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Colors.typoscript'
-@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/Constants/Subcategory/Various.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap/Constants/Subcategory/Configuration.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap/Constants/Subcategory/Scaffold.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap/Constants/Subcategory/Colors.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap/Constants/Subcategory/Various.typoscript'
 
 #---------------------------------------------------------#
 # Pizpalue

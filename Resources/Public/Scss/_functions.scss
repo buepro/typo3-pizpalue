@@ -1,9 +1,10 @@
 //
-// bootstrap framework
+// Might be used by site packages
 //
-@import "Bootstrap/functions";
 
-//
-// pizpalue
-//
-@import "Functions/gradient";
+@if ($pp-bootstrap-version == 4) {
+  @import "Bootstrap4/functions";
+}
+@if ($pp-bootstrap-version == 5) {
+  @import "Bootstrap5/functions";
+}

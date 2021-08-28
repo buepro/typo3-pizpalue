@@ -22,7 +22,7 @@ class ImageVariantsViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
-    protected static $breakpoints = ['default', 'large', 'medium', 'small', 'extrasmall'];
+    protected static $breakpoints = ['default', 'xlarge', 'large', 'medium', 'small', 'extrasmall'];
 
     /**
      * @return void

@@ -1,27 +1,14 @@
-//----------------------------------------------------------------------------------------------------------------------
 //
-// Custom theme adjustments are more likely to be overridden by customer projects
+// Presets
 //
-//----------------------------------------------------------------------------------------------------------------------
+@import "presets";
 
 //
-// Functions
+// Theme
 //
-@import "functions";
-
-//
-// Variables
-// ATTENTION: Variables might use previous defined function
-//
-@import "variables";
-
-//
-// Mixins
-// ATTENTION: Mixins might use previous defined variables.
-//
-@import "mixins";
-
-//
-// pizpalue custom theme elements
-//
-@import "ThemeCustom/elements";
+@if ($pp-bootstrap-version == 4) {
+  @import "Bootstrap4/theme-custom";
+}
+@if ($pp-bootstrap-version == 5) {
+  @import "Bootstrap5/theme-custom";
+}

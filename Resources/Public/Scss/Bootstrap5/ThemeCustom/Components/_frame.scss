@@ -1,0 +1,30 @@
+//
+// Custom frames
+//
+.frame-pp1,
+.frame-pp2,
+.frame-pp3 {
+   .frame-inner {
+    border: $border-width solid;
+    @include border-radius($border-radius);
+    padding: calc(var(--pp-frame-spacing) / 2);
+  }
+}
+.frame-pp1 .frame-inner {
+  @include pp-make-frame-bg($primary);
+}
+.frame-pp2 .frame-inner {
+  @include pp-make-frame-bg($secondary);
+}
+.frame-pp3 .frame-inner {
+  @include pp-make-frame-bg($complementary);
+}
+
+//
+// Set headings color and link style
+//
+@each $name, $settings in $frame-backgrounds {
+  .frame-background-#{$name} {
+    @include pp-make-background($settings);
+  }
+}

@@ -26,7 +26,7 @@ When upgrading TYPO3 from version 9 LTS to version 10 LTS the following steps ar
    - Replace `Gridelements` with `Gridelements w/DataProcessing (recommended)`
    - Add `PP-Gridelements w/DataProcessing`
 
-.. figure:: ../Images/Administration/Upgrade_TYPO3_10LTS-pp_gridelements.jpg
+.. figure:: ../Images/Administration/Upgrade11_PpGridelements.jpg
    :width: 500px
    :alt: Website landing page
 

@@ -1,0 +1,23 @@
+@import 'EXT:bootstrap_package/Configuration/TypoScript/Bootstrap4/constants.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Bootstrap4/ScssVariables11.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/constants.typoscript'
+
+plugin.bootstrap_package {
+    settings {
+        scss {
+            #---------------------------------------------------------#
+            # Configuration
+            #---------------------------------------------------------#
+            pp-bootstrap-version = 4
+
+            #---------------------------------------------------------#
+            # Overwrite incompatible bootstrap 5 functions
+            #---------------------------------------------------------#
+            # cat=6040/1035/1082; type=string; label=Footer text color
+            footer-color = color-yiq($footer-bg)
+
+            # cat=6040/1035/1092; type=string; label=Footer meta section text color
+            footer-meta-color = color-yiq($footer-meta-bg)
+        }
+    }
+}

@@ -23,7 +23,7 @@ Static templates
 In an installation using `container_elements`, `news`, `eventnews` and `ws_flexslider` the following static extension
 templates would be included:
 
-.. figure:: ../Images/Administration/Installation_Static_templates.jpg
+.. figure:: ../Images/Administration/Installation_StaticTemplates.jpg
    :width: 800px
    :alt: Included static extension templates
 

@@ -30,6 +30,8 @@ class PopoverTypolinkHook
      * In case the `data-html` attribute is absent or is set to true the `data-content` attribute is obtained by
      * parsing the content with the configuration from `lib.parseFunc_RTE`.
      *
+     * Deprecation note: the attributes data-toggle, data-html and data-content are for bootstrap4 only
+     *
      * @param array $params
      * @param ContentObjectRenderer $ref The calling ContentObjectRenderer
      */
@@ -45,16 +47,20 @@ class PopoverTypolinkHook
                 'tabindex' => '0',
                 'data-toggle' => 'popover',
                 'data-html' => 'true',
+                'data-bs-toggle' => 'popover',
+                'data-bs-html' => 'true',
+                'role' => 'button',
             ];
             if (isset($params['linkDetails']['content'])) {
                 $content = $params['linkDetails']['content'];
-                if (isset($attributes['data-html']) && $attributes['data-html'] === 'false') {
-                    $popoverAttributes['data-content'] = strip_tags($content);
+                if (isset($attributes['data-bs-html']) && $attributes['data-bs-html'] === 'false') {
+                    $popoverAttributes['data-bs-content'] = strip_tags($content);
                 } else {
                     /** @var ContentObjectRenderer $cObjRenderer */
                     $cObjRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
-                    $popoverAttributes['data-content'] = htmlspecialchars($cObjRenderer->parseFunc($content, [], '< lib.parseFunc_RTE'));
+                    $popoverAttributes['data-bs-content'] = htmlspecialchars($cObjRenderer->parseFunc($content, [], '< lib.parseFunc_RTE'));
                 }
+                $popoverAttributes['data-content'] = $popoverAttributes['data-bs-content'];
             }
             // Create tag
             $finalAttributes = array_merge($popoverAttributes, $attributes);

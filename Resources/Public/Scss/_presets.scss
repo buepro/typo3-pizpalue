@@ -1,0 +1,9 @@
+//
+// Presets flag
+// If enabled EXT:user_pizpalue/Resources/Public/Scss/_presets.scss is loaded.
+// Can be used to overwrite scss variables defined in TS or to define additional utility classes.
+//
+$pp-enable-presets: false !default;
+@if ($pp-enable-presets) {
+  @import "../../../../user_pizpalue/Resources/Public/Scss/presets.scss";
+}

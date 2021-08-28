@@ -37,17 +37,19 @@ page {
     #: FLUIDTEMPLATE
     #.
     10 {
-        #:::::::::::::::::::::::
-        #: Pass pizpalue constants to fluid
-        #.
-        dataProcessing.1010 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
-        dataProcessing.1010 {
-            as = pizpalue
-            key = pizpalue
+        dataProcessing {
+            # Increase subnavigation depth to 3 levels
+            20.levels = 3
+
+            # Pass pizpalue constants to fluid
+            1010 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
+            1010 {
+                as = pizpalue
+                key = pizpalue
+            }
         }
-        #:::::::::::::::::::::::
-        #: Pass content objects to fluid
-        #.
+
+        # Pass content objects to fluid
         variables {
             ppCopyright = TEXT
             ppCopyright.value = {$pizpalue.customer.copyright}

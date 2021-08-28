@@ -19,7 +19,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  * Converts an input string to an array.
  *
- * The input text has the form: "xl: 1.0, lg: 1.3, ..." where the output array
+ * The input text has the form: "xxl: 1.0, xl: 1.3, ..." where the output array
  * contains the keys used by the image variants.
  *
  * The items from the input string are coma separated. The resulting array elements are of type float and are computed
@@ -35,7 +35,8 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
     use CompileWithRenderStatic;
 
     protected static $breakpointMap = [
-        'xl' => 'default',
+        'xxl' => 'default',
+        'xl' => 'xlarge',
         'lg' => 'large',
         'md' => 'medium',
         'sm' => 'small',

@@ -1,0 +1,5 @@
+:root {
+  @each $color, $value in $pp-theme-contrast-colors {
+    --pp-#{$color}-contrast: #{$value};
+  }
+}

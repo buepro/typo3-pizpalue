@@ -123,15 +123,22 @@
                         {f:variable(name: '_location', value: ', {newsItem.locationSimple}') -> f:if(condition: newsItem.locationSimple)}
                         {f:variable(name: '_location', value: ', {newsItem.location.title}') -> f:if(condition: newsItem.location.title)}
                         {f:render(partial: 'General/EventPopup', arguments: '{n: newsItem, month: month, settings: settings}')
-                            -> f:variable(name: '_popup')}
+                            -> f:variable(name: '_popupContent')}
                         {f:format.date(date: newsItem.datetime, format: 'H:i') -> f:variable(name: '_text')}
                         {f:variable(name: '_text', value: '❮ ❯') -> f:if(condition: newsItem.fullDay)}
-                        <a tabindex="0" class="btn btn-sm btn-primary ppc-time pp-popover ppc-{newsItem.uid} mb-1" role="button"
+                        <a tabindex="0"
+                           class="btn btn-sm btn-primary ppc-time pp-popover ppc-{newsItem.uid} mb-1"
+                           role="button"
+                           data-bs-toggle="popover"
+                           data-bs-trigger="click"
+                           data-bs-html="true"
+                           data-bs-content="{_popupContent}"
                            data-toggle="popover"
                            data-trigger="click"
-                           title="{_eventSpan}{_location}"
                            data-html="true"
-                           data-content="{_popup}">{_text}</a>
+                           data-content="{_popupContent}"
+                           title="{_eventSpan}{_location}"
+                        >{_text}</a>
                     </f:for>
                 </f:then>
                 <f:else>

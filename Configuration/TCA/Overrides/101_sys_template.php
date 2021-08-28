@@ -16,6 +16,11 @@ defined('TYPO3') || die('Access denied.');
         'Configuration/TypoScript/Main',
         'Pizpalue - Main'
     );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $_EXTKEY,
+        'Configuration/TypoScript/Bootstrap4',
+        'Pizpalue - Bootstrap 4.x'
+    );
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,

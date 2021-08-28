@@ -1,0 +1,23 @@
+//----------------------------------------------------------------------------------------------------------------------
+//
+// Core consists of all items except functions, variables and mixins
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+@import "Components/ce-appearance";
+@import "Components/ce-editor";
+@import "Components/extensions";
+@import "Components/fluid";
+@import "Components/list-categorized-content";
+@import "Components/picoverlay";
+@import "Components/root";
+@import "Components/structure_elements";
+@import "Components/textmedia";
+@import "Components/tile";
+@import "Components/various";
+
+//
+// Deprecated components
+//
+@import "Components/Deprecated/ce-appearance-overlaycard";
+@import "Components/Deprecated/ce-appearance";

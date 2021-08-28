@@ -11,9 +11,9 @@
             </div>
             <f:if condition="{data.readmore_label}">
                 <div class="ppc-control">
-                    <a class="ppc-readmore collapsed" data-toggle="collapse" href="#bodytext-{data.uid}"
+                    <a class="ppc-readmore collapsed" data-toggle="collapse" data-bs-toggle="collapse" href="#bodytext-{data.uid}"
                        aria-expanded="false" aria-controls="bodytext-{data.uid}">
-                        <span class="ppc-icon mr-2">&xdtri;</span><span class="ppc-more">{data.readmore_label}</span>
+                        <span class="ppc-icon mr-2 me-2">&xdtri;</span><span class="ppc-more">{data.readmore_label}</span>
                         <span class="ppc-less">{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:less')}</span>
                     </a>
                 </div>

@@ -24,7 +24,8 @@
     <f:variable name="frameSize">frame-size-default</f:variable>
     <f:variable name="frameClass">frame-{data.frame_class}</f:variable>
     <f:variable name="typeClass">frame-type-{data.CType}</f:variable>
-    <f:variable name="layoutClass">frame-layout-{data.frame_layout}</f:variable>
+    <f:variable name="layoutClass">frame-layout-{data.layout}</f:variable>
+    <f:variable name="frameLayoutClass">frame-layout-{data.frame_layout}</f:variable><f:comment>layoutClass in bootstrap package</f:comment>
     <f:variable name="backgroundClass">frame-background-{f:if(condition: data.background_color_class, else: 'none', then: data.background_color_class)}</f:variable>
     <f:variable name="spaceBeforeClass">frame-space-before-{f:if(condition: data.space_before_class, else: 'none', then: data.space_before_class)}</f:variable>
     <f:variable name="spaceAfterClass">frame-space-after-{f:if(condition: data.space_after_class, else: 'none', then: data.space_after_class)}</f:variable>
@@ -41,8 +42,9 @@
     {f:variable(name:'ppClasses', value:'')}
     <f:if condition="{data.frame_class} != none">
         <f:variable name="ppClasses">
-            frame {frameSize} {frameClass} {typeClass} {layoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}
+            frame {frameSize} {frameClass} {typeClass} {frameLayoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}
         </f:variable>
+        {f:variable(name: 'ppClasses', value: '{ppClasses} {layoutClass}') -> f:if(condition: '{layoutClass} != frame-layout-0')}
     </f:if>
     {f:variable(name:'ppIncludedStyles', value:'')}
     {f:variable(name:'ppInlineStyles', value:'')}
@@ -108,9 +110,8 @@
     {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout as string} == "pp-tile-11"')}
     {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout as string} == "pp-tile-12"')}
     <f:if condition="{rendersTile}">
-        <f:variable name="ppClasses">
-            {ppClasses} pp-tile {data.layout}
-        </f:variable>
+        {f:variable(name: 'ppClasses', value: '{ppClasses} pp-tile')}
+        {f:variable(name: 'ppClasses', value: '{ppClasses} {data.layout}') -> f:if(condition: '{data.frame_class} == none')}
     </f:if>
 
     <f:comment>====================== Pizpalue layout breakpoint ======================</f:comment>

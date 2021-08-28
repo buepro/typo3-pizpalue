@@ -194,6 +194,7 @@ been added to stronger draw the users attention to the media.
       lib.contentElement.settings.responsiveimages.contentelements.textmedia {
          left.emphasizeMediaMultiplier {
             default = 0.7
+            xlarge = 0.7
             large = 0.7
             medium = 0.7
          }

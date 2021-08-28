@@ -4,7 +4,12 @@
 <f:section name="Header" />
 <f:section name="Main">
 
-    <button type="button" class="{data.pi_flexform.button_class}" data-toggle="modal" data-target="#pp-modal-dialog-{data.uid}">
+    <button type="button"
+            class="{data.pi_flexform.button_class}"
+            data-bs-toggle="modal"
+            data-bs-target="#pp-modal-dialog-{data.uid}"
+            data-toggle="modal"
+            data-target="#pp-modal-dialog-{data.uid}">
         {data.header}
     </button>
 
@@ -14,16 +19,15 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="pp-modal-dialog-title-{data.uid}">{data.header}</h5>
-                    <button type="button" class="close" data-dismiss="modal"
+                    <button type="button" class="close btn-close" data-bs-dismiss="modal" data-dismiss="modal"
                             aria-label="{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:close')}">
-                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <f:format.raw>{shortcuts}</f:format.raw>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-dismiss="modal">
                         {f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:close')}
                     </button>
                 </div>

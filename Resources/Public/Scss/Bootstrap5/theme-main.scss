@@ -1,0 +1,14 @@
+//----------------------------------------------------------------------------------------------------------------------
+//
+// Main theme adjustments are less likely to be overridden by customer projects
+//
+//----------------------------------------------------------------------------------------------------------------------
+
+@import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
+@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/bootstrap";
+
+@import "ThemeMain/variables";
+@import "ThemeMain/functions";
+@import "ThemeMain/mixins";
+@import "BootstrapPackage/components";
+@import "ThemeMain/components";

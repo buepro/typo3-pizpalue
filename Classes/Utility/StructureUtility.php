@@ -22,6 +22,7 @@ class StructureUtility
         'small' => 1,
         'medium' => 1,
         'large' => 1,
+        'xlarge' => 1,
         'default' => 1
     ];
 
@@ -30,7 +31,8 @@ class StructureUtility
         'small' => 'sm',
         'medium' => 'md',
         'large' => 'lg',
-        'default' => 'xl'
+        'xlarge' => 'xl',
+        'default' => 'xxl',
     ];
 
     /**
