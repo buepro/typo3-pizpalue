@@ -10,7 +10,10 @@
     overflow: hidden;
     box-sizing: content-box;
     max-height: 0;
+    margin-top: var(--pp-frame-spacing);
+    padding: calc(var(--pp-frame-spacing) * 0.7);
     border: mix(white, $primary, 50%) 1px solid;
+    border-radius: $border-radius;
     > .frame {
       padding-top: 0;
       padding-bottom: 0;
@@ -23,10 +26,6 @@
       height: var(--pp-frame-spacing);
       background: linear-gradient(0deg, white 30%, transparent);
     }
-  }
-  .ppc-collapsible {
-    margin-top: var(--pp-frame-spacing);
-    padding: var(--pp-frame-spacing);
     &:first-child {
       margin-top: 0;
     }
@@ -45,7 +44,7 @@
     border-left: white 6px solid;
     border-top: white 6px solid;
     background: mix(white, $primary, 50%);
-    color: color-contrast(mix(white, $primary, 50%));
+    color: pp-compat-color-contrast(mix(white, $primary, 50%));
     opacity: 0;
     transition: background 200ms, color 200ms, opacity 200ms;
     cursor: pointer;

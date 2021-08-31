@@ -4,11 +4,24 @@
 //
 //----------------------------------------------------------------------------------------------------------------------
 
+//
+// Create bootstrap components
+//
+// Remarks:
+//   - The bootstrap package presets bootstrap variables
+//   - Bootstrap functions are needed for bootstrap variables
+//   - Pizpalue modifies variables
+//
 @import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap4/variables";
+@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/functions";
+@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
+@import "../Bootstrap5/ThemeMain/variables";
 @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/bootstrap";
 
-@import "ThemeMain/variables";
-@import "ThemeMain/functions";
-@import "ThemeMain/mixins";
+//
+// Create bootstrap package and pizpalue components
+//
+@import "../Bootstrap5/ThemeMain/functions";
+@import "../Bootstrap5/ThemeMain/mixins";
 @import "BootstrapPackage/components";
-@import "ThemeMain/components";
+@import "../Bootstrap5/ThemeMain/components";

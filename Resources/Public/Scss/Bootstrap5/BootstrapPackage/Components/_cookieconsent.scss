@@ -7,7 +7,7 @@
 //
 $cookieconsent-zindex: 1080 !default;
 $cookieconsent-bg: #1b1b1b !default;
-$cookieconsent-color: color-contrast($cookieconsent-bg) !default;
+$cookieconsent-color: pp-compat-color-contrast($cookieconsent-bg) !default;
 $cookieconsent-link-color: $primary !default;
 $cookieconsent-button-bg: $primary !default;
 $cookieconsent-button-highlight-bg: transparent !default;

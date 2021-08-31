@@ -40,8 +40,15 @@ figure.image {
 //
 // Modal dialog
 //
-.pp-modal-dialog .modal-body {
-  overflow-x: hidden;
+.pp-modal-dialog {
+  @if ($pp-bootstrap-version == 4) {
+    .modal-header .close:after {
+      content: "\2715";
+    }
+  }
+  .modal-body {
+    overflow-x: hidden;
+  }
 }
 
 //

@@ -16,13 +16,13 @@
     border-bottom-color: $ppTabBorderColor;
     a.nav-link {
       background: $ppTabInactiveTabBg;
-      color: color-contrast($ppTabInactiveTabBg);
+      color: pp-compat-color-contrast($ppTabInactiveTabBg);
     }
     .nav-link {
       &.active, &:hover {
         border-color: $ppTabBorderColor $ppTabBorderColor mix(white, $color, 60%);
         background: $ppTabActiveTabBg;
-        color: color-contrast($ppTabActiveTabBg);
+        color: pp-compat-color-contrast($ppTabActiveTabBg);
       }
     }
   }

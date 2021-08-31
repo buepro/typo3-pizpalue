@@ -1,6 +1,7 @@
 //
-// Variables using variables from bootstrap or bootstrap_package.
+// Config
 //
+$pp-bootstrap-version: 5 !default;
 
 //
 // Colors
@@ -15,12 +16,8 @@ $footer-meta-bg: #222 !default;
 // Theme colors
 //
 $theme-colors: map-merge($theme-colors, (
-  'complementary': $complementary,
+  'complementary': $complementary
 ));
-$pp-theme-contrast-colors: () !default;
-@each $color, $value in $theme-colors {
-  $pp-theme-contrast-colors: map-merge((#{$color}: color-contrast($value)), $pp-theme-contrast-colors);
-}
 
 //
 // Headings contrast color

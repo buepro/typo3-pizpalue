@@ -1,6 +1,6 @@
 @mixin pp-make-card($name, $settings) {
   $background: map-get($settings, 'background');
-  $color: color-contrast($background);
+  $color: pp-compat-color-contrast($background);
   .pp-card-#{$name}:not(.frame), .pp-card-#{$name}.frame .frame-inner > div {
     color: $color;
     background-color: $background;

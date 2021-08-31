@@ -70,9 +70,9 @@
 @mixin pp-make-background($settings) {
   $background: map-get($settings, 'background');
   background-color: $background;
-  color: color-contrast($background);
+  color: pp-compat-color-contrast($background);
   .element-header, .element-subheader {
-    $color: color-contrast(map-get($settings, background));
+    $color: pp-compat-color-contrast(map-get($settings, background));
     @if (map-get($settings, headings-color)) {
       $color: map-get($settings, headings-color);
     }

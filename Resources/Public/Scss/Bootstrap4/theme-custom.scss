@@ -20,9 +20,9 @@
 // ATTENTION: Mixins might use previous defined variables.
 //
 @import "mixins";
-@import "ThemeCustom/mixins";
+@import "../Bootstrap5/ThemeCustom/mixins";
 
 //
 // pizpalue custom theme components
 //
-@import "ThemeCustom/components";
+@import "../Bootstrap5/ThemeCustom/components";

@@ -43,11 +43,24 @@ $pagination-line-height: 1.25 !default;
   li {
     &:first-child {
       margin-left: 0;
-      @include border-start-radius($border-radius);
     }
 
-    &:last-child {
-      @include border-end-radius($border-radius);
+    @if ($pp-bootstrap-version == 4) {
+      &:first-child {
+        @include border-left-radius($border-radius);
+      }
+      &:last-child {
+        @include border-right-radius($border-radius);
+      }
+    }
+    @if ($pp-bootstrap-version == 5) {
+      &:first-child {
+        @include border-start-radius($border-radius);
+      }
+
+      &:last-child {
+        @include border-end-radius($border-radius);
+      }
     }
 
     &.current {
