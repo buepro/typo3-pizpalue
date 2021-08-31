@@ -1,4 +1,26 @@
+const fantasticon = require('fantasticon');
+const chalk = require('chalk');
+
 module.exports = function(grunt) {
+
+    /**
+     * Grunt task for webfonts
+     */
+    grunt.registerMultiTask('webfont', 'Grunt task to run npm scripts', function () {
+        var options = this.options(),
+            done = this.async();
+        fantasticon.generateFonts(options).then(
+            function (result) {
+                for (const { writePath } of result.writeResults) {
+                    grunt.log.ok('Generated ' + chalk.dim(writePath));
+                }
+                done();
+            },
+            function (error) {
+                grunt.log.error(error);
+            }
+        );
+    });
 
     /**
      * Project configuration.
@@ -88,23 +110,43 @@ module.exports = function(grunt) {
 
         },
         webfont: {
-            glyphicon: {
-                src: '<%= paths.icons %>PizpalueIcon/*.svg',
-                dest: '<%= paths.fonts %>',
+            pizpalueicon: {
                 options: {
-                    font: 'pizpalueicon',
-                    template: 'templates/font.css',
-                    fontFamilyName: 'PizpalueIcon',
-                    engine: 'node',
-                    autoHint: false,
-                    htmlDemo: false,
-                    templateOptions: {
-                        baseClass: 'ppicon',
-                        classPrefix: 'ppicon-'
+                    inputDir: '../Resources/Public/Icons/PizpalueIcon',
+                    outputDir: '../Resources/Public/Fonts',
+                    fontTypes: [
+                        'eot',
+                        'woff2',
+                        'woff',
+                        'ttf'
+                    ],
+                    assetTypes: [
+                        'css',
+                        'json'
+                    ],
+                    name: 'pizpalueicon',
+                    prefix: 'ppicon',
+                    selector: '.ppicon',
+                    codepoints: grunt.file.readJSON('./pizpalueicon.json'),
+                    formatOptions: {
+                        json: {
+                            indent: 4
+                        }
+                    },
+                    templates: {
+                        css: './pizpalueicon.css.hbs'
+                    },
+                    pathOptions: {
+                        json:   './pizpalueicon.json',
+                        css:    '../Resources/Public/Fonts/pizpalueicon.css',
+                        eot:    '../Resources/Public/Fonts/pizpalueicon.eot',
+                        ttf:    '../Resources/Public/Fonts/pizpalueicon.ttf',
+                        woff:   '../Resources/Public/Fonts/pizpalueicon.woff',
+                        woff2:  '../Resources/Public/Fonts/pizpalueicon.woff2'
                     }
                 }
             }
-        }
+        },
     });
 
     /**
@@ -113,7 +155,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-webfonts');
 
     /**
      * Grunt update task

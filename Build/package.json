@@ -8,10 +8,11 @@
   "version": "9.0.1",
   "license": "MIT",
   "devDependencies": {
+    "chalk": "^4.1.2",
+    "fantasticon": "^1.2.2",
     "grunt": "^1.4.1",
-    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
     "grunt-contrib-uglify": "^5.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-webfonts": "^3.0.1"
+    "grunt-contrib-watch": "^1.1.0"
   }
 }
