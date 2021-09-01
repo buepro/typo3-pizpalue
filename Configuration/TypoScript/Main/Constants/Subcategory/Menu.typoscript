@@ -10,7 +10,7 @@ page {
             # cat=6030/1060/0100; type=options[Default=default, Default Transition=default-transition, Inverse=inverse, Inverse Transition=inverse-transition]; label=Navigation Style
             style = default
 
-            # cat=6030/1060/0102; type=options[Default=, Fixed Top=top, Fixed Bottom=bottom]; label=Navigation Type
+            # cat=6030/1060/0102; type=options[Default=, Fixed Top=top]; label=Navigation Type
             type =
         }
 
@@ -27,8 +27,20 @@ page {
             navigationValue =
         }
 
+        footernavigation {
+            # cat=6030/1060/0310; type=boolean; label=Footer Navigation: Enable to display the footer navigation at bottom
+            enable = 0
+            # cat=6030/1060/0320; type=string; label=Footer Navigation Values: Comma separated list of page uids
+            navigationValue =
+            # cat=6030/1060/0330; type=options[List=list, Directory=directory]; label=Footer Navigation Type
+            icon {
+                # cat=6030/1060/0360; type=boolean; label=Footer Navigation Icon Enable
+                enable = 1
+            }
+        }
+
         language {
-            # cat=6030/1060/0310; type=boolean; label=Show language menu
+            # cat=6030/1060/0410; type=boolean; label=Show language menu
             enable = 1
         }
     }
@@ -54,6 +66,21 @@ page {
 
             # cat=6060/1060/0140; type=boolean; label=Meta Navigation include items not in menu
             includeNotInMenu = 0
+        }
+
+        footernavigation {
+            # cat=6060/1060/0330; type=options[List=list, Directory=directory]; label=Footer Navigation Type
+            navigationType = list
+            # cat=6060/1060/0340; type=boolean; label=Footer Navigation include items not in menu
+            includeNotInMenu = 1
+            # cat=6060/1060/0350; type=int+; label=Footer Navigation Levels
+            levels = 2
+            icon {
+                # cat=6060/1060/0370; type=int+; label=Footer Navigation Icon Width
+                width = 16
+                # cat=6060/1060/0380; type=int+; label=Footer Navigation Icon Height
+                height = 16
+            }
         }
 
         language {

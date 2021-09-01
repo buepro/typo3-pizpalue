@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:comment>As bootstrap package but with pizpalue constants and conditional label.</f:comment>
+    <f:if condition="{theme.contact.label}"><h5 class="footer-contact-headline"><f:translate key="{theme.contact.label}" /></h5></f:if>
+    <address>
+        <f:if condition="{pizpalue.customer.company}">
+            <p class="address-title"><strong>{pizpalue.customer.company}</strong></p>
+        </f:if>
+        <p class="address-address">
+            <f:if condition="{pizpalue.customer.contactAddress}">{pizpalue.customer.contactAddress}</f:if>
+            <f:if condition="{pizpalue.customer.contactAddressAddition}"><br>{pizpalue.customer.contactAddressAddition}</f:if>
+            <f:if condition="{pizpalue.customer.contactZip} || {pizpalue.customer.contactCity}"><br>{pizpalue.customer.contactZip} {pizpalue.customer.contactCity}</f:if>
+            <f:if condition="{pizpalue.customer.contact.country}"><br>{pizpalue.customer.contact.country}</f:if>
+        </p>
+        <f:if condition="{pizpalue.customer.contactPhone}">
+            <p class="address-phone"><a href="tel:{pizpalue.customer.contactPhone}">{pizpalue.customer.contactPhone}</a></p>
+        </f:if>
+        <f:if condition="{pizpalue.customer.contactFax}">
+            <p class="address-fax">{pizpalue.customer.contactFax}</p>
+        </f:if>
+        <f:if condition="{pizpalue.customer.contactEmail}">
+            <p class="address-email"><f:link.typolink parameter="{pizpalue.customer.contactEmail}" /></p>
+        </f:if>
+        <f:if condition="{pizpalue.customer.domain}">
+            <p class="address-www"><f:link.typolink parameter="https://www.{pizpalue.customer.domain}">www.{pizpalue.customer.domain}</f:link.typolink></p>
+        </f:if>
+    </address>
+    <f:if condition="{theme.contact.button.pageUid}">
+        <p>
+            <f:link.page class="btn btn-{theme.contact.button.colorClass}" pageUid="{theme.contact.button.pageUid}">
+                <f:translate key="{theme.contact.button.label}" />
+            </f:link.page>
+        </p>
+    </f:if>
+</html>

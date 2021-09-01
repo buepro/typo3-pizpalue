@@ -20,9 +20,19 @@ pizpalue.features {
     imageLoading = lazy
 }
 
+page.theme {
+    contact {
+        # cat=6030/1035/0110; type=boolean; label=Contact: Enable to display the Contact at bottom
+        enable = 1
+        button {
+            # cat=6030/1035/0130; type=int+; label=Button Page Uid
+            pageUid =
+        }
+    }
+}
 
 #---------------------------------------------------------#
-# Customer various
+# Customer extended
 #---------------------------------------------------------#
 
 pizpalue.features {
@@ -31,4 +41,15 @@ pizpalue.features {
 
     # cat=6060/1510/0120; type=boolean; label=Insert data into text:If selected text fields are parsed with insertData-function (see stdWrap.insertData). Be careful enabling this feature since an editor might be able to reveal sensitive data.
     content.insertData = 0
+}
+
+page.theme {
+    contact {
+        # cat=6060/1035/0120; type=string; label=Label: Text shown above contact data (text or LLL-Reference)
+        label =
+        button {
+            # cat=6060/1035/0140; type=string; label=Button Label
+            label = LLL:EXT:bootstrap_package/Resources/Private/Language/locallang.xlf:contact.button.label
+        }
+    }
 }
