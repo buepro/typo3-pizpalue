@@ -1,9 +1,9 @@
 @font-face {
     font-family: "pizpalueicon";
-    src: url("./pizpalueicon.eot?abbe4c29b0dfe1721093140b17074e6e#iefix") format("embedded-opentype"),
-url("./pizpalueicon.woff2?abbe4c29b0dfe1721093140b17074e6e") format("woff2"),
-url("./pizpalueicon.woff?abbe4c29b0dfe1721093140b17074e6e") format("woff"),
-url("./pizpalueicon.ttf?abbe4c29b0dfe1721093140b17074e6e") format("truetype");
+    src: url("./pizpalueicon.eot?508991007f91a2257403348b2efe9caa#iefix") format("embedded-opentype"),
+url("./pizpalueicon.woff2?508991007f91a2257403348b2efe9caa") format("woff2"),
+url("./pizpalueicon.woff?508991007f91a2257403348b2efe9caa") format("woff"),
+url("./pizpalueicon.ttf?508991007f91a2257403348b2efe9caa") format("truetype");
 }
 
 .ppicon::before, .bootstrappackageicon::before, .glyphicon::before {
