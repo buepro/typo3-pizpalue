@@ -15,15 +15,6 @@ figure.image {
 }
 
 //
-// Frame without background
-// Without this nested frames inherit the background from the parent which can result in text being overlaid
-// by child frames when they have a negative margin.
-//
-.frame-background-none {
-  background-color: transparent;
-}
-
-//
 // Full width container
 //
 .container-fluid .frame-container {
