@@ -11,14 +11,11 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 
 //
 // Position Fixed
-//
+// --------------------------------------------------
 .navbar-mainnavigation {
   position: relative;
   &.navbar-fixed-top {
     @extend .fixed-top;
-  }
-  &.navbar-fixed-bottom {
-    @extend .fixed-bottom;
   }
 }
 .body-bg-top {
@@ -28,15 +25,7 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
     }
   }
 }
-.body-bg-bottom {
-  @each $breakpoint in map-keys($navbar-heights) {
-    @include media-breakpoint-up($breakpoint) {
-      padding-bottom: map-get($navbar-heights, $breakpoint);
-    }
-  }
-}
-.navbar-fixed-top,
-.navbar-fixed-bottom {
+.navbar-fixed-top {
   .navbar-collapse {
     @each $breakpoint in map-keys($navbar-heights) {
       @include media-breakpoint-up($breakpoint) {
@@ -51,10 +40,9 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
   }
 }
 
-
 //
 // Carousel Corrections
-//
+// --------------------------------------------------
 .navbar {
   + a,
   + a + a,
@@ -106,31 +94,10 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
     }
   }
 }
-.navbar-fixed-bottom {
-  + a,
-  + a + a,
-  + .typo3-feedit-element > a,
-  + .typo3-feedit-element > a + a,
-  + .main-section > a,
-  + .main-section > a + a,
-  + .main-section > .typo3-feedit-element > a,
-  + .main-section > .typo3-feedit-element > a + a {
-    + .carousel-fullscreen {
-      margin-top: 0;
-      @each $breakpoint in map-keys($navbar-heights) {
-        @include media-breakpoint-up($breakpoint) {
-          height: calc(100vh - #{map-get($navbar-heights, $breakpoint)});
-        }
-      }
-    }
-  }
-}
-
-
 
 //
 // Brand
-//
+// --------------------------------------------------
 .navbar-mainnavigation {
   .navbar-brand {
     margin-right: $grid-gutter-width;
@@ -161,22 +128,11 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
       display: none;
     }
   }
-  &.navbar-inverse {
-    .navbar-brand-image {
-      > .navbar-brand-logo-normal {
-        display: none;
-      }
-      > .navbar-brand-logo-inverted {
-        display: block;
-      }
-    }
-  }
 }
-
 
 //
 // Breakpoint
-// Bootstrap 4 only allows breakpoints to be fixed at viewports this removes
+// Bootstrap 4 and 5 only allows breakpoints to be fixed at viewports this removes
 // a lot of flexibility, so we introduce the legacy float breakpoint again.
 //
 .navbar-mainnavigation {
@@ -265,10 +221,9 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
   }
 }
 
-
 //
 // Dropdown
-//
+// --------------------------------------------------
 .navbar-mainnavigation {
   .dropdown-menu {
     margin: 0;
@@ -286,15 +241,15 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
     padding-right: $navbar-nav-link-padding-x;
     display: flex;
     align-items: center;
+    gap: .25em;
   }
   .dropdown-icon {
+    flex-grow: 0;
+    flex-shrink: 0;
     svg,
     img {
       display: block;
       margin: 0;
-    }
-    & + .dropdown-text {
-      margin-left: 0.5em;
     }
   }
   @media (max-width: ($grid-float-breakpoint - 1)) {
@@ -303,8 +258,10 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
     }
     .dropdown-menu {
       position: static;
+      box-shadow: none;
       margin-left: -($grid-gutter-width / 2);
       margin-right: -($grid-gutter-width / 2);
+      border-radius: 0;
       border: none;
       background: transparent;
       border-left: 4px solid $primary;
@@ -318,10 +275,9 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
   }
 }
 
-
 //
 // Mainnavigation
-//
+// --------------------------------------------------
 .navbar-mainnavigation {
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
   padding: 0;
@@ -330,15 +286,15 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
   }
 }
 
-
 //
 // Item
-//
+// --------------------------------------------------
 .navbar-mainnavigation {
   .nav-link {
     position: relative;
     display: flex;
     align-items: center;
+    gap: .25em;
   }
   .nav-link-icon,
   .nav-link-text {
@@ -346,26 +302,25 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
     vertical-align: middle;
   }
   .nav-link-icon {
-    & + .nav-link-text {
-      margin-left: 0.5em;
-    }
+    flex-grow: 0;
+    flex-shrink: 0;
     svg,
     img {
-      vertical-align: sub;
+      display: block;
+      margin: 0;
     }
   }
 }
 
-
 //
 // Status
-//
+// --------------------------------------------------
 .navbar-mainnavigation {
   .navbar-nav > li {
     > .nav-link::before {
       content: '';
       position: absolute;
-      top: 0px;
+      top: 0;
       left: 0;
       width: 4px;
       height: 100%;
@@ -395,10 +350,9 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
   }
 }
 
-
 //
 // Toggler
-//
+// --------------------------------------------------
 $pp-header-toggler-width: 34px !default;
 $pp-header-toggler-padding: 6px !default;
 $pp-header-toggler-line-gap: round($pp-header-toggler-width / 5.67) !default;
@@ -437,14 +391,14 @@ $pp-header-toggler-margin-right: -$pp-header-toggler-padding !default;
   transform: translate(-50%, -50%);
 }
 .navbar-toggler-icon:before {
-  transition-delay: 0.1s;
+  transition-delay: .1s;
   transform: rotate(-45deg);
-  top: 0px;
+  top: 0;
 }
 .navbar-toggler-icon:after {
   transition-delay: 0.1s;
   transform: rotate(45deg);
-  top: 0px;
+  top: 0;
 }
 .navbar-toggler.collapsed {
   .navbar-toggler-icon {
@@ -475,10 +429,9 @@ $pp-header-toggler-margin-right: -$pp-header-toggler-padding !default;
   }
 }
 
-
 //
 // Navigation Style
-//
+// --------------------------------------------------
 .navbar-default {
   @extend .navbar-light;
   background: $navbar-light-bg;
@@ -488,10 +441,9 @@ $pp-header-toggler-margin-right: -$pp-header-toggler-padding !default;
   background: $navbar-dark-bg;
 }
 
-
 //
 // Transision
-//
+// --------------------------------------------------
 .navbar-default-transition,
 .navbar-default-transition.navbar-transition {
   @extend .navbar-default;
