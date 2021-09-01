@@ -77,7 +77,7 @@
 # Various
 #=========================================================#
 
-@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Plugins.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Extensions.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Templates.typoscript'
 
 config.admPanel = 0

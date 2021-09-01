@@ -17,15 +17,6 @@ page {
 
 
 #---------------------------------------------------------#
-# indexedsearch
-#---------------------------------------------------------#
-
-plugin {
-    tx_indexedsearch.settings.rootPidList = -1
-}
-
-
-#---------------------------------------------------------#
 # srlangmenu
 #---------------------------------------------------------#
 
@@ -37,13 +28,4 @@ plugin {
         languagesUidsList = {$pizpalue.menu.language.languageValue}
         languageTitle = 1
     }
-}
-
-
-#---------------------------------------------------------#
-# loginform
-#---------------------------------------------------------#
-
-styles {
-    content.loginform.dateFormat = {$pizpalue.general.dateTimeFormat}
 }
