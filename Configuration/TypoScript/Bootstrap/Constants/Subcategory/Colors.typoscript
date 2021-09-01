@@ -109,14 +109,8 @@ plugin.bootstrap_package.settings.scss {
     # cat=6040/1035/1098; type=string; label=Footer meta section link hover decoration
     footer-meta-link-hover-decoration = none
 
-    # cat=6040/2910/1110; type=string; label=Register tabs bar background color
+    # cat=6040/2910/1110; type=string; label=Register tabs bar background color (deprecated as of 26.8.21, not used)
     pp-tab-v1-background = $gray-400
-
-    # cat=6040/2910/1120; type=string; label=Active register background color
-    pp-tab-v1-active-background = #fff
-
-    # cat=6040/2910/1130; type=string; label=Register border color
-    pp-tab-v1-border-color = #ddd
 
     # cat=6040/1060/1210; type=string; label= Fastmenu icon background color
     pp-fastmenu-icon-bg = lightgrey
