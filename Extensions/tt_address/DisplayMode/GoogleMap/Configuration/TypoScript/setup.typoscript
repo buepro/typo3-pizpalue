@@ -12,13 +12,16 @@ plugin.tx_ttaddress {
          20 = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Private/Partials/
       }
    }
-   settings.pizpalue.googleMap {
-      pages = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.pages}
-      fields = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.fields}
-      apiKey = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.apiKey}
-      lat = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.lat}
-      lng = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.lng}
-      zoom = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.zoom}
+   settings.pizpalue {
+       debugMode = {$pizpalue.agency.siteMode}
+       googleMap {
+           pages = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.pages}
+           fields = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.fields}
+           apiKey = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.apiKey}
+           lat = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.lat}
+           lng = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.lng}
+           zoom = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.zoom}
+       }
    }
 }
 
@@ -32,37 +35,3 @@ page {
       ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/Scss/main.scss
    }
 }
-
-#---------------------------------------------------------#
-#
-# To optimize page loading time the resources are just
-# embedded after the map has been explicitly enabled for
-# a page.
-#
-# TODO Embed resources automatically (checking for ce)
-#
-#---------------------------------------------------------#
-
-[page["uid"] in [{$plugin.tx_ttaddress.displayMode.ppGoogleMap.pages}]]
-   page {
-      includeJSFooterlibs {
-         ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js
-      }
-      includeJSFooter {
-         ppTtAddressGoogleMap = https://maps.googleapis.com/maps/api/js?key={$plugin.tx_ttaddress.displayMode.ppGoogleMap.apiKey}&callback=initMap
-         ppTtAddressGoogleMap {
-            external = 1
-            defer = 1
-            async = 1
-         }
-      }
-   }
-[END]
-
-[page["uid"] in [{$plugin.tx_ttaddress.displayMode.ppGoogleMap.pages}]] && [{$pizpalue.agency.siteMode} > 1]
-   page {
-      includeJSFooterlibs {
-         ppTtAddressGoogleMap = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js
-      }
-   }
-[END]

@@ -74,16 +74,4 @@ page {
    includeCSS {
       ppTtAddressTeaser = EXT:pizpalue/Extensions/tt_address/DisplayMode/Teaser/Resources/Public/Scss/main.scss
    }
-   jsFooterInline.1040 = TEXT
-   jsFooterInline.1040.value (
-$('.pp-ttaddress-teaser .flip-container').on('touchstart',function() {
-   var $container = $(this);
-   if ($container.hasClass('hover')) {
-      $('.pp-ttaddress-teaser .flip-container').removeClass('hover');
-   } else {
-      $('.pp-ttaddress-teaser .flip-container').removeClass('hover');
-      $container.addClass('hover');
-   }
-});
-)
 }
