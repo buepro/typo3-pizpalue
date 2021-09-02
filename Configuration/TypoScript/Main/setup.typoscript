@@ -1,3 +1,4 @@
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Lib.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/AppIcon.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Plugins.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/RTE.typoscript'
@@ -47,13 +48,6 @@ page {
                 as = pizpalue
                 key = pizpalue
             }
-        }
-
-        # Pass content objects to fluid
-        variables {
-            ppCopyright = TEXT
-            ppCopyright.value = {$pizpalue.customer.copyright}
-            ppCopyright.insertData = 1
         }
     }
 }

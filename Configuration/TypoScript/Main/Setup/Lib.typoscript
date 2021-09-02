@@ -1,0 +1,7 @@
+lib.pizpalue {
+    copyright = TEXT
+    copyright {
+        value = {$pizpalue.customer.copyright}
+        insertData = 1
+    }
+}
