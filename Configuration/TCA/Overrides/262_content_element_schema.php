@@ -13,7 +13,7 @@ defined('TYPO3') || die('Access denied.');
     /**
      * Enables Content Element
      */
-    if (!is_array($GLOBALS['TCA']['tt_content']['types']['pp_schema'])) {
+    if (!is_array($GLOBALS['TCA']['tt_content']['types']['pp_schema'] ?? false)) {
         $GLOBALS['TCA']['tt_content']['types']['pp_schema'] = [];
     }
 

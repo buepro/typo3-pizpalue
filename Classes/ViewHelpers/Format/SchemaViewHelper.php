@@ -47,7 +47,7 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
         $encodeOptions = self::getJsonOptions($arguments['encodeOptions']);
         $value = $renderChildrenClosure();
         $json = json_decode($value, true, 512, $decodeOptions);
-        if (!is_array($json)) {
+        if (!is_array($json ?? false)) {
             $message = 'Decoding the string to json didn\'t result in a array. Please check if \'decodeOptions\', '
                 . '\'addSlashes\' and \'stripSlashes\' should be further specified.';
             return $message;

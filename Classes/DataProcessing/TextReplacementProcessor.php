@@ -82,7 +82,7 @@ class TextReplacementProcessor implements DataProcessorInterface
     {
         // Get constants
         if ($GLOBALS['TSFE']->tmpl->flatSetup === null
-            || !is_array($GLOBALS['TSFE']->tmpl->flatSetup)
+            || !is_array($GLOBALS['TSFE']->tmpl->flatSetup ?? false)
             || count($GLOBALS['TSFE']->tmpl->flatSetup) === 0) {
             $GLOBALS['TSFE']->tmpl->generateConfig();
         }
