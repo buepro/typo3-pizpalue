@@ -16,7 +16,7 @@ url("./pizpalueicon.ttf?508991007f91a2257403348b2efe9caa") format("truetype");
     font-variant: normal;
     text-rendering: auto;
     text-transform: none;
-    line-height: 1;
+    line-height: inherit;
 }
 
 .ppicon-facebook::before, .bootstrappackageicon-facebook::before, .glyphicon-facebook::before { content: "\f101"; }
