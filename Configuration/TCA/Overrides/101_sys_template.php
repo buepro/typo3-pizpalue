@@ -99,4 +99,11 @@ defined('TYPO3') || die('Access denied.');
             'Pizpalue - indexed_search'
         );
     }
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('sr_language_menu')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $_EXTKEY,
+            'Extensions/sr_language_menu/Configuration/TypoScript',
+            'Pizpalue - sr_language_menu'
+        );
+    }
 })('pizpalue');

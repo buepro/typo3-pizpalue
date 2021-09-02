@@ -1,7 +1,3 @@
-#---------------------------------------------------------#
-# Bootstrap_package
-#---------------------------------------------------------#
-
 plugin.tx_bootstrap_package._LOCAL_LANG {
     default {
         readmore = Read more
@@ -82,12 +78,3 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
         }
     }
 }
-
-
-#---------------------------------------------------------#
-# Felogin
-#---------------------------------------------------------#
-
-plugin.tx_felogin_pi1.dateFormat = {$pizpalue.general.dateTimeFormat}
-
-

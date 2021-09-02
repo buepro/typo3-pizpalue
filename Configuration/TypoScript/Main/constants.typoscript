@@ -74,13 +74,10 @@
 
 
 #=========================================================#
-# Various
+# Bootstrap package
 #=========================================================#
 
-@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Extensions.typoscript'
-@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Templates.typoscript'
-
-config.admPanel = 0
+@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/BootstrapPackage.typoscript'
 
 
 #=========================================================#

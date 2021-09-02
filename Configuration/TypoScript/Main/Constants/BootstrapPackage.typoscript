@@ -1,0 +1,21 @@
+config.admPanel = 0
+
+plugin {
+    bootstrap_package_contentelements {
+        view {
+            layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/ContentElements/
+            partialRootPath = EXT:pizpalue/Resources/Private/Partials/ContentElements/
+            templateRootPath = EXT:pizpalue/Resources/Private/Templates/ContentElements/
+        }
+        header.defaultHeaderType = 2
+        timeline.date.format = {$pizpalue.general.dateStrftimeFormat}
+    }
+}
+
+page {
+    fluidtemplate {
+        layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:pizpalue/Resources/Private/Partials/Page/
+        templateRootPath = EXT:pizpalue/Resources/Private/Templates/Page/
+    }
+}
