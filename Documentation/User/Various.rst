@@ -113,14 +113,15 @@ pp-card-dark                  Applies the dark color to the card background
 ============================= =============================================================================
 
 
-Content element inner
----------------------
+Content element
+---------------
 
-These classes change the inner frame from a content element.
+These classes act on content element wrappers.
 
 ============================= =============================================================================
 Class                         Usage
 ============================= =============================================================================
+pp-frame-collapsible          Applies a negative top margin to compensate the top padding
 pp-inner-margin               Applies a margin to the inner container
 pp-inner-padding              Applies a padding to the inner container
 pp-inner-bgwhite70            Applies a white background with 70% opacity to the inner container
@@ -169,7 +170,6 @@ These classes are used in templating or together with JS.
 ============================= =============================================================================
 Class                         Usage
 ============================= =============================================================================
-pp-cf                         Micro clearfix hack
 pp-label-dataprotection       Used in content element to define a replacement text for a data
                               protection notice check box (see contact page).
 pp-parent-height              Elements using this class will get the same height as their parent element
