@@ -8,10 +8,17 @@
   align-items: center;
   transition: right 0.7s;
 
+  .ppicon {
+    display: inline-block;
+    font-size: 0;
+    &:before {
+      display: inline-block;
+    }
+  }
+
   .pp-fm-icongroup {
     z-index: 1;
     .ppicon {
-      font-size: $pp-fastmenu-icon-size;
       background: $pp-fastmenu-icon-bg;
       color: $pp-fastmenu-icon-color;
       margin: 3px 0 3px 3px;
@@ -19,8 +26,9 @@
       cursor: pointer;
       transition: color 0.7s;
       &:before {
-        display: inline-block;
         width: $pp-fastmenu-icon-size;
+        font-size: $pp-fastmenu-icon-size;
+        line-height: 1;
         text-align: center;
       }
       &:hover {
@@ -34,11 +42,13 @@
 
   .pp-fm-handle {
     z-index: 1;
-    font-size: 0.6 * $pp-fastmenu-icon-size;
     color: $pp-fastmenu-handle-color;
     cursor: pointer;
     .ppicon {
       transition: transform 0.7s;
+      &:before {
+        font-size: 0.6 * $pp-fastmenu-icon-size;
+      }
     }
   }
 
