@@ -41,7 +41,7 @@
       content: "i";
       position: absolute;
       bottom: 0;
-      right: 20px;
+      right: 0;
       width: 2rem;
       height: 2rem;
       margin-right: 20px;
@@ -72,8 +72,6 @@
     justify-content: center;
     background: rgba(white, 80%);
     background-clip: padding-box;
-    border-left: 20px transparent solid;
-    border-right: 20px transparent solid;
     transition: top 0.5s;
     &:before {
       content: "✕";
