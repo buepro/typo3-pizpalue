@@ -23,7 +23,7 @@ pizpalue.features {
 page.theme {
     contact {
         # cat=6030/1035/0110; type=boolean; label=Contact: Enable to display the Contact at bottom
-        enable = 1
+        enable = 0
         button {
             # cat=6030/1035/0130; type=int+; label=Button Page Uid
             pageUid =
