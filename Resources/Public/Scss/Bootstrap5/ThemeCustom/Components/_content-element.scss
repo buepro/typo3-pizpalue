@@ -3,7 +3,7 @@
 //
 .frame-header {
   *:last-child {
-    margin-bottom: 1.5*$spacer;
+    margin-bottom: 1.5 * $spacer;
   }
 }
 
@@ -13,9 +13,6 @@
 .frame-type-textpic, .frame-type-image {
   .gallery-item {
     text-align: center;
-  }
-  figure {
-    text-align: left;
   }
 }
 
