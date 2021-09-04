@@ -168,4 +168,13 @@ defined('TYPO3') || die('Access denied.');
             );
         }
     }
+
+    /**
+     * Upgrade wizards
+     */
+    $upgradeSteps = ['ContentElementXxl', 'ContentElementClasses'];
+    foreach ($upgradeSteps as $upgradeStep) {
+        $className = 'Buepro\\Pizpalue\\Updates\\' . $upgradeStep . 'Update';
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][$className] = $className;
+    }
 })();
