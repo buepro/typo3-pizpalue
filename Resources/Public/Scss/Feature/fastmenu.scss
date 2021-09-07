@@ -12,7 +12,7 @@
     display: inline-block;
     font-size: 0;
     &:before {
-      display: inline-block;
+      transform: none;
     }
   }
 

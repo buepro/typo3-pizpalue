@@ -1,6 +1,6 @@
 //
 // Under dev indicator
-//
+// --------------------------------------------------
 @if ($pp-bootstrap-version == 4) {
   $pp-dev-color: red;
 }
@@ -26,7 +26,7 @@
 
 //
 // Color palette circles
-//
+// --------------------------------------------------
 $pp-colorplate-radius: 100px;
 #colorset {
   display: inline-block;
@@ -54,3 +54,9 @@ $pp-colorplate-radius: 100px;
   }
 }
 
+//
+// Icon demo
+// --------------------------------------------------
+.pp-icondemo .ppicon {
+  box-shadow: 0 0 1px 0 rgba(red, 0.5);
+}

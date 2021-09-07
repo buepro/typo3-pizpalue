@@ -63,6 +63,15 @@ img.pp-nolazyload {
 }
 
 //
+// Icons
+// --------------------------------------------------
+.ppicon, .glyphicon {
+  &:before {
+    transform: translateY(0.16em);
+  }
+}
+
+//
 // Social links
 // --------------------------------------------------
 #page-footer {
