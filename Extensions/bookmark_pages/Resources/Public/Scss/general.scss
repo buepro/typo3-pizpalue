@@ -1,4 +1,13 @@
+@import "../../../../../Resources/Public/Scss/functions";
+@import "../../../../../Resources/Public/Scss/variables";
+
 .bookmark-pages {
+  a {
+    color: $link-color;
+    &:hover, &:active {
+      color: $link-hover-color;
+    }
+  }
   li {
     display: flex;
     justify-content: space-between;
