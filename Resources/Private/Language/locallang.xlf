@@ -88,6 +88,10 @@
 			<trans-unit id="tx-eventnews-locationDetailLink">
 				<source>Show on map</source>
 			</trans-unit>
+
+			<trans-unit id="tx-bookmarkpages-manageBookmarks">
+				<source>Button group to manage and select bookmarks</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -10,22 +10,24 @@
             <ul class="bookmarks-list ppc-complementary"></ul>
         </f:then>
         <f:else>
-            <div class="btn-group{f:if(condition: settings.dropdownClass, then: ' {settings.dropdownClass}')}">
-                <button type="button"
-                        class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Bookmarks
-                </button>
-                <button type="button" class="btn btn-default bookmark-ajax-submit bookmark-this-page" title="{f:translate(key: 'bookmarkThisPage', extensionName: 'bookmarkPages')}">
+            <div class="btn-group{f:if(condition: settings.dropdownClass, then: ' {settings.dropdownClass}')}" role="group" aria-label="{f:translate(key: 'tx-bookmarkpages-manageBookmarks', extensionName: 'pizpalue')}">
+                <div class="btn-group" role="group">
+                    <button type="button"
+                            class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Bookmarks
+                    </button>
+                    <ul class="bookmarks-list dropdown-menu"></ul>
+                    <template id="bookmark-template">
+                        <f:render partial="ListItem" arguments="{bookmark: bookmark}" />
+                    </template>
+                </div>
+                <button type="button" class="btn btn-default bookmark-ajax-submit bookmark-this-page rounded-right rounded-end" title="{f:translate(key: 'bookmarkThisPage', extensionName: 'bookmarkPages')}">
                     <i class="ppicon ppicon-star-regular"></i>
                 </button>
                 <button type="button" class="btn btn-default ppc-bookmarked">
                     <i class="ppicon ppicon-star-solid"></i>
                 </button>
-                <ul class="bookmarks-list dropdown-menu"></ul>
-                <template id="bookmark-template">
-                    <f:render partial="ListItem" arguments="{bookmark: bookmark}" />
-                </template>
             </div>
         </f:else>
     </f:if>
