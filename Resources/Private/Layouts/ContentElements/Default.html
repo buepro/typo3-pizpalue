@@ -31,6 +31,15 @@
         </f:for>
     </f:if>
 
+    <f:variable name="frameOptionClasses"></f:variable>
+    <f:if condition="{data.frame_options}">
+        <bk2k:explode data="{data.frame_options}" as="frameOptions" delimiter=",">
+            <f:for each="{frameOptions}" as="frameOption">
+                <f:variable name="frameOptionClasses">{frameOptionClasses} frame-option-{frameOption}</f:variable>
+            </f:for>
+        </bk2k:explode>
+    </f:if>
+
     <f:comment>====================== Class attribute ======================</f:comment>
 
     <f:variable name="frameSize">frame-size-default</f:variable>
@@ -54,7 +63,7 @@
     {f:variable(name:'ppClasses', value:'')}
     <f:if condition="{data.frame_class} != none">
         <f:variable name="ppClasses">
-            frame {frameSize} {frameClass} {typeClass} {frameLayoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}
+            frame {frameSize} {frameClass}{frameOptionClasses} {typeClass} {frameLayoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}
         </f:variable>
         {f:variable(name: 'ppClasses', value: '{ppClasses} {layoutClass}') -> f:if(condition: '{layoutClass} != frame-layout-0')}
     </f:if>
