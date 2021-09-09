@@ -184,7 +184,10 @@
 			</trans-unit>
 
 			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
-				<source>Enable bootstrap_package page layouts</source>
+				<source>Enable bootstrap package page layouts</source>
+			</trans-unit>
+			<trans-unit id="ext_conf.enableBootstrapPackageContainerElements">
+				<source>Enable bootstrap package container elements when the extension container_elements is loaded</source>
 			</trans-unit>
 			<trans-unit id="ext_conf.enableDefaultPageTSconfig">
 				<source>Enable default pageTS configuration. If disabled configurations can be added manually in page properties resources register.</source>

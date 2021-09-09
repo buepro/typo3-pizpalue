@@ -1,0 +1,12 @@
+mod.wizards.newContentElement.wizardItems.text {
+    elements {
+        container_1_columns >
+        container_2_columns >
+        container_2_columns_right >
+        container_2_columns_left >
+        container_3_columns >
+        container_4_columns >
+    }
+}
+
+TCEFORM.tt_content.CType.removeItems = container_1_columns, container_2_columns, container_2_columns_right, container_2_columns_left, container_3_columns, container_4_columns

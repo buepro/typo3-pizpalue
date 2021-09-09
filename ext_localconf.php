@@ -75,6 +75,14 @@ defined('TYPO3') || die('Access denied.');
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'"
             );
         }
+        // Remove bootstrap package container elements
+        if (!(bool) $pizpalueConfiguration['enableBootstrapPackageContainerElements'] &&
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements')
+        ) {
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/RemoveBootstrapPackageContainerElements.tsconfig'"
+            );
+        }
         // Default PageTS for TCEMAIN, TCEFORM, RTE
         if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
