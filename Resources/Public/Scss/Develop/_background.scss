@@ -1,6 +1,6 @@
 //
 // Rainbow
-//
+// --------------------------------------------------
 .pp-dev-bg-rainbow {
   @include pp-make-rainbow-background($primary, $secondary, 10);
 }

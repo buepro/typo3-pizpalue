@@ -4,9 +4,9 @@
 //
 //----------------------------------------------------------------------------------------------------------------------
 
-//----------------------------------------------------------------------------------------------------------------------
-// Container
 //
+// Container
+// --------------------------------------------------
 .pp-container, .fe-container, .ce-container {
   .frame-container {
     max-width: none;
@@ -23,9 +23,9 @@
   }
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-// Columns
 //
+// Columns
+// --------------------------------------------------
 
 //
 // Content element with background
@@ -35,38 +35,39 @@
   padding-right: var(--pp-frame-spacing);
 }
 
-//
 // If columns are realized within a frame
-//
 .frame-inner {
+
   // No side padding for content elements in columns
   .col > .frame.frame-background-none > .frame-group-container > .frame-group-inner > .frame-container {
     padding-left: 0;
     padding-right: 0;
   }
-  //
+
   // Ensure spacing is correct when columns are serialized (two visually subsequent content elements just have one
   // padding). Assumes that all content elements in columns have a frame without spacing before.
-  //
   .pp-col-collapse, .fe-col-collapse, .ce-col-collapse {
     > .frame.frame-background-none.frame-space-before-none:not(.frame-has-backgroundimage):first-child {
       @extend .pp-frame-collapsible;
     }
   }
+
   // Compensate bottom space
   > .pp-row-collapse, > .fe-row-collapse, > .ce-row-collapse {
     margin-bottom: calc(-1 * var(--pp-frame-spacing));
   }
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-// Accordion
 //
+// Accordion
+// --------------------------------------------------
 .pp-accordion-body, .fe-accordion-body, .ce-accordion-body  {
+
   // No top space for first element in accordion body
   > .frame:first-child {
     padding-top: 0 ;
   }
+
   // No bottom space for last element in accordion body
   > .frame:last-child {
     padding-bottom: 0 ;
@@ -79,27 +80,29 @@
   }
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-// Tabs
 //
+// Tabs
+// --------------------------------------------------
 .tab-content {
   padding: (1.5 * $nav-link-padding-x) 0;
   padding-bottom: 0.5rem;
 }
 .pp-tab-pane, .fe-tab-pane, .ce-tab-pane {
+
   // No top space for first element in tab pane
   > .frame:first-child {
     padding-top: 0;
   }
+
   // No bottom space for last element in tab pane
   > .frame:last-child {
     padding-bottom: 0;
   }
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-// Cards
 //
+// Cards
+// --------------------------------------------------
 .fe-card, .pp-card, .ce-card {
   .card-header, .card-footer {
     *:last-child {

@@ -1,13 +1,13 @@
 //
 // Corrects image overflow on webkit engine
-//
+// --------------------------------------------------
 figure.image {
   width: 100%;
 }
 
 //
 // Nested frame container
-//
+// --------------------------------------------------
 .container-fluid .frame-container,
 .frame-container .frame-container {
   padding-left: 0;
@@ -16,21 +16,21 @@ figure.image {
 
 //
 // Full width container
-//
+// --------------------------------------------------
 .container-fluid .frame-container {
   max-width: none;
 }
 
 //
 // Bootstrap
-//
+// --------------------------------------------------
 .popover-body *:last-child {
   margin-bottom: 0;
 }
 
 //
 // Modal dialog
-//
+// --------------------------------------------------
 .pp-modal-dialog {
   @if ($pp-bootstrap-version == 4) {
     .modal-header .close:after {
@@ -44,7 +44,7 @@ figure.image {
 
 //
 // Avoid horizontal scroll bar when using image without frame
-//
+// --------------------------------------------------
 body {
   overflow-x: hidden;
 }

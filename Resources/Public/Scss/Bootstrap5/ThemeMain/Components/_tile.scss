@@ -15,7 +15,7 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 
 //
 // Basics
-//
+// --------------------------------------------------
 .pp-tile {
   position: relative;
   overflow: hidden;
@@ -42,7 +42,7 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 }
 //
 // Side ratios
-//
+// --------------------------------------------------
 .pp-tile-21:before {
   margin-top: 50%;
 }
@@ -92,7 +92,7 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 //
 // Content padding
 // Class .pp-ce-overlaycard is deprecated since 30.6.21
-//
+// --------------------------------------------------
 .pp-tile:not(.pp-type-image):not(.pp-type-media):not(.pp-type-external_media):not(.pp-ce-overlaycard):not(.pp-type-pp_picoverlay) {
   .frame-inner {
     margin: $pp-tile-padding;
@@ -102,7 +102,7 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 //
 // Images
 // Class .pp-ce-overlaycard is deprecated since 30.6.21
-//
+// --------------------------------------------------
 .pp-tile {
   &.pp-type-image, &.pp-type-pp_picoverlay, &.pp-ce-overlaycard {
     .frame-container {
@@ -133,7 +133,7 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 
 //
 // Videos
-//
+// --------------------------------------------------
 .pp-tile {
   &.pp-type-media, &.pp-type-external_media {
     .frame-container {
@@ -152,7 +152,7 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 //
 // Overlaycard
 // Deprecated since 30.6.21
-//
+// --------------------------------------------------
 .pp-tile {
   &.pp-ce-overlaycard {
     .frame-inner, .textpic, .textpic-item {
@@ -163,7 +163,7 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 
 //
 // Classes
-//
+// --------------------------------------------------
 .pp-tile.pp-bg-primary, .pp-tile.pp-bg-secondary, .pp-tile.pp-bg-complementary {
   background: transparent;
 }

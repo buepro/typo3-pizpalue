@@ -6,7 +6,7 @@
 
 //
 // General: Classes act on element they are assigned to
-//
+// --------------------------------------------------
 .pp-bg-primary {
   background-color: $primary;
 }
@@ -25,7 +25,7 @@
 
 //
 // Content inner: act on inner container
-//
+// --------------------------------------------------
 .pp-inner-margin {
   &.pp-content, .frame-inner {
     margin: var(--pp-frame-spacing);
@@ -54,7 +54,7 @@
 
 //
 // Gallery items
-//
+// --------------------------------------------------
 div.pp-gallery-item-left {
   .gallery-item {
     text-align: left;
@@ -89,7 +89,7 @@ div.pp-gallery-item-right {
 
 //
 // Image with overlay heading
-//
+// --------------------------------------------------
 .pp-image-overlay {
   position: relative;
   header {
@@ -134,7 +134,7 @@ div.pp-gallery-item-right {
 
 //
 // Various / Utility
-//
+// --------------------------------------------------
 .pp-row-height {
   .frame-group-container, .frame-group-inner, .frame-container, .frame-inner {
     height: 100%;

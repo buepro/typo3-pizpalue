@@ -4,7 +4,7 @@
 
 //
 // Outer most border (tile unit or tile alone)
-//
+// --------------------------------------------------
 .pp-tile-row, .fe-tile-row, .ce-tile-row,
 :not(.pp-tile-col):not(.fe-tile-col):not(.ce-tile-col) > .pp-tile {
   margin-left: -$pp-tile-gutter;

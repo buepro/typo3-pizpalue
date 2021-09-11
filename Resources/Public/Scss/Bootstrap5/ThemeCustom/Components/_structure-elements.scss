@@ -1,6 +1,6 @@
-//----------------------------------------------------------------------------------------------------------------------
-// Accordion
 //
+// Accordion
+// --------------------------------------------------
 .pp-accordion-primary, .fe-accordion-primary, .ce-accordion-primary {
   @include pp-style-accordion-light($primary);
 }
@@ -11,9 +11,9 @@
   @include pp-style-accordion-light($complementary);
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-// Tabs
 //
+// Tabs
+// --------------------------------------------------
 .pp-tabs-primary, .fe-tabs-primary, .ce-tabs-primary {
   @include pp-style-tab-light($primary);
 }

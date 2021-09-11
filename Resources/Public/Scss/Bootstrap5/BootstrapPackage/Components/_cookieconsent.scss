@@ -14,7 +14,7 @@ $cookieconsent-button-highlight-bg: transparent !default;
 
 //
 // Animation
-//
+// --------------------------------------------------
 .cc-window {
   opacity: 1;
   transition: opacity 1s ease;
@@ -52,7 +52,7 @@ $cookieconsent-button-highlight-bg: transparent !default;
 
 //
 // Base
-//
+// --------------------------------------------------
 #cookieconsent {
   a {
     cursor: pointer;
@@ -162,7 +162,7 @@ $cookieconsent-button-highlight-bg: transparent !default;
 
 //
 // Container
-//
+// --------------------------------------------------
 .cc-container {
   width: 100%;
   overflow: hidden;
@@ -190,7 +190,7 @@ $cookieconsent-button-highlight-bg: transparent !default;
 
 //
 // Styling
-//
+// --------------------------------------------------
 .cc-revoke {
   &.cc-top {
     top: 0;
@@ -332,7 +332,7 @@ $cookieconsent-button-highlight-bg: transparent !default;
 
 //
 // Colors
-//
+// --------------------------------------------------
 .cc-window,
 .cc-revoke {
   color: $cookieconsent-color;
