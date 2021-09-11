@@ -1,7 +1,0 @@
-//
-// fix bug with rendering from multiple media columns in safari
-// todo: Check if still needed
-//
-.gallery-row:before, .gallery-row:after, .gallery-item:before, .gallery-item:after {
-  content: normal;
-}
