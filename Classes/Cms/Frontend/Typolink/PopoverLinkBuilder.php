@@ -32,10 +32,8 @@ class PopoverLinkBuilder extends AbstractTypolinkBuilder
      */
     public function build(array &$linkDetails, string $linkText, string $target, array $conf): array
     {
+        $url = '';
         if (isset($linkDetails['href'])) {
-            if ($linkDetails['href'] === 'void') {
-                return ['javascript:void(0);', $linkText];
-            }
             $urlConf = [
                 'typolink.' => [
                     'parameter' => $linkDetails['href'],
@@ -45,8 +43,15 @@ class PopoverLinkBuilder extends AbstractTypolinkBuilder
             /** @var ContentObjectRenderer $cObjRenderer (new instance to avoid overriding data from parent) */
             $cObjRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
             $url = $cObjRenderer->stdWrap('', $urlConf);
-            return [$url, $linkText];
+            if ($linkDetails['href'] === 'void') {
+                $url = 'javascript:void(0);';
+            }
         }
-        return ['', $linkText];
+        return [$url, $linkText, ''];
+//        This return statement can be used since TYPO3 v11.4
+//        return (new LinkResult('pppopover', $url))
+//            ->withTarget($target)
+//            ->withLinkConfiguration($conf)
+//            ->withLinkText($linkText);
     }
 }

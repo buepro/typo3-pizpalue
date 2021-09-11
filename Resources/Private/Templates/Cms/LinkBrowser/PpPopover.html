@@ -1,25 +1,23 @@
-<div class="element-browser-panel element-browser-main">
-    <div class="element-browser-main-content">
-        <div class="element-browser-body">
-            <form action="" id="pp-popoverform" class="form-horizontal">
-                <input name="lhref" type="hidden" value="{href}" />
-                <div class="form-group form-group-sm" id="pp-content">
-                    <label class="col-xs-4 control-label">{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:linkhandler-popover-content')}</label>
-                    <div class="col-xs-8">
-                        <textarea
-                            name="lcontent"
-                            class="form-control"
-                            rows="5">{content}</textarea>
-                    </div>
-                </div>
-                <div class="form-group form-group-sm">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-8">
-                        <input class="btn btn-sm btn-default" type="submit"
-                               value="{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:linkhandler-popover-setPopover')}" />
-                    </div>
-                </div>
-            </form>
+<f:layout name="LinkBrowser"/>
+
+<f:section name="Content">
+    <form action="" id="pp-popoverform" class="form-horizontal">
+        <input name="lhref" type="hidden" value="{href}" />
+        <div class="form-group form-group-sm" id="pp-content">
+            <label class="col-xs-4 control-label">{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:linkhandler-popover-content')}</label>
+            <div class="col-xs-8">
+                <textarea
+                    name="lcontent"
+                    class="form-control"
+                    rows="5">{content}</textarea>
+            </div>
         </div>
-    </div>
-</div>
+        <div class="form-group form-group-sm">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-8">
+                <input class="btn btn-sm btn-default" type="submit"
+                       value="{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:linkhandler-popover-setPopover')}" />
+            </div>
+        </div>
+    </form>
+</f:section>

@@ -12,11 +12,13 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\Cms\Recordlist\LinkHandler;
 
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Imaging\IconFactory;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\CMS\Recordlist\Controller\AbstractLinkBrowserController;
 use TYPO3\CMS\Recordlist\LinkHandler\LinkHandlerInterface;
+use TYPO3Fluid\Fluid\View\ViewInterface;
 
 /**
  * Defines the popover register from the link browser.
@@ -54,9 +56,19 @@ class PopoverLinkHandler implements LinkHandlerInterface
     protected $linkBrowser;
 
     /**
-     * @var \TYPO3\CMS\Fluid\View\StandaloneView
+     * @var IconFactory
+     */
+    protected $iconFactory;
+
+    /**
+     * @var ViewInterface
      */
     protected $view;
+
+    /**
+     * @var PageRenderer
+     */
+    protected $pageRenderer;
 
     /**
      * Initialize the handler
@@ -68,14 +80,8 @@ class PopoverLinkHandler implements LinkHandlerInterface
     public function initialize(AbstractLinkBrowserController $linkBrowser, $identifier, array $configuration)
     {
         $this->linkBrowser = $linkBrowser;
-        $this->view = GeneralUtility::makeInstance(StandaloneView::class);
-        $this->view->getRequest()->setControllerExtensionName('recordlist');
-        $this->view->setTemplateRootPaths([
-            GeneralUtility::getFileAbsFileName('EXT:recordlist/Resources/Private/Templates/LinkBrowser'),
-            GeneralUtility::getFileAbsFileName('EXT:pizpalue/Resources/Private/Templates/Cms/LinkBrowser')
-        ]);
-        $this->view->setPartialRootPaths([GeneralUtility::getFileAbsFileName('EXT:recordlist/Resources/Private/Partials/LinkBrowser')]);
-        $this->view->setLayoutRootPaths([GeneralUtility::getFileAbsFileName('EXT:recordlist/Resources/Private/Layouts/LinkBrowser')]);
+        $this->iconFactory = GeneralUtility::makeInstance(IconFactory::class);
+        $this->pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
     }
 
     /**
@@ -113,20 +119,58 @@ class PopoverLinkHandler implements LinkHandlerInterface
         return '';
     }
 
-    public function render(ServerRequestInterface $request)
+    /**
+     * Introduced with feature "Use SVG Trees in Record Selector" (#a79bd29)
+     *
+     * @param ViewInterface $view
+     */
+    public function setView(ViewInterface $view): void
     {
-        GeneralUtility::makeInstance(PageRenderer::class)->loadRequireJsModule('TYPO3/CMS/Pizpalue/Src/PopoverLinkHandler');
+        $view->setTemplateRootPaths(array_merge(
+            $view->getTemplateRootPaths(),
+            [GeneralUtility::getFileAbsFileName('EXT:pizpalue/Resources/Private/Templates/Cms/LinkBrowser')]
+        ));
+        $view->setTemplate('PpPopover');
+        $this->view = $view;
+    }
+
+    private function assignVariablesToView(ViewInterface $view): void
+    {
         if (isset($this->linkParts['url']['href'])) {
-            $this->view->assign('href', $this->linkParts['url']['href']);
+            $view->assign('href', $this->linkParts['url']['href']);
         } else {
-            $this->view->assign('href', 'void');
+            $view->assign('href', 'void');
         }
         if (isset($this->linkParts['url']['content'])) {
             $content = htmlspecialchars_decode($this->linkParts['url']['content']);
             $content = str_replace(['·', '<br />'], [' ', "\r\n"], $content);
-            $this->view->assign('content', $content);
+            $view->assign('content', $content);
         }
+    }
+
+    /**
+     * @param ServerRequestInterface $request
+     * @return string
+     * @deprecated Used for TYPO3 v10 only
+     */
+    private function renderStandalone(ServerRequestInterface $request): string
+    {
+        $view = GeneralUtility::makeInstance(StandaloneView::class);
+        $view->getRequest()->setControllerExtensionName('pizpalue');
+        $view->setTemplateRootPaths([GeneralUtility::getFileAbsFileName('EXT:pizpalue/Resources/Private/Templates/Cms/LinkBrowserStandalone')]);
+        $view->setTemplate('PpPopover');
+        $this->assignVariablesToView($view);
         /** @extensionScannerIgnoreLine */
-        return $this->view->render('PpPopover');
+        return $view->render('PpPopover');
+    }
+
+    public function render(ServerRequestInterface $request)
+    {
+        $this->pageRenderer->loadRequireJsModule('TYPO3/CMS/Pizpalue/Src/PopoverLinkHandler');
+        if (!$this->view) {
+            return $this->renderStandalone($request);
+        }
+        $this->assignVariablesToView($this->view);
+        return '';
     }
 }
