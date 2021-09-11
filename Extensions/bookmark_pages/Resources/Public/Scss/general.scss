@@ -30,6 +30,9 @@
     }
     &.bookmark-this-page {
       display: block;
+      @if ($enable-rounded) {
+        border-radius: 0 $border-radius $border-radius 0 !important;
+      }
       +.ppc-bookmarked {
         display: none;
       }

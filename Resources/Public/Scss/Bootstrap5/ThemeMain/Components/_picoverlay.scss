@@ -13,6 +13,9 @@
   //
   position: relative;
   overflow: hidden;
+  @if ($enable-rounded) {
+    border-radius: $border-radius;
+  }
   .gallery-row, figure {
     margin-bottom: 0;
   }

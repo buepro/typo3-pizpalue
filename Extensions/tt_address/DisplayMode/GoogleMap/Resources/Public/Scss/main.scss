@@ -1,6 +1,9 @@
 .pp-ttaddress-map {
   width: 100%;
   height: 600px;
+  @if ($enable-rounded) {
+    border-radius: $border-radius;
+  }
 }
 .pp-ttaddress-maptemplate, .pp-ttaddress-mapimages {
   display: none;

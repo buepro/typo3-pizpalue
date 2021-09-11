@@ -13,7 +13,9 @@
     margin-top: var(--pp-frame-spacing);
     padding: calc(var(--pp-frame-spacing) * 0.7);
     border: mix(white, $primary, 50%) 1px solid;
-    border-radius: $border-radius;
+    @if ($enable-rounded) {
+      border-radius: $border-radius;
+    }
     > .frame {
       padding-top: 0;
       padding-bottom: 0;
