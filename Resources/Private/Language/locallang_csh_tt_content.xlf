@@ -5,7 +5,7 @@
 		<header/>
 		<body>
 			<trans-unit id="tx_pizpalue_image_scaling.description">
-				<source>Define the image scaling for the available screen sizes.</source>
+				<source>Define the image scaling for the available screen sizes. Note that this changes the image dimensions and not necessarily the shown image size. The CSS for the image might need to be adjusted too (e.g. "width: auto;").</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_image_scaling.details">
 				<source>The image sizes for the different screen sizes are defined by the selected image variants as well as the image column count.
