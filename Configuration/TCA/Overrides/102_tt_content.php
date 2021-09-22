@@ -12,7 +12,7 @@ defined('TYPO3') || die('Access denied.');
 /**
  * @todo Split file into logical groups
  */
-(function () {
+(static function () {
     /**
      * Add content element group to content element selector
      */

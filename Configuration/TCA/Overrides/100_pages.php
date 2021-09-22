@@ -12,7 +12,7 @@ defined('TYPO3') || die('Access denied.');
 /**
  * Add page TSconfig objects in case they aren't automatically loaded
  */
-(function () {
+(static function () {
     $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
     );
@@ -60,7 +60,7 @@ defined('TYPO3') || die('Access denied.');
  * Add page TSconfig objects that need to be loaded manually.
  * (e.g. because they are used just on a specific page or might conflict when used together)
  */
-(function () {
+(static function () {
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('tt_address')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
             'pizpalue',

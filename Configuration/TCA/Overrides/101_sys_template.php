@@ -9,7 +9,7 @@
 
 defined('TYPO3') || die('Access denied.');
 
-(function ($_EXTKEY) {
+(static function ($_EXTKEY) {
     // Static templates
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $_EXTKEY,

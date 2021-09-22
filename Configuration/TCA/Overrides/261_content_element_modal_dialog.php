@@ -9,7 +9,7 @@
 
 defined('TYPO3') || die('Access denied.');
 
-(function ($extensionKey) {
+(static function ($extensionKey) {
     /**
      * Enable content element and allow pages in record field
      * Note: `$GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog']` needs to be an array for the element to be
