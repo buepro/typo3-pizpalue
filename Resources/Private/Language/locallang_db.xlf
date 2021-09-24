@@ -17,7 +17,7 @@
 				<source>Additional styles</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.styleDescription">
-				<source>When using curly brackets style definitions are added to the header. Otherwise they will be used inline.</source>
+				<source>When using curly brackets style definitions are added to the header. Otherwise they will be used inline. Hint: When using curly brackets the key #self might be used to refer to the content element id (e.g. #self { border: green 1px solid; })</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.additionalAttributes">
 				<source>Additional attributes</source>

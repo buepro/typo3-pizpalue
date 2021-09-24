@@ -1,0 +1,89 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <f:comment>Background image variants</f:comment>
+    {pp:structure.variants(as: '_backgroundVariants', initialVariants: 'tx_pizpalue_background_image_variants')}
+    {f:variable(name: '_backgroundAll', value: _all)}
+    {_backgroundVariants -> v:variable.set(name: '_backgroundAll.variants')}
+
+    <f:comment>Initialize variables</f:comment>
+    {f:variable(name: '_ppData', value: configuration.ppData)}
+
+    <f:comment>Compile classes</f:comment>
+    {classes -> bk2k:implode() -> f:variable(name: '_classes')}
+    {f:variable(name: '_classes', value: '{_classes} {_ppData.classes -> bk2k:implode()}') -> f:if(condition: _ppData.classes)}
+
+    <f:comment>Compile style attribute</f:comment>
+    {_ppData.styles -> bk2k:implode(delimiter: '; ') -> f:variable(name: '_styles')}
+    {f:variable(name: '_styleAttribute', value: ' style="{_styles}"') -> f:if(condition: _styles)}
+
+    <f:comment>Compile other attributes</f:comment>
+    {f:variable(name: '_otherAttributes', value: ' {_ppData.attributes -> bk2k:implode()}') -> f:if(condition: _ppData.attributes)}
+
+    <f:comment>Compile all attributes</f:comment>
+    {f:variable(name: '_allAttributes', value: 'class="{_classes}"{_styleAttribute}{_otherAttributes}')}
+
+    <f:if condition="{configuration.displayFrame}">
+        <f:then>
+
+            <div id="{configuration.id}" {_allAttributes -> pp:desarmAttribute()}>
+                <div class="frame-group-container">
+                    <div class="frame-group-inner">
+                        <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
+                        <div class="frame-container frame-container-default">
+                            <div class="frame-inner">
+                                {content -> f:format.raw()}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </f:then>
+        <f:else>
+
+            <f:if condition="{configuration.backgroundImage} || {_ppData.classes} || {_ppData.styles} || {_ppData.attributes}">
+                <f:then>
+
+                    <div id="{configuration.id}" {_allAttributes -> pp:desarmAttribute()}>
+                        <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
+                        <f:if condition="{_ppData.isTile}">
+                            <f:then>
+
+                                <div class="frame-container">
+                                    <div class="frame-inner">
+                                        {content -> f:format.raw()}
+                                    </div>
+                                </div>
+
+                            </f:then>
+                            <f:else>
+
+                                {content -> f:format.raw()}
+
+                            </f:else>
+                        </f:if>
+                    </div>
+
+                </f:then>
+                <f:else>
+
+                    <a id="{configuration.id}"></a>
+                    <f:if condition="{configuration.spaceBefore} !== none">
+                        <div class="frame-space-before frame-space-before-{configuration.spaceBefore}"></div>
+                    </f:if>
+                    {content -> f:format.raw()}
+                    <f:if condition="{configuration.spaceAfter} !== none">
+                        <div class="frame-space-after frame-space-after-{configuration.spaceAfter}"></div>
+                    </f:if>
+
+                </f:else>
+            </f:if>
+
+        </f:else>
+    </f:if>
+</f:spaceless>
+</html>

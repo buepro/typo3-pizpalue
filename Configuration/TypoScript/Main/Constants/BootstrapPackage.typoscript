@@ -10,6 +10,9 @@ plugin {
         header.defaultHeaderType = 2
         timeline.date.format = {$pizpalue.general.dateStrftimeFormat}
     }
+    tx_bootstrappackage {
+        view.templateRootPath = EXT:pizpalue/Resources/Private/Templates/
+    }
 }
 
 page {

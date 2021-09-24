@@ -14,10 +14,7 @@
     -->
 </f:comment>
 <f:spaceless>
-    <f:comment>====================== Variants ======================</f:comment>
-
     {pp:structure.variants(as: 'variants')}
-    {pp:structure.variants(as: 'backgroundVariants', initialVariants: 'tx_pizpalue_background_image_variants')}
 
     <f:if condition="{containerContext}">
         {f:variable(name: 'previousData', value: data)}
@@ -31,287 +28,33 @@
         </f:for>
     </f:if>
 
-    <f:variable name="frameOptionClasses"></f:variable>
-    <f:if condition="{data.frame_options}">
-        <bk2k:explode data="{data.frame_options}" as="frameOptions" delimiter=",">
-            <f:for each="{frameOptions}" as="frameOption">
-                <f:variable name="frameOptionClasses">{frameOptionClasses} frame-option-{frameOption}</f:variable>
-            </f:for>
-        </bk2k:explode>
-    </f:if>
+    {pp:pizpalueFrame(data: data, pizpalueConstants: pizpalue, as: '_ppData')}
 
-    <f:comment>====================== Class attribute ======================</f:comment>
+    {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}})
+        -> f:variable(name: 'settings')
+        -> f:if(condition: '{_ppData.hasScrollAnimation} == 1 || {_ppData.hasCssAnimation} == 1')}
 
-    <f:variable name="frameSize">frame-size-default</f:variable>
-    <f:variable name="frameClass">frame-{data.frame_class}</f:variable>
-    <f:variable name="typeClass">frame-type-{data.CType}</f:variable>
-    <f:variable name="layoutClass">frame-layout-{data.layout}</f:variable>
-    <f:variable name="frameLayoutClass">frame-layout-{data.frame_layout}</f:variable><f:comment>layoutClass in bootstrap package</f:comment>
-    <f:variable name="backgroundClass">frame-background-{f:if(condition: data.background_color_class, else: 'none', then: data.background_color_class)}</f:variable>
-    <f:variable name="spaceBeforeClass">frame-space-before-{f:if(condition: data.space_before_class, else: 'none', then: data.space_before_class)}</f:variable>
-    <f:variable name="spaceAfterClass">frame-space-after-{f:if(condition: data.space_after_class, else: 'none', then: data.space_after_class)}</f:variable>
-
-    <f:comment>====================== Pizpalue helpers ======================</f:comment>
-
-    {f:variable(name: '_ocb', value: '{')}
-    {f:variable(name: '_ccb', value: '}')}
-
-    <f:comment>====================== Pizpalue init attributes ======================</f:comment>
-
-    <f:variable name="backgroundImageClass">{f:if(condition: '{backgroundImage.0}', then: 'frame-has-backgroundimage', else: 'frame-no-backgroundimage')}</f:variable>
-
-    {f:variable(name:'ppClasses', value:'')}
-    <f:if condition="{data.frame_class} != none">
-        <f:variable name="ppClasses">
-            frame {frameSize} {frameClass}{frameOptionClasses} {typeClass} {frameLayoutClass} {backgroundClass} {backgroundImageClass} {spaceBeforeClass} {spaceAfterClass}
-        </f:variable>
-        {f:variable(name: 'ppClasses', value: '{ppClasses} {layoutClass}') -> f:if(condition: '{layoutClass} != frame-layout-0')}
-    </f:if>
-    {f:variable(name:'ppIncludedStyles', value:'')}
-    {f:variable(name:'ppInlineStyles', value:'')}
-    {f:variable(name:'ppAttributes', value:'')}
-
-    <f:comment>====================== Pizpalue attributes ======================</f:comment>
-
-    <f:if condition="{data.tx_pizpalue_classes}">
-        <f:variable name="ppClasses">
-            {ppClasses} {data.tx_pizpalue_classes}
-        </f:variable>
-    </f:if>
-
-    <f:if condition="{data.tx_pizpalue_style}">
-        <v:condition.string.contains haystack="{data.tx_pizpalue_style}" needle="{">
-            <f:then>
-                {v:format.replace(content: data.tx_pizpalue_style, substring: '#self', replacement: '#c{data.uid}') -> f:variable(name: '_inlineStyle')}
-                <f:asset.css identifier="ppCe{data.uid}" priority="1">{_inlineStyle -> v:format.eliminate(tabs: 1, unixBreaks: 1, windowsBreaks: 1) -> f:format.raw()}</f:asset.css>
-            </f:then>
-            <f:else>
-                <f:variable name="ppInlineStyles">
-                    {ppInlineStyles} {data.tx_pizpalue_style}
-                </f:variable>
-            </f:else>
-        </v:condition.string.contains>
-    </f:if>
-
-    <f:if condition="{data.tx_pizpalue_attributes}">
-        <f:variable name="ppAttributes">
-            {ppAttributes} {data.tx_pizpalue_attributes}
-        </f:variable>
-    </f:if>
-
-    <f:comment>====================== Pizpalue animation variables ======================</f:comment>
-
-    <f:if condition="{data.tx_pizpalue_animation}">
-        <f:variable name="ppAnimation">{pizpalue.animation.{data.tx_pizpalue_animation}}</f:variable>
-
-        <f:if condition="{ppAnimation.classes}">
-            <f:variable name="ppClasses">
-                {ppClasses} {ppAnimation.classes}
-            </f:variable>
-        </f:if>
-
-        <f:if condition="{ppAnimation.style}">
-            <f:variable name="ppInlineStyles">
-                {ppInlineStyles} {ppAnimation.style}
-            </f:variable>
-        </f:if>
-
-        <f:if condition="{ppAnimation.attributes}">
-            <f:variable name="ppAttributes">
-                {ppAttributes} {ppAnimation.attributes}
-            </f:variable>
-        </f:if>
-    </f:if>
-
-
-    <f:comment>====================== Pizpalue tiles ======================</f:comment>
-
-    {f:variable(name: 'rendersTile', value: 0)}
-    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout as string} == "pp-tile-21"')}
-    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout as string} == "pp-tile-11"')}
-    {f:variable(name: 'rendersTile', value: 1) -> f:if(condition: '{data.layout as string} == "pp-tile-12"')}
-    <f:if condition="{rendersTile}">
-        {f:variable(name: 'ppClasses', value: '{ppClasses} pp-tile')}
-        {f:variable(name: 'ppClasses', value: '{ppClasses} {data.layout}') -> f:if(condition: '{data.frame_class} == none')}
-    </f:if>
-
-    <f:comment>====================== Pizpalue layout breakpoint ======================</f:comment>
-
-    <f:if condition="{data.tx_pizpalue_layout_breakpoint}">
-        <f:variable name="ppClasses">
-            {ppClasses} pp-layout-{data.tx_pizpalue_layout_breakpoint}
-        </f:variable>
-    </f:if>
-
-    <f:comment>====================== Pizpalue AOS assets ======================</f:comment>
-
-    <v:condition.string.contains haystack="{ppAttributes}" needle="data-aos">
-        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
-        <f:asset.css identifier="ppAos" href="EXT:pizpalue/Resources/Public/Contrib/aos/aos.css" />
-        <f:asset.script identifier="ppAos" src="EXT:pizpalue/Resources/Public/Contrib/aos/aos.js" />
-<f:asset.script identifier="ppAosInit">
-AOS.init({_ocb} {pizpalue.animation.aos.initParams -> f:format.raw()} {_ccb});
-$('[data-aos]').parent().css('overflow','hidden');
-</f:asset.script>
-    </v:condition.string.contains>
-
-    <f:comment>====================== Pizpalue josh.js assets ======================</f:comment>
-
-    <v:condition.string.contains haystack="{ppAttributes}" needle="data-josh">
-        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
-        {f:variable(name: 'ppClasses', value: '{ppClasses} josh-js')}
-        <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
-        <f:asset.script identifier="ppJosh" src="EXT:pizpalue/Resources/Public/Contrib/josh.js/dist/josh.min.js" />
-<f:asset.script identifier="ppJoshInit">
-const josh = new Josh({_ocb} {pizpalue.animation.josh.initParams -> f:format.raw()} {_ccb});
-</f:asset.script>
-    </v:condition.string.contains>
-
-    <f:comment>====================== Pizpalue Twikito/onscroll-effec assets ======================</f:comment>
-
-    <v:condition.string.contains haystack="{ppAttributes}" needle="data-scroll">
-        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
-        <v:condition.string.contains haystack="{ppAttributes}" needle="animate__">
-            <v:condition.string.contains haystack="{ppAttributes}" needle="animate__animated">
-                <f:else>{v:format.replace(content: ppAttributes, substring: 'animate__', replacement: 'animate__animated animate__', count: 1) -> f:variable(name: 'ppAttributes')}</f:else>
-            </v:condition.string.contains>
-            <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
-        </v:condition.string.contains>
-        <v:condition.string.contains haystack="{ppAttributes}" needle="data-scroll-reverse">
-            <f:else><f:variable name="ppAttributes">{ppAttributes} data-scroll-reverse="true"</f:variable></f:else>
-        </v:condition.string.contains>
-        <f:asset.script identifier="ppTwikitoOnscroll" src="EXT:pizpalue/Resources/Public/Contrib/Twikito/onscroll-effect/dist/onscroll-effect.min.js" />
-        <f:asset.css identifier="twikitoOnscroll" priority="1">[data-scroll].is-outside { transition: none; animation: none; }</f:asset.css>
-    </v:condition.string.contains>
-
-    <f:comment>====================== Pizpalue animate.css assets ======================</f:comment>
-
-    <v:condition.string.contains haystack="{ppClasses}" needle="animate__">
-        {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}}) -> f:variable(name: 'settings')}
-        <v:condition.string.contains haystack="{ppClasses}" needle="animate__animated">
-            <f:else>{v:format.replace(content: ppClasses, substring: 'animate__', replacement: 'animate__animated animate__', count: 1) -> f:variable(name: 'ppClasses')}</f:else>
-        </v:condition.string.contains>
-        <f:asset.css identifier="ppAnimateCss" href="EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css" />
-    </v:condition.string.contains>
-
-    <f:comment>====================== Pizpalue compile attributes ======================</f:comment>
-
-    {f:variable(name:'ppAllAttributes', value:'')}
-    <f:if condition="{ppClasses} || {ppInlineStyles} || {ppAttributes}">
-        <f:if condition="{data.frame_class} == none">
-            <f:variable name="ppClasses">
-                pp-content {ppClasses} pp-type-{data.CType} {spaceBeforeClass} {spaceAfterClass}
-            </f:variable>
-        </f:if>
-        <f:variable name="ppAllAttributes">
-            {f:if(condition:'{ppClasses}', then:' class="{ppClasses -> v:format.trim()}"')}
-            {f:if(condition:'{ppInlineStyles}', then:' style="{ppInlineStyles -> v:format.trim()}"')}
-            {f:if(condition:'{ppAttributes}', then:' {ppAttributes -> v:format.trim()}"')}
-        </f:variable>
-    </f:if>
-
-    <f:comment>====================== Pizpalue background image ======================</f:comment>
-
-    {f:variable(name: '_backgroundAll', value: _all)}
-    {backgroundVariants -> v:variable.set(name: '_backgroundAll.variants')}
-
-    <f:comment>====================== Pizpalue clear private variables ======================</f:comment>
-
-    {v:variable.unset(name: '_ocb')}
-    {v:variable.unset(name: '_ccb')}
-
-    <f:comment>====================== Pizpalue end ======================</f:comment>
-
-    <f:if condition="{data.frame_class} != none">
-        <f:then>
-            <div id="c{data.uid}" {ppAllAttributes -> pp:desarmAttribute()}>
-                <div class="frame-group-container">
-                    <div class="frame-group-inner">
-                        <f:render partial="Frame/General/BackgroundImage" arguments="{_backgroundAll}" />
-                        {v:variable.unset(name: '_backgroundAll')}
-                        <div class="frame-container frame-container-default">
-                            <div class="frame-inner">
-                                <f:if condition="{data._LOCALIZED_UID}">
-                                    <a id="c{data._LOCALIZED_UID}"></a>
-                                </f:if>
-                                <f:render section="Before" optional="true">
-                                    <f:render partial="DropIn/Before/All" arguments="{_all}" />
-                                </f:render>
-                                <f:render section="Header" optional="true">
-                                    <f:render partial="Header/All" arguments="{_all}" />
-                                </f:render>
-                                <f:render section="Main" optional="true" />
-                                <f:render section="Footer" optional="true">
-                                    <f:render partial="Footer/All" arguments="{_all}" />
-                                </f:render>
-                                <f:render section="After" optional="true">
-                                    <f:render partial="DropIn/After/All" arguments="{_all}" />
-                                </f:render>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </f:then>
-        <f:else>
-            <f:if condition="{ppAllAttributes} || {data.background_image}">
-                <f:then>
-                    <div id="c{data.uid}" {ppAllAttributes -> pp:desarmAttribute()}>
-                        <f:render partial="Frame/General/BackgroundImage" arguments="{_backgroundAll}" />
-                        {v:variable.unset(name: '_backgroundAll')}
-                        <f:if condition="{rendersTile}">
-                            <div class="frame-container">
-                                <div class="frame-inner">
-                        </f:if>
-                        <f:if condition="{data._LOCALIZED_UID}">
-                            <a id="c{data._LOCALIZED_UID}"></a>
-                        </f:if>
-                        <f:render section="Before" optional="true">
-                            <f:render partial="DropIn/Before/All" arguments="{_all}" />
-                        </f:render>
-                        <f:render section="Header" optional="true">
-                            <f:render partial="Header/All" arguments="{_all}" />
-                        </f:render>
-                        <f:render section="Main" optional="true" />
-                        <f:render section="Footer" optional="true">
-                            <f:render partial="Footer/All" arguments="{_all}" />
-                        </f:render>
-                        <f:render section="After" optional="true">
-                            <f:render partial="DropIn/After/All" arguments="{_all}" />
-                        </f:render>
-                        <f:if condition="{rendersTile}">
-                                </div>
-                            </div>
-                        </f:if>
-                    </div>
-                </f:then>
-                <f:else>
-                    <a id="c{data.uid}"></a>
-                    <f:if condition="{data._LOCALIZED_UID}">
-                        <a id="c{data._LOCALIZED_UID}"></a>
-                    </f:if>
-                    <f:if condition="{data.space_before_class}">
-                        <div class="frame-space-before {spaceBeforeClass}"></div>
-                    </f:if>
-                    <f:render section="Before" optional="true">
-                        <f:render partial="DropIn/Before/All" arguments="{_all}" />
-                    </f:render>
-                    <f:render section="Header" optional="true">
-                        <f:render partial="Header/All" arguments="{_all}" />
-                    </f:render>
-                    <f:render section="Main" optional="true" />
-                    <f:render section="Footer" optional="true">
-                        <f:render partial="Footer/All" arguments="{_all}" />
-                    </f:render>
-                    <f:render section="After" optional="true">
-                        <f:render partial="DropIn/After/All" arguments="{_all}" />
-                    </f:render>
-                    <f:if condition="{data.space_after_class}">
-                        <div class="frame-space-after {spaceAfterClass}"></div>
-                    </f:if>
-                </f:else>
-            </f:if>
-        </f:else>
-    </f:if>
+    <pp:bootstrapPackageFrame
+        id="c{data.uid}"
+        type="{data.CType}"
+        size="default"
+        layout="{data.frame_layout}"
+        frameClass="{data.frame_class}"
+        spaceBefore="{data.space_before_class}"
+        spaceAfter="{data.space_after_class}"
+        options="{data.frame_options}"
+        variants="{variants}"
+        backgroundColor="{data.background_color_class}"
+        backgroundImage="{backgroundImage.0}"
+        backgroundImageOptions="{data.background_image_options}"
+        ppData="{_ppData}"
+    >
+        <f:if condition="{data._LOCALIZED_UID}"><a id="c{data._LOCALIZED_UID}"></a></f:if>
+        <f:render section="Before" optional="true"><f:render partial="DropIn/Before/All" arguments="{_all}" /></f:render>
+        <f:render section="Header" optional="true"><f:render partial="Header/All" arguments="{_all}" /></f:render>
+        <f:render section="Main"   optional="true" />
+        <f:render section="Footer" optional="true"><f:render partial="Footer/All" arguments="{_all}" /></f:render>
+        <f:render section="After"  optional="true"><f:render partial="DropIn/After/All" arguments="{_all}" /></f:render>
+    </pp:bootstrapPackageFrame>
 </f:spaceless>
 </html>
