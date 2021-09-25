@@ -1,3 +1,6 @@
+//
+// Add frame spacing variable
+// --------------------------------------------------
 :root {
   --pp-frame-spacing: var(--frame-spacing-xs);
   $prevSpacing: var(--frame-spacing-xs);
@@ -8,6 +11,22 @@
     $prevSpacing: var(--frame-spacing-#{$breakpoint});
   }
 }
+
+//
+// Reset .frame-none
+// --------------------------------------------------
+.frame.frame-none {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: $body-color;
+  background: $body-bg;
+}
+
+//
+// Various
+// --------------------------------------------------
 .pp-frame-collapsible {
   margin-top: calc(-1 * var(--pp-frame-spacing));
 }
