@@ -36,6 +36,11 @@
     "require-dev": {
         "roave/security-advisories": "dev-master"
     },
+    "suggest": {
+        "buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
+        "buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
+        "buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements"
+    },
     "autoload": {
         "psr-4": {
             "Buepro\\Pizpalue\\": "Classes/"
