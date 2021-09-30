@@ -4,11 +4,13 @@
 .scroll-top {
   background: rgba(black, 70%);
   border: rgba(white, 70%) 1px solid;
-  border-radius: 5px;
   right: 10px;
   bottom: 10px;
   width: 2.5em;
   height: 2.5em;
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  }
 }
 
 //
