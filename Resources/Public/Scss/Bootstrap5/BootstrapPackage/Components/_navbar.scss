@@ -46,12 +46,8 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 .navbar {
   + a,
   + a + a,
-  + .typo3-feedit-element > a,
-  + .typo3-feedit-element > a + a,
   + .main-section > a,
-  + .main-section > a + a,
-  + .main-section > .typo3-feedit-element > a,
-  + .main-section > .typo3-feedit-element > a + a {
+  + .main-section > a + a {
     + .carousel-fullscreen,
     + .carousel-fullscreen .carousel-item {
       @each $breakpoint in map-keys($navbar-heights) {
@@ -66,12 +62,8 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 .navbar-fixed-top.navbar-inverse-transition {
   + a,
   + a + a,
-  + .typo3-feedit-element > a,
-  + .typo3-feedit-element > a + a,
   + .main-section > a,
-  + .main-section > a + a,
-  + .main-section > .typo3-feedit-element > a,
-  + .main-section > .typo3-feedit-element > a + a {
+  + .main-section > a + a {
     + .carousel {
       @each $breakpoint in map-keys($navbar-heights) {
         @media (min-width: $pp-header-overlay-breakpoint) and (min-width: map-get($grid-breakpoints, $breakpoint)) {
