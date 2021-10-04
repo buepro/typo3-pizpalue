@@ -71,13 +71,16 @@
                 </f:then>
                 <f:else>
 
-                    <a id="{configuration.id}"></a>
+                    <a id="{configuration.id}" class="pp-link-target"></a>
                     <f:if condition="{configuration.spaceBefore} !== none">
                         <div class="frame-space-before frame-space-before-{configuration.spaceBefore}"></div>
                     </f:if>
                     {content -> f:format.raw()}
                     <f:if condition="{configuration.spaceAfter} !== none">
                         <div class="frame-space-after frame-space-after-{configuration.spaceAfter}"></div>
+                    </f:if>
+                    <f:if condition="{configuration.ppData.optimizeLinkTargets}">
+                        <f:asset.script identifier="ppLinkTarget" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.linktarget.min.js" />
                     </f:if>
 
                 </f:else>

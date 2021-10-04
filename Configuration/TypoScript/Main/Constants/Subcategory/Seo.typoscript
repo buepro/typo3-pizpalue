@@ -11,3 +11,8 @@ page {
     # cat=6030/1410/020; type=string; label=Google tracking ID
     tracking.google.trackingID =
 }
+
+pizpalue.seo {
+    # cat=6060/1410/010; type=boolean; label=Optimize link targets:By default empty anchor tags are prepended to frameless content elements and serve as link targets. Empty anchor elements might cause seo issues. By enabling this parameter the id from the anchor tag is tried to be assigned to the anchor's sibling or one of its descendents.
+    optimizeLinkTargets = 0
+}

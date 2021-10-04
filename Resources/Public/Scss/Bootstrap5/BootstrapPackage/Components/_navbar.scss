@@ -44,6 +44,7 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 // Carousel Corrections
 // --------------------------------------------------
 .navbar {
+  &,
   + a,
   + a + a,
   + .main-section > a,
@@ -60,6 +61,7 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 }
 .navbar-fixed-top.navbar-default-transition,
 .navbar-fixed-top.navbar-inverse-transition {
+  &,
   + a,
   + a + a,
   + .main-section > a,

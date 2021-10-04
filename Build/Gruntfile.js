@@ -89,6 +89,10 @@ module.exports = function(grunt) {
                 src: '<%= paths.js %>Src/pizpalue.picoverlay.info.js',
                 dest: '<%= paths.js %>Dist/pizpalue.picoverlay.info.min.js'
             },
+            linktarget: {
+                src: '<%= paths.js %>Src/pizpalue.linktarget.js',
+                dest: '<%= paths.js %>Dist/pizpalue.linktarget.min.js'
+            },
         },
         watch: {
             general: {

@@ -32,6 +32,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *    - isTile: Boolean, true if content element is a tile
  *    - hasCssAnimation: Boolean indication the presence from a css animation
  *    - hasScrollAnimation: Boolean indicating the presence from a scroll animation
+ *    - optimizeLinkTargets: Passes through the constant value from `pizpalue.seo.optimizeLinkTargets`
  */
 class PizpalueFrameViewHelper extends AbstractViewHelper
 {
@@ -71,6 +72,7 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
             'isTile' => false,
             'hasCssAnimation' => false,
             'hasScrollAnimation' => false,
+            'optimizeLinkTargets' => (bool) ($pizpalueConstants['seo']['optimizeLinkTargets'] ?? true),
         ];
         self::addAttributes($assetCollector, $data, $result);
         self::addAnimation($assetCollector, $data, $pizpalueConstants, $result);
