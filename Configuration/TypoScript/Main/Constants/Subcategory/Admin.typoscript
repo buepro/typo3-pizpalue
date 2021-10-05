@@ -42,10 +42,7 @@ pizpalue.agency {
     # cat=6010/1010/0040; type=string; label=Agency reference:HTML used to create a reference to the agency
     reference = <span class="pp-agency-reference">Eine Webseite von <a href="{$pizpalue.agency.link}" title="{$pizpalue.agency.name} | {$pizpalue.agency.slogan}" target="_blank">{$pizpalue.agency.name}</a></span>
 
-    # cat=6010/1010/0050; type=boolean; label=Activate debug mode?
-    siteMode = 0
-
-    # cat=6010/1010/0050; type=options[Production=0, Debug=1, Review=2]; label=Site mode
+    # cat=6010/1010/0050; type=options[Production=0, Maintenance=1, Develop=2, Review=3]; label=Site mode
     siteMode = 0
 
     # cat=6010/1010/0060; type=boolean; label=Is maintenance page?

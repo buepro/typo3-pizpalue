@@ -1,0 +1,16 @@
+page {
+    includeCSS {
+        pizpalueDevelop = EXT:pizpalue/Resources/Public/Scss/develop.scss
+    }
+    1633421492625 = TEXT
+    1633421492625 {
+        value = <div id="setupsetting"></div>
+        stdWrap.typolink {
+            extTarget = _blank
+            parameter = {$pizpalue.agency.link}
+            parameter.insertData = 1
+            title = In Arbeit (Modus {$pizpalue.agency.siteMode}) - Eine Webseite von {$pizpalue.agency.name}
+            title.insertData = 1
+        }
+    }
+}

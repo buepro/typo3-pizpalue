@@ -101,8 +101,8 @@ For some extensions additional packages are available:
 
 .. _admin_development:
 
-Development
-===========
+Development / Maintenance
+=========================
 
 During development or maintenance phase two actions might be of interest:
 
@@ -110,4 +110,19 @@ During development or maintenance phase two actions might be of interest:
 #. Enable code debugging
 
 To temporarily show an under construction page an url redirection might be created and the code debugging might be
-enabled by setting the site mode in the "PIZPALUE: AGENCY" category from the constant editor.
+enabled by setting the site mode in the "PIZPALUE: AGENCY" category from the constant editor. The following site
+modes are available:
+
+=================== ===================================================================================================
+Site mode           Description
+=================== ===================================================================================================
+Production          Used when the site is ready.
+Maintenance         Used to temporarily debug code when site is in production.
+Develop             Used during site development to debug the code. **SEO is limited. Used only when site has not been
+                    in production.**
+Review              Used to review the site with the customer. **SEO is limited. Used only when site has not been in
+                    production.**
+=================== ===================================================================================================
+
+.. note::
+   In case the site is not in production mode an indicator is shown on the page.

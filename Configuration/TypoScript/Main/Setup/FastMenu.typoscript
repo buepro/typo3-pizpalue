@@ -17,7 +17,7 @@ $('.pp-fastmenu').fastMenu({
     )
 }
 
-[{$pizpalue.menu.fast.enable} == 1 && {$pizpalue.agency.siteMode} == 1]
+[{$pizpalue.menu.fast.enable} == 1 && ({$pizpalue.agency.siteMode} == 1 || {$pizpalue.agency.siteMode} == 2)]
 page {
     includeJSFooterlibs {
         fastMenu = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.fastmenu.js

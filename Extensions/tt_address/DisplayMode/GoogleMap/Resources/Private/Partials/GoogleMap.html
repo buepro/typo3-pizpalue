@@ -82,12 +82,16 @@
             </f:for>
         </div>
     </f:spaceless>
-    {f:asset.script(identifier: 'ppTtAddressGoogleMap',
-        src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js')
-        -> f:if(condition: '{settings.pizpalue.debugMode} != 1')}
-    {f:asset.script(identifier: 'ppTtAddressGoogleMap',
-    src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js')
-        -> f:if(condition: '{settings.pizpalue.debugMode} == 1')}
+    <f:if condition="{settings.pizpalue.siteMode} == 1 || {settings.pizpalue.siteMode} == 2">
+        <f:then>
+            {f:asset.script(identifier: 'ppTtAddressGoogleMap',
+                src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js')}
+        </f:then>
+        <f:else>
+            {f:asset.script(identifier: 'ppTtAddressGoogleMap',
+                src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js')}
+        </f:else>
+    </f:if>
     {f:asset.script(identifier: 'ppGoogleMapsApi', defer: 1, async: 1,
         src: 'https://maps.googleapis.com/maps/api/js?key={settings.pizpalue.googleMap.apiKey}&callback=initMap')}
 </f:section>

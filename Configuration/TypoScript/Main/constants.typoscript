@@ -78,10 +78,3 @@
 #=========================================================#
 
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/BootstrapPackage.typoscript'
-
-
-#=========================================================#
-# Debug
-#=========================================================#
-
-#@import 'EXT:pizpalue/Configuration/TypoScript/Develop/constants.typoscript'

@@ -33,12 +33,6 @@ config {
 # Page
 #=========================================================#
 page {
-    meta.robots = noindex,nofollow
-
-    includeCSS {
-        pizpalueDevelop = EXT:pizpalue/Resources/Public/Scss/develop.scss
-    }
-
     includeJSFooterlibs {
         #contrib_cookieconsent = EXT:bootstrap_package/Resources/Public/Contrib/cookieconsent/cookieconsent.min.js
         #bootstrap_cookieconsent = EXT:bootstrap_package/Resources/Public/JavaScript/Src/jquery.cookieconsent.js
@@ -47,17 +41,5 @@ page {
         #pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.revealfooterservice.js
         pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.general.js
         #pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.smoothscroll.js
-    }
-
-    1 = TEXT
-    1 {
-        value = <div id="setupsetting"></div>
-        stdWrap.typolink {
-            extTarget = _blank
-            parameter = {$pizpalue.agency.link}
-            parameter.insertData = 1
-            title = In Arbeit - Eine Webseite von {$pizpalue.agency.name}
-            title.insertData = 1
-        }
     }
 }

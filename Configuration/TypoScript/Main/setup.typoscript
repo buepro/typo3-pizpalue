@@ -159,18 +159,24 @@ page.10 {
 
 
 #=========================================================#
-# Development site mode
+# Site modes
 #=========================================================#
 
+# Maintenance
 [{$pizpalue.agency.siteMode} == 1]
 @import 'EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Develop/Indicator.typoscript'
 [END]
 
-
-#=========================================================#
-# Review site mode
-#=========================================================#
-
+# Development
 [{$pizpalue.agency.siteMode} == 2]
 page.meta.robots = noindex,nofollow
+@import 'EXT:pizpalue/Configuration/TypoScript/Develop/setup.typoscript'
+@import 'EXT:pizpalue/Configuration/TypoScript/Develop/Indicator.typoscript'
+[END]
+
+# Review
+[{$pizpalue.agency.siteMode} == 3]
+page.meta.robots = noindex,nofollow
+@import 'EXT:pizpalue/Configuration/TypoScript/Develop/Indicator.typoscript'
 [END]

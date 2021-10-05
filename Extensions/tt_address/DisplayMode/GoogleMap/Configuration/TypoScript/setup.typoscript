@@ -13,7 +13,7 @@ plugin.tx_ttaddress {
       }
    }
    settings.pizpalue {
-       debugMode = {$pizpalue.agency.siteMode}
+       siteMode = {$pizpalue.agency.siteMode}
        googleMap {
            pages = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.pages}
            fields = {$plugin.tx_ttaddress.displayMode.ppGoogleMap.fields}
