@@ -4,8 +4,8 @@ plugin.bootstrap_package.settings.scss {
     #---------------------------------------------------------#
     # Bootstrap main branch version
     pp-bootstrap-version = 5
-    # Presets flag. See `EXT:pizpalue/Resources/Public/Scss/_presets.scss`
-    pp-enable-presets = false
+    # Enable presets in extension user_pizpalue. See `EXT:pizpalue/Resources/Public/Scss/_presets.scss`
+    pp-enable-user-presets = false
 
     #---------------------------------------------------------#
     # Photoswipe
