@@ -31,11 +31,6 @@ defined('TYPO3') || die('Access denied.');
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
             'pizpalue',
-            'Configuration/TsConfig/Page/RTE.tsconfig',
-            'Pizpalue - RTE'
-        );
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-            'pizpalue',
             'Configuration/TsConfig/Page/ContentElement/All.tsconfig',
             'Pizpalue - Content elements'
         );

@@ -83,16 +83,13 @@ defined('TYPO3') || die('Access denied.');
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/RemoveBootstrapPackageContainerElements.tsconfig'"
             );
         }
-        // Default PageTS for TCEMAIN, TCEFORM, RTE
+        // Default PageTS for TCEMAIN, TCEFORM
         if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEMAIN.tsconfig'"
             );
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
-            );
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/RTE.tsconfig'"
             );
         }
     }
@@ -105,6 +102,7 @@ defined('TYPO3') || die('Access denied.');
          * Add default RTE configuration for pizpalue
          */
         $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = pizpalue');
 
         /**
          * Register TelephoneLinkHandler
