@@ -28,3 +28,7 @@ jobs:
       - name: CGL
         run: |
           composer cgl:ci
+      -
+        name: Lint
+        run: |
+          composer test:php:lint

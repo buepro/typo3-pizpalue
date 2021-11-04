@@ -59,6 +59,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0.0",
         "helhum/typo3-console": "^6.6 || ^7.0.2",
+        "overtrue/phplint": "^2.3.5",
         "roave/security-advisories": "dev-latest",
         "typo3/cms-base-distribution": "^10.4 || ^11.5",
         "typo3/cms-lowlevel": "^10.4 || ^11.5",
@@ -112,6 +113,9 @@
         ],
         "cgl:ci": [
             "php-cs-fixer --diff -v --dry-run fix"
+        ],
+        "test:php:lint": [
+            "phplint"
         ]
     }
 }
