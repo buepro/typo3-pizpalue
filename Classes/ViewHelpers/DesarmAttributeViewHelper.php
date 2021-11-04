@@ -2,7 +2,7 @@
 declare(strict_types = 1);
 
 /*
- * This file is part of the package buepro/pizpalue.
+ * This file is part of the composer package buepro/typo3-pizpalue.
  *
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
@@ -62,7 +62,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
     public function initializeArguments()
     {
         parent::initializeArguments();
-        $this->registerArgument('value', 'string', 'string to format');
+        $this->registerArgument('value', 'string', 'string to format', true);
         $this->registerArgument(
             'keepQuotes',
             'bool',
@@ -70,7 +70,13 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
             false,
             false
         );
-        $this->registerArgument('encoding', 'string', '');
+        $this->registerArgument(
+            'encoding',
+            'string',
+            'Used charset in encoding (e.g. ISO-8859-1)',
+            false,
+            ''
+        );
     }
 
     /**
@@ -81,7 +87,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
      *
      * @param string $value Attribute definitions
      * @param bool $keepQuotes
-     * @param int $encoding
+     * @param string $encoding
      * @return string Desarmed attribute definitions
      */
     private static function desarmAttributes($value, $keepQuotes, $encoding)
@@ -140,7 +146,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
         RenderingContextInterface $renderingContext
     ) {
         $value = $renderChildrenClosure();
-        $encoding = $arguments['encoding'];
+        $encoding = (string) $arguments['encoding'];
         $keepQuotes = $arguments['keepQuotes'];
 
         if (!is_string($value)) {

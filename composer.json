@@ -57,6 +57,7 @@
         "fluidtypo3/vhs": "^6.0.3 || dev-master || dev-development"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0.0",
         "helhum/typo3-console": "^6.6 || ^7.0.2",
         "roave/security-advisories": "dev-latest",
         "typo3/cms-base-distribution": "^10.4 || ^11.5",
@@ -105,6 +106,12 @@
             "ddev composer typo3cms:database:export",
             "ddev delete",
             "rm -rf .build/"
+        ],
+        "cgl": [
+            "php-cs-fixer --diff -v fix"
+        ],
+        "cgl:ci": [
+            "php-cs-fixer --diff -v --dry-run fix"
         ]
     }
 }

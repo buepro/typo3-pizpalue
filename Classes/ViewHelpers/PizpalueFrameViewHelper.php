@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the package buepro/pizpalue.
+ * This file is part of the composer package buepro/typo3-pizpalue.
  *
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
@@ -124,8 +124,8 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         AssetCollector $assetCollector,
         array $data,
         array $pizpalueConstants,
-        array &$result): void
-    {
+        array &$result
+    ): void {
         if (!$data['tx_pizpalue_animation']) {
             return;
         }
@@ -166,17 +166,21 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         AssetCollector $assetCollector,
         array $data,
         array $pizpalueConstants,
-        array &$result): void
-    {
+        array &$result
+    ): void {
         $attributes = implode(' ', $result['attributes']);
         if (strpos($attributes, 'data-aos') === false) {
             return;
         }
         $result['hasScrollAnimation'] = true;
-        $assetCollector->addStyleSheet('ppAos',
-            'EXT:pizpalue/Resources/Public/Contrib/aos/aos.css');
-        $assetCollector->addJavaScript('ppAos',
-            'EXT:pizpalue/Resources/Public/Contrib/aos/aos.js');
+        $assetCollector->addStyleSheet(
+            'ppAos',
+            'EXT:pizpalue/Resources/Public/Contrib/aos/aos.css'
+        );
+        $assetCollector->addJavaScript(
+            'ppAos',
+            'EXT:pizpalue/Resources/Public/Contrib/aos/aos.js'
+        );
         $assetCollector->addInlineJavaScript('ppAosInit', sprintf(
             "AOS.init({ %s }); $('[data-aos]').parent().css('overflow', 'hidden');",
             $pizpalueConstants['animation']['aos']['initParams'] ?? ''
@@ -187,8 +191,8 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         AssetCollector $assetCollector,
         array $data,
         array $pizpalueConstants,
-        array &$result): void
-    {
+        array &$result
+    ): void {
         $attributes = implode(' ', $result['attributes']);
         if (strpos($attributes, 'data-josh') === false) {
             return;
@@ -196,10 +200,12 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         $result['hasScrollAnimation'] = true;
         $result['classes'][] = 'josh-js';
         self::addAnimateCssToAssetCollector($assetCollector);
-        $assetCollector->addJavaScript('ppJosh',
-            'EXT:pizpalue/Resources/Public/Contrib/josh.js/dist/josh.min.js');
+        $assetCollector->addJavaScript(
+            'ppJosh',
+            'EXT:pizpalue/Resources/Public/Contrib/josh.js/dist/josh.min.js'
+        );
         $assetCollector->addInlineJavaScript('ppJoshInit', sprintf(
-            ";+function () { const josh = new Josh({ %s }); }();",
+            ';+function () { const josh = new Josh({ %s }); }();',
             $pizpalueConstants['animation']['josh']['initParams'] ?? ''
         ));
     }
@@ -208,8 +214,8 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         AssetCollector $assetCollector,
         array $data,
         array $pizpalueConstants,
-        array &$result): void
-    {
+        array &$result
+    ): void {
         $attributes = implode(' ', $result['attributes']);
         if (strpos($attributes, 'data-scroll') === false) {
             return;
@@ -235,18 +241,24 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
             $result['attributes'][] = 'data-scroll-reverse="true"';
         }
         self::addAnimateCssToAssetCollector($assetCollector);
-        $assetCollector->addJavaScript('ppTwikitoOnscroll',
-            'EXT:pizpalue/Resources/Public/Contrib/Twikito/onscroll-effect/dist/onscroll-effect.min.js');
-        $assetCollector->addInlineStyleSheet('twikitoOnscroll',
-            '[data-scroll].is-outside { transition: none; animation: none; }', [], ['priority' => true]);
+        $assetCollector->addJavaScript(
+            'ppTwikitoOnscroll',
+            'EXT:pizpalue/Resources/Public/Contrib/Twikito/onscroll-effect/dist/onscroll-effect.min.js'
+        );
+        $assetCollector->addInlineStyleSheet(
+            'twikitoOnscroll',
+            '[data-scroll].is-outside { transition: none; animation: none; }',
+            [],
+            ['priority' => true]
+        );
     }
 
     protected static function addAnimateCssAssets(
         AssetCollector $assetCollector,
         array $data,
         array $pizpalueConstants,
-        array &$result): void
-    {
+        array &$result
+    ): void {
         $classes = implode(' ', $result['classes']);
         if (strpos($classes, 'animate__') === false) {
             return;
