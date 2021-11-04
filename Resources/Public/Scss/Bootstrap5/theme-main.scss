@@ -12,11 +12,19 @@
 //   - Bootstrap functions are needed for bootstrap variables
 //   - Pizpalue modifies variables
 //
-@import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
-@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/functions";
-@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
-@import "ThemeMain/variables";
-@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/bootstrap";
+@if ($pp-install-dir != 'composer-root') {
+  @import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
+  @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/functions";
+  @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
+  @import "ThemeMain/variables";
+  @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/bootstrap";
+} @else {
+  @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
+  @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/functions";
+  @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
+  @import "ThemeMain/variables";
+  @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/bootstrap";
+}
 
 //
 // Create bootstrap package and pizpalue components

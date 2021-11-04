@@ -1,5 +1,10 @@
-.idea
+# Folders
+.build/
+.idea/
+Documentation-GENERATED-temp/
+
+# Files
+composer.lock
+*.cache
 *.zip
-.php-cs-fixer.cache
 Build/node_modules
-Build/package-lock.json

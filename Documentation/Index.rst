@@ -59,4 +59,5 @@ Template pizpalue
    User/Index
    Changelog/Index
    Faq/Index
+   Develop/Index
    Contribute/Index

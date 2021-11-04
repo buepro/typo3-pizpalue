@@ -27,14 +27,41 @@
         }
     ],
     "license": ["GPL-2.0-or-later"],
+    "config": {
+        "bin-dir": ".build/bin",
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "vendor-dir": ".build/vendor"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "12.0.0-dev"
+        },
+        "typo3/cms": {
+            "app-dir": ".build",
+            "extension-key": "pizpalue",
+            "web-dir": ".build/public"
+        }
+    },
+    "replace": {
+        "buepro/typo3-pizpalue": "self.version",
+        "typo3-ter/pizpalue": "self.version"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "typo3/cms-core": "^10.4 || ^11.3.3",
+        "php": ">=7.2.0",
+        "typo3/cms-core": "^10.4 || ^11.5",
         "typo3/cms-impexp": "^10.4 || ^11.3",
-        "bk2k/bootstrap-package": "^12.1",
+        "bk2k/bootstrap-package": "dev-master#ad453360a925ea0dc6c68783bd5d425f002a7c8b",
         "fluidtypo3/vhs": "^6.0.3 || dev-master || dev-development"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
+        "helhum/typo3-console": "^6.6 || ^7.0.2",
+        "roave/security-advisories": "dev-latest",
+        "typo3/cms-base-distribution": "^10.4 || ^11.5",
+        "typo3/cms-lowlevel": "^10.4 || ^11.5",
+        "typo3/cms-recycler": "^10.4 || ^11.5"
     },
     "suggest": {
         "buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
@@ -46,16 +73,38 @@
             "Buepro\\Pizpalue\\": "Classes/"
         }
     },
-    "replace": {
-        "buepro/typo3-pizpalue": "self.version",
-        "typo3-ter/pizpalue": "self.version"
-    },
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "pizpalue"
-        },
-        "branch-alias": {
-            "dev-master": "12.0.0-dev"
-        }
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p .build/public/typo3conf/ext/",
+            "[ -L .build/public/typo3conf/ext/pizpalue ] || ln -snvf ../../../../. .build/public/typo3conf/ext/pizpalue",
+            "mkdir -p .build/config/sites/default",
+            "[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml"
+        ],
+        "typo3cms:install:setup": [
+            ".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='pizpalue dev' --web-server-config='apache'"
+        ],
+        "typo3cms:database:export": [
+            ".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
+            "ls -l Build/site/db.sql.gz"
+        ],
+        "typo3cms:database:import": [
+            "gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
+        ],
+        "site:install": [
+            "@typo3cms:install:setup",
+            "@typo3cms:database:import"
+        ],
+        "ddev:install": [
+            "composer install",
+            "ddev start",
+            "ddev composer site:install",
+            "ddev launch typo3",
+            "echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
+        ],
+        "ddev:delete": [
+            "ddev composer typo3cms:database:export",
+            "ddev delete",
+            "rm -rf .build/"
+        ]
     }
 }

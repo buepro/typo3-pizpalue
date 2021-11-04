@@ -6,4 +6,8 @@
 //
 // Bootstrap framework
 //
-@import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/utilities/api";
+@if ($pp-install-dir != 'composer-root') {
+  @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/utilities/api";
+} @else {
+  @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/utilities/api";
+}
