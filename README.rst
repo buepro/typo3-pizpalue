@@ -19,6 +19,13 @@ site can be visited `here <http://pizpalue.buechler.pro/das-plus/>`__.
 The extension extends and configures TYPO3 and selected extensions to provide better structured and attracting content
 while maintaining or improving speed and seo performance.
 
+Code quality
+============
+
+.. image:: https://github.com/buepro/typo3-pizpalue/workflows/CI/badge.svg
+   :alt: Continuous Integration Status
+   :target: https://github.com/buepro/typo3-pizpalue/actions?query=workflow%3ACI
+
 Manual
 ======
 
