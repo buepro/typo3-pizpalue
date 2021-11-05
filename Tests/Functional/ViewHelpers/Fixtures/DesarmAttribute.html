@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers">
+
+<div id="tag-child">
+    <pp:desarmAttribute>{value}</pp:desarmAttribute>
+</div>
+<div id="tag-attribute">
+    <pp:desarmAttribute value="{value}" />
+</div>
+<div id="inline-child">
+    {value -> pp:desarmAttribute()}
+</div>
+<div id="inline-property">
+    {pp:desarmAttribute(value: value)}
+</div>
+
+</html>

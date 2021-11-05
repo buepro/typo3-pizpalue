@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers">
+
+<div id="tag">
+    <pp:pizpalueFrame data="{data}" pizpalueConstants="{pizpalueConstants}" as="_frameData" />
+    <f:format.raw><f:format.json>{_frameData}</f:format.json></f:format.raw>
+</div>
+<div id="inline">
+    {pp:pizpalueFrame(data: data, pizpalueConstants: pizpalueConstants, as: '_frameData')}
+    {_frameData -> f:format.json() -> f:format.raw()}
+</div>
+
+</html>

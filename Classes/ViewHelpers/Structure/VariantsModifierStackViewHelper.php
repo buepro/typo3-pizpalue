@@ -29,7 +29,7 @@ class VariantsModifierStackViewHelper extends AbstractViewHelper
     public function initializeArguments()
     {
         parent::initializeArguments();
-        $this->registerArgument('as', 'string', 'Name of variable to create.', true);
+        $this->registerArgument('as', 'string', 'Name of variable to create.');
     }
 
     /**

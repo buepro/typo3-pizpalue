@@ -1,0 +1,48 @@
+parameters:
+	ignoreErrors:
+		-
+			message:
+				"""
+					#^Strict comparison using !== between int<0, max> and false will always evaluate to true.$#
+				"""
+			count: 1
+			path: ../Classes/ViewHelpers/PizpalueFrameViewHelper.php
+		-
+			message:
+				"""
+					#^Parameter \\#1 \\$function of function call_user_func expects callable\\(\\)\\: mixed, array\\(object, non\\-empty\\-string\\) given\\.$#
+				"""
+			count: 1
+			path: ../Classes/ViewHelpers/FilterArrayViewHelper.php
+		-
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Data\\\\ImageVariantsViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/ImageVariantsViewHelper.php
+		-
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\VariantsViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/VariantsViewHelper.php
+		-
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\VariantsModifierStackViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/VariantsModifierStackViewHelper.php
+		-
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\Multiplier\\\\GetForColumnViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/Multiplier/GetForColumnViewHelper.php
+		-
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\PizpalueFrameViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			count: 1
+			path: ../Classes/ViewHelpers/PizpalueFrameViewHelper.php
+		-
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Data\\\\ImageVariantsTextToArrayViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/ImageVariantsTextToArrayViewHelper.php
+		-
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Data\\\\FilesProcessorViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/FilesProcessorViewHelper.php
+		-
+			message: "#Variable method call on TYPO3\\\\CMS\\\\Core\\\\Page\\\\AssetCollector.$#"
+			count: 1
+			path: ../Tests/Functional/ViewHelpers/PizpalueFrameViewHelperTest.php
