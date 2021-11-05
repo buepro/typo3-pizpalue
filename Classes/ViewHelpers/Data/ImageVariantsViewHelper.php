@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
  *
@@ -22,6 +24,9 @@ class ImageVariantsViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
+    /**
+     * @var string[]
+     */
     protected static $breakpoints = ['default', 'xlarge', 'large', 'medium', 'small', 'extrasmall'];
 
     /**
@@ -31,7 +36,7 @@ class ImageVariantsViewHelper extends AbstractViewHelper
     {
         parent::initializeArguments();
         $this->registerArgument('as', 'string', 'Name of variable to create.', true);
-        $this->registerArgument('variants', 'array', 'Variants for responsive images.', false);
+        $this->registerArgument('variants', 'array', 'Variants for responsive images to be modified.', false);
         $this->registerArgument('aspectRatio', 'array', 'Aspect ratios for screen breakpoint.', true);
     }
 
@@ -52,6 +57,10 @@ class ImageVariantsViewHelper extends AbstractViewHelper
                 $result[$breakpoint]['aspectRatio'] = (float) $arguments['aspectRatio'][$breakpoint];
             }
         }
-        $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+        if ($arguments['as']) {
+            $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+            return '';
+        }
+        return $result;
     }
 }

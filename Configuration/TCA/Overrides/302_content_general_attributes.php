@@ -7,12 +7,12 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3') || die('Access denied.');
+defined('TYPO3') or die('Access denied.');
 
 /**
  * Add attribute fields to content elements
  */
-(static function () {
+(static function (): void {
     // Defines available classes for dropdown selector
     $classesItemsList = 'pp-bg-primary,pp-bg-secondary,pp-bg-complementary,pp-bg-light,pp-bg-dark,'
         . 'pp-bg-centercover,pp-bg-fixed,'
@@ -90,7 +90,7 @@ defined('TYPO3') || die('Access denied.');
     };
 
     // Twikito scroll animation
-    $twikitoAttributes = static function () {
+    $twikitoAttributes = static function (): array {
         return [
             ['Twikito animation', 'data-scroll="animate__pulse" '],
             ['Twikito repeat', 'data-scroll-repeat="true" '],
@@ -99,7 +99,7 @@ defined('TYPO3') || die('Access denied.');
     };
 
     // Josh scroll animation (using animate.css)
-    $joshAttributes = static function () {
+    $joshAttributes = static function (): array {
         return [
             ['Josh animation', 'data-josh-anim-name="pulse" '],
             ['Josh duration', 'data-josh-duration="1500ms" '],

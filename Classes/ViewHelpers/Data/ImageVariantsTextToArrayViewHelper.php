@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
  *
@@ -15,17 +17,19 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
- * Class VariantsTextToArrayViewHelper
+ * Class ImageVariantsTextToArrayViewHelper
  *
  * Converts an input string to an array.
  *
- * The input text has the form: "xxl: 1.0, xl: 1.3, ..." where the output array
+ * The input text has the form: "[default: 0.3,] xxl: 1.0, xl: 1.3, ..." where the output array
  * contains the keys used by the image variants.
  *
  * The items from the input string are coma separated. The resulting array elements are of type float and are computed
  * as following:
  *
- * - When the input text is empty the default value will be assigned.
+ * - When the input text is empty the default value will be assigned to all elements. The default value is obtained
+ *   by the default value from the view helper and can be overwritten by placing a default definition ( e.g.
+ *   `default: 0.5`) in the text field. If both default assignments are missing 0 will be used.
  * - In case just one item is defined, it will be used for all elements.
  * - In all other cases the values from each item will be assigned to the corresponding element.
  *
@@ -34,6 +38,9 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
+    /**
+     * @var string[]
+     */
     protected static $breakpointMap = [
         'xxl' => 'default',
         'xl' => 'xlarge',
@@ -65,18 +72,22 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $result = array_fill_keys(array_values(self::$breakpointMap), (float) $arguments['default']);
-        $lines = GeneralUtility::trimExplode(',', $arguments['text'], true);
-        if (count($lines) === 1) {
-            // We assume a single defined value should be used for all breakpoints
-            $result = array_fill_keys(array_values(self::$breakpointMap), (float) $lines[0]);
+        $default = (float)$arguments['default'];
+        if (preg_match_all('/default\s*:\s([\d\.]+)/', $arguments['text'], $matches) === 1) {
+            $default = (float)$matches[1][0];
         }
+        $result = array_fill_keys(array_values(self::$breakpointMap), $default);
+        $lines = GeneralUtility::trimExplode(',', $arguments['text'], true);
         foreach ($lines as $line) {
             $parts = GeneralUtility::trimExplode(':', $line, true);
             if (count($parts) === 2 && array_key_exists($parts[0], self::$breakpointMap)) {
                 $result[self::$breakpointMap[$parts[0]]] = (float) $parts[1];
             }
         }
-        $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+        if ($arguments['as']) {
+            $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+            return '';
+        }
+        return $result;
     }
 }

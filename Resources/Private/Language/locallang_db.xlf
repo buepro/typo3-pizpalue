@@ -68,6 +68,9 @@
 			<trans-unit id="tx_pizpalue_ttc.image_scaling">
 				<source>Scaling</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.image_scaling.description">
+				<source>Default might be used (e.g. default: 0.6)</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.image_variants">
 				<source>Variants</source>
 			</trans-unit>

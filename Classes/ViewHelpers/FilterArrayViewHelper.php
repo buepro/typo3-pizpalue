@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types = 1);
 
 /*
@@ -21,7 +22,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  * Example:
  *
  * extensive = {0: {name: 'Luna', eyes: 'brown', points: 10}, 1: {name: 'Roman', eyes: 'green', points: 7}}
- * {pp:reduceArray(source: extensive, keylist: 'name,points') -> f:variable(name: 'filtered')}
+ * {pp:filterArray(source: extensive, keylist: 'name,points') -> f:variable(name: 'filtered')}
  *
  * filtered would now be {0: {name: 'Luna', points: 10}, 1: {name: 'Roman', points: 7}}
  *
@@ -41,10 +42,8 @@ class FilterArrayViewHelper extends AbstractViewHelper
 
     /**
      * Filters the array.
-     *
-     * @return array
      */
-    public function render()
+    public function render(): ?array
     {
         $source = $this->arguments['source'];
         $keylist = $this->arguments['keylist'];

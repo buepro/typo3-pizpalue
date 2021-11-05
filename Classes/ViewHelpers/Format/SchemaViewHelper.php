@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
  *
@@ -29,20 +31,11 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
      */
     protected $escapeOutput = false;
 
-    /**
-     *
-     *
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
-     *
-     * @return string
-     */
     public static function renderStatic(
         array $arguments,
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
-    ) {
+    ): string {
         $decodeOptions = self::getJsonOptions($arguments['decodeOptions']);
         $encodeOptions = self::getJsonOptions($arguments['encodeOptions']);
         $value = $renderChildrenClosure();
@@ -51,29 +44,24 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
             $message = 'Decoding the string to json didn\'t result in a array. Please check if \'decodeOptions\', '
                 . '\'addSlashes\' and \'stripSlashes\' should be further specified.';
             return $message;
-            //throw new \TYPO3\CMS\Core\Exception($message, 1596124988681);
         }
-        if ($arguments['removeEmptyElements']) {
+        if ((bool)$arguments['removeEmptyElements']) {
             $json = ArrayUtility::removeArrayEntryByValue($json, '');
             $json = ArrayUtility::removeNullValuesRecursive($json);
         }
-        return json_encode($json, $encodeOptions);
+        return (string)json_encode($json, $encodeOptions);
     }
 
-    /**
-     * @param string $optionsList
-     * @return int
-     */
-    private static function getJsonOptions($optionsList)
+    private static function getJsonOptions(?string $optionsList): int
     {
         $result = 0;
-        if ($optionsList) {
+        if (is_string($optionsList)) {
             $options = GeneralUtility::trimExplode(',', $optionsList);
             foreach ($options as $option) {
-                $result |= constant($option);
+                $result |= (int)constant($option);
             }
         }
-        return (int) $result;
+        return $result;
     }
 
     /**

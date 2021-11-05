@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types = 1);
 
 /*
@@ -62,7 +63,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
     public function initializeArguments()
     {
         parent::initializeArguments();
-        $this->registerArgument('value', 'string', 'string to format', true);
+        $this->registerArgument('value', 'string', 'String to desarm');
         $this->registerArgument(
             'keepQuotes',
             'bool',
@@ -90,7 +91,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
      * @param string $encoding
      * @return string Desarmed attribute definitions
      */
-    private static function desarmAttributes($value, $keepQuotes, $encoding)
+    private static function desarmAttributes(string $value, bool $keepQuotes, string $encoding): string
     {
         // Init
         $htmlEntityFlags = $keepQuotes ? ENT_NOQUOTES : ENT_COMPAT;
@@ -99,12 +100,14 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
         $value = html_entity_decode($value, $htmlEntityFlags, $encoding);
 
         // Remove tabs, line breaks, excessive spaces
-        //$value = str_replace(["\t", "\r", "\n"],' ',$value);
         $value = preg_replace('/[\t\r\n]\s+|\s+/', ' ', $value);
+        if ($value === null) {
+            return '';
+        }
 
         // Get attributes
         $result = preg_match_all('/([\w\-]*)\s*=\s*\"([^\"]*)\"/', $value, $attributes);
-        if (!$result) {
+        if (!(bool)$result) {
             return '';
         }
 
@@ -131,29 +134,20 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
         return implode(' ', $desarmedAttr);
     }
 
-    /**
-     *
-     *
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
-     *
-     * @return string
-     */
     public static function renderStatic(
         array $arguments,
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
-    ) {
+    ): string {
         $value = $renderChildrenClosure();
         $encoding = (string) $arguments['encoding'];
         $keepQuotes = $arguments['keepQuotes'];
 
         if (!is_string($value)) {
-            return $value;
+            return '';
         }
 
-        if ($encoding === null) {
+        if ($encoding === '') {
             $encoding = self::resolveDefaultEncoding();
         }
         return self::desarmAttributes($value, $keepQuotes, $encoding);

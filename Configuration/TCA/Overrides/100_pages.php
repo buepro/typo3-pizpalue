@@ -7,12 +7,12 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3') || die('Access denied.');
+defined('TYPO3') or die('Access denied.');
 
 /**
  * Add page TSconfig objects in case they aren't automatically loaded
  */
-(static function () {
+(static function (): void {
     $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
     );
@@ -55,7 +55,7 @@ defined('TYPO3') || die('Access denied.');
  * Add page TSconfig objects that need to be loaded manually.
  * (e.g. because they are used just on a specific page or might conflict when used together)
  */
-(static function () {
+(static function (): void {
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('tt_address')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
             'pizpalue',

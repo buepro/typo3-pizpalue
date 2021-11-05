@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /*
@@ -45,9 +46,11 @@ class VariantsViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $renderingContext->getVariableProvider()->add(
-            $arguments['as'],
-            StructureVariantsUtility::getVariants($arguments['initialVariants'])
-        );
+        $result = StructureVariantsUtility::getVariants($arguments['initialVariants']);
+        if ($arguments['as']) {
+            $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+            return '';
+        }
+        return $result;
     }
 }

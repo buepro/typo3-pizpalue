@@ -7,12 +7,12 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3') || die('Access denied.');
+defined('TYPO3') or die('Access denied.');
 
 /**
  * Add fields to content elements
  */
-(static function () {
+(static function (): void {
     // Column definition
     $pizpalueColumns = [
         'tx_pizpalue_layout_breakpoint' => [

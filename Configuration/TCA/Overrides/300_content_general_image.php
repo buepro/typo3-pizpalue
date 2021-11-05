@@ -7,19 +7,21 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3') || die('Access denied.');
+defined('TYPO3') or die('Access denied.');
 
 /**
  * Add and configure image related fields to content elements
  */
-(static function () {
+(static function (): void {
     $imageColumns = [
         'tx_pizpalue_image_scaling' => [
             'exclude' => true,
             'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_scaling',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_scaling.description',
             'config' => [
                 'type' => 'text',
                 'default' => implode(',' . chr(10), ['xxl: 1.0', 'xl: 1.0', 'lg: 1.0', 'md: 1.0', 'sm: 1.0', 'xs: 1.0']),
+                'rows' => 6,
             ]
         ],
         'tx_pizpalue_image_variants' => [
@@ -38,6 +40,7 @@ defined('TYPO3') || die('Access denied.');
         'tx_pizpalue_image_aspect_ratio' => [
             'exclude' => true,
             'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_aspect_ratio',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_scaling.description',
             'config' => [
                 'type' => 'text',
                 'default' => implode(',' . chr(10), ['xxl: 0', 'xl: 0', 'lg: 0', 'md: 0', 'sm: 0', 'xs: 0']),
@@ -56,6 +59,7 @@ defined('TYPO3') || die('Access denied.');
                         ['1:2', implode(',' . chr(10), ['xxl: 0.5', 'xl: 0.5', 'lg: 0.5', 'md: 0.5', 'sm: 0.5', 'xs: 0.5'])]
                     ],
                 ],
+                'rows' => 6,
             ],
         ],
         'tx_pizpalue_background_image_variants' => [

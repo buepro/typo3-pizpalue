@@ -7,12 +7,12 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3') || die('Access denied.');
+defined('TYPO3') or die('Access denied.');
 
 /**
  * @todo Split file into logical groups
  */
-(static function () {
+(static function (): void {
     /**
      * Add content element group to content element selector
      */

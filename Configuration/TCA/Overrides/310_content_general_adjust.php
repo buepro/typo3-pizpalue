@@ -7,12 +7,12 @@
  * LICENSE file that was distributed with this source code.
  */
 
-defined('TYPO3') || die('Access denied.');
+defined('TYPO3') or die('Access denied.');
 
 /**
  * Extend and configure fields (mainly non pizpalue fields).
  */
-(static function () {
+(static function (): void {
     /**
      * Adds complementary class to frame background (after secondary, in case it still exists)
      */

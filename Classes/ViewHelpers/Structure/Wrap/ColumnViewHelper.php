@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
  *
@@ -57,17 +59,11 @@ class ColumnViewHelper extends AbstractViewHelper
         $this->registerArgument('correction', 'float|array', 'Correction to be subtracted. In case a float is provided it will be used for all screen breakpoints.', false, 0);
     }
 
-    /**
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
-     * @return mixed
-     */
     public static function renderStatic(
         array $arguments,
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
-    ) {
+    ): string {
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
             $multiplier = StructureUtility::getMultiplierForColumn(
                 $arguments['class'],
@@ -83,8 +79,8 @@ class ColumnViewHelper extends AbstractViewHelper
             $content = $renderChildrenClosure();
             StructureVariantsUtility::popVariantsModifier();
             return $content;
-        } else {
-            return $renderChildrenClosure();
         }
+
+        return $renderChildrenClosure();
     }
 }

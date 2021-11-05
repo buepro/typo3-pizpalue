@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
  *
@@ -66,9 +68,9 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
             $content = $this->tag->render();
             StructureVariantsUtility::popVariantsModifier();
             return $content;
-        } else {
-            $this->tag->setContent($this->renderChildren());
-            return $this->tag->render();
         }
+
+        $this->tag->setContent($this->renderChildren());
+        return $this->tag->render();
     }
 }

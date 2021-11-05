@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /*
@@ -42,6 +43,11 @@ class VariantsModifierStackViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $renderingContext->getVariableProvider()->add($arguments['as'], StructureVariantsUtility::getVariantsModifierStack());
+        $result = StructureVariantsUtility::getVariantsModifierStack();
+        if ($arguments['as']) {
+            $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+            return '';
+        }
+        return $result;
     }
 }

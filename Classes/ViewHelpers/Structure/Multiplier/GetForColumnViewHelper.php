@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
  *
@@ -55,6 +57,10 @@ class GetForColumnViewHelper extends AbstractViewHelper
         $class = $arguments['class'] ?? '';
         $count = $arguments['count'] ?? 1;
         $multiplier = StructureUtility::getMultiplierForColumn($class, $count, $multiplier);
-        $renderingContext->getVariableProvider()->add($arguments['as'], $multiplier);
+        if ($arguments['as']) {
+            $renderingContext->getVariableProvider()->add($arguments['as'], $multiplier);
+            return '';
+        }
+        return $multiplier;
     }
 }

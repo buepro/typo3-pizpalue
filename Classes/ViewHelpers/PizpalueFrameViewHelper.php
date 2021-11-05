@@ -30,9 +30,9 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *    - styles: Array of style definitions
  *    - attributes: Array of attributes
  *    - isTile: Boolean, true if content element is a tile
- *    - hasCssAnimation: Boolean indication the presence from a css animation
- *    - hasScrollAnimation: Boolean indicating the presence from a scroll animation
- *    - optimizeLinkTargets: Passes through the constant value from `pizpalue.seo.optimizeLinkTargets`
+ *    - hasCssAnimation: Boolean, indication the presence from a css animation
+ *    - hasScrollAnimation: Boolean, indicating the presence from a scroll animation
+ *    - optimizeLinkTargets: Boolean, passes through the constant value from `pizpalue.seo.optimizeLinkTargets`
  */
 class PizpalueFrameViewHelper extends AbstractViewHelper
 {
@@ -55,7 +55,7 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
      * @param array $arguments
      * @param \Closure $renderChildrenClosure
      * @param RenderingContextInterface $renderingContext
-     * @return void
+     * @return mixed
      */
     public static function renderStatic(
         array $arguments,
@@ -83,21 +83,28 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         self::addTwikitoAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addAnimateCssAssets($assetCollector, $data, $pizpalueConstants, $result);
         $variableProvider = $renderingContext->getVariableProvider();
-        $variableProvider->add($arguments['as'], $result);
+        if ($arguments['as']) {
+            $variableProvider->add($arguments['as'], $result);
+            return '';
+        }
+        return $result;
     }
 
     private static function getAttributes(string $attributes): array
     {
         // remove spaces before and after `=`
         $attributes = preg_replace('/(\s*=\s*)/', '=', $attributes);
+        if ($attributes === null) {
+            return [];
+        }
         $result = preg_match_all('/([\w-]+="[^"]*")/', $attributes, $matches);
-        if ($result) {
+        if ($result !== false && $result > 0) {
             return $matches[0];
         }
         return [];
     }
 
-    private static function addAnimateCssToAssetCollector(AssetCollector $assetCollector)
+    private static function addAnimateCssToAssetCollector(AssetCollector $assetCollector): void
     {
         $assetCollector->addStyleSheet('ppAnimateCss', 'EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css');
     }
@@ -108,13 +115,18 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         $result['classes'] = GeneralUtility::trimExplode(' ', $data['tx_pizpalue_classes'], true);
         $result['styles'] = [];
         $styles = trim($data['tx_pizpalue_style'] ?? '');
-        if ($styles) {
-            $result['styles'] = GeneralUtility::trimExplode(';', $styles, true);
+        if ((bool)$styles) {
             if (strpos($styles, '{') !== false) {
-                // Add css to asset collector
+                // Add styles to asset collector
                 $css = trim(str_replace('#self', '#c' . $uid, $styles));
                 $assetCollector->addInlineStyleSheet('ppCe' . $uid, $css);
                 $result['styles'] = [];
+            } else {
+                // Add styles inline
+                foreach (GeneralUtility::trimExplode(';', $styles, true) as $style) {
+                    $parts = GeneralUtility::trimExplode(':', $style, true);
+                    $result['styles'][] = $parts[0] . ': ' . $parts[1];
+                }
             }
         }
         $result['attributes'] = self::getAttributes($data['tx_pizpalue_attributes']);
@@ -133,22 +145,22 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         if (!$config) {
             return;
         }
-        if ($config['classes'] && $classes = trim($config['classes'])) {
+        if ((bool)$config['classes'] && (bool)($classes = trim($config['classes']))) {
             $classes = GeneralUtility::trimExplode(' ', $classes, true);
             $result['classes'] = array_merge($result['classes'], $classes);
         }
-        if ($config['style'] && $style = trim($config['style'])) {
+        if ((bool)$config['styles'] && (bool)($style = trim($config['styles']))) {
             $styles = GeneralUtility::trimExplode(';', $style, true);
             $result['styles'] = array_merge($result['styles'], $styles);
         }
-        if ($config['attributes'] && $attributes = self::getAttributes($config['attributes'])) {
+        if ((bool)$config['attributes'] && (bool)($attributes = self::getAttributes($config['attributes']))) {
             $result['attributes'] = array_merge($result['attributes'], $attributes);
         }
     }
 
     protected static function addTiles(AssetCollector $assetCollector, array $data, array &$result): void
     {
-        if ($data['layout'] && strpos($data['layout'], 'pp-tile') !== false) {
+        if ((bool)$data['layout'] && strpos($data['layout'], 'pp-tile') !== false) {
             $result['classes'][] = 'pp-tile';
             $result['classes'][] = trim($data['layout']);
             $result['isTile'] = true;
@@ -157,7 +169,10 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
 
     protected static function addLayoutBreakpoint(AssetCollector $assetCollector, array $data, array &$result): void
     {
-        if ($data['tx_pizpalue_layout_breakpoint'] && $layoutBreakpoint = trim($data['tx_pizpalue_layout_breakpoint'])) {
+        if (
+            (bool)$data['tx_pizpalue_layout_breakpoint'] &&
+            (bool)($layoutBreakpoint = trim($data['tx_pizpalue_layout_breakpoint']))
+        ) {
             $result['classes'][] = 'pp-layout-' . $layoutBreakpoint;
         }
     }
