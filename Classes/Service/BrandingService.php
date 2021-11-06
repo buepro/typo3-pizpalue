@@ -44,11 +44,11 @@ class BrandingService
 
             if (!isset($backendConfiguration['loginLogo']) || empty(trim($backendConfiguration['loginLogo'])) ||
                 strstr($backendConfiguration['loginLogo'], 'bootstrap_package')) {
-                $backendConfiguration['loginLogo'] = 'EXT:pizpalue/Resources/Public/Images/backend-login-logo.svg';
+                $backendConfiguration['loginLogo'] = 'fileadmin/pizpalue/images/backend-login-logo.svg';
             }
             if (!isset($backendConfiguration['loginBackgroundImage']) || empty(trim($backendConfiguration['loginBackgroundImage'])) ||
                 strstr($backendConfiguration['loginBackgroundImage'], 'bootstrap_package')) {
-                $backendConfiguration['loginBackgroundImage'] = 'EXT:pizpalue/Resources/Public/Images/backend-login-background.jpg';
+                $backendConfiguration['loginBackgroundImage'] = 'fileadmin/pizpalue/images/backend-login-background.jpg';
             }
             if (!isset($backendConfiguration['backendLogo']) || empty(trim($backendConfiguration['backendLogo'])) ||
                 strstr($backendConfiguration['backendLogo'], 'bootstrap_package')) {
