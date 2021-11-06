@@ -1,19 +1,32 @@
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript'
 
 #---------------------------------------------------------#
-# customer base
+# customer base logo and app icon
 #---------------------------------------------------------#
 
-page.logo {
+page {
 
-    # cat=6030/1040/0060; type=string; label=Logo image
-    file = EXT:pizpalue/Resources/Public/Images/logo.svg
+    logo {
 
-    # cat=6030/1040/0066; type=int; label=Logo max image height
-    height = 140
+        # cat=6030/1040/0060; type=string; label=Logo image
+        file = EXT:pizpalue/Resources/Public/Images/logo.svg
 
-    # cat=6030/1040/0064; type=int; label=Logo max image width
-    width = 390
+        # cat=6030/1040/0066; type=int; label=Logo max image height
+        height = 140
+
+        # cat=6030/1040/0064; type=int; label=Logo max image width
+        width = 390
+
+    }
+
+    # cat=6030/1110/010; type=string; label= Favicon: Favicon file. Use "AppIcon" to define it by app icon header data.
+    favicon.file = fileadmin/pizpalue/icons/favicon.ico
+}
+
+pizpalue.appIcon {
+
+    # cat=6030/1110/020; type=string; label=Header data:Create the resources externally (e.g. realfavicongenerator.net) and copy the needed header data WITHOUT line breaks here. To get nicer source code paste the code into the constant editor.
+    headerData =
 
 }
 

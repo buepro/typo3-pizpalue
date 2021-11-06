@@ -66,7 +66,6 @@
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Logo.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Menu.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/CookieConsent.typoscript'
-@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/AppIcon.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Storage.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Seo.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/Subcategory/Features.typoscript'
