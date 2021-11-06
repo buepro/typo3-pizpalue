@@ -1,2 +1,0 @@
-// Enable new pages by default
-TCAdefaults.pages.hidden = 0
