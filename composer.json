@@ -57,6 +57,7 @@
         "fluidtypo3/vhs": "^6.0.3 || dev-master || dev-development"
     },
     "require-dev": {
+        "buepro/typo3-container-elements": "^3.0",
         "friendsofphp/php-cs-fixer": "^3.0.0",
         "friendsoftypo3/phpstan-typo3": "^0.8.1",
         "helhum/typo3-console": "^6.6 || ^7.0.2",
