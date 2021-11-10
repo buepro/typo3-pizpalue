@@ -10,16 +10,14 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\Service;
 
-use BK2K\BootstrapPackage\Utility\ImageVariantsUtility;
-use Buepro\Pizpalue\Domain\Model\VariantsModifier;
+use Buepro\Pizpalue\Structure\TypoScript;
+use Buepro\Pizpalue\Structure\VariantsModifier;
+use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use TYPO3\CMS\Core\Service\FlexFormService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
-/**
- * Class VariantsService
- */
 class ContentElementService
 {
     /**
@@ -70,9 +68,9 @@ class ContentElementService
     {
         $data = $this->cObj->data;
         // default variants
-        $variants = ImageVariantsUtility::getImageVariants();
+        $variants = StructureVariantsUtility::getStructureVariants();
         if ($this->cObj->getCurrentTable() === 'tt_content' && $data['CType']) {
-            $variantsConf = StructureVariantsUtility::getTypoScriptValue(
+            $variantsConf = TypoScript::getVariants(
                 'lib.contentElement.settings.responsiveimages.contentelements.' . $data['CType']
             );
             if ($variantsConf) {
@@ -86,13 +84,13 @@ class ContentElementService
                 }
             }
         }
-        $variantsModifier = GeneralUtility::makeInstance(VariantsModifier::class);
+        $variantsModifier = new VariantsModifier();
         $variantsModifier->setVariants($variants);
-        StructureVariantsUtility::pushVariantsModifier($variantsModifier);
+        VariantsModifierStack::pushVariantsModifier($variantsModifier);
     }
 
     public function popVariantsModifier()
     {
-        StructureVariantsUtility::popVariantsModifier();
+        VariantsModifierStack::popVariantsModifier();
     }
 }

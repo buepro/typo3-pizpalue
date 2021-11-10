@@ -21,6 +21,8 @@ plugin.bootstrap_package.settings.scss {
     # cat=6040/1034/0230; type=string; label=Toggler line gap
     pp-header-toggler-line-gap = round($pp-header-toggler-width / 5.67)
 
+    // We define it here for that it can be used in structure elements
+    grid-gutter-width = 40px
 }
 
 

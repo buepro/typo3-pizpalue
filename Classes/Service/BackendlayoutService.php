@@ -10,9 +10,9 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\Service;
 
-use Buepro\Pizpalue\Domain\Model\VariantsModifier;
-use Buepro\Pizpalue\Utility\StructureVariantsUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
+use Buepro\Pizpalue\Structure\TypoScript;
+use Buepro\Pizpalue\Structure\VariantsModifier;
+use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class BackendlayoutService
@@ -30,33 +30,23 @@ class BackendlayoutService
      */
     public function pushVariantsModifier(string $content, array $conf)
     {
-        $variantsModifier = GeneralUtility::makeInstance(VariantsModifier::class);
+        $variantsModifier = new VariantsModifier();
         if (isset($conf['backendlayout']) && isset($this->cObj->data['colPos'])) {
             $backendlayout = $this->cObj->cObjGetSingle($conf['backendlayout'], $conf['backendlayout.']);
             $colPos = (int) $this->cObj->data['colPos'];
-            $variantsConf = StructureVariantsUtility::getTypoScriptValue(sprintf(
+            $variantsModification = TypoScript::getVariants(sprintf(
                 '%s.%s.%s',
                 'lib.contentElement.settings.responsiveimages.backendlayout',
                 $backendlayout,
                 $colPos
             ));
-            if ($variantsConf) {
-                if (isset($variantsConf['multiplier'])) {
-                    $variantsModifier->setMultiplier($variantsConf['multiplier']);
-                }
-                if (isset($variantsConf['gutters'])) {
-                    $variantsModifier->setGutter($variantsConf['gutters']);
-                }
-                if (isset($variantsConf['corrections'])) {
-                    $variantsModifier->setCorrection($variantsConf['corrections']);
-                }
-            }
+            $variantsModifier->setModification((array)$variantsModification);
         }
-        StructureVariantsUtility::pushVariantsModifier($variantsModifier);
+        VariantsModifierStack::pushVariantsModifier($variantsModifier);
     }
 
     public function popVariantsModifier()
     {
-        StructureVariantsUtility::popVariantsModifier();
+        VariantsModifierStack::popVariantsModifier();
     }
 }

@@ -11,10 +11,11 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\ViewHelpers\Structure\Wrap;
 
-use Buepro\Pizpalue\Domain\Model\VariantsModifier;
-use Buepro\Pizpalue\Utility\StructureUtility;
+use Buepro\Pizpalue\Structure\VariantsModifier;
+use Buepro\Pizpalue\Structure\VariantsModifierStack;
+use Buepro\Pizpalue\Utility\ColumnVariantsUtility;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
+use Buepro\Pizpalue\Utility\VectorUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
@@ -55,7 +56,7 @@ class ColumnViewHelper extends AbstractViewHelper
     {
         $this->registerArgument('class', 'string', 'CSS classes used to define the column', false, '');
         $this->registerArgument('count', 'int', 'Column count in row', false, 1);
-        $this->registerArgument('gutter', 'float|array', 'Space between columns. In case a float is provided it will be used for all screen breakpoints.', false, 0);
+        $this->registerArgument('gutter', 'float|array', 'Space between columns. In case a number is provided it will be used for all screen breakpoints.', false, 0);
         $this->registerArgument('correction', 'float|array', 'Correction to be subtracted. In case a float is provided it will be used for all screen breakpoints.', false, 0);
     }
 
@@ -65,19 +66,18 @@ class ColumnViewHelper extends AbstractViewHelper
         RenderingContextInterface $renderingContext
     ): string {
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
-            $multiplier = StructureUtility::getMultiplierForColumn(
-                $arguments['class'],
-                $arguments['count']
-            );
+            $gutter = StructureVariantsUtility::getVectorProperty($arguments['gutter']);
+            $multiplier = ColumnVariantsUtility::getMultiplier($arguments['class'], $arguments['count']);
+            $correction = StructureVariantsUtility::getVectorProperty($arguments['correction']);
+            $modifier = (new VariantsModifier())
+                ->setMargins(VectorUtility::negate($gutter))
+                ->setMultiplier($multiplier)
+                ->setCorrections(VectorUtility::addVector($gutter, $correction));
 
             // Push variants modifier -> render content -> pop modifier
-            $modifier = GeneralUtility::makeInstance(VariantsModifier::class)
-                ->setMultiplier($multiplier)
-                ->setGutter($arguments['gutter'])
-                ->setCorrection($arguments['correction']);
-            StructureVariantsUtility::pushVariantsModifier($modifier);
+            VariantsModifierStack::pushVariantsModifier($modifier);
             $content = $renderChildrenClosure();
-            StructureVariantsUtility::popVariantsModifier();
+            VariantsModifierStack::popVariantsModifier();
             return $content;
         }
 

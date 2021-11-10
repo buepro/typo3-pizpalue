@@ -9,7 +9,7 @@
 
 namespace Buepro\Pizpalue\DataProcessing;
 
-use Buepro\Pizpalue\Utility\StructureVariantsUtility;
+use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
@@ -33,7 +33,7 @@ class StructureProcessor implements DataProcessorInterface
         array $processorConfiguration,
         array $processedData
     ) {
-        StructureVariantsUtility::setContentElementData($processedData['data']);
+        VariantsModifierStack::setContentElementData($processedData['data']);
         return $processedData;
     }
 }

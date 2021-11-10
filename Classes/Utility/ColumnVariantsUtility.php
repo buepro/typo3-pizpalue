@@ -13,19 +13,25 @@ namespace Buepro\Pizpalue\Utility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
- * Used to calculate the structure multiplier.
+ * Used to calculate variants properties for a column.
  */
-class StructureUtility
+class ColumnVariantsUtility
 {
+    /**
+     * @var array
+     */
     private static $defaultMultiplier = [
-        'extrasmall' => 1,
-        'small' => 1,
-        'medium' => 1,
-        'large' => 1,
-        'xlarge' => 1,
-        'default' => 1
+        'extrasmall' => 1.0,
+        'small' => 1.0,
+        'medium' => 1.0,
+        'large' => 1.0,
+        'xlarge' => 1.0,
+        'default' => 1.0
     ];
 
+    /**
+     * @var string[]
+     */
     private static $breakpointMap = [
         'extrasmall' => '',
         'small' => 'sm',
@@ -36,7 +42,7 @@ class StructureUtility
     ];
 
     /**
-     * Calculates the factor for a breakpoint based on the css items used to define the column and the column count
+     * Calculates the factor for a breakpoint based on the css classes used to define the column and the column count
      * from the row.
      *
      * @param array $items CSS items defining the column (e.g. ['col', 'col-md', 'col-lg-4'])
@@ -58,7 +64,7 @@ class StructureUtility
             }
             // CSS definition `col-3`
             if (count($parts) === 2 && (int) $parts[1] > 0 && $breakpoint === 'extrasmall') {
-                $factor = ((int) $parts[1]) / 12;
+                $factor = ((float) $parts[1]) / 12;
             }
             // CSS definition `col-md`
             if (count($parts) === 2 && $parts[1] === self::$breakpointMap[$breakpoint]) {
@@ -66,21 +72,21 @@ class StructureUtility
             }
             // CSS definition `col-md-3`
             if (count($parts) === 3 && $parts[1] === self::$breakpointMap[$breakpoint]) {
-                $factor = ((int) $parts[2]) / 12;
+                $factor = ((float) $parts[2]) / 12;
             }
         }
         return $factor;
     }
 
     /**
-     * Calculates a new multiplier based on the column css, the column count and a base multiplier
+     * Calculates a new multiplier based on the column css classes, the column count and a base multiplier.
      *
      * @param string $class CSS classes used to define the column
      * @param int $count Columns count in row
      * @param array $baseMultiplier
      * @return array
      */
-    public static function getMultiplierForColumn(string $class = '', int $count = 1, array $baseMultiplier = []): array
+    public static function getMultiplier(string $class = '', int $count = 1, array $baseMultiplier = []): array
     {
         // Set initial multiplier
         $multiplier = array_merge(self::$defaultMultiplier, $baseMultiplier);
@@ -90,12 +96,12 @@ class StructureUtility
         $previousFactor = 1.0;
         foreach ($multiplier as $breakpoint => $value) {
             $factor = self::getColumnFactorForBreakpoint($items, $count, $breakpoint);
-            if (false === $factor) {
-                // No column definition was present hence column width remains as for previous break point
-                $multiplier[$breakpoint] = $previousFactor * $value;
-            } else {
+            if (is_numeric($factor)) {
                 $multiplier[$breakpoint] = $factor * $value;
                 $previousFactor = $factor;
+            } else {
+                // No column definition was present hence column width remains as for previous break point
+                $multiplier[$breakpoint] = $previousFactor * $value;
             }
         }
         return $multiplier;

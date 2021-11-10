@@ -10,7 +10,13 @@ parameters:
 	checkMissingIterableValueType: false
 	reportUnmatchedIgnoredErrors: false
 
+	ignoreErrors:
+	- "#^Constant ORIGINAL_ROOT not found.$#"
+	- "#^Call to an undefined method Prophecy\\\\Prophecy\\\\ObjectProphecy#"
+
 	paths:
+	- %currentWorkingDirectory%/Classes/Structure/
+	- %currentWorkingDirectory%/Classes/Utility/
 	- %currentWorkingDirectory%/Classes/ViewHelpers/
 	- %currentWorkingDirectory%/Configuration/
 	- %currentWorkingDirectory%/Tests/

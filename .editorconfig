@@ -83,3 +83,8 @@ indent_style = tab
 [*.sql]
 indent_style = tab
 indent_size = 2
+
+# neon-Files
+[*.neon]
+indent_style = tab
+indent_size = 4

@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\Tests\Functional\Data\ViewHelpers;
+namespace Buepro\Pizpalue\Tests\Functional\ViewHelpers\Data;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;

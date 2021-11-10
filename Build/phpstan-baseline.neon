@@ -23,9 +23,9 @@ parameters:
 			count: 1
 			path: ../Classes/ViewHelpers/Structure/VariantsViewHelper.php
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\VariantsModifierStackViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\ModificationStackViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
 			count: 1
-			path: ../Classes/ViewHelpers/Structure/VariantsModifierStackViewHelper.php
+			path: ../Classes/ViewHelpers/Structure/ModificationStackViewHelper.php
 		-
 			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\Multiplier\\\\GetForColumnViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
 			count: 1

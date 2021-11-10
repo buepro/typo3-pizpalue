@@ -50,11 +50,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.2.0",
-        "typo3/cms-core": "^10.4 || ^11.5",
-        "typo3/cms-impexp": "^10.4 || ^11.3",
+        "php": ">=7.3.0",
         "bk2k/bootstrap-package": "dev-master#ad453360a925ea0dc6c68783bd5d425f002a7c8b",
-        "fluidtypo3/vhs": "^6.0.3 || dev-master || dev-development"
+        "fluidtypo3/vhs": "^6.0.3 || dev-master || dev-development",
+        "typo3/cms-core": "^10.4 || ^11.5"
     },
     "require-dev": {
         "buepro/typo3-container-elements": "^3.0",
@@ -62,12 +61,14 @@
         "friendsoftypo3/phpstan-typo3": "^0.8.1",
         "helhum/typo3-console": "^6.6 || ^7.0.2",
         "overtrue/phplint": "^2.3.5",
+        "phpspec/prophecy-phpunit": "^1.1 || ^2.0",
         "phpstan/phpstan": "^0.12.87",
         "phpstan/phpstan-deprecation-rules": "^0.12.6",
         "phpstan/phpstan-phpunit": "^0.12.19",
         "phpstan/phpstan-strict-rules": "^0.12.9",
         "roave/security-advisories": "dev-latest",
         "typo3/cms-base-distribution": "^10.4 || ^11.5",
+        "typo3/cms-impexp": "^10.4 || ^11.5",
         "typo3/cms-lowlevel": "^10.4 || ^11.5",
         "typo3/cms-recycler": "^10.4 || ^11.5",
         "typo3/testing-framework": "^5.0 || ^6.4"
@@ -80,6 +81,11 @@
     "autoload": {
         "psr-4": {
             "Buepro\\Pizpalue\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Buepro\\Pizpalue\\Tests\\": "Tests/"
         }
     },
     "scripts": {
@@ -127,6 +133,9 @@
         "phpstan": [
             "phpstan analyze --configuration Build/phpstan.neon"
         ],
+        "test:php:unit": [
+            "phpunit -c Build/phpunit-unit.xml"
+        ],
         "test:php:functional": [
             "phpunit -c Build/phpunit-functional.xml"
         ],
@@ -134,6 +143,7 @@
             "@cgl",
             "@test:php:lint",
             "@phpstan",
+            "@test:php:unit",
             "@test:php:functional"
         ]
     }

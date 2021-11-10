@@ -11,15 +11,15 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\ViewHelpers\Structure;
 
-use Buepro\Pizpalue\Utility\StructureVariantsUtility;
+use Buepro\Pizpalue\Structure\ModificationStack;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
- * To get the variants modifier stack. Mainly used for debugging purposes.
+ * Mainly used for debugging purposes.
  */
-class VariantsModifierStackViewHelper extends AbstractViewHelper
+class ModificationStackViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
@@ -43,7 +43,7 @@ class VariantsModifierStackViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $result = StructureVariantsUtility::getVariantsModifierStack();
+        $result = ModificationStack::getStack();
         if ($arguments['as']) {
             $renderingContext->getVariableProvider()->add($arguments['as'], $result);
             return '';
