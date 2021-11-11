@@ -13,9 +13,11 @@ parameters:
 	ignoreErrors:
 	- "#^Constant ORIGINAL_ROOT not found.$#"
 	- "#^Call to an undefined method Prophecy\\\\Prophecy\\\\ObjectProphecy#"
+	- "#^Parameter \\#\\d+ \\.\\.\\.\\$expressions of method TYPO3\\\\CMS\\\\Core\\\\Database\\\\Query\\\\Expression\\\\ExpressionBuilder::\\w+\\(\\) expects string, TYPO3\\\\CMS\\\\Core\\\\Database\\\\Query\\\\Expression\\\\CompositeExpression given.$#"
 
 	paths:
 	- %currentWorkingDirectory%/Classes/Structure/
+	- %currentWorkingDirectory%/Classes/Updates/
 	- %currentWorkingDirectory%/Classes/Utility/
 	- %currentWorkingDirectory%/Classes/ViewHelpers/
 	- %currentWorkingDirectory%/Configuration/

@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
@@ -9,6 +10,7 @@
 
 namespace Buepro\Pizpalue\Updates;
 
+use Doctrine\DBAL\ForwardCompatibility\Result;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -64,22 +66,37 @@ class ContentElementXxlUpdate implements UpgradeWizardInterface, RepeatableInter
     {
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
         $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $elementCount = $queryBuilder->count('uid')
+        $result = $queryBuilder->count('uid')
             ->from('tt_content')
             ->where(
                 $queryBuilder->expr()->orX(
                     $queryBuilder->expr()->andX(
-                        $queryBuilder->expr()->like('tx_pizpalue_image_scaling', $queryBuilder->createNamedParameter('%xl%', \PDO::PARAM_STR)),
-                        $queryBuilder->expr()->notLike('tx_pizpalue_image_scaling', $queryBuilder->createNamedParameter('%xxl%', \PDO::PARAM_STR))
+                        $queryBuilder->expr()->like(
+                            'tx_pizpalue_image_scaling',
+                            $queryBuilder->createNamedParameter('%xl%', \PDO::PARAM_STR)
+                        ),
+                        $queryBuilder->expr()->notLike(
+                            'tx_pizpalue_image_scaling',
+                            $queryBuilder->createNamedParameter('%xxl%', \PDO::PARAM_STR)
+                        )
                     ),
                     $queryBuilder->expr()->andX(
-                        $queryBuilder->expr()->like('tx_pizpalue_image_aspect_ratio', $queryBuilder->createNamedParameter('%xl%', \PDO::PARAM_STR)),
-                        $queryBuilder->expr()->notLike('tx_pizpalue_image_aspect_ratio', $queryBuilder->createNamedParameter('%xxl%', \PDO::PARAM_STR))
+                        $queryBuilder->expr()->like(
+                            'tx_pizpalue_image_aspect_ratio',
+                            $queryBuilder->createNamedParameter('%xl%', \PDO::PARAM_STR)
+                        ),
+                        $queryBuilder->expr()->notLike(
+                            'tx_pizpalue_image_aspect_ratio',
+                            $queryBuilder->createNamedParameter('%xxl%', \PDO::PARAM_STR)
+                        )
                     )
                 )
             )
-            ->execute()->fetchColumn(0);
-        return (bool)$elementCount;
+            ->execute();
+        if ($result instanceof Result) {
+            return (bool)$result->fetchOne();
+        }
+        return false;
     }
 
     /**
@@ -104,7 +121,10 @@ class ContentElementXxlUpdate implements UpgradeWizardInterface, RepeatableInter
                 $queryBuilder->expr()->notLike($fieldName, $queryBuilder->createNamedParameter('%xxl%', \PDO::PARAM_STR))
             )
             ->execute();
-        while ($record = $queryResult->fetch()) {
+        if (!($queryResult instanceof Result)) {
+            return;
+        }
+        while (is_array($record = $queryResult->fetchAssociative())) {
             $queryBuilder = $connection->createQueryBuilder();
             $queryBuilder->update('tt_content')
                 ->where(

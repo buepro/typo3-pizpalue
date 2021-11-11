@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
@@ -9,6 +10,7 @@
 
 namespace Buepro\Pizpalue\Updates;
 
+use Doctrine\DBAL\ForwardCompatibility\Result;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
@@ -19,6 +21,9 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
 class ContentElementClassesUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
+    /**
+     * @var string[]
+     */
     private $replacementClasses = [
         'no-gutters' => 'g-0',
         'left-' => 'start-',
@@ -105,11 +110,14 @@ class ContentElementClassesUpdate implements UpgradeWizardInterface, RepeatableI
     {
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
         $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $elementCount = $queryBuilder->count('uid')
+        $result = $queryBuilder->count('uid')
             ->from('tt_content')
             ->where($this->getConstraints($queryBuilder))
-            ->execute()->fetchColumn(0);
-        return (bool)$elementCount;
+            ->execute();
+        if ($result instanceof Result) {
+            return (bool)$result->fetchOne();
+        }
+        return false;
     }
 
     /**
@@ -124,7 +132,10 @@ class ContentElementClassesUpdate implements UpgradeWizardInterface, RepeatableI
             ->from('tt_content')
             ->where($this->getConstraints($queryBuilder))
             ->execute();
-        while ($record = $queryResult->fetch()) {
+        if (!($queryResult instanceof Result)) {
+            return false;
+        }
+        while (is_array($record = $queryResult->fetchAssociative())) {
             $queryBuilder = $connection->createQueryBuilder();
             $queryBuilder->update('tt_content')
                 ->where(
