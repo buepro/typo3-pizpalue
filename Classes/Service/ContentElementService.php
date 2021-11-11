@@ -64,7 +64,7 @@ class ContentElementService
     /**
      * Pushes the variants modifier related to the content element defined by $this->cObj->data
      */
-    public function pushVariantsModifier()
+    public function pushVariantsModifier(): void
     {
         $data = $this->cObj->data;
         // default variants
@@ -73,10 +73,11 @@ class ContentElementService
             $variantsConf = TypoScript::getVariants(
                 'lib.contentElement.settings.responsiveimages.contentelements.' . $data['CType']
             );
-            if ($variantsConf) {
+            if ($variantsConf !== null) {
                 $methodName = 'getVariantsFor' . GeneralUtility::underscoredToUpperCamelCase($data['CType']);
                 if (method_exists($this, $methodName)) {
                     // The setup might contain several variants. Get the one that applies to the current content element
+                    /** @phpstan-ignore-next-line */
                     $variants = $this->{$methodName}($variantsConf);
                 } else {
                     // Just one variants has been defined
@@ -89,7 +90,7 @@ class ContentElementService
         VariantsModifierStack::pushVariantsModifier($variantsModifier);
     }
 
-    public function popVariantsModifier()
+    public function popVariantsModifier(): void
     {
         VariantsModifierStack::popVariantsModifier();
     }

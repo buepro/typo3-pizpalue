@@ -16,6 +16,7 @@ parameters:
 	- "#^Parameter \\#\\d+ \\.\\.\\.\\$expressions of method TYPO3\\\\CMS\\\\Core\\\\Database\\\\Query\\\\Expression\\\\ExpressionBuilder::\\w+\\(\\) expects string, TYPO3\\\\CMS\\\\Core\\\\Database\\\\Query\\\\Expression\\\\CompositeExpression given.$#"
 
 	paths:
+	- %currentWorkingDirectory%/Classes/Service/
 	- %currentWorkingDirectory%/Classes/Structure/
 	- %currentWorkingDirectory%/Classes/Updates/
 	- %currentWorkingDirectory%/Classes/Utility/

@@ -28,7 +28,7 @@ class BackendlayoutService
      * @param string $content
      * @param array $conf
      */
-    public function pushVariantsModifier(string $content, array $conf)
+    public function pushVariantsModifier(string $content, array $conf): void
     {
         $variantsModifier = new VariantsModifier();
         if (isset($conf['backendlayout']) && isset($this->cObj->data['colPos'])) {
@@ -45,7 +45,7 @@ class BackendlayoutService
         VariantsModifierStack::pushVariantsModifier($variantsModifier);
     }
 
-    public function popVariantsModifier()
+    public function popVariantsModifier(): void
     {
         VariantsModifierStack::popVariantsModifier();
     }

@@ -43,12 +43,11 @@ class ExtensionInstallService
     /**
      * Copies language translations for bootstrap_package
      *
-     * @param $extensionKey
      * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
      * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
      * @throws \TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException
      */
-    public function afterExtensionInstall($extensionKey)
+    public function afterExtensionInstall(string $extensionKey): void
     {
         if ($extensionKey !== 'pizpalue') {
             return;
