@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 /*
  * This file is part of the composer package buepro/typo3-pizpalue.
@@ -53,19 +54,21 @@ class TextReplacementProcessor implements DataProcessorInterface
         $this->cObj = $cObj;
         $this->processedData = $processedData;
         $fieldName = 'bodytext';
-        if (isset($processorConfiguration['references.']) && !empty($processorConfiguration['references.'])) {
+        if (isset($processorConfiguration['references.']) && is_array($processorConfiguration['references.'])) {
             $referenceConfiguration = $processorConfiguration['references.'];
             $fieldName = $cObj->stdWrapValue('fieldName', $referenceConfiguration);
         }
 
         // Process
-        $text = $processedData['data'][$fieldName];
-        $text = $this->replaceProcessedData($text, $processedData, $cObj);
-        $text = $this->replaceData($text, $cObj);
-        $text = $this->replaceParentData($text, $cObj);
-        $text = $this->replaceConstants($text);
-        $text = $this->replaceFunction($text);
-        $processedData['data'][$fieldName] = $text;
+        if (isset($processedData['data'][$fieldName]) && $processedData['data'][$fieldName] !== '') {
+            $text = $processedData['data'][$fieldName];
+            $text = $this->replaceProcessedData($text, $processedData, $cObj);
+            $text = $this->replaceData($text, $cObj);
+            $text = $this->replaceParentData($text, $cObj);
+            $text = $this->replaceConstants($text);
+            $text = $this->replaceFunction($text);
+            $processedData['data'][$fieldName] = $text;
+        }
         return $processedData;
     }
 
@@ -81,15 +84,17 @@ class TextReplacementProcessor implements DataProcessorInterface
     private function replaceConstants(string $text): string
     {
         // Get constants
-        if ($GLOBALS['TSFE']->tmpl->flatSetup === null
+        if (
+            $GLOBALS['TSFE']->tmpl->flatSetup === null
             || !is_array($GLOBALS['TSFE']->tmpl->flatSetup ?? false)
-            || count($GLOBALS['TSFE']->tmpl->flatSetup) === 0) {
+            || count($GLOBALS['TSFE']->tmpl->flatSetup) === 0
+        ) {
             $GLOBALS['TSFE']->tmpl->generateConfig();
         }
         $constants = $GLOBALS['TSFE']->tmpl->flatSetup;
 
         // Replace constants
-        if (preg_match_all('/{\$([\w.\-]+)}/', $text, $matches)) {
+        if ((int)preg_match_all('/{\$([\w.\-]+)}/', $text, $matches) > 0) {
             $replacements = [];
             $patterns = [];
             foreach ($matches[1] as $key => $constantName) {
@@ -100,7 +105,7 @@ class TextReplacementProcessor implements DataProcessorInterface
                     $replacements[] = $matches[0][$key];
                 }
             }
-            $text = preg_replace($patterns, $replacements, $text);
+            $text = (string)preg_replace($patterns, $replacements, $text);
         }
         return $text;
     }
@@ -120,14 +125,14 @@ class TextReplacementProcessor implements DataProcessorInterface
      */
     private function replaceData(string $text, ContentObjectRenderer $cObj): string
     {
-        if (preg_match_all('/{data:([\w.\-:]+)}/', $text, $matches)) {
+        if ((int)preg_match_all('/{data:([\w.\-:]+)}/', $text, $matches) > 0) {
             $replacements = [];
             $patterns = [];
             foreach ($matches[1] as $key => $instruction) {
                 $patterns[] = '/{data:' . $instruction . '}/';
                 $replacements[] = $cObj->getData($instruction, $cObj->data);
             }
-            $text = preg_replace($patterns, $replacements, $text);
+            $text = (string)preg_replace($patterns, $replacements, $text);
         }
         return $text;
     }
@@ -142,16 +147,16 @@ class TextReplacementProcessor implements DataProcessorInterface
      */
     private function replaceParentData(string $text, ContentObjectRenderer $cObj): string
     {
-        if (preg_match_all('/{parentData:([\w.\-:]+)}/', $text, $matches)) {
+        if ((int)preg_match_all('/{parentData:([\w.\-:\s\/]+)}/', $text, $matches) > 0) {
             $replacements = [];
             $patterns = [];
-            foreach ($matches[1] as $key => $instruction) {
-                $patterns[] = '/{parentData:' . $instruction . '}/';
-                $replacements[] = $cObj->getData($instruction, $cObj->parentRecord->data);
+            foreach ($matches[1] as $instruction) {
+                $patterns[] = '/{parentData:' . addcslashes($instruction, '/') . '}/';
+                $replacements[] = $cObj->getData($instruction);
             }
             $text = preg_replace($patterns, $replacements, $text);
         }
-        return $text;
+        return (string)$text;
     }
 
     /**
@@ -171,7 +176,7 @@ class TextReplacementProcessor implements DataProcessorInterface
      */
     private function replaceProcessedData(string $text, array $processedData, ContentObjectRenderer $cObj): string
     {
-        if (preg_match_all('/{processedData:([\w.\-:]+)}/', $text, $matches)) {
+        if ((int)preg_match_all('/{processedData:([\w.\-:]+)}/', $text, $matches) > 0) {
             $replacements = [];
             $patterns = [];
             foreach ($matches[1] as $key => $path) {
@@ -187,8 +192,9 @@ class TextReplacementProcessor implements DataProcessorInterface
                             'width' => $processedData['data']['pi_flexform']['image_width']
                         ];
                         $urlPrefix = GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST');
-                        $imageResource = $cObj->getImgResource($value, $config);
-                        $replacements[] = $urlPrefix . '/' . $imageResource[3];
+                        if (is_array($imageResource = $cObj->getImgResource($value, $config))) {
+                            $replacements[] = $urlPrefix . '/' . $imageResource[3];
+                        }
                     } elseif ($parts[0] === 'breadcrumb') {
                         $markup = $this->generateBreadcrumbMarkup($value);
                         $replacements[] = json_encode($markup, JSON_UNESCAPED_SLASHES);
@@ -201,21 +207,20 @@ class TextReplacementProcessor implements DataProcessorInterface
             }
             $text = preg_replace($patterns, $replacements, $text);
         }
-        return $text;
+        return (string)$text;
     }
 
     /**
      * Encodes every character from $str to its entity.
      * Might be used for emails to not reveal them at first.
-     *
-     * @param string $str
-     * @return string
      */
-    private function entityEncodeChars(string $str)
+    private function entityEncodeChars(string $str): string
     {
         $converted = mb_convert_encoding($str, 'UTF-32', 'UTF-8');
-        $t = unpack('N*', $converted);
-        $t = array_map(function ($n) {
+        if (($t = unpack('N*', $converted)) === false) {
+            return $str;
+        }
+        $t = array_map(static function ($n) {
             return "&#$n;";
         }, $t);
         $encoded = implode('', $t);
@@ -228,11 +233,8 @@ class TextReplacementProcessor implements DataProcessorInterface
     /**
      * Converts line breaks to the character sequence '\r\n'.
      * Is of interest for text properties.
-     *
-     * @param string $text
-     * @return string|string[]
      */
-    private function newLineToRn(string $text)
+    private function newLineToRn(string $text): string
     {
         return str_replace([chr(13) . chr(10), chr(10)], '\r\n', $text);
     }
@@ -289,7 +291,7 @@ class TextReplacementProcessor implements DataProcessorInterface
      */
     private function replaceFunction(string $text): string
     {
-        if (preg_match_all('/{func:([\s\S\r\n][^}]+)}/', $text, $matches)) {
+        if ((int)preg_match_all('/{func:([\s\S\r\n][^}]+)}/', $text, $matches) > 0) {
             $replacements = [];
             $patterns = [];
             foreach ($matches[1] as $key => $funcStatement) {
@@ -297,8 +299,10 @@ class TextReplacementProcessor implements DataProcessorInterface
                 $parts = GeneralUtility::trimExplode(':', $funcStatement, false, 2);
                 if (method_exists($this, $parts[0])) {
                     if (count($parts) === 2) {
+                        /** @phpstan-ignore-next-line */
                         $replacements[] = $this->{$parts[0]}($parts[1]);
                     } else {
+                        /** @phpstan-ignore-next-line */
                         $replacements[] = $this->{$parts[0]}();
                     }
                 } else {
@@ -307,6 +311,6 @@ class TextReplacementProcessor implements DataProcessorInterface
             }
             $text = preg_replace($patterns, $replacements, $text);
         }
-        return $text;
+        return (string)$text;
     }
 }

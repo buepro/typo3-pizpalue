@@ -33,6 +33,8 @@ tag. It allows to use placeholders in the JSON-LD code for `TS constants`,
 +------------------------------------+---------------------+-----------------------------------------------------------+
 | `{parentData:field:teaser}`        | getText             | Wrap getText definition with `{data:|}`. When using the   |
 |                                    |                     | key `field` data from the parent record is obtained.      |
+|                                    |                     | Option split can be used. Example:                        |
+|                                    |                     | `{parentData:field:seo_title // field:title}`             |
 +------------------------------------+---------------------+-----------------------------------------------------------+
 | `{processedData:schemaImages.0}`   | processedData array | Wrap the processedData array path with `{processedData:|}`|
 | `{processedData:breadcrumb}`       |                     |                                                           |
