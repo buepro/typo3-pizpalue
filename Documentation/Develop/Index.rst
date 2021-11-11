@@ -97,6 +97,8 @@ Create test db
 
       <$1>$2</$1>
 
+#. Remove columns `lang` and `mfa` from table `be_users`
+
 
 Add needed extensions
 ---------------------

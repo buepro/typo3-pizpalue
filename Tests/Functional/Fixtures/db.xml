@@ -16,7 +16,6 @@
 			<password>$argon2i$v=19$m=65536,t=16,p=1$RlNJLmhNMGRwL2ZnOXY4bw$fGL7k8RHX+r/xUDwLw/nyqDI0RFhBTpQ/RcYExuhLRQ</password>
 			<admin>1</admin>
 			<usergroup></usergroup>
-			<lang>default</lang>
 			<email></email>
 			<db_mountpoints></db_mountpoints>
 			<options>0</options>
@@ -30,7 +29,6 @@
 			<TSconfig></TSconfig>
 			<lastlogin>0</lastlogin>
 			<workspace_id>0</workspace_id>
-			<mfa></mfa>
 			<category_perms></category_perms>
 			<password_reset_token></password_reset_token>
 		</be_users>
@@ -50,7 +48,6 @@
 			<password>$argon2i$v=19$m=65536,t=16,p=1$R3pDaTFubEdlVE1lMW5JSA$yHl8CSA42GCsESM042Kvi2grQZ6tHzVHew7J/4bE5uU</password>
 			<admin>1</admin>
 			<usergroup></usergroup>
-			<lang>default</lang>
 			<email></email>
 			<db_mountpoints></db_mountpoints>
 			<options>0</options>
@@ -93,7 +90,6 @@
 			<TSconfig></TSconfig>
 			<lastlogin>1636430448</lastlogin>
 			<workspace_id>0</workspace_id>
-			<mfa></mfa>
 			<category_perms></category_perms>
 			<password_reset_token></password_reset_token>
 		</be_users>
