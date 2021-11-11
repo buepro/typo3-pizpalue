@@ -11,7 +11,10 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\Hook;
 
+use TYPO3\CMS\Core\DataHandling\DataHandler;
+use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Class DataHandlerHook
@@ -23,6 +26,9 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
  */
 class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
 {
+    /**
+     * @var string[]
+     */
     private $imageContainingTypes = ['image', 'media', 'textpic', 'textmedia', 'carousel'];
 
     /**
@@ -34,19 +40,18 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
 
     /**
      * Hook: processDatamap_preProcessFieldArray
-     *
-     * @param $incomingFieldArray
-     * @param $table
-     * @param $id
-     * @param $dataHandler
      */
-    public function processDatamap_preProcessFieldArray(&$incomingFieldArray, $table, $id, $dataHandler)
-    {
+    public function processDatamap_preProcessFieldArray(
+        array &$incomingFieldArray,
+        string $table,
+        string $id,
+        DataHandler $dataHandler
+    ): void {
         $this->incomingFieldArray = [];
         if ($table === 'tt_content' && in_array($incomingFieldArray['CType'], $this->imageContainingTypes, true)) {
             // Just review imageVariants when a be user conducts a change (not when importing data)
-            $context = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Context\Context::class);
-            if ($context->getPropertyFromAspect('backend.user', 'isLoggedIn')) {
+            $context = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Context\Context::class);
+            if ((bool)$context->getPropertyFromAspect('backend.user', 'isLoggedIn')) {
                 foreach ($incomingFieldArray as $key => $value) {
                     $this->incomingFieldArray[$key] = $value;
                 }
@@ -54,12 +59,7 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
         }
     }
 
-    /**
-     *
-     * @param $fieldArray
-     * @return void
-     */
-    private function setImageVariants(&$fieldArray): void
+    private function setImageVariants(array &$fieldArray): void
     {
         if (isset($this->incomingFieldArray['frame_class'])) {
             // Check if we are inside a container element
@@ -88,13 +88,14 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
 
             // Notify in case the image variants changed
             if (isset($fieldArray['tx_pizpalue_image_variants']) && $fieldArray['tx_pizpalue_image_variants'] !== $initialVariants) {
-                $message = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-                    \TYPO3\CMS\Core\Messaging\FlashMessage::class,
+                $message = GeneralUtility::makeInstance(
+                    FlashMessage::class,
                     $GLOBALS['LANG']->sL('LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:flash-message-image-variants-changed'),
                     $GLOBALS['LANG']->sL('LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:flash-message-change-setting'),
-                    \TYPO3\CMS\Core\Messaging\FlashMessage::NOTICE
+                    FlashMessage::INFO,
+                    true
                 );
-                $flashMessageService = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Messaging\FlashMessageService::class);
+                $flashMessageService = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Messaging\FlashMessageService::class);
                 $messageQueue = $flashMessageService->getMessageQueueByIdentifier();
                 /** @extensionScannerIgnoreLine */
                 $messageQueue->addMessage($message);
@@ -106,16 +107,18 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
      * Hook: processDatamap_postProcessFieldArray
      *
      * Checks whether the user changed the frame class and adapts the image vraiants accordingly.
-     *
-     * @param $status
-     * @param $table
-     * @param $id
-     * @param $fieldArray
-     * @param $dataHandler
      */
-    public function processDatamap_postProcessFieldArray($status, $table, $id, &$fieldArray, $dataHandler)
-    {
-        if ($this->incomingFieldArray && $table === 'tt_content' && ($status === 'new' || $status === 'update') &&
+    public function processDatamap_postProcessFieldArray(
+        string $status,
+        string $table,
+        int $id,
+        array &$fieldArray,
+        DataHandler $dataHandler
+    ): void {
+        if (
+            $this->incomingFieldArray !== [] &&
+            $table === 'tt_content' &&
+            ($status === 'new' || $status === 'update') &&
             isset($fieldArray['frame_class'])
         ) {
             $this->setImageVariants($fieldArray);

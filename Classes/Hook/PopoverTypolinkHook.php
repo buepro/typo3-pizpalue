@@ -35,7 +35,7 @@ class PopoverTypolinkHook
      * @param array $params
      * @param ContentObjectRenderer $ref The calling ContentObjectRenderer
      */
-    public function postProcess(&$params, &$ref)
+    public function postProcess(&$params, &$ref): void
     {
         if (isset($params['linkDetails']['type'], $params['finalTag']) && $params['linkDetails']['type'] === 'pppopover') {
             /** @var HtmlParser $htmlParser */
