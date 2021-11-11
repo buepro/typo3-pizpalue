@@ -32,7 +32,7 @@ class PopoverLinkHandler implements LinkHandlingInterface
         $result = $this->baseUrn;
         unset($parameters['type']);
         $query = http_build_query($parameters);
-        if ($query) {
+        if ($query !== '') {
             $result .= '?' . $query;
         }
         return $result;

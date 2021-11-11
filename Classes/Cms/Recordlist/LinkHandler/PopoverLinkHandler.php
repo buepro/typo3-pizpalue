@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 /*
@@ -77,7 +76,7 @@ class PopoverLinkHandler implements LinkHandlerInterface
      * @param string $identifier
      * @param array $configuration Page TSconfig
      */
-    public function initialize(AbstractLinkBrowserController $linkBrowser, $identifier, array $configuration)
+    public function initialize(AbstractLinkBrowserController $linkBrowser, $identifier, array $configuration): void
     {
         $this->linkBrowser = $linkBrowser;
         $this->iconFactory = GeneralUtility::makeInstance(IconFactory::class);
@@ -126,10 +125,12 @@ class PopoverLinkHandler implements LinkHandlerInterface
      */
     public function setView(ViewInterface $view): void
     {
+        /** @phpstan-ignore-next-line */
         $view->setTemplateRootPaths(array_merge(
-            $view->getTemplateRootPaths(),
+            $view->getTemplateRootPaths(), /** @phpstan-ignore-line */
             [GeneralUtility::getFileAbsFileName('EXT:pizpalue/Resources/Private/Templates/Cms/LinkBrowser')]
         ));
+        /** @phpstan-ignore-next-line */
         $view->setTemplate('PpPopover');
         $this->view = $view;
     }
@@ -167,7 +168,8 @@ class PopoverLinkHandler implements LinkHandlerInterface
     public function render(ServerRequestInterface $request)
     {
         $this->pageRenderer->loadRequireJsModule('TYPO3/CMS/Pizpalue/Src/PopoverLinkHandler');
-        if (!$this->view) {
+        if (!isset($this->view)) {
+            /** @phpstan-ignore-next-line */
             return $this->renderStandalone($request);
         }
         $this->assignVariablesToView($this->view);

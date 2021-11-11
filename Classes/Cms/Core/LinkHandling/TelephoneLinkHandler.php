@@ -26,7 +26,7 @@ class TelephoneLinkHandler extends \TYPO3\CMS\Core\LinkHandling\TelephoneLinkHan
      */
     public function asString(array $parameters): string
     {
-        if (preg_match('/###.+###/', $parameters['telephone'], $matches)) {
+        if ((int)preg_match('/###.+###/', $parameters['telephone'], $matches) > 0) {
             $telephoneNumber = $matches[0];
         } else {
             $telephoneNumber = preg_replace('/(?:[^\d\+]+)/', '', $parameters['telephone']);

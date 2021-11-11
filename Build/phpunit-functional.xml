@@ -24,7 +24,7 @@
         <testsuite name="buepro-grevman-functional-tests">
             <directory>../Tests/Functional</directory>
 <!--            <file>-->
-<!--                ../Tests/Functional/Structure/VariantsModifierStackTest.php-->
+<!--                ../Tests/Functional/DataProcessing/TextReplacementProcessorTest.php-->
 <!--            </file>-->
         </testsuite>
     </testsuites>
