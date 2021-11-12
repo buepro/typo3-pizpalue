@@ -13,8 +13,11 @@
     {f:variable(name: '_ppData', value: configuration.ppData)}
 
     <f:comment>Compile classes</f:comment>
-    {classes -> bk2k:implode() -> f:variable(name: '_classes')}
-    {f:variable(name: '_classes', value: '{_classes} {_ppData.classes -> bk2k:implode()}') -> f:if(condition: _ppData.classes)}
+    {classes -> bk2k:implode() -> f:variable(name: '_bpClasses') -> f:if(condition: configuration.displayFrame)}
+    {f:variable(name: '_ppClasses', value: '{_ppData.classes -> bk2k:implode()}')}
+    {f:variable(name: '_space', value: ' ') -> f:if(condition: '{_bpClasses} && {_ppClasses}')}
+    {f:variable(name: '_classes', value: '{_bpClasses}{_space}{_ppClasses}')}
+    {f:variable(name: '_classAttribute', value: 'class="{_classes}"') -> f:if(condition: _classes)}
 
     <f:comment>Compile style attribute</f:comment>
     {_ppData.styles -> bk2k:implode(delimiter: '; ') -> f:variable(name: '_styles')}
@@ -24,7 +27,7 @@
     {f:variable(name: '_otherAttributes', value: ' {_ppData.attributes -> bk2k:implode()}') -> f:if(condition: _ppData.attributes)}
 
     <f:comment>Compile all attributes</f:comment>
-    {f:variable(name: '_allAttributes', value: 'class="{_classes}"{_styleAttribute}{_otherAttributes}')}
+    {f:variable(name: '_allAttributes', value: '{_classAttribute}{_styleAttribute}{_otherAttributes}')}
 
     <f:if condition="{configuration.displayFrame}">
         <f:then>

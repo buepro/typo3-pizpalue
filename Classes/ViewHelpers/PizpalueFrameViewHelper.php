@@ -74,14 +74,15 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
             'hasScrollAnimation' => false,
             'optimizeLinkTargets' => (bool) ($pizpalueConstants['seo']['optimizeLinkTargets'] ?? true),
         ];
-        self::addAttributes($assetCollector, $data, $result);
+        self::addClasses($assetCollector, $data, $result);
+        self::addStylesAndAttributes($assetCollector, $data, $result);
         self::addAnimation($assetCollector, $data, $pizpalueConstants, $result);
         self::addTiles($assetCollector, $data, $result);
-        self::addLayoutBreakpoint($assetCollector, $data, $result);
         self::addAosAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addJoshAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addTwikitoAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addAnimateCssAssets($assetCollector, $data, $pizpalueConstants, $result);
+        self::addDependantClasses($assetCollector, $data, $result);
         $variableProvider = $renderingContext->getVariableProvider();
         if ($arguments['as']) {
             $variableProvider->add($arguments['as'], $result);
@@ -109,10 +110,45 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         $assetCollector->addStyleSheet('ppAnimateCss', 'EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css');
     }
 
-    protected static function addAttributes(AssetCollector $assetCollector, array $data, array &$result): void
+    protected static function addClasses(AssetCollector $assetCollector, array $data, array &$result): void
+    {
+        if (is_string($data['layout']) && $data['layout'] !== '0' && strpos($data['layout'], 'pp-tile') !== 0) {
+            $result['classes'][] = 'layout-' . trim($data['layout']);
+        }
+        if (is_string($data['tx_pizpalue_layout_breakpoint']) && $data['tx_pizpalue_layout_breakpoint'] !== '') {
+            $result['classes'][] = 'pp-layout-' . trim($data['tx_pizpalue_layout_breakpoint']);
+        }
+        if (trim($data['tx_pizpalue_classes']) !== '') {
+            $result['classes'] = array_merge(
+                $result['classes'],
+                GeneralUtility::trimExplode(' ', $data['tx_pizpalue_classes'], true)
+            );
+        }
+    }
+
+    protected static function addDependantClasses(AssetCollector $assetCollector, array $data, array &$result): void
+    {
+        if (
+            $data['frame_class'] === 'none' &&
+            (
+                count($result['classes']) > 0 || count($result['styles']) > 0 || count($result['attributes']) > 0 ||
+                (is_string($data['space_before_class']) && $data['space_before_class'] !== '') ||
+                (is_string($data['space_after_class']) && $data['space_after_class'] !== '')
+            )
+        ) {
+            $spaceBefore = trim($data['space_before_class']) !== '' ? trim($data['space_before_class']) : 'none';
+            $spaceAfter = trim($data['space_after_class']) !== '' ? trim($data['space_after_class']) : 'none';
+            $result['classes'] = array_merge(
+                ['pp-content', 'pp-type-' . $data['CType']],
+                $result['classes'],
+                ['pp-space-before-' . $spaceBefore, 'pp-space-after-' . $spaceAfter]
+            );
+        }
+    }
+
+    protected static function addStylesAndAttributes(AssetCollector $assetCollector, array $data, array &$result): void
     {
         $uid = (int) $data['uid'];
-        $result['classes'] = GeneralUtility::trimExplode(' ', $data['tx_pizpalue_classes'], true);
         $result['styles'] = [];
         $styles = trim($data['tx_pizpalue_style'] ?? '');
         if ((bool)$styles) {
@@ -164,16 +200,6 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
             $result['classes'][] = 'pp-tile';
             $result['classes'][] = trim($data['layout']);
             $result['isTile'] = true;
-        }
-    }
-
-    protected static function addLayoutBreakpoint(AssetCollector $assetCollector, array $data, array &$result): void
-    {
-        if (
-            (bool)$data['tx_pizpalue_layout_breakpoint'] &&
-            (bool)($layoutBreakpoint = trim($data['tx_pizpalue_layout_breakpoint']))
-        ) {
-            $result['classes'][] = 'pp-layout-' . $layoutBreakpoint;
         }
     }
 

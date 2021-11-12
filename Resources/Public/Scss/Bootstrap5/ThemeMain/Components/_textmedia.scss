@@ -16,7 +16,7 @@
 //
 // Layout `emphasize_media`
 // --------------------------------------------------
-.frame-type-textmedia.frame-layout-pp-emphasize-media {
+.layout-pp-emphasize-media {
     .ppc-wrap {
         @if ($enable-rounded) {
             border-radius: $border-radius;
