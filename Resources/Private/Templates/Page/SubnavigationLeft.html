@@ -14,14 +14,14 @@
             <div class="section-row">
                 <div class="section-column subnav-wrap">
                     <f:render partial="Navigation/Subnavigation" arguments="{_all}" />
-                    {v:math.product(a: '-1', b: pizpalue.features.slideNavContent)
-                        -> f:variable(name: 'navContentSlideMode')}
+                    {f:variable(name: '_slideConfig', value: '-{pizpalue.features.slideNavContent}')}
+                    {f:variable(name: '_slideConfig', value: theme.pagelayout.subnavigation_left.colPos.1.slide)
+                        -> f:if(condition: '{theme.pagelayout.subnavigation_left.colPos.1.slide} != 0')}
                     {f:cObject(typoscriptObjectPath: 'lib.dynamicContent', data: '{pageUid: data.uid,
-                        colPos: 1, slide: navContentSlideMode}')
-                     -> f:variable(name: 'navcontent')}
-                    <f:if condition="{navcontent} != ''">
+                        colPos: 1, slide: _slideConfig}') -> f:variable(name: '_navcontent')}
+                    <f:if condition="{_navcontent} != ''">
                         <div class="pp-complementary pp-subnavcont pp-frame-collapsible" role="complementary">
-                            {navcontent -> f:format.htmlentitiesDecode()}
+                            {_navcontent -> f:format.raw()}
                         </div>
                     </f:if>
                 </div>
