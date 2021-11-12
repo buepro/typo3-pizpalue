@@ -11,13 +11,10 @@ finishers:
       subject: '{idSubject}'
       senderAddress: '{idEmail}'
       senderName: '{idName}'
+      replyToRecipients:
+        '{email}': ''
+      format: html
       attachUploads: true
-      translation:
-        language: ''
-      recipients:
-        empfaenger@ihredomain.ch: 'Ihr Name'
-      addHtmlPart: true
-      useFluidEmail: true
     identifier: EmailToReceiver
   -
     options:
