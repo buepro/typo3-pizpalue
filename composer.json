@@ -51,7 +51,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.3.0",
-        "bk2k/bootstrap-package": "dev-master#ad453360a925ea0dc6c68783bd5d425f002a7c8b",
+        "bk2k/bootstrap-package": "dev-master#3c6c1040",
         "fluidtypo3/vhs": "^6.0.3 || dev-master || dev-development",
         "typo3/cms-core": "^10.4 || ^11.5"
     },

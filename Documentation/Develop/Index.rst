@@ -124,4 +124,4 @@ It might be needed to add the following extensions:
 
 Notes
 =====
--  Bootstrap package sync status: 23.9.2021 / commit ad453360
+-  Bootstrap package sync status: 21.10.2021 / commit 3c6c1040
