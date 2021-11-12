@@ -2,94 +2,106 @@
 // Scrolling
 // --------------------------------------------------
 .scroll-top {
-  background: rgba(black, 70%);
-  border: rgba(white, 70%) 1px solid;
-  right: 10px;
-  bottom: 10px;
-  width: 2.5em;
-  height: 2.5em;
-  @if $enable-rounded {
-    border-radius: $border-radius;
-  }
+    background: rgba(black, 70%);
+    border: rgba(white, 70%) 1px solid;
+    right: 10px;
+    bottom: 10px;
+    width: 2.5em;
+    height: 2.5em;
+    @if $enable-rounded {
+        border-radius: $border-radius;
+    }
 }
 
 //
 // Scroll target
 // --------------------------------------------------
 @keyframes flashonce-primary {
-  0% {box-shadow: none;}
-  50% {box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px $primary;}
-  100% {box-shadow: none;}
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px $primary;
+    }
+    100% {
+        box-shadow: none;
+    }
 }
 *:target {
-  animation: flashonce-primary 1s ease-in-out 1;
+    animation: flashonce-primary 1s ease-in-out 1;
 }
 @keyframes flashonce-mark-primary {
-  0% {box-shadow: none;}
-  50% {box-shadow: 0 0 0 10px $body-bg, 0 0 10px 10px $primary;}
-  100% {box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px mix($body-bg,$primary);}
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 0 10px $body-bg, 0 0 10px 10px $primary;
+    }
+    100% {
+        box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px mix($body-bg, $primary);
+    }
 }
 .pp-marked-target:target {
-  animation: flashonce-mark-primary 1s ease-in-out 1;
-  box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px mix($body-bg,$primary);
+    animation: flashonce-mark-primary 1s ease-in-out 1;
+    box-shadow: 0 0 0 5px $body-bg, 0 0 5px 5px mix($body-bg, $primary);
 }
 
 //
 // Images
 // --------------------------------------------------
 img.pp-nolazyload {
-  opacity: 1 !important;
-  transition: all 0s ease 0s !important;
+    opacity: 1 !important;
+    transition: all 0s ease 0s !important;
 }
 
 //
 // Reveal footer
 // --------------------------------------------------
 .pp-reveal-footer {
-  > header, > div:not(#cookieconsent), > nav {
-    z-index: 10;
-    position: relative;
-  }
-  > header {
-    z-index: 12;
-  }
-  > #page-content {
-    background-color: $body-bg;
-  }
-  > footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 8;
-  }
+    > header, > div:not(#cookieconsent), > nav {
+        z-index: 10;
+        position: relative;
+    }
+    > header {
+        z-index: 12;
+    }
+    > #page-content {
+        background-color: $body-bg;
+    }
+    > footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 8;
+    }
 }
 
 //
 // Icons
 // --------------------------------------------------
 .ppicon, .glyphicon {
-  &:before {
-    transform: translateY(0.16em);
-  }
+    &:before {
+        transform: translateY(0.16em);
+    }
 }
 
 //
 // Social links
 // --------------------------------------------------
 #page-footer {
-  .sociallinks-list {
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  .sociallinks-item {
-    width: auto;
-  }
-  .sociallinks-link-icon {
-    font-size: 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .sociallinks-link-label {
-    display: none;
-  }
+    .sociallinks-list {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .sociallinks-item {
+        width: auto;
+    }
+    .sociallinks-link-icon {
+        font-size: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .sociallinks-link-label {
+        display: none;
+    }
 }

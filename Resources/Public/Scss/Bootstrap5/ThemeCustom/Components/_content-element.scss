@@ -2,27 +2,27 @@
 // Frame Header
 // --------------------------------------------------
 .frame-header {
-  *:last-child {
-    margin-bottom: 1.5 * $spacer;
-  }
+    *:last-child {
+        margin-bottom: 1.5 * $spacer;
+    }
 }
 
 //
 // Pictures
 // --------------------------------------------------
 .frame-type-textpic, .frame-type-image {
-  .gallery-item {
-    text-align: center;
-  }
+    .gallery-item {
+        text-align: center;
+    }
 }
 
 //
 // Text and image
 // --------------------------------------------------
 .textpic {
-  .gallery-item img, .gallery-item picture {
-    width: auto;
-  }
+    .gallery-item img, .gallery-item picture {
+        width: auto;
+    }
 }
 
 //
@@ -32,5 +32,5 @@
 .textpic-below .textmedia-text,
 .textmedia-below .textpic-text,
 .textpic-below .textpic-text {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }

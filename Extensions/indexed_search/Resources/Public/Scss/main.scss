@@ -6,74 +6,74 @@
 // List
 //
 .pp-indexed-search {
-  .media {
-    &:nth-of-type(1) {
-      padding-top: 1rem;
-      margin-top: 2rem;
-      border-top: transparentize($primary,70%) 1px solid;
+    .media {
+        &:nth-of-type(1) {
+            padding-top: 1rem;
+            margin-top: 2rem;
+            border-top: transparentize($primary, 70%) 1px solid;
+        }
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: transparentize($primary, 70%) 1px solid;
+        &:nth-last-of-type(1) {
+            margin-bottom: 2rem;
+        }
     }
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: transparentize($primary,70%) 1px solid;
-    &:nth-last-of-type(1) {
-      margin-bottom: 2rem;
-    }
-  }
 }
 
 //
 // Pagination
 //
 .tx-indexedsearch-browsebox {
-  display: flex;
-  @include list-unstyled();
-  @include border-radius();
+    display: flex;
+    @include list-unstyled();
+    @include border-radius();
 }
 .tx-indexedsearch-browsebox {
-  li {
-    position: relative;
-    display: block;
-    padding: $pagination-padding-y $pagination-padding-x;
-    margin-left: -$pagination-border-width;
-    line-height: $pagination-line-height;
-    color: $pagination-color;
-    background-color: $pagination-bg;
-    border: $pagination-border-width solid $pagination-border-color;
-    &:hover {
-      z-index: 2;
-      color: $pagination-hover-color;
-      text-decoration: none;
-      background-color: $pagination-hover-bg;
-      border-color: $pagination-hover-border-color;
-    }
+    li {
+        position: relative;
+        display: block;
+        padding: $pagination-padding-y $pagination-padding-x;
+        margin-left: -$pagination-border-width;
+        line-height: $pagination-line-height;
+        color: $pagination-color;
+        background-color: $pagination-bg;
+        border: $pagination-border-width solid $pagination-border-color;
+        &:hover {
+            z-index: 2;
+            color: $pagination-hover-color;
+            text-decoration: none;
+            background-color: $pagination-hover-bg;
+            border-color: $pagination-hover-border-color;
+        }
 
-    &:focus {
-      z-index: 2;
-      outline: $pagination-focus-outline;
-      box-shadow: $pagination-focus-box-shadow;
+        &:focus {
+            z-index: 2;
+            outline: $pagination-focus-outline;
+            box-shadow: $pagination-focus-box-shadow;
+        }
     }
-  }
 }
 .tx-indexedsearch-browsebox {
-  li {
-    &:first-child {
-      margin-left: 0;
-      @include border-left-radius($border-radius);
-    }
+    li {
+        &:first-child {
+            margin-left: 0;
+            @include border-left-radius($border-radius);
+        }
 
-    &:last-child {
-      @include border-right-radius($border-radius);
+        &:last-child {
+            @include border-right-radius($border-radius);
+        }
+        a {
+            text-decoration: none;
+        }
+        &.tx-indexedsearch-browselist-currentPage {
+            z-index: 1;
+            background-color: $pagination-active-bg;
+            border-color: $pagination-active-border-color;
+            a {
+                color: $pagination-active-color;
+            }
+        }
     }
-    a {
-      text-decoration: none;
-    }
-    &.tx-indexedsearch-browselist-currentPage {
-      z-index: 1;
-      background-color: $pagination-active-bg;
-      border-color: $pagination-active-border-color;
-      a {
-        color: $pagination-active-color;
-      }
-    }
-  }
 }

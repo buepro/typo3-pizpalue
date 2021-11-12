@@ -1,6 +1,6 @@
 .caption-title a, .caption-text {
-  color: lighten($primary, 50%);
-  &:hover {
-	color: lighten($primary, 60%);
-  }
+    color: lighten($primary, 50%);
+    &:hover {
+        color: lighten($primary, 60%);
+    }
 }

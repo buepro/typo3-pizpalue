@@ -6,9 +6,9 @@
 // bootstrap framework
 //
 @if ($pp-install-dir != 'composer-root') {
-  @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
+    @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
 } @else {
-  @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
+    @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
 }
 
 //

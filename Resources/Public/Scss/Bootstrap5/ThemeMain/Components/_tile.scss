@@ -17,72 +17,72 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 // Basics
 // --------------------------------------------------
 .pp-tile {
-  position: relative;
-  overflow: hidden;
-  &:before {
-    display: block;
-    content: "";
-  }
-  .frame-container, .frame-backgroundimage-container {
-    position: absolute;
-    left: $pp-tile-gutter;
-    top: $pp-tile-gutter;
-    right: $pp-tile-gutter;
-    bottom: $pp-tile-gutter;
-    width: auto;
-    height: auto;
-  }
-  .frame-container {
+    position: relative;
     overflow: hidden;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    &:before {
+        display: block;
+        content: "";
+    }
+    .frame-container, .frame-backgroundimage-container {
+        position: absolute;
+        left: $pp-tile-gutter;
+        top: $pp-tile-gutter;
+        right: $pp-tile-gutter;
+        bottom: $pp-tile-gutter;
+        width: auto;
+        height: auto;
+    }
+    .frame-container {
+        overflow: hidden;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 //
 // Side ratios
 // --------------------------------------------------
 .pp-tile-21:before {
-  margin-top: 50%;
+    margin-top: 50%;
 }
 .pp-tile-11:before {
-  margin-top: 100%;
+    margin-top: 100%;
 }
 .pp-tile-12:before {
-  margin-top: 200%;
+    margin-top: 200%;
 }
 
 //
 // Responsive
 //
 @mixin pp-make-responsive-tile($breakpoint: 'md') {
-  @include media-breakpoint-up($breakpoint) {
-    .pp-layout-#{$breakpoint} {
-      &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
-        &:before {
-          content: "";
+    @include media-breakpoint-up($breakpoint) {
+        .pp-layout-#{$breakpoint} {
+            &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
+                &:before {
+                    content: "";
+                }
+                .frame-container {
+                    position: absolute;
+                    margin: 0;
+                }
+            }
         }
-        .frame-container {
-          position: absolute;
-          margin: 0;
-        }
-      }
     }
-  }
 }
 // Disable tile side ratio below screen breakpoint
 .pp-layout-sm, .pp-layout-md, .pp-layout-lg, .pp-layout-xl {
-  &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
-    &:before {
-      content: none;
+    &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
+        &:before {
+            content: none;
+        }
+        .frame-container {
+            position: static;
+            // Add margin because left, right, top, bottom don't apply
+            margin: $pp-tile-gutter;
+        }
     }
-    .frame-container {
-      position: static;
-      // Add margin because left, right, top, bottom don't apply
-      margin: $pp-tile-gutter;
-    }
-  }
 }
 @include pp-make-responsive-tile('sm');
 @include pp-make-responsive-tile('md');
@@ -94,9 +94,9 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 // Class .pp-ce-overlaycard is deprecated since 30.6.21
 // --------------------------------------------------
 .pp-tile:not(.pp-type-image):not(.pp-type-media):not(.pp-type-external_media):not(.pp-ce-overlaycard):not(.pp-type-pp_picoverlay) {
-  .frame-inner {
-    margin: $pp-tile-padding;
-  }
+    .frame-inner {
+        margin: $pp-tile-padding;
+    }
 }
 
 //
@@ -104,49 +104,49 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 // Class .pp-ce-overlaycard is deprecated since 30.6.21
 // --------------------------------------------------
 .pp-tile {
-  &.pp-type-image, &.pp-type-pp_picoverlay, &.pp-ce-overlaycard {
-    .frame-container {
-      padding-left: 0;
-      padding-right: 0;
+    &.pp-type-image, &.pp-type-pp_picoverlay, &.pp-ce-overlaycard {
+        .frame-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
-  }
-  .gallery-row:last-child {
-    margin-bottom: 0;
-  }
-  figure {
-    margin-bottom: 0;
-  }
-  &:not(.pp-type-media) {
+    .gallery-row:last-child {
+        margin-bottom: 0;
+    }
     figure {
-      position: relative;
+        margin-bottom: 0;
     }
-    figcaption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.9);
-      padding: 8px;
+    &:not(.pp-type-media) {
+        figure {
+            position: relative;
+        }
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px;
+        }
     }
-  }
 }
 
 //
 // Videos
 // --------------------------------------------------
 .pp-tile {
-  &.pp-type-media, &.pp-type-external_media {
-    .frame-container {
-      padding-left: 0;
-      padding-right: 0;
+    &.pp-type-media, &.pp-type-external_media {
+        .frame-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .frame-inner {
+            width: 100%;
+        }
+        figure {
+            padding: $pp-tile-padding;
+        }
     }
-    .frame-inner {
-      width: 100%;
-    }
-    figure {
-      padding: $pp-tile-padding;
-    }
-  }
 }
 
 //
@@ -154,35 +154,35 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 // Deprecated since 30.6.21
 // --------------------------------------------------
 .pp-tile {
-  &.pp-ce-overlaycard {
-    .frame-inner, .textpic, .textpic-item {
-      height: 100%;
+    &.pp-ce-overlaycard {
+        .frame-inner, .textpic, .textpic-item {
+            height: 100%;
+        }
     }
-  }
 }
 
 //
 // Classes
 // --------------------------------------------------
 .pp-tile.pp-bg-primary, .pp-tile.pp-bg-secondary, .pp-tile.pp-bg-complementary {
-  background: transparent;
+    background: transparent;
 }
 .pp-tile.pp-bg-primary {
-  .frame-container {
-    @include pp-make-background(map-get($frame-backgrounds, primary));
-  }
+    .frame-container {
+        @include pp-make-background(map-get($frame-backgrounds, primary));
+    }
 }
 .pp-tile.pp-bg-secondary {
-  .frame-container {
-    @include pp-make-background(map-get($frame-backgrounds, secondary));
-  }
+    .frame-container {
+        @include pp-make-background(map-get($frame-backgrounds, secondary));
+    }
 }
 .pp-tile.pp-bg-complementary {
-  .frame-container {
-    @include pp-make-background(map-get($frame-backgrounds, complementary));
-  }
+    .frame-container {
+        @include pp-make-background(map-get($frame-backgrounds, complementary));
+    }
 }
 .pp-tile-scroll-y .frame-container {
-  align-items: flex-start;
-  overflow-y: auto;
+    align-items: flex-start;
+    overflow-y: auto;
 }

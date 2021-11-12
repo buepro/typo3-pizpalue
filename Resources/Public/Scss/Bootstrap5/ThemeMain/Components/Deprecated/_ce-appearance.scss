@@ -1,17 +1,17 @@
 // Deprecated since version 12.0.0, not used any more
 .pp-bg-centercover {
-  background-origin: border-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
+    background-origin: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 // Deprecated since version 12.0.0, not used any more
 .pp-bg-fixed {
-  background-attachment: fixed;
-  @media (hover: none) {
-    & {
-      background-attachment: initial;
+    background-attachment: fixed;
+    @media (hover: none) {
+        & {
+            background-attachment: initial;
+        }
     }
-  }
 }

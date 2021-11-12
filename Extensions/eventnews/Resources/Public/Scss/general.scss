@@ -6,107 +6,107 @@ $table-border-color: #dee2e6 !default;
 $font-size-base: 1rem !default;
 
 .pp-eventnews-calendar {
-  .pager {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
-  .ppc-nav {
-    display: flex;
-    span {
-      display: block;
+    .pager {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: space-between;
+        margin-bottom: 0;
     }
-  }
-  table {
-    table-layout: fixed;
-    min-width: 500px;
-  }
-  .days th {
-    text-align: center;
-  }
-  .curmonth {
-    background: rgba($primary, 5%);
-  }
-  .ppc-day {
-    background: mix($table-border-color, white);
-    margin-bottom: 0.5rem;
-    line-height: 1.2rem;
-    font-size: 0.75rem;
-    text-align: center;
-  }
-  .ppc-time {
-    width: 100%;
-    &.btn-primary {
-      color: pp-compat-color-contrast($primary);
+    .ppc-nav {
+        display: flex;
+        span {
+            display: block;
+        }
     }
-  }
+    table {
+        table-layout: fixed;
+        min-width: 500px;
+    }
+    .days th {
+        text-align: center;
+    }
+    .curmonth {
+        background: rgba($primary, 5%);
+    }
+    .ppc-day {
+        background: mix($table-border-color, white);
+        margin-bottom: 0.5rem;
+        line-height: 1.2rem;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+    .ppc-time {
+        width: 100%;
+        &.btn-primary {
+            color: pp-compat-color-contrast($primary);
+        }
+    }
 }
 
 .pp-eventnews-list {
-  .ppc-item {
-    border-top: $table-border-color 1px solid;
-    margin-top: 1rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    &:first-child {
-      border-top: none;
-      margin-top: 0;
-      padding-top: 0;
+    .ppc-item {
+        border-top: $table-border-color 1px solid;
+        margin-top: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        &:first-child {
+            border-top: none;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &:target, &:target + .ppc-item {
+            border-top: none;
+        }
     }
-    &:last-child {
-      padding-bottom: 0;
-    }
-    &:target, &:target + .ppc-item {
-      border-top: none;
-    }
-  }
 }
 
 .news-single {
-  .ppc-orgloc {
-    //margin: 2em 0;
-  }
-  .ppc-organizer, .ppc-location {
-    padding: 1em 0;
-    border-top: $table-border-color 1px solid;
-    *:last-child {
-      margin-bottom: 0;
+    .ppc-orgloc {
+        //margin: 2em 0;
     }
-  }
+    .ppc-organizer, .ppc-location {
+        padding: 1em 0;
+        border-top: $table-border-color 1px solid;
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .pp-eventnews-filter {
-  .ppc-formwrap {
-    background: rgba($primary, 0.15);
-  }
-  .ppc-group {
-    display: flex;
-    flex-wrap: wrap;
-    > * {
-      min-width: 140px;
-      margin-right: 2rem;
+    .ppc-formwrap {
+        background: rgba($primary, 0.15);
     }
-  }
-  .ppc-group1 fieldset {
-    display: flex;
-    flex-direction: column;
-  }
-  .ppc-group1 legend, .ppc-group2 label {
-    font-size: 1.2 * $font-size-base;
-  }
-  .ppc-toggle-filter {
-    .glyphicon-filter {
-      display: none;
+    .ppc-group {
+        display: flex;
+        flex-wrap: wrap;
+        > * {
+            min-width: 140px;
+            margin-right: 2rem;
+        }
     }
-    &.collapsed {
-      .glyphicon-filter {
-        display: inline-block;
-      }
-      .glyphicon-times {
-        display: none;
-      }
+    .ppc-group1 fieldset {
+        display: flex;
+        flex-direction: column;
     }
-  }
+    .ppc-group1 legend, .ppc-group2 label {
+        font-size: 1.2 * $font-size-base;
+    }
+    .ppc-toggle-filter {
+        .glyphicon-filter {
+            display: none;
+        }
+        &.collapsed {
+            .glyphicon-filter {
+                display: inline-block;
+            }
+            .glyphicon-times {
+                display: none;
+            }
+        }
+    }
 }

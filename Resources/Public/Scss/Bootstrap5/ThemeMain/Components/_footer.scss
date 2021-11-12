@@ -2,22 +2,22 @@
 // Footer Sections
 // --------------------------------------------------
 @each $name, $settings in $footer-sections {
-  .footer-section-#{$name} {
-    --frame-link-hover-color: #{map-get($settings, 'link-hover-color')};
-    --frame-link-hover-decoration: #{map-get($settings, 'link-hover-decoration')};
-  }
+    .footer-section-#{$name} {
+        --frame-link-hover-color: #{map-get($settings, 'link-hover-color')};
+        --frame-link-hover-decoration: #{map-get($settings, 'link-hover-decoration')};
+    }
 }
 
 //
 // Set colors (background is already set by bootstrap package)
 // --------------------------------------------------
 .footer-section {
-  color: var(--frame-color);
-  a {
-    color: var(--frame-link-color);
-    &:hover {
-      color: var(--frame-link-hover-color);
-      text-decoration: var(--frame-link-hover-decoration);
+    color: var(--frame-color);
+    a {
+        color: var(--frame-link-color);
+        &:hover {
+            color: var(--frame-link-hover-color);
+            text-decoration: var(--frame-link-hover-decoration);
+        }
     }
-  }
 }

@@ -2,29 +2,29 @@
 // Accordion
 // --------------------------------------------------
 .pp-accordion-primary, .fe-accordion-primary, .ce-accordion-primary {
-  @include pp-style-accordion-light($primary);
+    @include pp-style-accordion-light($primary);
 }
 .pp-accordion-secondary, .fe-accordion-secondary, .ce-accordion-secondary {
-  @include pp-style-accordion-light($secondary);
+    @include pp-style-accordion-light($secondary);
 }
 .pp-accordion-complementary, .fe-accordion-complementary, .ce-accordion-complementary {
-  @include pp-style-accordion-light($complementary);
+    @include pp-style-accordion-light($complementary);
 }
 
 //
 // Tabs
 // --------------------------------------------------
 .pp-tabs-primary, .fe-tabs-primary, .ce-tabs-primary {
-  @include pp-style-tab-light($primary);
+    @include pp-style-tab-light($primary);
 }
 .pp-tabs-secondary, .fe-tabs-secondary, .ce-tabs-secondary {
-  @include pp-style-tab-light($secondary);
+    @include pp-style-tab-light($secondary);
 }
 .pp-tabs-complementary, .fe-tabs-complementary, .ce-tabs-complementary {
-  @include pp-style-tab-light($complementary);
+    @include pp-style-tab-light($complementary);
 }
 
 // Deprecated as of 26.8.21, not used
 .tab-v1 {
-  @include pp-style-tab($pp-tab-v1-background);
+    @include pp-style-tab($pp-tab-v1-background);
 }

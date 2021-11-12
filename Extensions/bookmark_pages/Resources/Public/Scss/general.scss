@@ -2,58 +2,58 @@
 @import "../../../../../Resources/Public/Scss/variables";
 
 .bookmark-pages {
-  a {
-    color: $link-color;
-    &:hover, &:active {
-      color: $link-hover-color;
-    }
-  }
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .dropdown-item {
-    .bookmark-ajax-submit {
-      margin-left: 1.5em;
-      margin-bottom: 0.2em;
-    }
-  }
-  .btn {
-    &.dropdown-toggle-split:after {
-      margin-left: 0.5rem;
-      vertical-align: middle;
-    }
-    &.dropdown-toggle-split:before {
-      margin-right: 0.5rem;
-      vertical-align: middle;
-    }
-    &.bookmark-this-page {
-      display: block;
-      @if ($enable-rounded) {
-        border-radius: 0 $border-radius $border-radius 0 !important;
-      }
-      +.ppc-bookmarked {
-        display: none;
-      }
-      &.is-bookmarked {
-        display: none;
-        +.ppc-bookmarked {
-          display: block;
+    a {
+        color: $link-color;
+        &:hover, &:active {
+            color: $link-hover-color;
         }
-      }
     }
-  }
-  .ppicon {
-    text-decoration: none;
-  }
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .dropdown-item {
+        .bookmark-ajax-submit {
+            margin-left: 1.5em;
+            margin-bottom: 0.2em;
+        }
+    }
+    .btn {
+        &.dropdown-toggle-split:after {
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        &.dropdown-toggle-split:before {
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+        &.bookmark-this-page {
+            display: block;
+            @if ($enable-rounded) {
+                border-radius: 0 $border-radius $border-radius 0 !important;
+            }
+            + .ppc-bookmarked {
+                display: none;
+            }
+            &.is-bookmarked {
+                display: none;
+                + .ppc-bookmarked {
+                    display: block;
+                }
+            }
+        }
+    }
+    .ppicon {
+        text-decoration: none;
+    }
 }
 .bookmarks-list.ppc-complementary {
-  &, & li {
-    padding-left: 0;
-    padding-right: 0;
-  }
+    &, & li {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 .footer-section {
-  overflow: visible;
+    overflow: visible;
 }

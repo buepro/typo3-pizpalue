@@ -9,95 +9,95 @@
 // Overlay card
 // --------------------------------------------------
 .pp-ce-overlaycard {
-  .textpic {
-    position: relative;
-    overflow: hidden;
-    &.ppc-hover {
-      .textpic-gallery {
-        img {
-          filter: grayscale(100%);
+    .textpic {
+        position: relative;
+        overflow: hidden;
+        &.ppc-hover {
+            .textpic-gallery {
+                img {
+                    filter: grayscale(100%);
+                }
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+        &.ppc-hover .textpic-text:before {
+            opacity: 1.0;
+        }
+    }
+    .textpic-gallery {
+        z-index: 10;
+        margin-bottom: 0;
+        figure {
+            margin-bottom: 0;
+            img {
+                // needed for chrome loading="lazy"
+                width: 100%;
+                transition: filter 1s;
+            }
         }
         &:after {
-          opacity: 0;
+            content: "i";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border: rgba(255, 255, 255, 0.7) 1px solid;
+            text-align: center;
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            font-weight: bold;
+            line-height: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            border-radius: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: rgba(255, 255, 255, 0.7) 0 0 5px 5px;
+            cursor: pointer;
+            transition: opacity 1s;
         }
-      }
     }
-    &.ppc-hover .textpic-text:before {
-      opacity: 1.0;
+    .textpic-text {
+        z-index: 20;
+        position: absolute;
+        top: 100%;
+        width: 100.1%; // needed for chrome bug
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(white, 80%);
+        background-clip: padding-box;
+        transition: top 0.5s;
+        &:before {
+            content: "✕";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 10px;
+            margin-top: 10px;
+            line-height: 2rem;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 1rem;
+            color: rgba(black, 0.7);
+            background: rgba(white, 0.5);
+            border: 1px rgba(black, 0.7) solid;
+            opacity: 0;
+            transition: opacity 1s;
+            cursor: pointer;
+        }
+        @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
+            @include media-breakpoint-up($breakpoint) {
+                $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
+                padding: ($frame-inner-spacing * $scaling * 0.7) ($frame-inner-spacing * $scaling);
+            }
+        }
     }
-  }
-  .textpic-gallery {
-    z-index: 10;
-    margin-bottom: 0;
-    figure {
-      margin-bottom: 0;
-      img {
-        // needed for chrome loading="lazy"
-        width: 100%;
-        transition: filter 1s;
-      }
-    }
-    &:after {
-      content: "i";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 2rem;
-      height: 2rem;
-      margin-right: 20px;
-      margin-bottom: 20px;
-      border: rgba(255,255,255,0.7) 1px solid;
-      text-align: center;
-      font-family: Georgia, Times, "Times New Roman", serif;
-      font-style: italic;
-      font-size: 1.5rem;
-      font-weight: bold;
-      line-height: 2rem;
-      color: rgba(255,255,255,0.7);
-      border-radius: 1rem;
-      background: rgba(0,0,0,0.5);
-      box-shadow: rgba(255,255,255,0.7) 0 0 5px 5px;
-      cursor: pointer;
-      transition: opacity 1s;
-    }
-  }
-  .textpic-text {
-    z-index: 20;
-    position: absolute;
-    top: 100%;
-    width: 100.1%; // needed for chrome bug
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: rgba(white, 80%);
-    background-clip: padding-box;
-    transition: top 0.5s;
-    &:before {
-      content: "✕";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 2rem;
-      height: 2rem;
-      margin-right: 10px;
-      margin-top: 10px;
-      line-height: 2rem;
-      text-align: center;
-      font-family: sans-serif;
-      font-size: 1rem;
-      color: rgba(black,0.7);
-      background: rgba(white,0.5);
-      border: 1px rgba(black, 0.7) solid;
-      opacity: 0;
-      transition: opacity 1s;
-      cursor: pointer;
-    }
-    @each $breakpoint in map-keys($frame-inner-spacing-scaling) {
-      @include media-breakpoint-up($breakpoint) {
-        $scaling: map-get($frame-inner-spacing-scaling, $breakpoint);
-        padding: ($frame-inner-spacing * $scaling * 0.7) ($frame-inner-spacing * $scaling);
-      }
-    }
-  }
 }

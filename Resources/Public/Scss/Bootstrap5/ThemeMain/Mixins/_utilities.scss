@@ -4,23 +4,23 @@
 // Usage: pp-make-spaces(padding-top, 3rem) or pp-make-spaces((padding-top, padding-bottom), 3rem)
 //
 @mixin pp-make-spaces($properties, $value, $valueBreakpoint: xl, $scaling: $pp-space-scaling) {
-  $breakpointScaling: map_get($scaling, $valueBreakpoint);
-  $space: $value / $breakpointScaling * map_get($scaling, xs);
-  $space: round($space * 100) / 100;
-  @each $property in $properties {
-    #{$property}: $space;
-  }
-  @each $breakpoint, $scale in $scaling {
-    @if ($breakpoint != xs) {
-      @include media-breakpoint-up($breakpoint) {
-        $space: $value / $breakpointScaling * map_get($scaling, $breakpoint);
-        $space: round($space * 100) / 100;
-        @each $property in $properties {
-          #{$property}: $space;
-        }
-      }
+    $breakpointScaling: map_get($scaling, $valueBreakpoint);
+    $space: $value / $breakpointScaling * map_get($scaling, xs);
+    $space: round($space * 100) / 100;
+    @each $property in $properties {
+        #{$property}: $space;
     }
-  }
+    @each $breakpoint, $scale in $scaling {
+        @if ($breakpoint != xs) {
+            @include media-breakpoint-up($breakpoint) {
+                $space: $value / $breakpointScaling * map_get($scaling, $breakpoint);
+                $space: round($space * 100) / 100;
+                @each $property in $properties {
+                    #{$property}: $space;
+                }
+            }
+        }
+    }
 }
 
 //
@@ -31,35 +31,35 @@
 //    `user`: User formats the link separately (nothing special is formatted here)
 //
 @mixin pp-make-link($settings) {
-  $link-color: map-get($settings, 'link-color');
-  $link-hover-color: map-get($settings, 'link-hover-color');
-  $inherit-link-style: map-get($settings, 'inherit-link-style');
-  @if ($link-color == inherit) {
-    a:not(.btn) {
-      color: $link-color;
-      @if ($inherit-link-style == bold) {
-        font-weight: bold;
-      } @else if ($inherit-link-style == user) {
-      } @else {
-        text-decoration: underline;
-        text-decoration-style: dotted;
-      }
-      &:hover, &:focus, &:active {
-        color: $link-hover-color;
-        @if ($inherit-link-style == bold or $inherit-link-style == user) {
-        } @else {
-          text-decoration: underline;
+    $link-color: map-get($settings, 'link-color');
+    $link-hover-color: map-get($settings, 'link-hover-color');
+    $inherit-link-style: map-get($settings, 'inherit-link-style');
+    @if ($link-color == inherit) {
+        a:not(.btn) {
+            color: $link-color;
+            @if ($inherit-link-style == bold) {
+                font-weight: bold;
+            } @else if ($inherit-link-style == user) {
+            } @else {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+            }
+            &:hover, &:focus, &:active {
+                color: $link-hover-color;
+                @if ($inherit-link-style == bold or $inherit-link-style == user) {
+                } @else {
+                    text-decoration: underline;
+                }
+            }
         }
-      }
+    } @else {
+        a:not(.btn) {
+            color: $link-color;
+            &:hover {
+                color: $link-hover-color;
+            }
+        }
     }
-  } @else {
-    a:not(.btn) {
-      color: $link-color;
-      &:hover {
-        color: $link-hover-color;
-      }
-    }
-  }
 }
 
 //
@@ -68,15 +68,15 @@
 // @see bootstrap_package make-frame-background
 //
 @mixin pp-make-background($settings) {
-  $background: map-get($settings, 'background');
-  background-color: $background;
-  color: pp-compat-color-contrast($background);
-  .element-header, .element-subheader {
-    $color: pp-compat-color-contrast(map-get($settings, background));
-    @if (map-get($settings, headings-color)) {
-      $color: map-get($settings, headings-color);
+    $background: map-get($settings, 'background');
+    background-color: $background;
+    color: pp-compat-color-contrast($background);
+    .element-header, .element-subheader {
+        $color: pp-compat-color-contrast(map-get($settings, background));
+        @if (map-get($settings, headings-color)) {
+            $color: map-get($settings, headings-color);
+        }
+        color: $color;
     }
-    color: $color;
-  }
-  @include pp-make-link($settings);
+    @include pp-make-link($settings);
 }

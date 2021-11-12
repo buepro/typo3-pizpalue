@@ -3,8 +3,8 @@
 //
 
 @if ($pp-bootstrap-version == 4) {
-  @import "Bootstrap4/functions";
+    @import "Bootstrap4/functions";
 }
 @if ($pp-bootstrap-version == 5) {
-  @import "Bootstrap5/functions";
+    @import "Bootstrap5/functions";
 }

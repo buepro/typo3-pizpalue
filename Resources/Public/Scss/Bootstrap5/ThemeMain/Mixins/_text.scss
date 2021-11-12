@@ -1,6 +1,6 @@
 @mixin pp-make-text-shadow-outline($thickness: 3px, $color: black, $blur-radius: 5px) {
-  text-shadow: $thickness $thickness $blur-radius $color,
-  $thickness 0-$thickness $blur-radius $color,
-  0-$thickness $thickness $blur-radius $color,
-  0-$thickness 0-$thickness $blur-radius $color
+    text-shadow: $thickness $thickness $blur-radius $color,
+    $thickness 0-$thickness $blur-radius $color,
+    0-$thickness $thickness $blur-radius $color,
+    0-$thickness 0-$thickness $blur-radius $color
 }

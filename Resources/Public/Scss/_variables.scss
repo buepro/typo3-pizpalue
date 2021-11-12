@@ -11,8 +11,8 @@
 // Variables
 //
 @if ($pp-bootstrap-version == 4) {
-  @import "Bootstrap4/variables";
+    @import "Bootstrap4/variables";
 }
 @if ($pp-bootstrap-version == 5) {
-  @import "Bootstrap5/variables";
+    @import "Bootstrap5/variables";
 }

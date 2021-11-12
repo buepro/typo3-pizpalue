@@ -3,9 +3,9 @@
 //
 
 @if ($pp-bootstrap-version == 4) {
-  @import "Bootstrap4/mixins";
+    @import "Bootstrap4/mixins";
 }
 @if ($pp-bootstrap-version == 5) {
-  @import "Bootstrap5/mixins";
+    @import "Bootstrap5/mixins";
 }
 

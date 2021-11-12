@@ -16,7 +16,7 @@ $footer-meta-bg: #222 !default;
 // Theme colors
 //
 $theme-colors: map-merge($theme-colors, (
-  'complementary': $complementary
+    'complementary': $complementary
 ));
 
 //
@@ -24,7 +24,7 @@ $theme-colors: map-merge($theme-colors, (
 //
 $pp-headings-yiq: color-contrast($body-color);
 @if $headings-color {
-  $pp-headings-yiq: color-contrast($headings-color);
+    $pp-headings-yiq: color-contrast($headings-color);
 }
 
 //
@@ -41,20 +41,20 @@ $footer-meta-link-hover-color: lighten($footer-meta-link-color, 10%) !default;
 $footer-meta-link-hover-decoration: $footer-link-hover-decoration !default;
 $footer-sections: () !default;
 $footer-sections: map-merge($footer-sections, (
-  content: (
-    background: $footer-bg,
-    color: $footer-color,
-    link-color: $footer-link-color,
-    link-hover-color: $footer-link-hover-color,
-    link-hover-decoration: $footer-link-hover-decoration
-  ),
-  meta: (
-    background: $footer-meta-bg,
-    color: $footer-meta-color,
-    link-color: $footer-meta-link-color,
-    link-hover-color: $footer-meta-link-hover-color,
-    link-hover-decoration: $footer-meta-link-hover-decoration
-  )
+    content: (
+        background: $footer-bg,
+        color: $footer-color,
+        link-color: $footer-link-color,
+        link-hover-color: $footer-link-hover-color,
+        link-hover-decoration: $footer-link-hover-decoration
+    ),
+    meta: (
+        background: $footer-meta-bg,
+        color: $footer-meta-color,
+        link-color: $footer-meta-link-color,
+        link-hover-color: $footer-meta-link-hover-color,
+        link-hover-decoration: $footer-meta-link-hover-decoration
+    )
 ));
 
 //
@@ -66,47 +66,47 @@ $footer-sections: map-merge($footer-sections, (
 //
 $frame-backgrounds: () !default;
 $frame-backgrounds: map-merge($frame-backgrounds, (
-  primary: (
-    background: $primary,
-    link-color: inherit,
-    link-hover-color: inherit,
-    inherit-link-style: dotted
-  ),
-  secondary: (
-    background: $secondary,
-    link-color: inherit,
-    link-hover-color: inherit,
-    inherit-link-style: dotted
-  ),
-  complementary: (
-    background: $complementary,
-    link-color: inherit,
-    link-hover-color: inherit,
-    inherit-link-style: dotted
-  ),
-  light: (
-    background: $light,
-    headings-color: $headings-color,
-    link-color: $link-color,
-    link-hover-color: $link-hover-color
-  ),
-  dark: (
-    background: $dark,
-    link-color: inherit,
-    link-hover-color: inherit,
-    inherit-link-style: dotted
-  )
+    primary: (
+        background: $primary,
+        link-color: inherit,
+        link-hover-color: inherit,
+        inherit-link-style: dotted
+    ),
+    secondary: (
+        background: $secondary,
+        link-color: inherit,
+        link-hover-color: inherit,
+        inherit-link-style: dotted
+    ),
+    complementary: (
+        background: $complementary,
+        link-color: inherit,
+        link-hover-color: inherit,
+        inherit-link-style: dotted
+    ),
+    light: (
+        background: $light,
+        headings-color: $headings-color,
+        link-color: $link-color,
+        link-hover-color: $link-hover-color
+    ),
+    dark: (
+        background: $dark,
+        link-color: inherit,
+        link-hover-color: inherit,
+        inherit-link-style: dotted
+    )
 ));
 
 //
 // General space
 //
 $pp-space-scaling: (
-  xs: 1 / 1.75,
-  sm: 1 / 1.75 * 1.25,
-  md: 1 / 1.75 * 1.5,
-  lg: 1,
-  xl: 1
+    xs: 1 / 1.75,
+    sm: 1 / 1.75 * 1.25,
+    md: 1 / 1.75 * 1.5,
+    lg: 1,
+    xl: 1
 ) !default;
 
 //
@@ -116,9 +116,9 @@ $navbar-height: 100px !default;
 $navbar-height-sm: 0.7 * $navbar-height !default;
 $navbar-height-lg: 1.3 * $navbar-height !default;
 $navbar-heights: (
-  xs: $navbar-height-sm,
-  sm: $navbar-height-sm,
-  md: $navbar-height,
-  lg: $navbar-height-lg,
-  xl: $navbar-height-lg
+    xs: $navbar-height-sm,
+    sm: $navbar-height-sm,
+    md: $navbar-height,
+    lg: $navbar-height-lg,
+    xl: $navbar-height-lg
 );

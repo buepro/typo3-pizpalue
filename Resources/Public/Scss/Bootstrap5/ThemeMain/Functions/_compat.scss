@@ -3,11 +3,11 @@
 //
 
 @function pp-compat-color-contrast($color) {
-  @if ($pp-bootstrap-version == 5) {
-    @return color-contrast($color);
-  }
-  @if ($pp-bootstrap-version == 4) {
-    @return color-yiq($color);
-  }
-  @return $color;
+    @if ($pp-bootstrap-version == 5) {
+        @return color-contrast($color);
+    }
+    @if ($pp-bootstrap-version == 4) {
+        @return color-yiq($color);
+    }
+    @return $color;
 }

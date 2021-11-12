@@ -3,14 +3,14 @@
 // todo: Check if still needed
 // --------------------------------------------------
 .gallery-row:before, .gallery-row:after, .gallery-item:before, .gallery-item:after {
-  content: normal;
+    content: normal;
 }
 
 //
 // Card Panel
 // --------------------------------------------------
 .card-panel {
-  .card-header {
-    padding: 0.667 * $card-spacer-y $card-spacer-x;
-  }
+    .card-header {
+        padding: 0.667 * $card-spacer-y $card-spacer-x;
+    }
 }

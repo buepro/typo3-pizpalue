@@ -2,27 +2,33 @@
 // Under dev indicator
 // --------------------------------------------------
 @if ($pp-bootstrap-version == 4) {
-  $pp-dev-color: red;
+    $pp-dev-color: red;
 }
 @if ($pp-bootstrap-version == 5) {
-  $pp-dev-color: orange;
+    $pp-dev-color: orange;
 }
 @keyframes blink {
-  0% {opacity: 0.3;}
-  50% {opacity: 0.9;}
-  100% {opacity: 0.3;}
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.3;
+    }
 }
 #setupsetting {
-  z-index: 10000;
-  position: fixed;
-  left: 8px;
-  top: 8px;
-  box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: radial-gradient($pp-dev-color, $pp-dev-color 50%, white);
-  animation: blink 3s ease-in-out 0s infinite;
+    z-index: 10000;
+    position: fixed;
+    left: 8px;
+    top: 8px;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: radial-gradient($pp-dev-color, $pp-dev-color 50%, white);
+    animation: blink 3s ease-in-out 0s infinite;
 }
 
 //
@@ -30,34 +36,34 @@
 // --------------------------------------------------
 $pp-colorplate-radius: 100px;
 #colorset {
-  display: inline-block;
-  .color {
-    float: left;
-    overflow: hidden;
-    width: 2 * $pp-colorplate-radius;
-    height: 2 * $pp-colorplate-radius;
-    border-radius: $pp-colorplate-radius;
-    margin: 10px;
-  }
-  .bottomcolorrow {
-    clear: both;
-  }
-  .maincolor {
-    margin-left: $pp-colorplate-radius + 20px;
-    margin-bottom: -$pp-colorplate-radius / 5;
-    background: $primary;
-  }
-  .secundarycolor {
-    background: $secondary;
-  }
-  .complementarycolor {
-    background: $complementary;
-  }
+    display: inline-block;
+    .color {
+        float: left;
+        overflow: hidden;
+        width: 2 * $pp-colorplate-radius;
+        height: 2 * $pp-colorplate-radius;
+        border-radius: $pp-colorplate-radius;
+        margin: 10px;
+    }
+    .bottomcolorrow {
+        clear: both;
+    }
+    .maincolor {
+        margin-left: $pp-colorplate-radius + 20px;
+        margin-bottom: -$pp-colorplate-radius / 5;
+        background: $primary;
+    }
+    .secundarycolor {
+        background: $secondary;
+    }
+    .complementarycolor {
+        background: $complementary;
+    }
 }
 
 //
 // Icon demo
 // --------------------------------------------------
 .pp-icondemo .ppicon {
-  box-shadow: 0 0 1px 0 rgba(red, 0.5);
+    box-shadow: 0 0 1px 0 rgba(red, 0.5);
 }

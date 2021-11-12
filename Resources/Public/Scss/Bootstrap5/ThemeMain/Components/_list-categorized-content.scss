@@ -5,64 +5,64 @@
 //----------------------------------------------------------------------------------------------------------------------
 
 .pp-list-categorized-content {
-  .ppc-collapsible {
-    position: relative;
-    overflow: hidden;
-    box-sizing: content-box;
-    max-height: 0;
-    margin-top: var(--pp-frame-spacing);
-    padding: calc(var(--pp-frame-spacing) * 0.7);
-    border: mix(white, $primary, 50%) 1px solid;
-    @if ($enable-rounded) {
-      border-radius: $border-radius;
+    .ppc-collapsible {
+        position: relative;
+        overflow: hidden;
+        box-sizing: content-box;
+        max-height: 0;
+        margin-top: var(--pp-frame-spacing);
+        padding: calc(var(--pp-frame-spacing) * 0.7);
+        border: mix(white, $primary, 50%) 1px solid;
+        @if ($enable-rounded) {
+            border-radius: $border-radius;
+        }
+        > .frame {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .ppc-bottom {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: var(--pp-frame-spacing);
+            background: linear-gradient(0deg, white 30%, transparent);
+        }
+        &:first-child {
+            margin-top: 0;
+        }
     }
-    > .frame {
-      padding-top: 0;
-      padding-bottom: 0;
+    .ppc-more {
+        box-sizing: content-box;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 2.2rem;
+        height: 2.2rem;
+        box-shadow: -3px -3px 6px white;
+        line-height: 2.2rem;
+        font-size: 2rem;
+        text-align: center;
+        border-left: white 6px solid;
+        border-top: white 6px solid;
+        background: mix(white, $primary, 50%);
+        color: pp-compat-color-contrast(mix(white, $primary, 50%));
+        opacity: 0;
+        transition: background 200ms, color 200ms, opacity 200ms;
+        cursor: pointer;
+        &:hover {
+            background: mix(white, $primary, 30%);
+            color: contrast(mix(white, $primary, 30%));
+        }
+        span {
+            display: block;
+            transition: transform 200ms;
+        }
+        &.open {
+            span {
+                transform: rotate(45deg);
+            }
+        }
     }
-    .ppc-bottom {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: var(--pp-frame-spacing);
-      background: linear-gradient(0deg, white 30%, transparent);
-    }
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-  .ppc-more {
-    box-sizing: content-box;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 2.2rem;
-    height: 2.2rem;
-    box-shadow: -3px -3px 6px white;
-    line-height: 2.2rem;
-    font-size: 2rem;
-    text-align: center;
-    border-left: white 6px solid;
-    border-top: white 6px solid;
-    background: mix(white, $primary, 50%);
-    color: pp-compat-color-contrast(mix(white, $primary, 50%));
-    opacity: 0;
-    transition: background 200ms, color 200ms, opacity 200ms;
-    cursor: pointer;
-    &:hover {
-      background: mix(white, $primary, 30%);
-      color: contrast(mix(white, $primary, 30%));
-    }
-    span {
-      display: block;
-      transition: transform 200ms;
-    }
-    &.open {
-      span {
-        transform: rotate(45deg);
-      }
-    }
-  }
 }
 
