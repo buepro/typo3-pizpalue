@@ -107,11 +107,13 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
      * Hook: processDatamap_postProcessFieldArray
      *
      * Checks whether the user changed the frame class and adapts the image vraiants accordingly.
+     *
+     * @param string|int $id
      */
     public function processDatamap_postProcessFieldArray(
         string $status,
         string $table,
-        int $id,
+        $id,
         array &$fieldArray,
         DataHandler $dataHandler
     ): void {
