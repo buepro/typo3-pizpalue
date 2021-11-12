@@ -52,9 +52,6 @@
 			<trans-unit id="tx_pizpalue_ttc.animation4">
 				<source>Flip up (on scrolling)</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.animation11">
-				<source>Zoom background, show text</source>
-			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.animation21">
 				<source>Zoom in down</source>
 			</trans-unit>

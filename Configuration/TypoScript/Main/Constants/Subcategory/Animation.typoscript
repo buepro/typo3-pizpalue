@@ -35,10 +35,6 @@ pizpalue.animation {
         # cat=6060/1520/0044; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation4
         attributes = data-josh-anim-name="flipInX"
     }
-    11 {
-        # cat=6060/1520/0110; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation11
-        classes = pp-animate ppc-background-zoom ppc-text-delay
-    }
     21 {
         # cat=6060/1520/0210; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation21
         classes = animate__animated animate__zoomInDown
