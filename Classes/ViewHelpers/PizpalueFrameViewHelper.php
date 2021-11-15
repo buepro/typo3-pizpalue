@@ -107,6 +107,7 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
 
     private static function addAnimateCssToAssetCollector(AssetCollector $assetCollector): void
     {
+        /** @extensionScannerIgnoreLine */
         $assetCollector->addStyleSheet('ppAnimateCss', 'EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css');
     }
 
@@ -214,6 +215,7 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
             return;
         }
         $result['hasScrollAnimation'] = true;
+        /** @extensionScannerIgnoreLine */
         $assetCollector->addStyleSheet(
             'ppAos',
             'EXT:pizpalue/Resources/Public/Contrib/aos/aos.css'
