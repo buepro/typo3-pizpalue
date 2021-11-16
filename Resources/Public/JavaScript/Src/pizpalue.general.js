@@ -19,6 +19,14 @@ if ( typeof pp !== 'undefined' ) {
                 var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
                 var results = regex.exec(location.search);
                 return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            },
+            /**
+             * Replacement for jQuery $();
+             * @param callback
+             */
+            domReady: function (callback) {
+                if (String(document.readyState) !== "loading") callback();
+                else document.addEventListener("DOMContentLoaded", callback);
             }
         }
     }) (jQuery);
