@@ -26,7 +26,7 @@
                 <li title="{f:translate(extensionName: 'news', key: 'categories')}">
                     <span class="glyphicon glyphicon-tags"></span>
                     <f:for each="{newsItem.categories}" as="_category">
-                        <span class="badge badge-pill badge-info">{_category.title}</span>
+                        <span class="badge badge-pill badge-info rounded-pill bg-info">{_category.title}</span>
                     </f:for>
                 </li>
             </f:if>
@@ -36,7 +36,7 @@
                     <span class="glyphicon glyphicon-tags"></span>
                     <span class="news-list-tags" itemprop="keywords">
                         <f:for as="tag" each="{newsItem.tags}">
-                            <span class="badge badge-pill badge-info">{tag.title}</span>
+                            <span class="badge badge-pill badge-info rounded-pill bg-info">{tag.title}</span>
                         </f:for>
                     </span>
                 </li>

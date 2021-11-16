@@ -42,7 +42,7 @@ timelog                          1.6.0
 pp_gridelements                  1.1.0
 tt_address                       5.2.1
 eventnews                        4.0.0
-news                             8.5.2
+news                             9.1.0
 ws_flexslider                    1.5.16
 indexed_search                   10.4.16
 ================================ ================

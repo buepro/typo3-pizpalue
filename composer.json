@@ -59,6 +59,7 @@
         "buepro/typo3-container-elements": "^3.0",
         "friendsofphp/php-cs-fixer": "^3.0.0",
         "friendsoftypo3/phpstan-typo3": "^0.8.1",
+		"georgringer/news": "^9.1.0",
         "helhum/typo3-console": "^6.6 || ^7.0.2",
         "overtrue/phplint": "^2.3.5",
         "phpspec/prophecy-phpunit": "^1.1 || ^2.0",
@@ -74,6 +75,7 @@
         "typo3/testing-framework": "^5.0 || ^6.4"
     },
     "suggest": {
+		"georgringer/news": "Flexible news system",
         "buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
         "buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
         "buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements"

@@ -22,14 +22,12 @@
                                 </f:for>
                             </f:then>
                             <f:else>
-                                <n:widget.paginate objects="{news}" as="paginatedNews"
-                                                   configuration="{settings.list.paginate}"
-                                                   initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
-                                    <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-                                        <f:render partial="List/ItemImageTop"
-                                                  arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
-                                    </f:for>
-                                </n:widget.paginate>
+                                <f:render section="ListWithPaginator" arguments="{
+                                    partial: 'ItemImageTop',
+                                    settings: settings,
+                                    pagination: pagination.pagination,
+                                    paginator: pagination.paginator
+                                }" />
                             </f:else>
                         </f:if>
                     </div>
@@ -44,14 +42,12 @@
                                 </f:for>
                             </f:then>
                             <f:else>
-                                <n:widget.paginate objects="{news}" as="paginatedNews"
-                                                   configuration="{settings.list.paginate}"
-                                                   initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
-                                    <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-                                        <f:render partial="List/Item"
-                                                  arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
-                                    </f:for>
-                                </n:widget.paginate>
+                                <f:render section="ListWithPaginator" arguments="{
+                                    partial: 'Item',
+                                    settings: settings,
+                                    pagination: pagination.pagination,
+                                    paginator: pagination.paginator
+                                }" />
                             </f:else>
                         </f:if>
                     </div>
@@ -65,5 +61,23 @@
         </f:else>
     </f:if>
     <!--TYPO3SEARCH_begin-->
+</f:section>
+
+<f:section name="ListWithPaginator">
+    <f:if condition="{settings.list.paginate.insertAbove} && {paginator.numberOfPages} > 1">
+        <div class="pp-pagination pp-pagination-top">
+            <f:render partial="List/Pagination" arguments="{pagination: pagination, paginator: paginator}" />
+        </div>
+    </f:if>
+    <div class="pp-listpage">
+        <f:for each="{paginator.paginatedItems}" as="newsItem" iteration="iterator">
+            <f:render partial="List/{partial}" arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+        </f:for>
+    </div>
+    <f:if condition="{settings.list.paginate.insertBelow} && {paginator.numberOfPages} > 1">
+        <div class="pp-pagination pp-pagination-bottom">
+            <f:render partial="List/Pagination" arguments="{pagination: pagination, paginator: paginator}" />
+        </div>
+    </f:if>
 </f:section>
 </html>
