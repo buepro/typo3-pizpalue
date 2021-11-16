@@ -41,6 +41,7 @@ class ImageVariantsTextToArrayViewHelperTest extends FunctionalTestCase
             'extrasmall' => 0,
         ];
         return [
+            'missing text' => [null, null, $defaultVariants],
             'empty text' => ['', null, $defaultVariants],
             'empty text with default' => ['', 0.5, array_fill_keys(array_keys($defaultVariants), 0.5)],
             'default in text' => ['default: 0.5', null, array_fill_keys(array_keys($defaultVariants), 0.5)],
@@ -77,7 +78,7 @@ class ImageVariantsTextToArrayViewHelperTest extends FunctionalTestCase
      * @dataProvider renderDataProvider
      * @test
      */
-    public function render(string $text, ?float $default, array $expected): void
+    public function render(?string $text, ?float $default, array $expected): void
     {
         $view = GeneralUtility::makeInstance(StandaloneView::class);
         $view->setTemplatePathAndFilename(self::TEMPLATE_PATH);

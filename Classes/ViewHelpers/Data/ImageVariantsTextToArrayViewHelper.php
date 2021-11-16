@@ -56,7 +56,7 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
     public function initializeArguments()
     {
         parent::initializeArguments();
-        $this->registerArgument('as', 'string', 'Name from the resulting array', true);
+        $this->registerArgument('as', 'string', 'Name from the resulting array', false);
         $this->registerArgument('text', 'string', 'Comma separated list from screen breakpoint values.', true);
         $this->registerArgument('default', 'float', 'Default value assigned to array elements.', false);
     }
@@ -72,12 +72,13 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
+        $text = $arguments['text'] ?? '';
         $default = (float)$arguments['default'];
-        if (preg_match_all('/default\s*:\s([\d\.]+)/', $arguments['text'], $matches) === 1) {
+        if (preg_match_all('/default\s*:\s([\d\.]+)/', $text, $matches) === 1) {
             $default = (float)$matches[1][0];
         }
         $result = array_fill_keys(array_values(self::$breakpointMap), $default);
-        $lines = GeneralUtility::trimExplode(',', $arguments['text'], true);
+        $lines = GeneralUtility::trimExplode(',', $text, true);
         foreach ($lines as $line) {
             $parts = GeneralUtility::trimExplode(':', $line, true);
             if (count($parts) === 2 && array_key_exists($parts[0], self::$breakpointMap)) {
