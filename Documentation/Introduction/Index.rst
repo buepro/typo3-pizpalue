@@ -33,10 +33,9 @@ Arranging content
 -----------------
 
 - Page layouts allowing to add content in side columns with a menu
-- Support for structure elements provided by `pp_gridelements <https://extensions.typo3.org/extension/pp_gridelements>`__,
-  `flux_elements <https://extensions.typo3.org/extension/flux_elements>`__ or
-  `container_elements <https://extensions.typo3.org/extension/container_elements>`__. Example structure elements are:
-  columns, accordion, tabs, card and tile unit
+- Support for structure elements provided by
+  `container_elements <https://extensions.typo3.org/extension/container_elements>`__.
+  Example structure elements are: columns, accordion, tabs, card and tile unit
 
 Enhancing content
 -----------------
@@ -63,14 +62,8 @@ Extending extensions
 - A form finisher to send emails to a system
 - A teaser and map view from addresses provided by the extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__
 - Configurations for the extensions
-   - `indexed_search <https://docs.typo3.org/c/typo3/cms-indexed-search/master/en-us/>`__
-   - `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__
-   - `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__
+   - `container_elements <https://extensions.typo3.org/extension/container_elements>`__.
    - `news <https://extensions.typo3.org/extension/news>`__
-   - `eventnews <https://extensions.typo3.org/extension/eventnews>`__
-   - `tt_address <https://extensions.typo3.org/extension/tt_address>`__
-   - `timelog <https://extensions.typo3.org/extension/timelog>`__
-   - `bookmark_pages <https://github.com/buepro/typo3-bookmark_pages>`__
 
 Various
 -------

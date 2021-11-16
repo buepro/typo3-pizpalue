@@ -35,23 +35,9 @@ Supported extensions
 ================================ ================
 Extension                        Version tested
 ================================ ================
-bookmark_pages                   2.0.1
-container_elements               2.1.1
-flux_elements                    1.2.1
-timelog                          1.6.0
-pp_gridelements                  1.1.0
-tt_address                       5.2.1
-eventnews                        4.0.0
+container_elements               3.0.0
 news                             9.1.0
-ws_flexslider                    1.5.16
-indexed_search                   10.4.16
 ================================ ================
-
-Structure elements
-------------------
-
-Currently the extensions `gridelements`, `flux`, and `container` are supported. It is strongly recommended to just
-use one from the mentioned extensions due to possible conflicts that might occur when using them concurrently.
 
 .. _admin_update:
 
