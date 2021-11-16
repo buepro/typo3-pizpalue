@@ -1,5 +1,4 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Header" />
@@ -11,7 +10,7 @@
     {f:variable(name: '_partial', value: 'bar')}
     {data.pi_flexform.type -> f:variable(name: '_partial') -> f:if(condition: data.pi_flexform.type)}
     <div class="pp-picoverlay ppc-{_partial}">
-        <f:render partial="Picoverlay/{_partial -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
+        <f:render partial="Picoverlay/{_partial -> f:format.case(mode: 'capital')}" arguments="{_all}" />
     </div>
 </f:section>
 </html>
