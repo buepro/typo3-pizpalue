@@ -13,5 +13,20 @@ languages:
     direction: ltr
     flag: gb
     websiteTitle: ''
+  -
+    title: Deutsch
+    enabled: true
+    base: 'https://pizpalue.ddev.site/de/'
+    typo3Language: de
+    locale: de_CH.UTF-8
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    hreflang: de-CH
+    direction: ''
+    fallbackType: strict
+    fallbacks: ''
+    flag: ch
+    languageId: 1
 rootPageId: 1
 websiteTitle: 'Pizpalue dev site'

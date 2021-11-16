@@ -4,4 +4,15 @@ lib.pizpalue {
         value = {$pizpalue.customer.copyright}
         insertData = 1
     }
+    renderContent = CONTENT
+    renderContent {
+        table = tt_content
+        select {
+            uidInList {
+                field = uid
+                override.field = l18n_parent
+            }
+            pidInList = 0
+        }
+    }
 }

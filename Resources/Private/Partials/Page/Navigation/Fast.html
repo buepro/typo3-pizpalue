@@ -1,7 +1,5 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
-      v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd"
       data-namespace-typo3-fluid="true">
 
 <f:spaceless>
@@ -12,7 +10,7 @@
                 <div id="pp-fm-content-{item.contentUid}" class="pp-fm-item"
                      data-pp-fm-contenticon="pp-fm-contenticon-{item.contentUid}">
                     <div class="pp-fm-wrap">
-                        <v:content.render contentUids="{0: item.contentUid}"/>
+                        <f:cObject typoscriptObjectPath="lib.pizpalue.renderContent" data="{uid: item.contentUid}" />
                     </div>
                 </div>
             </f:if>

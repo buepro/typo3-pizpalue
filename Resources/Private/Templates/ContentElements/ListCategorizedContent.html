@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+      data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 
 <f:section name="Main">
@@ -14,7 +14,7 @@
         <f:for each="{content}" as="ce" iteration="iterator">
             <f:if condition="{iterator.index} < {data.pi_flexform.itemCount}">
                 <div class="ppc-item{f:if(condition: data.pi_flexform.collapsible, then: ' ppc-collapsible')}">
-                    <v:content.render contentUids="{0: ce.data.uid}"/>
+                    <f:cObject typoscriptObjectPath="lib.pizpalue.renderContent" data="{uid: ce.data.uid}" />
                     <f:if condition="{data.pi_flexform.collapsible}">
                         <div class="ppc-bottom"></div>
                         <div class="ppc-more">
