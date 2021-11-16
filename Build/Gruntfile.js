@@ -93,6 +93,10 @@ module.exports = function(grunt) {
                 src: '<%= paths.js %>Src/pizpalue.linktarget.js',
                 dest: '<%= paths.js %>Dist/pizpalue.linktarget.min.js'
             },
+            listCategorizedContent: {
+                src: '<%= paths.js %>Src/pizpalue.list-categorized-content.js',
+                dest: '<%= paths.js %>Dist/pizpalue.list-categorized-content.min.js'
+            },
         },
         watch: {
             general: {

@@ -9,10 +9,10 @@
         position: relative;
         overflow: hidden;
         box-sizing: content-box;
-        max-height: 0;
         margin-top: var(--pp-frame-spacing);
         padding: calc(var(--pp-frame-spacing) * 0.7);
         border: mix(white, $primary, 50%) 1px solid;
+        transition: height ease-in-out 0.5s;
         @if ($enable-rounded) {
             border-radius: $border-radius;
         }
@@ -21,6 +21,7 @@
             padding-bottom: 0;
         }
         .ppc-bottom {
+            display: none;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -33,6 +34,7 @@
         }
     }
     .ppc-more {
+        display: none;
         box-sizing: content-box;
         position: absolute;
         right: 0;
@@ -47,7 +49,6 @@
         border-top: white 6px solid;
         background: mix(white, $primary, 50%);
         color: pp-compat-color-contrast(mix(white, $primary, 50%));
-        opacity: 0;
         transition: background 200ms, color 200ms, opacity 200ms;
         cursor: pointer;
         &:hover {
