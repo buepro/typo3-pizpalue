@@ -1,0 +1,38 @@
+#=========================================================#
+# Plugin
+#=========================================================#
+
+plugin.tx_ttaddress {
+    view {
+        layoutRootPaths {
+            1 >
+            101 = {$plugin.tx_ttaddress.view.layoutRootPath}
+        }
+        templateRootPaths {
+            1 >
+            13 = EXT:pizpalue/Extensions/tt_address/Resources/Private/Templates/
+            101 = {$plugin.tx_ttaddress.view.templateRootPath}
+        }
+        partialRootPaths {
+            1 >
+            11 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+            12 = EXT:pizpalue/Resources/Private/Partials/ContentElements/
+            13 = EXT:pizpalue/Extensions/tt_address/Resources/Private/Partials/
+            101 = {$plugin.tx_ttaddress.view.partialRootPath}
+        }
+    }
+    settings {
+        gallery.imageLoading = {$pizpalue.features.imageLoading}
+    }
+}
+
+
+#=========================================================#
+# Page
+#=========================================================#
+
+page {
+    includeCSS {
+        ppTtAddress = EXT:pizpalue/Extensions/tt_address/Resources/Public/Scss/theme.scss
+    }
+}

@@ -1,0 +1,17 @@
+.tt_address_list {
+    .ppc-list-item {
+        margin: calc(var(--frame-spacing) * 0.25) 0;
+        padding: calc(var(--frame-spacing) * 0.25) 0;
+        &:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    .f3-widget-paginator {
+        margin-top: calc(var(--frame-spacing) * 0.5)
+    }
+}

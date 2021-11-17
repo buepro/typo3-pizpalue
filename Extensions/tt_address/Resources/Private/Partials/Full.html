@@ -1,28 +1,22 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/buepro/pizpalue/ViewHelpers">
+
 <div class="vcard tt_address_detail" itemscope itemtype="http://schema.org/Person">
     <h4 itemprop="name">{address.fullName}</h4>
     <f:render section="position" partial="Address" arguments="{_all}"/>
-
     <f:if condition="{address.image}">
         <f:then>
             <div class="row">
-                <div class="col-md-3">
-                    <figure class="figure">
-                        <f:image image="{address.firstImage}" width="600"
-                                 class="figure-img img-responsive img-rounded img-fluid img-thumbnail rounded"
-                                 alt="{img.originalResource.alt}"
-                                 title="{img.originalResource.title}"
-                                 additionalAttributes="{itemprop:'image', loading: 'lazy'}" />
-                        <f:if condition="{address.firstImage.originalResource.description}">
-                            <figcaption class="figure-caption">
-                                {address.firstImage.originalResource.description ->
-                                f:format.nl2br()}
-                            </figcaption>
-                        </f:if>
-                    </figure>
-                </div>
-                <div class="col-md-9">
+                <pp:render.bootstrap.column class="col-md-3" count="2" additionalAttributes="{itemprop: 'image'}">
+                    <f:render partial="Plugin/RenderMedia" arguments="{
+                                file: address.firstImage.originalResource,
+                                data: address,
+                                settings: settings}" />
+                </pp:render.bootstrap.column>
+                <pp:render.bootstrap.column class="col-md-9" count="2">
                     <f:render section="content" arguments="{_all}"/>
-                </div>
+                </pp:render.bootstrap.column>
             </div>
         </f:then>
         <f:else>
@@ -59,51 +53,24 @@
     <f:render section="contact" partial="Address" arguments="{_all}"/>
     <f:render section="social" partial="Address" arguments="{_all}"/>
 
-    <f:if condition="{address.image -> f:count() > 1}">
+    <f:if condition="{address.image -> f:count()} > 1">
         <div class="address-image-rows">
             <div class="row">
-                <f:for each="{address.image}" as="img" iteration="iterator">
-                    <f:if condition="{iterator.cycle}>1">
-                        <div class="col-md-4">
-                            <figure class="figure">
-                                <f:if condition="{img.originalResource.link}">
-                                    <f:then>
-                                        <f:link.typolink
-                                                parameter="{img.originalResource.link}"
-                                                class="media-object {settings.detail.imageClass}"
-                                                additionalAttributes="{title:img.originalResource.title}">
-                                            <f:image image="{img}" width="400"
-                                                     alt="{img.originalResource.alt}"
-                                                     title="{img.originalResource.title}"
-                                                     class="figure-img img-fluid img-thumbnail rounded"
-                                                     additionalAttributes="{itemprop:'image', loading: 'lazy'}"/>
-                                        </f:link.typolink>
-                                    </f:then>
-                                    <f:else>
-                                        <a href="{f:uri.image(src:img.originalResource.publicUrl, maxWidth:1000)}"
-                                           class="media-object {settings.detail.imageClass}"
-                                           rel="images_tt_address_{address.uid}"
-                                           title="{img.originalResource.title}"
-                                           target="_blank">
-                                            <f:image image="{img}" width="400"
-                                                     alt="{img.originalResource.alt}"
-                                                     title="{img.originalResource.title}"
-                                                     class="figure-img img-fluid img-thumbnail rounded"
-                                                     additionalAttributes="{itemprop:'image', loading: 'lazy'}"/>
-                                        </a>
-                                    </f:else>
-                                </f:if>
-                                <f:if condition="{img.originalResource.description}">
-                                    <figcaption class="figure-caption">
-                                        {img.originalResource.description -> f:format.nl2br()}
-                                    </figcaption>
-                                </f:if>
-                            </figure>
-                        </div>
-                    </f:if>
-                </f:for>
+                <pp:structure.wrap.column class="col-md-4" count="3">
+                    <f:for each="{address.image}" as="img" iteration="iterator">
+                        <f:if condition="{iterator.cycle}>1">
+                            <div class="col-md-4" itemprop="image">
+                                <f:render partial="Plugin/RenderMedia" arguments="{
+                                    file: img.originalResource,
+                                    data: address,
+                                    settings: settings}" />
+                            </div>
+                        </f:if>
+                    </f:for>
+                </pp:structure.wrap.column>
             </div>
         </div>
     </f:if>
-
 </f:section>
+
+</html>

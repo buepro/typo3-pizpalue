@@ -4,11 +4,8 @@
 
 plugin.tx_ttaddress {
    view {
-      templateRootPaths {
-         22 = EXT:pizpalue/Extensions/tt_address/DisplayMode/Teaser/Resources/Private/Templates/
-      }
       partialRootPaths {
-         22 = EXT:pizpalue/Extensions/tt_address/DisplayMode/Teaser/Resources/Private/Partials/
+         31 = EXT:pizpalue/Extensions/tt_address/DisplayMode/Teaser/Resources/Private/Partials/
       }
    }
    settings.pizpalue.teaser {

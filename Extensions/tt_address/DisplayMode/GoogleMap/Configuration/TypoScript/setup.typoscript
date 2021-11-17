@@ -5,11 +5,11 @@
 plugin.tx_ttaddress {
    view {
       templateRootPaths {
-         20 = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Private/Templates/
+         32 = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Private/Templates/
       }
 
       partialRootPaths {
-         20 = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Private/Partials/
+         32 = EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Private/Partials/
       }
    }
    settings.pizpalue {

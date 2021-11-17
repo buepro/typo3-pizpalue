@@ -2,7 +2,7 @@
       xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers" data-namespace-typo3-fluid="true">
 
-{f:variable(name: 'addresses', value: {0: address}) -> v:condition.variable.isset(name: 'address')}
+{f:variable(name: 'addresses', value: {0: address}) -> f:if(condition: address)}
 
 {f:variable(name: 'mapConfig', value: settings.pizpalue.googleMap)}
 
