@@ -66,35 +66,48 @@ $footer-sections: map-merge($footer-sections, (
 //
 $frame-backgrounds: () !default;
 $frame-backgrounds: map-merge($frame-backgrounds, (
-    primary: (
-        background: $primary,
-        link-color: inherit,
-        link-hover-color: inherit,
-        inherit-link-style: dotted
+    'primary': (
+        'background': $primary,
+        'color': color-contrast($primary),
+        'link-color': 'inherit',
+        'inherit-link-style': 'dotted'
     ),
-    secondary: (
-        background: $secondary,
-        link-color: inherit,
-        link-hover-color: inherit,
-        inherit-link-style: dotted
+    'secondary': (
+        'background': $secondary,
+        'color': color-contrast($secondary),
+        'link-color': 'inherit',
+        'inherit-link-style': 'dotted'
     ),
-    complementary: (
-        background: $complementary,
-        link-color: inherit,
-        link-hover-color: inherit,
-        inherit-link-style: dotted
+    'complementary': (
+        'background': $complementary,
+        'color': color-contrast($complementary),
+        'link-color': 'inherit',
+        'inherit-link-style': 'dotted'
     ),
-    light: (
-        background: $light,
-        headings-color: $headings-color,
-        link-color: $link-color,
-        link-hover-color: $link-hover-color
+    'tertiary': (
+        'background': $tertiary,
+        'color': color-contrast($tertiary),
+        'link-color': 'inherit',
+        'inherit-link-style': 'dotted'
     ),
-    dark: (
-        background: $dark,
-        link-color: inherit,
-        link-hover-color: inherit,
-        inherit-link-style: dotted
+    'quaternary': (
+        'background': $quaternary,
+        'color': color-contrast($quaternary),
+        'link-color': 'inherit',
+        'inherit-link-style': 'dotted'
+    ),
+    'light': (
+        'background': $light,
+        'color': $body-color,
+        'headings-color': $headings-color,
+        'link-color': $link-color,
+        'link-hover-color': $link-hover-color
+    ),
+    'dark': (
+        'background': $dark,
+        'color': color-contrast($dark),
+        'link-color': 'inherit',
+        'inherit-link-style': 'dotted'
     )
 ));
 

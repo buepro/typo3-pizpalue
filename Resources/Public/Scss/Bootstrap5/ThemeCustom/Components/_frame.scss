@@ -19,12 +19,3 @@
 .frame-pp3 .frame-inner {
     @include pp-make-frame-bg($complementary);
 }
-
-//
-// Set headings color and link style
-//
-@each $name, $settings in $frame-backgrounds {
-    .frame-background-#{$name} {
-        @include pp-make-background($settings);
-    }
-}
