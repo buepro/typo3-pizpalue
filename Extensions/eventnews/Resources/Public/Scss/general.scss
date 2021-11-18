@@ -39,7 +39,7 @@ $font-size-base: 1rem !default;
     .ppc-time {
         width: 100%;
         &.btn-primary {
-            color: pp-compat-color-contrast($primary);
+            color: color-contrast($primary);
         }
     }
 }

@@ -68,7 +68,7 @@
         }
         .ppc-icon {
             display: none;
-            color: pp-compat-color-contrast($primary);
+            color: color-contrast($primary);
         }
         &.ppc-init {
             .pp-picoverlay-text {

@@ -48,7 +48,7 @@
         border-left: white 6px solid;
         border-top: white 6px solid;
         background: mix(white, $primary, 50%);
-        color: pp-compat-color-contrast(mix(white, $primary, 50%));
+        color: color-contrast(mix(white, $primary, 50%));
         transition: background 200ms, color 200ms, opacity 200ms;
         cursor: pointer;
         &:hover {
