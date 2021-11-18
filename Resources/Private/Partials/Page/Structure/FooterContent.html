@@ -2,15 +2,21 @@
 <section class="section footer-section footer-section-content">
     <div class="container">
         <div class="{pizpalue.scaffold.footer.rowClass}">
-            <pp:render.bootstrap.column class="{pizpalue.scaffold.footer.leftColumnClass}" count="3">
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '10', slide: '-1'}" />
-            </pp:render.bootstrap.column>
-            <pp:render.bootstrap.column class="{pizpalue.scaffold.footer.middleColumnClass}" count="3">
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '11', slide: '-1'}" />
-            </pp:render.bootstrap.column>
-            <pp:render.bootstrap.column class="{pizpalue.scaffold.footer.rightColumnClass}" count="3">
-                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '12', slide: '-1'}" />
-            </pp:render.bootstrap.column>
+            <f:if condition="{pizpalue.scaffold.footer.leftColumnClass}">
+                <pp:render.bootstrap.column class="{pizpalue.scaffold.footer.leftColumnClass}" count="3">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '10', slide: '-1'}" />
+                </pp:render.bootstrap.column>
+            </f:if>
+            <f:if condition="{pizpalue.scaffold.footer.middleColumnClass}">
+                <pp:render.bootstrap.column class="{pizpalue.scaffold.footer.middleColumnClass}" count="3">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '11', slide: '-1'}" />
+                </pp:render.bootstrap.column>
+            </f:if>
+            <f:if condition="{pizpalue.scaffold.footer.rightColumnClass}">
+                <pp:render.bootstrap.column class="{pizpalue.scaffold.footer.rightColumnClass}" count="3">
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '12', slide: '-1'}" />
+                </pp:render.bootstrap.column>
+            </f:if>
         </div>
     </div>
 </section>
