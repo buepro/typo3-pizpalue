@@ -78,26 +78,3 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
         }
     }
 }
-
-lib.contentElement.settings.responsiveimages.backendlayout {
-    subnavigation_left {
-        0 {
-            margins {
-                default = -40
-                xlarge = -40
-                large = -40
-            }
-            gutters >
-            corrections {
-                default = 40
-                xlarge = 40
-                large = 40
-            }
-        }
-        1.margins < .0.margins
-        1.gutters >
-        1.corrections < .0.corrections
-    }
-    subnavigation_right.0 < .subnavigation_left.0
-    subnavigation_right.2 < .subnavigation_left.1
-}

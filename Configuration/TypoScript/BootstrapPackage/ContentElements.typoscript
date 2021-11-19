@@ -1,0 +1,21 @@
+#=========================================================#
+# Adjust content elements from bootstrap package
+#=========================================================#
+
+#---------------------------------------------------------#
+# Use real size for image backgrounds defined by pizpalue
+# variants.
+#---------------------------------------------------------#
+lib.contentElement.settings.responsiveimages.contentelements {
+    carousel {
+        background_image {
+            multiplier {
+                default = 1.0
+                xlarge = 1.0
+                large = 1.0
+            }
+        }
+    }
+    carousel_fullscreen.background_image.multiplier < .carousel.background_image.multiplier
+    carousel_small.background_image.multiplier < .carousel.background_image.multiplier
+}
