@@ -9,6 +9,14 @@
 
 $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 
+:root {
+    @each $breakpoint in map-keys($navbar-heights) {
+        @include media-breakpoint-up($breakpoint) {
+            --pp-navbar-height: #{map-get($navbar-heights, $breakpoint)};
+        }
+    }
+}
+
 //
 // Position Fixed
 // --------------------------------------------------
@@ -19,11 +27,7 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
     }
 }
 .body-bg-top {
-    @each $breakpoint in map-keys($navbar-heights) {
-        @include media-breakpoint-up($breakpoint) {
-            padding-top: map-get($navbar-heights, $breakpoint);
-        }
-    }
+    padding-top: var(--pp-navbar-height);
 }
 .navbar-fixed-top {
     .navbar-collapse {
