@@ -51,7 +51,7 @@ pp:render.bootstrap.column
 
    <pp:render.bootstrap.column class="col col-md-8 col-xl-6" count="2" gutter="40" correction="2">
       <div class="content-from-column">
-         <v:content.render contentUids="{0: item.data.uid}" />
+         <f:cObject typoscriptObjectPath="lib.pizpalue.renderContent" data="{uid: item.data.uid}" />
       </div>
    </pp:render.bootstrap.column>
 
@@ -61,7 +61,7 @@ The above code results in:
 
    <div class="col col-md-8 col-xl-6">
       <div class="content-from-column">
-         <v:content.render contentUids="{0: item.data.uid}" />
+         <f:cObject typoscriptObjectPath="lib.pizpalue.renderContent" data="{uid: item.data.uid}" />
       </div>
    </div>
 
@@ -77,7 +77,7 @@ pp:structure.wrap.column
    <pp:structure.wrap.column class="col col-md-8 col-xl-6" count="2" gutter="40" correction="2">
       <div class="col col-md-8 col-xl-6">
          <div class="content-from-column">
-            <v:content.render contentUids="{0: item.data.uid}" />
+            <f:cObject typoscriptObjectPath="lib.pizpalue.renderContent" data="{uid: item.data.uid}" />
          </div>
       </div>
    </pp:structure.wrap.column>
@@ -88,7 +88,7 @@ The above code results in:
 
    <div class="col col-md-8 col-xl-6">
       <div class="content-from-column">
-         <v:content.render contentUids="{0: item.data.uid}" />
+         <f:cObject typoscriptObjectPath="lib.pizpalue.renderContent" data="{uid: item.data.uid}" />
       </div>
    </div>
 

@@ -22,7 +22,7 @@
         </include>
     </coverage>
     <testsuites>
-        <testsuite name="buepro-grevman-unit-tests">
+        <testsuite name="buepro-pizpalue-unit-tests">
             <directory>../Tests/Unit</directory>
 <!--            <file>-->
 <!--                ../Tests/Unit/Structure/VariantsModifierStackTest.php-->

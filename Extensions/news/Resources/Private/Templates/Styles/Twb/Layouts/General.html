@@ -1,8 +1,9 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-{pp:data.filesProcessor(data: contentObjectData, field: 'assets') -> v:variable.set(name: 'settings.dummyAsset')}
+{pp:data.filesProcessor(data: contentObjectData, field: 'assets') -> pvh:variable.set(name: 'settings.dummyAsset')}
 <div class="news">
     <f:render section="content"/>
 </div>

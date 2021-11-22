@@ -115,7 +115,7 @@ It might be needed to add the following extensions:
 .. code-block:: php
 
    protected $testExtensionsToLoad = [
-      'typo3conf/ext/vhs',
+      'typo3conf/ext/pvh',
       'typo3conf/ext/container',
       'typo3conf/ext/container_elements',
       'typo3conf/ext/bootstrap_package',

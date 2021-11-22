@@ -1,13 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:spaceless>
     <f:comment>Background image variants</f:comment>
     {pp:structure.variants(as: '_backgroundVariants', initialVariants: 'tx_pizpalue_background_image_variants')}
     {f:variable(name: '_backgroundAll', value: _all)}
-    {_backgroundVariants -> v:variable.set(name: '_backgroundAll.variants')}
+    {_backgroundVariants -> pvh:variable.set(name: '_backgroundAll.variants')}
 
     <f:comment>Initialize variables</f:comment>
     {f:variable(name: '_ppData', value: configuration.ppData)}

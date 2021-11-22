@@ -1,5 +1,4 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <div class="vcard" itemscope itemtype="http://schema.org/Person">
@@ -10,15 +9,8 @@
                     <picture>
                         <f:for each="{teaserConfig.variants}" key="name" as="variant">
                             <f:variable name="breakpoint">{variant.breakpoint as integer}</f:variable>
-                            {v:math.division(a: variant.item.relativeWidth, b: 100)
-                            -> v:math.product(b: variant.maxWidth)
-                            -> v:math.round()
-                            -> f:variable(name: 'width')}
-                            {v:math.division(a: teaserConfig.item.relativeHeight, b: 100)
-                            -> v:math.product(b: width)
-                            -> v:math.round()
-                            -> f:variable(name: 'height')}
-
+                            <f:variable name="width" value="{variant.item.relativeWidth / 100 * variant.maxWidth}" />
+                            <f:variable name="height" value="{teaserConfig.item.relativeHeight / 100 * width}" />
                             <f:if condition="{address.image}">
                                 <f:then>
                                     {f:uri.image(image: address.firstImage, width: width, height: height, cropVariant: name, maxWidth: width)

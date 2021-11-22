@@ -1,7 +1,7 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
-<v:format.trim>
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers">
+<pvh:format.trim>
     {f:translate(extensionName: 'news', key:'dateFormat') -> f:variable(name: '_dateFormat')}
     {f:format.date(date: n.datetime, format: '{_dateFormat} ') -> f:variable(name: '_startDay')}
     {f:format.date(date: n.eventEnd, format: '{_dateFormat} ') -> f:variable(name: '_endDay')}
@@ -28,5 +28,5 @@
             </f:if>
         </f:else>
     </f:if>
-</v:format.trim>
+</pvh:format.trim>
 </html>

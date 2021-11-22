@@ -34,8 +34,8 @@ the package listing in `typo3conf/PackageStates.php`:
 
 .. code-block:: php
 
-   'vhs' => [
-      'packagePath' => 'typo3conf/ext/vhs/',
+   'pvh' => [
+      'packagePath' => 'typo3conf/ext/pvh/',
    ],
    'gridelements' => [
       'packagePath' => 'typo3conf/ext/gridelements/',

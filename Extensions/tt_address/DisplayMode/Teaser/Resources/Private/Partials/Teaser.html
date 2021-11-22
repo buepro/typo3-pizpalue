@@ -1,13 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
-      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers" data-namespace-typo3-fluid="true">
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 
 {f:variable(name: '_teaserConfig', value: settings.pizpalue.teaser)}
+{addresses -> pvh:iterator.random(count: settings.pizpalue.teaser.maxItemCount, as: '_randomized')}
 <div class="pp-ttaddress-teaser">
-    <v:iterator.loop count="{settings.pizpalue.teaser.maxItemCount}">
-        {v:iterator.random(subject: addresses) -> f:variable(name:'randomAddress')}
-        <f:render partial="TeaserItem" arguments="{address: randomAddress, teaserConfig: _teaserConfig}" />
-    </v:iterator.loop>
+    <f:for each="{_randomized}" as="_item">
+        <f:render partial="TeaserItem" arguments="{address: _item, teaserConfig: _teaserConfig}" />
+    </f:for>
 </div>
 
 </html>

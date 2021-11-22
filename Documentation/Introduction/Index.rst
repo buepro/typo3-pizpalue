@@ -139,8 +139,7 @@ This extension can be provided thanks to outstanding work from TYPO3 community m
 - Benjamin Kott, extension `bootstrap_package <https://extensions.typo3.org/extension/bootstrap_package>`__
 - B13 GmbH, extension `container <https://extensions.typo3.org/extension/container>`__
 - Grid Elements Team, extension `gridelements <https://extensions.typo3.org/extension/gridelements>`__
-- FluidTYPO3 Team, extensions `vhs <https://extensions.typo3.org/extension/vhs>`__,
-  `flux <https://extensions.typo3.org/extension/flux>`__
+- FluidTYPO3 Team, extension `flux <https://extensions.typo3.org/extension/flux>`__
 - Georg Ringer, extensions `news <https://extensions.typo3.org/extension/news>`__,
   `eventnews <https://extensions.typo3.org/extension/eventnews>`__
 - tt_address Development Team, extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__

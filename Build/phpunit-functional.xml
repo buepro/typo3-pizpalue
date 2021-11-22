@@ -21,7 +21,7 @@
         </include>
     </coverage>
     <testsuites>
-        <testsuite name="buepro-grevman-functional-tests">
+        <testsuite name="buepro-pizpalue-functional-tests">
             <directory>../Tests/Functional</directory>
 <!--            <file>-->
 <!--                ../Tests/Functional/ViewHelpers/Data/ImageVariantsTextToArrayViewHelperTest.php-->

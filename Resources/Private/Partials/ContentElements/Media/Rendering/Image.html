@@ -1,5 +1,4 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <picture>
@@ -12,7 +11,7 @@
         <f:if condition="{width}">
             <f:if condition="{variant.aspectRatio}">
                 <f:variable name="aspectRatio">{variant.aspectRatio as float}</f:variable>
-                <f:variable name="height">{v:math.division(a: width, b: aspectRatio)}</f:variable>
+                <f:variable name="height" value="{width / aspectRatio}" />
                 <f:variable name="height">{height as integer}</f:variable>
             </f:if>
             <f:variable name="mediaQuery">{f:if(condition: breakpoint, then: 'media="(min-width: {breakpoint}px)"')}</f:variable>
@@ -42,7 +41,7 @@
     <f:variable name="defaultAspectRatio" value="{variants.default.aspectRatio}" />
     <f:if condition="{defaultAspectRatio}">
         <f:variable name="aspectRatio">{defaultAspectRatio as float}</f:variable>
-        <f:variable name="defaultHeight">{v:math.division(a: defaultWidth, b: aspectRatio)}</f:variable>
+        <f:variable name="defaultHeight" value="{defaultWidth / aspectRatio}" />
         <f:variable name="defaultHeight">{defaultHeight as integer}</f:variable>
     </f:if>
     <f:if condition="{defaultHeight}">

@@ -1,8 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<v:format.eliminate  whitespace="1" unixBreaks="1" windowsBreaks="1">
+<pvh:format.eliminate  whitespace="1" unixBreaks="1" windowsBreaks="1">
     <f:comment>
         <!------------------------------------------------------------------------------------------------------------
           Creates form field variables with the associated data. The variable name is the field name.
@@ -10,19 +10,19 @@
     </f:comment>
     <formvh:renderAllFormValues renderable="{form.formDefinition}" as="formValue">
         {formvh:translateElementProperty(element:formValue.element, property:'label')
-            -> v:format.eliminate(whitespace: 1, characters: '.-,;:/')
-            -> v:format.replace(substring: 'ä', replacement: 'ae', caseSensitive: 0)
-            -> v:format.replace(substring: 'ö', replacement: 'oe', caseSensitive: 0)
-            -> v:format.replace(substring: 'ü', replacement: 'ue', caseSensitive: 0)
+            -> pvh:format.eliminate(whitespace: 1, characters: '.-,;:/')
+            -> pvh:format.replace(substring: 'ä', replacement: 'ae', caseSensitive: 0)
+            -> pvh:format.replace(substring: 'ö', replacement: 'oe', caseSensitive: 0)
+            -> pvh:format.replace(substring: 'ü', replacement: 'ue', caseSensitive: 0)
             -> f:variable(name:'fieldName')}
         {f:variable(name: '_{fieldName}', value: formValue.processedValue)}
     </formvh:renderAllFormValues>
 
     <f:comment>
         <!------------------------------------------------------------------------------------------------------------
-          Compile content after v:format.eliminate below
+          Compile content after pvh:format.eliminate below
         ------------------------------------------------------------------------------------------------------------->
     </f:comment>
-</v:format.eliminate>
+</pvh:format.eliminate>
 #{_Name}#{_Email}#{_Telefon}#{_Betreff}#{_Mitteilung}#
 </html>

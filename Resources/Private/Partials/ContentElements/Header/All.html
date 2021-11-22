@@ -1,14 +1,14 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/Fluid/ViewHelpers"
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:comment>
     The subheader is only rendered in case the header is set.
     @see 1602678897780
 </f:comment>
 {f:variable(name: '_headerClasses', value: data.tx_pizpalue_header_class) -> f:if(condition: '{data.tx_pizpalue_header_class} != "none"')}
-{v:format.trim(content: '{_headerClasses} {settings.header.class}') -> f:variable(name: '_headerClasses')}
+{pvh:format.trim(content: '{_headerClasses} {settings.header.class}') -> f:variable(name: '_headerClasses')}
 {f:variable(name: '_subheaderClasses', value: data.tx_pizpalue_subheader_class) -> f:if(condition: '{data.tx_pizpalue_subheader_class} != "none"')}
-{v:format.trim(content: '{_subheaderClasses} {settings.subheader.class}') -> f:variable(name: '_subheaderClasses')}
+{pvh:format.trim(content: '{_subheaderClasses} {settings.subheader.class}') -> f:variable(name: '_subheaderClasses')}
 <f:if condition="{data.header_layout} != 100">
     <f:if condition="{data.header} || {data.date}">
         <header class="frame-header">

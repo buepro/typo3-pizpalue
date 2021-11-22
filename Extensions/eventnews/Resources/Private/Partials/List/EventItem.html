@@ -1,7 +1,6 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers">
 
 <div id="event{n.uid}" class="pp-marked-target ppc-item" itemscope="itemscope" itemtype="http://schema.org/Event">
@@ -22,7 +21,7 @@
         </pp:render.bootstrap.column>
         <pp:render.bootstrap.column class="col-md-8 col-lg-9" count="2">
             {f:variable(name: '_he', value: 6)}
-            {v:math.sum(a: _h, b: 1) -> f:variable(name: '_he') -> f:if(condition: '{_h} < 5')}
+            {f:variable(name: '_he', value: '{_h + 1}') -> f:if(condition: '{_h} < 5')}
             <h{_he} class="ppc-title">
             <n:link newsItem="{n}" settings="{settings}"><span itemprop="name">{n.title}</span></n:link>
             </h{_he}>

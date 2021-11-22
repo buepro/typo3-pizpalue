@@ -1,6 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
-      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers" data-namespace-typo3-fluid="true">
+      xmlns:bp="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 
 {f:variable(name: 'addresses', value: {0: address}) -> f:if(condition: address)}
 
@@ -10,10 +11,12 @@
     -> f:format.json(forceObject: 'true')
     -> f:variable(name: 'jsonData')}
 
-{v:iterator.explode(content: mapConfig.pages, glue: ',') -> f:variable(name: 'pages')}
-{v:iterator.indexOf(needle: contentObjectData.pid, haystack: pages,) -> f:variable(name: 'pageEnabled')}
-
-<f:if condition="{pageEnabled} > -1">
+{f:variable(name: '_pageEnabled', value: 0)}
+{mapConfig.pages -> bp:explode(delimiter: ',', as: '_pages')}
+<f:for each="{_pages}" as="_pageUid">
+    {f:variable(name: '_pageEnabled', value: 1) -> f:if(condition: '{contentObjectData.pid} == {_pageUid}')}
+</f:for>
+<f:if condition="{_pageEnabled as boolean}">
     <f:then>
         <f:render section="googleMap" arguments="{_all}" />
     </f:then>

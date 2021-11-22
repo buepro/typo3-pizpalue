@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
@@ -28,7 +28,7 @@
 
     {pp:pizpalueFrame(data: data, pizpalueConstants: pizpalue, as: '_ppData')}
 
-    {v:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}})
+    {pvh:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}})
         -> f:variable(name: 'settings')
         -> f:if(condition: '{_ppData.hasScrollAnimation} == 1 || {_ppData.hasCssAnimation} == 1')}
 

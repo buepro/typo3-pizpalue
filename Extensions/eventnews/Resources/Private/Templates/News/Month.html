@@ -2,7 +2,7 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
       xmlns:events="http://typo3.org/ns/GeorgRinger/Eventnews/ViewHelpers"
-      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers">
 
 <f:layout name="General"/>
 
@@ -79,7 +79,7 @@
                 {contentObjectData.subheader -> f:variable(name: '_title')
                     -> f:if(condition: '!{contentObjectData.header} && {contentObjectData.subheader}')}
                 <f:if condition="{_a as integer} != 100">
-                    {v:math.sum(a: _a, b: 1) -> f:variable(name: '_h')}
+                    {f:variable(name: '_h', value: '{_a + 1}')}
                     <header class="frame-header">
                         <h{_h} class="element-header "><span>{_title}</span></h{_h}>
                     </header>
@@ -118,7 +118,7 @@
                     </div>
                     <f:for as="newsItem" each="{day.news}" iteration="i">
                         {f:render(partial: 'General/EventSpan', arguments: '{n: newsItem}')
-                            -> v:format.eliminate(unixBreaks: 1, windowsBreaks: 1)
+                            -> pvh:format.eliminate(unixBreaks: 1, windowsBreaks: 1)
                             -> f:variable(name: '_eventSpan')}
                         {f:variable(name: '_location', value: ', {newsItem.locationSimple}') -> f:if(condition: newsItem.locationSimple)}
                         {f:variable(name: '_location', value: ', {newsItem.location.title}') -> f:if(condition: newsItem.location.title)}
