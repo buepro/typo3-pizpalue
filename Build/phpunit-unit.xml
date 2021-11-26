@@ -25,7 +25,7 @@
         <testsuite name="buepro-pizpalue-unit-tests">
             <directory>../Tests/Unit</directory>
 <!--            <file>-->
-<!--                ../Tests/Unit/Structure/VariantsModifierStackTest.php-->
+<!--                ../Tests/Unit/Utility/TcaUtilityTest.php-->
 <!--            </file>-->
         </testsuite>
     </testsuites>

@@ -53,7 +53,7 @@
 	"prefer-stable": true,
 	"require": {
 		"php": ">=7.3.0",
-		"bk2k/bootstrap-package": "dev-master#3c6c1040",
+		"bk2k/bootstrap-package": "dev-master#028a786b",
 		"buepro/typo3-pvh": "^1.0",
 		"typo3/cms-core": "^10.4 || ^11.5"
 	},

@@ -38,47 +38,42 @@ defined('TYPO3') or die('Access denied.');
         'NaN' => $defaultAspectRatios['NaN'],
     ];
 
-    /**
-     * Assign side ratios to content elements with images
-     */
-    foreach (['image', 'textpic', 'pp_picoverlay'] as $contentElement) {
-        if (!isset($GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'])) {
-            $GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] =
-                $GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
-        }
-        $cropVariants = &$GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
-        $cropVariants['default']['allowedAspectRatios'] = $aspectRatios;
-        $cropVariants['large']['allowedAspectRatios'] = $aspectRatios;
-        $cropVariants['medium']['allowedAspectRatios'] = $aspectRatios;
-        $cropVariants['small']['allowedAspectRatios'] = $aspectRatios;
-        $cropVariants['extrasmall']['allowedAspectRatios'] = $aspectRatios;
+    // Assign side ratios to background image
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tt_content', 'background_image');
+    // Assign side ratios to content elements with images
+    foreach (['image', 'textpic', 'pp_picoverlay'] as $cType) {
+        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tt_content', $cType, 'image');
     }
-
-    /**
-     * Assign side ratios to content elements with assets
-     */
-    foreach (['list', 'media', 'textmedia'] as $contentElement) {
-        if (!isset($GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'])) {
-            $GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] =
-                $GLOBALS['TCA']['tt_content']['types']['media']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
-        }
-        $cropVariants = &$GLOBALS['TCA']['tt_content']['types'][$contentElement]['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
-        $cropVariants['default']['allowedAspectRatios'] = $aspectRatios;
-        $cropVariants['large']['allowedAspectRatios'] = $aspectRatios;
-        $cropVariants['medium']['allowedAspectRatios'] = $aspectRatios;
-        $cropVariants['small']['allowedAspectRatios'] = $aspectRatios;
-        $cropVariants['extrasmall']['allowedAspectRatios'] = $aspectRatios;
+    //Assign side ratios to content elements with assets
+    foreach (['list', 'media', 'textmedia', 'pp_emphasize_media'] as $cType) {
+        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tt_content', $cType, 'assets');
+    }
+    // Card Group
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_card_group_item', '1', 'image');
+    // Accordion
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_accordion_item', '1', 'media');
+    // Carousel Background Image
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tx_bootstrappackage_carousel_item', 'background_image');
+    // Carousel Image
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tx_bootstrappackage_carousel_item', 'image');
+    // Tab
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_tab_item', '1', 'media');
+    // Timeline
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_timeline_item', '1', 'image');
+    // Pages
+    foreach ([1, 3, 4] as $cType) {
+        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'pages', $cType, 'thumbnail');
     }
 
     /**
      * Assign side ratios to extension news
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
-        $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['label'] = 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.dummyAsset';
+        $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['label'] =
+            'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.dummyAsset';
         $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['config']['maxitems'] = 1;
-        foreach ([0, 1, 2] as $type) {
-            $GLOBALS['TCA']['tx_news_domain_model_news']['types'][$type]['columnsOverrides']['fal_media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] =
-                $GLOBALS['TCA']['tt_content']['types']['media']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
+        foreach ([0, 1, 2] as $cType) {
+            \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_news_domain_model_news', $cType, 'fal_media');
         }
     }
 })();
