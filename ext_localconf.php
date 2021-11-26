@@ -9,7 +9,7 @@
 
 defined('TYPO3') || die('Access denied.');
 
-(function () {
+(static function () {
     /**
      * Make extension configurations accessible
      */
