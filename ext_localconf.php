@@ -129,7 +129,7 @@ defined('TYPO3') || die('Access denied.');
         /**
          * Register icons
          */
-        $icons = ['modal-dialog', 'list-categorized-content', 'schema', 'picoverlay'];
+        $icons = ['modal-dialog', 'list-categorized-content', 'schema', 'picoverlay', 'emphasize-media'];
         foreach ($icons as $icon) {
             $iconRegistry->registerIcon(
                 'content-pizpalue-' . $icon,
@@ -178,7 +178,7 @@ defined('TYPO3') || die('Access denied.');
     /**
      * Upgrade wizards
      */
-    $upgradeSteps = ['ContentElementXxl', 'ContentElementClasses'];
+    $upgradeSteps = ['ContentElementXxl', 'ContentElementClasses', 'EmphasizeMedia'];
     foreach ($upgradeSteps as $upgradeStep) {
         $className = 'Buepro\\Pizpalue\\Updates\\' . $upgradeStep . 'Update';
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][$className] = $className;

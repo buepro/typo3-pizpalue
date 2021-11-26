@@ -24,7 +24,7 @@ defined('TYPO3') or die('Access denied.');
         'tt_content',
         'CType',
         [
-            'Picture overlay',
+            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.title',
             'pp_picoverlay',
             'content-pizpalue-picoverlay',
             'pizpalue'

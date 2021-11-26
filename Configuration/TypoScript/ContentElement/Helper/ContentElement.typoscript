@@ -76,23 +76,6 @@ lib.contentElement {
             }
 
             #---------------------------------------------------------#
-            # Emphasize media
-            #---------------------------------------------------------#
-            contentelements {
-                textmedia {
-                    left.emphasizeMediaMultiplier {
-                        default = 0.7
-                        xlarge = 0.7
-                        large = 0.7
-                        medium = 0.5
-                    }
-                    right.emphasizeMediaMultiplier < .left.emphasizeMediaMultiplier
-                    centered_left.emphasizeMediaMultiplier < .left.emphasizeMediaMultiplier
-                    centered_right.emphasizeMediaMultiplier < .left.emphasizeMediaMultiplier
-                }
-            }
-
-            #---------------------------------------------------------#
             # Default variants adjustments for small screens
             #---------------------------------------------------------#
             variants {

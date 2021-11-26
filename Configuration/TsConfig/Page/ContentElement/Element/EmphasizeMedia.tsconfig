@@ -1,0 +1,21 @@
+#---------------------------------------------------------#
+# New content element wizard
+#---------------------------------------------------------#
+mod.wizards.newContentElement.wizardItems.interactive {
+   elements {
+      pp_emphasize_media {
+         iconIdentifier = content-pizpalue-emphasize-media
+         title = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_emphasize_media.title
+         description = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_emphasize_media.description
+         tt_content_defValues {
+            CType = pp_emphasize_media
+         }
+      }
+   }
+   show := addToList(pp_emphasize_media)
+}
+
+#---------------------------------------------------------#
+# Selector for field imageorient
+#---------------------------------------------------------#
+TCEFORM.tt_content.imageorient.types.pp_emphasize_media.removeItems = 0,1,2,8,9,10,17,18

@@ -9,9 +9,6 @@
 
 defined('TYPO3') or die('Access denied.');
 
-/**
- * @todo Split file into logical groups
- */
 (static function (): void {
     /**
      * Add content element group to content element selector
@@ -94,16 +91,6 @@ defined('TYPO3') or die('Access denied.');
         'pp-tile-12'
     ];
     $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = $items;
-
-    /**
-     * Add `emphasize media` layout for textmedia contentelement
-     */
-    $items = $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['layout']['config']['items'] ?? $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
-    $items[] = [
-        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.emphasize_media',
-        'pp-emphasize-media'
-    ];
-    $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['layout']['config']['items'] = $items;
 
     /**
      * Extension news

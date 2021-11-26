@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+
+    {f:variable(name: '_orientClass', value: 'textmedia-centered textmedia-left')}
+    {f:variable(name: '_orientClass', value: 'textmedia-centered textmedia-right') -> f:if(condition: '{data.imageorient} == 125')}
+    {f:variable(name: '_orientClass', value: 'textmedia-left') -> f:if(condition: '{data.imageorient} == 26')}
+    {f:variable(name: '_orientClass', value: 'textmedia-right') -> f:if(condition: '{data.imageorient} == 25')}
+    {f:variable(name: 'imageConfig', value: settings.responsiveimages.contentelements.pp_emphasize_media)}
+    <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}" />
+
+    <div class="pp-emphasize-media textmedia {_orientClass}">
+        <div class="textmedia-item textmedia-gallery">
+            <f:render partial="EmphasizeMedia/Gallery" arguments="{_all}" />
+        </div>
+        <div class="textmedia-item textmedia-text">
+            <div class="ppc-wrap">
+                <f:if condition="{data.teaser} && {data.bodytext}">
+                    <f:then>
+                        <f:render partial="Header/All" arguments="{_all}" />
+                        <div class="ppc-teaser">
+                            <f:format.html>{data.teaser}</f:format.html>
+                        </div>
+                        <div id="bodytext-{data.uid}" class="ppc-bodytext{f:if(condition: data.readmore_label, then: ' collapse')}">
+                            <f:format.html>{data.bodytext}</f:format.html>
+                        </div>
+                        <f:if condition="{data.readmore_label}">
+                            <div class="ppc-control">
+                                <a class="ppc-readmore collapsed" data-toggle="collapse" data-bs-toggle="collapse" href="#bodytext-{data.uid}"
+                                   aria-expanded="false" aria-controls="bodytext-{data.uid}">
+                                    <span class="ppc-icon mr-2 me-2">&xdtri;</span><span class="ppc-more">{data.readmore_label}</span>
+                                    <span class="ppc-less">{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:less')}</span>
+                                </a>
+                            </div>
+                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <f:render partial="Header/All" arguments="{_all}" />
+                        <f:format.html>{data.teaser}</f:format.html>
+                        <f:format.html>{data.bodytext}</f:format.html>
+                    </f:else>
+                </f:if>
+            </div>
+        </div>
+    </div>
+
+</f:section>
+</html>

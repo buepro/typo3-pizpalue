@@ -1,0 +1,31 @@
+tt_content.pp_emphasize_media >
+tt_content.pp_emphasize_media =< lib.contentElement
+tt_content.pp_emphasize_media {
+
+    templateName = EmphasizeMedia
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = assets
+        }
+    }
+
+}
+
+lib.contentElement.settings.responsiveimages.contentelements {
+    pp_emphasize_media {
+        multiplier {
+            default = 0.7
+            xlarge = 0.7
+            large = 0.7
+            medium = 0.7
+        }
+        gutters {
+            default = 40
+            xlarge = 40
+            large = 40
+            medium = 40
+        }
+    }
+}

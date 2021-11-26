@@ -24,7 +24,7 @@ defined('TYPO3') or die('Access denied.');
         'tt_content',
         'CType',
         [
-            'Schema',
+            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.title',
             'pp_schema',
             'content-pizpalue-schema',
             'pizpalue'

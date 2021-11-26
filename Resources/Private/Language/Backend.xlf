@@ -175,6 +175,13 @@
 				<source>Info</source>
 			</trans-unit>
 
+			<trans-unit id="ce_emphasize_media.title">
+				<source>Emphasize media</source>
+			</trans-unit>
+			<trans-unit id="ce_emphasize_media.description">
+				<source>Media element with text where the media element gets more attention</source>
+			</trans-unit>
+
 			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
 				<source>Enable bootstrap package page layouts</source>
 			</trans-unit>
