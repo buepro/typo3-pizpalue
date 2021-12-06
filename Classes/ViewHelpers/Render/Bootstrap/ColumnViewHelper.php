@@ -44,7 +44,8 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
         $this->registerUniversalTagAttributes();
         $this->registerTagAttribute('itemscope', 'string', 'Itemscope attribute');
         $this->registerTagAttribute('itemtype', 'string', 'Itemtype attribute');
-        $this->registerArgument('count', 'int', 'Column count in row', false, 1);
+        $this->registerArgument('rowClass', 'string', 'Classes assigned to the wrapping row.', false, '');
+        $this->registerArgument('count', 'int', 'Column count in row. Might be overwritten by rowClass definitions.', false, 1);
         $this->registerArgument('gutter', 'float|array', 'Space between columns. In case a number is provided it will be used for all screen breakpoints.', false, 0);
         $this->registerArgument('correction', 'float|array', 'Correction to be subtracted. In case a float is provided it will be used for all screen breakpoints.', false, 0);
         $this->registerArgument('tagName', 'string', 'Tag name', false, 'div');
@@ -55,7 +56,7 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
         $this->tagName = $this->arguments['tagName'];
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
             $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
-            $multiplier = ColumnVariantsUtility::getMultiplier($this->arguments['class'], $this->arguments['count']);
+            $multiplier = ColumnVariantsUtility::getMultiplier($this->arguments['class'], $this->arguments['rowClass'], $this->arguments['count']);
             $correction = StructureVariantsUtility::getVectorProperty($this->arguments['correction']);
             $modifier = (new VariantsModifier())
                 ->setMargins(VectorUtility::negate($gutter))

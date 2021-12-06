@@ -39,7 +39,8 @@ class GetForColumnViewHelper extends AbstractViewHelper
         $this->registerArgument('as', 'string', 'Name of variable to create.', true);
         $this->registerArgument('multiplier', 'array', 'Initial multiplier', false);
         $this->registerArgument('class', 'string', 'CSS classes used for defining the column', false);
-        $this->registerArgument('count', 'int', 'Column count in row', false);
+        $this->registerArgument('rowClass', 'string', 'Classes assigned to the wrapping row.', false, '');
+        $this->registerArgument('count', 'int', 'Column count in row. Might be overwritten by rowClass definitions.', false);
     }
 
     /**
@@ -55,8 +56,9 @@ class GetForColumnViewHelper extends AbstractViewHelper
     ) {
         $multiplier = $arguments['multiplier'] ?? [];
         $class = $arguments['class'] ?? '';
+        $rowClass = $arguments['rowClass'] ?? '';
         $count = $arguments['count'] ?? 1;
-        $multiplier = ColumnVariantsUtility::getMultiplier($class, $count, $multiplier);
+        $multiplier = ColumnVariantsUtility::getMultiplier($class, $rowClass, $count, $multiplier);
         if ($arguments['as']) {
             $renderingContext->getVariableProvider()->add($arguments['as'], $multiplier);
             return '';

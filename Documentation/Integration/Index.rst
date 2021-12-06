@@ -37,19 +37,40 @@ For debugging purposes the `pp:structure.variantsModifierStack` view helper migh
    </f:if>
 
 
-Structure elements
-------------------
+Structure view helpers
+----------------------
 
-When creating templates structures dividing the available width might be defined (e.g. columns). By providing the system
-with information regarding the available space within the structures the content rendering can be optimized. A typical
-scenario is to render images in columns. For this purpose the following view helpers are available:
+When creating templates structures dividing the available width might be defined
+(e.g. columns). By providing the system with information regarding the available
+space within the structures the content rendering can be optimized. A typical
+scenario is to render images in columns.
+
+The main properties used by the structure view helpers are:
+
+==========  ====================================================================
+Property    Description
+==========  ====================================================================
+class       Classes used by the column or grid element. Example: `col col-xxl-4`
+rowClass    Classes used by the wrapping row. Example: `row row-cols-md-3`
+count       Number of columns rendered within the wrapping row. Is only used
+            in case the column count per breakpoint can't be resolved by
+            `class` and `rowClass`.
+==========  ====================================================================
+
+The following view helpers are available:
+- pp:render.bootstrap.column
+- pp:structure.wrap.column
+- pp:structure.multiplier.getForColumn
+
+
+Examples:
 
 pp:render.bootstrap.column
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: html
 
-   <pp:render.bootstrap.column class="col col-md-8 col-xl-6" count="2" gutter="40" correction="2">
+   <pp:render.bootstrap.column class="col col-md-8 col-xl-6" rowClass="row row-cols-2" gutter="40" correction="2">
       <div class="content-from-column">
          <f:cObject typoscriptObjectPath="lib.pizpalue.renderContent" data="{uid: item.data.uid}" />
       </div>
@@ -64,10 +85,6 @@ The above code results in:
          <f:cObject typoscriptObjectPath="lib.pizpalue.renderContent" data="{uid: item.data.uid}" />
       </div>
    </div>
-
-.. note::
-
-   The `count`-attribute is used when the width from the column isn't specified by the classes (e.g. when using `col`)
 
 pp:structure.wrap.column
 ~~~~~~~~~~~~~~~~~~~~~~~~

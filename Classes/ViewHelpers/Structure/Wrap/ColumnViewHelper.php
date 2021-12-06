@@ -55,6 +55,7 @@ class ColumnViewHelper extends AbstractViewHelper
     public function initializeArguments()
     {
         $this->registerArgument('class', 'string', 'CSS classes used to define the column', false, '');
+        $this->registerArgument('rowClass', 'string', 'Classes assigned to the wrapping row.', false, '');
         $this->registerArgument('count', 'int', 'Column count in row', false, 1);
         $this->registerArgument('gutter', 'float|array', 'Space between columns. In case a number is provided it will be used for all screen breakpoints.', false, 0);
         $this->registerArgument('correction', 'float|array', 'Correction to be subtracted. In case a float is provided it will be used for all screen breakpoints.', false, 0);
@@ -67,7 +68,7 @@ class ColumnViewHelper extends AbstractViewHelper
     ): string {
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
             $gutter = StructureVariantsUtility::getVectorProperty($arguments['gutter']);
-            $multiplier = ColumnVariantsUtility::getMultiplier($arguments['class'], $arguments['count']);
+            $multiplier = ColumnVariantsUtility::getMultiplier($arguments['class'], $arguments['rowClass'], $arguments['count']);
             $correction = StructureVariantsUtility::getVectorProperty($arguments['correction']);
             $modifier = (new VariantsModifier())
                 ->setMargins(VectorUtility::negate($gutter))

@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\Utility;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\MathUtility;
 
 /**
  * Used to calculate variants properties for a column.
@@ -33,7 +34,7 @@ class ColumnVariantsUtility
      * @var string[]
      */
     private static $breakpointMap = [
-        'extrasmall' => '',
+        'extrasmall' => 'xs',
         'small' => 'sm',
         'medium' => 'md',
         'large' => 'lg',
@@ -45,58 +46,104 @@ class ColumnVariantsUtility
      * Calculates the factor for a breakpoint based on the css classes used to define the column and the column count
      * from the row.
      *
-     * @param array $items CSS items defining the column (e.g. ['col', 'col-md', 'col-lg-4'])
-     * @param int $count
-     * @param string $breakpoint
-     * @return bool|float|int
+     * @param array $columnClasses CSS items defining the column (e.g. ['col', 'col-md', 'col-lg-4'])
      */
-    private static function getColumnFactorForBreakpoint(array $items, int $count, string $breakpoint)
+    private static function getColumnFactorForBreakpoint(array $columnClasses, int $count, string $breakpoint): ?float
     {
-        $factor = false;
-        foreach ($items as $item) {
-            $parts = GeneralUtility::trimExplode('-', $item, true);
+        $result = null;
+        // Order column classes for to ('col', 'col-3', 'col-md', 'col-md-3').
+        // Last element for breakpoints defines the factor.
+        sort($columnClasses);
+        foreach ($columnClasses as $columnClass) {
+            $parts = GeneralUtility::trimExplode('-', $columnClass, true);
             if ($parts[0] !== 'col') {
                 continue;
             }
-            // CSS definition `col`
-            if (count($parts) === 1 && $breakpoint === 'extrasmall') {
-                $factor = 1 / $count;
+            // CSS definition col
+            if (count($parts) === 1) {
+                $result = 1 / $count;
+                continue;
             }
-            // CSS definition `col-3`
-            if (count($parts) === 2 && (int) $parts[1] > 0 && $breakpoint === 'extrasmall') {
-                $factor = ((float) $parts[1]) / 12;
+            // CSS definition col-3 or col-md
+            if (count($parts) === 2) {
+                if (MathUtility::canBeInterpretedAsInteger($parts[1])) {
+                    $result = ((float) $parts[1]) / 12;
+                    continue;
+                }
+                if ($parts[1] === self::$breakpointMap[$breakpoint]) {
+                    $result = 1 / $count;
+                    continue;
+                }
             }
-            // CSS definition `col-md`
-            if (count($parts) === 2 && $parts[1] === self::$breakpointMap[$breakpoint]) {
-                $factor = 1 / $count;
-            }
-            // CSS definition `col-md-3`
+            // CSS definition col-md-3
             if (count($parts) === 3 && $parts[1] === self::$breakpointMap[$breakpoint]) {
-                $factor = ((float) $parts[2]) / 12;
+                $result = ((float) $parts[2]) / 12;
             }
         }
-        return $factor;
+        return $result;
+    }
+
+    /**
+     * The returned array associates each breakpoint with the columns count:
+     *  [
+     *      ...
+     *      'medium' => 3,
+     *      ...
+     *  ]
+     */
+    public static function getColumnCountsFromRowClasses(string $rowClasses, int $defaultCount = 1): array
+    {
+        $bootstrapBreakpointMap = array_flip(self::$breakpointMap);
+        $result = array_fill_keys($bootstrapBreakpointMap, $defaultCount);
+        if (preg_match_all('/row-cols-(\w+)-?(\d+)?/', $rowClasses, $matches) !== false) {
+            $definedRows = [];
+            foreach ($matches[1] as $key => $columnCountOrBootstrapBreakpoint) {
+                if (MathUtility::canBeInterpretedAsInteger($columnCountOrBootstrapBreakpoint)) {
+                    $result = array_fill_keys($bootstrapBreakpointMap, (int)$columnCountOrBootstrapBreakpoint);
+                } else {
+                    $definedRows[$columnCountOrBootstrapBreakpoint] = (int)$matches[2][$key];
+                }
+            }
+            // Assign counts to breakpoints. Start from extrasmall breakpoint and pass count to subsequent
+            // breakpoints until a count is defined again.
+            $previousCount = $result['extrasmall'];
+            foreach ($result as $breakpoint => &$count) {
+                if (isset($definedRows[self::$breakpointMap[$breakpoint]])) {
+                    $previousCount = $count = $definedRows[self::$breakpointMap[$breakpoint]];
+                } else {
+                    $count = $previousCount;
+                }
+            }
+            unset($count);
+        }
+        return $result;
     }
 
     /**
      * Calculates a new multiplier based on the column css classes, the column count and a base multiplier.
      *
      * @param string $class CSS classes used to define the column
-     * @param int $count Columns count in row
+     * @param string $rowClass CSS classes assigned to wrapping row. Overwrites $row.
+     * @param int $count Column count in row
      * @param array $baseMultiplier
      * @return array
      */
-    public static function getMultiplier(string $class = '', int $count = 1, array $baseMultiplier = []): array
-    {
+    public static function getMultiplier(
+        string $class = '',
+        string $rowClass = 'row-cols-1',
+        int $count = 1,
+        array $baseMultiplier = []
+    ): array {
         // Set initial multiplier
         $multiplier = array_merge(self::$defaultMultiplier, $baseMultiplier);
         $multiplier = array_intersect_key($multiplier, self::$defaultMultiplier);
         // Calculate new multipliers
-        $items = GeneralUtility::trimExplode(' ', $class, true);
+        $columnClasses = GeneralUtility::trimExplode(' ', $class, true);
+        $columnCountsFromRowClasses = self::getColumnCountsFromRowClasses($rowClass, $count);
         $previousFactor = 1.0;
         foreach ($multiplier as $breakpoint => $value) {
-            $factor = self::getColumnFactorForBreakpoint($items, $count, $breakpoint);
-            if (is_numeric($factor)) {
+            $factor = self::getColumnFactorForBreakpoint($columnClasses, $columnCountsFromRowClasses[$breakpoint], $breakpoint);
+            if ($factor !== null) {
                 $multiplier[$breakpoint] = $factor * $value;
                 $previousFactor = $factor;
             } else {

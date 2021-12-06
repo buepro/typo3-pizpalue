@@ -20,28 +20,28 @@ class ColumnVariantsUtilityTest extends UnitTestCase
     public function testGetMultiplierDataProvider(): array
     {
         return [
-            'col, no row' => ['col', 0, [], array_fill_keys(self::BREAKPOINTS, 1.0)],
-            'col, 1 row' => ['col', 1, [], array_fill_keys(self::BREAKPOINTS, 1.0)],
-            'col, 2 rows' => ['col', 2, [], array_fill_keys(self::BREAKPOINTS, 0.5)],
-            'col, 3 rows' => ['col', 3, [], array_fill_keys(self::BREAKPOINTS, 1/3)],
-            'col-1, no row' => ['col-1', 0, [], array_fill_keys(self::BREAKPOINTS, 1/12)],
-            'col-1, 2 rows' => ['col-1', 2, [], array_fill_keys(self::BREAKPOINTS, 1/12)],
-            'col-4, no row' => ['col-4', 0, [], array_fill_keys(self::BREAKPOINTS, 1/3)],
+            'col, no row' => ['col', '', 0, [], array_fill_keys(self::BREAKPOINTS, 1.0)],
+            'col, 1 row' => ['col', '', 1, [], array_fill_keys(self::BREAKPOINTS, 1.0)],
+            'col, 2 rows' => ['col', '', 2, [], array_fill_keys(self::BREAKPOINTS, 0.5)],
+            'col, 3 rows' => ['col', '', 3, [], array_fill_keys(self::BREAKPOINTS, 1/3)],
+            'col-1, no row' => ['col-1', '', 0, [], array_fill_keys(self::BREAKPOINTS, 1/12)],
+            'col-1, 2 rows' => ['col-1', '', 2, [], array_fill_keys(self::BREAKPOINTS, 1/12)],
+            'col-4, no row' => ['col-4', '', 0, [], array_fill_keys(self::BREAKPOINTS, 1/3)],
             'col-sm-4, no row' => [
-                'col-sm-4', 0, [],
+                'col-sm-4', '', 0, [],
                 array_merge(array_fill_keys(self::BREAKPOINTS, 1/3), [
                     'extrasmall' => 1.0
                 ]),
             ],
             'col-md-4, no row' => [
-                'col-md-4', 0, [],
+                'col-md-4', '', 0, [],
                 array_merge(array_fill_keys(self::BREAKPOINTS, 1/3), [
                     'extrasmall' => 1.0,
                     'small' => 1.0,
                 ]),
             ],
             'col-lg-4, no row' => [
-                'col-lg-4', 0, [],
+                'col-lg-4', '', 0, [],
                 array_merge(array_fill_keys(self::BREAKPOINTS, 1/3), [
                     'extrasmall' => 1.0,
                     'small' => 1.0,
@@ -49,7 +49,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
                 ]),
             ],
             'col-xl-4, no row' => [
-                'col-xl-4', 0, [],
+                'col-xl-4', '', 0, [],
                 array_merge(
                     array_fill_keys(self::BREAKPOINTS, 1.0),
                     [
@@ -59,7 +59,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
                 ),
             ],
             'col-xxl-4, no row' => [
-                'col-xxl-4', 0, [],
+                'col-xxl-4', '', 0, [],
                 array_merge(
                     array_fill_keys(self::BREAKPOINTS, 1.0),
                     [
@@ -68,7 +68,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
                 ),
             ],
             'col-md-6 col-lg-4 col-xxl-3' => [
-                'col-md-6 col-lg-4 col-xxl-3', 0, [],
+                'col-md-6 col-lg-4 col-xxl-3', '', 0, [],
                 [
                     'extrasmall' => 1.0,
                     'small' => 1.0,
@@ -79,7 +79,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
                 ]
             ],
             'col-md-6 col-lg-4 col-xxl-3 with base multiplier' => [
-                'col-md-6 col-lg-4 col-xxl-3', 0,
+                'col-md-6 col-lg-4 col-xxl-3', '', 0,
                 [
                     'extrasmall' => 0.8,
                     'small' => 0.7,
@@ -97,18 +97,33 @@ class ColumnVariantsUtilityTest extends UnitTestCase
                     'default' => 0.3 * 1/4,
                 ]
             ],
+            'rowClass defines column' => [
+                'col', 'row-cols-4', 1, [],
+                array_fill_keys(self::BREAKPOINTS, 1/4),
+            ],
+            'rowClass overwrites breakpoint' => [
+                'col', 'row-cols-xl-4', 1, [],
+                array_merge(array_fill_keys(self::BREAKPOINTS, 1.0), [
+                    'xlarge' => 1/4,
+                    'default' => 1/4,
+                ]),
+            ],
+            'rowClass overwrites count' => [
+                'col', 'row-cols-3', 2, [],
+                array_fill_keys(self::BREAKPOINTS, 1/3),
+            ],
         ];
     }
 
     /**
      * @dataProvider testGetMultiplierDataProvider
      */
-    public function testGetMultiplier(string $class, int $count, array $baseMultiplier, array $expected): void
+    public function testGetMultiplier(string $class, string $rowClass, int $count, array $baseMultiplier, array $expected): void
     {
-        if ($count === 0 && $baseMultiplier === []) {
+        if ($rowClass === '' && $count === 0 && $baseMultiplier === []) {
             self::assertSame($expected, ColumnVariantsUtility::getMultiplier($class));
         } else {
-            self::assertSame($expected, ColumnVariantsUtility::getMultiplier($class, $count, $baseMultiplier));
+            self::assertSame($expected, ColumnVariantsUtility::getMultiplier($class, $rowClass, $count, $baseMultiplier));
         }
     }
 }
