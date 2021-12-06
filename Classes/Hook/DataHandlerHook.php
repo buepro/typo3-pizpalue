@@ -48,7 +48,10 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
         DataHandler $dataHandler
     ): void {
         $this->incomingFieldArray = [];
-        if ($table === 'tt_content' && in_array($incomingFieldArray['CType'], $this->imageContainingTypes, true)) {
+        if (
+            $table === 'tt_content' && isset($incomingFieldArray['CType']) &&
+            in_array($incomingFieldArray['CType'], $this->imageContainingTypes, true)
+        ) {
             // Just review imageVariants when a be user conducts a change (not when importing data)
             $context = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Context\Context::class);
             if ((bool)$context->getPropertyFromAspect('backend.user', 'isLoggedIn')) {
