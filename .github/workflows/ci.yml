@@ -38,18 +38,22 @@ jobs:
           git checkout composer.json
       - name: CGL
         run: |
-          composer cgl:ci
+          composer ci:php:cs
       -
         name: Lint
         run: |
-          composer test:php:lint
+          composer ci:php:lint
       -
         name: PHPStan
         run: |
-          composer phpstan -- --error-format=github
+          composer ci:php:stan -- --error-format=github
+      -
+        name: Unit Tests
+        run: |
+          composer ci:tests:unit
       - name: Functional Tests
         run: |
-          composer test:php:functional
+          composer ci:tests:functional
         env:
           COMPOSER_PROCESS_TIMEOUT: 1200
           typo3DatabaseHost: 127.0.0.1

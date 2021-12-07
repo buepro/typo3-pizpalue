@@ -1,7 +1,10 @@
 {
 	"name": "buepro/typo3-pizpalue",
-	"type": "typo3-cms-extension",
 	"description": "Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, pp_gridelements, flux_elements, timelog, ws_flexslider, slickcarousel, indexed_search, news, eventnews, tt_address.",
+	"license": [
+		"GPL-2.0-or-later"
+	],
+	"type": "typo3-cms-extension",
 	"keywords": [
 		"TYPO3 CMS",
 		"sitepackage",
@@ -17,7 +20,6 @@
 		"flux",
 		"timelog"
 	],
-	"homepage": "https://github.com/buepro/typo3-pizpalue",
 	"authors": [
 		{
 			"name": "Roman Büchler",
@@ -26,31 +28,7 @@
 			"role": "Developer"
 		}
 	],
-	"license": [
-		"GPL-2.0-or-later"
-	],
-	"config": {
-		"bin-dir": ".build/bin",
-		"optimize-autoloader": true,
-		"sort-packages": true,
-		"vendor-dir": ".build/vendor"
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "12.0.0-dev"
-		},
-		"typo3/cms": {
-			"app-dir": ".build",
-			"extension-key": "pizpalue",
-			"web-dir": ".build/public"
-		}
-	},
-	"replace": {
-		"buepro/typo3-pizpalue": "self.version",
-		"typo3-ter/pizpalue": "self.version"
-	},
-	"minimum-stability": "dev",
-	"prefer-stable": true,
+	"homepage": "https://github.com/buepro/typo3-pizpalue",
 	"require": {
 		"php": ">=7.3.0",
 		"bk2k/bootstrap-package": "dev-master#028a786b",
@@ -59,6 +37,7 @@
 	},
 	"require-dev": {
 		"buepro/typo3-container-elements": "^3.0",
+		"ergebnis/composer-normalize": "^2.15.0",
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.8.1",
 		"friendsoftypo3/tt-address": "dev-master",
@@ -77,12 +56,18 @@
 		"typo3/cms-recycler": "^10.4 || ^11.5",
 		"typo3/testing-framework": "^5.0 || ^6.4"
 	},
+	"replace": {
+		"buepro/typo3-pizpalue": "self.version",
+		"typo3-ter/pizpalue": "self.version"
+	},
 	"suggest": {
-		"georgringer/news": "Flexible news system",
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
 		"buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
-		"buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements"
+		"buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements",
+		"georgringer/news": "Flexible news system"
 	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
 			"Buepro\\Pizpalue\\": "Classes/"
@@ -93,6 +78,22 @@
 			"Buepro\\Pizpalue\\Tests\\": "Tests/"
 		}
 	},
+	"config": {
+		"bin-dir": ".build/bin",
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"vendor-dir": ".build/vendor"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "12.0.0-dev"
+		},
+		"typo3/cms": {
+			"app-dir": ".build",
+			"extension-key": "pizpalue",
+			"web-dir": ".build/public"
+		}
+	},
 	"scripts": {
 		"post-autoload-dump": [
 			"mkdir -p .build/public/typo3conf/ext/",
@@ -100,19 +101,35 @@
 			"mkdir -p .build/config/sites/default",
 			"[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml"
 		],
-		"typo3cms:install:setup": [
-			".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='pizpalue dev' --web-server-config='apache'"
+		"ci": [
+			"@ci:static",
+			"@ci:tests"
 		],
-		"typo3cms:database:export": [
-			".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
-			"ls -l Build/site/db.sql.gz"
+		"ci:composer:normalize": "@composer normalize --dry-run",
+		"ci:php:cs": [
+			"php-cs-fixer --diff -v --dry-run fix"
 		],
-		"typo3cms:database:import": [
-			"gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
+		"ci:php:lint": [
+			"phplint"
 		],
-		"site:install": [
-			"@typo3cms:install:setup",
-			"@typo3cms:database:import"
+		"ci:php:stan": [
+			"phpstan analyze --configuration Build/phpstan.neon"
+		],
+		"ci:static": [
+			"@ci:composer:normalize",
+			"@ci:php:cs",
+			"@ci:php:lint",
+			"@ci:php:stan"
+		],
+		"ci:tests": [
+			"@ci:tests:unit",
+			"@ci:tests:functional"
+		],
+		"ci:tests:functional": [
+			"phpunit -c Build/phpunit-functional.xml"
+		],
+		"ci:tests:unit": [
+			"phpunit -c Build/phpunit-unit.xml"
 		],
 		"ddev:install": [
 			"composer install",
@@ -121,35 +138,32 @@
 			"ddev launch typo3",
 			"echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
 		],
-		"ddev:delete": [
+		"ddev:uninstall": [
 			"ddev composer typo3cms:database:export",
 			"ddev delete",
 			"rm -rf .build/"
 		],
-		"cgl": [
+		"fix": [
+			"@fix:composer:normalize",
+			"@fix:php:cs"
+		],
+		"fix:composer:normalize": "@composer normalize",
+		"fix:php:cs": [
 			"php-cs-fixer --diff -v fix"
 		],
-		"cgl:ci": [
-			"php-cs-fixer --diff -v --dry-run fix"
+		"site:install": [
+			"@typo3cms:install:setup",
+			"@typo3cms:database:import"
 		],
-		"test:php:lint": [
-			"phplint"
+		"typo3cms:database:export": [
+			".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
+			"ls -l Build/site/db.sql.gz"
 		],
-		"phpstan": [
-			"phpstan analyze --configuration Build/phpstan.neon"
+		"typo3cms:database:import": [
+			"gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
 		],
-		"test:php:unit": [
-			"phpunit -c Build/phpunit-unit.xml"
-		],
-		"test:php:functional": [
-			"phpunit -c Build/phpunit-functional.xml"
-		],
-		"test": [
-			"@cgl",
-			"@test:php:lint",
-			"@phpstan",
-			"@test:php:unit",
-			"@test:php:functional"
+		"typo3cms:install:setup": [
+			".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='pizpalue dev' --web-server-config='apache'"
 		]
 	}
 }
