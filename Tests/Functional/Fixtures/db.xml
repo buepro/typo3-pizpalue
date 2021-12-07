@@ -350,7 +350,6 @@ pizpalue.agency.siteMode = 2</constants>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class></background_color_class>
 			<background_image>0</background_image>
 			<background_image_options></background_image_options>
@@ -477,7 +476,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>primary</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -709,7 +707,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -856,7 +853,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -1047,7 +1043,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class></background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -1194,7 +1189,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -1341,7 +1335,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>primary</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -1488,7 +1481,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>1</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -1635,7 +1627,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -1821,7 +1812,6 @@ xs: 1.0</tx_pizpalue_image_scaling>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class></background_color_class>
 			<background_image>0</background_image>
 			<background_image_options></background_image_options>
@@ -1962,7 +1952,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -2194,7 +2183,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -2341,7 +2329,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -2488,7 +2475,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -2635,7 +2621,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -2782,7 +2767,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -2929,7 +2913,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -3076,7 +3059,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class></background_color_class>
 			<background_image>0</background_image>
 			<background_image_options></background_image_options>
@@ -3203,7 +3185,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -3350,7 +3331,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -3497,7 +3477,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>primary</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;
@@ -3644,7 +3623,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class></background_color_class>
 			<background_image>0</background_image>
 			<background_image_options></background_image_options>
@@ -3771,7 +3749,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class></background_color_class>
 			<background_image>0</background_image>
 			<background_image_options></background_image_options>
@@ -3898,7 +3875,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class></background_color_class>
 			<background_image>0</background_image>
 			<background_image_options></background_image_options>
@@ -4110,7 +4086,6 @@ xs: 0</tx_pizpalue_image_aspect_ratio>
 			<tx_bootstrappackage_tab_item>0</tx_bootstrappackage_tab_item>
 			<tx_bootstrappackage_timeline_item>0</tx_bootstrappackage_timeline_item>
 			<frame_layout>default</frame_layout>
-			<frame_options></frame_options>
 			<background_color_class>none</background_color_class>
 			<background_image>0</background_image>
 			<background_image_options>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;

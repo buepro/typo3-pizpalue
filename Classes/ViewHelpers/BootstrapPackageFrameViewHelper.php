@@ -14,7 +14,7 @@ namespace Buepro\Pizpalue\ViewHelpers;
 /**
  * FrameViewHelper
  */
-class BootstrapPackageFrameViewHelper extends \BK2K\BootstrapPackage\ViewHelpers\FrameViewHelper
+class BootstrapPackageFrameViewHelper extends \Buepro\Pizpalue\BootstrapPackage\Compatibility120\FrameViewHelper
 {
     /**
      * Initialize additional arguments.

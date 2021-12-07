@@ -38,31 +38,36 @@ defined('TYPO3') or die('Access denied.');
         'NaN' => $defaultAspectRatios['NaN'],
     ];
 
+    $breakpoints = ['default', 'large', 'medium', 'small', 'extrasmall'];
+    if (isset($GLOBALS['TCA']['tt_content']['columns']['background_image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'])) {
+        $breakpoints = array_keys($GLOBALS['TCA']['tt_content']['columns']['background_image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']);
+    }
+
     // Assign side ratios to background image
-    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tt_content', 'background_image');
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tt_content', 'background_image', $breakpoints);
     // Assign side ratios to content elements with images
     foreach (['image', 'textpic', 'pp_picoverlay'] as $cType) {
-        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tt_content', $cType, 'image');
+        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tt_content', $cType, 'image', $breakpoints);
     }
     //Assign side ratios to content elements with assets
     foreach (['list', 'media', 'textmedia', 'pp_emphasize_media'] as $cType) {
-        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tt_content', $cType, 'assets');
+        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tt_content', $cType, 'assets', $breakpoints);
     }
     // Card Group
-    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_card_group_item', '1', 'image');
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_card_group_item', '1', 'image', $breakpoints);
     // Accordion
-    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_accordion_item', '1', 'media');
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_accordion_item', '1', 'media', $breakpoints);
     // Carousel Background Image
-    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tx_bootstrappackage_carousel_item', 'background_image');
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tx_bootstrappackage_carousel_item', 'background_image', $breakpoints);
     // Carousel Image
-    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tx_bootstrappackage_carousel_item', 'image');
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tx_bootstrappackage_carousel_item', 'image', $breakpoints);
     // Tab
-    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_tab_item', '1', 'media');
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_tab_item', '1', 'media', $breakpoints);
     // Timeline
-    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_timeline_item', '1', 'image');
+    \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_bootstrappackage_timeline_item', '1', 'image', $breakpoints);
     // Pages
     foreach ([1, 3, 4] as $cType) {
-        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'pages', $cType, 'thumbnail');
+        \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'pages', $cType, 'thumbnail', $breakpoints);
     }
 
     /**

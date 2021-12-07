@@ -31,7 +31,7 @@
 	"homepage": "https://github.com/buepro/typo3-pizpalue",
 	"require": {
 		"php": ">=7.3.0",
-		"bk2k/bootstrap-package": "dev-master#028a786b",
+		"bk2k/bootstrap-package": "~12.0.4",
 		"buepro/typo3-pvh": "^1.0",
 		"typo3/cms-core": "^10.4 || ^11.5"
 	},
@@ -86,7 +86,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "12.0.0-dev"
+			"dev-master": "12.0.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",

@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:bp="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/Buepro/Pizpalue/BootstrapPackage/Compatibility120"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
@@ -12,7 +12,7 @@
     -> f:variable(name: 'jsonData')}
 
 {f:variable(name: '_pageEnabled', value: 0)}
-{mapConfig.pages -> bp:explode(delimiter: ',', as: '_pages')}
+{mapConfig.pages -> bk2k:explode(delimiter: ',', as: '_pages')}
 <f:for each="{_pages}" as="_pageUid">
     {f:variable(name: '_pageEnabled', value: 1) -> f:if(condition: '{contentObjectData.pid} == {_pageUid}')}
 </f:for>
