@@ -20,8 +20,6 @@ defined('TYPO3') or die('Access denied.');
         . 'pp-inner-margin,pp-inner-padding,pp-inner-bgwhite70,pp-inner-bggrey70,pp-inner-bgblack70,'
         . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,pp-gallery-item-shadow,'
         . 'pp-image-overlay,'
-        . 'pp-ce-overlaycard,'
-        . 'pp-parent-height,pp-row-height,pp-row-child-height,'
         . 'pp-tile-scroll-y,'
         . 'pp-below-header';
     $classItems = [];

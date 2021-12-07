@@ -87,16 +87,6 @@
 				<source>Full page width</source>
 			</trans-unit>
 
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-parent-height">
-				<source>Parent height</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-row-height">
-				<source>Row height</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-row-child-height">
-				<source>Row children height</source>
-			</trans-unit>
-
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-card-primary">
 				<source>Card with primary color background</source>
 			</trans-unit>
