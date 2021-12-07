@@ -62,7 +62,7 @@ class FilterArrayViewHelper extends AbstractViewHelper
                 foreach ($keys as $key => $v) {
                     $method = 'get' . ucfirst($key);
                     if (method_exists($element, $method)) {
-                        $newElement[$key] = call_user_func([$element, $method]);
+                        $newElement[$key] = $element->$method(); // @phpstan-ignore-line
                     }
                 }
                 $filtered[] = $newElement;
