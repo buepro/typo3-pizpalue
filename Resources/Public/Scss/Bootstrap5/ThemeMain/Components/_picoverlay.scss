@@ -68,7 +68,11 @@
         }
         .ppc-icon {
             display: none;
-            color: color-contrast($primary);
+        }
+        .ppc-header, .ppc-footer {
+            a, a:hover {
+                color: color-contrast($primary);
+            }
         }
         &.ppc-init {
             .pp-picoverlay-text {
