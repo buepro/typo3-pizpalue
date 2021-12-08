@@ -15,18 +15,6 @@ Installation
 Refer to TYPO3 documentation for further details on
 `installing extensions <https://docs.typo3.org/m/typo3/guide-installation/master/en-us/ExtensionInstallation/Index.html>`__.
 
-.. _admin_installation_static_templates:
-
-Static templates
-----------------
-
-In an installation using `container_elements`, `news`, `eventnews` and `ws_flexslider` the following static extension
-templates would be included:
-
-.. figure:: ../Images/Administration/Installation_StaticTemplates.jpg
-   :width: 800px
-   :alt: Included static extension templates
-
 .. _admin_installation_supported_extensions:
 
 Supported extensions
@@ -39,13 +27,26 @@ container_elements               3.0.0
 news                             9.1.0
 ================================ ================
 
+.. _admin_installation_static_templates:
+
+Static templates
+----------------
+
+In an installation using `container_elements`, `news`, `eventnews` and `ws_flexslider` the following static extension
+templates would be included:
+
+.. figure:: ../Images/Administration/Installation_StaticTemplates.jpg
+   :width: 800px
+   :alt: Included static extension templates
+
 .. _admin_update:
 
 Update
 ======
 
-After updating this extension in the extension manager the data base structure should be analysed in the maintenance
-module.
+After updating this extension the data base structure should be analysed in the
+maintenance module and the upgrade wizards from the upgrade module should be
+checked for new wizard steps.
 
 .. _admin_upgrade:
 
@@ -53,10 +54,11 @@ Upgrade
 =======
 
 .. note::
-   Upgrade tasks are only needed to be carried out in case breaking changes were introduced between the old and new
-   release. Breaking changes are marked with `[!!!]` in the
-   `commit messages <https://github.com/buepro/typo3-pizpalue/commits/master>`__. The :ref:`changelogs <changelog>`
-   might contain a section listing introduced breaking changes.
+   Upgrade tasks are only needed to be carried out in case breaking changes were
+   introduced between the old and new release. Breaking changes are marked with
+   `[!!!]` in the `commit messages <https://github.com/buepro/typo3-pizpalue/commits/master>`__.
+   The :ref:`changelogs <changelog>` might contain a section listing introduced
+   breaking changes.
 
 The following upgrade descriptions are available:
 
@@ -66,6 +68,7 @@ The following upgrade descriptions are available:
    Upgrade_11.0
    Upgrade_11.2
    Upgrade_11.4
+   Upgrade_12.0
 
 
 .. _admin_extensions:
@@ -95,20 +98,22 @@ During development or maintenance phase two actions might be of interest:
 #. Show under construction page
 #. Enable code debugging
 
-To temporarily show an under construction page an url redirection might be created and the code debugging might be
-enabled by setting the site mode in the "PIZPALUE: AGENCY" category from the constant editor. The following site
+To temporarily show an under construction page an url redirection might be
+created and the code debugging might be enabled by setting the site mode in
+the "PIZPALUE: AGENCY" category from the constant editor. The following site
 modes are available:
 
-=================== ===================================================================================================
+=================== ============================================================
 Site mode           Description
-=================== ===================================================================================================
+=================== ============================================================
 Production          Used when the site is ready.
 Maintenance         Used to temporarily debug code when site is in production.
-Develop             Used during site development to debug the code. **SEO is limited. Used only when site has not been
-                    in production.**
-Review              Used to review the site with the customer. **SEO is limited. Used only when site has not been in
-                    production.**
-=================== ===================================================================================================
+Develop             Used during site development to debug the code. **SEO is
+                    limited. Used only when site has not been in production.**
+Review              Used to review the site with the customer. **SEO is limited.
+                    Used only when site has not been in production.**
+=================== ============================================================
 
 .. note::
+
    In case the site is not in production mode an indicator is shown on the page.
