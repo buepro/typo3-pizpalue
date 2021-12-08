@@ -10,8 +10,9 @@ Introduction
 Preface
 =======
 
-This extension started as a distribution and is now a template serving as a base foundation for new websites.
-The former distribution part became to be a new distribution called `pizpalue_distribution` and can be downloaded from
+This extension started as a distribution and is now a template serving as a base
+foundation for new websites. The former distribution part became to be a new
+distribution called `pizpalue_distribution` and can be downloaded from
 `the TYPO3 extension repository <https://extensions.typo3.org/extension/pizpalue_distribution>`__.
 
 What does it do?
@@ -20,12 +21,13 @@ What does it do?
 The extension builds upon the extension `bootstrap_package from Benjamin Kott <https://extensions.typo3.org/extension/bootstrap_package>`__
 and serves as a base template for the creation of websites or
 `distributions <https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ExtensionArchitecture/CreateNewDistribution/Index.html>`__
-using the `bootstrap framework <https://getbootstrap.com/>`__. As an example the distribution
-`pizpalue_distribution <https://extensions.typo3.org/extension/pizpalue_distribution>`__ uses this extension. A demo
-site can be visited `here <http://pizpalue.buechler.pro/das-plus/>`__.
+using the `bootstrap framework <https://getbootstrap.com/>`__. As an example the
+distribution `pizpalue_distribution <https://extensions.typo3.org/extension/pizpalue_distribution>`__
+uses this extension. A demo site can be visited `here <http://pizpalue.buechler.pro/das-plus/>`__.
 
-The extension extends and configures TYPO3 and selected extensions to provide better structured and attracting content
-while maintaining or improving speed and seo performance.
+The extension extends and configures TYPO3 and selected extensions to provide
+better structured and attracting content while maintaining or improving speed
+and seo performance.
 
 It provides the following main features:
 
@@ -35,15 +37,12 @@ Arranging content
 - Page layouts allowing to add content in side columns with a menu
 - Support for structure elements provided by
   `container_elements <https://extensions.typo3.org/extension/container_elements>`__.
-  Example structure elements are: columns, accordion, tabs, card and tile unit
+  Example structure elements are: columns, grid, accordion, tabs, card, tile unit
+  and randomizer
 
 Enhancing content
 -----------------
 
-- A content element to create modal dialogs
-- A content element to create a list of categorized content elements
-- A content element to create structured content (JSON-LD data, see :ref:`user-contentElements-schema`)
-- A layout for media content elements to emphasize media
 - Support for automatic image scaling in structure elements (see :ref:`integration_templating`)
 - Content element fields to optimize image scaling dependent on the screen size.
 - Content element fields to assign custom classes, styles and attributes
@@ -56,14 +55,20 @@ Animating content
   `Josh.js <https://github.com/mamunhpath/josh.js>`__ or `AOS <https://github.com/michalsnik/aos>`__
 - A feature to reveal the footer
 
-Extending extensions
+New content elements
 --------------------
 
-- A form finisher to send emails to a system
-- A teaser and map view from addresses provided by the extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__
-- Configurations for the extensions
-   - `container_elements <https://extensions.typo3.org/extension/container_elements>`__.
-   - `news <https://extensions.typo3.org/extension/news>`__
+- A content element to create modal dialogs
+- A content element to create a list of categorized content elements
+- A content element to create structured content (JSON-LD data, see :ref:`user-contentElements-schema`)
+- A layout for media content elements to emphasize media
+
+Supporting extensions
+---------------------
+
+The following extensions are supported:
+- `container_elements <https://extensions.typo3.org/extension/container_elements>`__.
+- `news <https://extensions.typo3.org/extension/news>`__
 
 Various
 -------

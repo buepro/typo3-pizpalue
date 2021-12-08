@@ -12,3 +12,4 @@ FAQ
 
    Administration
    Configuration
+   User

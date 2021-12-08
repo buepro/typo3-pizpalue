@@ -17,10 +17,11 @@ Schema
 Placeholders
 ------------
 
-The schema content element is used to insert structured data in JSON-LD format into the body tag by means of a script
-tag. It allows to use placeholders in the JSON-LD code for `TS constants`,
-`getText` `data types <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Index.html#gettext>`__ and the
-`processedData` array. The following table shows some placeholder examples:
+The schema content element is used to insert structured data in JSON-LD format
+into the body tag by means of a script tag. It allows to use placeholders in the
+JSON-LD code for `TS constants`,
+`getText` `data types <https://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Index.html#gettext>`__
+and the `processedData` array. The following table shows some placeholder examples:
 
 +------------------------------------+---------------------+-----------------------------------------------------------+
 | Placeholder example                | Type                | Description                                               |
@@ -50,7 +51,8 @@ tag. It allows to use placeholders in the JSON-LD code for `TS constants`,
 Functions
 ---------
 
-Additionally the obtained data can be passed to a function. The following functions are available:
+Additionally the obtained data can be passed to a function. The following
+functions are available:
 
 +----------------------+------------------------------------------------+----------------------------------------------+
 | Function             | Example usage                                  | Description                                  |
@@ -69,7 +71,8 @@ Additionally the obtained data can be passed to a function. The following functi
 Content
 -------
 
-In the content element an image and a text can be defined. They might be used in the JSON-LD data with the following
+In the content element an image and a text can be defined. They might be used
+in the JSON-LD data with the following
 placeholders:
 
 ======== ================================
@@ -81,14 +84,16 @@ Image    `{processedData:schemaImages.0}`
 
 .. attention::
 
-   Double quotes can't be used in the teaser text field since they identify the json attribute values. Use single
+   Double quotes can't be used in the teaser text field since they identify the
+   json attribute values. Use single
    quotes instead or escape them (`\"`).
 
 Example
 -------
 
-For this example an image as well as a text have been added to the content element. The image will be used for the
-`logo` and the text for the `description` property.
+For this example an image as well as a text have been added to the content
+element. The image will be used for the `logo` and the text for the
+`description` property.
 
 **JSON-LD-code in content element:**
 
