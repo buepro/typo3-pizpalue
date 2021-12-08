@@ -14,9 +14,11 @@ Templating
 Image variants
 --------------
 
-Image variants are used to define the image rendering taking into account different screen width. The available space
-might be further modified by templates, layouts, partials and content elements. The resulting variants when rendering
-a content element can be obtained with the `pp:structure.variants` view helper:
+Image variants are used to define the image rendering taking into account
+different screen width. The available space might be further modified by
+templates, layouts, partials and content elements. The resulting variants when
+rendering a content element can be obtained with the `pp:structure.variants`
+view helper:
 
 .. code-block:: html
 
@@ -24,15 +26,17 @@ a content element can be obtained with the `pp:structure.variants` view helper:
 
 .. hint::
 
-   The `pp:structure.variants` view helper can be used with the attribute `initialVariants` to define the base variants
-   to apply the variantsModifiers upon. For more details have a look to the `StructureVariantsUtility` class.
+   The `pp:structure.variants` view helper can be used with the attribute
+   `initialVariants` to define the base variants to apply the variantsModifiers
+   upon. For more details have a look to the `StructureVariantsUtility` class.
 
-For debugging purposes the `pp:structure.variantsModifierStack` view helper might be used:
+For debugging purposes the `pp:structure.modificationStack` view helper might
+be used:
 
 .. code-block:: html
 
    <f:if condition="{data.uid} === 6">
-      {pp:structure.variantsModifierStack(as: '_stack')}
+      {pp:structure.modificationStack(as: '_stack')}
       <f:debug>{_stack}</f:debug>
    </f:if>
 
@@ -58,12 +62,13 @@ count       Number of columns rendered within the wrapping row. Is only used
 ==========  ====================================================================
 
 The following view helpers are available:
+
 - pp:render.bootstrap.column
 - pp:structure.wrap.column
 - pp:structure.multiplier.getForColumn
 
-
-Examples:
+Following some examples are given to demonstrate the usage from the view
+helpers:
 
 pp:render.bootstrap.column
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

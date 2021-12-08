@@ -155,7 +155,6 @@ For some extensions additional configurations are available:
 .. toctree::
    :maxdepth: 1
 
-   Extensions/Eventnews
    Extensions/News
 
 

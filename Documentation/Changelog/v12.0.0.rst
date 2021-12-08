@@ -1,0 +1,83 @@
+.. include:: ../Includes.txt
+
+.. highlight:: none
+
+====================================
+Changelog for release cf083d9b
+====================================
+
+Features
+========
+* [FEATURE] Make structure vh's understand row classes (06.12.2021, 6360ce3 by Roman Büchler)
+* [FEATURE] Add maintenance site mode (05.10.2021, 4eb3a4a by Roman Büchler)
+* [FEATURE] Add optimize link target (04.10.2021, 2acc85c by Roman Büchler)
+* [FEATURE] Add upgrade wizard steps (04.09.2021, dcac749 by Roman Büchler)
+* [FEATURE] Add footer navigation and contact area (01.09.2021, 92ac95e by Roman Büchler)
+* [FEATURE] Add bootstrap package container support (01.09.2021, 1e6bcc1 by Roman Büchler)
+* [FEATURE] Add new DropIns to page before and after (24.08.2021, 843bef1 by Roman Büchler)
+
+Bugfixes
+========
+* [BUGFIX] Correct link color in picoverlay ce (08.12.2021, 5c8ec90 by Roman Büchler)
+* [BUGFIX] Test field in data handler hook (06.12.2021, 2718f3f by Roman Büchler)
+* [BUGFIX] Test text in ImageVariantsTextToArray vh (16.11.2021, efc6a36 by Roman Büchler)
+* [!!!][BUGFIX] Correct content element css classes (12.11.2021, 6770c61 by Roman Büchler)
+* [BUGFIX] Correct parameter signature from data handler hook (12.11.2021, 3e79803 by Roman Büchler)
+* [BUGFIX] Correct fastmenu script loading (04.10.2021, 57b1ccc by Roman Büchler)
+* [BUGFIX] Define cropping for xl screen (28.09.2021, b94cf97 by Roman Büchler)
+* [BUGFIX] Ensure spacing for frames is applied when set to none (24.09.2021, 973e136 by Roman Büchler)
+* [BUGFIX] Remove xxl breakpoint for bootstrap 4 (04.09.2021, e835ab5 by Roman Büchler)
+* [BUGFIX] Correct text alignment from form checkbox (03.09.2021, c161595 by Roman Büchler)
+* [BUGFIX] Correct deprecated css class `pp-ce-overlaycard` (03.09.2021, 1e0c64b by Roman Büchler)
+* [BUGFIX] Correct fastmenu appearance (02.09.2021, a0b1a76 by Roman Büchler)
+* [BUGFIX] Correct css class `pp-frame-collapsible` (02.09.2021, a62a983 by Roman Büchler)
+* [BUGFIX] Correct icon font height (02.09.2021, a528ad2 by Roman Büchler)
+* [BUGFIX] Array access warnings in PHP 8 (02.09.2021, d6eb14c by Roman Büchler)
+* [BUGFIX] Docs rendering (01.09.2021, a2de2de by Roman Büchler)
+* [BUGFIX] Add missing embed css to bootstrap 5 (01.09.2021, 63822bd by Roman Büchler)
+* [!!!][BUGFIX] Correct issues related to frame layout feature (25.08.2021, 104af36 by Roman Büchler)
+* [BUGFIX] Correct default image height calculation (24.08.2021, 3e70861 by Roman Büchler)
+* [BUGFIX] Respect gallery size settings instead of beeing smart (23.08.2021, 017905f by Roman Büchler)
+
+Breaking changes
+================
+* [!!!][TASK] Drop classes for vertical alignment (07.12.2021, eb20e89 by Roman Büchler)
+* [!!!][TASK] Migrate layout "Emphasize media" to ce (26.11.2021, f1cf626 by Roman Büchler)
+* [!!!][TASK] Reduce supported extensions (16.11.2021, b5d9464 by Roman Büchler)
+* [!!!][BUGFIX] Correct content element css classes (12.11.2021, 6770c61 by Roman Büchler)
+* [!!!][TASK] Remove rarely used animation (12.11.2021, 5ffdfb4 by Roman Büchler)
+* [!!!][TASK] Remove app icon meta tags (06.11.2021, f65cb3a by Roman Büchler)
+* [!!!][TASK] Remove deprecated backend layouts (24.09.2021, d076e08 by Roman Büchler)
+* [!!!][TASK] Remove figcaption alignment for image ce's (03.09.2021, d34c8e7 by Roman Büchler)
+* [!!!][TASK] Refactor typoscript (02.09.2021, 0ddbc3e by Roman Büchler)
+* [!!!][TASK] Add support for Bootstrap v5 (28.08.2021, 4b9b1aa by Roman Büchler)
+* [!!!][BUGFIX] Correct issues related to frame layout feature (25.08.2021, 104af36 by Roman Büchler)
+* [!!!][TASK] Adapt to "Drop webfontloader" (24.08.2021, 91189c0 by Roman Büchler)
+* [!!!][TASK] Adapt to feature "embedded frame introduction" (24.08.2021, b9976c6 by Roman Büchler)
+* [!!!][TASK] Remove deprecated theme (23.08.2021, 52c4407 by Roman Büchler)
+* [!!!][TASK] Move TS constants for tt_address display modes (23.08.2021, 171a7bd by Roman Büchler)
+* [!!!][TASK] Move tt_address display modes (23.08.2021, 7444801 by Roman Büchler)
+* [!!!][TASK] Streamline TSconfig files from extensions (23.08.2021, aa0715f by Roman Büchler)
+* [!!!][TASK] Remove ts property noFrameVariants (23.08.2021, a670f47 by Roman Büchler)
+* [!!!][TASK] Remove deprecated frame classes (23.08.2021, 2dbfc00 by Roman Büchler)
+* [!!!][TASK] Remove deprecated js (23.08.2021, 61d5fee by Roman Büchler)
+* [!!!][TASK] Remove content element inline background image (23.08.2021, d3e9340 by Roman Büchler)
+* [!!!][TASK] Remove view helper structure.multiplier.getFromText (23.08.2021, e288484 by Roman Büchler)
+* [!!!][TASK] Streamline support for tt_address (23.08.2021, b1b2484 by Roman Büchler)
+* [!!!][TASK] Remove support for less (23.08.2021, 05b39e0 by Roman Büchler)
+* [!!!][TASK] Remove support for bootstrap3 (21.08.2021, 55bd57b by Roman Büchler)
+* [!!!][TASK] Streamline prefixes in TS (21.08.2021, 25c4c93 by Roman Büchler)
+
+Reference
+=========
+
+.. highlight:: shell
+
+Generated by:
+
+git log v11.7.0..cf083d9b --pretty="* %s (%cd, %h by %an)" --date=format:%d.%m.%Y --abbrev-commit --grep 
+
+**Note:** The above list contains just commits marked with [FEATURE], [BUGFIX] and [!!!]. Complementary commits are
+available at `Github <https://github.com/buepro/typo3-pizpalue/commits/master)>`__.
+
+
