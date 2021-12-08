@@ -2,7 +2,6 @@
 
 1. Update documentation (check update, upgrade instructions)
 1. Update installation section in administrator documentation (supported extensions)
-1. Run code sniffer
 1. Update dependencies in composer.json
 1. Update changelog <br>
     1. Create changelog file for release (e.g. Changelog/**9.0.0.rst**)

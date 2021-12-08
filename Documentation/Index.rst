@@ -27,7 +27,7 @@ Template pizpalue
       pizpalue, distribution, bootstrap, bootstrap_package
 
    :Copyright:
-      2017-2020
+      since 2018
 
    :Author:
       Roman Büchler

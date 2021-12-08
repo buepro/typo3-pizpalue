@@ -67,7 +67,8 @@ Supporting extensions
 ---------------------
 
 The following extensions are supported:
-- `container_elements <https://extensions.typo3.org/extension/container_elements>`__.
+
+- `container_elements <https://extensions.typo3.org/extension/container_elements>`__
 - `news <https://extensions.typo3.org/extension/news>`__
 
 Various
@@ -125,17 +126,6 @@ News
 
    Page embedding news
 
-News events
------------
-
-`See example <https://pizpalue.buechler.pro/das-plus/eventnews/>`__
-
-.. figure:: ../Images/Introduction/Eventnews.jpg
-   :width: 500px
-   :alt: Calendar view from events
-
-   Calendar view from events
-
 Credits
 =======
 
@@ -143,10 +133,6 @@ This extension can be provided thanks to outstanding work from TYPO3 community m
 
 - Benjamin Kott, extension `bootstrap_package <https://extensions.typo3.org/extension/bootstrap_package>`__
 - B13 GmbH, extension `container <https://extensions.typo3.org/extension/container>`__
-- Grid Elements Team, extension `gridelements <https://extensions.typo3.org/extension/gridelements>`__
-- FluidTYPO3 Team, extension `flux <https://extensions.typo3.org/extension/flux>`__
 - Georg Ringer, extensions `news <https://extensions.typo3.org/extension/news>`__,
   `eventnews <https://extensions.typo3.org/extension/eventnews>`__
 - tt_address Development Team, extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__
-- Boris Schauer, extension `slickcarousel <https://extensions.typo3.org/extension/slickcarousel>`__
-- Sven Wappler, extension `ws_flexslider <https://extensions.typo3.org/extension/ws_flexslider>`__

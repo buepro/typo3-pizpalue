@@ -48,14 +48,8 @@ This extension mainly supports the extension
 powered by the
 `extension container <https://extensions.typo3.org/extension/container>`__.
 
-The available structure elements can be found in the new content element wizard
-under the `Container` tab:
-
-.. figure:: ../Images/User/StructureElements_Container.jpg
-   :width: 500px
-   :alt: "Container"-tab in new content element wizard
-
-   "Container"-tab in new content element wizard
+For further information refer to the `extension manual
+<https://docs.typo3.org/p/buepro/typo3-container-elements/main/en-us/Index.html>`__.
 
 
 .. _user-design-contentElement:
