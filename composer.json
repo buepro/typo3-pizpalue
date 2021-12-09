@@ -1,6 +1,6 @@
 {
 	"name": "buepro/typo3-pizpalue",
-	"description": "Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, pp_gridelements, flux_elements, timelog, ws_flexslider, slickcarousel, indexed_search, news, eventnews, tt_address.",
+	"description": "Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, news",
 	"license": [
 		"GPL-2.0-or-later"
 	],
@@ -14,11 +14,7 @@
 		"theme",
 		"web",
 		"news",
-		"calendar",
-		"container",
-		"gridelements",
-		"flux",
-		"timelog"
+		"container"
 	],
 	"authors": [
 		{
