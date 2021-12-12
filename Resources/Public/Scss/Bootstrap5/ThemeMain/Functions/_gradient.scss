@@ -19,7 +19,7 @@
     $colors: $corner_color + ' 0';
     @for $i from 0 through (2 * $count) {
         $n: abs($count - $i);
-        $weight: $n / $count;
+        $weight: $n / $count * 100;
         $base: mix($corner_color, $peak_color, $weight);
         @if $i > 0 {
             $colors: $colors + ', #{$base} 0';
