@@ -7,10 +7,14 @@
     {f:variable(name: '_headerLayout', value: settings.header.defaultHeaderType) -> f:if(condition: '{data.header_layout as integer} === 0')}
     {f:variable(name: '_headerPosition', value: ' text-{data.header_position}') -> f:if(condition: data.header_position)}
     {f:variable(name: '_headerClass', value: ' {data.tx_pizpalue_header_class}') -> f:if(condition: '{data.tx_pizpalue_header_class} != "none"')}
-    {f:variable(name: '_partial', value: 'bar')}
-    {data.pi_flexform.type -> f:variable(name: '_partial') -> f:if(condition: data.pi_flexform.type)}
-    <div class="pp-picoverlay ppc-{_partial}">
-        <f:render partial="Picoverlay/{_partial -> f:format.case(mode: 'capital')}" arguments="{_all}" />
+    {f:variable(name: '_type', value: 'bar')}
+    {data.pi_flexform.type -> f:variable(name: '_type') -> f:if(condition: data.pi_flexform.type)}
+    {f:variable(name: '_class', value: 'ppc-{_type}')}
+    {f:variable(name: '_class', value: 'ppc-{_type} ppc-info') -> f:if(condition: '{_type} == "image"')}
+    {f:variable(name: '_partial', value: '{_type -> f:format.case(mode: "capital")}')}
+    {f:variable(name: '_partial', value: 'Info') -> f:if(condition: '{_type} == "image"')}
+    <div class="pp-picoverlay {_class}">
+        <f:render partial="Picoverlay/{_partial}" arguments="{_all}" />
     </div>
 </f:section>
 </html>

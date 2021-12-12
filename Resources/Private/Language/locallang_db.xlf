@@ -191,6 +191,9 @@
 				<source>Dummy asset</source>
 			</trans-unit>
 
+			<trans-unit id="tca.tabs.text">
+				<source>Text</source>
+			</trans-unit>
 			<trans-unit id="tca.content_element.options">
 				<source>Content element options</source>
 			</trans-unit>
@@ -208,6 +211,13 @@
 			</trans-unit>
 			<trans-unit id="tca.schema.options">
 				<source>Schema options</source>
+			</trans-unit>
+
+			<trans-unit id="tca.picoverlay.readmore_label.description">
+				<source>Only used in conjunction with the picture overlay type "bar"</source>
+			</trans-unit>
+			<trans-unit id="tca.picoverlay.image.description">
+				<source>For the picture overlay type "info" and "image" two images might be defined. The second image is shown with the overlay. The images should have the same aspect ratios.</source>
 			</trans-unit>
 		</body>
 	</file>
