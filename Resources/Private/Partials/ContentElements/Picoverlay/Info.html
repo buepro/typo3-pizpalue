@@ -3,15 +3,19 @@
 
 <div class="pp-picoverlay-item pp-picoverlay-gallery">
     <f:render partial="Media/Gallery" arguments="{_all}" />
-    <span class="ppc-show">i</span>
 </div>
-<div class="pp-picoverlay-item pp-picoverlay-text">
-    <h{_headerLayout} class="ppc-header {settings.header.class}{_headerPosition}{_headerClass}">
-    {data.header}
-    </h{_headerLayout}>
-    <div class="ppc-body"><f:format.html>{data.bodytext}</f:format.html></div>
-    <span class="ppc-hide">✕</span>
-</div>
+<f:if condition="{data.header} || {data.bodytext}">
+    <div class="pp-picoverlay-item pp-picoverlay-text">
+        <div class="ppc-wrap">
+            <h{_headerLayout} class="ppc-header {settings.header.class}{_headerPosition}{_headerClass}">
+            {data.header}
+            </h{_headerLayout}>
+            <div class="ppc-body"><f:format.html>{data.bodytext}</f:format.html></div>
+        </div>
+    </div>
+</f:if>
+<span class="ppc-show"></span>
+<span class="ppc-hide"></span>
 <f:asset.script identifier="pp-picoverlay-info" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.picoverlay.info.min.js" />
 
 </html>

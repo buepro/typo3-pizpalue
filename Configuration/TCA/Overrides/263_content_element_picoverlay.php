@@ -30,6 +30,15 @@ defined('TYPO3') or die('Access denied.');
     $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['pp_picoverlay'] = 'content-pizpalue-picoverlay';
 
     /**
+     * Header palette
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content',
+        'pizpalue_picoverlay_headers',
+        'header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_formlabel, --linebreak--, header_layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout_formlabel, tx_pizpalue_header_class, header_position;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position_formlabel, date;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:date_formlabel, --linebreak--, header_link;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel'
+    );
+
+    /**
      * Configures element type
      */
     $GLOBALS['TCA']['tt_content']['types']['pp_picoverlay'] = array_replace_recursive(
@@ -38,13 +47,13 @@ defined('TYPO3') or die('Access denied.');
             'showitem' => '
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                         --palette--;;general,
-                        --palette--;;headers,
+                        pi_flexform;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.content_element.options,
+                    --div--;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.tabs.text,
+                        --palette--;;pizpalue_picoverlay_headers,
                         readmore_label,
                         bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
-                        image,
-                    --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.card.options,
-                        pi_flexform;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.content_element.options,
+                        image,--palette--;;pizpalue_imagesize,
                     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                         --palette--;;frames,
                         --palette--;;appearanceLinks,
@@ -60,14 +69,18 @@ defined('TYPO3') or die('Access denied.');
                     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
                 ',
             'columnsOverrides' => [
+                'readmore_label' => [
+                    'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.picoverlay.readmore_label.description',
+                ],
                 'bodytext' => [
                     'config' => [
                         'enableRichtext' => true,
                     ],
                 ],
                 'image' => [
+                    'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.picoverlay.image.description',
                     'config' => [
-                        'maxitems' => 1,
+                        'maxitems' => 2,
                     ],
                 ],
             ]
