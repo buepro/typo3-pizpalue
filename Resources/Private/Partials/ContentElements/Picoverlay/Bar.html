@@ -6,13 +6,13 @@
 </div>
 <div class="pp-picoverlay-item pp-picoverlay-text">
     <h{_headerLayout} class="ppc-header {settings.header.class}{_headerPosition}{_headerClass}">
-    <span class="ppc-text px-4 px-lg-5">{data.header}</span>
-    <a href="javascript:void(0);"><span class="ppc-icon ppc-show bg-primary px-1"><i class="ppicon ppicon-arrow-up"></i></span></a>
+        <span class="ppc-text">{data.header}</span>
+        <a href="javascript:void(0);"><span class="ppc-icon ppc-show px-1"><i class="ppicon ppicon-arrow-up"></i></span></a>
     </h{_headerLayout}>
-    <div class="ppc-body px-4 px-lg-5 py-2"><f:format.html>{data.bodytext}</f:format.html></div>
-    <h{_headerLayout} class="ppc-footer {settings.header.class}{_headerPosition}{_headerClass} bg-primary">
-    <span class="ppc-text px-4 px-lg-5"><f:link.typolink parameter="{data.header_link}">{data.readmore_label -> f:if(condition: data.header_link)}</f:link.typolink></span>
-    <a href="javascript:void(0);"><span class="ppc-icon ppc-hide px-1"><i class="ppicon ppicon-arrow-down"></i></span></a>
+    <div class="ppc-body"><f:format.html>{data.bodytext}</f:format.html></div>
+    <h{_headerLayout} class="ppc-footer {settings.header.class}{_headerPosition}{_headerClass}">
+        <span class="ppc-text"><f:link.typolink parameter="{data.header_link}">{data.readmore_label}</f:link.typolink></span>
+        <a href="javascript:void(0);"><span class="ppc-icon ppc-hide px-1"><i class="ppicon ppicon-arrow-down"></i></span></a>
     </h{_headerLayout}>
 </div>
 <f:asset.script identifier="pp-picoverlay-bar" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.picoverlay.bar.min.js" />
