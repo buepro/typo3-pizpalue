@@ -58,7 +58,7 @@ The `getText data type <https://docs.typo3.org/typo3cms/TyposcriptReference/Data
 enabled for the RTE editor. It allows to get various data from a web site. As an example a translated text might be
 retrieved depending on the currently selected page language. For this users might reference data by using curly
 brackets within the editor
-(`see example <https://pizpalue.buechler.pro/das-plus/gestaltung/attribute/wissenswertes>`__):
+(`see example <https://pizpalue.buechler.pro/das-plus/inhaltselemente/texteingabe>`__):
 
 .. figure:: ../Images/User/Various/InlineLocalization.jpg
    :alt: Use of localized text within the editor
