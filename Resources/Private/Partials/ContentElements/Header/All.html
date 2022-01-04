@@ -13,7 +13,7 @@
     <f:if condition="{data.header} || {data.date}">
         <header class="frame-header">
             <f:render partial="Header/Header" arguments="{
-                header: data.header,
+                header: '{data.header -> f:format.html() -> f:format.stripTags(allowedTags: \'<span><i><b>\')}',
                 layout: data.header_layout,
                 class: _headerClasses,
                 positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')}',
@@ -21,7 +21,7 @@
                 default: settings.header.defaultHeaderType}" />
             <f:if condition="{data.header}">
                 <f:render partial="Header/SubHeader" arguments="{
-                    subheader: data.subheader,
+                    subheader: '{data.subheader -> f:format.html() -> f:format.stripTags(allowedTags: \'<span><i><b>\')}',
                     layout: data.header_layout,
                     class: _subheaderClasses,
                     positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')}',
