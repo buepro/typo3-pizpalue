@@ -9,10 +9,11 @@
 
 defined('TYPO3') or die('Access denied.');
 
+/**
+ * Define aspect ratios
+ */
 (static function (): void {
-    /**
-     * Define side ratios
-     */
+
     $defaultAspectRatios = $GLOBALS['TCA']['tt_content']['columns']['background_image']['config']['overrideChildTca']
         ['columns']['crop']['config']['cropVariants']['default']['allowedAspectRatios'];
     $aspectRatios = [
@@ -38,14 +39,14 @@ defined('TYPO3') or die('Access denied.');
         'NaN' => $defaultAspectRatios['NaN'],
     ];
 
-    // Assign side ratios to background image
+    // Background image
     \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField($aspectRatios, 'tt_content', 'background_image');
-    // Assign side ratios to content elements with images
+    // Content elements with images
     foreach (['image', 'textpic', 'pp_picoverlay'] as $cType) {
         \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tt_content', $cType, 'image');
     }
-    //Assign side ratios to content elements with assets
-    foreach (['list', 'media', 'textmedia', 'pp_emphasize_media'] as $cType) {
+    // Content elements with assets
+    foreach (['media', 'textmedia', 'pp_emphasize_media'] as $cType) {
         \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tt_content', $cType, 'assets');
     }
     // Card Group
@@ -63,17 +64,5 @@ defined('TYPO3') or die('Access denied.');
     // Pages
     foreach ([1, 3, 4] as $cType) {
         \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'pages', $cType, 'thumbnail');
-    }
-
-    /**
-     * Assign side ratios to extension news
-     */
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
-        $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['label'] =
-            'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.dummyAsset';
-        $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['config']['maxitems'] = 1;
-        foreach ([0, 1, 2] as $cType) {
-            \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_news_domain_model_news', $cType, 'fal_media');
-        }
     }
 })();
