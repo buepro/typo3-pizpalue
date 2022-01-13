@@ -13,7 +13,6 @@ defined('TYPO3') or die('Access denied.');
  * Define aspect ratios
  */
 (static function (): void {
-
     $defaultAspectRatios = $GLOBALS['TCA']['tt_content']['columns']['background_image']['config']['overrideChildTca']
         ['columns']['crop']['config']['cropVariants']['default']['allowedAspectRatios'];
     $aspectRatios = [
