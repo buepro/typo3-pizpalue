@@ -91,14 +91,4 @@ defined('TYPO3') or die('Access denied.');
         'pp-tile-12'
     ];
     $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = $items;
-
-    /**
-     * Extension news
-     */
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
-        $fields = $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['news_pi1'];
-        $fields = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $fields, true);
-        $fields[] = 'assets';
-        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['news_pi1'] = implode(',', $fields);
-    }
 })();
