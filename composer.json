@@ -52,10 +52,6 @@
 		"typo3/cms-recycler": "^10.4 || ^11.5",
 		"typo3/testing-framework": "^5.0 || ^6.4"
 	},
-	"replace": {
-		"buepro/typo3-pizpalue": "self.version",
-		"typo3-ter/pizpalue": "self.version"
-	},
 	"suggest": {
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
 		"buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
