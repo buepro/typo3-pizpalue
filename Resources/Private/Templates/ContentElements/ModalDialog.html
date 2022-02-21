@@ -18,7 +18,7 @@
         <div class="{data.pi_flexform.dialog_class}" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="pp-modal-dialog-title-{data.uid}">{data.header}</h5>
+                    <h5 class="modal-title" id="pp-modal-dialog-title-{data.uid}">{f:if(condition: data.subheader, then: data.subheader, else: data.header)}</h5>
                     <button type="button" class="close btn-close" data-bs-dismiss="modal" data-dismiss="modal"
                             aria-label="{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:close')}">
                     </button>

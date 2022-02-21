@@ -47,6 +47,7 @@ defined('TYPO3') or die('Access denied.');
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;general,
                     header;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.modal_dialog.header,
+                    subheader;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.modal_dialog.subheader,
                     records;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:records_formlabel,
                 --div--;LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:menu.card.options,
                     pi_flexform;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tca.modal_dialog.options,

@@ -200,6 +200,9 @@
 			<trans-unit id="tca.modal_dialog.header">
 				<source>Button text</source>
 			</trans-unit>
+			<trans-unit id="tca.modal_dialog.subheader">
+				<source>Dialog header</source>
+			</trans-unit>
 			<trans-unit id="tca.modal_dialog.options">
 				<source>Button options</source>
 			</trans-unit>
