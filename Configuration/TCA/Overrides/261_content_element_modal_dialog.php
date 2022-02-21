@@ -15,8 +15,12 @@ defined('TYPO3') or die('Access denied.');
      * Note: `$GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog']` needs to be an array for the element to be
      *       enabled.
      */
+    $allowed = ['pages', 'tt_content'];
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
+        $allowed[] = 'tx_news_domain_model_news';
+    }
     $GLOBALS['TCA']['tt_content']['types']['pp_modal_dialog']['columnsOverrides']['records']['config']['allowed'] =
-        'pages,tt_content,tx_news_domain_model_news';
+        implode(',', $allowed);
 
     /**
      * Adds content element to selector list
