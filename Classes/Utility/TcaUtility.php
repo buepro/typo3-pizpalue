@@ -11,6 +11,16 @@ namespace Buepro\Pizpalue\Utility;
 
 class TcaUtility
 {
+    public static function getDefaultCropVariants(): array
+    {
+        $cropVariants = $GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['image']['config']
+            ['overrideChildTca']['columns']['crop']['config']['cropVariants'] ?? [];
+        if (is_array($cropVariants)) {
+            return $cropVariants;
+        }
+        return [];
+    }
+
     public static function assignAllowedAspectRatiosToCropVariants(
         array $aspectRatios,
         array &$cropVariants,
