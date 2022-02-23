@@ -24,14 +24,13 @@ defined('TYPO3') or die('Access denied.');
         $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['config']['maxitems'] = 1;
 
         // Set cropping for dummy asset field
-        $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] =
-            $GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'];
+        $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['config']['overrideChildTca']
+            ['columns']['crop']['config']['cropVariants'] = \Buepro\Pizpalue\Utility\TcaUtility::getDefaultCropVariants();
 
         // Set cropping for media in news records
-        $aspectRatios = $GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['image']['config']
-            ['overrideChildTca']['columns']['crop']['config']['cropVariants']['default']['allowedAspectRatios'];
         foreach ([0, 1, 2] as $cType) {
-            \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType($aspectRatios, 'tx_news_domain_model_news', $cType, 'fal_media');
+            $GLOBALS['TCA']['tx_news_domain_model_news']['types'][$cType]['columnsOverrides']['fal_media']['config']
+            ['overrideChildTca']['columns']['crop']['config']['cropVariants'] = \Buepro\Pizpalue\Utility\TcaUtility::getDefaultCropVariants();
         }
     }
 })();
