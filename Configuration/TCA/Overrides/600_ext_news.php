@@ -25,12 +25,10 @@ defined('TYPO3') or die('Access denied.');
 
         // Set cropping for dummy asset field
         $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['assets']['config']['overrideChildTca']
-            ['columns']['crop']['config']['cropVariants'] = \Buepro\Pizpalue\Utility\TcaUtility::getDefaultCropVariants();
+            ['columns']['crop']['config']['cropVariants'] = \Buepro\Pizpalue\Utility\TcaUtility::getCropVariants();
 
         // Set cropping for media in news records
-        foreach ([0, 1, 2] as $cType) {
-            $GLOBALS['TCA']['tx_news_domain_model_news']['types'][$cType]['columnsOverrides']['fal_media']['config']
-            ['overrideChildTca']['columns']['crop']['config']['cropVariants'] = \Buepro\Pizpalue\Utility\TcaUtility::getDefaultCropVariants();
-        }
+        $GLOBALS['TCA']['tx_news_domain_model_news']['columns']['fal_media']['config']['overrideChildTca']['columns']
+            ['crop']['config']['cropVariants'] = \Buepro\Pizpalue\Utility\TcaUtility::getCropVariants();
     }
 })();

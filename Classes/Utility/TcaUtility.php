@@ -11,32 +11,117 @@ namespace Buepro\Pizpalue\Utility;
 
 class TcaUtility
 {
-    public static function getDefaultCropVariants(): array
+    /** @var ?array */
+    private static $breakpoints = null;
+
+    /** @var ?array[] */
+    private static $aspectRatios = null;
+
+    /** @var ?array[] */
+    private static $cropVariants = null;
+
+    public static function getBreakpoints(): array
     {
-        $cropVariants = $GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['image']['config']
-            ['overrideChildTca']['columns']['crop']['config']['cropVariants'] ?? [];
-        if (is_array($cropVariants)) {
-            return $cropVariants;
+        // Return cached breakpoints
+        if (self::$breakpoints !== null) {
+            return self::$breakpoints;
         }
-        return [];
+        self::$breakpoints = ['default', 'large', 'medium', 'small', 'extrasmall'];
+        $predefinedCropVariants = $GLOBALS['TCA']['tt_content']['columns']['background_image']['config']
+            ['overrideChildTca']['columns']['crop']['config']['cropVariants'] ?? null;
+        if (is_array($predefinedCropVariants)) {
+            self::$breakpoints = array_keys($predefinedCropVariants);
+        }
+        return self::$breakpoints;
     }
 
-    public static function assignAllowedAspectRatiosToCropVariants(
-        array $aspectRatios,
-        array &$cropVariants,
-        array $breakpoints = ['default', 'xlarge', 'large', 'medium', 'small', 'extrasmall']
-    ): void {
-        foreach ($breakpoints as $breakpoint) {
-            $cropVariants[$breakpoint]['allowedAspectRatios'] = $aspectRatios;
+    public static function getAspectRatios(): array
+    {
+        // Return the cached aspect ratios
+        if (self::$aspectRatios !== null) {
+            return self::$aspectRatios;
+        }
+        self::$aspectRatios = [
+            '2:1' => [
+                'title' => '2:1',
+                'value' => 2
+            ],
+            '16:9' => [
+                'title' => '16:9',
+                'value' => 16 / 9
+            ],
+            '4:3' => [
+                'title' => '4:3',
+                'value' => 4 / 3
+            ],
+            '1:1' => [
+                'title' => '1:1',
+                'value' => 1.0
+            ],
+            '3:4' => [
+                'title' => '3:4',
+                'value' => 3 / 4
+            ],
+            '9:16' => [
+                'title' => '9:16',
+                'value' => 9 / 16
+            ],
+            '1:2' => [
+                'title' => '1:2',
+                'value' => 0.5
+            ],
+            'NaN' => [
+                'title' => 'Free',
+                'value' => 0.0
+            ],
+        ];
+        $predefinedAspectRatios = $GLOBALS['TCA']['tt_content']['columns']['background_image']['config']['overrideChildTca']
+            ['columns']['crop']['config']['cropVariants']['default']['allowedAspectRatios'] ?? null;
+        if (is_array($predefinedAspectRatios)) {
+            self::$aspectRatios = array_replace_recursive(self::$aspectRatios, $predefinedAspectRatios);
+        }
+        return self::$aspectRatios;
+    }
+
+    public static function getCropVariants(): array
+    {
+        // Return the cached crop variants
+        if (self::$cropVariants !== null) {
+            return self::$cropVariants;
+        }
+        $defaultCropVariants = [
+            'title' => 'Default',
+            'allowedAspectRatios' => self::getAspectRatios(),
+            'selectedRatio' => 'NaN',
+            'cropArea' => [
+                'x' => 0.0,
+                'y' => 0.0,
+                'width' => 1.0,
+                'height' => 1.0,
+            ],
+        ];
+        self::$cropVariants = [];
+        foreach (self::getBreakpoints() as $breakpoint) {
+            self::$cropVariants[$breakpoint] = $defaultCropVariants;
+            self::$cropVariants[$breakpoint]['title'] = $breakpoint;
+        }
+        $predefinedCropVariants = $GLOBALS['TCA']['tt_content']['columns']['background_image']['config']['overrideChildTca']
+            ['columns']['crop']['config']['cropVariants'] ?? null;
+        if (is_array($predefinedCropVariants)) {
+            self::$cropVariants = array_replace_recursive(self::$cropVariants, $predefinedCropVariants);
+        }
+        return self::$cropVariants;
+    }
+
+    public static function assignAllowedAspectRatiosToCropVariants(array &$cropVariants): void
+    {
+        foreach (self::getBreakpoints() as $breakpoint) {
+            $cropVariants[$breakpoint]['allowedAspectRatios'] = self::getAspectRatios();
         }
     }
 
-    public static function setAllowedAspectRatiosForField(
-        array $aspectRatios,
-        string $table,
-        string $field,
-        array $breakpoints = ['default', 'xlarge', 'large', 'medium', 'small', 'extrasmall']
-    ): void {
+    public static function setAllowedAspectRatiosForField(string $table, string $field): void
+    {
         if (
             !isset($GLOBALS['TCA'][$table]['columns']
                 [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'])
@@ -45,20 +130,13 @@ class TcaUtility
                 [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [];
         }
         self::assignAllowedAspectRatiosToCropVariants(
-            $aspectRatios,
             $GLOBALS['TCA'][$table]['columns']
-                [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'],
-            $breakpoints
+                [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']
         );
     }
 
-    public static function setAllowedAspectRatiosForCType(
-        array $aspectRatios,
-        string $table,
-        string $cType,
-        string $field,
-        array $breakpoints = ['default', 'xlarge', 'large', 'medium', 'small', 'extrasmall']
-    ): void {
+    public static function setAllowedAspectRatiosForCType(string $table, string $cType, string $field): void
+    {
         if (
             !isset($GLOBALS['TCA'][$table]['types'][$cType]['columnsOverrides']
                 [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'])
@@ -67,10 +145,8 @@ class TcaUtility
                 [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [];
         }
         self::assignAllowedAspectRatiosToCropVariants(
-            $aspectRatios,
             $GLOBALS['TCA'][$table]['types'][$cType]['columnsOverrides']
-                [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'],
-            $breakpoints
+                [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']
         );
     }
 }
