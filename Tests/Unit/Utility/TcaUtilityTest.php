@@ -20,7 +20,6 @@ class TcaUtilityTest extends UnitTestCase
      */
     protected $breakpoints = [
         'default',
-        'xlarge',
         'large',
         'medium',
         'small',
@@ -37,30 +36,30 @@ class TcaUtilityTest extends UnitTestCase
         ],
         '16:9' => [
             'title' => '16:9',
-            'value' => 1.7778
+            'value' => 16 / 9
         ],
         '4:3' => [
             'title' => '4:3',
-            'value' => 1.3333
+            'value' => 4 / 3
         ],
         '1:1' => [
-            'title' => '2:1',
-            'value' => 2
+            'title' => '1:1',
+            'value' => 1.0
         ],
         '3:4' => [
             'title' => '3:4',
-            'value' => 0.75
+            'value' => 3 / 4
         ],
         '9:16' => [
             'title' => '9:16',
-            'value' => 0.5625
+            'value' => 9 / 16
         ],
         '1:2' => [
             'title' => '1:2',
             'value' => 0.5
         ],
         'NaN' => [
-            'title' => 'NaN',
+            'title' => 'Free',
             'value' => 0.0
         ],
     ];
@@ -72,7 +71,7 @@ class TcaUtilityTest extends UnitTestCase
     {
         $tca = ['some' => ['array' => []]];
         $actual = $tca;
-        TcaUtility::assignAllowedAspectRatiosToCropVariants($this->aspectRatios, $actual['some']['array']);
+        TcaUtility::assignAllowedAspectRatiosToCropVariants($actual['some']['array']);
         $expected = $tca;
         foreach ($this->breakpoints as $breakpoint) {
             $expected['some']['array'][$breakpoint]['allowedAspectRatios'] = $this->aspectRatios;
@@ -89,7 +88,7 @@ class TcaUtilityTest extends UnitTestCase
         foreach ($this->breakpoints as $breakpoint) {
             $expected[$breakpoint]['allowedAspectRatios'] = $this->aspectRatios;
         }
-        TcaUtility::setAllowedAspectRatiosForField($this->aspectRatios, 'test_table', 'test_field');
+        TcaUtility::setAllowedAspectRatiosForField('test_table', 'test_field');
         self::assertSame(
             $expected,
             $GLOBALS['TCA']['test_table']['columns']
@@ -106,12 +105,7 @@ class TcaUtilityTest extends UnitTestCase
         foreach ($this->breakpoints as $breakpoint) {
             $expected[$breakpoint]['allowedAspectRatios'] = $this->aspectRatios;
         }
-        TcaUtility::setAllowedAspectRatiosForCType(
-            $this->aspectRatios,
-            'test_table',
-            'test_type',
-            'test_field'
-        );
+        TcaUtility::setAllowedAspectRatiosForCType('test_table', 'test_type', 'test_field');
         self::assertSame(
             $expected,
             $GLOBALS['TCA']['test_table']['types']['test_type']['columnsOverrides']
