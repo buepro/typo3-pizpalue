@@ -42,9 +42,16 @@ page {
             # Increase subnavigation depth to 3 levels
             20.levels = 3
 
+            # Background image
+            1645796505 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            1645796505 {
+                references.fieldName = tx_pizpalue_background_image
+                as = backgroundImage
+            }
+
             # Pass pizpalue constants to fluid
-            1010 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
-            1010 {
+            1645796517 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
+            1645796517 {
                 as = pizpalue
                 key = pizpalue
             }
