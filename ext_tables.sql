@@ -1,4 +1,11 @@
 #
+# Table structure for table 'pages'
+#
+CREATE TABLE pages (
+    tx_pizpalue_background_image int(11) unsigned DEFAULT '0'
+);
+
+#
 # Table structure for table 'tt_content'
 #
 CREATE TABLE tt_content (

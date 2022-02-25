@@ -43,8 +43,11 @@ figure.image {
 }
 
 //
-// Avoid horizontal scroll bar when using image without frame
+// Page
 // --------------------------------------------------
 body {
+    // Avoid horizontal scroll bar when using image without frame
     overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

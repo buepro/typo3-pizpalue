@@ -10,11 +10,19 @@
 defined('TYPO3') or die('Access denied.');
 
 /**
+ * Set cropping variants
+ */
+(static function (): void {
+    $GLOBALS['TCA']['pages']['columns']['tx_pizpalue_background_image']['config']['overrideChildTca']['columns']
+        ['crop']['config']['cropVariants'] = \Buepro\Pizpalue\Utility\TcaUtility::getCropVariants();
+})();
+
+/**
  * Define aspect ratios
  */
 (static function (): void {
 
-    // Background image
+    // Content element background image
     \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField('tt_content', 'background_image');
     // Content elements with images
     foreach (['image', 'textpic', 'pp_picoverlay'] as $cType) {
