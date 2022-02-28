@@ -12,6 +12,8 @@
     <pp:structure.variants as="_pageVariants" initialVariants="pageVariants" />
     <f:variable name="styles" value=""/>
     <f:for each="{_pageVariants}" key="name" as="variant">
+        {f:variable(name: 'cropVariant', value: name)}
+        {f:variable(name: 'cropVariant', value: 'default') -> f:if(condition: '{name} == "xlarge"')}
         <f:variable name="breakpoint">{variant.breakpoint as integer}</f:variable>
         <f:variable name="width">{variant.width as integer}</f:variable>
         <f:if condition="{width} && {variant.sizes}">
@@ -29,7 +31,7 @@
                     <f:variable name="mediaQuery">(-webkit-min-device-pixel-ratio: {sizeDppx})<f:if condition="{mediaBreakpoint}"> and {mediaBreakpoint}</f:if></f:variable>
                     <f:variable name="mediaQuery">{mediaQuery}, (min-resolution: {sizeDppx}dppx)<f:if condition="{mediaBreakpoint}"> and {mediaBreakpoint}</f:if></f:variable>
                 </f:if>
-                <f:variable name="variantStyle">{variantStyle} <f:if condition="{mediaQuery}">@media {mediaQuery} { </f:if>body{backgroundImageIdentifier} { background-image: url('{f:uri.image(image: backgroundImageObject, cropVariant: name, maxWidth: sizeWidth)}'); }<f:if condition="{mediaQuery}"> }</f:if></f:variable>
+                <f:variable name="variantStyle">{variantStyle} <f:if condition="{mediaQuery}">@media {mediaQuery} { </f:if>body{backgroundImageIdentifier} { background-image: url('{f:uri.image(image: backgroundImageObject, cropVariant: cropVariant, maxWidth: sizeWidth)}'); }<f:if condition="{mediaQuery}"> }</f:if></f:variable>
             </f:for>
             <f:variable name="styles" value="{variantStyle -> bk2k:format.trim()} {styles}"/>
         </f:if>
