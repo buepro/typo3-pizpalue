@@ -116,4 +116,7 @@ Review              Used to review the site with the customer. **SEO is limited.
 
 .. note::
 
-   In case the site is not in production mode an indicator is shown on the page.
+   A blinking dot might be shown on the left top side from the website
+   indicating the site not being ready for production. The dot disappears when
+   the site mode is set to production **and** the current domain corresponds
+   to the domain defined in the site configuration.
