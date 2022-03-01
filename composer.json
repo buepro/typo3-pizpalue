@@ -77,7 +77,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "12.2.x-dev"
+			"dev-master": "12.3.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",
