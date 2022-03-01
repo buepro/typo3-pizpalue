@@ -55,8 +55,8 @@ Template pizpalue
    Introduction/Index
    Administration/Index
    Configuration/Index
-   Integration/Index
    User/Index
+   Integration/Index
    Changelog/Index
    Faq/Index
    Develop/Index
