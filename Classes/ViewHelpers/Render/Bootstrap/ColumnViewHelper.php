@@ -16,23 +16,20 @@ use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use Buepro\Pizpalue\Utility\ColumnVariantsUtility;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use Buepro\Pizpalue\Utility\VectorUtility;
-use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
 /**
- * By using this view helper to create a div-tag defining a bootstrap column the available width within
- * the column is being registered allowing to adjust the rendering. This allows images to be created with
- * the size that fits the column.
- *
- * It is achieved by calculating a multiplier and pushing it to a stack. The latest multiplier is stored to the register
- * `structureMultiplier` from where it is available to all elements rendering images (e.g. see
- * `Resources\Private\Layouts\ContentElements\Default.html`).
+ * View helper to create a bootstrap column for optimized image rendering.
+ * It is achieved by adding a variants modifier to the variants modifier stack.
+ * See `Resources\Private\Layouts\ContentElements\Default.html`.
  *
  * ### Example:
  *
  * <pp:render.bootstrap.column class="col col-md-8 col-xl-6" count="2">
  *     <v:content.render contentUids="{0: item.data.uid}" />
  * </pp:render.bootstrap.column>
+ *
+ * @see VariantsModifierStack
  */
 class ColumnViewHelper extends AbstractTagBasedViewHelper
 {
@@ -42,9 +39,10 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
     {
         parent::initializeArguments();
         $this->registerUniversalTagAttributes();
-        $this->registerTagAttribute('itemscope', 'string', 'Itemscope attribute');
-        $this->registerTagAttribute('itemtype', 'string', 'Itemtype attribute');
-        $this->registerArgument('rowClass', 'string', 'Classes assigned to the wrapping row.', false, '');
+        $this->registerTagAttribute('itemscope', 'string', 'Itemscope attribute for this element');
+        $this->registerTagAttribute('itemtype', 'string', 'Itemtype attribute for this element');
+        $this->registerTagAttribute('role', 'string', 'Role attribute for this element');
+        $this->registerArgument('rowClass', 'string', 'Classes assigned to the wrapping row', false, '');
         $this->registerArgument('count', 'int', 'Column count in row. Might be overwritten by rowClass definitions.', false, 1);
         $this->registerArgument('gutter', 'float|array', 'Space between columns. In case a number is provided it will be used for all screen breakpoints.', false, 0);
         $this->registerArgument('correction', 'float|array', 'Correction to be subtracted. In case a float is provided it will be used for all screen breakpoints.', false, 0);
@@ -54,24 +52,20 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
     public function render()
     {
         $this->tagName = $this->arguments['tagName'];
-        if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
-            $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
-            $multiplier = ColumnVariantsUtility::getMultiplier($this->arguments['class'], $this->arguments['rowClass'], $this->arguments['count']);
-            $correction = StructureVariantsUtility::getVectorProperty($this->arguments['correction']);
-            $modifier = (new VariantsModifier())
-                ->setMargins(VectorUtility::negate($gutter))
-                ->setMultiplier($multiplier)
-                ->setCorrections(VectorUtility::addVector($gutter, $correction));
+        $this->tag->setTagName($this->arguments['tagName']);
+        $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
+        $multiplier = ColumnVariantsUtility::getMultiplier($this->arguments['class'], $this->arguments['rowClass'], $this->arguments['count']);
+        $correction = StructureVariantsUtility::getVectorProperty($this->arguments['correction']);
+        $modifier = (new VariantsModifier())
+            ->setMargins(VectorUtility::negate($gutter))
+            ->setMultiplier($multiplier)
+            ->setCorrections(VectorUtility::addVector($gutter, $correction));
 
-            // Push variants modifier -> render content -> pop modifier
-            VariantsModifierStack::pushVariantsModifier($modifier);
-            $this->tag->setContent($this->renderChildren());
-            $content = $this->tag->render();
-            VariantsModifierStack::popVariantsModifier();
-            return $content;
-        }
-
+        // Push variants modifier -> render content -> pop modifier
+        VariantsModifierStack::pushVariantsModifier($modifier);
         $this->tag->setContent($this->renderChildren());
-        return $this->tag->render();
+        $content = $this->tag->render();
+        VariantsModifierStack::popVariantsModifier();
+        return $content;
     }
 }

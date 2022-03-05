@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div id="initial-variants">{pp:structure.variants() -> f:format.json() -> f:format.raw()}</div>
+<div class="row">
+    <pp:render.bootstrap.column class="{outerClass}" id="outer">
+        <div id="initial-outer-variants">{pp:structure.variants() -> f:format.json() -> f:format.raw()}</div>
+        <div class="row">
+            <pp:render.bootstrap.column class="{innerClass}" id="inner">
+                <div id="inner-variants">{pp:structure.variants() -> f:format.json() -> f:format.raw()}</div>
+            </pp:render.bootstrap.column>
+        </div>
+        <div id="final-outer-variants">{pp:structure.variants() -> f:format.json() -> f:format.raw()}</div>
+    </pp:render.bootstrap.column>
+</div>
+<div id="final-variants">{pp:structure.variants() -> f:format.json() -> f:format.raw()}</div>
+
+<pp:render.bootstrap.column class="col-md-6" id="tag-test" tagName="{tagName}" />
+
+<pp:render.bootstrap.column class="col-md-6" id="role-test" role="{role}" />
+
+</html>
