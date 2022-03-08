@@ -64,7 +64,7 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
     ) {
         $assetCollector = GeneralUtility::makeInstance(AssetCollector::class);
         $data = $arguments['data'];
-        $pizpalueConstants = $arguments['pizpalueConstants'];
+        $pizpalueConstants = $arguments['pizpalueConstants'] ?? [];
         $result = [
             'classes' => [],
             'styles' => [],
