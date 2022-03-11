@@ -192,11 +192,14 @@ class TextReplacementProcessor implements DataProcessorInterface
                             'width' => $processedData['data']['pi_flexform']['image_width']
                         ];
                         $urlPrefix = GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST');
-                        if (is_array($imageResource = $cObj->getImgResource($value, $config))) {
+                        // @phpstan-ignore-next-line
+                        if (is_string($urlPrefix) && is_array($imageResource = $cObj->getImgResource($value, $config))) {
                             $replacements[] = $urlPrefix . '/' . $imageResource[3];
                         }
-                    } elseif ($parts[0] === 'breadcrumb') {
-                        $markup = $this->generateBreadcrumbMarkup($value);
+                    } elseif (
+                        $parts[0] === 'breadcrumb' &&
+                        ($markup = $this->generateBreadcrumbMarkup($value) !== null)
+                    ) {
                         $replacements[] = json_encode($markup, JSON_UNESCAPED_SLASHES);
                     } else {
                         $replacements[] = $value;
@@ -253,11 +256,15 @@ class TextReplacementProcessor implements DataProcessorInterface
      * Is based on extension brotkrueml/sdbreadcrumb.
      *
      * @param array $breadcrumb
-     * @return array
+     * @return ?array
      */
-    private function generateBreadcrumbMarkup(array $breadcrumb): array
+    private function generateBreadcrumbMarkup(array $breadcrumb): ?array
     {
         $siteUrl = GeneralUtility::getIndpEnv('TYPO3_SITE_URL');
+        // @phpstan-ignore-next-line
+        if (!is_string($siteUrl)) {
+            return null;
+        }
         if ($breadcrumb[0]['link'][0] === '/') {
             $siteUrl = rtrim($siteUrl, '/');
         }
