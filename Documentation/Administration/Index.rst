@@ -25,6 +25,7 @@ Extension                        Version tested
 ================================ ================
 container_elements               3.0.0
 news                             9.1.0
+eventnews                        5.0.0
 ================================ ================
 
 .. _admin_installation_static_templates:

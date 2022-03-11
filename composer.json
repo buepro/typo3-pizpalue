@@ -1,6 +1,6 @@
 {
 	"name": "buepro/typo3-pizpalue",
-	"description": "Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, pp_gridelements, flux_elements, timelog, ws_flexslider, slickcarousel, indexed_search, news, eventnews, tt_address.",
+	"description": "Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, news",
 	"license": [
 		"GPL-2.0-or-later"
 	],
@@ -15,10 +15,7 @@
 		"web",
 		"news",
 		"calendar",
-		"container",
-		"gridelements",
-		"flux",
-		"timelog"
+		"container"
 	],
 	"authors": [
 		{
@@ -41,6 +38,7 @@
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.8.1",
 		"friendsoftypo3/tt-address": "^6.0.1",
+		"georgringer/eventnews": "5.0.0",
 		"georgringer/news": "^9.1.0",
 		"helhum/typo3-console": "^6.6 || ^7.0.2",
 		"overtrue/phplint": "^2.3.5",
@@ -59,7 +57,8 @@
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
 		"buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
 		"buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements",
-		"georgringer/news": "Flexible news system"
+		"georgringer/news": "Flexible news system",
+		"georgringer/eventnews": "Calendar based on extension news"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
@@ -81,7 +80,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "12.3.x-dev"
+			"dev-master": "12.4.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",
