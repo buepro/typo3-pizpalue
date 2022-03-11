@@ -71,6 +71,7 @@ The following extensions are supported:
 - `container_elements <https://extensions.typo3.org/extension/container_elements>`__
 - `news <https://extensions.typo3.org/extension/news>`__
 - `eventnews <https://extensions.typo3.org/extension/eventnews>`__
+- `tt_address <https://extensions.typo3.org/extension/tt_address>`__
 
 Various
 -------

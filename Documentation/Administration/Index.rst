@@ -24,8 +24,9 @@ Supported extensions
 Extension                        Version tested
 ================================ ================
 container_elements               3.0.0
-news                             9.1.0
 eventnews                        5.0.0
+news                             9.1.0
+tt_address                       6.0.1
 ================================ ================
 
 .. _admin_installation_static_templates:
