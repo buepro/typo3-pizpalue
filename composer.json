@@ -1,6 +1,6 @@
 {
 	"name": "buepro/typo3-pizpalue",
-	"description": "Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, news",
+	"description": "Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, news, eventnews, tt_address",
 	"license": [
 		"GPL-2.0-or-later"
 	],
@@ -15,6 +15,7 @@
 		"web",
 		"news",
 		"calendar",
+		"address",
 		"container"
 	],
 	"authors": [
@@ -57,8 +58,9 @@
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
 		"buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
 		"buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements",
-		"georgringer/news": "Flexible news system",
-		"georgringer/eventnews": "Calendar based on extension news"
+		"friendsoftypo3/tt-address": "Manage addresses",
+		"georgringer/eventnews": "Calendar based on extension news",
+		"georgringer/news": "Flexible news system"
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
@@ -80,7 +82,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "12.4.x-dev"
+			"dev-master": "12.5.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",
