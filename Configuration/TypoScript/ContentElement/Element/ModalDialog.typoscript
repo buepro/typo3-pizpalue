@@ -27,6 +27,8 @@ tt_content.pp_modal_dialog {
                 }
             }
         }
+        30 = TEXT
+        30.stdWrap.preUserFunc = Buepro\Pizpalue\Service\ContentElementService->modifyTitleTag
         90 = TEXT
         90.stdWrap.preUserFunc = Buepro\Pizpalue\Service\ContentElementService->popVariantsModifier
     }

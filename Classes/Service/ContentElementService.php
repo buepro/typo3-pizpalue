@@ -94,4 +94,15 @@ class ContentElementService
     {
         VariantsModifierStack::popVariantsModifier();
     }
+
+    public function modifyTitleTag(): void
+    {
+        if (
+            ($records = $this->cObj->data['records'] ?? null) !== null &&
+            isset($GLOBALS['TSFE']->config['config']['pageTitleProviders.']['news.']) &&
+            strpos($records, 'tx_news_domain_model_news') !== false
+        ) {
+            unset($GLOBALS['TSFE']->config['config']['pageTitleProviders.']['news.']);
+        }
+    }
 }
