@@ -19,7 +19,7 @@ added. The resulting template hierarchy would be as following:
 #. Pizpalue - news (pizpalue)
 
 .. note::
-   In case the extension `eventnews` is used as well the template hierarchy
+   In case the extension `eventnews` is installed the template hierarchy
    would be as following:
 
    #. News (news)
@@ -27,6 +27,15 @@ added. The resulting template hierarchy would be as following:
    #. Eventnews (eventnews)
    #. Pizpalue - news (pizpalue)
    #. Pizpalue - eventnews (eventnews)
+
+.. note::
+   To show news in modal dialog content elements the template hierarchy needs
+   to be as following:
+
+   #. News (news)
+   #. News Styles Twitter Bootstrap V5 (news)
+   #. Pizpalue - news (pizpalue)
+   #. Pizpalue - Main (pizpalue)
 
 .. _admin_news_rss_feed:
 
