@@ -3,7 +3,7 @@ services:
     tags:
       - name: event.listener
         identifier: 'buepro/pizpalue/set-backend-styling'
-        event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
+        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
   Buepro\Pizpalue\Backend\ToolbarItem\VersionToolbarItem:
     tags:
       -
@@ -14,4 +14,4 @@ services:
     tags:
       - name: event.listener
         identifier: 'buepro/pizpalue/finalize-extension-installation'
-        event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
+        event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
