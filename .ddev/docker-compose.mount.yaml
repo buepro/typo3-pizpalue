@@ -1,0 +1,5 @@
+services:
+  web:
+    volumes:
+      # Mount local directory "/home/roman/public" to the web container
+      - "/home/roman/public:/mnt/typo3/ext/public"
