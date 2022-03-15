@@ -1,53 +1,44 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. include:: Includes.txt
-
+.. include:: /Includes.rst.txt
 
 .. _start:
 
 =================
-Template pizpalue
+Pizpalue template
 =================
 
-.. only:: html
+:Extension key:
+   pizpalue
 
-   :Classification:
-      pizpalue
+:Version:
+   |release|
 
-   :Version:
-      |release|
+:Language:
+   en
 
-   :Language:
-      en
+:Author:
+   Roman Büchler
 
-   :Keywords:
-      pizpalue, distribution, bootstrap, bootstrap_package
+:Email:
+   rb@buechler.pro
 
-   :Copyright:
-      since 2018
+:License:
+   This document is published under the Open Content License
+   available from https://www.openhub.net/licenses/opl.
 
-   :Author:
-      Roman Büchler
+:Rendered:
+   |today|
 
-   :Email:
-      rb@buechler.pro
+The extension builds on Benjamin Kott's
+`Bootstrap Package <https://extensions.typo3.org/extension/bootstrap_package>`__
+and serves as a template for creating complete TYPO3 websites and
+:doc:`distributions <t3coreapi:ExtensionArchitecture/CreateNewDistribution/Index>`
+that use the Twitter Bootstrap library.
 
-   :License:
-      This document is published under the Open Content License
-      available from http://www.opencontent.org/opl.shtml
+The extension configures TYPO3 and extends it with selected extensions to
+provide better structured and appealing content while optimizing speed and SEO
+performance.
 
-   :Rendered:
-      |today|
-
-   The content of this document is related to TYPO3,
-   a GNU/GPL CMS/Framework available from `www.typo3.org <http://www.typo3.org/>`__.
-
-
-
-   **Table of Contents**
+**Table of Contents**
 
 .. toctree::
    :maxdepth: 2

@@ -1,6 +1,6 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
-.. _admin_upgrade_11.4:
+.. _admin_upgrade_12.0:
 
 ==========================================
 Upgrade to version 12.0
