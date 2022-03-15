@@ -152,11 +152,11 @@
 			"@typo3cms:database:import"
 		],
 		"typo3cms:database:export": [
-			".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db.sql.gz",
-			"ls -l Build/site/db.sql.gz"
+			".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db11.sql.gz",
+			"ls -l Build/site/db11.sql.gz"
 		],
 		"typo3cms:database:import": [
-			"gzip -cdk Build/site/db.sql.gz | .build/bin/typo3cms database:import"
+			"gzip -cdk Build/site/db11.sql.gz | .build/bin/typo3cms database:import"
 		],
 		"typo3cms:install:setup": [
 			".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='pizpalue dev' --web-server-config='apache'"
