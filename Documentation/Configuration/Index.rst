@@ -156,6 +156,7 @@ For some extensions additional configurations are available:
    :maxdepth: 1
 
    Extensions/News
+   Extensions/Eventnews
 
 
 .. _config_seo:
