@@ -19,10 +19,10 @@ Github?
 #. Update supported extensions (e.g. `news`, `tt_address`, `timelog`) as needed.
    If possible use :ref:`tested versions <admin_installation_supported_extensions>`.
 #. Delete the folder `typo3conf/ext/pizpalue`
-#. Download the source code from `github <https://github.com/buepro/typo3-pizpalue/archive/master.zip>`__
+#. Download the source code from `github <https://github.com/buepro/typo3-pizpalue/archive/main.zip>`__
 #. Upload the downloaded zip-file to `typo3conf/ext`
 #. Extract the files
-#. Rename the new folder from `typo3-pizpalue-master` to `pizpalue`
+#. Rename the new folder from `typo3-pizpalue-main` to `pizpalue`
 #. Install the extension `pizpalue`
 #. Install the extension `user_pizpalue`
 

@@ -7,7 +7,7 @@
 Changelog
 =========
 
-The project changes can as well be looked up at `Github <https://github.com/buepro/typo3-pizpalue/commits/master>`__.
+The project changes can as well be looked up at `Github <https://github.com/buepro/typo3-pizpalue/commits/main>`__.
 
 Releases
 ========

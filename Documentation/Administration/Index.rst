@@ -64,7 +64,7 @@ Upgrade
 .. note::
    Upgrade tasks are only needed to be carried out in case breaking changes were
    introduced between the old and new release. Breaking changes are marked with
-   `[!!!]` in the `commit messages <https://github.com/buepro/typo3-pizpalue/commits/master>`__.
+   `[!!!]` in the `commit messages <https://github.com/buepro/typo3-pizpalue/commits/main>`__.
    The :ref:`changelogs <changelog>` might contain a section listing introduced
    breaking changes.
 
