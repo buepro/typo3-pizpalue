@@ -39,6 +39,9 @@ page {
     #.
     10 {
         dataProcessing {
+            # Add properties to items from main menu and alter active property
+            10.dataProcessing.1648044588 = Buepro\Pizpalue\DataProcessing\PostMenuProcessor
+
             # Increase subnavigation depth to 3 levels
             20.levels = 3
 

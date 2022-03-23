@@ -4,16 +4,13 @@
         <f:for each="{mainnavigation}" as="item">
             {f:variable(name: '_relAttribute', value: '')}
             {f:variable(name: '_relAttribute', value: ' rel="noopener noreferrer"') -> f:if(condition: '{item.target} == "_blank"')}
-            {f:variable(name:'_shortcutState', value:'')}
-            {f:variable(name:'_shortcutState', value:' active')
-                -> f:if(condition:'({item.data.doktype} == 4) && ({item.data.shortcut} == {data.uid})')}
             <f:if condition="{item.spacer}">
                 <f:then>
                     </ul>
                     <ul class="navbar-nav">
                 </f:then>
                 <f:else>
-                    <li class="nav-item{_shortcutState}{f:if(condition: item.active, then:' active')}{f:if(condition: item.children, then:' dropdown dropdown-hover')}">
+                    <li class="nav-item{f:if(condition: item.active, then:' active')}{f:if(condition: item.children, then:' dropdown dropdown-hover')}">
                         <a href="{item.link}" id="nav-item-{item.data.uid}" class="nav-link{f:if(condition: item.children, then:' dropdown-toggle')}"{f:if(condition: item.target, then: ' target="{item.target}"')} title="{item.title}"{f:if(condition: item.children, then:' aria-haspopup="true" aria-expanded="false"')}{_relAttribute -> f:format.raw()}>
                             <f:if condition="{theme.navigation.icon.enable} && {item.icon}">
                                 <span class="nav-link-icon">
