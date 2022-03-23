@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:if condition="{backgroundImage.file}"><f:if condition="{id} == 'c4'"><f:debug>{_all}</f:debug></f:if>
+<f:if condition="{backgroundImage.file}">
     <div class="frame-backgroundimage-container">
         <div id="{backgroundImage.id}" class="{backgroundImage.classes -> bk2k:implode()}">
             <f:variable name="styles" value=""/>
