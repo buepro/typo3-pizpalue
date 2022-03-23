@@ -55,6 +55,11 @@ class VersionToolbarItem
             $value = ExtensionManagementUtility::getExtensionVersion('pizpalue');
         }
 
+        // Remove leading v
+        if ($value[0] === 'v' && str_contains($value, '.')) {
+            $value = substr($value, 1);
+        }
+
         // Set system information entry
         $systemInformation->addSystemInformation(
             'Pizpalue Template',
