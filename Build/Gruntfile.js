@@ -34,6 +34,7 @@ module.exports = function(grunt) {
             icons: '<%= paths.resources %>Public/Icons/',
             fonts: '<%= paths.resources %>Public/Fonts/',
             js: '<%= paths.resources %>Public/JavaScript/',
+            contrib: '<%= paths.resources %>Public/Contrib/',
             exts: {
                 ttAddress: {
                     root: '<%= paths.root %>Extensions/tt_address/',
@@ -96,6 +97,10 @@ module.exports = function(grunt) {
             listCategorizedContent: {
                 src: '<%= paths.js %>Src/pizpalue.list-categorized-content.js',
                 dest: '<%= paths.js %>Dist/pizpalue.list-categorized-content.min.js'
+            },
+            josh: {
+                src: '<%= paths.contrib %>josh.js/src/josh.js',
+                dest: '<%= paths.contrib %>josh.js/dist/josh.pp.min.js'
             },
         },
         watch: {

@@ -228,4 +228,21 @@ class PizpalueFrameViewHelperTest extends FunctionalTestCase
             self::assertArrayHasKey($animationAsset['id'], $assets);
         }
     }
+
+    /**
+     * @deprecated will be removed in 13.0
+     */
+    public function testPropertySubstitutionInJoshAnimation(): void
+    {
+        $data = $this->contentData;
+        $data['tx_pizpalue_animation'] = 1;
+        $data['tx_pizpalue_attributes'] .= ' data-josh-delay="1s"';
+        $expected = array_merge_recursive($this->getDefaultExpected(), [
+            'styles' => ['border: red'],
+            'classes' => ['test-animation-1636113235', 'josh-js'],
+            'attributes' => [ 'data-josh-anim-delay="1s"', 'data-josh-anim-name="fadeInBottomLeft"'],
+        ]);
+        $expected['hasScrollAnimation'] = true;
+        $this->testViewHelperData($data, $this->pizpalueConstants, $expected);
+    }
 }

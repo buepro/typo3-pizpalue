@@ -230,6 +230,20 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         ));
     }
 
+    /**
+     * @deprecated will be removed in 13.0
+     */
+    private static function substituteJoshDataDelayAttribute(array $attributes): array
+    {
+        if (str_contains(($attributesString = implode(':pp:', $attributes)), 'data-josh-delay')) {
+            $attributes = explode(
+                ':pp:',
+                str_replace('data-josh-delay', 'data-josh-anim-delay', $attributesString)
+            );
+        }
+        return $attributes;
+    }
+
     protected static function addJoshAssets(
         AssetCollector $assetCollector,
         array $data,
@@ -240,12 +254,14 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         if (strpos($attributes, 'data-josh') === false) {
             return;
         }
+        // @phpstan-ignore-next-line
+        $result['attributes'] = self::substituteJoshDataDelayAttribute($result['attributes']);
         $result['hasScrollAnimation'] = true;
         $result['classes'][] = 'josh-js';
         self::addAnimateCssToAssetCollector($assetCollector);
         $assetCollector->addJavaScript(
             'ppJosh',
-            'EXT:pizpalue/Resources/Public/Contrib/josh.js/dist/josh.min.js'
+            'EXT:pizpalue/Resources/Public/Contrib/josh.js/dist/josh.pp.min.js'
         );
         $assetCollector->addInlineJavaScript('ppJoshInit', sprintf(
             ';+function () { const josh = new Josh({ %s }); }();',

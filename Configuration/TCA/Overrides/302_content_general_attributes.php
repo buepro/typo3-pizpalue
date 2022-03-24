@@ -101,7 +101,7 @@ defined('TYPO3') or die('Access denied.');
         return [
             ['Josh animation', 'data-josh-anim-name="pulse" '],
             ['Josh duration', 'data-josh-duration="1500ms" '],
-            ['Josh delay', 'data-josh-delay="3.5s" '],
+            ['Josh delay', 'data-josh-anim-delay="3.5s" '],
             ['Josh iteration', 'data-josh-iteration="infinite" '],
         ];
     };
