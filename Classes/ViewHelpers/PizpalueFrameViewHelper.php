@@ -243,14 +243,10 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         $result['hasScrollAnimation'] = true;
         $result['classes'][] = 'josh-js';
         self::addAnimateCssToAssetCollector($assetCollector);
-        $assetCollector->addJavaScript(
-            'ppJosh',
-            'EXT:pizpalue/Resources/Public/Contrib/josh.js/dist/josh.min.js'
-        );
         $assetCollector->addInlineJavaScript('ppJoshInit', sprintf(
-            ';+function () { const josh = new Josh({ %s }); }();',
+            ';import PpJosh from \'/typo3conf/ext/pizpalue/Resources/Public/Contrib/josh.js/dist/josh.min.js\'; +function () { const josh = new PpJosh({ %s }); }();',
             $pizpalueConstants['animation']['josh']['initParams'] ?? ''
-        ));
+        ), ['type' => 'module']);
     }
 
     protected static function addTwikitoAssets(

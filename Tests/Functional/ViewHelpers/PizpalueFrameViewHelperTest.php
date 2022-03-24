@@ -196,7 +196,6 @@ class PizpalueFrameViewHelperTest extends FunctionalTestCase
                 $this->pizpalueConstants,
                 $joshExpected,
                 [
-                    ['type' => 'JavaScript', 'id' => 'ppJosh'],
                     ['type' => 'InlineJavaScript', 'id' => 'ppJoshInit']
                 ]
             ],
