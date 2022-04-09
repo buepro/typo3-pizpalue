@@ -26,7 +26,12 @@
 			"role": "Developer"
 		}
 	],
-	"homepage": "https://github.com/buepro/typo3-pizpalue",
+	"homepage": "https://extensions.typo3.org/extension/pizpalue",
+	"support": {
+		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/",
+		"issues": "https://github.com/buepro/typo3-pizpalue/issues",
+		"source": "https://github.com/buepro/typo3-pizpalue"
+	},
 	"require": {
 		"php": ">=7.3.0",
 		"bk2k/bootstrap-package": "~12.0.4",
