@@ -1,3 +1,7 @@
+.. image:: https://poser.pugx.org/buepro/typo3-pizpalue/v/stable.svg
+   :alt: Latest Stable Version
+   :target: https://extensions.typo3.org/extension/pizpalue/
+
 .. image:: https://img.shields.io/badge/TYPO3-11-orange.svg
    :alt: TYPO3 11
    :target: https://get.typo3.org/version/11
@@ -5,6 +9,14 @@
 .. image:: https://img.shields.io/badge/TYPO3-10-orange.svg
    :alt: TYPO3 10
    :target: https://get.typo3.org/version/10
+
+.. image:: https://poser.pugx.org/buepro/typo3-pizpalue/d/total.svg
+   :alt: Total Downloads
+   :target: https://packagist.org/packages/buepro/typo3-pizpalue
+
+.. image:: https://poser.pugx.org/buepro/typo3-pizpalue/d/monthly
+   :alt: Monthly Downloads
+   :target: https://packagist.org/packages/buepro/typo3-pizpalue
 
 .. image:: https://github.com/buepro/typo3-pizpalue/workflows/CI/badge.svg
    :alt: Continuous Integration Status
