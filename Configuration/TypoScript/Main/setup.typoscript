@@ -45,6 +45,28 @@ page {
             # Increase subnavigation depth to 3 levels
             20.levels = 3
 
+            # todo: Can be removed with bootstrap_package 12.1
+            1629126321 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            1629126321 {
+                special = {$page.theme.footernavigation.navigationType}
+                special.value = {$page.theme.footernavigation.navigationValue}
+                includeNotInMenu = {$page.theme.footernavigation.includeNotInMenu}
+                levels = {$page.theme.footernavigation.levels}
+                as = footernavigation
+                if {
+                    isTrue = {$page.theme.footernavigation.navigationValue}
+                }
+                dataProcessing {
+                    1629202464 = BK2K\BootstrapPackage\DataProcessing\IconsDataProcessor
+                    1629202464 {
+                        iconSet.field = nav_icon_set
+                        iconIdentifier.field = nav_icon_identifier
+                        iconFileFieldName = nav_icon
+                        as = icon
+                    }
+                }
+            }
+
             # Background image
             1645796505 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             1645796505 {
