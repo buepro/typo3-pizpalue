@@ -354,13 +354,11 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 // Toggler
 // --------------------------------------------------
 $pp-header-toggler-width: 34px !default;
-$pp-header-toggler-padding: 6px !default;
+$pp-header-toggler-padding: 0 !default;
 $pp-header-toggler-line-gap: round($pp-header-toggler-width / 5.67) !default;
 $pp-header-toggler-line-width: $pp-header-toggler-width - 2 * $pp-header-toggler-padding !default;
 $pp-header-toggler-line-height: round($pp-header-toggler-line-width / 11) !default;
-$pp-header-toggler-margin-right: -$pp-header-toggler-padding !default;
 .navbar-toggler {
-    margin-right: $pp-header-toggler-margin-right;
     padding: 0;
     height: $pp-header-toggler-width;
     width: $pp-header-toggler-width;

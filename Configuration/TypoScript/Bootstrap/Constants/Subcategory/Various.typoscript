@@ -13,13 +13,13 @@ plugin.bootstrap_package.settings.scss {
     pp-header-overlay-breakpoint = $grid-float-breakpoint
 
     # cat=6040/1034/0210; type=string; label=Toggler width
-    pp-header-toggler-width = 34px
+    pp-header-toggler-width = 22px
 
     # cat=6040/1034/0220; type=string; label=Toggler padding
-    pp-header-toggler-padding = 6px
+    pp-header-toggler-padding = 0
 
     # cat=6040/1034/0230; type=string; label=Toggler line gap
-    pp-header-toggler-line-gap = round($pp-header-toggler-width / 5.67)
+    pp-header-toggler-line-gap = round($pp-header-toggler-width / 3.67)
 
     // We define it here for that it can be used in structure elements
     grid-gutter-width = 40px
