@@ -4,6 +4,10 @@
 // @see pp-make-background
 //
 :root {
+    --frame-embedded-border-radius: 0;
+    @if ($enable-rounded) {
+        --frame-embedded-border-radius: #{$frame-embedded-border-radius};
+    }
     --pp-frame-heading-color: #{$headings-color};
     --pp-frame-link-font-weight: inherit;
     --pp-frame-link-text-decoration: inherit;
