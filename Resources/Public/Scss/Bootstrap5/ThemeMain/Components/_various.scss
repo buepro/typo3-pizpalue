@@ -1,4 +1,14 @@
 //
+// Root properties
+// --------------------------------------------------
+:root {
+    --pp-headings-font-family: #{inspect($font-family-base)};
+    @if ($headings-font-family) {
+        --pp-headings-font-family: #{inspect($headings-font-family)};
+    }
+}
+
+//
 // Corrects image overflow on webkit engine
 // --------------------------------------------------
 figure.image {
