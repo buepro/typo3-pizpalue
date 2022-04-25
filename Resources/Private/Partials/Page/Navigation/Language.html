@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:if condition="{languagenavigation}">
+    <ul id="language_menu" class="language-menu ppc-{theme.language.style}">
+        <f:for each="{languagenavigation}" as="item">
+            {item.flag -> pvh:format.replace(substring: 'flags-', replacement: '') -> f:format.case(mode:'upper')
+                -> f:variable(name: '_flagName')}
+            {item.flag -> pvh:format.replace(substring: 'flags-', replacement: '') -> f:variable(name: '_flagName')
+                -> f:if(condition: '{item.flag} == "flags-catalonia" || {item.flag} =="flags-en-us-gb"')}
+            <f:variable name="_itemContent">
+                <f:if condition="{theme.language.style} == 'icon' || {theme.language.style} == 'icontext'">
+                    <span class="ppc-flag"><f:image
+                        src="EXT:core/Resources/Public/Icons/Flags/{_flagName}.png" title="{item.title}"
+                    /></span>
+                </f:if>
+                <f:if condition="{theme.language.style} == 'text' || {theme.language.style} == 'icontext'">
+                    <span class="ppc-text">{item.navigationTitle}</span>
+                </f:if>
+            </f:variable>
+            <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
+                <f:if condition="{item.available}">
+                    <f:then>
+                        <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                            {_itemContent -> f:format.raw()}
+                        </a>
+                    </f:then>
+                    <f:else>
+                        {_itemContent -> f:format.raw()}
+                    </f:else>
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</f:if>
+</html>

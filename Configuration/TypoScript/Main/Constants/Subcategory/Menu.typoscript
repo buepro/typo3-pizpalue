@@ -42,6 +42,8 @@ page {
         language {
             # cat=6030/1060/0410; type=boolean; label=Show language menu
             enable = 1
+            # cat=6030/1060/0420; type=options[Text=text, Icon=icon, Icon and text=icontext]; label=Language menu style
+            style = text
         }
     }
 }
