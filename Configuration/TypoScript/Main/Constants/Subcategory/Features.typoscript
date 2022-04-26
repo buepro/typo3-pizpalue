@@ -50,6 +50,8 @@ page.theme {
         button {
             # cat=6060/1035/0140; type=string; label=Button Label
             label = LLL:EXT:bootstrap_package/Resources/Private/Language/locallang.xlf:contact.button.label
+            # cat=6060/1035/0150; type=string; label=Button color
+            colorClass = primary
         }
     }
 }

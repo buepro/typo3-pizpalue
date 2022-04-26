@@ -1,6 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
     <f:comment>As bootstrap package but with pizpalue constants and conditional label.</f:comment>
-    <f:if condition="{theme.contact.label}"><h5 class="footer-contact-headline"><f:translate key="{theme.contact.label}" /></h5></f:if>
+    <f:if condition="{theme.contact.label}"><h5 class="footer-contact-headline"><f:translate
+        key="{theme.contact.label}" default="{theme.contact.label}" /></h5></f:if>
     <address>
         <f:if condition="{pizpalue.customer.company}">
             <p class="address-title"><strong>{pizpalue.customer.company}</strong></p>
@@ -27,7 +28,7 @@
     <f:if condition="{theme.contact.button.pageUid}">
         <p>
             <f:link.page class="btn btn-{theme.contact.button.colorClass}" pageUid="{theme.contact.button.pageUid}">
-                <f:translate key="{theme.contact.button.label}" />
+                <f:translate key="{theme.contact.button.label}" default="{theme.contact.button.label}" />
             </f:link.page>
         </p>
     </f:if>
