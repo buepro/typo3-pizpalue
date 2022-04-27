@@ -28,9 +28,9 @@
 	],
 	"homepage": "https://extensions.typo3.org/extension/pizpalue",
 	"support": {
-		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/",
 		"issues": "https://github.com/buepro/typo3-pizpalue/issues",
-		"source": "https://github.com/buepro/typo3-pizpalue"
+		"source": "https://github.com/buepro/typo3-pizpalue",
+		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
 	},
 	"require": {
 		"php": ">=7.3.0",
@@ -60,8 +60,8 @@
 		"typo3/testing-framework": "^5.0 || ^6.4"
 	},
 	"suggest": {
-		"buepro/typo3-easyconf": "Backend module to provide an easy website configuration",
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
+		"buepro/typo3-easyconf": "Backend module to provide an easy website configuration",
 		"buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
 		"buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements",
 		"friendsoftypo3/tt-address": "Manage addresses",
@@ -82,15 +82,15 @@
 		}
 	},
 	"config": {
-		"bin-dir": ".build/bin",
-		"optimize-autoloader": true,
-		"sort-packages": true,
-		"vendor-dir": ".build/vendor",
 		"allow-plugins": {
 			"typo3/class-alias-loader": true,
 			"typo3/cms-composer-installers": true,
 			"ergebnis/composer-normalize": true
-		}
+		},
+		"bin-dir": ".build/bin",
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"vendor-dir": ".build/vendor"
 	},
 	"extra": {
 		"branch-alias": {
