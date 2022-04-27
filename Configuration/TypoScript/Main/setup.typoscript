@@ -98,6 +98,11 @@ page {
     }
     includeCSSLibs {
         #:::::::::::::::::::::::
+        #: Google font(s)
+        #.
+        googlewebfont = {$pizpalue.style.googleFontsUrl}
+
+        #:::::::::::::::::::::::
         #: Icons (ppicon, bootstrappackageicon, glyphicon)
         #.
         bootstrappackageicon >

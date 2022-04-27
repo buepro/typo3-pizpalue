@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="scaffold_navbar-height" resname="scaffold_navbar-height">
+				<source>Heigh</source>
+			</trans-unit>
+			<trans-unit id="scaffold_navbar-height-sm" resname="scaffold_navbar-height-sm">
+				<source>Height on small screens (sm)</source>
+			</trans-unit>
+			<trans-unit id="scaffold_navbar-height-lg" resname="scaffold_navbar-height-lg">
+				<source>Height on large screens (lg)</source>
+			</trans-unit>
+			<trans-unit id="scaffold_pp-header-overlay-breakpoint" resname="scaffold_pp-header-overlay-breakpoint">
+				<source>Header overlay breakpoint</source>
+			</trans-unit>
+
+			<trans-unit id="scaffold_show_footer" resname="scaffold_show_footer">
+				<source>Show footer</source>
+			</trans-unit>
+			<trans-unit id="scaffold_row_class" resname="scaffold_row_class">
+				<source>Row class</source>
+			</trans-unit>
+			<trans-unit id="scaffold_left_column_class" resname="scaffold_left_column_class">
+				<source>Left column class</source>
+			</trans-unit>
+			<trans-unit id="scaffold_middle_column_class" resname="scaffold_middle_column_class">
+				<source>Middle column class</source>
+			</trans-unit>
+			<trans-unit id="scaffold_right_column_class" resname="scaffold_right_column_class">
+				<source>Right column class</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

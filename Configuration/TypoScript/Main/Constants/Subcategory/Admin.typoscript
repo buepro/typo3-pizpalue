@@ -39,6 +39,12 @@ pizpalue.agency {
     # cat=6010/1010/0030; type=string; label=Agency website
     link = https://www.terve.link
 
+    # cat=6010/1010/0032; type=string; label=Agency website
+    phone = 111 111 11 11
+
+    # cat=6010/1010/0034; type=string; label=Agency website
+    email = info@terve.link
+
     # cat=6010/1010/0040; type=string; label=Agency reference:HTML used to create a reference to the agency
     reference = <span class="pp-agency-reference">Eine Webseite von <a href="{$pizpalue.agency.link}" title="{$pizpalue.agency.name} | {$pizpalue.agency.slogan}" target="_blank">{$pizpalue.agency.name}</a></span>
 

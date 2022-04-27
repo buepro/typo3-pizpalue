@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="style_global_enable-rounded" resname="style_global_enable-rounded">
+				<source>Enable rounded</source>
+			</trans-unit>
+			<trans-unit id="style_global_enable-shadows" resname="style_global_enable-shadows">
+				<source>Enable shadows</source>
+			</trans-unit>
+			<trans-unit id="style_global_enable-gradients" resname="style_global_enable-gradients">
+				<source>Enable gradients</source>
+			</trans-unit>
+			<trans-unit id="style_global_enable_scss" resname="style_global_enable_scss">
+				<source>Enable additional SCSS</source>
+			</trans-unit>
+
+			<trans-unit id="style_rounded_border-radius" resname="style_rounded_border-radius">
+				<source>Border radius</source>
+			</trans-unit>
+			<trans-unit id="style_rounded_border-radius-sm" resname="style_rounded_border-radius-sm">
+				<source>Border radius small</source>
+			</trans-unit>
+			<trans-unit id="style_rounded_border-radius-lg" resname="style_rounded_border-radius-lg">
+				<source>Border radius large</source>
+			</trans-unit>
+			<trans-unit id="style_rounded_frame-embedded-border-radius" resname="style_rounded_frame-embedded-border-radius">
+				<source>Embedded frame border radius</source>
+			</trans-unit>
+
+			<trans-unit id="style_scss_declarations" resname="style_scss_declarations">
+				<source>Declarations</source>
+			</trans-unit>
+
+			<trans-unit id="style_various_headings-margin-bottom" resname="style_various_headings-margin-bottom">
+				<source>Headings margin bottom</source>
+			</trans-unit>
+			<trans-unit id="style_various_grid-gutter-width" resname="style_various_grid-gutter-width">
+				<source>Grid gutter width</source>
+			</trans-unit>
+			<trans-unit id="style_various_pp-tile-gutter" resname="style_various_pp-tile-gutter">
+				<source>Tile gutter width</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

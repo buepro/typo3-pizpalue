@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="seo_meta_google-site-verification" resname="seo_meta_google-site-verification">
+				<source>Site verification code</source>
+			</trans-unit>
+			<trans-unit id="seo_tracking_google_tracking_id" resname="seo_tracking_google_tracking_id">
+				<source>Tracking ID</source>
+			</trans-unit>
+			<trans-unit id="seo_optimize_link_targets" resname="seo_optimize_link_targets">
+				<source>Optimize link targets</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

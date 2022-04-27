@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="logo_file_reference" resname="logo_file_reference">
+				<source>Normal</source>
+			</trans-unit>
+			<trans-unit id="logo_file_inverted_reference" resname="logo_file_inverted_reference">
+				<source>Inverted</source>
+			</trans-unit>
+			<trans-unit id="logo_file" resname="logo_file">
+				<source>Normal by path</source>
+			</trans-unit>
+			<trans-unit id="logo_file_inverted" resname="logo_file_inverted">
+				<source>Inverted by path</source>
+			</trans-unit>
+			<trans-unit id="logo_width" resname="logo_width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="logo_height" resname="logo_height">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="logo_alt" resname="logo_alt">
+				<source>Alt Tag</source>
+			</trans-unit>
+			<trans-unit id="logo_linktitle" resname="logo_linktitle">
+				<source>Title Tag</source>
+			</trans-unit>
+
+			<trans-unit id="paletteAppicon.description" resname="paletteAppicon.description">
+				<source>App icons are used by various devices in different formats, for example as screen or
+					bookmark icon. They can be generated under https://realfavicongenerator.net. The website
+					provides an archive called "Favicon package" and a text to be used in the head section.
+					Upload the archive and paste the text here. In case app icons are not needed just define
+					a favicon file. ATTENTION: When an appicon is defined the files from the appicon archive
+					are copied to the website root directory where existing files will be overwritten.</source>
+			</trans-unit>
+			<trans-unit id="appicon_generator_archive" resname="appicon_generator_archive">
+				<source>App icons archive</source>
+			</trans-unit>
+			<trans-unit id="appicon_generator_text" resname="appicon_generator_text">
+				<source>App icons text</source>
+			</trans-unit>
+			<trans-unit id="appicon_file" resname="appicon_file">
+				<source>Favicon file</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

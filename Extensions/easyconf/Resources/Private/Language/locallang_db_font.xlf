@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="font_control_enable_headings_font" resname="font_control_enable_headings_font">
+				<source>Enable headings font</source>
+			</trans-unit>
+			<trans-unit id="font_control_google_font_enable" resname="font_control_google_font_enable">
+				<source>Enable google font</source>
+			</trans-unit>
+			<trans-unit id="font_general_font-size-root" resname="font_general_font-size-root">
+				<source>Font size root</source>
+			</trans-unit>
+			<trans-unit id="font_normal_font-family-base" resname="font_normal_font-family-base">
+				<source>Font family</source>
+			</trans-unit>
+			<trans-unit id="font_normal_font-weight-normal" resname="font_normal_font-weight-normal">
+				<source>Font weight</source>
+			</trans-unit>
+			<trans-unit id="font_normal_font-weight-light" resname="font_normal_font-weight-light">
+				<source>Font weight light</source>
+			</trans-unit>
+			<trans-unit id="font_normal_font-weight-bold" resname="font_normal_font-weight-bold">
+				<source>Font weight bold</source>
+			</trans-unit>
+			<trans-unit id="font_normal_font-size-base" resname="font_normal_font-size-base">
+				<source>Font size</source>
+			</trans-unit>
+			<trans-unit id="font_headings_headings-font-family" resname="font_headings_headings-font-family">
+				<source>Font family</source>
+			</trans-unit>
+			<trans-unit id="font_headings_headings-font-weight" resname="font_headings_headings-font-weight">
+				<source>Font weight</source>
+			</trans-unit>
+			<trans-unit id="font_headings_headings-font-style" resname="font_headings_headings-font-style">
+				<source>Font style</source>
+			</trans-unit>
+			<trans-unit id="font_headings_headings-line-height" resname="font_headings_headings-line-height">
+				<source>Headings line height</source>
+			</trans-unit>
+			<trans-unit id="font_headings_h1-font-size" resname="font_headings_h1-font-size">
+				<source>H1 font size</source>
+			</trans-unit>
+			<trans-unit id="font_headings_h2-font-size" resname="font_headings_h2-font-size">
+				<source>H2 font size</source>
+			</trans-unit>
+			<trans-unit id="font_headings_h3-font-size" resname="font_headings_h3-font-size">
+				<source>H3 font size</source>
+			</trans-unit>
+			<trans-unit id="font_headings_h4-font-size" resname="font_headings_h4-font-size">
+				<source>H4 font size</source>
+			</trans-unit>
+			<trans-unit id="font_headings_h5-font-size" resname="font_headings_h5-font-size">
+				<source>H5 font size</source>
+			</trans-unit>
+			<trans-unit id="font_headings_h6-font-size" resname="font_headings_h6-font-size">
+				<source>H6 font size</source>
+			</trans-unit>
+			<trans-unit id="font_google_font" resname="font_google_font">
+				<source>Font family</source>
+			</trans-unit>
+			<trans-unit id="font_google_weight" resname="font_google_weight">
+				<source>Font weight</source>
+			</trans-unit>
+			<trans-unit id="font_google-headings-webfont" resname="font_google-headings-webfont">
+				<source>Headings font family</source>
+			</trans-unit>
+			<trans-unit id="font_google-headings-webfont-weight" resname="font_google_headings-webfont-weight">
+				<source>Headings font weight</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

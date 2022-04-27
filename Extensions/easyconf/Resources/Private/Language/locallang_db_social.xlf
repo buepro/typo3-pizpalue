@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="social_enable" resname="social_enable">
+				<source>Add social links to footer meta section</source>
+			</trans-unit>
+
+			<trans-unit id="paletteSocialChannel.description" resname="paletteSocialChannel.description">
+				<source>A social channel is shown on the website if a link has been defined for it.</source>
+			</trans-unit>
+			<trans-unit id="social_channel_facebook" resname="social_channel_facebook">
+				<source>Facebook</source>
+			</trans-unit>
+			<trans-unit id="social_channel_twitter" resname="social_channel_twitter">
+				<source>Twitter</source>
+			</trans-unit>
+			<trans-unit id="social_channel_instagram" resname="social_channel_instagram">
+				<source>Instagram</source>
+			</trans-unit>
+			<trans-unit id="social_channel_github" resname="social_channel_github">
+				<source>Github</source>
+			</trans-unit>
+			<trans-unit id="social_channel_googleplus" resname="social_channel_googleplus">
+				<source>Google+</source>
+			</trans-unit>
+			<trans-unit id="social_channel_linkedin" resname="social_channel_linkedin">
+				<source>LinkedIn</source>
+			</trans-unit>
+			<trans-unit id="social_channel_xing" resname="social_channel_xing">
+				<source>Xing</source>
+			</trans-unit>
+			<trans-unit id="social_channel_youtube" resname="social_channel_youtube">
+				<source>Youtube</source>
+			</trans-unit>
+			<trans-unit id="social_channel_vk" resname="social_channel_vk">
+				<source>VK</source>
+			</trans-unit>
+			<trans-unit id="social_channel_vimeo" resname="social_channel_vimeo">
+				<source>Vimeo</source>
+			</trans-unit>
+			<trans-unit id="social_channel_rss" resname="social_channel_rss">
+				<source>RSS</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

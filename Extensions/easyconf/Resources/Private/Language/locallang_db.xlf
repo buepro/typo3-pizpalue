@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="tabOwner" resname="tabOwner">
+				<source>Owner</source>
+			</trans-unit>
+
+			<trans-unit id="tabScaffold" resname="tabScaffold">
+				<source>Scaffold</source>
+			</trans-unit>
+			<trans-unit id="paletteScaffoldHeader" resname="paletteScaffoldHeader">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="paletteScaffoldFooter" resname="paletteScaffoldFooter">
+				<source>Footer</source>
+			</trans-unit>
+
+			<trans-unit id="tabMenu" resname="tabMenu">
+				<source>Menu</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuMain" resname="paletteMenuMain">
+				<source>Main</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuMainSubpage" resname="paletteMenuMainSubpage">
+				<source>Main on subpages</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuSelect" resname="paletteMenuSelect">
+				<source>Select available menus</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuMeta" resname="paletteMenuMeta">
+				<source>Meta menu</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuFooter" resname="paletteMenuFooter">
+				<source>Footer menu</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuLanguage" resname="paletteMenuLanguage">
+				<source>Language menu</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuFast" resname="paletteMenuFast">
+				<source>Fast menu</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuToggler" resname="paletteMenuToggler">
+				<source>Main toggler</source>
+			</trans-unit>
+
+			<trans-unit id="tabLogo" resname="tabLogo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="paletteLogo" resname="paletteLogo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="paletteAppicon" resname="paletteAppicon">
+				<source>App- and Favicon</source>
+			</trans-unit>
+
+			<trans-unit id="tabColors" resname="tabColors">
+				<source>Colors</source>
+			</trans-unit>
+			<trans-unit id="paletteColorsMain" resname="paletteColorsMain">
+				<source>Main</source>
+			</trans-unit>
+			<trans-unit id="paletteColorsText" resname="paletteColorsText">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="paletteColorsLightHeader" resname="paletteColorsLightHeader">
+				<source>Light header</source>
+			</trans-unit>
+			<trans-unit id="paletteColorsDarkHeader" resname="paletteColorsDarkHeader">
+				<source>Dark header</source>
+			</trans-unit>
+			<trans-unit id="paletteColorsFooter" resname="paletteColorsFooter">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="paletteColorsFooterMeta" resname="paletteColorsFooterMeta">
+				<source>Footer meta section</source>
+			</trans-unit>
+
+			<trans-unit id="tabSocial" resname="tabSocial">
+				<source>Social</source>
+			</trans-unit>
+			<trans-unit id="paletteSocialChannel" resname="paletteSocialChannel">
+				<source>Social network channels</source>
+			</trans-unit>
+
+			<trans-unit id="tabStyle" resname="tabStyle">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="paletteStyleGlobal" resname="paletteStyleGlobal">
+				<source>Element selection</source>
+			</trans-unit>
+			<trans-unit id="paletteStyleRounded" resname="paletteStyleRounded">
+				<source>Rounded</source>
+			</trans-unit>
+			<trans-unit id="paletteStyleScss" resname="paletteStyleScss">
+				<source>SCSS</source>
+			</trans-unit>
+			<trans-unit id="paletteStyleVarious" resname="paletteStyleVarious">
+				<source>Various</source>
+			</trans-unit>
+
+			<trans-unit id="tabFont" resname="tabFont">
+				<source>Font</source>
+			</trans-unit>
+			<trans-unit id="paletteFontControl" resname="paletteFontControl">
+				<source>Element selection</source>
+			</trans-unit>
+			<trans-unit id="paletteFontGeneral" resname="paletteFontGeneral">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="paletteFontNormal" resname="paletteFontNormal">
+				<source>Normal</source>
+			</trans-unit>
+			<trans-unit id="paletteFontHeadings" resname="paletteFontHeadings">
+				<source>Headings</source>
+			</trans-unit>
+			<trans-unit id="paletteFontGoogle" resname="paletteFontGoogle">
+				<source>Google font</source>
+			</trans-unit>
+
+			<trans-unit id="tabFeature" resname="tabFeature">
+				<source>Features</source>
+			</trans-unit>
+			<trans-unit id="paletteFeatureControl" resname="paletteFeatureControl">
+				<source>Element selection</source>
+			</trans-unit>
+			<trans-unit id="paletteFeatureContact" resname="paletteFeatureContact">
+				<source>Contact section</source>
+			</trans-unit>
+			<trans-unit id="paletteFeatureVarious" resname="paletteFeatureVarious">
+				<source>Various</source>
+			</trans-unit>
+
+			<trans-unit id="tabVarious" resname="tabVarious">
+				<source>Various</source>
+			</trans-unit>
+			<trans-unit id="paletteSeo" resname="paletteSeo">
+				<source>SEO</source>
+			</trans-unit>
+			<trans-unit id="paletteGoogle" resname="paletteGoogle">
+				<source>Google</source>
+			</trans-unit>
+			<trans-unit id="paletteCookie" resname="paletteCookie">
+				<source>Cookie consent</source>
+			</trans-unit>
+
+			<trans-unit id="tabAdmin" resname="tabAdmin">
+				<source>Admin</source>
+			</trans-unit>
+			<trans-unit id="paletteAdminGeneral" resname="paletteAdminGeneral">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="paletteAgency" resname="paletteAgency">
+				<source>Agency</source>
+			</trans-unit>
+			<trans-unit id="paletteAdminSiteconf" resname="paletteAdminSiteconf">
+				<source>Site configuration</source>
+			</trans-unit>
+			<trans-unit id="paletteAdminFormat" resname="paletteAdminFormat">
+				<source>Format</source>
+			</trans-unit>
+
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="" resname="">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

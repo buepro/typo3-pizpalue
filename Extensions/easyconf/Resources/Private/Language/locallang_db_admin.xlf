@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="paletteAdminSiteconf.description" resname="paletteAdminSiteconf.description">
+				<source>ATTENTION: Activating one of the following switches results in the site configuration to be changed.</source>
+			</trans-unit>
+			<trans-unit id="admin_easyconf_show_all_properties" resname="admin_easyconf_show_all_properties">
+				<source>Show all properties</source>
+			</trans-unit>
+
+			<trans-unit id="admin_siteconf_overwrite_base" resname="admin_siteconf_overwrite_base">
+				<source>Overwrite base</source>
+			</trans-unit>
+			<trans-unit id="admin_siteconf_overwrite_base_variants" resname="admin_siteconf_overwrite_base_variants">
+				<source>Overwrite base variants</source>
+			</trans-unit>
+			<trans-unit id="admin_siteconf_overwrite_robots" resname="admin_siteconf_overwrite_robots">
+				<source>Overwrite robots</source>
+			</trans-unit>
+			<trans-unit id="admin_siteconf_overwrite_sitemap" resname="admin_siteconf_overwrite_sitemap">
+				<source>Overwrite sitemap</source>
+			</trans-unit>
+			<trans-unit id="admin_siteconf_manage_news_route_enhancer" resname="admin_siteconf_manage_news_route_enhancer">
+				<source>Manage news route enhancer</source>
+			</trans-unit>
+			<trans-unit id="admin_siteconf_remove_legacy_news_route_enhancers" resname="admin_siteconf_remove_legacy_news_route_enhancers">
+				<source>Remove legacy news route enhancers</source>
+			</trans-unit>
+			<trans-unit id="admin_siteconf_overwrite_page_not_found" resname="admin_siteconf_overwrite_page_not_found">
+				<source>Overwrite page not found</source>
+			</trans-unit>
+
+			<trans-unit id="admin_site_site_mode" resname="admin_site_site_mode">
+				<source>Site mode</source>
+			</trans-unit>
+			<trans-unit id="admin_site_site_mode.production" resname="admin_site_site_mode.production">
+				<source>Production</source>
+			</trans-unit>
+			<trans-unit id="admin_site_site_mode.maintenance" resname="admin_site_site_mode.maintenance">
+				<source>Maintenance</source>
+			</trans-unit>
+			<trans-unit id="admin_site_site_mode.develop" resname="admin_site_site_mode.develop">
+				<source>Develop</source>
+			</trans-unit>
+			<trans-unit id="admin_site_site_mode.review" resname="admin_site_site_mode.review">
+				<source>Review</source>
+			</trans-unit>
+			<trans-unit id="admin_site_is_maintenance_page" resname="admin_site_is_maintenance_page">
+				<source>Is maintenance page</source>
+			</trans-unit>
+			<trans-unit id="admin_format_date_format" resname="admin_format_date_format">
+				<source>Date format</source>
+			</trans-unit>
+			<trans-unit id="admin_format_date_strftime_format" resname="admin_format_date_strftime_format">
+				<source>Date strftime format</source>
+			</trans-unit>
+			<trans-unit id="admin_format_time_format" resname="admin_format_time_format">
+				<source>Time format</source>
+			</trans-unit>
+			<trans-unit id="admin_format_time_strftime_format" resname="admin_format_time_strftime_format">
+				<source>Time strftime format</source>
+			</trans-unit>
+			<trans-unit id="admin_format_date_time_format" resname="admin_format_date_time_format">
+				<source>Date-time format</source>
+			</trans-unit>
+			<trans-unit id="admin_format_date_time_strftime_format" resname="admin_format_date_time_strftime_format">
+				<source>Date-time strftime format</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

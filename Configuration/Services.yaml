@@ -15,3 +15,13 @@ services:
       - name: event.listener
         identifier: 'buepro/pizpalue/finalize-extension-installation'
         event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
+  Buepro\Pizpalue\Easyconf\EventHandler\AfterReadingPropertiesEventHandler:
+    tags:
+      - name: event.listener
+        identifier: 'buepro/pizpalue/easyconf/after-reading'
+        event: Buepro\Easyconf\Event\AfterReadingPropertiesEvent
+  Buepro\Pizpalue\Easyconf\EventHandler\BeforePersistingPropertiesEventHandler:
+    tags:
+      - name: event.listener
+        identifier: 'buepro/pizpalue/easyconf/before-persisting'
+        event: Buepro\Easyconf\Event\BeforePersistingPropertiesEvent

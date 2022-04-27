@@ -31,7 +31,7 @@ page.theme {
             }
 
             googleplus {
-                label = Google+
+                label =
                 # cat=6050/2910/05_googleplus_url; type=string; label=Google+: Insert the full account url
                 url =
             }
@@ -69,7 +69,7 @@ page.theme {
             vimeo {
                 label = Vimeo
                 # cat=6050/2910/11_vimeo_url; type=string; label=Vimeo: Insert the full account url
-                url =
+                url = https://vimeo.com/
             }
 
             rss {

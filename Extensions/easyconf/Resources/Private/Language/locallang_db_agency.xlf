@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="agency_name" resname="agency_name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="agency_link" resname="agency_link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="agency_phone" resname="agency_phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="agency_email" resname="agency_email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="agency_slogan" resname="agency_slogan">
+				<source>Slogan</source>
+			</trans-unit>
+			<trans-unit id="agency_reference" resname="agency_reference">
+				<source>Reference</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

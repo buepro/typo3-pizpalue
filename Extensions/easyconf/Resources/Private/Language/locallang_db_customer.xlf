@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="customer_company" resname="customer_company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_name" resname="customer_contact_name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="customer_url" resname="customer_url">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="customer_alternative_url" resname="customer_alternative_url">
+				<source>Alternative URL</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_address" resname="customer_contact_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_address_addition" resname="customer_contact_address_addition">
+				<source>Address addition</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_zip" resname="customer_contact_zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_city" resname="customer_contact_city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_country" resname="customer_contact_country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_phone" resname="customer_contact_phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_phone_alt" resname="customer_contact_phone_alt">
+				<source>Alternative phone</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_email" resname="customer_contact_email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="customer_contact_messenger" resname="customer_contact_messenger">
+				<source>Messenger ID</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
