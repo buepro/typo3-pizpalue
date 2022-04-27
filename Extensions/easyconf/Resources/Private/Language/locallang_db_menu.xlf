@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="none" resname="none">
+				<source>None</source>
+			</trans-unit>
+
+			<trans-unit id="menu_main_enable_subpage_definition" resname="menu_main_enable_subpage_definition">
+				<source>Enable definition for subpages</source>
+			</trans-unit>
+			<trans-unit id="menu_main_style" resname="menu_main_style">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="menu_main_subpage_style" resname="menu_main_subpage_style">
+				<source>Style from subpages</source>
+			</trans-unit>
+			<trans-unit id="menu_main_style.default" resname="menu_main_style.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="menu_main_style.default-transition" resname="menu_main_style.default-transition">
+				<source>Default transition</source>
+			</trans-unit>
+			<trans-unit id="menu_main_style.inverse" resname="menu_main_style.inverse">
+				<source>Inverse</source>
+			</trans-unit>
+			<trans-unit id="menu_main_style.inverse-transition" resname="menu_main_style.inverse-transition">
+				<source>Inverse transition</source>
+			</trans-unit>
+			<trans-unit id="menu_main_type" resname="menu_main_type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="menu_main_subpage_type" resname="menu_main_subpage_type">
+				<source>Type from subpages</source>
+			</trans-unit>
+			<trans-unit id="menu_main_type.default" resname="menu_main_type.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="menu_main_type.top" resname="menu_main_type.top">
+				<source>Fixed on top</source>
+			</trans-unit>
+
+			<trans-unit id="menu_breadcrumb_enable" resname="menu_breadcrumb_enable">
+				<source>Breadcrumb</source>
+			</trans-unit>
+			<trans-unit id="menu_meta_enable" resname="menu_meta_enable">
+				<source>Meta</source>
+			</trans-unit>
+			<trans-unit id="menu_footer_enable" resname="menu_footer_enable">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="menu_language_enable" resname="menu_language_enable">
+				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_enable" resname="menu_fast_enable">
+				<source>Fast</source>
+			</trans-unit>
+
+			<trans-unit id="menu_meta_navigation_value" resname="menu_meta_navigation_value">
+				<source>Navigation value</source>
+			</trans-unit>
+			<trans-unit id="menu_meta_navigation_type" resname="menum_eta_navigation_type">
+				<source>Navigation type</source>
+			</trans-unit>
+			<trans-unit id="menu_meta_include_not_in_menu" resname="menu_meta_include_not_in_menu">
+				<source>Include "Not in menu"</source>
+			</trans-unit>
+
+			<trans-unit id="menu_footer_navigation_value" resname="menu_footer_navigation_value">
+				<source>Navigation value</source>
+			</trans-unit>
+			<trans-unit id="menu_footer_navigation_type" resname="menu_footer_navigation_type">
+				<source>Navigation type</source>
+			</trans-unit>
+			<trans-unit id="menu_footer_include_not_in_menu" resname="menu_footer_include_not_in_menu">
+				<source>Include "Not in menu"</source>
+			</trans-unit>
+			<trans-unit id="menu_footer_levels" resname="menu_footer_levels">
+				<source>Levels</source>
+			</trans-unit>
+			<trans-unit id="menu_footer_icon_enable" resname="menu_footer_icon_enable">
+				<source>Enable icons</source>
+			</trans-unit>
+			<trans-unit id="menu_footer_icon_width" resname="menu_footer_icon_width">
+				<source>Icons width</source>
+			</trans-unit>
+			<trans-unit id="menu_footer_icon_height" resname="menu_footer_icon_height">
+				<source>Icons height</source>
+			</trans-unit>
+
+			<trans-unit id="menu_language_language_value" resname="menu_language_language_value">
+				<source>Language value</source>
+			</trans-unit>
+
+			<trans-unit id="paletteMenuFast.description" resname="paletteMenuFast.description">
+				<source>
+					This icon menu is fixed on the side. A menu item is enabled by defining a
+					css class for it. When clicking on an item a content is shown or a new page
+					is opened. Just define one action by setting either a content or a link.
+				</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_first_icon_class" resname="menu_fast_items_first_icon_class">
+				<source>First item icon class</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_first_content_uid" resname="menu_fast_items_first_content_uid">
+				<source>First item content</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_first_page_uid" resname="menu_fast_items_first_page_uid">
+				<source>First item link</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_second_icon_class" resname="menu_fast_items_second_icon_class">
+				<source>Second item icon class</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_second_content_uid" resname="menu_fast_items_second_content_uid">
+				<source>Second item content</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_second_page_uid" resname="menu_fast_items_second_page_uid">
+				<source>Second item link</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_third_icon_class" resname="menu_fast_items_third_icon_class">
+				<source>Third item icon class</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_third_content_uid" resname="menu_fast_items_third_content_uid">
+				<source>Third item content</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_items_third_page_uid" resname="menu_fast_items_third_page_uid">
+				<source>Third item link</source>
+			</trans-unit>
+
+			<trans-unit id="menu_toggler_grid-float-breakpoint" resname="menu_toggler_grid-float-breakpoint">
+				<source>Breakpoint</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-width" resname="menu_toggler_pp-header-toggler-width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-padding" resname="menu_toggler_pp-header-toggler-padding">
+				<source>Padding</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-line-gap" resname="menu_toggler_pp-header-toggler-line-gap">
+				<source>Line gap</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-line-width" resname="menu_toggler_pp-header-toggler-line-width">
+				<source>Line width</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-line-height" resname="menu_toggler_pp-header-toggler-line-height">
+				<source>Line height</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-margin-right" resname="menu_toggler_pp-header-toggler-margin-right">
+				<source>Margin right</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="color_primary" resname="color_primary">
+				<source>Primary</source>
+			</trans-unit>
+			<trans-unit id="color_secondary" resname="color_secondary">
+				<source>Secondary</source>
+			</trans-unit>
+			<trans-unit id="color_complementary" resname="color_complementary">
+				<source>Complementary</source>
+			</trans-unit>
+			<trans-unit id="color_body-bg" resname="color_body-bg">
+				<source>Website background</source>
+			</trans-unit>
+
+			<trans-unit id="color_body-color" resname="color_body-color">
+				<source>Normal</source>
+			</trans-unit>
+			<trans-unit id="color_headings-color" resname="color_headings-color">
+				<source>Headings</source>
+			</trans-unit>
+			<trans-unit id="color_link-color" resname="color_link-color">
+				<source>Link color</source>
+			</trans-unit>
+			<trans-unit id="color_link-hover-color" resname="color_link-hover-color">
+				<source>Link hover color</source>
+			</trans-unit>
+
+			<trans-unit id="color_navbar-light-bg" resname="color_navbar-light-bg">
+				<source>Background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-light-color" resname="color_navbar-light-color">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-light-hover-bg" resname="color_navbar-light-hover-bg">
+				<source>Hover background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-light-hover-color" resname="color_navbar-light-hover-color">
+				<source>Hover text</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-light-active-bg" resname="color_navbar-light-active-bg">
+				<source>Active background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-light-active-color" resname="color_navbar-light-active-color">
+				<source>Active text</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-light-disabled-bg" resname="color_navbar-light-disabled-bg">
+				<source>Disabled background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-light-disabled-color" resname="color_navbar-light-disabled-color">
+				<source>Disabled text</source>
+			</trans-unit>
+
+			<trans-unit id="color_navbar-dark-bg" resname="color_navbar-dark-bg">
+				<source>Background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-dark-color" resname="color_navbar-dark-color">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-dark-hover-bg" resname="color_navbar-dark-hover-bg">
+				<source>Hover background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-dark-hover-color" resname="color_navbar-dark-hover-color">
+				<source>Hover text</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-dark-active-bg" resname="color_navbar-dark-active-bg">
+				<source>Active background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-dark-active-color" resname="color_navbar-dark-active-color">
+				<source>Active text</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-dark-disabled-bg" resname="color_navbar-dark-disabled-bg">
+				<source>Disabled background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-dark-disabled-color" resname="color_navbar-dark-disabled-color">
+				<source>Disabled text</source>
+			</trans-unit>
+
+			<trans-unit id="color_footer-bg" resname="color_footer-bg">
+				<source>Background</source>
+			</trans-unit>
+			<trans-unit id="color_footer-color" resname="color_footer-color">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="color_footer-link-color" resname="color_footer-link-color">
+				<source>Link text</source>
+			</trans-unit>
+			<trans-unit id="color_footer-link-hover-color" resname="color_footer-link-hover-color">
+				<source>Hover text</source>
+			</trans-unit>
+
+			<trans-unit id="color_footer-meta-bg" resname="color_footer-meta-bg">
+				<source>Background</source>
+			</trans-unit>
+			<trans-unit id="color_footer-meta-color" resname="color_footer-meta-color">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="color_footer-meta-link-color" resname="color_footer-meta-link-color">
+				<source>Link text</source>
+			</trans-unit>
+			<trans-unit id="color_footer-meta-link-hover-color" resname="color_footer-meta-link-hover-color">
+				<source>Hover text</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

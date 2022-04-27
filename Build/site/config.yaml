@@ -1,4 +1,29 @@
-base: 'https://pizpalue.ddev.site'
+base: 'https://pizpalue.ddev.site/'
+baseVariants:
+  -
+    base: 'https://dev.pizpalue.ddev.site/'
+    condition: 'getenv("HTTP_HOST") == "dev.pizpalue.ddev.site"'
+easyconf:
+  data:
+    admin:
+      siteConfiguration:
+        overwriteBase: '0'
+        overwriteBaseVariants: '0'
+        overwriteRobots: '0'
+        overwriteSitemap: '0'
+        manageNewsRouteEnhancer: '0'
+        removeLegacyNewsRouteEnhancers: '0'
+        overwritePageNotFound: '0'
+      easyconf:
+        showAllProperties: '1'
+    style:
+      global:
+        enableScss: '0'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=34'
 languages:
   -
     title: English
@@ -29,4 +54,68 @@ languages:
     flag: ch
     languageId: 1
 rootPageId: 1
+routeEnhancers:
+  PizpalueNews:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    routes:
+      -
+        routePath: /
+        _controller: 'News::list'
+      -
+        routePath: '/{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: currentPage
+      -
+        routePath: '/{news-title}'
+        _controller: 'News::detail'
+        _arguments:
+          news-title: news
+      -
+        routePath: '/{category-name}'
+        _controller: 'News::list'
+        _arguments:
+          category-name: overwriteDemand/categories
+      -
+        routePath: '/{tag-name}'
+        _controller: 'News::list'
+        _arguments:
+          tag-name: overwriteDemand/tags
+    defaultController: 'News::list'
+    defaults:
+      page: '1'
+    aspects:
+      news-title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+      category-name:
+        type: PersistedAliasMapper
+        tableName: sys_category
+        routeFieldName: slug
+      tag-name:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_tag
+        routeFieldName: slug
+    limitToPages:
+      - 13
+      - 15
+      - 14
+      - 31
+      - 32
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n\r\nSitemap: https://pizpalue.ddev.site/sitemap.xml\r\n"
+  -
+    route: sitemap.xml
+    type: uri
+    content: 'https://pizpalue.ddev.site/?type=1533906435'
 websiteTitle: 'Pizpalue dev site'

@@ -9,7 +9,10 @@ plugin.bootstrap_package.settings.scss {
     # cat=6040/2910/0010; type=string; label=Tile gutter
     pp-tile-gutter = 5px
 
-    # cat=6040/1034/0100; type=string; label=Overlay breakpoint:On screens wider than this the header overlays the carousel
+    # cat=6040/1034/0100; type=string; label=Grid float breakpoint:On screens smaller than this the toggle menu is shown
+    grid-float-breakpoint = 992px
+
+    # cat=6040/1034/0110; type=string; label=Overlay breakpoint:On screens wider than this the header overlays the carousel
     pp-header-overlay-breakpoint = $grid-float-breakpoint
 
     # cat=6040/1034/0210; type=string; label=Toggler width
@@ -23,6 +26,12 @@ plugin.bootstrap_package.settings.scss {
 
     // We define it here for that it can be used in structure elements
     grid-gutter-width = 40px
+
+    #---------------------------------------------------------#
+    # Presets needed by easyconf
+    #---------------------------------------------------------#
+    font-weight-normal = 400
+    headings-font-weight = 300
 }
 
 

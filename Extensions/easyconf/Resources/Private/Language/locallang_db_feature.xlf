@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="feature_font_awesome_enable" resname="feature_font_awesome_enable">
+				<source>Font awesome</source>
+			</trans-unit>
+			<trans-unit id="feature_reveal_footer" resname="feature_reveal_footer">
+				<source>Reveal footer</source>
+			</trans-unit>
+			<trans-unit id="feature_slide_nav_content" resname="feature_slide_nav_content">
+				<source>Slide navigation content</source>
+			</trans-unit>
+			<trans-unit id="feature_use_style" resname="feature_use_style">
+				<source>Common style</source>
+			</trans-unit>
+			<trans-unit id="feature_content_insert_data" resname="feature_content_insert_data">
+				<source>Insert data in content</source>
+			</trans-unit>
+			<trans-unit id="feature_contact_enable" resname="feature_contact_enable">
+				<source>Contact section</source>
+			</trans-unit>
+			<trans-unit id="feature_contact_label" resname="feature_contact_label">
+				<source>Label</source>
+			</trans-unit>
+			<trans-unit id="feature_contact_button_label" resname="feature_contact_button_label">
+				<source>Button label</source>
+			</trans-unit>
+			<trans-unit id="feature_contact_button_page_uid" resname="feature_contact_button_page_uid">
+				<source>Contact page</source>
+			</trans-unit>
+			<trans-unit id="feature_image_loading" resname="feature_image_loading">
+				<source>Image loading</source>
+			</trans-unit>
+			<trans-unit id="feature_image_loading.eager" resname="feature_image_loading.eager">
+				<source>Eager</source>
+			</trans-unit>
+			<trans-unit id="feature_image_loading.lazy" resname="feature_image_loading.lazy">
+				<source>Lazy</source>
+			</trans-unit>
+			<trans-unit id="feature_image_loading_auto" resname="feature_image_loading_auto">
+				<source>Auto (Chrome only)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

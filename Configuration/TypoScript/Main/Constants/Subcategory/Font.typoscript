@@ -14,7 +14,20 @@ page.theme.googleFont {
     weight = 300,400,700
 }
 
-// todo: see bootstrap_package ts setup (includeCSSLibs.googlewebfont)
+plugin.bootstrap_package.settings.scss {
+    # cat=6040/1033/1014; type=string; label=Google Headings Webfont
+    google-headings-webfont = {$page.theme.googleFont.font}
+
+    # cat=6040/1033/1016; type=string; label=Google Headings Webfont Weights: Comma separated list of font weights
+    google-headings-webfont-weight = {page.theme.googleFont.weight}
+}
+
+pizpalue.style {
+    # cat=6040/1033/1014; type=string; label=Google Webfont family declaration: Alter in case more than one font family are used
+    googleFontsUrl = https://fonts.googleapis.com/css?display=swap&family={$page.theme.googleFont.font}:{$page.theme.googleFont.weight}
+}
+
+// todo: DEPRECATED since 12 will be removed in 13
 pizpalue.style {
     # cat=6040/1033/1014; type=string; label=Google Webfont family declaration: Alter in case more than one font family are used
     google-webfontfamily = {$page.theme.googleFont.font}:{$page.theme.googleFont.weight}

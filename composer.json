@@ -60,6 +60,7 @@
 		"typo3/testing-framework": "^5.0 || ^6.4"
 	},
 	"suggest": {
+		"buepro/typo3-easyconf": "Backend module to provide an easy website configuration",
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
 		"buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
 		"buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements",
@@ -71,7 +72,8 @@
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
-			"Buepro\\Pizpalue\\": "Classes/"
+			"Buepro\\Pizpalue\\": "Classes/",
+			"Buepro\\Pizpalue\\Easyconf\\": "Extensions/easyconf/Classes/"
 		}
 	},
 	"autoload-dev": {
@@ -83,7 +85,12 @@
 		"bin-dir": ".build/bin",
 		"optimize-autoloader": true,
 		"sort-packages": true,
-		"vendor-dir": ".build/vendor"
+		"vendor-dir": ".build/vendor",
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true,
+			"ergebnis/composer-normalize": true
+		}
 	},
 	"extra": {
 		"branch-alias": {

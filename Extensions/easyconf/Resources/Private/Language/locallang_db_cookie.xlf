@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="cookie_enable" resname="cookie_enable">
+				<source>Enable</source>
+			</trans-unit>
+			<trans-unit id="cookie_layout" resname="cookie_layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="cookie_layout.basic" resname="cookie_layout.basic">
+				<source>Basic</source>
+			</trans-unit>
+			<trans-unit id="cookie_layout.basic-close" resname="cookie_layout.basic-close">
+				<source>Basic close</source>
+			</trans-unit>
+			<trans-unit id="cookie_layout.basic-header" resname="cookie_layout.basic-header">
+				<source>Basic header</source>
+			</trans-unit>
+			<trans-unit id="cookie_position" resname="cookie_position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="cookie_position.top" resname="cookie_position.top">
+				<source>Top</source>
+			</trans-unit>
+			<trans-unit id="cookie_position.bottom" resname="cookie_position.bottom">
+				<source>Bottom</source>
+			</trans-unit>
+			<trans-unit id="cookie_position.top-left" resname="cookie_position.top-left">
+				<source>Top left</source>
+			</trans-unit>
+			<trans-unit id="cookie_position.top-right" resname="cookie_position.top-right">
+				<source>Top right</source>
+			</trans-unit>
+			<trans-unit id="cookie_position.bottom-left" resname="cookie_position.bottom-left">
+				<source>Bottom left</source>
+			</trans-unit>
+			<trans-unit id="cookie_position.bottom-right" resname="cookie_position.bottom-right">
+				<source>Bottom right</source>
+			</trans-unit>
+			<trans-unit id="cookie_static" resname="cookie_static">
+				<source>Static</source>
+			</trans-unit>
+			<trans-unit id="cookie_content_href" resname="cookie_content_href">
+				<source>Privacy policy link</source>
+			</trans-unit>
+			<trans-unit id="cookie_law_country_code" resname="cookie_law_country_code">
+				<source>Country code</source>
+			</trans-unit>
+			<trans-unit id="cookie_law_country_code.description" resname="cookie_law_country_code.description">
+				<source>Rather than getting the country code from the location services, you can hard code a particular country into the tool.</source>
+			</trans-unit>
+			<trans-unit id="cookie_law_regional_law" resname="cookie_law_regional_law">
+				<source>Show for all regions</source>
+			</trans-unit>
+			<trans-unit id="cookie_law_regional_law.description" resname="cookie_law_regional_law.description">
+				<source>If false, then we only enable the popup if the country has the cookie law. We ignore all other country specific rules.</source>
+			</trans-unit>
+			<trans-unit id="cookie_revokable" resname="cookie_revokable">
+				<source>Revokable</source>
+			</trans-unit>
+			<trans-unit id="cookie_revokable.description" resname="cookie_revokable.description">
+				<source>If set true, revoke button is displayed every time. If false, revoke button is only displayed for
+					advanced compliance options (opt-in and opt-out) and in countries that require revokable consent.
+					The latter can be disabled by regionalLaw.</source>
+			</trans-unit>
+			<trans-unit id="cookie_location" resname="cookie_location">
+				<source>Location detection</source>
+			</trans-unit>
+			<trans-unit id="cookie_location.description" resname="cookie_location.description">
+				<source>Location is simply a tool for getting the two letter country code that the user is in.</source>
+			</trans-unit>
+			<trans-unit id="cookie_type" resname="cookie_type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="cookie_type.info" resname="cookie_type.info">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="cookie_type.opt-in" resname="cookie_type.opt-in">
+				<source>Opt-in</source>
+			</trans-unit>
+			<trans-unit id="cookie_type.opt-out" resname="cookie_type.opt-out">
+				<source>Opt-out</source>
+			</trans-unit>
+			<trans-unit id="cookie_cookie_expiry_days" resname="cookie_cookie_expiry_days">
+				<source>Cookie expiry days</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

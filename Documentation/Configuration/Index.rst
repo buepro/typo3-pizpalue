@@ -157,6 +157,7 @@ For some extensions additional configurations are available:
 
    Extensions/News
    Extensions/Eventnews
+   Extensions/Easyconf
 
 
 .. _config_seo:

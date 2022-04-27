@@ -176,6 +176,18 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
+     * Extension easyconf
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(
+            "@import 'EXT:pizpalue/Extensions/easyconf/Configuration/TypoScript/constants.typoscript'"
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+            "@import 'EXT:pizpalue/Extensions/easyconf/Configuration/TypoScript/setup.typoscript'"
+        );
+    }
+
+    /**
      * Upgrade wizards
      */
     $upgradeSteps = ['ContentElementXxl', 'ContentElementClasses', 'ContentElementAttributes', 'EmphasizeMedia'];

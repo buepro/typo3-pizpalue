@@ -25,17 +25,19 @@ $EM_CONF[$_EXTKEY] = [
         ],
         'conflicts' => [],
         'suggests'  => [
-            'news'                  => '',
-            'eventnews'             => '5.0.0',
-            'tt_address'            => '',
-            'pp_gridelements'       => '',
-            'flux_elements'         => '',
             'container_elements'    => '',
+            'easyconf'              => '',
+            'eventnews'             => '5.0.0',
+            'flux_elements'         => '',
+            'news'                  => '',
+            'pp_gridelements'       => '',
+            'tt_address'            => '',
         ],
     ],
     'autoload' => [
         'psr-4' => [
-            'Buepro\\Pizpalue\\' => 'Classes'
+            'Buepro\\Pizpalue\\' => 'Classes',
+            'Buepro\\Pizpalue\\Easyconf\\' => 'Extensions/easyconf/Classes',
         ],
     ],
 ];
