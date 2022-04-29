@@ -34,7 +34,7 @@
 	},
 	"require": {
 		"php": ">=7.3.0",
-		"bk2k/bootstrap-package": "~12.0.4",
+		"bk2k/bootstrap-package": "~12.0.5",
 		"buepro/typo3-pvh": "^1.0",
 		"typo3/cms-core": "^10.4 || ^11.5"
 	},
