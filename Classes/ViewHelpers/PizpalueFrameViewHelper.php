@@ -156,7 +156,7 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
             if (strpos($styles, '{') !== false) {
                 // Add styles to asset collector
                 $css = trim(str_replace('#self', '#c' . $uid, $styles));
-                $assetCollector->addInlineStyleSheet('ppCe' . $uid, $css);
+                $assetCollector->addInlineStyleSheet('ppCe' . $uid, $css, [], ['priority' => true]);
                 $result['styles'] = [];
             } else {
                 // Add styles inline
