@@ -38,6 +38,7 @@ $EM_CONF[$_EXTKEY] = [
         'psr-4' => [
             'Buepro\\Pizpalue\\' => 'Classes',
             'Buepro\\Pizpalue\\Easyconf\\' => 'Extensions/easyconf/Classes',
+            'Buepro\\Pizpalue\\Form\\' => 'Extensions/form/Classes',
         ],
     ],
 ];

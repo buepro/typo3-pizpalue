@@ -27,7 +27,7 @@ TYPO3:
 
           finishersDefinition:
             EmailToSystem:
-              implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'
+              implementationClassName: 'Buepro\Pizpalue\Form\Finishers\EmailFinisher'
               options:
                 templateName: '{@format}.html'
                 templateRootPaths:

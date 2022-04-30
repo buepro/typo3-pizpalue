@@ -10,41 +10,20 @@ declare(strict_types = 1);
 
 namespace Buepro\Pizpalue\Extensions\Form\Finishers;
 
-use TYPO3\CMS\Core\Mail\FluidEmail;
-use TYPO3\CMS\Fluid\View\StandaloneView;
-use TYPO3\CMS\Form\Domain\Finishers\Exception\FinisherException;
-use TYPO3\CMS\Form\Domain\Runtime\FormRuntime;
-
-class EmailFinisher extends \TYPO3\CMS\Form\Domain\Finishers\EmailFinisher
+/**
+ * @deprecated
+ */
+class EmailFinisher extends \Buepro\Pizpalue\Form\Finishers\EmailFinisher
 {
     /**
-     * In addition to the parents action the finisher options are passed to the template.
-     *
-     * @throws FinisherException
-     * @deprecated since v11, will be removed in v12
+     * @deprecated since v12, will be removed in v13
      */
-    protected function initializeStandaloneView(FormRuntime $formRuntime, string $format): StandaloneView
+    public function __construct()
     {
-        $standaloneView = parent::initializeStandaloneView($formRuntime, $format);
-        $parsedOptions = [];
-        foreach (['senderName', 'senderAddress', 'recipientName', 'recipientAddress', 'subject'] as $key) {
-            $parsedOptions[$key] = $this->parseOption($key);
-        }
-        $standaloneView->assign('finisherOptions', $parsedOptions);
-        return $standaloneView;
-    }
-
-    /**
-     * In addition to the parents action the finisher options are passed to the template.
-     */
-    protected function initializeFluidEmail(FormRuntime $formRuntime): FluidEmail
-    {
-        $fluidEmail = parent::initializeFluidEmail($formRuntime);
-        $parsedOptions = [];
-        foreach (['senderName', 'senderAddress', 'recipientName', 'recipientAddress', 'subject'] as $key) {
-            $parsedOptions[$key] = $this->parseOption($key);
-        }
-        $fluidEmail->assign('finisherOptions', $parsedOptions);
-        return $fluidEmail;
+        trigger_error(
+            __CLASS__ . 'will be removed in pizpalue v13, use `\Buepro\Pizpalue\Form\Finishers\EmailFinisher` instead.',
+            E_USER_DEPRECATED
+        );
+        parent::__construct();
     }
 }

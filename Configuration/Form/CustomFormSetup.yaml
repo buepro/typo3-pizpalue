@@ -66,6 +66,6 @@ TYPO3:
                 elementErrorClassAttribute: error is-invalid
           finishersDefinition:
             EmailToSender:
-              implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'
+              implementationClassName: 'Buepro\Pizpalue\Form\Finishers\EmailFinisher'
             EmailToReceiver:
-              implementationClassName: 'Buepro\Pizpalue\Extensions\Form\Finishers\EmailFinisher'
+              implementationClassName: 'Buepro\Pizpalue\Form\Finishers\EmailFinisher'
