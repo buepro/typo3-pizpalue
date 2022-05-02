@@ -1,6 +1,6 @@
 module.tx_easyconf {
     persistence {
-        # cat=easyconf/1650551526; type=string; label=Relative SCSS path:Relative folder path to store the SCSS related files
+        # cat=easyconf/1650551526/020; type=string; label=Relative SCSS path:Relative folder path to store the SCSS related files
         storageRelativeScssPath = Resources/Public/Scss/
     }
 }
