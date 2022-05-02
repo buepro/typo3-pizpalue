@@ -56,12 +56,9 @@ class ScssService extends AbstractService
 
     protected function persistDeclarations(): self
     {
-        if (($declarations = $this->formFields['style_scss_declarations'] ?? '') === '') {
-            return $this;
-        }
         EasyconfGeneralUtility::writeTextFile(
             GeneralUtility::getFileAbsFileName($this->getDeclarationFile()),
-            trim($declarations)
+            trim($this->formFields['style_scss_declarations'] ?? '')
         );
         return $this;
     }
