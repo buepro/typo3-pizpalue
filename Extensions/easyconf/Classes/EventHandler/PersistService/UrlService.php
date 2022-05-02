@@ -52,7 +52,7 @@ class UrlService extends AbstractService
                 if (!isset($language['languageId'], $language['iso-639-1'])) {
                     continue;
                 }
-                if ($language['languageId'] === 0) {
+                if ((int)$language['languageId'] === 0) {
                     $this->siteConfigurationMapper->bufferProperty('languages.' . $key . '.base', '/');
                 } else {
                     $languageBase = $this->mainUrl . $language['iso-639-1'] . '/';
