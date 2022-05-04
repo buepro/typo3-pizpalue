@@ -14,7 +14,7 @@ use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\SocialNetworkService;
 
 defined('TYPO3') or die('Access denied.');
 
-if (!isset($GLOBALS['TCA']['tx_easyconf_configuration'])) {
+if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     return;
 }
 
