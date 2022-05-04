@@ -60,6 +60,7 @@ class UrlService extends AbstractService
                 }
             }
         }
+        $this->siteConfigurationMapper->persistBuffer();
         return $this;
     }
 
@@ -73,7 +74,8 @@ class UrlService extends AbstractService
         $domain = parse_url($this->formFields[$fieldName], PHP_URL_HOST);
         $this->siteConfigurationMapper
             ->bufferProperty('baseVariants.0.base', $base)
-            ->bufferProperty('baseVariants.0.condition', sprintf('getenv("HTTP_HOST") == "%s"', $domain));
+            ->bufferProperty('baseVariants.0.condition', sprintf('getenv("HTTP_HOST") == "%s"', $domain))
+            ->persistBuffer();
         return $this;
     }
 
@@ -94,9 +96,11 @@ class UrlService extends AbstractService
             'Allow: /typo3/sysext/frontend/Resources/Public/*',
             sprintf("\r\nSitemap: %ssitemap.xml\r\n", $this->mainUrl)
         ]);
-        $this->siteConfigurationMapper->bufferProperty($path . 'route', 'robots.txt');
-        $this->siteConfigurationMapper->bufferProperty($path . 'type', 'staticText');
-        $this->siteConfigurationMapper->bufferProperty($path . 'content', $content);
+        $this->siteConfigurationMapper
+            ->bufferProperty($path . 'route', 'robots.txt')
+            ->bufferProperty($path . 'type', 'staticText')
+            ->bufferProperty($path . 'content', $content)
+            ->persistBuffer();
         return $this;
     }
 
@@ -110,10 +114,12 @@ class UrlService extends AbstractService
         $key = array_search('sitemap.xml', array_column($routes, 'route'), true);
         $key = is_int($key) ? $key : count($routes);
         $path = 'routes.' . $key . '.';
-        $content = sprintf('%s?type=1533906435', $this->mainUrl);
-        $this->siteConfigurationMapper->bufferProperty($path . 'route', 'sitemap.xml');
-        $this->siteConfigurationMapper->bufferProperty($path . 'type', 'uri');
-        $this->siteConfigurationMapper->bufferProperty($path . 'content', $content);
+        $source = sprintf('%s?type=1533906435', $this->mainUrl);
+        $this->siteConfigurationMapper
+            ->bufferProperty($path . 'route', 'sitemap.xml')
+            ->bufferProperty($path . 'type', 'uri')
+            ->bufferProperty($path . 'source', $source)
+            ->persistBuffer();
         return $this;
     }
 }

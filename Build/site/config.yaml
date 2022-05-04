@@ -117,5 +117,5 @@ routes:
   -
     route: sitemap.xml
     type: uri
-    content: 'https://pizpalue.ddev.site/?type=1533906435'
+    source: 'https://pizpalue.ddev.site/?type=1533906435'
 websiteTitle: 'Pizpalue dev site'
