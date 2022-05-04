@@ -2,6 +2,8 @@ name: CI
 
 on:
   push:
+    paths:
+      - '**.php'
     branches-ignore:
       - 'l10n**'
   pull_request:
