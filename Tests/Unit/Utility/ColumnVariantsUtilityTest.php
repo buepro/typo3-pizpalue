@@ -17,6 +17,109 @@ class ColumnVariantsUtilityTest extends UnitTestCase
 {
     public const BREAKPOINTS = ['extrasmall', 'small', 'medium', 'large', 'xlarge', 'default'];
 
+    public function testGetOrderedColumnClassesDataProvider(): array
+    {
+        return [
+            'logical order' => [
+                'col-8 col-md col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4',
+                ['col-8', 'col-md', 'col-sm-10', 'col-md-8', 'col-lg-6', 'col-xl-5', 'col-xxl-4'],
+            ],
+            'random order' => [
+                'col-md col-xxl-4 col-sm-10 col-8 col-lg-6 col-xl-5 col-md-8',
+                ['col-8', 'col-md', 'col-sm-10', 'col-md-8', 'col-lg-6', 'col-xl-5', 'col-xxl-4'],
+            ],
+            'column class contains other classes' => [
+                'ce-col col-6 col-sm-12 mt-sm-5 ce-col-collapse',
+                ['col-6', 'col-sm-12'],
+            ]
+        ];
+    }
+
+    /**
+     * @dataProvider testGetOrderedColumnClassesDataProvider
+     */
+    public function testGetOrderedColumnClasses(string $classes, array $expected): void
+    {
+        self::assertSame($expected, ColumnVariantsUtility::getOrderedColumnClasses($classes));
+    }
+
+    public function testGetColumnCountsFromRowClassesDataProvider(): array
+    {
+        return [
+            'no row column classes' => [
+                '', 1, array_fill_keys(self::BREAKPOINTS, 1)
+            ],
+            'without breakpoint' => [
+                'row-cols-4', 1, array_fill_keys(self::BREAKPOINTS, 4),
+            ],
+            'with breakpoint' => [
+                'row-cols-xl-3', 1,
+                array_merge(array_fill_keys(self::BREAKPOINTS, 1), [
+                    'xlarge' => 3,
+                    'default' => 3,
+                ]),
+            ],
+            'with two breakpoints' => [
+                'row-cols-sm-2 row-cols-lg-3', 1,
+                array_merge(array_fill_keys(self::BREAKPOINTS, 1), [
+                    'small' => 2,
+                    'medium' => 2,
+                    'large' => 3,
+                    'xlarge' => 3,
+                    'default' => 3,
+                ]),
+            ],
+            'with two unordered breakpoints' => [
+                'row-cols-lg-3 row-cols-sm-2', 1,
+                array_merge(array_fill_keys(self::BREAKPOINTS, 1), [
+                    'small' => 2,
+                    'medium' => 2,
+                    'large' => 3,
+                    'xlarge' => 3,
+                    'default' => 3,
+                ]),
+            ],
+            'with and without breakpoints' => [
+                'row-cols-2 row-cols-sm-3 row-cols-lg-4', 1,
+                array_merge(array_fill_keys(self::BREAKPOINTS, 2), [
+                    'small' => 3,
+                    'medium' => 3,
+                    'large' => 4,
+                    'xlarge' => 4,
+                    'default' => 4,
+                ]),
+            ],
+            'unordered, with and without breakpoints' => [
+                'row-cols-lg-4 row-cols-sm-3 row-cols-2', 1,
+                array_merge(array_fill_keys(self::BREAKPOINTS, 2), [
+                    'small' => 3,
+                    'medium' => 3,
+                    'large' => 4,
+                    'xlarge' => 4,
+                    'default' => 4,
+                ]),
+            ],
+            'unordered, with and without breakpoints, with other classes' => [
+                'row-cols-test foo row-cols-lg-4 bar row-cols-sm-3 row-cols-2 row-cols-test2  row-cols-test-2 baz', 1,
+                array_merge(array_fill_keys(self::BREAKPOINTS, 2), [
+                    'small' => 3,
+                    'medium' => 3,
+                    'large' => 4,
+                    'xlarge' => 4,
+                    'default' => 4,
+                ]),
+            ],
+        ];
+    }
+
+    /**
+     * @dataProvider testGetColumnCountsFromRowClassesDataProvider
+     */
+    public function testGetColumnCountsFromRowClasses(string $rowClasses, int $defaultCount, array $expected): void
+    {
+        self::assertSame($expected, ColumnVariantsUtility::getColumnCountsFromRowClasses($rowClasses, $defaultCount));
+    }
+
     public function testGetMultiplierDataProvider(): array
     {
         return [
@@ -111,6 +214,30 @@ class ColumnVariantsUtilityTest extends UnitTestCase
             'rowClass overwrites count' => [
                 'col', 'row-cols-3', 2, [],
                 array_fill_keys(self::BREAKPOINTS, 1/3),
+            ],
+            'rowClass and columnClass define column' => [
+                'col col-md-12', 'row', 2, [],
+                array_merge(array_fill_keys(self::BREAKPOINTS, 1.0), [
+                    'extrasmall' => 0.5,
+                    'small' => 0.5,
+                ]),
+            ],
+            'all breakpoints' => [
+                'col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 col-xxl-6', 'row', 0, [],
+                [
+                    'extrasmall' => 11/12,
+                    'small' => 10/12,
+                    'medium' => 9/12,
+                    'large' => 8/12,
+                    'xlarge' => 7/12,
+                    'default' => 6/12,
+                ],
+            ],
+            'column class contains other classes' => [
+                'ce-col col-6 col-sm-12 mt-sm-5 ce-col-collapse', 'row', 0, [],
+                array_merge(array_fill_keys(self::BREAKPOINTS, 1.0), [
+                    'extrasmall' => 0.5,
+                ]),
             ],
         ];
     }

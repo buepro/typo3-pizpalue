@@ -43,17 +43,58 @@ class ColumnVariantsUtility
     ];
 
     /**
+     * @var int[]
+     */
+    private static $breakpointWeight = [
+        'xs' => 100,
+        'sm' => 200,
+        'md' => 300,
+        'lg' => 400,
+        'xl' => 500,
+        'xxl' => 600,
+    ];
+
+    /**
+     * Filters relevant classes and orders them according the breakpoint weight.
+     * 'col col-lg-6 col-md-4' becomes ['col', 'col-md-4', 'col-lg-6']
+     */
+    public static function getOrderedColumnClasses(string $classes): array
+    {
+        $unordered = array_filter(
+            GeneralUtility::trimExplode(' ', $classes, true),
+            static function ($class): bool {
+                return strpos($class, 'col') === 0;
+            }
+        );
+        $weighted = [];
+        foreach ($unordered as $class) {
+            $parts = explode('-', $class);
+            $weight = 1;
+            if (isset($parts[1])) {
+                if (MathUtility::canBeInterpretedAsInteger($parts[1])) {
+                    $weight += (int)$parts[1] * 10;
+                } else {
+                    $weight += self::$breakpointWeight[$parts[1]] ?? 0;
+                }
+            }
+            if (isset($parts[2])) {
+                $weight += 1000;
+            }
+            $weighted[$class] = $weight;
+        }
+        asort($weighted);
+        return array_values(array_flip($weighted));
+    }
+
+    /**
      * Calculates the factor for a breakpoint based on the css classes used to define the column and the column count
      * from the row.
-     *
-     * @param array $columnClasses CSS items defining the column (e.g. ['col', 'col-md', 'col-lg-4'])
      */
-    private static function getColumnFactorForBreakpoint(array $columnClasses, int $count, string $breakpoint): ?float
+    private static function getColumnFactorForBreakpoint(string $classes, int $count, string $breakpoint): ?float
     {
         $result = null;
-        // Order column classes for to ('col', 'col-3', 'col-md', 'col-md-3').
-        // Last element for breakpoints defines the factor.
-        sort($columnClasses);
+        // Last element for breakpoint defines the factor.
+        $columnClasses = self::getOrderedColumnClasses($classes);
         foreach ($columnClasses as $columnClass) {
             $parts = GeneralUtility::trimExplode('-', $columnClass, true);
             if ($parts[0] !== 'col') {
@@ -70,13 +111,16 @@ class ColumnVariantsUtility
                     $result = ((float) $parts[1]) / 12;
                     continue;
                 }
-                if ($parts[1] === self::$breakpointMap[$breakpoint]) {
+                if (self::$breakpointWeight[self::$breakpointMap[$breakpoint]] >= self::$breakpointWeight[$parts[1]]) {
                     $result = 1 / $count;
                     continue;
                 }
             }
             // CSS definition col-md-3
-            if (count($parts) === 3 && $parts[1] === self::$breakpointMap[$breakpoint]) {
+            if (
+                count($parts) === 3 &&
+                self::$breakpointWeight[self::$breakpointMap[$breakpoint]] >= self::$breakpointWeight[$parts[1]]
+            ) {
                 $result = ((float) $parts[2]) / 12;
             }
         }
@@ -138,11 +182,10 @@ class ColumnVariantsUtility
         $multiplier = array_merge(self::$defaultMultiplier, $baseMultiplier);
         $multiplier = array_intersect_key($multiplier, self::$defaultMultiplier);
         // Calculate new multipliers
-        $columnClasses = GeneralUtility::trimExplode(' ', $class, true);
         $columnCountsFromRowClasses = self::getColumnCountsFromRowClasses($rowClass, $count);
         $previousFactor = 1.0;
         foreach ($multiplier as $breakpoint => $value) {
-            $factor = self::getColumnFactorForBreakpoint($columnClasses, $columnCountsFromRowClasses[$breakpoint], $breakpoint);
+            $factor = self::getColumnFactorForBreakpoint($class, $columnCountsFromRowClasses[$breakpoint], $breakpoint);
             if ($factor !== null) {
                 $multiplier[$breakpoint] = $factor * $value;
                 $previousFactor = $factor;
