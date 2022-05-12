@@ -10,13 +10,24 @@ declare(strict_types = 1);
 
 namespace Buepro\Pizpalue\Service;
 
+use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
+use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException;
 use TYPO3\CMS\Core\Core\Environment;
+use TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
+use TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException;
 
 class ExtensionInstallService
 {
-    public function __invoke(AfterExtensionFilesHaveBeenImportedEvent $event): void
+    /**
+     * @param AfterExtensionFilesHaveBeenImportedEvent | AfterPackageActivationEvent $event
+     * @return void
+     * @throws ExtensionConfigurationExtensionNotConfiguredException
+     * @throws ExtensionConfigurationPathDoesNotExistException
+     * @throws ExtensionManagerException
+     */
+    public function __invoke($event): void
     {
         $this->afterExtensionInstall($event->getPackageKey());
     }
@@ -43,9 +54,9 @@ class ExtensionInstallService
     /**
      * Copies language translations for bootstrap_package
      *
-     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
-     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
-     * @throws \TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException
+     * @throws ExtensionConfigurationExtensionNotConfiguredException
+     * @throws ExtensionConfigurationPathDoesNotExistException
+     * @throws ExtensionManagerException
      */
     public function afterExtensionInstall(string $extensionKey): void
     {

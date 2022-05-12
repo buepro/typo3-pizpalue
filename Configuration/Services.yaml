@@ -4,22 +4,34 @@ services:
       - name: event.listener
         identifier: 'buepro/pizpalue/set-backend-styling'
         event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
+      -
+        name: event.listener
+        identifier: 'buepro/pizpalue/set-backend-styling-non-composer'
+        event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
+
   Buepro\Pizpalue\Backend\ToolbarItem\VersionToolbarItem:
     tags:
       -
         name: event.listener
         identifier: 'buepro/pizpalue/add-version-information'
         event: TYPO3\CMS\Backend\Backend\Event\SystemInformationToolbarCollectorEvent
+
   Buepro\Pizpalue\Service\ExtensionInstallService:
     tags:
       - name: event.listener
         identifier: 'buepro/pizpalue/finalize-extension-installation'
         event: TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent
+      -
+        name: event.listener
+        identifier: 'buepro/pizpalue/finalize-extension-installation-non-composer'
+        event: TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent
+
   Buepro\Pizpalue\Easyconf\EventHandler\AfterReadingPropertiesEventHandler:
     tags:
       - name: event.listener
         identifier: 'buepro/pizpalue/easyconf/after-reading'
         event: Buepro\Easyconf\Event\AfterReadingPropertiesEvent
+
   Buepro\Pizpalue\Easyconf\EventHandler\BeforePersistingPropertiesEventHandler:
     tags:
       - name: event.listener
