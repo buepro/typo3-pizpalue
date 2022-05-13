@@ -113,32 +113,33 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
 
     protected static function addClasses(AssetCollector $assetCollector, array $data, array &$result): void
     {
-        if (is_string($data['layout']) && $data['layout'] !== '0' && strpos($data['layout'], 'pp-tile') !== 0) {
-            $result['classes'][] = 'layout-' . trim($data['layout']);
+        if (($layout = trim((string)($data['layout'] ?? '0'))) !== '0' && strpos($layout, 'pp-tile') !== 0) {
+            $result['classes'][] = 'layout-' . $layout;
         }
-        if (is_string($data['tx_pizpalue_layout_breakpoint']) && $data['tx_pizpalue_layout_breakpoint'] !== '') {
-            $result['classes'][] = 'pp-layout-' . trim($data['tx_pizpalue_layout_breakpoint']);
+        if (($breakpoint = trim((string)($data['tx_pizpalue_layout_breakpoint'] ?? ''))) !== '') {
+            $result['classes'][] = 'pp-layout-' . $breakpoint;
         }
-        if (trim($data['tx_pizpalue_classes']) !== '') {
+        if (($classes = trim((string)($data['tx_pizpalue_classes'] ?? ''))) !== '') {
             $result['classes'] = array_merge(
                 $result['classes'],
-                GeneralUtility::trimExplode(' ', $data['tx_pizpalue_classes'], true)
+                GeneralUtility::trimExplode(' ', $classes, true)
             );
         }
     }
 
     protected static function addDependantClasses(AssetCollector $assetCollector, array $data, array &$result): void
     {
+        $spaceBefore = trim((string)($data['space_before_class'] ?? ''));
+        $spaceAfter = trim((string)($data['space_after_class'] ?? ''));
         if (
-            $data['frame_class'] === 'none' &&
+            isset($data['frame_class']) && $data['frame_class'] === 'none' &&
             (
                 count($result['classes']) > 0 || count($result['styles']) > 0 || count($result['attributes']) > 0 ||
-                (is_string($data['space_before_class']) && $data['space_before_class'] !== '') ||
-                (is_string($data['space_after_class']) && $data['space_after_class'] !== '')
+                $spaceBefore !== '' || $spaceAfter !== ''
             )
         ) {
-            $spaceBefore = trim($data['space_before_class']) !== '' ? trim($data['space_before_class']) : 'none';
-            $spaceAfter = trim($data['space_after_class']) !== '' ? trim($data['space_after_class']) : 'none';
+            $spaceBefore = $spaceBefore !== '' ? $spaceBefore : 'none';
+            $spaceAfter = $spaceAfter !== '' ? $spaceAfter : 'none';
             $result['classes'] = array_merge(
                 ['pp-content', 'pp-type-' . $data['CType']],
                 $result['classes'],
@@ -175,31 +176,36 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
         array $pizpalueConstants,
         array &$result
     ): void {
-        if (!$data['tx_pizpalue_animation']) {
+        if (!(bool)($data['tx_pizpalue_animation'] ?? false)) {
             return;
         }
-        $config = $pizpalueConstants['animation'][$data['tx_pizpalue_animation']] ?? [];
-        if (!$config) {
+        if (!is_array($config = $pizpalueConstants['animation'][$data['tx_pizpalue_animation']] ?? false)) {
             return;
         }
-        if ((bool)$config['classes'] && (bool)($classes = trim($config['classes']))) {
+        if (($classes = trim((string)($config['classes'] ?? ''))) !== '') {
             $classes = GeneralUtility::trimExplode(' ', $classes, true);
             $result['classes'] = array_merge($result['classes'], $classes);
         }
-        if ((bool)$config['styles'] && (bool)($style = trim($config['styles']))) {
+        if (($style = trim((string)($config['styles'] ?? ''))) !== '') {
             $styles = GeneralUtility::trimExplode(';', $style, true);
             $result['styles'] = array_merge($result['styles'], $styles);
         }
-        if ((bool)$config['attributes'] && (bool)($attributes = self::getAttributes($config['attributes']))) {
+        if (
+            ($attributes = trim((string)($config['attributes'] ?? ''))) !== '' &&
+            ($attributes = self::getAttributes($attributes)) !== []
+        ) {
             $result['attributes'] = array_merge($result['attributes'], $attributes);
         }
     }
 
     protected static function addTiles(AssetCollector $assetCollector, array $data, array &$result): void
     {
-        if ((bool)$data['layout'] && strpos($data['layout'], 'pp-tile') !== false) {
+        if (
+            ($layout = trim((string)($data['layout'] ?? ''))) !== '' &&
+            strpos($layout, 'pp-tile') !== false
+        ) {
             $result['classes'][] = 'pp-tile';
-            $result['classes'][] = trim($data['layout']);
+            $result['classes'][] = $layout;
             $result['isTile'] = true;
         }
     }
