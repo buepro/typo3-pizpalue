@@ -111,6 +111,9 @@ class ColumnVariantsUtility
                     $result = ((float) $parts[1]) / 12;
                     continue;
                 }
+                if (!isset(self::$breakpointWeight[$parts[1]])) {
+                    continue;
+                }
                 if (self::$breakpointWeight[self::$breakpointMap[$breakpoint]] >= self::$breakpointWeight[$parts[1]]) {
                     $result = 1 / $count;
                     continue;
