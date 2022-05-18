@@ -239,6 +239,17 @@ class ColumnVariantsUtilityTest extends UnitTestCase
                     'extrasmall' => 0.5,
                 ]),
             ],
+            'grid' => [
+                'col', 'row row-cols-1 row-cols-md-2 row-cols-lg-3', 0, [],
+                [
+                    'extrasmall' => 1.0,
+                    'small' => 1.0,
+                    'medium' => 0.5,
+                    'large' => 1/3,
+                    'xlarge' => 1/3,
+                    'default' => 1/3,
+                ],
+            ],
         ];
     }
 
