@@ -9,6 +9,9 @@ Pizpalue template
 :Extension key:
    pizpalue
 
+:Package name:
+   buepro/typo3-pizpalue
+
 :Version:
    |release|
 
@@ -28,6 +31,8 @@ Pizpalue template
 :Rendered:
    |today|
 
+----
+
 The extension builds on Benjamin Kott's
 `Bootstrap Package <https://extensions.typo3.org/extension/bootstrap_package>`__
 and serves as a template for creating complete TYPO3 websites and
@@ -37,6 +42,8 @@ that use the Twitter Bootstrap library.
 The extension configures TYPO3 and extends it with selected extensions to
 provide better structured and appealing content while optimizing speed and SEO
 performance.
+
+----
 
 **Table of Contents**
 
@@ -52,3 +59,10 @@ performance.
    Faq/Index
    Develop/Index
    Contribute/Index
+
+.. Meta Menu
+
+.. toctree::
+   :hidden:
+
+   Sitemap
