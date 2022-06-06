@@ -54,14 +54,14 @@ class BrandingService
                 !isset($backendConfiguration['loginLogo']) || trim($backendConfiguration['loginLogo']) === '' ||
                 strpos($backendConfiguration['loginLogo'], 'bootstrap_package') !== false
             ) {
-                $backendConfiguration['loginLogo'] = 'fileadmin/pizpalue/images/backend-login-logo.svg';
+                $backendConfiguration['loginLogo'] = 'EXT:pizpalue/Resources/Public/Images/backend-login-logo.svg';
             }
             if (
                 !isset($backendConfiguration['loginBackgroundImage']) ||
                 trim($backendConfiguration['loginBackgroundImage']) === '' ||
                 strpos($backendConfiguration['loginBackgroundImage'], 'bootstrap_package') !== false
             ) {
-                $backendConfiguration['loginBackgroundImage'] = 'fileadmin/pizpalue/images/backend-login-background.jpg';
+                $backendConfiguration['loginBackgroundImage'] = 'EXT:pizpalue/Resources/Public/Images/backend-login-background.jpg';
             }
             if (
                 !isset($backendConfiguration['backendLogo']) || trim($backendConfiguration['backendLogo']) === '' ||
