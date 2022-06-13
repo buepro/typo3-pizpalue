@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
       xmlns:bk2k="http://typo3.org/ns/Buepro/Pizpalue/BootstrapPackage/Compatibility120"
       xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
@@ -15,8 +16,10 @@
     <f:comment>Compile classes</f:comment>
     {classes -> bk2k:implode() -> f:variable(name: '_bpClasses') -> f:if(condition: configuration.displayFrame)}
     {f:variable(name: '_ppClasses', value: '{_ppData.classes -> bk2k:implode()}')}
-    {f:variable(name: '_space', value: ' ') -> f:if(condition: '{_bpClasses} && {_ppClasses}')}
-    {f:variable(name: '_classes', value: '{_bpClasses}{_space}{_ppClasses}')}
+    {f:variable(name: '_classes', value: '{_bpClasses} {_ppClasses}')}
+    {_classes -> bk2k:format.trim() -> f:variable(name: '_classes')}
+    {f:variable(name: '_classes', value: '{_classes} pp-has-backgroundimage') -> f:if(condition: '{configuration.backgroundImage} && !{configuration.displayFrame}')}
+    {_classes -> bk2k:format.trim() -> f:variable(name: '_classes')}
     {f:variable(name: '_classAttribute', value: 'class="{_classes}"') -> f:if(condition: _classes)}
 
     <f:comment>Compile style attribute</f:comment>
