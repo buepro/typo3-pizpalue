@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\Easyconf\EventHandler;
 
 use Buepro\Easyconf\Event\AfterReadingPropertiesEvent;
+use Buepro\Pizpalue\Easyconf\EventHandler\ReadService\FontService;
 use Buepro\Pizpalue\Easyconf\EventHandler\ReadService\MenuService;
 use Buepro\Pizpalue\Easyconf\EventHandler\ReadService\ScssService;
 use Buepro\Pizpalue\Easyconf\EventHandler\ReadService\SocialNetworkService;
@@ -25,7 +26,7 @@ class AfterReadingPropertiesEventHandler
     public function __invoke(AfterReadingPropertiesEvent $event): void
     {
         $formFields = $event->getFormFields();
-        $classes = [MenuService::class, SocialNetworkService::class, ScssService::class];
+        $classes = [FontService::class, MenuService::class, SocialNetworkService::class, ScssService::class];
         foreach ($classes as $class) {
             $formFields = GeneralUtility::makeInstance($class, $formFields)->process();
         }

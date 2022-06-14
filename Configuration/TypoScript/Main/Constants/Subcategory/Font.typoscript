@@ -19,7 +19,7 @@ plugin.bootstrap_package.settings.scss {
     google-headings-webfont = {$page.theme.googleFont.font}
 
     # cat=6040/1033/1016; type=string; label=Google Headings Webfont Weights: Comma separated list of font weights
-    google-headings-webfont-weight = {page.theme.googleFont.weight}
+    google-headings-webfont-weight = {$page.theme.googleFont.weight}
 }
 
 pizpalue.style {

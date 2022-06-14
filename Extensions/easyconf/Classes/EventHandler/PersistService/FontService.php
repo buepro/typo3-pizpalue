@@ -54,6 +54,12 @@ class FontService extends AbstractService
     {
         if (!(bool)$this->getPropertyValueByFieldName('font_control_enable_headings_font')) {
             $this->typoScriptMapper->removePropertyFromBuffer(
+                TcaUtility::getMappingPath('font_google-headings-webfont')
+            );
+            $this->typoScriptMapper->removePropertyFromBuffer(
+                TcaUtility::getMappingPath('font_google-headings-webfont-weight')
+            );
+            $this->typoScriptMapper->removePropertyFromBuffer(
                 TcaUtility::getMappingPath('font_headings_headings-font-family')
             );
         }
@@ -185,10 +191,10 @@ class FontService extends AbstractService
     {
         if (
             ($currentFontWeight = trim($this->getPropertyValueByFieldName($field))) === '' ||
-            strpos($fontWeights, $currentFontWeight) === false
+            strpos($fontWeights, $currentFontWeight) === false &&
+            ($suggestedFontWeight = (int)(GeneralUtility::trimExplode(',', $fontWeights)[0] ?? 400)) > 0
         ) {
-            $suggestedFontWeight = (string)(GeneralUtility::trimExplode(',', $fontWeights)[0] ?? '400');
-            $this->typoScriptMapper->bufferProperty(TcaUtility::getMappingPath($field), $suggestedFontWeight);
+            $this->typoScriptMapper->bufferProperty(TcaUtility::getMappingPath($field), (string)$suggestedFontWeight);
         }
         return $this;
     }
