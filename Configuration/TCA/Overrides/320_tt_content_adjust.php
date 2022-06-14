@@ -36,4 +36,22 @@ defined('TYPO3') or die('Access denied.');
      */
     unset($GLOBALS['TCA']['tt_content']['columns']['background_image']['displayCond'],
         $GLOBALS['TCA']['tt_content']['columns']['background_image_options']['displayCond']);
+
+    /**
+     * Add 'tile` layout items
+     */
+    $items = $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
+    $items[] = [
+        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile21',
+        'pp-tile-21'
+    ];
+    $items[] = [
+        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile11',
+        'pp-tile-11'
+    ];
+    $items[] = [
+        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile12',
+        'pp-tile-12'
+    ];
+    $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = $items;
 })();
