@@ -12,12 +12,16 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\Easyconf\EventHandler\PersistService;
 
 use Buepro\Easyconf\Utility\TcaUtility;
+use TYPO3\CMS\Core\Messaging\FlashMessage;
+use TYPO3\CMS\Core\Messaging\FlashMessageService;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Form\Service\TranslationService;
 
 class MenuService extends AbstractService
 {
     public function process(): void
     {
-        $this->handleMainMenu()->handleFastMenu();
+        $this->handleMainMenu()->handleFastMenu()->handleScrollMenu();
     }
 
     protected function handleMainMenu(): self
@@ -66,5 +70,54 @@ class MenuService extends AbstractService
             }
         }
         return $this;
+    }
+
+    protected function handleScrollMenu(): self
+    {
+        $field = 'menu_scroll_page_uid';
+        if (($path = TcaUtility::getMappingPath($field)) === null) {
+            return $this;
+        }
+        $current = $this->formFields[$field] ?? '';
+        if (strpos($current, 'pages') === 0) {
+            $current = substr($this->formFields[$field], 6);
+            $this->typoScriptMapper->bufferProperty($path, $current);
+        }
+        $previous = $this->typoScriptService->getConstantByPath($path);
+        $dataKeyMappingPath = TcaUtility::getMappingPath('menu_scroll_data_key');
+        $dataKey = $this->typoScriptMapper->getProperty($dataKeyMappingPath);
+        $menuIdMappingPath = TcaUtility::getMappingPath('menu_scroll_menu_id');
+        $menuId = $this->typoScriptMapper->getProperty($menuIdMappingPath);
+        if ($previous === $current) {
+            return $this;
+        }
+        if ($current !== '' && $dataKey === 'scrollnavigation' && $menuId === 'pp-scroll-nav') {
+            $this->typoScriptMapper->bufferProperty($dataKeyMappingPath, 'mainnavigation');
+            $this->typoScriptMapper->bufferProperty($menuIdMappingPath, 'mainnavigation');
+        }
+        if ($current === '' && $dataKey === 'mainnavigation' && $menuId === 'mainnavigation') {
+            $this->typoScriptMapper->bufferProperty($dataKeyMappingPath, 'scrollnavigation');
+            $this->typoScriptMapper->bufferProperty($menuIdMappingPath, 'pp-scroll-nav');
+        }
+        $this->addFlashMessage('flashMessage.scrollMenuPropertyChange');
+        return $this;
+    }
+
+    protected function addFlashMessage(string $key): void
+    {
+        $translationService = GeneralUtility::makeInstance(TranslationService::class);
+        $text = $translationService->translate(
+            'LLL:EXT:pizpalue/Extensions/easyconf/Resources/Private/Language/locallang.xlf:' . $key
+        );
+        $message = GeneralUtility::makeInstance(
+            FlashMessage::class,
+            $text,
+            '',
+            FlashMessage::INFO,
+            true
+        );
+        $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
+        $messageQueue = $flashMessageService->getMessageQueueByIdentifier();
+        $messageQueue->addMessage($message);
     }
 }

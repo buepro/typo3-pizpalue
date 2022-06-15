@@ -15,7 +15,7 @@ class MenuService extends AbstractService
 {
     public function process(): array
     {
-        $this->handleFastMenu();
+        $this->handleFastMenu()->handleScrollMenu();
         return $this->formFields;
     }
 
@@ -32,6 +32,15 @@ class MenuService extends AbstractService
             if (isset($this->formFields[$field]) && (int)$this->formFields[$field] > 0) {
                 $this->formFields[$field] = 'pages_' . $this->formFields[$field];
             }
+        }
+        return $this;
+    }
+
+    protected function handleScrollMenu(): self
+    {
+        $field = 'menu_scroll_page_uid';
+        if (isset($this->formFields[$field]) && (int)$this->formFields[$field] > 0) {
+            $this->formFields[$field] = 'pages_' . $this->formFields[$field];
         }
         return $this;
     }

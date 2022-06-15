@@ -7,6 +7,18 @@
 			<trans-unit id="tx_pizpalue_ttc.undefined">
 				<source>Undefined</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.palette.pp-scroll-navigation">
+				<source>Scroll navigation</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.scroll_navigation_enable">
+				<source>Enable</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.scroll_navigation_title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.scroll_navigation_position">
+				<source>Position</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.attributes">
 				<source>Attributes</source>
 			</trans-unit>

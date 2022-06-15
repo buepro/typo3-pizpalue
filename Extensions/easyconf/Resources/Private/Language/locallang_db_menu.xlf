@@ -57,6 +57,9 @@
 			<trans-unit id="menu_fast_enable" resname="menu_fast_enable">
 				<source>Fast</source>
 			</trans-unit>
+			<trans-unit id="menu_scroll_enable" resname="menu_scroll_enable">
+				<source>Scroll</source>
+			</trans-unit>
 
 			<trans-unit id="menu_meta_navigation_value" resname="menu_meta_navigation_value">
 				<source>Navigation value</source>
@@ -149,6 +152,34 @@
 			</trans-unit>
 			<trans-unit id="menu_toggler_pp-header-toggler-margin-right" resname="menu_toggler_pp-header-toggler-margin-right">
 				<source>Margin right</source>
+			</trans-unit>
+
+			<trans-unit id="paletteMenuScroll.description" resname="paletteMenuScroll.description">
+				<source>If content elements on a page have the scroll navigation activated they will be used to create a scroll menu.</source>
+			</trans-unit>
+			<trans-unit id="menu_scroll_page_uid" resname="menu_scroll_page_uid">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="menu_scroll_page_uid.description" resname="menu_scroll_page_uid.description">
+				<source>If set the menu will be on all pages as on the page with this UID. Otherwise each page will have its own menu.</source>
+			</trans-unit>
+			<trans-unit id="menu_scroll_data_key" resname="menu_scroll_data_key">
+				<source>Data key</source>
+			</trans-unit>
+			<trans-unit id="menu_scroll_data_key.description" resname="menu_scroll_data_key.description">
+				<source>Set to "mainnavigation" to use the scroll menu as main menu. Typically, this is used on one pager websites with additional pages (e.g. for data protection).</source>
+			</trans-unit>
+			<trans-unit id="menu_scroll_menu_id" resname="menu_scroll_menu_id">
+				<source>Menu ID</source>
+			</trans-unit>
+			<trans-unit id="menu_scroll_menu_id.description" resname="menu_scroll_menu_id.description">
+				<source>The value from the scroll menu id attribute.</source>
+			</trans-unit>
+			<trans-unit id="menu_scroll_offset" resname="menu_scroll_offset">
+				<source>Offset</source>
+			</trans-unit>
+			<trans-unit id="menu_scroll_offset.description" resname="menu_scroll_offset.description">
+				<source>Used to define intersection observer rootMargin. Usually corresponds to the height from the fix positioned header.</source>
 			</trans-unit>
 		</body>
 	</file>

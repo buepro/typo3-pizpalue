@@ -80,13 +80,16 @@ page {
                 as = pizpalue
                 key = pizpalue
             }
+
+            # Scroll menu
+            1655207544 = Buepro\Pizpalue\DataProcessing\ScrollMenuProcessor
         }
     }
 }
 
 
 #---------------------------------------------------------#
-# Theme and CSS/SCSS
+# CSS/SCSS
 #---------------------------------------------------------#
 
 page {

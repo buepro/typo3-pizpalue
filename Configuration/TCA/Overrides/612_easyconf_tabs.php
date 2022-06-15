@@ -42,6 +42,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
             sprintf('--palette--;%s:paletteMenuFooter;paletteMenuFooter', $l10nFile),
             sprintf('--palette--;%s:paletteMenuLanguage;paletteMenuLanguage', $l10nFile),
             sprintf('--palette--;%s:paletteMenuFast;paletteMenuFast', $l10nFile),
+            sprintf('--palette--;%s:paletteMenuScroll;paletteMenuScroll', $l10nFile),
         ]),
         'tabLogo' => implode(', ', [
             sprintf('--palette--;%s:paletteLogo;paletteLogo', $l10nFile),

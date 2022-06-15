@@ -22,7 +22,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     $tca = &$GLOBALS['TCA']['tx_easyconf_configuration'];
     $tca['ctrl']['EXT']['easyconf']['dataHandlerAllowedFields'] .= ', menu_fast_items_first_content_uid, ' .
         'menu_fast_items_first_page_uid, menu_fast_items_second_content_uid, menu_fast_items_second_page_uid' .
-        'menu_fast_items_third_content_uid, menu_fast_items_third_page_uid';
+        'menu_fast_items_third_content_uid, menu_fast_items_third_page_uid, menu_scroll_page_uid';
 
     /**
      * Properties
@@ -33,7 +33,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     $menuTogglerProperties = 'grid-float-breakpoint, pp-header-toggler-width, pp-header-toggler-padding, ' .
         'pp-header-toggler-line-gap, pp-header-toggler-line-width, pp-header-toggler-line-height';
     $menuTogglerAdvancedProperties = 'pp-header-toggler-line-gap, pp-header-toggler-line-width, pp-header-toggler-line-height';
-    $menuSelectProperties = 'breadcrumb.enable, meta.enable, footer.enable, language.enable, fast.enable';
+    $menuThemeSelectProperties = 'breadcrumb.enable, meta.enable, footer.enable, language.enable';
+    $menuPizpalueSelectProperties = 'fast.enable, scroll.enable';
     $menuMetaProperties = 'navigationValue, navigationType, includeNotInMenu';
     $menuFooterProperties = 'navigationValue, navigationType, includeNotInMenu, levels, icon.enable, ' .
         'icon.width, icon.height';
@@ -41,6 +42,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     $menuFastProperties = 'items.first.iconClass, items.first.contentUid, items.first.pageUid, ' .
         'items.second.iconClass, items.second.contentUid, items.second.pageUid, ' .
         'items.third.iconClass, items.third.contentUid, items.third.pageUid';
+    $menuScrollProperties = 'pageUid';
+    $menuScrollAdvancedProperties = 'dataKey, menuId, offset';
 
     /**
      * Define columns
@@ -73,7 +76,13 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         TcaUtility::getPropertyMap(
             TypoScriptConstantMapper::class,
             'page.theme',
-            $menuSelectProperties,
+            $menuThemeSelectProperties,
+            'menu'
+        ),
+        TcaUtility::getPropertyMap(
+            TypoScriptConstantMapper::class,
+            'pizpalue.menu',
+            $menuPizpalueSelectProperties,
             'menu'
         ),
         TcaUtility::getPropertyMap(
@@ -100,8 +109,18 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
             $menuFastProperties,
             'menu_fast'
         ),
+        TcaUtility::getPropertyMap(
+            TypoScriptConstantMapper::class,
+            'pizpalue.menu.scroll',
+            implode(', ', [$menuScrollProperties, $menuScrollAdvancedProperties]),
+            'menu_scroll'
+        ),
     ];
     $tca['columns'] = array_replace($tca['columns'], TcaUtility::getColumns($propertyMaps, $l10nFile));
+    $tca['columns']['menu_scroll_page_uid']['description'] = $l10nFile . ':menu_scroll_page_uid.description';
+    $tca['columns']['menu_scroll_data_key']['description'] = $l10nFile . ':menu_scroll_data_key.description';
+    $tca['columns']['menu_scroll_menu_id']['description'] = $l10nFile . ':menu_scroll_menu_id.description';
+    $tca['columns']['menu_scroll_offset']['description'] = $l10nFile . ':menu_scroll_offset.description';
 
     /**
      * Define palettes
@@ -114,7 +133,11 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ),
         'paletteMenuMainSubpage' => TcaUtility::getPalette($menuMainSubpageProperties, 'menu_main'),
         'paletteMenuToggler' => TcaUtility::getPalette($menuTogglerProperties, 'menu_toggler', 3),
-        'paletteMenuSelect' => TcaUtility::getPalette($menuSelectProperties, 'menu', 4),
+        'paletteMenuSelect' => TcaUtility::getPalette(
+            implode(', ', [$menuThemeSelectProperties, $menuPizpalueSelectProperties]),
+            'menu',
+            4
+        ),
         'paletteMenuMeta' => TcaUtility::getPalette($menuMetaProperties, 'menu_meta', 0),
         'paletteMenuFooter' => TcaUtility::getPalette(
             'navigationValue, navigationType, levels, includeNotInMenu, ' .
@@ -124,8 +147,14 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ),
         'paletteMenuLanguage' => TcaUtility::getPalette($menuLanguageProperties, 'menu_language'),
         'paletteMenuFast' => TcaUtility::getPalette($menuFastProperties, 'menu_fast', 3),
+        'paletteMenuScroll' => TcaUtility::getPalette(
+            implode(', ', [$menuScrollProperties, $menuScrollAdvancedProperties]),
+            'menu_scroll',
+            2
+        ),
     ]);
     $tca['palettes']['paletteMenuFast']['description'] = $l10nFile . ':paletteMenuFast.description';
+    $tca['palettes']['paletteMenuScroll']['description'] = $l10nFile . ':paletteMenuScroll.description';
 
     /**
      * Advanced fields
@@ -135,6 +164,12 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         $menuTogglerAdvancedProperties,
         ['displayCond' => 'FIELD:admin_easyconf_show_all_properties:REQ:true'],
         'menu_toggler'
+    );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        $menuScrollAdvancedProperties,
+        ['displayCond' => 'FIELD:admin_easyconf_show_all_properties:REQ:true'],
+        'menu_scroll'
     );
 
     /**
@@ -146,7 +181,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ['onChange' => 'reload'],
         '',
         'menu_main_enable_subpage_definition, menu_meta_enable, menu_footer_enable, menu_footer_icon_enable, ' .
-        'menu_language_enable, menu_fast_enable'
+        'menu_language_enable, menu_fast_enable, menu_scroll_enable'
     );
 
     /**
@@ -160,7 +195,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         'menu_main_enable_subpage_definition, menu_breadcrumb_enable, menu_meta_enable, ' .
             'menu_meta_include_not_in_menu, menu_footer_enable, menu_footer_include_not_in_menu, ' .
             'menu_footer_icon_enable, menu_language_enable, menu_fast_enable, menu_fast_items_second_enable, ' .
-            'menu_fast_items_third_enable'
+            'menu_fast_items_third_enable, menu_scroll_enable'
     );
     TcaUtility::modifyColumns(
         $tca['columns'],
@@ -247,6 +282,24 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         'items.first.pageUid, items.second.pageUid, items.third.pageUid',
         ['config' => ['type' => 'group', 'allowed' => 'pages', 'maxitems' => 1, 'size' => 1]],
         'menu_fast'
+    );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        $menuScrollProperties,
+        ['displayCond' => 'FIELD:menu_scroll_enable:REQ:true'],
+        'menu_scroll'
+    );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        $menuScrollAdvancedProperties,
+        ['displayCond' => ['AND' => ['FIELD:admin_easyconf_show_all_properties:REQ:true', 'FIELD:menu_scroll_enable:REQ:true']]],
+        'menu_scroll'
+    );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        'pageUid',
+        ['config' => ['type' => 'group', 'allowed' => 'pages', 'maxitems' => 1, 'size' => 1]],
+        'menu_scroll'
     );
 
     unset($tca);

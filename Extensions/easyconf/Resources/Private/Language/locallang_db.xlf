@@ -45,6 +45,9 @@
 			<trans-unit id="paletteMenuToggler" resname="paletteMenuToggler">
 				<source>Main toggler</source>
 			</trans-unit>
+			<trans-unit id="paletteMenuScroll" resname="paletteMenuScroll">
+				<source>Scroll menu</source>
+			</trans-unit>
 
 			<trans-unit id="tabLogo" resname="tabLogo">
 				<source>Logo</source>
@@ -160,56 +163,6 @@
 			</trans-unit>
 			<trans-unit id="paletteAdminFormat" resname="paletteAdminFormat">
 				<source>Format</source>
-			</trans-unit>
-
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="" resname="">
-				<source></source>
 			</trans-unit>
 		</body>
 	</file>

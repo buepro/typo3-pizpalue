@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{scrollnavigation}">
+    <ul id="pp-scroll-nav" class="navbar-nav">
+        <f:for each="{scrollnavigation}" as="item">
+            <li class="nav-item"><f:link.page class="nav-link" pageUid="{item.pageUid}" section="{item.section}" title="{item.titleTag}">{item.title}</f:link.page></li>
+        </f:for>
+    </ul>
+</f:if>
+
+</html>

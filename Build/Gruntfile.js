@@ -96,6 +96,10 @@ module.exports = function(grunt) {
                 src: '<%= paths.js %>Src/pizpalue.list-categorized-content.js',
                 dest: '<%= paths.js %>Dist/pizpalue.list-categorized-content.min.js'
             },
+            scrollNavigation: {
+                src: '<%= paths.js %>Src/pizpalue.scroll-navigation.js',
+                dest: '<%= paths.js %>Dist/pizpalue.scroll-navigation.min.js'
+            },
             josh: {
                 src: '<%= paths.contrib %>josh.js/src/josh.js',
                 dest: '<%= paths.contrib %>josh.js/dist/josh.pp.min.js'

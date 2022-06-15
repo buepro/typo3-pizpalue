@@ -160,6 +160,9 @@
 		"fix:php:cs": [
 			"php-cs-fixer --diff -v fix"
 		],
+		"fix:php:stan": [
+			"phpstan analyze --level max --configuration Build/phpstan.neon --generate-baseline Build/phpstan-baseline.neon"
+		],
 		"site:install": [
 			"@typo3cms:install:setup",
 			"@typo3cms:database:import"

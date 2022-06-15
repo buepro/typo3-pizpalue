@@ -37,5 +37,9 @@
 <f:if condition="{pizpalue.menu.fast.enable}">
     <f:render partial="Navigation/Fast" arguments="{_all}" />
 </f:if>
+<f:if condition="{pizpalue.menu.scroll.available}">
+    <script id="pp-scrollnav-data" data-settings="{pizpalue.menu.scroll -> f:format.json()}"></script>
+    <f:asset.script identifier="pp-scroll-navigation" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.scroll-navigation.min.js" />
+</f:if>
 </f:spaceless>
 </html>
