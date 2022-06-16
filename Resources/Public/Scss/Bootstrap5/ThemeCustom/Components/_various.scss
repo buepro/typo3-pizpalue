@@ -87,19 +87,37 @@ img.pp-nolazyload {
 
 //
 // Social links
+// NOTE: The bootstrap package uses the class footer-sociallinks for further styling
 // --------------------------------------------------
+:root {
+    --pp-sociallinks-size: 1.25rem;
+}
+.sociallinks-link-icon {
+    font-size: var(--pp-sociallinks-size);
+    width: var(--pp-sociallinks-size);
+    height: var(--pp-sociallinks-size);
+}
+// Bootstrap package footer class
+.footer-sociallinks {
+    --pp-sociallinks-size: 1.5rem;
+    .sociallinks-list {
+        gap: 0.5rem;
+    }
+    .sociallinks-link {
+        width: var(--pp-sociallinks-outersize, calc(1.5 * var(--pp-sociallinks-size)));
+        height: var(--pp-sociallinks-outersize, calc(1.5 * var(--pp-sociallinks-size)));
+    }
+}
+// Just list icons in the footer
+// todo: Deprecated since 12.5, will be removed in 13
 #page-footer {
+    --pp-sociallinks-size: 1.5rem;
     .sociallinks-list {
         justify-content: center;
         gap: 0.5rem;
     }
     .sociallinks-item {
         width: auto;
-    }
-    .sociallinks-link-icon {
-        font-size: 1.5rem;
-        width: 1.5rem;
-        height: 1.5rem;
     }
     .sociallinks-link-label {
         display: none;
