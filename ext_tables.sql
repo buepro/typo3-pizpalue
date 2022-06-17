@@ -1,5 +1,6 @@
 CREATE TABLE pages (
-	tx_pizpalue_background_image int(11) unsigned DEFAULT '0'
+	tx_pizpalue_background_image int(11) unsigned DEFAULT '0',
+	tx_pizpalue_css text,
 );
 
 CREATE TABLE tt_content (

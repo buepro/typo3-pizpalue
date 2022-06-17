@@ -154,6 +154,12 @@ defined('TYPO3') || die('Access denied.');
         ['pizpalue'] = \Buepro\Pizpalue\Hook\DataHandlerHook::class;
 
     /**
+     * Form engine user functions
+     */
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tce']['formevals']
+        ['Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval'] = '';
+
+    /**
      * Extension news
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {

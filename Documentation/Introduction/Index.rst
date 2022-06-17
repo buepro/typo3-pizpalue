@@ -73,6 +73,12 @@ to setup their website. The following is taken care of automatically:
 
    Website configuration form
 
+Enhancing page
+--------------
+
+-  Background image to cover the entire page
+-  CSS field to easily fine tune individual page styles
+
 Arranging content
 -----------------
 

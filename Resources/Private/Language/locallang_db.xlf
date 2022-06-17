@@ -4,6 +4,9 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+			<trans-unit id="tx_pizpalue_pages.css">
+				<source>CSS declarations</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.undefined">
 				<source>Undefined</source>
 			</trans-unit>

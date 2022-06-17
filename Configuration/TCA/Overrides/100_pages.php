@@ -125,10 +125,27 @@ defined('TYPO3') or die('Access denied.');
         ),
         'l10n_mode' => 'exclude',
     ];
+    $GLOBALS['TCA']['pages']['columns']['tx_pizpalue_css'] = [
+        'exclude' => true,
+        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_pages.css',
+        'config' => [
+            'type' => 'text',
+            'renderType' => 't3editor',
+            'rows' => 8,
+            'cols' => 50,
+            'eval' => 'Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval',
+        ],
+    ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
         'tx_pizpalue_background_image',
         '',
         'before:thumbnail'
+    );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+        'pages',
+        'tx_pizpalue_css',
+        '',
+        'after:content_from_pid'
     );
 })();

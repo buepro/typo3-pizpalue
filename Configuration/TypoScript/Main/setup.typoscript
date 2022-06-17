@@ -83,6 +83,9 @@ page {
 
             # Scroll menu
             1655207544 = Buepro\Pizpalue\DataProcessing\ScrollMenuProcessor
+
+            # Page css
+            1655474578 = Buepro\Pizpalue\DataProcessing\PageProcessor
         }
     }
 }
