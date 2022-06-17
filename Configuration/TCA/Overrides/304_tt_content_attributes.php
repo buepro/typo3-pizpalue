@@ -129,6 +129,7 @@ defined('TYPO3') or die('Access denied.');
                 'renderType' => 't3editor',
                 'rows' => 6,
                 'cols' => 50,
+                'eval' => 'Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval',
             ],
         ],
         'tx_pizpalue_attributes' => [
