@@ -230,7 +230,7 @@ are available under the appearance tab in the "Attributes" section.
 
 Some predefined classes and attributes can be assigned by help of the adjacent
 selector box. The selector box for the "Additional attributes" field shows data
-attributes related to the :ref:`scroll animation <config_scrollanimation>`.
+attributes related to the :ref:`scroll animation <config-scrollanimation>`.
 
 .. note::
 

@@ -36,7 +36,7 @@ Pizpalue template
 The extension builds on Benjamin Kott's
 `Bootstrap Package <https://extensions.typo3.org/extension/bootstrap_package>`__
 and serves as a template for creating complete TYPO3 websites and
-:doc:`distributions <t3coreapi:ExtensionArchitecture/CreateNewDistribution/Index>`
+:doc:`distributions <t3coreapi:ExtensionArchitecture/HowTo/CreateNewDistribution>`
 that use the Twitter Bootstrap library.
 
 The extension configures TYPO3 and extends it with selected extensions to

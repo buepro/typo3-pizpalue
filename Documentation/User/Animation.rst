@@ -39,7 +39,7 @@ of the predefined animations found in the "Behaviour" section or by assigning
 data attributes to the "Additional attributes" field in the "Appearance" tab
 from the content element properties dialog.
 
-They can be further customized by help of the :ref:`constant editor <config_scrollanimation>`.
+They can be further customized by help of the :ref:`constant editor <config-scrollanimation>`.
 
 Currently the libraries `Twikito/onscroll-effect <https://github.com/Twikito/onscroll-effect>`__,
 `Josh.js <https://github.com/mamunhpath/josh.js>`__ and `AOS <https://github.com/michalsnik/aos>`__

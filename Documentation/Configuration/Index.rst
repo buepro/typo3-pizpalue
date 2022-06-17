@@ -7,7 +7,23 @@
 Configuration
 =============
 
-.. _config_constantEditor:
+.. _config-easyconf:
+
+Easyconf
+========
+
+The extension `easyconf <https://extensions.typo3.org/extension/easyconf>`__
+provides a module to easily configure main aspects from the website. It allows
+to configure typoscript as well as site configurations. Additionally css
+snippets can be defined. Thanks to these features the constant editor isn't
+needed much any more.
+
+.. figure:: ../Images/Configuration/Easyconf.jpg
+   :alt: Easyconf form to configure main aspects from a website
+
+   Easyconf form to configure main aspects from a website
+
+.. _config-constantEditor:
 
 Constant editor
 ===============
@@ -37,7 +53,7 @@ PIZPALUE: CUSTOMER PLUGINS   More detailed plugin related parameters
    configurations consult the related manual.
 
 
-.. _config_scaffold:
+.. _config-scaffold:
 
 Scaffold
 ========
@@ -49,7 +65,7 @@ The behaviour from the footer columns can be adjusted through the column classes
 available under the category `PIZPALUE: CUSTOMER EXTENDED` in the constant editor.
 
 
-.. _config_scrollanimation:
+.. _config-scrollanimation:
 
 Scroll animation
 ================
@@ -90,7 +106,7 @@ editor by selecting the category "PIZPALUE: CUSTOMER EXTENDED" under the section
    ###GoogleAnalyticsStatus### in a content element.
 
 
-.. _config_appIcons:
+.. _config-appIcons:
 
 App icons
 =========
@@ -105,7 +121,7 @@ data assigned to the related field in the app icon section in the category
 "PIZPALUE - CUSTOMER BASE" from the constants editor. Remove any line breaks.
 
 
-.. _config_fastmenu:
+.. _config-fastmenu:
 
 Fastmenu
 ========
@@ -145,7 +161,7 @@ PIZPALUE:CUSTOMER STYLE          To define colors
    Embed new icons by generating your own icon font.
 
 
-.. _config_extensions:
+.. _config-extensions:
 
 Extensions
 ==========
@@ -160,7 +176,7 @@ For some extensions additional configurations are available:
    Extensions/Easyconf
 
 
-.. _config_seo:
+.. _config-seo:
 
 SEO
 ===

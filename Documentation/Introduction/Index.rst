@@ -69,7 +69,6 @@ to setup their website. The following is taken care of automatically:
 -  Google font configurations
 
 .. figure:: ../Images/Introduction/Easyconf.jpg
-   :width: 700px
    :alt: Website configuration form
 
    Website configuration form
@@ -86,9 +85,11 @@ Arranging content
 Enhancing content
 -----------------
 
--  Support for automatic image scaling in structure elements (see :ref:`integration_templating`)
--  Content element fields to optimize image scaling dependent on the screen size.
+-  Support for automatic image scaling in structure elements (see
+   :ref:`templating <integration_templating>`)
+-  Content element fields to optimize image scaling dependent on the screen size
 -  Content element fields to assign custom classes, styles and attributes
+-  Content element fields to create a :ref:`scroll menu <user-scrollmenu>`
 
 Animating content
 -----------------
