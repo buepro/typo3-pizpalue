@@ -19,3 +19,10 @@ lib.contentElement.settings.responsiveimages.contentelements {
     carousel_fullscreen.background_image.multiplier < .carousel.background_image.multiplier
     carousel_small.background_image.multiplier < .carousel.background_image.multiplier
 }
+
+#---------------------------------------------------------#
+# Correct bugs
+#---------------------------------------------------------#
+lib.contentElement.settings.responsiveimages.contentelements {
+    menu_thumbnail_dir.3.multiplier.small >
+}
