@@ -64,7 +64,7 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
 
     private function setImageVariants(array &$fieldArray): void
     {
-        if (isset($this->incomingFieldArray['frame_class'])) {
+        if (isset($this->incomingFieldArray['frame_class'], $this->incomingFieldArray['tx_pizpalue_image_variants'])) {
             // Check if we are inside a container element
             $insideContainer = ExtensionManagementUtility::isLoaded('container') &&
                 isset($this->incomingFieldArray['tx_container_parent']) &&
