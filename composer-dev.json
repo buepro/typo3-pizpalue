@@ -1,0 +1,182 @@
+{
+	"name": "buepro/typo3-pizpalue",
+	"description": "Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, news, eventnews, tt_address",
+	"license": [
+		"GPL-2.0-or-later"
+	],
+	"type": "typo3-cms-extension",
+	"keywords": [
+		"TYPO3 CMS",
+		"sitepackage",
+		"bootstrap",
+		"responsive",
+		"frontend",
+		"theme",
+		"web",
+		"news",
+		"calendar",
+		"address",
+		"container"
+	],
+	"authors": [
+		{
+			"name": "Roman Büchler",
+			"email": "rb@buechler.pro",
+			"homepage": "https://www.buechler.pro/",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://extensions.typo3.org/extension/pizpalue",
+	"support": {
+		"issues": "https://github.com/buepro/typo3-pizpalue/issues",
+		"source": "https://github.com/buepro/typo3-pizpalue",
+		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
+	},
+	"require": {
+		"php": ">=7.3.0",
+		"bk2k/bootstrap-package": "~12.0.5",
+		"buepro/typo3-pvh": "^1.0",
+		"typo3/cms-core": "^10.4 || ^11.5"
+	},
+	"require-dev": {
+		"buepro/typo3-container-elements": "^3.0",
+		"buepro/typo3-easyconf": "^1.1.1",
+		"ergebnis/composer-normalize": "^2.15.0",
+		"friendsofphp/php-cs-fixer": "^3.0.0",
+		"friendsoftypo3/phpstan-typo3": "^0.8.1",
+		"friendsoftypo3/tt-address": "^6.0.1",
+		"georgringer/eventnews": "5.0.0",
+		"georgringer/news": "^9.1.0",
+		"helhum/typo3-console": "^6.6 || ^7.0.2",
+		"overtrue/phplint": "^2.3.5",
+		"phpspec/prophecy-phpunit": "^1.1 || ^2.0",
+		"phpstan/phpstan": "^0.12.87",
+		"phpstan/phpstan-deprecation-rules": "^0.12.6",
+		"phpstan/phpstan-phpunit": "^0.12.19",
+		"phpstan/phpstan-strict-rules": "^0.12.9",
+		"typo3/cms-base-distribution": "^10.4 || ^11.5",
+		"typo3/cms-impexp": "^10.4 || ^11.5",
+		"typo3/cms-lowlevel": "^10.4 || ^11.5",
+		"typo3/cms-recycler": "^10.4 || ^11.5",
+		"typo3/testing-framework": "^5.0 || ^6.4"
+	},
+	"suggest": {
+		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
+		"buepro/typo3-easyconf": "Backend module to provide an easy website configuration",
+		"buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
+		"buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements",
+		"friendsoftypo3/tt-address": "Manage addresses",
+		"georgringer/eventnews": "Calendar based on extension news",
+		"georgringer/news": "Flexible news system"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Buepro\\Pizpalue\\": "Classes/",
+			"Buepro\\Pizpalue\\Easyconf\\": "Extensions/easyconf/Classes/",
+			"Buepro\\Pizpalue\\Form\\": "Extensions/form/Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Buepro\\Pizpalue\\Tests\\": "Tests/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true,
+			"ergebnis/composer-normalize": true
+		},
+		"bin-dir": ".build/bin",
+		"optimize-autoloader": true,
+		"sort-packages": true,
+		"vendor-dir": ".build/vendor"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "12.6.x-dev"
+		},
+		"typo3/cms": {
+			"app-dir": ".build",
+			"extension-key": "pizpalue",
+			"web-dir": ".build/public"
+		}
+	},
+	"scripts": {
+		"post-autoload-dump": [
+			"mkdir -p .build/public/typo3conf/ext/",
+			"[ -L .build/public/typo3conf/ext/pizpalue ] || ln -snvf ../../../../. .build/public/typo3conf/ext/pizpalue",
+			"mkdir -p .build/config/sites/default",
+			"[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml"
+		],
+		"ci": [
+			"@ci:static",
+			"@ci:tests"
+		],
+		"ci:composer:normalize": "@composer normalize --dry-run",
+		"ci:php:cs": [
+			"php-cs-fixer --diff -v --dry-run fix"
+		],
+		"ci:php:lint": [
+			"phplint"
+		],
+		"ci:php:stan": [
+			"phpstan analyze --configuration Build/phpstan.neon"
+		],
+		"ci:static": [
+			"@ci:composer:normalize",
+			"@ci:php:cs",
+			"@ci:php:lint",
+			"@ci:php:stan"
+		],
+		"ci:tests": [
+			"@ci:tests:unit",
+			"@ci:tests:functional"
+		],
+		"ci:tests:functional": [
+			"phpunit -c Build/phpunit-functional.xml"
+		],
+		"ci:tests:unit": [
+			"phpunit -c Build/phpunit-unit.xml"
+		],
+		"ddev:install": [
+			"composer install",
+			"ddev start",
+			"ddev composer site:install",
+			"ddev launch typo3",
+			"echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
+		],
+		"ddev:uninstall": [
+			"ddev composer typo3cms:database:export",
+			"ddev delete",
+			"rm -rf .build/"
+		],
+		"fix": [
+			"@fix:composer:normalize",
+			"@fix:php:cs"
+		],
+		"fix:composer:normalize": "@composer normalize",
+		"fix:php:cs": [
+			"php-cs-fixer --diff -v fix"
+		],
+		"fix:php:stan": [
+			"phpstan analyze --level max --configuration Build/phpstan.neon --generate-baseline Build/phpstan-baseline.neon"
+		],
+		"site:install": [
+			"@typo3cms:install:setup",
+			"@typo3cms:database:import"
+		],
+		"typo3cms:database:export": [
+			".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db11.sql.gz",
+			"ls -l Build/site/db11.sql.gz"
+		],
+		"typo3cms:database:import": [
+			"gzip -cdk Build/site/db11.sql.gz | .build/bin/typo3cms database:import"
+		],
+		"typo3cms:install:setup": [
+			".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='pizpalue dev' --web-server-config='apache'"
+		]
+	}
+}

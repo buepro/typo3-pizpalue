@@ -7,3 +7,4 @@ Documentation-GENERATED-temp/
 *.cache
 *.zip
 Build/node_modules
+composer-dev.lock
