@@ -110,7 +110,7 @@ class PopoverLinkHandler implements LinkHandlerInterface
     public function canHandleLink(array $linkParts)
     {
         $this->linkParts = $linkParts;
-        return $linkParts['type'] === 'pppopover';
+        return ($linkParts['type'] ?? '') === 'pppopover';
     }
 
     public function formatCurrentUrl()
