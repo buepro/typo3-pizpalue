@@ -12,8 +12,8 @@ namespace Buepro\Pizpalue\UserFunction\FormEngine;
 
 class CssEval
 {
-    public function evaluateFieldValue(string $value, string $is_in, bool &$set): string
+    public function evaluateFieldValue(?string $value, string $is_in, bool &$set): string
     {
-        return $value === '' ? '' : strip_tags($value);
+        return ($value === null || $value === '') ? '' : strip_tags($value);
     }
 }
