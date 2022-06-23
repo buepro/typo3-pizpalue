@@ -69,6 +69,12 @@
 		"georgringer/eventnews": "Calendar based on extension news",
 		"georgringer/news": "Flexible news system"
 	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "/mnt/public/package/typo3-easyconf"
+		}
+	],
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"autoload": {

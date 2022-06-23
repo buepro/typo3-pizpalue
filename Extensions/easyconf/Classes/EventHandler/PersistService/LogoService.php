@@ -21,13 +21,9 @@ class LogoService extends AbstractService
     {
         $logoWidth = $logoHeight = '';
         foreach (['logo_file_reference', 'logo_file_inverted_reference'] as $field) {
-            if ((int)$this->configurationRecord[$field] > 0) {
+            if (($uid = (int)$this->formFields[$field]) > 0) {
                 $fileRepository = GeneralUtility::makeInstance(FileRepository::class);
-                [$fileReference] = $fileRepository->findByRelation(
-                    'tx_easyconf_configuration',
-                    $field,
-                    (int)$this->configurationRecord['uid']
-                );
+                $fileReference = $fileRepository->findFileReferenceByUid($uid);
                 $fileProperties = $this->getFileProperties($fileReference);
                 $propertyName = GeneralUtility::underscoredToLowerCamelCase(substr(substr($field, 5), 0, -9));
                 $this->typoScriptMapper->bufferProperty('page.logo.' . $propertyName, ltrim($fileProperties['file'], " \t\n\r\0\x0B/"));
