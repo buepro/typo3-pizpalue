@@ -57,12 +57,18 @@ class EmphasizeMediaUpdate implements UpgradeWizardInterface, RepeatableInterfac
         ];
     }
 
-    private function getConstraints(QueryBuilder $queryBuilder): string
+    private function getConstraints(QueryBuilder $queryBuilder): array
     {
-        return $queryBuilder->expr()->eq(
-            'layout',
-            $queryBuilder->createNamedParameter('pp-emphasize-media', \PDO::PARAM_STR)
-        );
+        return [
+            $queryBuilder->expr()->eq(
+                'layout',
+                $queryBuilder->createNamedParameter('pp-emphasize-media', \PDO::PARAM_STR)
+            ),
+            $queryBuilder->expr()->neq(
+                'layout',
+                $queryBuilder->createNamedParameter('0', \PDO::PARAM_STR)
+            )
+        ];
     }
 
     /**
@@ -74,7 +80,7 @@ class EmphasizeMediaUpdate implements UpgradeWizardInterface, RepeatableInterfac
         $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
         $result = $queryBuilder->count('uid')
             ->from('tt_content')
-            ->where($this->getConstraints($queryBuilder))
+            ->where(...$this->getConstraints($queryBuilder))
             ->execute();
         if ($result instanceof Result) {
             return (bool)$result->fetchOne();
@@ -92,7 +98,7 @@ class EmphasizeMediaUpdate implements UpgradeWizardInterface, RepeatableInterfac
         $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
         $queryResult = $queryBuilder->select('uid', 'CType', 'layout')
             ->from('tt_content')
-            ->where($this->getConstraints($queryBuilder))
+            ->where(...$this->getConstraints($queryBuilder))
             ->execute();
         if (!($queryResult instanceof Result)) {
             return false;
