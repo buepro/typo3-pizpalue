@@ -68,6 +68,12 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ['config' => ['type' => 'text', 'renderType' => 't3editor', 'format' => 'html']],
         'agency'
     );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        $contactProperties . ', ' . $brandProperties,
+        ['exclude' => 1],
+        'agency'
+    );
 
     unset($tca);
 })();

@@ -20,7 +20,10 @@ class UrlService extends AbstractService
 
     public function process(): void
     {
-        if (GeneralUtility::isValidUrl($this->formFields['customer_url'])) {
+        if (
+            isset($this->formFields['customer_url']) &&
+            GeneralUtility::isValidUrl($this->formFields['customer_url'])
+        ) {
             $this->mainUrl = rtrim($this->formFields['customer_url'], '/') . '/';
             $this
                 ->setDomain()
@@ -28,7 +31,10 @@ class UrlService extends AbstractService
                 ->overwriteRobots()
                 ->overwriteSitemap();
         }
-        if (GeneralUtility::isValidUrl($this->formFields['customer_alternative_url'])) {
+        if (
+            isset($this->formFields['customer_alternative_url']) &&
+            GeneralUtility::isValidUrl($this->formFields['customer_alternative_url'])
+        ) {
             $this->overwriteBaseVariants();
         }
     }

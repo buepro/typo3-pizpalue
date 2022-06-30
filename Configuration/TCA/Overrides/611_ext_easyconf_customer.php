@@ -64,6 +64,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
      * Modify columns
      */
     $tca['columns']['customer_url']['config']['placeholder'] = 'https://www.domain.ch';
+    $tca['columns']['customer_url']['exclude'] = 1;
     $tca['columns']['customer_alternative_url']['config']['placeholder'] = 'https://dev.domain.ch';
 
     unset($tca);
