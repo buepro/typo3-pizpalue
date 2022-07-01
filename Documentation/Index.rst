@@ -43,6 +43,11 @@ The extension configures TYPO3 and extends it with selected extensions to
 provide better structured and appealing content while optimizing speed and SEO
 performance.
 
+Visit `pizpalue.buechler.pro <https://pizpalue.buechler.pro>`__ to see it in
+action or `log in <https://demo.buechler.pro/typo3>`__ to the
+`demo site <https://demo.buechler.pro>`__ and discover how easy it is to create
+attractive content.
+
 ----
 
 **Table of Contents**

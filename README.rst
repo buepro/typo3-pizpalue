@@ -36,9 +36,10 @@ The extension configures TYPO3 and extends it with selected extensions to
 provide better structured and appealing content while optimizing speed and SEO
 performance.
 
-This template is used for example by the
-`Pizpalue distribution <https://extensions.typo3.org/extension/pizpalue_distribution>`__.
-Take a look at this `demo site <https://pizpalue.buechler.pro/das-plus/>`__.
+Visit `pizpalue.buechler.pro <https://pizpalue.buechler.pro>`__ to see it in
+action or `log in <https://demo.buechler.pro/typo3>`__ to the
+`demo site <https://demo.buechler.pro>`__ and discover how easy it is to create
+attractive content.
 
 :Repository:  https://github.com/buepro/typo3-pizpalue
 :Read online: https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/
