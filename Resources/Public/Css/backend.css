@@ -1,0 +1,16 @@
+.pp-page-ce .ppc-toggler .icon {
+    transition: transform 0.5s;
+}
+.pp-page-ce .ppc-toggler.collapsed .icon{
+    transform: scaleY(-1);
+}
+.pp-page-ce .ppc-title {
+    min-width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pp-page-ce .ppc-header {
+    justify-content: space-between;
+    overflow: hidden;
+}

@@ -1,15 +1,25 @@
-<div class="t3-page-ce-header row m-0 g-0 {f:if(condition: '{allowEditContent} && {item.dragAndDropAllowed}', then: 't3-page-ce-header-draggable t3js-page-ce-draghandle')}">
-    <div class="col t3-page-ce-header-icons-left">
+<html xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers">
+<div class="t3-page-ce-header ppc-header row m-0 g-0 {f:if(condition: '{allowEditContent} && {item.dragAndDropAllowed}', then: 't3-page-ce-header-draggable t3js-page-ce-draghandle')}">
+    <div class="col-auto t3-page-ce-header-icons-left pe-2">
         {item.icons -> f:format.raw()}
         <span class="t3js-flag" title="{item.siteLanguage.title}"><core:icon identifier="{item.siteLanguage.flagIdentifier}" /></span>
         {f:variable(name: '_frameIdentifier', value: 'pizpalue-no-frame')}
         {f:variable(name: '_frameIdentifier', value: 'pizpalue-frame') -> f:if(condition: '{item.record.frame_class} !== "none"')}
         <span class="pp-frame-indicator mx-1" title="{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:page_layout.frame.{_frameIdentifier}')}">{core:icon(identifier: _frameIdentifier)}</span>
     </div>
+    {f:render(partial: 'PageLayout/RecordDefault/Preview', arguments: _all)
+        -> pvh:format.replace(substring: '<br/>', replacement: '  ')
+        -> pvh:format.replace(substring: '<br />', replacement: '  ')
+        -> pvh:format.replace(substring: '<br>', replacement: '  ')
+        -> f:format.stripTags(allowedTags: '<strong>')
+        -> f:format.crop(maxCharacters: 80)
+        -> pvh:format.trim()
+        -> f:variable(name: '_title')}
+    <div class="ppc-title col align-self-start my-auto py-1 pe-2 d-none"><span title="{_title -> f:format.stripTags()}">{_title -> f:format.raw()}</span></div>
     <div class="col-auto align-self-end t3-page-ce-header-icons-right">
-        <f:if condition="{item.editable} && {allowEditContent}">
-            <div class="btn-toolbar">
-                <div class="btn-group btn-group-sm">
+        <div class="btn-toolbar">
+            <div class="btn-group btn-group-sm">
+                <f:if condition="{item.editable} && {allowEditContent}">
                     <a href="{item.editUrl}" class="btn btn-default" title="{f:translate(key:'LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:edit')}">
                         <core:icon identifier="actions-open" />
                     </a>
@@ -28,8 +38,10 @@
                             <core:icon identifier="actions-edit-delete" size="small" />
                         </a>
                     </f:if>
-                </div>
+                </f:if>
+                <a class="ppc-toggler btn btn-sm btn-default ms-2" data-bs-toggle="collapse" href="#pp-collapse-{item.record.uid}" role="button" aria-expanded="true" aria-controls="pp-collapse-{item.record.uid}">{core:icon(identifier: 'actions-chevron-bar-up')}</a>
             </div>
-        </f:if>
+        </div>
     </div>
 </div>
+</html>
