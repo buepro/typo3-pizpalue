@@ -30,6 +30,13 @@ defined('TYPO3') || die('Access denied.');
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => 'EXT:pizpalue/Resources/Public/Icons/SystemInformation/pizpalue.svg']
     );
+    foreach (['frame', 'no-frame'] as $icon) {
+        $iconRegistry->registerIcon(
+            'pizpalue-' . $icon,
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => sprintf('EXT:pizpalue/Resources/Public/Icons/PageLayout/%s.svg', $icon)]
+        );
+    }
 
     /**
      * TS: Register custom EXT:form configurations
