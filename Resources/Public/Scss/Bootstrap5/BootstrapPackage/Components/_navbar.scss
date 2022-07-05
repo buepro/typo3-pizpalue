@@ -114,6 +114,7 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
             top: 50%;
             transform: translate(0, -50%);
             width: auto;
+            height: auto;
             max-height: map-get($navbar-heights, xs) - 30;
             @media (min-width: $grid-float-breakpoint) {
                 max-height: 65%;
