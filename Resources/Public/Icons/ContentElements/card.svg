@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="500px" height="500px" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 500 500">
+ <g>
+  <rect fill="#005E8E" x="8.93" y="314.25" width="482.14" height="175.33"/>
+  <g>
+   <rect fill="#C7EBFF" x="8.93" y="13.54" width="477.92" height="248.57"/>
+   <path fill="#666666" d="M31.83 232.82l86.2 -36.91 88.19 -100.66c4.72,-5.39 12.39,-5.39 17.11,0l113.55 112.69 46.71 -20.68c7.49,-3.56 10.61,-3.49 17.1,0l44.1 45.56 -412.96 0z"/>
+   <circle fill="white" cx="382.93" cy="78.8" r="32.55"/>
+   <line fill="none" stroke="white" stroke-width="3.66" stroke-miterlimit="22.9256" x1="8.93" y1="232.82" x2="491.07" y2= "232.82" />
+  </g>
+  <rect fill="#FEFEFE" x="4.71" y="232.82" width="489.05" height="196.17"/>
+  <rect fill="none" stroke="#9D9E9E" stroke-width="17.86" stroke-miterlimit="22.9256" x="8.93" y="8.93" width="482.14" height="482.14"/>
+  <line fill="none" stroke="#999999" stroke-width="21.97" stroke-miterlimit="22.9256" x1="66.45" y1="287.19" x2="418.47" y2= "287.19" />
+  <line fill="none" stroke="#999999" stroke-width="21.97" stroke-miterlimit="22.9256" x1="66.45" y1="334.76" x2="330.58" y2= "334.76" />
+  <line fill="none" stroke="#999999" stroke-width="21.97" stroke-miterlimit="22.9256" x1="66.45" y1="380.16" x2="373.25" y2= "380.16" />
+ </g>
+</svg>

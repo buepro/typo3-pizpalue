@@ -29,7 +29,7 @@ defined('TYPO3') or die('Access denied.');
         \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType('tt_content', $cType, 'image');
     }
     // Content elements with assets
-    foreach (['media', 'textmedia', 'pp_emphasize_media'] as $cType) {
+    foreach (['media', 'textmedia', 'pp_emphasize_media', 'pp_card'] as $cType) {
         \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForCType('tt_content', $cType, 'assets');
     }
     // Card Group

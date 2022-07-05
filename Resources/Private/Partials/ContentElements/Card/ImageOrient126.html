@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div class="{data.pi_flexform.rowClasses}">
+    <pp:render.bootstrap.column class="{data.pi_flexform.mediaColumnClasses}" count="2">
+        {pp:structure.variants(as: 'variants')}
+        <f:render partial="Media/Gallery" arguments="{_all}" />
+    </pp:render.bootstrap.column>
+    <pp:render.bootstrap.column class="{data.pi_flexform.textColumnClasses}" count="2">
+        <f:render partial="Card/Body" arguments="{_all}" />
+    </pp:render.bootstrap.column>
+</div>
+</html>

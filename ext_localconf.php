@@ -136,7 +136,7 @@ defined('TYPO3') || die('Access denied.');
         /**
          * Register icons
          */
-        $icons = ['modal-dialog', 'list-categorized-content', 'schema', 'picoverlay', 'emphasize-media'];
+        $icons = ['modal-dialog', 'list-categorized-content', 'schema', 'picoverlay', 'emphasize-media', 'card'];
         foreach ($icons as $icon) {
             $iconRegistry->registerIcon(
                 'content-pizpalue-' . $icon,

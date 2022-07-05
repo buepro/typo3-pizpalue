@@ -1,0 +1,21 @@
+#---------------------------------------------------------#
+# New content element wizard
+#---------------------------------------------------------#
+mod.wizards.newContentElement.wizardItems.text {
+   elements {
+      pp_card {
+         iconIdentifier = content-pizpalue-card
+         title = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.title
+         description = LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.description
+         tt_content_defValues {
+            CType = pp_card
+         }
+      }
+   }
+   show := addToList(pp_card)
+}
+
+#---------------------------------------------------------#
+# Selector for field imageorient
+#---------------------------------------------------------#
+TCEFORM.tt_content.imageorient.types.pp_card.removeItems = 1,2,9,10,17,18,25,26

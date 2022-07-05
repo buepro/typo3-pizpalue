@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+    <f:if condition="{data.pi_flexform.cardClasses}">
+        <f:then><div class="{data.pi_flexform.cardClasses}"><f:render section="CardContent" arguments="{_all}" /></div></f:then>
+        <f:else><f:render section="CardContent" arguments="{_all}" /></f:else>
+    </f:if>
+</f:section>
+
+<f:section name="CardContent">
+    <f:if condition="{data.pages}">
+        <f:if condition="{data.pi_flexform.headerClasses}">
+            <f:then><div class="{data.pi_flexform.headerClasses}"><f:format.html>{data.pages}</f:format.html></div></f:then>
+            <f:else><f:format.html>{data.pages}</f:format.html></f:else>
+        </f:if>
+    </f:if>
+    <f:if condition="{files}">
+        <f:then><f:render partial="Card/ImageOrient{data.imageorient}" arguments="{_all}" /></f:then>
+        <f:else><f:render partial="Card/Body" arguments="{_all}" /></f:else>
+    </f:if>
+    <f:if condition="{data.teaser}">
+        <f:if condition="{data.pi_flexform.footerClasses}">
+            <f:then><div class="{data.pi_flexform.footerClasses}"><f:format.html>{data.teaser}</f:format.html></div></f:then>
+            <f:else><f:format.html>{data.teaser}</f:format.html></f:else>
+        </f:if>
+    </f:if>
+</f:section>
+</html>

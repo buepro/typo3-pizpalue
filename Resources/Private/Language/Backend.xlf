@@ -192,6 +192,49 @@
 				<source>Media element with text where the media element gets more attention</source>
 			</trans-unit>
 
+			<trans-unit id="ce_card.title">
+				<source>Card</source>
+			</trans-unit>
+			<trans-unit id="ce_card.description">
+				<source>Card with header and footer.</source>
+			</trans-unit>
+			<trans-unit id="ce_card.tab.border">
+				<source>Border</source>
+			</trans-unit>
+			<trans-unit id="ce_card.headerText">
+				<source>Header text</source>
+			</trans-unit>
+			<trans-unit id="ce_card.footerText">
+				<source>Footer text</source>
+			</trans-unit>
+			<trans-unit id="ce_card.tab.adjust">
+				<source>Adjust</source>
+			</trans-unit>
+			<trans-unit id="ce_card.tab.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="ce_card.cardClasses">
+				<source>Card classes</source>
+			</trans-unit>
+			<trans-unit id="ce_card.headerClasses">
+				<source>Header classes</source>
+			</trans-unit>
+			<trans-unit id="ce_card.footerClasses">
+				<source>Footer classes</source>
+			</trans-unit>
+			<trans-unit id="ce_card.tab.horizontal">
+				<source>Horizontal</source>
+			</trans-unit>
+			<trans-unit id="ce_card.rowClasses">
+				<source>Row classes</source>
+			</trans-unit>
+			<trans-unit id="ce_card.textColumnClasses">
+				<source>Text column classes</source>
+			</trans-unit>
+			<trans-unit id="ce_card.mediaColumnClasses">
+				<source>Media column classes</source>
+			</trans-unit>
+
 			<trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts">
 				<source>Enable bootstrap package page layouts</source>
 			</trans-unit>
