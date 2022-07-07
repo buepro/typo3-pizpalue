@@ -2,7 +2,7 @@ tt_content.pp_card >
 tt_content.pp_card =< lib.contentElement
 tt_content.pp_card {
 
-    templateName = Card
+    templateName = PpCard
 
     dataProcessing {
         10 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor

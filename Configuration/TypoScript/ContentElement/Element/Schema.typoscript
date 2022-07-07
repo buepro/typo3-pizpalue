@@ -1,7 +1,7 @@
 tt_content.pp_schema >
 tt_content.pp_schema =< lib.contentElement
 tt_content.pp_schema {
-    templateName = Schema
+    templateName = PpSchema
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
         10 {

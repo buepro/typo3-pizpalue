@@ -2,7 +2,7 @@ tt_content.pp_picoverlay >
 tt_content.pp_picoverlay =< lib.contentElement
 tt_content.pp_picoverlay {
 
-    templateName = Picoverlay
+    templateName = PpPicoverlay
 
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor

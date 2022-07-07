@@ -2,7 +2,7 @@ tt_content.pp_emphasize_media >
 tt_content.pp_emphasize_media =< lib.contentElement
 tt_content.pp_emphasize_media {
 
-    templateName = EmphasizeMedia
+    templateName = PpEmphasizeMedia
 
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor

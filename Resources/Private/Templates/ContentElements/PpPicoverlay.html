@@ -14,7 +14,7 @@
     {f:variable(name: '_partial', value: '{_type -> f:format.case(mode: "capital")}')}
     {f:variable(name: '_partial', value: 'Info') -> f:if(condition: '{_type} == "image"')}
     <div class="pp-picoverlay {_class}">
-        <f:render partial="Picoverlay/{_partial}" arguments="{_all}" />
+        <f:render partial="PpPicoverlay/{_partial}" arguments="{_all}" />
     </div>
 </f:section>
 </html>

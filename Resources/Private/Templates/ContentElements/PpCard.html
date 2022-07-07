@@ -17,8 +17,8 @@
         </f:if>
     </f:if>
     <f:if condition="{files}">
-        <f:then><f:render partial="Card/ImageOrient{data.imageorient}" arguments="{_all}" /></f:then>
-        <f:else><f:render partial="Card/Body" arguments="{_all}" /></f:else>
+        <f:then><f:render partial="PpCard/ImageOrient{data.imageorient}" arguments="{_all}" /></f:then>
+        <f:else><f:render partial="PpCard/Body" arguments="{_all}" /></f:else>
     </f:if>
     <f:if condition="{data.teaser}">
         <f:if condition="{data.pi_flexform.footerClasses}">

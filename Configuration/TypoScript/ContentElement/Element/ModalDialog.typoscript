@@ -2,7 +2,7 @@ tt_content.pp_modal_dialog >
 tt_content.pp_modal_dialog < tt_content.shortcut
 tt_content.pp_modal_dialog {
 
-    templateName = ModalDialog
+    templateName = PpModalDialog
 
     variables.shortcuts >
     variables.shortcuts = COA

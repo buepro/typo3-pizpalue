@@ -2,7 +2,7 @@ tt_content.pp_list_categorized_content >
 tt_content.pp_list_categorized_content < tt_content.shortcut
 tt_content.pp_list_categorized_content {
 
-    templateName = ListCategorizedContent
+    templateName = PpListCategorizedContent
 
     dataProcessing {
         10 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor

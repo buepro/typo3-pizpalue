@@ -18,4 +18,4 @@ mod.wizards.newContentElement.wizardItems.special {
 #---------------------------------------------------------#
 # Page preview
 #---------------------------------------------------------#
-mod.web_layout.tt_content.preview.pp_schema = EXT:pizpalue/Resources/Private/Templates/ContentElements/Preview/Schema.html
+mod.web_layout.tt_content.preview.pp_schema = EXT:pizpalue/Resources/Private/Templates/ContentElements/Preview/PpSchema.html
