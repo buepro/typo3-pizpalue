@@ -78,6 +78,7 @@ The following upgrade descriptions are available:
    Upgrade_11.2
    Upgrade_11.4
    Upgrade_12.0
+   Upgrade_13.0
 
 
 .. _admin_extensions:
