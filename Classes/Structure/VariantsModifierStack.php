@@ -13,6 +13,7 @@ namespace Buepro\Pizpalue\Structure;
 use Buepro\Pizpalue\DataProcessing\StructureProcessor;
 use Buepro\Pizpalue\Service\BackendlayoutService;
 use Buepro\Pizpalue\Service\ContentElementService;
+use Buepro\Pizpalue\Structure\Service\TypoScriptService;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -156,16 +157,17 @@ class VariantsModifierStack
     private static function getInitialVariants(string $specifier = ''): ?array
     {
         $result = null;
+        $typoScriptService = new TypoScriptService();
 
         // Get default variants
         if ($specifier === '') {
             // Default variants defined by the current content element
             if (isset(self::$contentElementData['tx_pizpalue_image_variants'])) {
-                $result = TypoScript::getVariants(self::$contentElementData['tx_pizpalue_image_variants']);
+                $result = $typoScriptService->getVariants(self::$contentElementData['tx_pizpalue_image_variants']);
             }
             if ($result === null) {
                 // Default variants defined in TS
-                $result = TypoScript::getVariants('variants');
+                $result = $typoScriptService->getVariants('variants');
             }
             return $result;
         }
@@ -174,15 +176,15 @@ class VariantsModifierStack
         $result = null;
         if (array_key_exists($specifier, self::$contentElementData)) {
             // Variants defined by the current content element
-            $result = TypoScript::getVariants(self::$contentElementData[$specifier]);
+            $result = $typoScriptService->getVariants(self::$contentElementData[$specifier]);
         }
         if ($result === null) {
             // Variants from TS ($variants contains TS path or last TS path segment)
-            $result = TypoScript::getVariants($specifier);
+            $result = $typoScriptService->getVariants($specifier);
         }
         if ($result === null) {
             // Default variants defined in TS
-            $result = TypoScript::getVariants('variants');
+            $result = $typoScriptService->getVariants('variants');
         }
         return $result;
     }

@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\Service;
 
-use Buepro\Pizpalue\Structure\TypoScript;
+use Buepro\Pizpalue\Structure\Service\TypoScriptService;
 use Buepro\Pizpalue\Structure\VariantsModifier;
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
@@ -34,7 +34,7 @@ class BackendlayoutService
         if (isset($conf['backendlayout']) && isset($this->cObj->data['colPos'])) {
             $backendlayout = $this->cObj->cObjGetSingle($conf['backendlayout'], $conf['backendlayout.']);
             $colPos = (int) $this->cObj->data['colPos'];
-            $variantsModification = TypoScript::getVariants(sprintf(
+            $variantsModification = (new TypoScriptService())->getVariants(sprintf(
                 '%s.%s.%s',
                 'lib.contentElement.settings.responsiveimages.backendlayout',
                 $backendlayout,

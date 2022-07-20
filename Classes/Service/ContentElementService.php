@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\Service;
 
-use Buepro\Pizpalue\Structure\TypoScript;
+use Buepro\Pizpalue\Structure\Service\TypoScriptService;
 use Buepro\Pizpalue\Structure\VariantsModifier;
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
@@ -70,7 +70,7 @@ class ContentElementService
         // default variants
         $variants = StructureVariantsUtility::getStructureVariants();
         if ($this->cObj->getCurrentTable() === 'tt_content' && $data['CType']) {
-            $variantsConf = TypoScript::getVariants(
+            $variantsConf = (new TypoScriptService())->getVariants(
                 'lib.contentElement.settings.responsiveimages.contentelements.' . $data['CType']
             );
             if ($variantsConf !== null) {

@@ -8,18 +8,18 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\Structure;
+namespace Buepro\Pizpalue\Structure\Service;
 
-use TYPO3\CMS\Core\TypoScript\TypoScriptService;
+use TYPO3\CMS\Core\TypoScript\TypoScriptService as CoreTypoScriptService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class TypoScript
+class TypoScriptService
 {
-    public static function getVariants(string $tsPath = 'variants'): ?array
+    public function getVariants(string $tsPath = 'variants'): ?array
     {
         $result = null;
-        /** @var TypoScriptService $typoScriptService */
-        $typoScriptService = GeneralUtility::makeInstance(TypoScriptService::class);
+        /** @var CoreTypoScriptService $typoScriptService */
+        $typoScriptService = GeneralUtility::makeInstance(CoreTypoScriptService::class);
         $setup = $typoScriptService->convertTypoScriptArrayToPlainArray($GLOBALS['TSFE']->tmpl->setup);
         $parts = GeneralUtility::trimExplode('.', $tsPath, true);
         if (count($parts) === 1 && is_array($setup['lib']['contentElement']['settings']['responsiveimages'][$parts[0]])) {

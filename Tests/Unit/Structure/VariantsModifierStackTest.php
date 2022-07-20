@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\Tests\Unit\Structure;
 
-use Buepro\Pizpalue\Structure\TypoScript;
+use Buepro\Pizpalue\Structure\Service\TypoScriptService;
 use Buepro\Pizpalue\Structure\VariantsModifier;
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
 
@@ -34,7 +34,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
 
     private function getVariantsModifierForPageLayout75(): VariantsModifier
     {
-        return (new VariantsModifier())->setModification(TypoScript::getVariants(
+        return (new VariantsModifier())->setModification((new TypoScriptService())->getVariants(
             'lib.contentElement.settings.responsiveimages.backendlayout.subnavigation_left.0'
         ) ?? []);
     }
@@ -49,7 +49,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
 
     private function getVariantsForModalDialog(): VariantsModifier
     {
-        return (new VariantsModifier())->setVariants(TypoScript::getVariants(
+        return (new VariantsModifier())->setVariants((new TypoScriptService())->getVariants(
             'lib.contentElement.settings.responsiveimages.contentelements.pp_modal_dialog.md'
         ) ?? []);
     }
@@ -70,7 +70,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
         $this->resetSingletonInstances = true;
         VariantsModifierStack::resetStack();
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForPageLayout75());
-        $variants = TypoScript::getVariants() ?? [];
+        $variants = (new TypoScriptService())->getVariants() ?? [];
         $expected = [];
         foreach ($variants as $breakpoint => $value) {
             $expected[$breakpoint] = ((float)$value['width'] + 40) * 0.75 - 40;
@@ -91,7 +91,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
         VariantsModifierStack::resetStack();
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForPageLayout75());
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
-        $variants = TypoScript::getVariants() ?? [];
+        $variants = (new TypoScriptService())->getVariants() ?? [];
         $expected = [];
         foreach ($variants as $breakpoint => $value) {
             $expected[$breakpoint] = ((((float)$value['width'] + 40) * 0.75 - 40) + 40) * 0.5 - 40;
@@ -111,7 +111,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
         $this->resetSingletonInstances = true;
         VariantsModifierStack::resetStack();
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
-        $variants = TypoScript::getVariants('pageVariants') ?? [];
+        $variants = (new TypoScriptService())->getVariants('pageVariants') ?? [];
         $expected = [];
         foreach ($variants as $breakpoint => $value) {
             $expected[$breakpoint] = ((float)$value['width'] + 40) * 0.5 - 40;
@@ -132,7 +132,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
         VariantsModifierStack::resetStack();
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
         VariantsModifierStack::pushVariantsModifier($this->getVariantsForModalDialog());
-        $expected = $this->getVariantsVector(TypoScript::getVariants(
+        $expected = $this->getVariantsVector((new TypoScriptService())->getVariants(
             'lib.contentElement.settings.responsiveimages.contentelements.pp_modal_dialog.md'
         ) ?? [], 'width');
         $actual = $this->getVariantsVector(VariantsModifierStack::getVariants(), 'width');
