@@ -16,6 +16,7 @@ use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use Buepro\Pizpalue\Utility\ColumnVariantsUtility;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use Buepro\Pizpalue\Utility\VectorUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
@@ -76,9 +77,10 @@ class ColumnViewHelper extends AbstractViewHelper
                 ->setCorrections(VectorUtility::addVector($gutter, $correction));
 
             // Push variants modifier -> render content -> pop modifier
-            VariantsModifierStack::pushVariantsModifier($modifier);
+            $variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
+            $variantsModifierStack->pushVariantsModifier($modifier);
             $content = $renderChildrenClosure();
-            VariantsModifierStack::popVariantsModifier();
+            $variantsModifierStack->popVariantsModifier();
             return $content;
         }
 

@@ -13,23 +13,34 @@ namespace Buepro\Pizpalue\Tests\Unit\Structure;
 use Buepro\Pizpalue\Structure\Service\TypoScriptService;
 use Buepro\Pizpalue\Structure\VariantsModifier;
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class VariantsModifierStackTest extends TypoScriptBasedTest
 {
+    /** @var VariantsModifierStack $variantsModifierStack */
+    protected $variantsModifierStack;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+        $this->variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
+    }
+
     public function testStackManipulation(): void
     {
-        VariantsModifierStack::resetStack();
-        self::assertCount(0, VariantsModifierStack::getStack());
-        VariantsModifierStack::pushVariantsModifier($variantsModifier1 = new VariantsModifier());
-        self::assertSame($variantsModifier1, VariantsModifierStack::getVariantsModifier());
-        VariantsModifierStack::pushVariantsModifier($variantsModifier2 = new VariantsModifier());
-        self::assertSame($variantsModifier2, VariantsModifierStack::getVariantsModifier());
-        self::assertCount(2, VariantsModifierStack::getStack());
-        self::assertSame($variantsModifier2, VariantsModifierStack::popVariantsModifier());
-        self::assertCount(1, VariantsModifierStack::getStack());
-        self::assertSame($variantsModifier1, VariantsModifierStack::popVariantsModifier());
-        self::assertCount(0, VariantsModifierStack::getStack());
-        self::assertNull(VariantsModifierStack::popVariantsModifier());
+        $this->resetSingletonInstances = true;
+        $this->variantsModifierStack->resetStack();
+        self::assertCount(0, $this->variantsModifierStack->getStack());
+        $this->variantsModifierStack->pushVariantsModifier($variantsModifier1 = new VariantsModifier());
+        self::assertSame($variantsModifier1, $this->variantsModifierStack->getVariantsModifier());
+        $this->variantsModifierStack->pushVariantsModifier($variantsModifier2 = new VariantsModifier());
+        self::assertSame($variantsModifier2, $this->variantsModifierStack->getVariantsModifier());
+        self::assertCount(2, $this->variantsModifierStack->getStack());
+        self::assertSame($variantsModifier2, $this->variantsModifierStack->popVariantsModifier());
+        self::assertCount(1, $this->variantsModifierStack->getStack());
+        self::assertSame($variantsModifier1, $this->variantsModifierStack->popVariantsModifier());
+        self::assertCount(0, $this->variantsModifierStack->getStack());
+        self::assertNull($this->variantsModifierStack->popVariantsModifier());
     }
 
     private function getVariantsModifierForPageLayout75(): VariantsModifier
@@ -68,8 +79,8 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
     public function testGetVariantsForPage75(): void
     {
         $this->resetSingletonInstances = true;
-        VariantsModifierStack::resetStack();
-        VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForPageLayout75());
+        $this->variantsModifierStack->resetStack();
+        $this->variantsModifierStack->pushVariantsModifier($this->getVariantsModifierForPageLayout75());
         $variants = (new TypoScriptService())->getVariants() ?? [];
         $expected = [];
         foreach ($variants as $breakpoint => $value) {
@@ -78,7 +89,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
         foreach (['medium', 'small', 'extrasmall'] as $breakpoint) {
             $expected[$breakpoint] = $variants[$breakpoint]['width'];
         }
-        $actual = $this->getVariantsVector(VariantsModifierStack::getVariants(), 'width');
+        $actual = $this->getVariantsVector($this->variantsModifierStack->getVariants(), 'width');
         foreach ($expected as $breakpoint => $value) {
             // We allow 1px rounding error
             self::assertLessThan(1, abs($actual[$breakpoint] - $value));
@@ -88,9 +99,9 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
     public function testGetVariantsForColumn50(): void
     {
         $this->resetSingletonInstances = true;
-        VariantsModifierStack::resetStack();
-        VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForPageLayout75());
-        VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
+        $this->variantsModifierStack->resetStack();
+        $this->variantsModifierStack->pushVariantsModifier($this->getVariantsModifierForPageLayout75());
+        $this->variantsModifierStack->pushVariantsModifier($this->getVariantsModifierForColumns50());
         $variants = (new TypoScriptService())->getVariants() ?? [];
         $expected = [];
         foreach ($variants as $breakpoint => $value) {
@@ -99,7 +110,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
         foreach (['medium', 'small', 'extrasmall'] as $breakpoint) {
             $expected[$breakpoint] = $variants[$breakpoint]['width'];
         }
-        $actual = $this->getVariantsVector(VariantsModifierStack::getVariants(), 'width');
+        $actual = $this->getVariantsVector($this->variantsModifierStack->getVariants(), 'width');
         foreach ($expected as $breakpoint => $value) {
             // We allow 1px rounding error
             self::assertLessThan(1, abs($actual[$breakpoint] - $value));
@@ -109,8 +120,8 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
     public function testGetVariantsForColumn50UsingFullPageWidth(): void
     {
         $this->resetSingletonInstances = true;
-        VariantsModifierStack::resetStack();
-        VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
+        $this->variantsModifierStack->resetStack();
+        $this->variantsModifierStack->pushVariantsModifier($this->getVariantsModifierForColumns50());
         $variants = (new TypoScriptService())->getVariants('pageVariants') ?? [];
         $expected = [];
         foreach ($variants as $breakpoint => $value) {
@@ -119,7 +130,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
         foreach (['medium', 'small', 'extrasmall'] as $breakpoint) {
             $expected[$breakpoint] = $variants[$breakpoint]['width'];
         }
-        $actual = $this->getVariantsVector(VariantsModifierStack::getVariants('pageVariants'), 'width');
+        $actual = $this->getVariantsVector($this->variantsModifierStack->getVariants('pageVariants'), 'width');
         foreach ($expected as $breakpoint => $value) {
             // We allow 1px rounding error
             self::assertLessThan(1, abs($actual[$breakpoint] - $value));
@@ -129,13 +140,13 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
     public function testGetVariantsForModalDialog(): void
     {
         $this->resetSingletonInstances = true;
-        VariantsModifierStack::resetStack();
-        VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
-        VariantsModifierStack::pushVariantsModifier($this->getVariantsForModalDialog());
+        $this->variantsModifierStack->resetStack();
+        $this->variantsModifierStack->pushVariantsModifier($this->getVariantsModifierForColumns50());
+        $this->variantsModifierStack->pushVariantsModifier($this->getVariantsForModalDialog());
         $expected = $this->getVariantsVector((new TypoScriptService())->getVariants(
             'lib.contentElement.settings.responsiveimages.contentelements.pp_modal_dialog.md'
         ) ?? [], 'width');
-        $actual = $this->getVariantsVector(VariantsModifierStack::getVariants(), 'width');
+        $actual = $this->getVariantsVector($this->variantsModifierStack->getVariants(), 'width');
         foreach ($expected as $breakpoint => $value) {
             // We allow 1px rounding error
             self::assertLessThan(1, abs($actual[$breakpoint] - $value));

@@ -15,16 +15,17 @@ use Buepro\Pizpalue\Service\BackendlayoutService;
 use Buepro\Pizpalue\Service\ContentElementService;
 use Buepro\Pizpalue\Structure\Service\TypoScriptService;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
+use TYPO3\CMS\Core\SingletonInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class VariantsModifierStack
+class VariantsModifierStack implements SingletonInterface
 {
     /**
      * Maintains VariantsModifiers from elements modifying the available content space.
      *
      * @var VariantsModifier[]
      */
-    private static $stack = [];
+    private $stack = [];
 
     /**
      * Data from the content element currently being rendered.
@@ -32,29 +33,29 @@ class VariantsModifierStack
      * @var array
      * @see StructureProcessor
      */
-    private static $contentElementData = [];
+    private $contentElementData = [];
 
-    public static function getStack(): array
+    public function getStack(): array
     {
-        return self::$stack;
+        return $this->stack;
     }
 
-    public static function resetStack(): void
+    public function resetStack(): void
     {
-        self::$stack = [];
+        $this->stack = [];
     }
 
-    public static function setContentElementData(array $data): void
+    public function setContentElementData(array $data): void
     {
-        self::$contentElementData = array_intersect_key(
+        $this->contentElementData = array_intersect_key(
             $data,
             array_flip(['uid', 'pid', 'tx_pizpalue_image_variants', 'tx_pizpalue_background_image_variants'])
         );
     }
 
-    public static function getContentElementData(): array
+    public function getContentElementData(): array
     {
-        return self::$contentElementData;
+        return $this->contentElementData;
     }
 
     /**
@@ -62,26 +63,26 @@ class VariantsModifierStack
      *
      * @return VariantsModifier
      */
-    public static function getVariantsModifier(): VariantsModifier
+    public function getVariantsModifier(): VariantsModifier
     {
-        if (count(self::$stack) > 0) {
-            $variantsModifier = array_pop(self::$stack);
-            self::$stack[] = $variantsModifier;
+        if (count($this->stack) > 0) {
+            $variantsModifier = array_pop($this->stack);
+            $this->stack[] = $variantsModifier;
         } else {
             $variantsModifier = new VariantsModifier();
         }
         return $variantsModifier;
     }
 
-    public static function pushVariantsModifier(VariantsModifier $variantsModifier): void
+    public function pushVariantsModifier(VariantsModifier $variantsModifier): void
     {
-        self::$stack[] = $variantsModifier;
+        $this->stack[] = $variantsModifier;
     }
 
-    public static function popVariantsModifier(): ?VariantsModifier
+    public function popVariantsModifier(): ?VariantsModifier
     {
-        if (count(self::$stack) > 0) {
-            return array_pop(self::$stack);
+        if (count($this->stack) > 0) {
+            return array_pop($this->stack);
         }
         return null;
     }
@@ -134,18 +135,18 @@ class VariantsModifierStack
      * @return array
      * @see StructureProcessor, BackendlayoutService, ContentElementService
      */
-    public static function getVariants($specifier = ''): array
+    public function getVariants($specifier = ''): array
     {
         $initialVariants = null;
         if (is_array($specifier)) {
             $initialVariants = $specifier;
         }
         if (is_string($specifier)) {
-            $initialVariants = self::getInitialVariants($specifier);
+            $initialVariants = $this->getInitialVariants($specifier);
         }
         $variants = StructureVariantsUtility::getStructureVariants($initialVariants);
         ($modificationStack = GeneralUtility::makeInstance(ModificationStack::class))->reset();
-        foreach (self::$stack as $variantsModifier) {
+        foreach ($this->stack as $variantsModifier) {
             $variants = $variantsModifier->getVariants() ?? $variants;
             $modification = new Modification($variants, $variantsModifier);
             $variants = $modification->getResultingVariants();
@@ -154,7 +155,7 @@ class VariantsModifierStack
         return $variants;
     }
 
-    private static function getInitialVariants(string $specifier = ''): ?array
+    private function getInitialVariants(string $specifier = ''): ?array
     {
         $result = null;
         $typoScriptService = new TypoScriptService();
@@ -162,8 +163,8 @@ class VariantsModifierStack
         // Get default variants
         if ($specifier === '') {
             // Default variants defined by the current content element
-            if (isset(self::$contentElementData['tx_pizpalue_image_variants'])) {
-                $result = $typoScriptService->getVariants(self::$contentElementData['tx_pizpalue_image_variants']);
+            if (isset($this->contentElementData['tx_pizpalue_image_variants'])) {
+                $result = $typoScriptService->getVariants($this->contentElementData['tx_pizpalue_image_variants']);
             }
             if ($result === null) {
                 // Default variants defined in TS
@@ -173,10 +174,9 @@ class VariantsModifierStack
         }
 
         // Get specified variants
-        $result = null;
-        if (array_key_exists($specifier, self::$contentElementData)) {
+        if (array_key_exists($specifier, $this->contentElementData)) {
             // Variants defined by the current content element
-            $result = $typoScriptService->getVariants(self::$contentElementData[$specifier]);
+            $result = $typoScriptService->getVariants($this->contentElementData[$specifier]);
         }
         if ($result === null) {
             // Variants from TS ($variants contains TS path or last TS path segment)

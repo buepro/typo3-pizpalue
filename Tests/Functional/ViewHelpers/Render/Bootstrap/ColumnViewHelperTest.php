@@ -35,8 +35,9 @@ class ColumnViewHelperTest extends FunctionalTestCase
     public function variantsGetModified(): void
     {
         $doc = $this->getDOMDocument();
-        VariantsModifierStack::resetStack();
-        $initialVariants = VariantsModifierStack::getVariants([]);
+        $variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
+        $variantsModifierStack->resetStack();
+        $initialVariants = $variantsModifierStack->getVariants([]);
         $outerVariants = array_replace_recursive($initialVariants, [
             'default' => ['width' => (int)ceil($initialVariants['default']['width'] / 12 * 8)],
             'xlarge' => ['width' => (int)ceil($initialVariants['xlarge']['width'] / 12 * 8)],

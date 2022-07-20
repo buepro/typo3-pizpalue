@@ -11,6 +11,7 @@ declare(strict_types = 1);
 namespace Buepro\Pizpalue\DataProcessing;
 
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
@@ -34,7 +35,7 @@ class StructureProcessor implements DataProcessorInterface
         array $processorConfiguration,
         array $processedData
     ) {
-        VariantsModifierStack::setContentElementData($processedData['data']);
+        GeneralUtility::makeInstance(VariantsModifierStack::class)->setContentElementData($processedData['data']);
         return $processedData;
     }
 }

@@ -20,12 +20,20 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class ContentElementService
 {
+    /** @var VariantsModifierStack $variantsModifierStack */
+    protected $variantsModifierStack;
+
     /**
      * Reference to the parent (calling) cObject set from TypoScript
      *
      * @var ContentObjectRenderer
      */
     public $cObj;
+
+    public function __construct()
+    {
+        $this->variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
+    }
 
     /**
      * @param string $text
@@ -87,12 +95,12 @@ class ContentElementService
         }
         $variantsModifier = new VariantsModifier();
         $variantsModifier->setVariants($variants);
-        VariantsModifierStack::pushVariantsModifier($variantsModifier);
+        $this->variantsModifierStack->pushVariantsModifier($variantsModifier);
     }
 
     public function popVariantsModifier(): void
     {
-        VariantsModifierStack::popVariantsModifier();
+        $this->variantsModifierStack->popVariantsModifier();
     }
 
     public function modifyTitleTag(): void

@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\ViewHelpers\Structure;
 
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
@@ -46,7 +47,7 @@ class VariantsViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $result = VariantsModifierStack::getVariants($arguments['initialVariants']);
+        $result = (GeneralUtility::makeInstance(VariantsModifierStack::class))->getVariants($arguments['initialVariants']);
         if ($arguments['as']) {
             $renderingContext->getVariableProvider()->add($arguments['as'], $result);
             return '';
