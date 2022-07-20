@@ -237,7 +237,7 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @deprecated will be removed in 13.0
+     * @deprecated since v12, will be removed in v14
      */
     private static function substituteJoshDataDelayAttribute(array $attributes): array
     {

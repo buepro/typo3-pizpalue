@@ -16,12 +16,12 @@ namespace Buepro\Pizpalue\Extensions\Form\Finishers;
 class EmailFinisher extends \Buepro\Pizpalue\Form\Finishers\EmailFinisher
 {
     /**
-     * @deprecated since v12, will be removed in v13
+     * @deprecated since v12, will be removed in v14
      */
     public function __construct()
     {
         trigger_error(
-            __CLASS__ . 'will be removed in pizpalue v13, use `\Buepro\Pizpalue\Form\Finishers\EmailFinisher` instead.',
+            __CLASS__ . 'will be removed in pizpalue v14, use `\Buepro\Pizpalue\Form\Finishers\EmailFinisher` instead.',
             E_USER_DEPRECATED
         );
         parent::__construct();

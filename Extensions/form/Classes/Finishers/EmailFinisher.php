@@ -21,12 +21,12 @@ class EmailFinisher extends \TYPO3\CMS\Form\Domain\Finishers\EmailFinisher
      * In addition to the parents action the finisher options are passed to the template.
      *
      * @throws FinisherException
-     * @deprecated since v11, will be removed in v13
+     * @deprecated since v11, will be removed in v14
      */
     protected function initializeStandaloneView(FormRuntime $formRuntime, string $format): StandaloneView
     {
         trigger_error(
-            'Deprecated since v11, will be removed in v13',
+            'Deprecated since v11, will be removed in v14',
             E_USER_DEPRECATED
         );
         $standaloneView = parent::initializeStandaloneView($formRuntime, $format);
