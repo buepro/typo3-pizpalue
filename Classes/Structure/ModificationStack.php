@@ -10,32 +10,34 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\Structure;
 
+use TYPO3\CMS\Core\SingletonInterface;
+
 /**
  * Mainly used for debugging purposes
  *
  * @see VariantsModifierStack::getVariants()
  * @see ModificationStackViewHelper
  */
-class ModificationStack
+class ModificationStack implements SingletonInterface
 {
     /**
      * @var Modification[]
      */
-    private static $stack = [];
+    private $stack = [];
 
-    public static function reset(): void
+    public function reset(): void
     {
-        self::$stack = [];
+        $this->stack = [];
     }
 
-    public static function addModification(Modification $modification): Modification
+    public function addModification(Modification $modification): Modification
     {
-        self::$stack[] = $modification;
+        $this->stack[] = $modification;
         return $modification;
     }
 
-    public static function getStack(): array
+    public function getStack(): array
     {
-        return self::$stack;
+        return $this->stack;
     }
 }

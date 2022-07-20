@@ -14,6 +14,7 @@ use Buepro\Pizpalue\DataProcessing\StructureProcessor;
 use Buepro\Pizpalue\Service\BackendlayoutService;
 use Buepro\Pizpalue\Service\ContentElementService;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class VariantsModifierStack
 {
@@ -142,12 +143,12 @@ class VariantsModifierStack
             $initialVariants = self::getInitialVariants($specifier);
         }
         $variants = StructureVariantsUtility::getStructureVariants($initialVariants);
-        ModificationStack::reset();
+        ($modificationStack = GeneralUtility::makeInstance(ModificationStack::class))->reset();
         foreach (self::$stack as $variantsModifier) {
             $variants = $variantsModifier->getVariants() ?? $variants;
             $modification = new Modification($variants, $variantsModifier);
             $variants = $modification->getResultingVariants();
-            ModificationStack::addModification($modification);
+            $modificationStack->addModification($modification);
         }
         return $variants;
     }

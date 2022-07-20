@@ -67,6 +67,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
 
     public function testGetVariantsForPage75(): void
     {
+        $this->resetSingletonInstances = true;
         VariantsModifierStack::resetStack();
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForPageLayout75());
         $variants = TypoScript::getVariants() ?? [];
@@ -86,6 +87,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
 
     public function testGetVariantsForColumn50(): void
     {
+        $this->resetSingletonInstances = true;
         VariantsModifierStack::resetStack();
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForPageLayout75());
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
@@ -106,6 +108,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
 
     public function testGetVariantsForColumn50UsingFullPageWidth(): void
     {
+        $this->resetSingletonInstances = true;
         VariantsModifierStack::resetStack();
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
         $variants = TypoScript::getVariants('pageVariants') ?? [];
@@ -125,6 +128,7 @@ class VariantsModifierStackTest extends TypoScriptBasedTest
 
     public function testGetVariantsForModalDialog(): void
     {
+        $this->resetSingletonInstances = true;
         VariantsModifierStack::resetStack();
         VariantsModifierStack::pushVariantsModifier($this->getVariantsModifierForColumns50());
         VariantsModifierStack::pushVariantsModifier($this->getVariantsForModalDialog());
