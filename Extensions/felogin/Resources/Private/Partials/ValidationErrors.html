@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" data-namespace-typo3-fluid="true">
+<f:form.validationResults>
+    <f:if condition="{validationResults.flattenedErrors}">
+        <ul class="pp-validation-errors list-group my-4">
+            <f:for each="{validationResults.flattenedErrors}" as="errors" key="propertyPath">
+                <f:if condition="{propertyPath}">
+                    <f:then>
+                        <li class="list-group-item">{propertyPath}
+                            <ul class="list-group">
+                                <f:for each="{errors}" as="error">
+                                    <li class="list-group-item list-group-item-danger">{error}</li>
+                                </f:for>
+                            </ul>
+                        </li>
+                    </f:then>
+                    <f:else>
+                        <f:for each="{errors}" as="error">
+                            <li class="list-group-item list-group-item-danger">{error}</li>
+                        </f:for>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </ul>
+    </f:if>
+</f:form.validationResults>
+</html>

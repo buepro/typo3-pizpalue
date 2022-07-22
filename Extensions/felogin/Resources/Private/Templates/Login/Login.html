@@ -1,0 +1,89 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:flashMessages/>
+<f:if condition="{cookieWarning}">
+    <f:render partial="CookieWarning" />
+</f:if>
+
+<f:if condition="{messageKey}">
+    <h3>
+        <f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_header'}"/>
+    </h3>
+    <p>
+        <f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_message'}"/>
+    </p>
+</f:if>
+<f:if condition="{onSubmit}">
+    <f:then>
+        <f:form target="_top" fieldNamePrefix="" action="login" onsubmit="{onSubmit}">
+            <f:render section="content" arguments="{_all}"/>
+        </f:form>
+    </f:then>
+    <f:else>
+        <f:form target="_top" fieldNamePrefix="" action="login">
+            <f:render section="content" arguments="{_all}"/>
+        </f:form>
+    </f:else>
+</f:if>
+
+<f:if condition="{settings.showForgotPassword}">
+    <p class="pp-forgot-password mt-4">
+        <f:link.action action="recovery" controller="PasswordRecovery">
+            <f:render partial="RenderLabelOrMessage" arguments="{key: 'forgot_header'}"/>
+        </f:link.action>
+    </p>
+</f:if>
+
+<f:section name="content">
+    <fieldset>
+        <legend>
+            <f:translate key="login"/>
+        </legend>
+        <div class="mb-3">
+            <label class="form-label" for="pp-username"><f:translate key="username"/></label>
+            <f:form.textfield class="form-control" id="pp-username" name="user" required="true" additionalAttributes="{autocomplete: 'username'}"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="pp-password"><f:translate key="password"/></label>
+            <f:form.password class="form-control" id="pp-password" name="pass" additionalAttributes="{required: 'required', autocomplete: 'current-password'}"/>
+        </div>
+
+        <f:if condition="{permaloginStatus} > -1">
+            <div class="mb-3 form-check">
+                <f:if condition="{permaloginStatus} == 1">
+                    <f:then>
+                        <f:form.hidden name="permalogin" value="0" additionalAttributes="{disabled: 'disabled'}"/>
+                        <f:form.checkbox class="form-check-input" name="permalogin" id="permalogin" value="1" checked="checked"/>
+                    </f:then>
+                    <f:else>
+                        <f:form.hidden name="permalogin" value="0"/>
+                        <f:form.checkbox class="form-check-input" name="permalogin" id="permalogin" value="1"/>
+                    </f:else>
+                </f:if>
+                <label class="form-label" for="permalogin"><f:translate id="permalogin"/></label>
+            </div>
+        </f:if>
+
+        <div>
+            <f:form.submit class="btn btn-primary" value="{f:translate(key: 'login')}" name="submit"/>
+        </div>
+
+        <div class="felogin-hidden">
+            <f:form.hidden name="logintype" value="login"/>
+            <f:form.hidden name="pid" value="{storagePid}"/>
+            <f:if condition="{redirectURL}!=''">
+                <f:form.hidden name="redirect_url" value="{redirectURL}" />
+            </f:if>
+            <f:if condition="{referer}!=''">
+                <f:form.hidden name="referer" value="{referer}" />
+            </f:if>
+            <f:if condition="{redirectReferrer}!=''">
+                <f:form.hidden name="redirectReferrer" value="off" />
+            </f:if>
+            <f:if condition="{noRedirect}!=''">
+                <f:form.hidden name="noredirect" value="1" />
+            </f:if>
+        </div>
+    </fieldset>
+</f:section>
+</html>
