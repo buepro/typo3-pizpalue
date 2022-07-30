@@ -8,3 +8,4 @@ Documentation-GENERATED-temp/
 *.zip
 Build/node_modules
 composer-dev.lock
+.ddev/docker-compose.mount.yaml

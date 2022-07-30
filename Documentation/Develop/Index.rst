@@ -28,6 +28,25 @@ Installation
 Development
 -----------
 
+Mount extension directories
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To work at the same time on other packages mount local directories to the
+container by adjusting and adding the following script to
+`.ddev/docker-compose.mount.yaml`:
+
+.. code-block:: yaml
+
+   services:
+     web:
+       volumes:
+         # Mount local directory to the web containers path `/mnt/public/package`
+         - "~/Projects/public:/mnt/public/package"
+
+
+Work with the container
+~~~~~~~~~~~~~~~~~~~~~~~
+
 Use the ddev container during development. Like this the system environment
 is being respected. E.g.:
 
