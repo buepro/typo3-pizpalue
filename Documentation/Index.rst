@@ -45,8 +45,11 @@ performance.
 
 Visit `pizpalue.buechler.pro <https://pizpalue.buechler.pro>`__ to see it in
 action or `log in <https://demo.buechler.pro/typo3>`__ to the
-`demo site <https://demo.buechler.pro>`__ and discover how easy it is to create
-attractive content.
+`demo site <https://demo.buechler.pro>`__ and discover how easy it is to setup
+a site and create attractive content.
+
+Plesk reseller account owners can easily generate pizpalue websites at
+`buechler.pro/webseiten/generator <https://www.buechler.pro/webseiten/generator>`__.
 
 ----
 
