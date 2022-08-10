@@ -49,7 +49,7 @@ languages:
     navigationTitle: Deutsch
     hreflang: de-CH
     direction: ''
-    fallbackType: strict
+    fallbackType: fallback
     fallbacks: ''
     flag: ch
     languageId: 1
