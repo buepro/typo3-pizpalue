@@ -13,7 +13,7 @@ TYPO3:
           #===================
           formEditor:
             translationFiles:
-              110: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
+              210: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
 
           #================================================
           # Add the finisher to the finisher selector box

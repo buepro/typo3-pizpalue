@@ -12,7 +12,7 @@ TYPO3:
               renderingOptions:
                 translation:
                   translationFiles:
-                    10: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
+                    210: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
             AdvancedPassword:
               properties:
                 elementErrorClassAttribute: error is-invalid

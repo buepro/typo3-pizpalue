@@ -13,7 +13,7 @@ TYPO3:
           #===================
           formEngine:
             translationFiles:
-              110: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
+              210: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
 
           #======================
           # Define the finisher
