@@ -21,6 +21,18 @@ defined('TYPO3') or die('Access denied.');
         'Configuration/TypoScript/Bootstrap4',
         'Pizpalue - Bootstrap 4.x'
     );
+    if (
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements') &&
+        !(bool)($pizpalueConfiguration['autoLoadStaticTSForExtensions'] ?? true) &&
+        (($containerElementsVersion = Buepro\ContainerElements\Utility\VersionUtility::getExtensionVersion('container_elements'))
+            === 0 || $containerElementsVersion > 3001001)
+    ) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $_EXTKEY,
+            'Extensions/container_elements/Configuration/TypoScript',
+            'Pizpalue - container_elements'
+        );
+    }
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $_EXTKEY,

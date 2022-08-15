@@ -167,6 +167,23 @@ defined('TYPO3') || die('Access denied.');
         ['Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval'] = '';
 
     /**
+     * Extension container_elements
+     */
+    if (
+        (bool)($pizpalueConfiguration['autoLoadStaticTSForExtensions'] ?? true) &&
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements') &&
+        (($containerElementsVersion = Buepro\ContainerElements\Utility\VersionUtility::getExtensionVersion('container_elements'))
+            === 0 || $containerElementsVersion > 3001001)
+    ) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(
+            '@import "EXT:pizpalue/Extensions/container_elements/Configuration/TypoScript/constants.typoscript"'
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+            '@import "EXT:pizpalue/Extensions/container_elements/Configuration/TypoScript/setup.typoscript"'
+        );
+    }
+
+    /**
      * Extension news
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-08-15T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="enable">
+				<source>Enable</source>
+			</trans-unit>
+			<trans-unit id="adjustment">
+				<source>Adjustment</source>
+			</trans-unit>
+			<trans-unit id="columns.collapseElement">
+				<source>Collapse elements</source>
+			</trans-unit>
+			<trans-unit id="columns.collapseContentElement">
+				<source>Collapse content elements</source>
+			</trans-unit>
+			<trans-unit id="columns.collapseRow">
+				<source>Collapse row</source>
+			</trans-unit>
+			<trans-unit id="columns.imageVariants.gutter">
+				<source>Gutter for image variants</source>
+			</trans-unit>
+			<trans-unit id="columns.imageVariants.correction">
+				<source>Correction for image variants</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

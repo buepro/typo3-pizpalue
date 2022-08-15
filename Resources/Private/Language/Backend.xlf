@@ -244,6 +244,9 @@
 			<trans-unit id="ext_conf.enableDefaultPageTSconfig">
 				<source>Enable default pageTS configuration. If disabled configurations can be added manually in page properties resources register.</source>
 			</trans-unit>
+			<trans-unit id="ext_conf.autoLoadStaticTSForExtensions">
+				<source>Automatically load static typoscript for extensions. If disabled configurations can be added manually to template records.</source>
+			</trans-unit>
 
 			<trans-unit id="tx-news-imageOnTop">
 				<source>Image on top</source>
