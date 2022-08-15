@@ -24,7 +24,7 @@ class ColumnViewHelperTest extends FunctionalTestCase
     protected $initializeDatabase = false;
 
     /**
-     * @var array
+     * @var non-empty-string[]
      */
     protected $testExtensionsToLoad = [
         'typo3conf/ext/bootstrap_package',
@@ -91,6 +91,6 @@ class ColumnViewHelperTest extends FunctionalTestCase
     private function getVariants(\DOMDocument $doc, string $id): array
     {
         $json = $doc->getElementById($id)->textContent ?? '';
-        return json_decode($json, true, 512, JSON_THROW_ON_ERROR);
+        return is_array($result = json_decode($json, true, 512, JSON_THROW_ON_ERROR)) ? $result : [];
     }
 }

@@ -26,16 +26,6 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 class TextReplacementProcessor implements DataProcessorInterface
 {
     /**
-     * @var ContentObjectRenderer $cObj
-     */
-    private $cObj;
-
-    /**
-     * @var array $processedData;
-     */
-    private $processedData;
-
-    /**
      * Process content object data
      *
      * @param ContentObjectRenderer $cObj The data of the content element or page
@@ -51,8 +41,6 @@ class TextReplacementProcessor implements DataProcessorInterface
         array $processedData
     ) {
         // Init
-        $this->cObj = $cObj;
-        $this->processedData = $processedData;
         $fieldName = 'bodytext';
         if (isset($processorConfiguration['references.']) && is_array($processorConfiguration['references.'])) {
             $referenceConfiguration = $processorConfiguration['references.'];

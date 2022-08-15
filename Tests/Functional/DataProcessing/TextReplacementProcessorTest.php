@@ -25,7 +25,7 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
     protected const CONTENT_UID = 2;
 
     /**
-     * @var string[]
+     * @var non-empty-string[]
      */
     protected $coreExtensionsToLoad = [
         'impexp',
@@ -33,7 +33,7 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
     ];
 
     /**
-     * @var string[]
+     * @var non-empty-string[]
      */
     protected $testExtensionsToLoad = [
         'typo3conf/ext/pvh',
@@ -135,10 +135,15 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->importDataSet(
-            ORIGINAL_ROOT .
-            'typo3conf/ext/pizpalue/Tests/Functional/Fixtures/db.xml'
-        );
+        foreach (['pages', 'sys_template', 'tt_content'] as $table) {
+            $this->importCSVDataSet(sprintf(
+                '%s%s/db_table_%s.csv',
+                ORIGINAL_ROOT,
+                'typo3conf/ext/pizpalue/Tests/Functional/Fixtures',
+                $table
+            ));
+        }
+
         $this->setupFrontendSite(1);
         $this->dbConnection = GeneralUtility::makeInstance(ConnectionPool::class)
             ->getConnectionForTable('pages');

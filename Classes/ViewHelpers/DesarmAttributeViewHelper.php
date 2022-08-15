@@ -60,7 +60,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
     /**
      * Initialize ViewHelper arguments
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerArgument('value', 'string', 'String to desarm');

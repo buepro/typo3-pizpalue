@@ -1,0 +1,56 @@
+"tt_content"
+,"uid","rowDescription","pid","tstamp","crdate","cruser_id","deleted","hidden","starttime","endtime","fe_group","sorting","editlock","sys_language_uid","l18n_parent","l10n_source","l10n_state","t3_origuid","l18n_diffsource","t3ver_oid","t3ver_wsid","t3ver_state","t3ver_stage","CType","header","header_position","bodytext","bullets_type","uploads_description","uploads_type","assets","image","imagewidth","imageorient","imagecols","imageborder","media","layout","frame_class","cols","space_before_class","space_after_class","records","pages","colPos","subheader","header_link","image_zoom","header_layout","list_type","sectionIndex","linkToTop","file_collections","filelink_size","filelink_sorting","filelink_sorting_direction","target","date","recursive","imageheight","pi_flexform","accessibility_title","accessibility_bypass","accessibility_bypass_text","category_field","table_class","table_caption","table_delimiter","table_enclosure","table_header_position","table_tfoot","categories","selected_categories","tx_impexp_origuid","teaser","aspect_ratio","items_per_page","readmore_label","quote_source","quote_link","panel_class","file_folder","icon","icon_set","icon_file","icon_position","icon_size","icon_type","icon_color","icon_background","external_media_source","external_media_ratio","tx_bootstrappackage_card_group_item","tx_bootstrappackage_carousel_item","tx_bootstrappackage_accordion_item","tx_bootstrappackage_icon_group_item","tx_bootstrappackage_tab_item","tx_bootstrappackage_timeline_item","frame_layout","background_color_class","background_image","background_image_options","tx_pizpalue_header_class","tx_pizpalue_subheader_class","tx_pizpalue_layout_breakpoint","tx_pizpalue_classes","tx_pizpalue_style","tx_pizpalue_attributes","tx_pizpalue_animation","tx_pizpalue_image_variants","tx_pizpalue_background_image_variants","tx_pizpalue_image_scaling","tx_pizpalue_image_aspect_ratio","tx_container_parent","tx_pizpalue_scroll_navigation_enable","tx_pizpalue_scroll_navigation_title","tx_pizpalue_scroll_navigation_position"
+,"2",\NULL,"1","1636637656","1636132132","1","0","0","0","0",,"128","0","0","0","0",\NULL,"0","{""CType"":"""",""colPos"":"""",""tx_container_parent"":"""",""header"":"""",""bodytext"":"""",""image"":"""",""teaser"":"""",""pi_flexform"":"""",""sys_language_uid"":"""",""hidden"":"""",""starttime"":"""",""endtime"":"""",""fe_group"":"""",""editlock"":"""",""tx_pizpalue_classes"":"""",""tx_pizpalue_style"":"""",""tx_pizpalue_attributes"":"""",""tx_pizpalue_animation"":""""}","0","0","0","0","pp_schema",,,"{
+   ""@context"": ""http://schema.org"",
+   ""@graph"": [
+     {
+       ""@type"" : ""Organization"",
+       ""name"": ""{$pizpalue.customer.company}"",
+       ""email"": ""{func:entityEncodeChars:{$pizpalue.customer.contactEmail}}"",
+       ""telephone"": ""{$pizpalue.customer.contactPhone}"",
+       ""url"" : ""https://www.{$pizpalue.customer.domain}"",
+       ""address"": {
+         ""@type"": ""PostalAddress"",
+         ""addressLocality"": ""{$pizpalue.customer.contactCity}, Switzerland"",
+         ""postalCode"": ""CH-{$pizpalue.customer.contactZip}"",
+         ""streetAddress"": ""{$pizpalue.customer.contactAddress}""
+       },
+       ""contactPoint"" : [
+         { ""@type"" : ""ContactPoint"",
+           ""telephone"" : ""{$pizpalue.customer.contactPhone}"",
+           ""contactType"" : ""customer service""
+         }
+       ]
+     },
+     {
+       ""@type"":""WebPage"",
+       ""headline"":""{parentData:field:seo_title // field:title}"",
+       ""description"":""{func:newLineToRn:{parentData:field:description}}"",
+       ""breadcrumb"":{processedData:breadcrumb}
+     }
+   ]
+ }","0","0","0","0","0","0","0","1","0","0","0","default","0",,,\NULL,\NULL,"10",,,"0","0",,"1","0",\NULL,"0",,,,"0","0","0","<?xml version=""1.0"" encoding=""utf-8"" standalone=""yes"" ?>
+ <T3FlexForms>
+     <data>
+         <sheet index=""sDEF"">
+             <language index=""lDEF"">
+                 <field index=""image_width"">
+                     <value index=""vDEF"">800</value>
+                 </field>
+                 <field index=""show_content"">
+                     <value index=""vDEF"">0</value>
+                 </field>
+             </language>
+         </sheet>
+     </data>
+ </T3FlexForms>",,"0",,,,\NULL,"124","0","0","0","0",\NULL,"0",,"1.3333333333333","10",,,,"default",\NULL,,,"0",,"default","default","#FFFFFF","#333333",,,"0","0","0","0","0","0","default",,"0",\NULL,,,,,,,"0","variants","pageVariants","xxl: 1.0,
+ xl: 1.0,
+ lg: 1.0,
+ md: 1.0,
+ sm: 1.0,
+ xs: 1.0","xxl: 0,
+ xl: 0,
+ lg: 0,
+ md: 0,
+ sm: 0,
+ xs: 0","0","0",,"0"

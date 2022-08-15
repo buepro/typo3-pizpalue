@@ -124,7 +124,7 @@ class ContentElementXxlUpdate implements UpgradeWizardInterface, RepeatableInter
         if (!($queryResult instanceof Result)) {
             return;
         }
-        while (is_array($record = $queryResult->fetchAssociative())) {
+        while (is_array($record = $queryResult->fetchAssociative()) && is_string($record[$fieldName])) {
             $queryBuilder = $connection->createQueryBuilder();
             $queryBuilder->update('tt_content')
                 ->where(

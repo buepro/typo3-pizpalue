@@ -60,7 +60,7 @@ class PopoverLinkHandler implements LinkHandlerInterface
     protected $iconFactory;
 
     /**
-     * @var ViewInterface
+     * @var ?ViewInterface
      */
     protected $view;
 

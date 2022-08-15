@@ -53,7 +53,7 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
     /**
      * @return void
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerArgument('as', 'string', 'Name from the resulting array', false);

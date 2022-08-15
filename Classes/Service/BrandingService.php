@@ -49,6 +49,9 @@ class BrandingService
                 ExtensionConfiguration::class
             );
             $backendConfiguration = $extensionConfiguration->get('backend');
+            if (!is_array($backendConfiguration)) {
+                return;
+            }
 
             if (
                 !isset($backendConfiguration['loginLogo']) || trim($backendConfiguration['loginLogo']) === '' ||
@@ -74,14 +77,13 @@ class BrandingService
             // https://review.typo3.org/c/Packages/TYPO3.CMS/+/62650
             $reflection = new \ReflectionClass(ExtensionConfiguration::class);
             $parameters = $reflection->getMethod('set')->getParameters();
-            $arguments = [];
-            $arguments[] = 'backend';
             if (count($parameters) === 3) {
-                $arguments[] = '';
+                /** @phpstan-ignore-next-line */
+                $extensionConfiguration->set('backend', '', $backendConfiguration);
+            } else {
+                /** @phpstan-ignore-next-line */
+                $extensionConfiguration->set('backend', $backendConfiguration);
             }
-            $arguments[] = $backendConfiguration;
-
-            $extensionConfiguration->set(...$arguments);
         }
     }
 }

@@ -135,7 +135,7 @@ class ContentElementClassesUpdate implements UpgradeWizardInterface, RepeatableI
         if (!($queryResult instanceof Result)) {
             return false;
         }
-        while (is_array($record = $queryResult->fetchAssociative())) {
+        while (is_array($record = $queryResult->fetchAssociative()) && is_string($record['tx_pizpalue_classes'])) {
             $queryBuilder = $connection->createQueryBuilder();
             $queryBuilder->update('tt_content')
                 ->where(

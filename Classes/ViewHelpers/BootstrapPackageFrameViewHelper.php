@@ -21,7 +21,7 @@ class BootstrapPackageFrameViewHelper extends \Buepro\Pizpalue\BootstrapPackage\
      *
      * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerArgument('ppData', 'array', 'Pizpalue data', true);

@@ -36,7 +36,7 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
 {
     protected $tagName = 'div';
 
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerUniversalTagAttributes();
@@ -65,7 +65,7 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
         // Push variants modifier -> render content -> pop modifier
         $variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
         $variantsModifierStack->pushVariantsModifier($modifier);
-        $this->tag->setContent($this->renderChildren());
+        $this->tag->setContent(is_string($childrenContent = $this->renderChildren()) ? $childrenContent : '');
         $content = $this->tag->render();
         $variantsModifierStack->popVariantsModifier();
         return $content;

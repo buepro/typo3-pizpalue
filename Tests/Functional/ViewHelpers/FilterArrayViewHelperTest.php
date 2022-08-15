@@ -23,7 +23,7 @@ class FilterArrayViewHelperTest extends FunctionalTestCase
     protected $initializeDatabase = false;
 
     /**
-     * @var array
+     * @var non-empty-string[]
      */
     protected $testExtensionsToLoad = [
         'typo3conf/ext/bootstrap_package',

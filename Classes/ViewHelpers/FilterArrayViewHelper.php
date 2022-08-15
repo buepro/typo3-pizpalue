@@ -34,7 +34,7 @@ class FilterArrayViewHelper extends AbstractViewHelper
     /**
      * @return void
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('source', 'array', 'Array to be reduced');
         $this->registerArgument('keylist', 'string', 'Comma separated list from required keys', true);

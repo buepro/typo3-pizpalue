@@ -39,11 +39,9 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
         $decodeOptions = self::getJsonOptions($arguments['decodeOptions']);
         $encodeOptions = self::getJsonOptions($arguments['encodeOptions']);
         $value = $renderChildrenClosure();
-        $json = json_decode($value, true, 512, $decodeOptions);
-        if (!is_array($json ?? false)) {
-            $message = 'Decoding the string to json didn\'t result in a array. Please check if \'decodeOptions\', '
+        if (!is_array($json = json_decode($value, true, 512, $decodeOptions))) {
+            return 'Decoding the string to json didn\'t result in a array. Please check if \'decodeOptions\', '
                 . '\'addSlashes\' and \'stripSlashes\' should be further specified.';
-            return $message;
         }
         if ((bool)$arguments['removeEmptyElements']) {
             $json = ArrayUtility::removeArrayEntryByValue($json, '');
@@ -58,7 +56,9 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
         if (is_string($optionsList)) {
             $options = GeneralUtility::trimExplode(',', $optionsList);
             foreach ($options as $option) {
-                $result |= (int)constant($option);
+                if (is_int($value = constant($option))) {
+                    $result |= $value;
+                }
             }
         }
         return $result;
@@ -67,7 +67,7 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
     /**
      * Initialize ViewHelper arguments
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerArgument('value', 'string', 'String to format');

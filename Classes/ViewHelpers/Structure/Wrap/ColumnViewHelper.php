@@ -53,7 +53,7 @@ class ColumnViewHelper extends AbstractViewHelper
     /**
      * @return void
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('class', 'string', 'CSS classes used to define the column', false, '');
         $this->registerArgument('rowClass', 'string', 'Classes assigned to the wrapping row.', false, '');

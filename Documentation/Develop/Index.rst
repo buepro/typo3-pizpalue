@@ -66,57 +66,19 @@ To remove the development site use:
 Create tests
 ============
 
-Create test db
---------------
+Create test db with PhpMyAdmin
+------------------------------
 
 .. rst-class:: bignums
 
-#. Export db using preset "Test"
+#. Clean up the db
 
-#. Rename the `T3RecordDocument` to `dataset`
+#. Select tables `pages, sys_template, tt_content`
 
-#. Remove the `header`-tag
-
-#. Remove `files_fal`-tag
-
-#. Remove `records`-tag
-
-#. Remove `related`-tag using the following regular expression
-
-   .. code-block:: bash
-
-      <related[\s\w="]*>[\w\W\s]*?</related>\n
-
-#. Create table tags using the following regular expression
-
-   **Search:**
-
-   .. code-block:: bash
-
-      <tablerow index="(\w*)[:\w\s="]*>[\n\s]+<fieldlist index="data"
-      type="array">([\w\W\s]+?)<\/fieldlist>[\n\s]*<\/tablerow>
-
-   **Replace:**
-
-   .. code-block:: bash
-
-      <$1>$2</$1>
-
-#. Create columns tag using the following regular expression
-
-   **Search:**
-
-   .. code-block:: bash
-
-      <field index="(\w+)"[\s\w\d="]*>([\w\W]*?)</field>
-
-   **Replace:**
-
-   .. code-block:: bash
-
-      <$1>$2</$1>
-
-#. Remove columns `lang` and `mfa` from table `be_users`
+#. Set format specific options as following
+   *  Enclose columns with `"`
+   *  Escape columns with `"`
+   *  Replace NULL by `\NULL`
 
 
 Add needed extensions

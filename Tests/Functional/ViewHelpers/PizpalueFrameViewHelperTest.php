@@ -69,7 +69,7 @@ class PizpalueFrameViewHelperTest extends FunctionalTestCase
     ];
 
     /**
-     * @var array
+     * @var non-empty-string[]
      */
     protected $testExtensionsToLoad = [
         'typo3conf/ext/bootstrap_package',

@@ -38,7 +38,7 @@ class FrameViewHelper extends AbstractViewHelper
      *
      * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerArgument('id', 'string', 'identifier', true);
@@ -206,6 +206,6 @@ class FrameViewHelper extends AbstractViewHelper
 
     protected static function getConfigurationManager(): ConfigurationManagerInterface
     {
-        return GeneralUtility::getContainer()->get(ConfigurationManager::class);
+        return GeneralUtility::makeInstance(ConfigurationManager::class);
     }
 }
