@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\BootstrapPackage\Compatibility120;
+namespace Buepro\Pizpalue\BootstrapPackage\Compatibility120\ViewHelpers;
 
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;

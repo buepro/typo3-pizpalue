@@ -1,0 +1,19 @@
+plugin.tx_bootstrappackage {
+    view {
+        templateRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Templates/
+            1 = EXT:pizpalue/Resources/Private/Templates/
+            2 = {$plugin.tx_bootstrappackage.view.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Partials/
+            1 = EXT:pizpalue/Resources/Private/Partials/
+            2 = {$plugin.tx_bootstrappackage.view.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Layouts/
+            1 = EXT:pizpalue/Resources/Private/Layouts/
+            2 = {$plugin.tx_bootstrappackage.view.layoutRootPath}
+        }
+    }
+}

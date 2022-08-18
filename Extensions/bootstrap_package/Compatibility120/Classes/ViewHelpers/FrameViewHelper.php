@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\BootstrapPackage\Compatibility120;
+namespace Buepro\Pizpalue\BootstrapPackage\Compatibility120\ViewHelpers;
 
 use BK2K\BootstrapPackage\Utility\ImageVariantsUtility;
 use TYPO3\CMS\Core\Resource\File;
@@ -184,7 +184,6 @@ class FrameViewHelper extends AbstractViewHelper
                 $partialRootPaths[] = GeneralUtility::getFileAbsFileName(rtrim($partialRootPath, '/') . '/ViewHelpers/');
             }
         }
-        $partialRootPaths[] = GeneralUtility::getFileAbsFileName('EXT:pizpalue/Resources/Private/Partials/ViewHelpers/');
         $templateRootPaths = [];
         $templateRootPaths[] = GeneralUtility::getFileAbsFileName('EXT:bootstrap_package/Resources/Private/Templates/ViewHelpers/');
         if (isset($setup['plugin.']['tx_bootstrappackage.']['view.']['templateRootPaths.'])) {
@@ -192,7 +191,6 @@ class FrameViewHelper extends AbstractViewHelper
                 $templateRootPaths[] = GeneralUtility::getFileAbsFileName(rtrim($templateRootPath, '/') . '/ViewHelpers/');
             }
         }
-        $templateRootPaths[] = GeneralUtility::getFileAbsFileName('EXT:pizpalue/Resources/Private/Templates/ViewHelpers/');
 
         /** @var StandaloneView $view */
         $view = GeneralUtility::makeInstance(StandaloneView::class);

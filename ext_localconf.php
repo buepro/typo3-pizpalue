@@ -167,6 +167,23 @@ defined('TYPO3') || die('Access denied.');
         ['Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval'] = '';
 
     /**
+     * Extension bootstrap_package
+     *
+     * Load TS for bootstrap_package 12.0 compatibility.
+     *
+     * @todo Might be removed once the bootstrap package provides it (v12.1?)
+     */
+    $bootstrapPackageVersion = \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionStringToArray(ltrim(
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getExtensionVersion('bootstrap_package'),
+        'vV'
+    ))['version_int'];
+    if ($bootstrapPackageVersion >= 12000000 && $bootstrapPackageVersion < 12001000) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+            '@import "EXT:pizpalue/Extensions/bootstrap_package/Compatibility120/Configuration/TypoScript/setup.typoscript"'
+        );
+    }
+
+    /**
      * Extension container_elements
      */
     if (

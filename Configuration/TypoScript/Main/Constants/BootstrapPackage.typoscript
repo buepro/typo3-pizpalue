@@ -11,7 +11,11 @@ plugin {
         timeline.date.format = {$pizpalue.general.dateStrftimeFormat}
     }
     tx_bootstrappackage {
-        view.templateRootPath = EXT:pizpalue/Resources/Private/Templates/
+        view {
+            layoutRootPath = EXT:pizpalue/Resources/Private/Layouts/
+            partialRootPath = EXT:pizpalue/Resources/Private/Partials/
+            templateRootPath = EXT:pizpalue/Resources/Private/Templates/
+        }
     }
 }
 

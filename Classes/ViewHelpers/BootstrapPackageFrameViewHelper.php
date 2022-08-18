@@ -11,10 +11,12 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\ViewHelpers;
 
+use Buepro\Pizpalue\BootstrapPackage\Compatibility120\ViewHelpers\FrameViewHelper;
+
 /**
  * FrameViewHelper
  */
-class BootstrapPackageFrameViewHelper extends \Buepro\Pizpalue\BootstrapPackage\Compatibility120\FrameViewHelper
+class BootstrapPackageFrameViewHelper extends FrameViewHelper
 {
     /**
      * Initialize additional arguments.
