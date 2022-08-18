@@ -20,7 +20,6 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
 class ContentElementXxlUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
-
     /**
      * @inheritDoc
      */

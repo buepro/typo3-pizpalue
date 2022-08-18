@@ -21,7 +21,6 @@ defined('TYPO3') or die('Access denied.');
  * Define aspect ratios
  */
 (static function (): void {
-
     // Content element background image
     \Buepro\Pizpalue\Utility\TcaUtility::setAllowedAspectRatiosForField('tt_content', 'background_image');
     // Content elements with images

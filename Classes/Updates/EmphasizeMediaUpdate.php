@@ -20,7 +20,6 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
 class EmphasizeMediaUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
-
     /**
      * @inheritDoc
      */

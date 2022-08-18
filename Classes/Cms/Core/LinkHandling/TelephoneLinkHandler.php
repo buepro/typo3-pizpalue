@@ -17,7 +17,6 @@ namespace Buepro\Pizpalue\Cms\Core\LinkHandling;
  */
 class TelephoneLinkHandler extends \TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler
 {
-
     /**
      * Returns the link to a telephone number as a string
      *
