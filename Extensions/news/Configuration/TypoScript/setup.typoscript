@@ -25,3 +25,11 @@ plugin.tx_news {
     view.partialRootPaths.11 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
     view.partialRootPaths.12 = EXT:pizpalue/Resources/Private/Partials/ContentElements/
 }
+
+
+#=========================================================#
+# Bugfixes
+#=========================================================#
+
+// https://github.com/georgringer/news/issues/1841
+tt_content.shortcut.variables.shortcuts.conf.tx_news_domain_model_news.settings.singleNews = CONTENT

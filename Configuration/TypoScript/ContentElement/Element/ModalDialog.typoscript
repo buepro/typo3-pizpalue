@@ -25,6 +25,8 @@ tt_content.pp_modal_dialog {
                         pageUid.field = uid
                     }
                 }
+                // Bugfix https://github.com/georgringer/news/issues/1841
+                tx_news_domain_model_news.settings.singleNews = CONTENT
             }
         }
         30 = TEXT
