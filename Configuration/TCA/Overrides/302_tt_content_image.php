@@ -64,7 +64,6 @@ defined('TYPO3') or die('Access denied.');
         ],
         'tx_pizpalue_background_image_variants' => [
             'exclude' => true,
-            'displayCond' => 'FIELD:frame_class:!=:none',
             'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background_image_variants',
             'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background_image_variants.description',
             'default' => 'pageVariants',
