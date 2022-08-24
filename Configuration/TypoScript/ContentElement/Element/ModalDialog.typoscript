@@ -43,7 +43,7 @@ tt_content.pp_modal_dialog {
 
 lib.contentElement.settings.responsiveimages.contentelements.pp_modal_dialog {
     xl {
-        default {
+        xlarge {
             breakpoint = 1200
             width = 1140
         }
@@ -66,16 +66,16 @@ lib.contentElement.settings.responsiveimages.contentelements.pp_modal_dialog {
     }
     lg < .xl
     lg {
-        default.width = 800
+        xlarge.width = 800
     }
     md < .lg
     md {
-        default.width = 500
+        xlarge.width = 500
         large.width = 500
     }
     sm < .md
     sm {
-        default.width = 300
+        xlarge.width = 300
         large.width = 300
         medium.width = 300
         small.width = 300
