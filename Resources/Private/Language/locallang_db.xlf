@@ -86,6 +86,9 @@
 			<trans-unit id="tx_pizpalue_ttc.image_variants">
 				<source>Variants</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.carousel.image_variants" resname="tx_pizpalue_ttc.carousel.image_variants">
+				<source>Carousel items background image variants</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.image_aspect_ratio">
 				<source>Aspect ratio</source>
 			</trans-unit>

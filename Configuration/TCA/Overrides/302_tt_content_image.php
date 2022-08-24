@@ -102,7 +102,7 @@ defined('TYPO3') or die('Access denied.');
     );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'tx_pizpalue_image_variants',
+        'tx_pizpalue_image_variants;LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.carousel.image_variants',
         'carousel,carousel_fullscreen,carousel_small',
         'after: pi_flexform'
     );
