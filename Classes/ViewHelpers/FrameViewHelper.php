@@ -11,23 +11,13 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\ViewHelpers;
 
-use Buepro\Pizpalue\BootstrapPackage\Compatibility120\ViewHelpers\FrameViewHelper;
+use Buepro\Pizpalue\BootstrapPackage\Compatibility120\ViewHelpers\FrameViewHelper as BootstrapPackageFrameViewHelper;
 
 /**
  * FrameViewHelper
- *
- * @deprecated
  */
-class BootstrapPackageFrameViewHelper extends FrameViewHelper
+class FrameViewHelper extends BootstrapPackageFrameViewHelper
 {
-    public function __construct()
-    {
-        trigger_error(
-            __CLASS__ . ' will be removed in TYPO3 v15. Use ' . \Buepro\Pizpalue\ViewHelpers\FrameViewHelper::class . ' instead.',
-            E_USER_DEPRECATED
-        );
-    }
-
     /**
      * Initialize additional arguments.
      *

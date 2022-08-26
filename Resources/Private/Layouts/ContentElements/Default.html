@@ -26,13 +26,13 @@
         </f:for>
     </f:if>
 
-    {pp:pizpalueFrame(data: data, pizpalueConstants: pizpalue, as: '_ppData')}
+    {pp:frameData(data: data, pizpalueConstants: pizpalue, as: '_ppData')}
 
     {pvh:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}})
         -> f:variable(name: 'settings')
         -> f:if(condition: '{_ppData.hasScrollAnimation} == 1 || {_ppData.hasCssAnimation} == 1')}
 
-    <pp:bootstrapPackageFrame
+    <pp:frame
         id="c{data.uid}"
         type="{data.CType}"
         size="default"
@@ -56,6 +56,6 @@
         <f:if condition="{data._LOCALIZED_UID} && {_ppData.optimizeLinkTargets}">
             <f:asset.script identifier="ppLinkTarget" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.linktarget.min.js" />
         </f:if>
-    </pp:bootstrapPackageFrame>
+    </pp:frame>
 </f:spaceless>
 </html>

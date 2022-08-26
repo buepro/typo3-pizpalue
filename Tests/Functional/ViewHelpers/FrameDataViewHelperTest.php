@@ -14,9 +14,9 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
-class PizpalueFrameViewHelperTest extends FunctionalTestCase
+class FrameDataViewHelperTest extends FunctionalTestCase
 {
-    private const TEMPLATE_PATH = 'EXT:pizpalue/Tests/Functional/ViewHelpers/Fixtures/PizpalueFrame.html';
+    private const TEMPLATE_PATH = 'EXT:pizpalue/Tests/Functional/ViewHelpers/Fixtures/FrameData.html';
 
     /**
      * @var bool Speed up this test case, it needs no database

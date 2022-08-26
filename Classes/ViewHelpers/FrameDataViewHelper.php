@@ -23,7 +23,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  * Compiles pizpalue frame data.
  *
  * Usage:
- *    `{pp:pizpalueFrame(data: data, pizpalueConstants: pizpalue, as: 'ppData')}`
+ *    `{pp:frameData(data: data, pizpalueConstants: pizpalue, as: 'ppData')}`
  *
  * As-data is an array containing the following fields:
  *    - classes: Array of classes
@@ -33,20 +33,10 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *    - hasCssAnimation: Boolean, indication the presence from a css animation
  *    - hasScrollAnimation: Boolean, indicating the presence from a scroll animation
  *    - optimizeLinkTargets: Boolean, passes through the constant value from `pizpalue.seo.optimizeLinkTargets`
- *
- * @deprecated since v13, will be removed in v15
  */
-class PizpalueFrameViewHelper extends AbstractViewHelper
+class FrameDataViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
-
-    public function __construct()
-    {
-        trigger_error(
-            __CLASS__ . ' will be removed in TYPO3 v15. Use ' . FrameDataViewHelper::class . ' instead.',
-            E_USER_DEPRECATED
-        );
-    }
 
     /**
      * Initialize arguments.
