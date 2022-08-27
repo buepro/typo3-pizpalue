@@ -39,6 +39,8 @@ class FrameDataViewHelperTest extends FunctionalTestCase
     protected $contentData = [
         'uid' => 1,
         'layout' => 0,
+        'frame_class' => 'default',
+        'background_image' => 0,
         'tx_pizpalue_layout_breakpoint' => '',
         'tx_pizpalue_animation' => 0,
         'tx_pizpalue_classes' => 'test-1636104021 test-1636104031',
@@ -151,6 +153,47 @@ class FrameDataViewHelperTest extends FunctionalTestCase
      * @test
      */
     public function propertiesAreFormatted(array $data, array $pizpalueConstants, array $expected): void
+    {
+        $this->testViewHelperData($data, $pizpalueConstants, $expected);
+    }
+
+    public function classesAttributeContainsBackgroundClassDataProvider(): array
+    {
+        return [
+            'no background image class on frame content' => [
+                array_merge($this->contentData, ['background_image' => 0]),
+                $this->pizpalueConstants,
+                array_merge($this->getDefaultExpected(), ['classes' => ['test-1636104021', 'test-1636104031']]),
+            ],
+            'background image class on frame content' => [
+                array_merge($this->contentData, ['background_image' => 1]),
+                $this->pizpalueConstants,
+                array_merge($this->getDefaultExpected(), ['classes' => ['pp-has-backgroundimage', 'test-1636104021', 'test-1636104031']]),
+            ],
+            'no background image class on frameless content' => [
+                array_merge($this->contentData, ['frame_class' => 'none', 'background_image' => 0,
+                    'tx_pizpalue_classes' => '', 'tx_pizpalue_style' => '', 'tx_pizpalue_attributes' => '']),
+                $this->pizpalueConstants,
+                array_merge($this->getDefaultExpected(), ['classes' => [], 'styles' => [], 'attributes' => []]),
+            ],
+            'background image class on frameless content' => [
+                array_merge($this->contentData, ['frame_class' => 'none', 'background_image' => 1,
+                    'tx_pizpalue_classes' => '', 'tx_pizpalue_style' => '', 'tx_pizpalue_attributes' => '']),
+                $this->pizpalueConstants,
+                array_merge($this->getDefaultExpected(), [
+                    'classes' => ['pp-content', 'pp-frameless-content', 'pp-type-', 'pp-has-backgroundimage',
+                        'pp-space-before-none', 'pp-space-after-none'],
+                    'styles' => [], 'attributes' => []
+                ]),
+            ],
+        ];
+    }
+
+    /**
+     * @dataProvider classesAttributeContainsBackgroundClassDataProvider
+     * @test
+     */
+    public function classesAttributeContainsBackgroundClass(array $data, array $pizpalueConstants, array $expected): void
     {
         $this->testViewHelperData($data, $pizpalueConstants, $expected);
     }

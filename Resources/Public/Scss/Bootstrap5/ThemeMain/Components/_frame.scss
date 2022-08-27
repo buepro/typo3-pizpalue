@@ -49,6 +49,8 @@
         text-decoration-style: var(--pp-frame-link-text-decoration-style);
     }
 }
-.pp-has-backgroundimage {
-    position: relative;
+.pp-frameless-content {
+    &, > .frame-backgroundimage-container ~ * {
+        position: relative;
+    }
 }

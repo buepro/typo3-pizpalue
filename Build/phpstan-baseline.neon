@@ -1,11 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Call to an undefined method Doctrine\\\\DBAL\\\\Driver\\\\ResultStatement\\:\\:fetchAllAssociative\\(\\)\\.$#"
-			count: 1
-			path: ../Classes/DataProcessing/ScrollMenuProcessor.php
-
-		-
 			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Data\\\\FilesProcessorViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
 			count: 1
 			path: ../Classes/ViewHelpers/Data/FilesProcessorViewHelper.php
@@ -19,6 +14,11 @@ parameters:
 			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Data\\\\ImageVariantsViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
 			count: 1
 			path: ../Classes/ViewHelpers/Data/ImageVariantsViewHelper.php
+
+		-
+			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\FrameDataViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			count: 1
+			path: ../Classes/ViewHelpers/FrameDataViewHelper.php
 
 		-
 			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\PizpalueFrameViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
@@ -48,5 +48,5 @@ parameters:
 		-
 			message: "#^Variable method call on TYPO3\\\\CMS\\\\Core\\\\Page\\\\AssetCollector\\.$#"
 			count: 1
-			path: ../Tests/Functional/ViewHelpers/PizpalueFrameViewHelperTest.php
+			path: ../Tests/Functional/ViewHelpers/FrameDataViewHelperTest.php
 

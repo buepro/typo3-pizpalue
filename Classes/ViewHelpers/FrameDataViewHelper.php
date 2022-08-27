@@ -119,6 +119,9 @@ class FrameDataViewHelper extends AbstractViewHelper
         if (($breakpoint = trim((string)($data['tx_pizpalue_layout_breakpoint'] ?? ''))) !== '') {
             $result['classes'][] = 'pp-layout-' . $breakpoint;
         }
+        if ((bool)($data['background_image'] ?? false)) {
+            $result['classes'][] = 'pp-has-backgroundimage';
+        }
         if (($classes = trim((string)($data['tx_pizpalue_classes'] ?? ''))) !== '') {
             $result['classes'] = array_merge(
                 $result['classes'],
@@ -132,7 +135,7 @@ class FrameDataViewHelper extends AbstractViewHelper
         $spaceBefore = trim((string)($data['space_before_class'] ?? ''));
         $spaceAfter = trim((string)($data['space_after_class'] ?? ''));
         if (
-            isset($data['frame_class']) && $data['frame_class'] === 'none' &&
+            ($data['frame_class'] ?? '') === 'none' &&
             (
                 count($result['classes']) > 0 || count($result['styles']) > 0 || count($result['attributes']) > 0 ||
                 $spaceBefore !== '' || $spaceAfter !== ''
@@ -141,7 +144,8 @@ class FrameDataViewHelper extends AbstractViewHelper
             $spaceBefore = $spaceBefore !== '' ? $spaceBefore : 'none';
             $spaceAfter = $spaceAfter !== '' ? $spaceAfter : 'none';
             $result['classes'] = array_merge(
-                ['pp-content', 'pp-type-' . $data['CType']],
+                // @todo [!!!] Drop pp-content class
+                ['pp-content', 'pp-frameless-content', 'pp-type-' . $data['CType']],
                 $result['classes'],
                 ['pp-space-before-' . $spaceBefore, 'pp-space-after-' . $spaceAfter]
             );
@@ -330,10 +334,7 @@ class FrameDataViewHelper extends AbstractViewHelper
         }
         $result['hasCssAnimation'] = true;
         // Ensure animate properties are complete (contain animate__animated)
-        if (
-            strpos($classes, 'animate__') !== false &&
-            strpos($classes, 'animate__animated') === false
-        ) {
+        if (strpos($classes, 'animate__animated') === false) {
             $result['classes'][] = 'animate__animated';
         }
         self::addAnimateCssToAssetCollector($assetCollector);
