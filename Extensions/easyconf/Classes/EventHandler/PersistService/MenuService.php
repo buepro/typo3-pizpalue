@@ -37,13 +37,16 @@ class MenuService extends AbstractService
         }
         if (
             $this->formFields['menu_main_enable_subpage_definition'] === '1' &&
-            ($this->formFields['menu_main_subpage_style'] !== 'none' || $this->formFields['menu_main_subpage_type'] !== 'none')
+            (
+                ($this->formFields['menu_main_subpage_style'] ?? 'none') !== 'none' ||
+                ($this->formFields['menu_main_subpage_type'] ?? 'none') !== 'none'
+            )
         ) {
             $this->typoScriptMapper->bufferScript(sprintf(
                 "[tree.level > %d]\r\n    page.theme.navigation {\r\n        style = %s\r\n        type = %s\r\n    }\r\n[end]",
                 $this->typoScriptService->getTreeLevel(),
-                $this->formFields['menu_main_subpage_style'],
-                $this->formFields['menu_main_subpage_type'],
+                $this->formFields['menu_main_subpage_style'] ?? 'default',
+                $this->formFields['menu_main_subpage_type'] ?? '',
             ));
         }
         return $this;
