@@ -23,7 +23,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     /**
      * Properties
      */
-    $colorMainProperties = 'primary, secondary, complementary, body-bg';
+    $colorMainProperties = 'primary, secondary, complementary, tertiary, quaternary, light, dark, body-bg';
     $colorTextProperties = 'body-color, headings-color, link-color, link-hover-color';
     $colorLightHeaderProperties = 'navbar-light-bg, navbar-light-color, navbar-light-hover-bg, navbar-light-hover-color, ' .
         'navbar-light-active-bg, navbar-light-active-color, navbar-light-disabled-bg, navbar-light-disabled-color';

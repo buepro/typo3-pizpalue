@@ -139,4 +139,13 @@ plugin.bootstrap_package.settings.scss {
 }
 
 
+#---------------------------------------------------------#
+# Not accessible by constant editor
+#---------------------------------------------------------#
 
+plugin.bootstrap_package.settings.scss {
+    tertiary = lighten(desaturate(adjust-hue($primary, 30), 40%), 20%)
+    quaternary = lighten(desaturate(adjust-hue($primary, 45), 40%), 20%)
+    light = $gray-200
+    dark = $gray-800
+}

@@ -13,6 +13,18 @@
 			<trans-unit id="color_complementary" resname="color_complementary">
 				<source>Complementary</source>
 			</trans-unit>
+			<trans-unit id="color_tertiary" resname="color_tertiary">
+				<source>Tertiary</source>
+			</trans-unit>
+			<trans-unit id="color_quaternary" resname="color_quaternary">
+				<source>Quaternary</source>
+			</trans-unit>
+			<trans-unit id="color_light" resname="color_light">
+				<source>Light</source>
+			</trans-unit>
+			<trans-unit id="color_dark" resname="color_dark">
+				<source>Dark</source>
+			</trans-unit>
 			<trans-unit id="color_body-bg" resname="color_body-bg">
 				<source>Website background</source>
 			</trans-unit>
