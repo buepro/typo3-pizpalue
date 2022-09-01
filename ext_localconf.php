@@ -39,33 +39,6 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * TS: Register custom EXT:form configurations
-     */
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
-        module.tx_form {
-            settings {
-                yamlConfigurations {
-                    200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
-                    260 = EXT:pizpalue/Configuration/Form/MailToSystem/BaseSetup.yaml
-                    262 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEditorSetup.yaml
-                    264 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEngineSetup.yaml
-                }
-            }
-        }
-        plugin.tx_form {
-            settings {
-                yamlConfigurations {
-                    200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
-                    260 = EXT:pizpalue/Configuration/Form/MailToSystem/BaseSetup.yaml
-                    264 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEngineSetup.yaml
-                }
-            }
-        }
-    '));
-    }
-
-    /**
      * PageTS
      */
     if (1) {
@@ -167,6 +140,63 @@ defined('TYPO3') || die('Access denied.');
         ['Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval'] = '';
 
     /**
+     * Upgrade wizards
+     */
+    $upgradeSteps = ['ContentElementXxl', 'ContentElementClasses', 'ContentElementAttributes', 'EmphasizeMedia'];
+    foreach ($upgradeSteps as $upgradeStep) {
+        $className = 'Buepro\\Pizpalue\\Updates\\' . $upgradeStep . 'Update';
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][$className] = $className;
+    }
+})();
+
+/**
+ * Configure system extensions
+ */
+(static function () {
+    /**
+     * EXT:form
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
+        module.tx_form {
+            settings {
+                yamlConfigurations {
+                    200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
+                    260 = EXT:pizpalue/Configuration/Form/MailToSystem/BaseSetup.yaml
+                    262 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEditorSetup.yaml
+                    264 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEngineSetup.yaml
+                }
+            }
+        }
+        plugin.tx_form {
+            settings {
+                yamlConfigurations {
+                    200 = EXT:pizpalue/Configuration/Form/CustomFormSetup.yaml
+                    260 = EXT:pizpalue/Configuration/Form/MailToSystem/BaseSetup.yaml
+                    264 = EXT:pizpalue/Configuration/Form/MailToSystem/FormEngineSetup.yaml
+                }
+            }
+        }
+    '));
+    }
+
+    /**
+     * EXT:backend
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('backend')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+            '@import "EXT:pizpalue/Sysext/backend/Configuration/TypoScript/setup.typoscript"');
+    }
+})();
+
+/**
+ * Configure 3rd party extensions
+ */
+(static function () {
+    $pizpalueConfiguration = (\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class))->get('pizpalue');
+
+    /**
      * Extension bootstrap_package
      *
      * Load TS for bootstrap_package 12.0 compatibility.
@@ -204,7 +234,7 @@ defined('TYPO3') || die('Access denied.');
      * Extension news
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
-        if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
+        if ((bool)$pizpalueConfiguration['enableDefaultPageTSconfig']) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
                 "@import 'EXT:pizpalue/Extensions/news/Configuration/TsConfig/Page.tsconfig'"
             );
@@ -215,7 +245,7 @@ defined('TYPO3') || die('Access denied.');
      * Extension eventnews
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('eventnews')) {
-        if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
+        if ((bool)$pizpalueConfiguration['enableDefaultPageTSconfig']) {
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
                 "@import 'EXT:pizpalue/Extensions/eventnews/Configuration/TsConfig/Page.tsconfig'"
             );
@@ -232,14 +262,5 @@ defined('TYPO3') || die('Access denied.');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
             "@import 'EXT:pizpalue/Extensions/easyconf/Configuration/TypoScript/setup.typoscript'"
         );
-    }
-
-    /**
-     * Upgrade wizards
-     */
-    $upgradeSteps = ['ContentElementXxl', 'ContentElementClasses', 'ContentElementAttributes', 'EmphasizeMedia'];
-    foreach ($upgradeSteps as $upgradeStep) {
-        $className = 'Buepro\\Pizpalue\\Updates\\' . $upgradeStep . 'Update';
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][$className] = $className;
     }
 })();

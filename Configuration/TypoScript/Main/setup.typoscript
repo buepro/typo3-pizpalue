@@ -1,8 +1,11 @@
+#=========================================================#
+# Load dependencies
+#=========================================================#
+
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Lib.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/AppIcon.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/RTE.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Constants.typoscript'
-@import 'EXT:pizpalue/Configuration/TypoScript/Main/Setup/Backend.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/ContentElement/Setup.typoscript'
 @import 'EXT:pizpalue/Configuration/TypoScript/BootstrapPackage/*.typoscript'
 [{$pizpalue.menu.fast.enable} == 1]

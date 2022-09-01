@@ -15,8 +15,8 @@ defined('TYPO3') or die('Access denied.');
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
         foreach ($GLOBALS['TCA']['tt_content']['containerConfiguration'] as &$config) {
-            if (!isset(array_flip($config['gridPartialPaths'])['EXT:pizpalue/Resources/Private/Partials/Backend'])) {
-                $config['gridPartialPaths'][] = 'EXT:pizpalue/Resources/Private/Partials/Backend';
+            if (!isset(array_flip($config['gridPartialPaths'])['EXT:pizpalue/Sysext/backend/Resources/Private/Partials'])) {
+                $config['gridPartialPaths'][] = 'EXT:pizpalue/Sysext/backend/Resources/Private/Partials';
             }
         }
         unset($config);
