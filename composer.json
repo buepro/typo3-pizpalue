@@ -120,7 +120,8 @@
 		],
 		"ci:composer:normalize": "@composer normalize --dry-run",
 		"ci:php:cs": [
-			"php-cs-fixer --diff -v --dry-run fix"
+			"php-cs-fixer --diff -v --dry-run fix",
+			"php-cs-fixer --config=.php-cs-fixer.dist-strict.php --diff -v --dry-run fix"
 		],
 		"ci:php:lint": [
 			"phplint"
@@ -162,7 +163,8 @@
 		],
 		"fix:composer:normalize": "@composer normalize",
 		"fix:php:cs": [
-			"php-cs-fixer --diff -v fix"
+			"php-cs-fixer --diff -v fix",
+			"php-cs-fixer --config=.php-cs-fixer.dist-strict.php --diff -v fix"
 		],
 		"fix:php:stan": [
 			"phpstan analyze --level max --configuration Build/phpstan.neon --generate-baseline Build/phpstan-baseline.neon"
