@@ -9,98 +9,45 @@
 
 defined('TYPO3') || die('Access denied.');
 
+/**
+ * PageTS
+ */
 (static function () {
-    /**
-     * Make extension configurations accessible
-     */
-    if (1) {
-        $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-            \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
-        );
-        $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
-        $pizpalueConfiguration = $extensionConfiguration->get('pizpalue');
-    }
-
-    /**
-     * Register icons
-     */
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-    $iconRegistry->registerIcon(
-        'systeminformation-pizpalue',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:pizpalue/Resources/Public/Icons/SystemInformation/pizpalue.svg']
+    // Initialization
+    $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
     );
-    foreach (['frame', 'no-frame'] as $icon) {
-        $iconRegistry->registerIcon(
-            'pizpalue-' . $icon,
-            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-            ['source' => sprintf('EXT:pizpalue/Resources/Public/Icons/PageLayout/%s.svg', $icon)]
+    $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
+    $pizpalueConfiguration = $extensionConfiguration->get('pizpalue');
+
+    // Add BackendLayouts for the BackendLayout DataProvider
+    if (!(bool) $bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
+        // Disable some bootstrap_package backend layouts
+        if (!(bool) $pizpalueConfiguration['enableBootstrapPackageBackendLayouts']) {
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/DisableBackendLayouts.tsconfig'"
+            );
+        }
+        // Pizpalue backend layouts
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'"
         );
     }
 
-    /**
-     * PageTS
-     */
-    if (1) {
-        // Add BackendLayouts for the BackendLayout DataProvider
-        if (!(bool) $bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
-            // Disable some bootstrap_package backend layouts
-            if (!(bool) $pizpalueConfiguration['enableBootstrapPackageBackendLayouts']) {
-                \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                    "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/DisableBackendLayouts.tsconfig'"
-                );
-            }
-            // Pizpalue backend layouts
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'"
-            );
-        }
-        // Remove bootstrap package container elements
-        if (!(bool) $pizpalueConfiguration['enableBootstrapPackageContainerElements'] &&
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements')
-        ) {
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/RemoveBootstrapPackageContainerElements.tsconfig'"
-            );
-        }
-        // Default PageTS for TCEFORM
-        if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
-            );
-        }
+    // Remove bootstrap package container elements
+    if (!(bool) $pizpalueConfiguration['enableBootstrapPackageContainerElements'] &&
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements')
+    ) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/RemoveBootstrapPackageContainerElements.tsconfig'"
+        );
     }
 
-    /**
-     * RTE: Add default configuration for pizpalue
-     */
-    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = pizpalue');
-
-    /**
-     * Register "pp" as global fluid namespace
-     */
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['pp'][] = 'Buepro\\Pizpalue\\ViewHelpers';
-
-    /**
-     * Hook: DataHandler used to set image variants for content elements
-     */
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']
-        ['pizpalue'] = \Buepro\Pizpalue\Hook\DataHandlerHook::class;
-
-    /**
-     * Form engine user functions
-     */
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tce']['formevals']
-        ['Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval'] = '';
-
-    /**
-     * Upgrade wizards
-     */
-    $upgradeSteps = ['ContentElementXxl', 'ContentElementClasses', 'ContentElementAttributes', 'EmphasizeMedia'];
-    foreach ($upgradeSteps as $upgradeStep) {
-        $className = 'Buepro\\Pizpalue\\Updates\\' . $upgradeStep . 'Update';
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][$className] = $className;
+    // Default PageTS for TCEFORM
+    if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
+        );
     }
 })();
 
@@ -151,6 +98,9 @@ defined('TYPO3') || die('Access denied.');
  * Configure system extensions
  */
 (static function () {
+    // Initialization
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+
     /**
      * EXT:core
      * Register TelephoneLinkHandler
@@ -165,6 +115,13 @@ defined('TYPO3') || die('Access denied.');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
             '@import "EXT:pizpalue/Sysext/backend/Configuration/TypoScript/setup.typoscript"'
         );
+        foreach (['frame', 'no-frame'] as $icon) {
+            $iconRegistry->registerIcon(
+                'pizpalue-' . $icon,
+                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+                ['source' => sprintf('EXT:pizpalue/Sysext/backend/Resources/Public/Icons/%s.svg', $icon)]
+            );
+        }
     }
 
     /**
@@ -270,4 +227,51 @@ defined('TYPO3') || die('Access denied.');
             "@import 'EXT:pizpalue/Extensions/easyconf/Configuration/TypoScript/setup.typoscript'"
         );
     }
+})();
+
+/**
+ * Various
+ */
+(static function () {
+    /**
+     * Register icons (used in VersionToolBarItem)
+     */
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry->registerIcon(
+        'systeminformation-pizpalue',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => 'EXT:pizpalue/Resources/Public/Icons/SystemInformation/pizpalue.svg']
+    );
+
+    /**
+     * RTE: Add default configuration for pizpalue
+     */
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = pizpalue');
+
+    /**
+     * Hook: DataHandler used to set image variants for content elements
+     */
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']
+    ['pizpalue'] = \Buepro\Pizpalue\Hook\DataHandlerHook::class;
+
+    /**
+     * Form engine user functions
+     */
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tce']['formevals']
+    ['Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval'] = '';
+
+    /**
+     * Upgrade wizards
+     */
+    $upgradeSteps = ['ContentElementXxl', 'ContentElementClasses', 'ContentElementAttributes', 'EmphasizeMedia'];
+    foreach ($upgradeSteps as $upgradeStep) {
+        $className = 'Buepro\\Pizpalue\\Updates\\' . $upgradeStep . 'Update';
+        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][$className] = $className;
+    }
+
+    /**
+     * Register "pp" as global fluid namespace
+     */
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['pp'][] = 'Buepro\\Pizpalue\\ViewHelpers';
 })();
