@@ -68,7 +68,7 @@ class PostMenuProcessor implements DataProcessorInterface, SingletonInterface
         ) {
             $processedData['shortcutTargetIsCurrent'] = 1;
         }
-        $processedData['ppActive'] = (int)($processedData['isInRootLine'] || (bool)$processedData['shortcutTargetIsCurrent']);
+        $processedData['ppActive'] = (int)((bool)$processedData['isInRootLine'] || (bool)$processedData['shortcutTargetIsCurrent']);
         $activeProperty = $processorConfiguration['activeProperty'] ?? 'ppActive';
         $processedData['active'] = (int)($processedData[$activeProperty] ?? $processedData['ppActive']);
         return $processedData;
