@@ -81,20 +81,20 @@ module.exports = function(grunt) {
                 dest: '<%= paths.js %>Dist/pizpalue.fastmenu.min.js'
             },
             picoverlayBar: {
-                src: '<%= paths.js %>Src/pizpalue.picoverlay.bar.js',
-                dest: '<%= paths.js %>Dist/pizpalue.picoverlay.bar.min.js'
+                src: '<%= paths.js %>Src/ContentElement/picoverlay.bar.js',
+                dest: '<%= paths.js %>Dist/ContentElement/picoverlay.bar.min.js'
             },
             picoverlayInfo: {
-                src: '<%= paths.js %>Src/pizpalue.picoverlay.info.js',
-                dest: '<%= paths.js %>Dist/pizpalue.picoverlay.info.min.js'
+                src: '<%= paths.js %>Src/ContentElement/picoverlay.info.js',
+                dest: '<%= paths.js %>Dist/ContentElement/picoverlay.info.min.js'
             },
             linktarget: {
                 src: '<%= paths.js %>Src/pizpalue.linktarget.js',
                 dest: '<%= paths.js %>Dist/pizpalue.linktarget.min.js'
             },
             listCategorizedContent: {
-                src: '<%= paths.js %>Src/pizpalue.list-categorized-content.js',
-                dest: '<%= paths.js %>Dist/pizpalue.list-categorized-content.min.js'
+                src: '<%= paths.js %>Src/ContentElement/list-categorized-content.js',
+                dest: '<%= paths.js %>Dist/ContentElement/list-categorized-content.min.js'
             },
             scrollNavigation: {
                 src: '<%= paths.js %>Src/pizpalue.scroll-navigation.js',

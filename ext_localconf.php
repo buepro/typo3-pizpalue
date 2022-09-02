@@ -83,31 +83,6 @@ defined('TYPO3') || die('Access denied.');
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['pp'][] = 'Buepro\\Pizpalue\\ViewHelpers';
 
     /**
-     * Additional content elements
-     */
-    if (1) {
-        /**
-         * Register icons
-         */
-        $icons = ['modal-dialog', 'list-categorized-content', 'schema', 'picoverlay', 'emphasize-media', 'card'];
-        foreach ($icons as $icon) {
-            $iconRegistry->registerIcon(
-                'content-pizpalue-' . $icon,
-                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-                ['source' => 'EXT:pizpalue/Resources/Public/Icons/ContentElements/' . $icon . '.svg']
-            );
-        }
-        /**
-         * Add page tsconfig
-         */
-        if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig'"
-            );
-        }
-    }
-
-    /**
      * Hook: DataHandler used to set image variants for content elements
      */
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']
@@ -126,6 +101,34 @@ defined('TYPO3') || die('Access denied.');
     foreach ($upgradeSteps as $upgradeStep) {
         $className = 'Buepro\\Pizpalue\\Updates\\' . $upgradeStep . 'Update';
         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][$className] = $className;
+    }
+})();
+
+/**
+ * Additional content elements
+ */
+(static function () {
+    // Initialization
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $pizpalueConfiguration = (\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+    ))->get('pizpalue');
+
+    // Register icons
+    $icons = ['modal-dialog', 'list-categorized-content', 'schema', 'picoverlay', 'emphasize-media', 'card'];
+    foreach ($icons as $icon) {
+        $iconRegistry->registerIcon(
+            'content-pizpalue-' . $icon,
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:pizpalue/Resources/Public/Icons/ContentElements/' . $icon . '.svg']
+        );
+    }
+
+    // Add page tsconfig
+    if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig'"
+        );
     }
 })();
 
