@@ -9,7 +9,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\Cms\Core\LinkHandling;
+namespace Buepro\Pizpalue\Sysext\Core\LinkHandling;
 
 use TYPO3\CMS\Core\LinkHandling\LinkHandlingInterface;
 

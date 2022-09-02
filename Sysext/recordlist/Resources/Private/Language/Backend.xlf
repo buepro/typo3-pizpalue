@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2022-09-02T09:11:39Z"
+		  product-name="pizpalue">
+		<header/>
+		<body>
+			<trans-unit id="linkhandler-popover-registerTitle">
+				<source>Popover</source>
+			</trans-unit>
+			<trans-unit id="linkhandler-popover-content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="linkhandler-popover-setPopover">
+				<source>Set popover</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

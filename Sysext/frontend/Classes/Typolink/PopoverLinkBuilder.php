@@ -9,7 +9,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\Cms\Frontend\Typolink;
+namespace Buepro\Pizpalue\Sysext\Frontend\Typolink;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
@@ -20,14 +20,14 @@ use TYPO3\CMS\Frontend\Typolink\AbstractTypolinkBuilder;
  *
  * Hint: Is used from FE.
  *
- * @see \Buepro\Pizpalue\Cms\Recordlist\LinkHandler\PopoverLinkHandler
+ * @see \Buepro\Pizpalue\Sysext\Recordlist\LinkHandler\PopoverLinkHandler
  */
 class PopoverLinkBuilder extends AbstractTypolinkBuilder
 {
     /**
      * Modifies the content from the href attribute.
      *
-     * @see \Buepro\Pizpalue\Cms\Recordlist\LinkHandler\PopoverLinkHandler
+     * @see \Buepro\Pizpalue\Sysext\Recordlist\LinkHandler\PopoverLinkHandler
      * @inheritdoc
      */
     public function build(array &$linkDetails, string $linkText, string $target, array $conf): array

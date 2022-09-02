@@ -1,7 +1,7 @@
 /**
  * PopoverLinkBrowser
  *
- * @see \Buepro\Pizpalue\Cms\Recordlist\LinkHandler\PopoverLinkHandler
+ * @see \Buepro\Pizpalue\Sysext\Recordlist\LinkHandler\PopoverLinkHandler
  */
 define(['jquery', 'TYPO3/CMS/Recordlist/LinkBrowser'], function($, LinkBrowser) {
     var ppPopover = {};

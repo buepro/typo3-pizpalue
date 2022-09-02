@@ -8,7 +8,7 @@ declare(strict_types=1);
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\Cms\Recordlist\LinkHandler;
+namespace Buepro\Pizpalue\Sysext\Recordlist\LinkHandler;
 
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Imaging\IconFactory;
@@ -29,6 +29,9 @@ use TYPO3Fluid\Fluid\View\ViewInterface;
  *
  * `href` is used to create the actual content from the href tag. In case it contains `void` the uri becomes
  * `javascript:void(0);` otherwise its content is obtained by stdWrap.typolink.
+ *
+ * ATTENTION: The needed javascript (ReqyureJS module) could not be loaded from `Sysext/recordlist/Resources/Public/
+ * JavaScript/Src`. It remains at `Resources/Public/JavaScript/Src/Sysext/Recordlist/`.
  *
  * Hint: Is used in BE when opening the link browser.
  *
@@ -128,7 +131,7 @@ class PopoverLinkHandler implements LinkHandlerInterface
         /** @phpstan-ignore-next-line */
         $view->setTemplateRootPaths(array_merge(
             $view->getTemplateRootPaths(), /** @phpstan-ignore-line */
-            [GeneralUtility::getFileAbsFileName('EXT:pizpalue/Resources/Private/Templates/Cms/LinkBrowser')]
+            [GeneralUtility::getFileAbsFileName('EXT:pizpalue/Sysext/recordlist/Resources/Private/Templates/LinkBrowser')]
         ));
         /** @phpstan-ignore-next-line */
         $view->setTemplate('PpPopover');
@@ -158,7 +161,9 @@ class PopoverLinkHandler implements LinkHandlerInterface
     {
         $view = GeneralUtility::makeInstance(StandaloneView::class);
         $view->getRequest()->setControllerExtensionName('pizpalue');
-        $view->setTemplateRootPaths([GeneralUtility::getFileAbsFileName('EXT:pizpalue/Resources/Private/Templates/Cms/LinkBrowserStandalone')]);
+        $view->setTemplateRootPaths([GeneralUtility::getFileAbsFileName(
+            'EXT:pizpalue/Sysext/recordlist/Resources/Private/Templates/LinkBrowserStandalone'
+        )]);
         $view->setTemplate('PpPopover');
         $this->assignVariablesToView($view);
         /** @extensionScannerIgnoreLine */
@@ -167,7 +172,10 @@ class PopoverLinkHandler implements LinkHandlerInterface
 
     public function render(ServerRequestInterface $request)
     {
-        $this->pageRenderer->loadRequireJsModule('TYPO3/CMS/Pizpalue/Src/PopoverLinkHandler');
+        $this->pageRenderer->addRequireJsConfiguration(['paths' => [
+            'Buepro/Pizpalue/Sysext/Recordlist' =>
+                '/typo3conf/ext/pizpalue/Sysext/recordlist/Resources/Public/JavaScript']]);
+        $this->pageRenderer->loadRequireJsModule('Buepro/Pizpalue/Sysext/Recordlist/PopoverLinkHandler');
         if (!isset($this->view)) {
             /** @phpstan-ignore-next-line */
             return $this->renderStandalone($request);

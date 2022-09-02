@@ -63,11 +63,8 @@ defined('TYPO3') || die('Access denied.');
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/RemoveBootstrapPackageContainerElements.tsconfig'"
             );
         }
-        // Default PageTS for TCEMAIN, TCEFORM
+        // Default PageTS for TCEFORM
         if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEMAIN.tsconfig'"
-            );
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
                 "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
             );
@@ -75,27 +72,10 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * RTE
+     * RTE: Add default configuration for pizpalue
      */
-    if (1) {
-        /**
-         * Add default RTE configuration for pizpalue
-         */
-        $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = pizpalue');
-
-        /**
-         * Register TelephoneLinkHandler
-         */
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['telephone'] = \Buepro\Pizpalue\Cms\Core\LinkHandling\TelephoneLinkHandler::class;
-
-        /**
-         * Register PopoverLinkHandler, PopoverLinkBuilder, PopoverLinkHook
-         */
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['pppopover'] = \Buepro\Pizpalue\Cms\Core\LinkHandling\PopoverLinkHandler::class;
-        $GLOBALS['TYPO3_CONF_VARS']['FE']['typolinkBuilder']['pppopover'] = \Buepro\Pizpalue\Cms\Frontend\Typolink\PopoverLinkBuilder::class;
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['typoLink_PostProc']['pppopover'] = \Buepro\Pizpalue\Hook\PopoverTypolinkHook::class . '->postProcess';
-    }
+    $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = pizpalue');
 
     /**
      * Register "pp" as global fluid namespace
@@ -150,9 +130,40 @@ defined('TYPO3') || die('Access denied.');
 })();
 
 /**
+ * Bootstrap popover implementation
+ */
+(static function () {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+        "@import 'EXT:pizpalue/Sysext/recordlist/Configuration/TsConfig/Page/TCEMAIN.tsconfig'"
+    );
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['pppopover'] =
+        \Buepro\Pizpalue\Sysext\Core\LinkHandling\PopoverLinkHandler::class;
+    $GLOBALS['TYPO3_CONF_VARS']['FE']['typolinkBuilder']['pppopover'] =
+        \Buepro\Pizpalue\Sysext\Frontend\Typolink\PopoverLinkBuilder::class;
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['typoLink_PostProc']['pppopover'] =
+        \Buepro\Pizpalue\Sysext\Frontend\Hook\PopoverTypolinkHook::class . '->postProcess';
+})();
+
+/**
  * Configure system extensions
  */
 (static function () {
+    /**
+     * EXT:core
+     * Register TelephoneLinkHandler
+     */
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['telephone'] =
+        \Buepro\Pizpalue\Sysext\Core\LinkHandling\TelephoneLinkHandler::class;
+
+    /**
+     * EXT:backend
+     */
+    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('backend')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
+            '@import "EXT:pizpalue/Sysext/backend/Configuration/TypoScript/setup.typoscript"'
+        );
+    }
+
     /**
      * EXT:form
      */
@@ -179,14 +190,6 @@ defined('TYPO3') || die('Access denied.');
         }
     '));
     }
-
-    /**
-     * EXT:backend
-     */
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('backend')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
-            '@import "EXT:pizpalue/Sysext/backend/Configuration/TypoScript/setup.typoscript"');
-    }
 })();
 
 /**
@@ -194,10 +197,11 @@ defined('TYPO3') || die('Access denied.');
  */
 (static function () {
     $pizpalueConfiguration = (\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class))->get('pizpalue');
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+    ))->get('pizpalue');
 
     /**
-     * Extension bootstrap_package
+     * EXT:bootstrap_package
      *
      * Load TS for bootstrap_package 12.0 compatibility.
      *
@@ -214,7 +218,7 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * Extension container_elements
+     * EXT:container_elements
      */
     if (
         (bool)($pizpalueConfiguration['autoLoadStaticTSForExtensions'] ?? true) &&
@@ -231,7 +235,7 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * Extension news
+     * EXT:news
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
         if ((bool)$pizpalueConfiguration['enableDefaultPageTSconfig']) {
@@ -242,7 +246,7 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * Extension eventnews
+     * EXT:eventnews
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('eventnews')) {
         if ((bool)$pizpalueConfiguration['enableDefaultPageTSconfig']) {
@@ -253,7 +257,7 @@ defined('TYPO3') || die('Access denied.');
     }
 
     /**
-     * Extension easyconf
+     * EXT:easyconf
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(
