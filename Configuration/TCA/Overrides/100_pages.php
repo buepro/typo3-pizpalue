@@ -16,7 +16,7 @@ defined('TYPO3') or die('Access denied.');
     $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
     );
-    $pizpalueConfiguration = $extensionConfiguration->get('pizpalue');
+    $pizpalueConfiguration = (array)$extensionConfiguration->get('pizpalue');
 
     if (!(bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(

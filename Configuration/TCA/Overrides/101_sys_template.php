@@ -9,18 +9,23 @@
 
 defined('TYPO3') or die('Access denied.');
 
-(static function ($_EXTKEY): void {
-    // Static templates
+(static function (): void {
+    $pizpalueConfiguration = (array)(\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+    ))->get('pizpalue');
+
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $_EXTKEY,
+        'pizpalue',
         'Configuration/TypoScript/Main',
         'Pizpalue - Main'
     );
+
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $_EXTKEY,
+        'pizpalue',
         'Configuration/TypoScript/Bootstrap4',
         'Pizpalue - Bootstrap 4.x'
     );
+
     if (
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements') &&
         !(bool)($pizpalueConfiguration['autoLoadStaticTSForExtensions'] ?? true) &&
@@ -28,94 +33,75 @@ defined('TYPO3') or die('Access denied.');
             === 0 || $containerElementsVersion > 3001001)
     ) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/container_elements/Configuration/TypoScript',
             'Pizpalue - container_elements'
         );
     }
+
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/news/Configuration/TypoScript',
             'Pizpalue - news'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/news/Configuration/TypoScript/RSS',
             'Pizpalue - news RSS feed'
         );
     }
+
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('eventnews')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/eventnews/Configuration/TypoScript',
             'Pizpalue - eventnews'
         );
     }
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('slickcarousel')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
-            'Extensions/slickcarousel/Configuration/TypoScript',
-            'Pizpalue - slickcarousel'
-        );
-    }
+
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('newsslider')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/newsslider/Configuration/TypoScript',
             'Pizpalue - newsslider 2.0.1'
         );
     }
+
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('femanager')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/femanager/Configuration/TypoScript',
             'Pizpalue - femanager 2.2.0'
         );
     }
+
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('tt_address')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/tt_address/Configuration/TypoScript',
             'Pizpalue - tt_address'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/tt_address/DisplayMode/GoogleMap/Configuration/TypoScript',
             'Pizpalue - tt_address Google map'
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
+            'pizpalue',
             'Extensions/tt_address/DisplayMode/Teaser/Configuration/TypoScript',
             'Pizpalue - tt_address Teaser'
         );
     }
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('felogin')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
-            'Extensions/felogin/Configuration/TypoScript',
-            'Pizpalue - felogin'
-        );
+
+    $extensionKeys = ['felogin', 'bookmark_pages', 'indexed_search', 'sr_language_menu', 'slickcarousel'];
+    foreach ($extensionKeys as $extensionKey) {
+        if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded($extensionKey)) {
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+                'pizpalue',
+                sprintf('Extensions/%s/Configuration/TypoScript', $extensionKey),
+                sprintf('Pizpalue - %s', $extensionKey)
+            );
+        }
     }
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('bookmark_pages')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
-            'Extensions/bookmark_pages/Configuration/TypoScript',
-            'Pizpalue - bookmark_pages'
-        );
-    }
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('indexed_search')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
-            'Extensions/indexed_search/Configuration/TypoScript',
-            'Pizpalue - indexed_search'
-        );
-    }
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('sr_language_menu')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
-            'Extensions/sr_language_menu/Configuration/TypoScript',
-            'Pizpalue - sr_language_menu'
-        );
-    }
-})('pizpalue');
+})();

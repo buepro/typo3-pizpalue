@@ -19,6 +19,7 @@ parameters:
 
 	paths:
 	- %currentWorkingDirectory%/Classes/
+	- %currentWorkingDirectory%/Configuration/TCA/
 	- %currentWorkingDirectory%/Sysext/core/Classes/
 	- %currentWorkingDirectory%/Sysext/frontend/Classes/
 	- %currentWorkingDirectory%/Sysext/recordlist/Classes/
