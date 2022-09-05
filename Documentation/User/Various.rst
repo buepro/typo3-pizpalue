@@ -93,9 +93,6 @@ pp-bg-secondary               Applies the secondary color to the background
 pp-bg-complementary           Applies the complementary color to the background
 pp-bg-light                   Applies the light color to the background
 pp-bg-dark                    Applies the dark color to the background
-pp-bg-centercover             Centers the background and sizes it to cover the area.
-pp-bg-fixed                   Fixes the background. The result is a parallax effect. Due to mobile devices
-                              not supporting this feature fully it is generally disabled on mobile devices.
 ============================= =============================================================================
 
 

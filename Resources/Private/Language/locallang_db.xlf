@@ -137,12 +137,6 @@
 				<source>Background with dark color</source>
 			</trans-unit>
 
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-centercover">
-				<source>Background centered, cover</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-fixed">
-				<source>Background fix</source>
-			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-image-overlay">
 				<source>Image with overlay heading</source>
 			</trans-unit>

@@ -15,7 +15,6 @@ defined('TYPO3') or die('Access denied.');
 (static function (): void {
     // Defines available classes for dropdown selector
     $classesItemsList = 'pp-bg-primary,pp-bg-secondary,pp-bg-complementary,pp-bg-light,pp-bg-dark,'
-        . 'pp-bg-centercover,pp-bg-fixed,'
         . 'pp-card-primary,pp-card-secondary,pp-card-complementary,pp-card-light,pp-card-dark,'
         . 'pp-inner-margin,pp-inner-padding,pp-inner-bgwhite70,pp-inner-bggrey70,pp-inner-bgblack70,'
         . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,pp-gallery-item-shadow,'
