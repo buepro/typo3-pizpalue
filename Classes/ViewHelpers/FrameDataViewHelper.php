@@ -240,20 +240,6 @@ class FrameDataViewHelper extends AbstractViewHelper
         ));
     }
 
-    /**
-     * @deprecated since v12, will be removed in v14
-     */
-    private static function substituteJoshDataDelayAttribute(array $attributes): array
-    {
-        if (str_contains(($attributesString = implode(':pp:', $attributes)), 'data-josh-delay')) {
-            $attributes = explode(
-                ':pp:',
-                str_replace('data-josh-delay', 'data-josh-anim-delay', $attributesString)
-            );
-        }
-        return $attributes;
-    }
-
     protected static function addJoshAssets(
         AssetCollector $assetCollector,
         array $data,
@@ -264,8 +250,6 @@ class FrameDataViewHelper extends AbstractViewHelper
         if (strpos($attributes, 'data-josh') === false) {
             return;
         }
-        // @phpstan-ignore-next-line
-        $result['attributes'] = self::substituteJoshDataDelayAttribute($result['attributes']);
         $result['hasScrollAnimation'] = true;
         $result['classes'][] = 'josh-js';
         self::addAnimateCssToAssetCollector($assetCollector);

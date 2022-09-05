@@ -99,7 +99,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
         $this->assetCollector = GeneralUtility::makeInstance(AssetCollector::class);
     }
 
-    private function testViewHelperData(array $data, array $pizpalueConstants, array $expected): void
+    private function assertViewHelperRendering(array $data, array $pizpalueConstants, array $expected): void
     {
         $this->view->assignMultiple([
             'data' => $data,
@@ -154,7 +154,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
      */
     public function propertiesAreFormatted(array $data, array $pizpalueConstants, array $expected): void
     {
-        $this->testViewHelperData($data, $pizpalueConstants, $expected);
+        $this->assertViewHelperRendering($data, $pizpalueConstants, $expected);
     }
 
     public function classesAttributeContainsBackgroundClassDataProvider(): array
@@ -195,7 +195,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
      */
     public function classesAttributeContainsBackgroundClass(array $data, array $pizpalueConstants, array $expected): void
     {
-        $this->testViewHelperData($data, $pizpalueConstants, $expected);
+        $this->assertViewHelperRendering($data, $pizpalueConstants, $expected);
     }
 
     /**
@@ -207,7 +207,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
         $data['tx_pizpalue_style'] = '#self .frame-inner { border: green 1px solid; }';
         $expected = $this->getDefaultExpected();
         $expected['styles'] = [];
-        $this->testViewHelperData($data, $this->pizpalueConstants, $expected);
+        $this->assertViewHelperRendering($data, $this->pizpalueConstants, $expected);
         self::assertArrayHasKey(
             'ppCe' . $data['uid'],
             $this->assetCollector->getInlineStyleSheets()
@@ -265,27 +265,10 @@ class FrameDataViewHelperTest extends FunctionalTestCase
         array $expectedData,
         array $expectedAnimationAssets
     ): void {
-        $this->testViewHelperData($data, $pizpalueConstants, $expectedData);
+        $this->assertViewHelperRendering($data, $pizpalueConstants, $expectedData);
         foreach ($expectedAnimationAssets as $animationAsset) {
             $assets = $this->assetCollector->{'get' . $animationAsset['type'] . 's'}();
             self::assertArrayHasKey($animationAsset['id'], $assets);
         }
-    }
-
-    /**
-     * @deprecated will be removed in 13.0
-     */
-    public function testPropertySubstitutionInJoshAnimation(): void
-    {
-        $data = $this->contentData;
-        $data['tx_pizpalue_animation'] = 1;
-        $data['tx_pizpalue_attributes'] .= ' data-josh-delay="1s"';
-        $expected = array_merge_recursive($this->getDefaultExpected(), [
-            'styles' => ['border: red'],
-            'classes' => ['test-animation-1636113235', 'josh-js'],
-            'attributes' => [ 'data-josh-anim-delay="1s"', 'data-josh-anim-name="fadeInBottomLeft"'],
-        ]);
-        $expected['hasScrollAnimation'] = true;
-        $this->testViewHelperData($data, $this->pizpalueConstants, $expected);
     }
 }
