@@ -91,9 +91,8 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 
 //
 // Content padding
-// Class .pp-ce-overlaycard is deprecated since 30.6.21
 // --------------------------------------------------
-.pp-tile:not(.pp-type-image):not(.pp-type-media):not(.pp-type-external_media):not(.pp-ce-overlaycard):not(.pp-type-pp_picoverlay) {
+.pp-tile:not(.pp-type-image):not(.pp-type-media):not(.pp-type-external_media):not(.pp-type-pp_picoverlay) {
     .frame-inner {
         margin: $pp-tile-padding;
     }
@@ -101,10 +100,9 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 
 //
 // Images
-// Class .pp-ce-overlaycard is deprecated since 30.6.21
 // --------------------------------------------------
 .pp-tile {
-    &.pp-type-image, &.pp-type-pp_picoverlay, &.pp-ce-overlaycard {
+    &.pp-type-image, &.pp-type-pp_picoverlay {
         .frame-container {
             padding-left: 0;
             padding-right: 0;
@@ -145,18 +143,6 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
         }
         figure {
             padding: $pp-tile-padding;
-        }
-    }
-}
-
-//
-// Overlaycard
-// Deprecated since 30.6.21
-// --------------------------------------------------
-.pp-tile {
-    &.pp-ce-overlaycard {
-        .frame-inner, .textpic, .textpic-item {
-            height: 100%;
         }
     }
 }

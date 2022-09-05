@@ -59,42 +59,6 @@ if ( typeof pp !== 'undefined' ) {
     });
 
     /**
-     * Content element with class pp-ce-overlaycard
-     * Deprecated since 30.6.2021
-     */
-    $(function () {
-        function showOverlay ($this) {
-            $this.addClass('ppc-hover');
-            $('.textpic-text',$this).css('top', 0);
-        }
-        function hideOverlay ($this) {
-            $this.removeClass('ppc-hover');
-            $('.textpic-text',$this).css('top', $this.height());
-        }
-        $('.pp-ce-overlaycard .textpic')
-            .hover(
-                function () {
-                    showOverlay($(this));
-                },
-                function () {
-                    hideOverlay($(this));
-                })
-            .click( function () {
-                var $this = $(this);
-                if (parseInt($('.textpic-text',$this).css('top')) === 0) {
-                    hideOverlay($this);
-                } else {
-                    showOverlay($this);
-                }
-            });
-        $(window).on('resize',function () {
-            $('.pp-ce-overlaycard .textpic').each(function () {
-                hideOverlay($(this));
-            })
-        })
-    });
-
-    /**
      * Add main menu state to header
      */
     $(function () {

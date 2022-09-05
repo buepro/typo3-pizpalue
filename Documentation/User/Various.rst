@@ -146,22 +146,6 @@ pp-image-overlay              Overlays the heading to the image. Used with image
 ============================= =============================================================================
 
 
-Content element transformation
-------------------------------
-
-These classes transform a content element. They influence various elements and might be used in JS.
-
-============================= =============================================================================
-Class                         Usage
-============================= =============================================================================
-pp-ce-overlaycard             Render an overlay card when being assigned to a text & image content element.
-(DEPRECATED since 30.6.2021)  An overlay card is characterized by an animation taking place when the
-                              user hovers over the image. The animation fades in the text from the
-                              content element.
-                              DEPRECATED: Use Picture with overlay content element
-============================= =============================================================================
-
-
 Utility
 -------
 

@@ -146,9 +146,6 @@
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-image-overlay">
 				<source>Image with overlay heading</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-ce-overlaycard">
-				<source>Overlay card (DEPRECATED)</source>
-			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-margin">
 				<source>Inner element with margin</source>
 			</trans-unit>
