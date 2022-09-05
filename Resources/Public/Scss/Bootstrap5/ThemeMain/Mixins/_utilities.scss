@@ -35,13 +35,15 @@
     $temp-link-color: map-get($settings, 'link-color');
     $temp-link-hover-color: map-get($settings, 'link-hover-color');
     $temp-inherit-link-style: map-get($settings, 'inherit-link-style');
-    a:not(.btn) {
-        color: $temp-link-color;
-        &:hover {
-            color: $temp-link-hover-color;
+    @if ($temp-link-color != 'inherit') {
+        a:not(.btn) {
+            color: $temp-link-color;
+
+            &:hover {
+                color: $temp-link-hover-color;
+            }
         }
-    }
-    @if ($temp-link-color == 'inherit') {
+    } @else {
         a:not(.btn) {
             color: $temp-color;
             &:hover {
