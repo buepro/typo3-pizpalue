@@ -4,14 +4,23 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
-			<trans-unit id="scaffold_navbar-height" resname="scaffold_navbar-height">
-				<source>Heigh</source>
+			<trans-unit id="scaffold_pp-navbar-height-xs" resname="scaffold_pp-navbar-height-xs">
+				<source>Height on very small screens (xs)</source>
 			</trans-unit>
-			<trans-unit id="scaffold_navbar-height-sm" resname="scaffold_navbar-height-sm">
+			<trans-unit id="scaffold_pp-navbar-height-sm" resname="scaffold_pp-navbar-height-sm">
 				<source>Height on small screens (sm)</source>
 			</trans-unit>
-			<trans-unit id="scaffold_navbar-height-lg" resname="scaffold_navbar-height-lg">
+			<trans-unit id="scaffold_pp-navbar-height-md" resname="scaffold_pp-navbar-height-md">
+				<source>Height on medium-sized screens (md)</source>
+			</trans-unit>
+			<trans-unit id="scaffold_pp-navbar-height-lg" resname="scaffold_pp-navbar-height-lg">
 				<source>Height on large screens (lg)</source>
+			</trans-unit>
+			<trans-unit id="scaffold_pp-navbar-height-xl" resname="scaffold_pp-navbar-height-xl">
+				<source>Height on very large screens (xl)</source>
+			</trans-unit>
+			<trans-unit id="scaffold_pp-navbar-height-xxl" resname="scaffold_pp-navbar-height-xxl">
+				<source>Height on largest screens (xxl)</source>
 			</trans-unit>
 			<trans-unit id="scaffold_pp-header-overlay-breakpoint" resname="scaffold_pp-header-overlay-breakpoint">
 				<source>Header overlay breakpoint</source>

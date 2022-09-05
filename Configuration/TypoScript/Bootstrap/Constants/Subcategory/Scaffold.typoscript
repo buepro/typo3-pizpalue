@@ -5,6 +5,12 @@
 #---------------------------------------------------------#
 
 plugin.bootstrap_package.settings.scss {
+    pp-navbar-height-xs = 0.7 * $pp-navbar-height-md
+    pp-navbar-height-sm = 0.7 * $pp-navbar-height-md
     # cat=6030/1030/0010; type=string; label=Header panel height (px)
-    navbar-height = 100px
+    pp-navbar-height-md = 100px
+    pp-navbar-height-lg = 1.3 * $pp-navbar-height-md
+    pp-navbar-height-xl = 1.3 * $pp-navbar-height-md
+    pp-navbar-height-xxl = 1.3 * $pp-navbar-height-md
+    navbar-heights = (xs: $pp-navbar-height-xs, sm: $pp-navbar-height-sm, md: $pp-navbar-height-md, lg: $pp-navbar-height-lg, xl: $pp-navbar-height-xl, xxl: $pp-navbar-height-xxl)
 }

@@ -24,11 +24,13 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
      * Properties
      */
     $scaffoldGeneralProperties = 'showFooter';
-    $scaffoldHeaderProperties = 'navbar-height, navbar-height-sm, navbar-height-lg, pp-header-overlay-breakpoint';
+    $scaffoldHeaderProperties = 'pp-navbar-height-xs, pp-navbar-height-sm, pp-navbar-height-md, pp-navbar-height-lg, '
+        . 'pp-navbar-height-xl, pp-navbar-height-xxl, pp-header-overlay-breakpoint';
     $scaffoldFooterProperties = 'rowClass, leftColumnClass, middleColumnClass, rightColumnClass';
     $scaffoldAdvancedProperties = implode(', ', [
         $scaffoldFooterProperties,
-        'navbar-height-sm, navbar-height-lg, pp-header-overlay-breakpoint',
+        'pp-navbar-height-xs, pp-navbar-height-sm, pp-navbar-height-lg, pp-navbar-height-xl, pp-navbar-height-xxl, '
+            . 'pp-header-overlay-breakpoint',
     ]);
 
     /**

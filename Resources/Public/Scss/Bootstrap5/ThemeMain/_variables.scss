@@ -122,17 +122,3 @@ $pp-space-scaling: (
     xl: 1,
     xxl: 1
 ) !default;
-
-//
-// Navbar height
-//
-$navbar-height: 100px !default;
-$navbar-height-sm: 0.7 * $navbar-height !default;
-$navbar-height-lg: 1.3 * $navbar-height !default;
-$navbar-heights: (
-    xs: $navbar-height-sm,
-    sm: $navbar-height-sm,
-    md: $navbar-height,
-    lg: $navbar-height-lg,
-    xl: $navbar-height-lg
-);
