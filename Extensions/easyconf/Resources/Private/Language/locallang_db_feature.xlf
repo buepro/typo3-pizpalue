@@ -13,9 +13,6 @@
 			<trans-unit id="feature_slide_nav_content" resname="feature_slide_nav_content">
 				<source>Slide navigation content</source>
 			</trans-unit>
-			<trans-unit id="feature_use_style" resname="feature_use_style">
-				<source>Common style</source>
-			</trans-unit>
 			<trans-unit id="feature_content_insert_data" resname="feature_content_insert_data">
 				<source>Insert data in content</source>
 			</trans-unit>

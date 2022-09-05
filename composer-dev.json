@@ -41,6 +41,7 @@
 	"require-dev": {
 		"buepro/typo3-container-elements": "^4.0.0",
 		"buepro/typo3-easyconf": "^1.3.1",
+		"buepro/typo3-user-pizpalue": "dev-main",
 		"ergebnis/composer-normalize": "^2.15.0",
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
@@ -59,6 +60,12 @@
 		"typo3/cms-lowlevel": "^10.4 || ^11.5",
 		"typo3/cms-recycler": "^10.4 || ^11.5",
 		"typo3/testing-framework": "^5.0 || ^6.4"
+	},
+	"repositories": {
+		"user-pizpalue": {
+			"type": "path",
+			"url": "/mnt/public/package/typo3-user_pizpalue"
+		}
 	},
 	"suggest": {
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",

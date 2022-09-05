@@ -28,20 +28,35 @@ Installation
 Development
 -----------
 
-Mount extension directories
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use local packages
+~~~~~~~~~~~~~~~~~~
 
-To work at the same time on other packages mount local directories to the
-container by adjusting and adding the following script to
-`.ddev/docker-compose.mount.yaml`:
+To work at the same time on other packages (e.g. `user_pizpalue`) carry out the
+following steps:
 
-.. code-block:: yaml
+#. Mount local directories to the container by adjusting and adding the following
+   script to `.ddev/docker-compose.mount.yaml`:
 
-   services:
-     web:
-       volumes:
-         # Mount local directory to the web containers path `/mnt/public/package`
-         - "~/Projects/public:/mnt/public/package"
+   .. code-block:: yaml
+
+      services:
+        web:
+          volumes:
+            # Mount local directory to the web containers path `/mnt/public/package`
+            - "~/Projects/public:/mnt/public/package"
+
+#. Add the package repository to the composer configuration:
+
+   .. code-block:: json
+
+      {
+         "repositories": {
+            "user-pizpalue": {
+               "type": "path",
+               "url": "/mnt/public/package/typo3-user_pizpalue"
+            }
+         }
+      }
 
 
 Work with the container

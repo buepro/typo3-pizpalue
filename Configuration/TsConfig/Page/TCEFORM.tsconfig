@@ -1,16 +1,4 @@
 #:::::::::::::::::::::::
-#: @todo Add jumbotron and card
-#.
-TCEFORM.tt_content.frame_class {
-    addItems {
-        pp1 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame1
-        pp2 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame2
-        pp3 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame3
-        pp4 = LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:ppCeFrame4
-    }
-}
-
-#:::::::::::::::::::::::
 #: Animations
 #.
 TCEFORM.tt_content.tx_pizpalue_animation {

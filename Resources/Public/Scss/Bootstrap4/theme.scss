@@ -17,14 +17,14 @@
     @import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap4/compat/mixins";
     @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/functions";
     @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
-    @import "../Bootstrap5/ThemeMain/variables";
+    @import "../Bootstrap5/Theme/variables";
     @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/bootstrap";
 } @else {
     @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap4/variables";
     @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap4/compat/mixins";
     @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/functions";
     @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
-    @import "../Bootstrap5/ThemeMain/variables";
+    @import "../Bootstrap5/Theme/variables";
     @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/bootstrap";
 }
 
@@ -32,7 +32,7 @@
 //
 // Create bootstrap package and pizpalue components
 //
-@import "../Bootstrap5/ThemeMain/functions";
-@import "../Bootstrap5/ThemeMain/mixins";
+@import "../Bootstrap5/Theme/functions";
+@import "../Bootstrap5/Theme/mixins";
 @import "BootstrapPackage/components";
-@import "../Bootstrap5/ThemeMain/components";
+@import "../Bootstrap5/Theme/components";

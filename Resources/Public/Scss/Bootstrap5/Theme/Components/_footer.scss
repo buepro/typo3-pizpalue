@@ -21,3 +21,25 @@
         }
     }
 }
+
+//
+// Reveal footer
+// --------------------------------------------------
+.pp-reveal-footer {
+    > header, > div:not(#cookieconsent), > nav {
+        z-index: 10;
+        position: relative;
+    }
+    > header {
+        z-index: 12;
+    }
+    > #page-content {
+        background-color: $body-bg;
+    }
+    > footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 8;
+    }
+}

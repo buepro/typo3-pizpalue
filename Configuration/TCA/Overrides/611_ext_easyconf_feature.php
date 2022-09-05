@@ -24,7 +24,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     /**
      * Properties
      */
-    $pizpalueControlProperties = 'fontAwesome.enable, revealFooter, slideNavContent, useStyle, content.insertData';
+    $pizpalueControlProperties = 'fontAwesome.enable, revealFooter, slideNavContent, content.insertData';
     $bootstrapPackageControlProperties = 'contact.enable';
     $contactProperties = 'contact.label, contact.button.label, contact.button.pageUid';
     $variousProperties = 'imageLoading';

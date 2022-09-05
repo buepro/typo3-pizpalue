@@ -1,9 +1,0 @@
-//
-// Create frame background
-//
-@mixin pp-make-frame-bg($color) {
-    border-color: mix(white, $color, 80%);
-    background: mix(white, $color, 80%);
-    background: linear-gradient(20deg, mix(white, $color, 70%), mix(white, $color, 90%));
-    color: $body-color;
-}

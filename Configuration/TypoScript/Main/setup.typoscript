@@ -104,7 +104,7 @@ page {
         #:::::::::::::::::::::::
         #: Load theme with modified features
         #.
-        theme = EXT:pizpalue/Resources/Public/Scss/theme-main.scss
+        theme = EXT:pizpalue/Resources/Public/Scss/theme.scss
     }
     includeCSSLibs {
         #:::::::::::::::::::::::
@@ -119,17 +119,6 @@ page {
         pizpalueicon = EXT:pizpalue/Resources/Public/Fonts/pizpalueicon.min.css
     }
 }
-
-#:::::::::::::::::::::::
-#: Custom CSS/SCSS
-#.
-[{$pizpalue.features.useStyle} == 1]
-page {
-    includeCSS {
-        ppCustomTheme = EXT:pizpalue/Resources/Public/Scss/theme-custom.scss
-    }
-}
-[END]
 
 #:::::::::::::::::::::::
 #: Font awesome
