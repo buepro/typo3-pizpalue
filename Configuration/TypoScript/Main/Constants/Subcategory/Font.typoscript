@@ -26,9 +26,3 @@ pizpalue.style {
     # cat=6040/1033/1014; type=string; label=Google Webfont family declaration: Alter in case more than one font family are used
     googleFontsUrl = https://fonts.googleapis.com/css?display=swap&family={$page.theme.googleFont.font}:{$page.theme.googleFont.weight}
 }
-
-// todo: DEPRECATED since 12 will be removed in 13
-pizpalue.style {
-    # cat=6040/1033/1014; type=string; label=Google Webfont family declaration: Alter in case more than one font family are used
-    google-webfontfamily = {$page.theme.googleFont.font}:{$page.theme.googleFont.weight}
-}
