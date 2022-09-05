@@ -16,7 +16,7 @@ use Buepro\Pizpalue\BootstrapPackage\Compatibility120\ViewHelpers\FrameViewHelpe
 /**
  * FrameViewHelper
  *
- * @deprecated
+ * @deprecated since v13, will be removed in v15
  */
 class BootstrapPackageFrameViewHelper extends FrameViewHelper
 {
