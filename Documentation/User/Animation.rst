@@ -42,13 +42,7 @@ from the content element properties dialog.
 They can be further customized by help of the :ref:`constant editor <config-scrollanimation>`.
 
 Currently the libraries `Twikito/onscroll-effect <https://github.com/Twikito/onscroll-effect>`__,
-`Josh.js <https://github.com/mamunhpath/josh.js>`__ and `AOS <https://github.com/michalsnik/aos>`__
-are supported.
-
-.. warning::
-
-   AOS didn't get updated for quite some time. This is why it has been marked as
-   deprecated hence shouldn't be used for new projects any more.
+and `Josh.js <https://github.com/mamunhpath/josh.js>`__ are supported.
 
 .. hint::
 

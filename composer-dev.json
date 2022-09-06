@@ -61,12 +61,6 @@
 		"typo3/cms-recycler": "^10.4 || ^11.5",
 		"typo3/testing-framework": "^5.0 || ^6.4"
 	},
-	"repositories": {
-		"user-pizpalue": {
-			"type": "path",
-			"url": "/mnt/public/package/typo3-user_pizpalue"
-		}
-	},
 	"suggest": {
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
 		"buepro/typo3-easyconf": "Backend module to provide an easy website configuration",
@@ -75,6 +69,12 @@
 		"friendsoftypo3/tt-address": "Manage addresses",
 		"georgringer/eventnews": "Calendar based on extension news",
 		"georgringer/news": "Flexible news system"
+	},
+	"repositories": {
+		"user-pizpalue": {
+			"type": "path",
+			"url": "/mnt/public/package/typo3-user_pizpalue"
+		}
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,

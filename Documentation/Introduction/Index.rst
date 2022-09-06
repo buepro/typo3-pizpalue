@@ -102,7 +102,7 @@ Animating content
 
 -  Animation effects provided `animate.css <https://github.com/animate-css/animate.css>`__
 -  Scroll animation effects provided by `Twikito/onscroll-effect <https://github.com/Twikito/onscroll-effect>`__,
-   `Josh.js <https://github.com/mamunhpath/josh.js>`__ or `AOS <https://github.com/michalsnik/aos>`__
+   or `Josh.js <https://github.com/mamunhpath/josh.js>`__
 -  A feature to reveal the footer
 
 New content elements

@@ -61,9 +61,6 @@ class FrameDataViewHelperTest extends FunctionalTestCase
                 'styles' => 'border: red;',
                 'attributes' => 'data-josh-anim-name="fadeInBottomLeft"',
             ],
-            'aos' => [
-                'initParams' => 'easing: \'ease-in-out-sine\', once: true, disable: \'mobile\'',
-            ],
             'josh' => [
                 'initParams' => 'animateInMobile: false',
             ],

@@ -78,7 +78,6 @@ class FrameDataViewHelper extends AbstractViewHelper
         self::addStylesAndAttributes($assetCollector, $data, $result);
         self::addAnimation($assetCollector, $data, $pizpalueConstants, $result);
         self::addTiles($assetCollector, $data, $result);
-        self::addAosAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addJoshAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addTwikitoAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addAnimateCssAssets($assetCollector, $data, $pizpalueConstants, $result);
@@ -212,32 +211,6 @@ class FrameDataViewHelper extends AbstractViewHelper
             $result['classes'][] = $layout;
             $result['isTile'] = true;
         }
-    }
-
-    protected static function addAosAssets(
-        AssetCollector $assetCollector,
-        array $data,
-        array $pizpalueConstants,
-        array &$result
-    ): void {
-        $attributes = implode(' ', $result['attributes']);
-        if (strpos($attributes, 'data-aos') === false) {
-            return;
-        }
-        $result['hasScrollAnimation'] = true;
-        /** @extensionScannerIgnoreLine */
-        $assetCollector->addStyleSheet(
-            'ppAos',
-            'EXT:pizpalue/Resources/Public/Contrib/aos/aos.css'
-        );
-        $assetCollector->addJavaScript(
-            'ppAos',
-            'EXT:pizpalue/Resources/Public/Contrib/aos/aos.js'
-        );
-        $assetCollector->addInlineJavaScript('ppAosInit', sprintf(
-            "AOS.init({ %s }); $('[data-aos]').parent().css('overflow', 'hidden');",
-            $pizpalueConstants['animation']['aos']['initParams'] ?? ''
-        ));
     }
 
     protected static function addJoshAssets(

@@ -29,63 +29,6 @@ defined('TYPO3') or die('Access denied.');
         ];
     }
 
-    // AOS scroll animations
-    // @deprecated since 11.4.0
-    // @todo remove support for AOS
-    $aosAttributes = static function () {
-        // Defines a group of available AOS animations for dropdown selector
-        $aosFadeList = 'fade,fade-up,fade-down,fade-left,fade-right,fade-up-right,fade-up-left,fade-down-right,fade-down-left';
-        $aosFlipList = 'flip-up,flip-down,flip-left,flip-right';
-        $aosSlideList = 'slide-up,slide-down,slide-left,slide-right';
-        $aosZoomList = 'zoom-in,zoom-in-up,zoom-in-down,zoom-in-left,zoom-in-right,zoom-out,zoom-out-up,zoom-out-down,'
-            . 'zoom-out-left,zoom-out-right';
-        $aosAnimation = [];
-        foreach (['fade' => $aosFadeList, 'flip' => $aosFlipList, 'slide' => $aosSlideList, 'zoom' => $aosZoomList]
-                 as $name => $list) {
-            $aosAnimation[$name] = [];
-            foreach (explode(',', $list) as $animation) {
-                $aosAnimation[$name][] = ['AOS ' . $animation, 'data-aos="' . $animation . '" '];
-            }
-        }
-
-        // Defines a group of available AOS settings for dropdown selector
-        $aosAnchorPlacementList = 'top-bottom,top-center,top-top,center-bottom,center-center,center-top,bottom-bottom,bottom-center,'
-            . 'bottom-top';
-        $aosEasingList = 'linear,ease,ease-in,ease-out,ease-in-out,ease-in-back,ease-out-back,ease-in-out-back,'
-            . 'ease-in-sine,ease-out-sine,ease-in-out-sine,ease-in-quad,ease-out-quad,ease-in-out-quad,'
-            . 'ease-in-cubic, ease-out-cubic,ease-in-out-cubic,ease-in-quart,ease-out-quart,ease-in-out-quart';
-        $aosSettings = [];
-        foreach (['anchor-placement' => $aosAnchorPlacementList, 'easing' => $aosEasingList] as $name => $list) {
-            $aosSettings[$name] = [];
-            foreach (explode(',', $list) as $setting) {
-                $aosSettings[$name][] = ['AOS ' . $setting, 'data-aos-' . $name . '="' . $setting . '" '];
-            }
-        }
-
-        // Merge AOS attributes
-        return array_merge(
-            $aosAnimation['fade'],
-            [['---', '']],
-            $aosAnimation['flip'],
-            [['---', '']],
-            $aosAnimation['slide'],
-            [['---', '']],
-            $aosAnimation['zoom'],
-            [['---', '']],
-            $aosSettings['anchor-placement'],
-            [['---', '']],
-            $aosSettings['easing'],
-            [
-                ['---', ''],
-                ['AOS offset', 'data-aos-offset="120" '],
-                ['AOS duration', 'data-aos-duration="400" '],
-                ['AOS delay', 'data-aos-delay="0" '],
-                ['AOS anchor', 'data-aos-anchor="null" '],
-                ['AOS once', 'data-aos-once="false" ']
-            ]
-        );
-    };
-
     // Twikito scroll animation
     $twikitoAttributes = static function (): array {
         return [
@@ -153,14 +96,7 @@ defined('TYPO3') or die('Access denied.');
                             [' Josh', ''],
                             ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
                         ],
-                        $joshAttributes(),
-                        [
-                            ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
-                            [' AOS', ''],
-                            ['LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:deprecated', ''],
-                            ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
-                        ],
-                        $aosAttributes()
+                        $joshAttributes()
                     )
                 ],
             ],

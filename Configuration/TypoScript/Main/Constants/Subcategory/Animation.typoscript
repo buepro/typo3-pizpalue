@@ -11,10 +11,6 @@
 #    attributes =
 # }
 pizpalue.animation {
-    aos {
-        # cat=6060/1520/0002; type=string; label=AOS initialization parameters
-        initParams = easing: 'ease-in-out-sine', once: true, disable: 'mobile'
-    }
     josh {
         # cat=6060/1520/0004; type=string; label=Josh initialization parameters
         initParams = offset: 0.0, margin: "0px 0px -50% 0px", animateInMobile: false
