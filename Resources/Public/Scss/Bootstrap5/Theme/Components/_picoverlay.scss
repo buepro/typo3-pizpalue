@@ -42,6 +42,7 @@
         flex-direction: column;
         background: var(--pp-picoverlay-background);
         color: var(--pp-picoverlay-color);
+        --pp-frame-heading-color: var(--pp-picoverlay-color);
         opacity: 0;
         transition: top ease-out 0.5s;
         // Delay showing the content when js is disabled (avoids flickering when js is enabled)
