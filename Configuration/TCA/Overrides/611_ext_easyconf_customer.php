@@ -24,7 +24,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     /**
      * Properties
      */
-    $customerCompanyProperties = 'company, contactName';
+    $customerCompanyProperties = 'company, contactName, legalContact, uid';
     $customerUrlProperties = 'url, alternativeUrl';
     $customerAddressProperties = 'contactAddress, contactAddressAddition, contactZip, contactCity, contactCountry';
     $customerContactProperties = 'contactPhone, contactPhoneAlt, contactEmail, contactMessenger';

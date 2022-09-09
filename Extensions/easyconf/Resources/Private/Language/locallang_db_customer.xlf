@@ -10,6 +10,12 @@
 			<trans-unit id="customer_contact_name" resname="customer_contact_name">
 				<source>Name</source>
 			</trans-unit>
+			<trans-unit id="customer_legal_contact" resname="customer_legal_contact">
+				<source>Legal contact</source>
+			</trans-unit>
+			<trans-unit id="customer_uid" resname="customer_uid">
+				<source>UID</source>
+			</trans-unit>
 			<trans-unit id="customer_url" resname="customer_url">
 				<source>URL</source>
 			</trans-unit>

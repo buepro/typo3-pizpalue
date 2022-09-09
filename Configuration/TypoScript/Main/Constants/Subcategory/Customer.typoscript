@@ -28,6 +28,12 @@ pizpalue.customer {
 
     # cat=6030/1020/0030; type=string; label=Contact email
     contactEmail = info@domain.ch
+
+    # cat=6030/1020/0040; type=string; label=Legal contact
+    legalContact = Legal contact
+
+    # cat=6030/1020/0050; type=string; label=UID
+    uid = CHE-xxx.xxx.xxx
 }
 
 page.theme.copyright.text = &copy; {$pizpalue.customer.company}

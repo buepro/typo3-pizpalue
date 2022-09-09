@@ -13,6 +13,8 @@ constants {
     ppCustomerContactPhoneAlt = {$pizpalue.customer.contactPhoneAlt}
     ppCustomerContactFax = {$pizpalue.customer.contactFax}
     ppCustomerContactMessenger = {$pizpalue.customer.contactMessenger}
+    ppCustomerLegalContact = {$pizpalue.customer.legalContact}
+    ppCustomerContactUid = {$pizpalue.customer.uid}
     ppRatingValue = {$pizpalue.customer.ratingValue}
     ppRatingCount = {$pizpalue.customer.ratingCount}
 }
