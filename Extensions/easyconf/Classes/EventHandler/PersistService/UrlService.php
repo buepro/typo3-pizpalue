@@ -77,10 +77,13 @@ class UrlService extends AbstractService
             return $this;
         }
         $base = rtrim($this->formFields[$fieldName], '/') . '/';
-        $domain = parse_url($this->formFields[$fieldName], PHP_URL_HOST);
+        $phpHostWithPort = parse_url($this->formFields[$fieldName], PHP_URL_HOST);
+        if (($phpUrlPort = (int)parse_url($this->formFields[$fieldName], PHP_URL_PORT)) > 0) {
+            $phpHostWithPort .= ':' . $phpUrlPort;
+        }
         $this->siteConfigurationMapper
             ->bufferProperty('baseVariants.0.base', $base)
-            ->bufferProperty('baseVariants.0.condition', sprintf('getenv("HTTP_HOST") == "%s"', $domain))
+            ->bufferProperty('baseVariants.0.condition', sprintf('getenv("HTTP_HOST") == "%s"', $phpHostWithPort))
             ->persistBuffer();
         return $this;
     }
