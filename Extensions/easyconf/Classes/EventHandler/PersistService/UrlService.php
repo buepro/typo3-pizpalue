@@ -41,7 +41,7 @@ class UrlService extends AbstractService
 
     protected function setDomain(): self
     {
-        $domain = parse_url($this->formFields['customer_url'], PHP_URL_HOST);
+        $domain = trim(parse_url($this->formFields['customer_url'], PHP_URL_HOST), 'w./');
         $this->typoScriptMapper->bufferProperty('pizpalue.customer.domain', $domain);
         return $this;
     }
