@@ -8,7 +8,7 @@
     @if ($enable-rounded) {
         --frame-embedded-border-radius: #{$frame-embedded-border-radius};
     }
-    --pp-frame-heading-color: #{$headings-color};
+    --pp-frame-headings-color: #{$headings-color};
     --pp-frame-link-font-weight: inherit;
     --pp-frame-link-text-decoration: inherit;
     --pp-frame-link-text-decoration-style: inherit;
@@ -17,9 +17,9 @@
     .frame-background-#{$name} {
 
         // Headings color
-        --pp-frame-heading-color: #{map-get($settings, 'color')};
+        --pp-frame-headings-color: #{map-get($settings, 'color')};
         @if (map-get($settings, 'headings-color')) {
-            --pp-frame-heading-color: #{map-get($settings, 'headings-color')};
+            --pp-frame-headings-color: #{map-get($settings, 'headings-color')};
         }
 
         // Links
@@ -41,7 +41,7 @@
 }
 .frame {
     .element-header, .element-subheader {
-        color: var(--pp-frame-heading-color);
+        color: var(--pp-frame-headings-color);
     }
     a:not(.btn) {
         font-weight: var(--pp-frame-link-font-weight);
