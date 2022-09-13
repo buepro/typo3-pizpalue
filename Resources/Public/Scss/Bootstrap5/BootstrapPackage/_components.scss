@@ -1,13 +1,7 @@
-//----------------------------------------------------------------------------------------------------------------------
 //
-// Core consists of all items except functions, variables and mixins
+// Original components
 //
-//----------------------------------------------------------------------------------------------------------------------
-
 @if ($pp-install-dir != 'composer-root') {
-    //
-    // Original components
-    //
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/compat/text";
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/compat/form";
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/compat/embed";
@@ -50,9 +44,6 @@
     //@import "../../../../../../bootstrap_package/Resources/Public/Scss/plugins/cookieconsent";
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/plugins/photoswipe";
 } @else {
-    //
-    // Original components
-    //
     @import "../../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/text";
     @import "../../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/form";
     @import "../../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/compat/embed";
@@ -96,10 +87,8 @@
     @import "../../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/photoswipe";
 }
 
-
 //
 // Adjusted components
 //
 @import "Components/cookieconsent";
-@import "Components/frame";
 @import "Components/navbar";

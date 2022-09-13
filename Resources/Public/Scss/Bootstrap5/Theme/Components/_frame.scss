@@ -2,7 +2,7 @@
 // Set headings color and link style
 // ID: 1637252856
 // @see pp-make-background
-//
+// --------------------------------------------------
 :root {
     --frame-embedded-border-radius: 0;
     @if ($enable-rounded) {
@@ -48,6 +48,39 @@
         text-decoration: var(--pp-frame-link-text-decoration);
         text-decoration-style: var(--pp-frame-link-text-decoration-style);
     }
+}
+
+//
+// Add frame spacing variable
+// --------------------------------------------------
+:root {
+    --pp-frame-spacing: var(--frame-spacing-xs);
+    $prevSpacing: var(--frame-spacing-xs);
+    @each $breakpoint in map-keys(map-remove($grid-breakpoints, "xs")) {
+        @include media-breakpoint-up($breakpoint) {
+            --pp-frame-spacing: var(--frame-spacing-#{$breakpoint}, #{$prevSpacing});
+        }
+        $prevSpacing: var(--frame-spacing-#{$breakpoint});
+    }
+}
+
+//
+// Reset .frame-none
+// --------------------------------------------------
+.frame.frame-none {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: $body-color;
+    background: $body-bg;
+}
+
+//
+// Various
+// --------------------------------------------------
+.pp-frame-collapsible {
+    margin-top: calc(-1 * var(--pp-frame-spacing));
 }
 .pp-frameless-content {
     &, > .frame-backgroundimage-container ~ * {

@@ -1,9 +1,6 @@
-//----------------------------------------------------------------------------------------------------------------------
 //
-// Core consists of all items except functions, variables and mixins
+// Original components
 //
-//----------------------------------------------------------------------------------------------------------------------
-
 @if ($pp-install-dir != 'composer-root') {
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap4/compat/accordion";
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap4/compat/carousel";
@@ -89,15 +86,9 @@
     //@import "../../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/cookieconsent";
     @import "../../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/plugins/photoswipe";
 }
-//
-// Original components
-//
-
 
 //
 // Adjusted components
 //
-@import "../../Bootstrap5/BootstrapPackage/Components/adjustments";
 @import "../../Bootstrap5/BootstrapPackage/Components/cookieconsent";
-@import "../../Bootstrap5/BootstrapPackage/Components/frame";
 @import "../../Bootstrap5/BootstrapPackage/Components/navbar";
