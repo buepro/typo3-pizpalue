@@ -3,25 +3,6 @@
 // --------------------------------------------------
 
 //
-// General: Classes act on element they are assigned to
-// --------------------------------------------------
-.pp-bg-primary {
-    background-color: $primary;
-}
-.pp-bg-secondary {
-    background-color: $secondary;
-}
-.pp-bg-complementary {
-    background-color: $complementary;
-}
-.pp-bg-light {
-    background-color: $light;
-}
-.pp-bg-dark {
-    background-color: $dark;
-}
-
-//
 // Content inner: act on inner container
 // --------------------------------------------------
 .pp-inner-margin {

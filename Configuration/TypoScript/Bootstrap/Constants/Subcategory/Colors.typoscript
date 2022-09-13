@@ -143,6 +143,5 @@ plugin.bootstrap_package.settings.scss {
 plugin.bootstrap_package.settings.scss {
     tertiary = lighten(desaturate(adjust-hue($primary, 30), 40%), 20%)
     quaternary = lighten(desaturate(adjust-hue($primary, 45), 40%), 20%)
-    light = $gray-200
-    dark = $gray-800
+    theme-colors = ("primary": $primary, "secondary": $secondary, "complementary": $complementary, "tertiary": $tertiary, "quaternary": $quaternary, "success": $success, "info": $info, "warning": $warning, "danger": $danger, "default": $default, "lighter": $lighter, "light": $light, "dark": $dark, "darker": $darker)
 }

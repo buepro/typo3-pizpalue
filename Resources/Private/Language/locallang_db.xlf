@@ -121,19 +121,19 @@
 				<source>Card with dark color background</source>
 			</trans-unit>
 
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-primary">
+			<trans-unit id="tx_pizpalue_ttc.classes.bg-primary">
 				<source>Background with primary color</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-secondary">
+			<trans-unit id="tx_pizpalue_ttc.classes.bg-secondary">
 				<source>Background with secondary color</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-complementary">
+			<trans-unit id="tx_pizpalue_ttc.classes.bg-complementary">
 				<source>Background with complementary color</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-light">
+			<trans-unit id="tx_pizpalue_ttc.classes.bg-light">
 				<source>Background with light color</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-dark">
+			<trans-unit id="tx_pizpalue_ttc.classes.bg-dark">
 				<source>Background with dark color</source>
 			</trans-unit>
 

@@ -152,20 +152,20 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 //
 // Classes
 // --------------------------------------------------
-.pp-tile.pp-bg-primary, .pp-tile.pp-bg-secondary, .pp-tile.pp-bg-complementary {
-    background: transparent;
+.pp-tile.bg-primary, .pp-tile.bg-secondary, .pp-tile.bg-complementary {
+    background-color: transparent !important;
 }
-.pp-tile.pp-bg-primary {
+.pp-tile.bg-primary {
     .frame-container {
         @include pp-make-background(map-get($frame-backgrounds, primary));
     }
 }
-.pp-tile.pp-bg-secondary {
+.pp-tile.bg-secondary {
     .frame-container {
         @include pp-make-background(map-get($frame-backgrounds, secondary));
     }
 }
-.pp-tile.pp-bg-complementary {
+.pp-tile.bg-complementary {
     .frame-container {
         @include pp-make-background(map-get($frame-backgrounds, complementary));
     }

@@ -13,13 +13,6 @@ $footer-bg: #333 !default;
 $footer-meta-bg: #222 !default;
 
 //
-// Theme colors
-// --------------------------------------------------
-$theme-colors: map-merge($theme-colors, (
-    'complementary': $complementary
-));
-
-//
 // Headings contrast color
 // --------------------------------------------------
 $pp-headings-yiq: color-contrast($body-color);

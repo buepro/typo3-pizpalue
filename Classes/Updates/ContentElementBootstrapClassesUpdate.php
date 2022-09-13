@@ -19,7 +19,7 @@ use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\RepeatableInterface;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
-class ContentElementClassesUpdate implements UpgradeWizardInterface, RepeatableInterface
+class ContentElementBootstrapClassesUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
     /**
      * @var string[]
