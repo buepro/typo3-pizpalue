@@ -1,6 +1,6 @@
 //
 // Original components
-//
+// --------------------------------------------------
 @if ($pp-install-dir != 'composer-root') {
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/compat/text";
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/compat/form";
@@ -89,6 +89,6 @@
 
 //
 // Adjusted components
-//
+// --------------------------------------------------
 @import "Components/cookieconsent";
 @import "Components/navbar";

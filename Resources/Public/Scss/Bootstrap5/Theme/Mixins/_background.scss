@@ -2,7 +2,7 @@
 // Creates a rainbow style background where two rainbows overlap each other
 //
 // link https://codepen.io/bennettfeely/pen/jOEjmXK
-//
+// --------------------------------------------------
 @mixin pp-make-rainbow-background($start_color, $end_color, $count: 10) {
     $colors: pp-pyramid-gradient($start_color, $end_color, $count);
     background: repeating-radial-gradient(circle at bottom left, $colors),

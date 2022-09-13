@@ -1,10 +1,10 @@
-//
+// --------------------------------------------------
 // Might be used by site packages
-//
+// --------------------------------------------------
 
 //
 // bootstrap framework
-//
+// --------------------------------------------------
 @if ($pp-install-dir != 'composer-root') {
     @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/functions";
 } @else {
@@ -13,5 +13,5 @@
 
 //
 // pizpalue
-//
+// --------------------------------------------------
 @import "Theme/functions";

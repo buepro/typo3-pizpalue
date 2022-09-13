@@ -1,11 +1,11 @@
-//----------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------
 //
 // Allows to:
 // - Set background colors
 // - Overlay the page header on screens wider than $pp-header-overlay-breakpoint (default-transition)
 //   NOTE: It is assumed that $pp-header-overlay-breakpoint is smaller than $grid-float-breakpoint
 //
-//----------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------
 
 $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
 

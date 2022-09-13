@@ -1,11 +1,11 @@
 //
 // Might be used by site packages
 // See https://getbootstrap.com/docs/5.1/utilities/api/
-//
+// --------------------------------------------------
 
 //
 // Bootstrap framework
-//
+// --------------------------------------------------
 @if ($pp-install-dir != 'composer-root') {
     @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/utilities/api";
 } @else {

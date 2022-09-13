@@ -1,6 +1,6 @@
 //
 // Original components
-//
+// --------------------------------------------------
 @if ($pp-install-dir != 'composer-root') {
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap4/compat/accordion";
     @import "../../../../../../bootstrap_package/Resources/Public/Scss/bootstrap4/compat/carousel";
@@ -89,6 +89,6 @@
 
 //
 // Adjusted components
-//
+// --------------------------------------------------
 @import "../../Bootstrap5/BootstrapPackage/Components/cookieconsent";
 @import "../../Bootstrap5/BootstrapPackage/Components/navbar";

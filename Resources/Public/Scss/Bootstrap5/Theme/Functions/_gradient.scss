@@ -14,7 +14,7 @@
 //
 // @link https://codepen.io/bennettfeely/pen/jOEjmXK
 // @see pp-make-rainbow-background
-//
+// --------------------------------------------------
 @function pp-pyramid-gradient($corner_color, $peak_color, $count: 10) {
     $colors: $corner_color + ' 0';
     @for $i from 0 through (2 * $count) {

@@ -1,10 +1,10 @@
-//
+// --------------------------------------------------
 // Might be used by site packages
-//
+// --------------------------------------------------
 
 //
 // bootstrap_package
-//
+// --------------------------------------------------
 @if ($pp-install-dir != 'composer-root') {
     @import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
 } @else {
@@ -14,7 +14,7 @@
 
 //
 // bootstrap framework
-//
+// --------------------------------------------------
 @if ($pp-install-dir != 'composer-root') {
     @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
 } @else {
@@ -23,5 +23,5 @@
 
 //
 // pizpalue
-//
+// --------------------------------------------------
 @import "Theme/variables";

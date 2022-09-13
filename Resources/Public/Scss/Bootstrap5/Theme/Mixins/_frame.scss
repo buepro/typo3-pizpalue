@@ -2,7 +2,7 @@
 // Create responsive frame space
 //
 // $value: Nominal space at $valueBreakpoint
-//
+// --------------------------------------------------
 @mixin pp-make-frame-spaces($value, $valueBreakpoint: xl, $sibling: '.frame', $scaling: $pp-space-scaling) {
     $breakpointScaling: map_get($scaling, $valueBreakpoint);
     $space: $value / $breakpointScaling * map_get($scaling, xs);

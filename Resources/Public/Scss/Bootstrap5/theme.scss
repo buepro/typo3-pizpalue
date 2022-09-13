@@ -1,9 +1,3 @@
-//----------------------------------------------------------------------------------------------------------------------
-//
-// Main theme adjustments are less likely to be overridden by customer projects
-//
-//----------------------------------------------------------------------------------------------------------------------
-
 //
 // Create bootstrap components
 //
@@ -11,7 +5,7 @@
 //   - The bootstrap package presets bootstrap variables
 //   - Bootstrap functions are needed for bootstrap variables
 //   - Pizpalue modifies variables
-//
+// --------------------------------------------------
 @if ($pp-install-dir != 'composer-root') {
     @import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
     @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/functions";
@@ -28,7 +22,7 @@
 
 //
 // Create bootstrap package and pizpalue components
-//
+// --------------------------------------------------
 @import "Theme/functions";
 @import "Theme/mixins";
 @import "BootstrapPackage/components";

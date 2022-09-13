@@ -1,16 +1,15 @@
-//---------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------
 // Tile
 //
 // It is assumed that a tile is a normal content element (no structure element) hence doesn't contain further
 // content elements.
 //
 // see as well _extensions.scss
-//---------------------------------------------------------------------------------------------------------------------
-//
+// --------------------------------------------------
 
 //
 // Variables
-//
+// --------------------------------------------------
 $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 
 //
@@ -55,7 +54,7 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
 
 //
 // Responsive
-//
+// --------------------------------------------------
 @mixin pp-make-responsive-tile($breakpoint: 'md') {
     @include media-breakpoint-up($breakpoint) {
         .pp-layout-#{$breakpoint} {
@@ -71,7 +70,10 @@ $pp-tile-padding: calc(var(--pp-frame-spacing) / 2) !default;
         }
     }
 }
+
+//
 // Disable tile side ratio below screen breakpoint
+// --------------------------------------------------
 .pp-layout-sm, .pp-layout-md, .pp-layout-lg, .pp-layout-xl {
     &.pp-tile-21, &.pp-tile-11, &.pp-tile-12 {
         &:before {
