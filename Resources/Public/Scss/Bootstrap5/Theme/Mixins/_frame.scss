@@ -26,3 +26,47 @@
         }
     }
 }
+
+@mixin pp-set-frame-background-variables($settings) {
+    @if (map-get($settings, 'color')) {
+        --frame-color: #{map-get($settings, 'color')};
+    }
+    @if (map-get($settings, 'background')) {
+        --frame-background: #{map-get($settings, 'background')};
+    }
+    @if (map-get($settings, 'link-color')) {
+        --frame-link-color: #{map-get($settings, 'link-color')};
+    }
+    @if (map-get($settings, 'link-hover-color')) {
+        --frame-link-hover-color: #{map-get($settings, 'link-hover-color')};
+    }
+    @if (map-get($settings, 'headings-color')) {
+        --pp-frame-headings-color: #{map-get($settings, 'headings-color')};
+    }
+    @if (map-get($settings, 'link-decoration')) {
+        --pp-frame-link-decoration: #{map-get($settings, 'link-decoration')};
+    }
+    @if (map-get($settings, 'link-decoration-style')) {
+        --pp-frame-link-decoration-style: #{map-get($settings, 'link-decoration-style')};
+    }
+    @if (map-get($settings, 'link-weight')) {
+        --pp-frame-link-weight: #{map-get($settings, 'link-weight')};
+    }
+}
+
+@mixin pp-make-frame-background() {
+    color: var(--frame-color);
+    background: var(--frame-background);
+    .element-header, .element-subheader {
+        color: var(--pp-frame-headings-color);
+    }
+    a:not(.btn) {
+        color: var(--frame-link-color);
+        font-weight: var(--pp-frame-link-weight);
+        text-decoration: var(--pp-frame-link-decoration);
+        text-decoration-style: var(--pp-frame-link-decoration-style);
+        &:hover {
+            color: var(--frame-link-hover-color);
+        }
+    }
+}

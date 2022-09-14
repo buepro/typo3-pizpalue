@@ -1,52 +1,12 @@
 //
-// Set headings color and link style
-// ID: 1637252856
-// @see pp-make-background
+// Set frame headings and links
 // --------------------------------------------------
-:root {
-    --frame-embedded-border-radius: 0;
-    @if ($enable-rounded) {
-        --frame-embedded-border-radius: #{$frame-embedded-border-radius};
-    }
-    --pp-frame-headings-color: #{$headings-color};
-    --pp-frame-link-font-weight: inherit;
-    --pp-frame-link-text-decoration: inherit;
-    --pp-frame-link-text-decoration-style: inherit;
+.frame {
+    @include pp-make-frame-background();
 }
 @each $name, $settings in $frame-backgrounds {
     .frame-background-#{$name} {
-
-        // Headings color
-        --pp-frame-headings-color: #{map-get($settings, 'color')};
-        @if (map-get($settings, 'headings-color')) {
-            --pp-frame-headings-color: #{map-get($settings, 'headings-color')};
-        }
-
-        // Links
-        $temp-color: map-get($settings, 'color');
-        $temp-link-color: map-get($settings, 'link-color');
-        $temp-inherit-link-style: map-get($settings, 'inherit-link-style');
-        @if ($temp-link-color == 'inherit') {
-            --frame-link-color: #{$temp-color};
-            --frame-link-hover-color: #{$temp-color};
-            @if ($temp-inherit-link-style == 'dotted') {
-                --pp-frame-link-text-decoration: underline;
-                --pp-frame-link-text-decoration-style: dotted;
-            }
-            @if ($temp-inherit-link-style == 'bold') {
-                --pp-frame-link-font-weight: bold;
-            }
-        }
-    }
-}
-.frame {
-    .element-header, .element-subheader {
-        color: var(--pp-frame-headings-color);
-    }
-    a:not(.btn) {
-        font-weight: var(--pp-frame-link-font-weight);
-        text-decoration: var(--pp-frame-link-text-decoration);
-        text-decoration-style: var(--pp-frame-link-text-decoration-style);
+        @include pp-set-frame-background-variables($settings);
     }
 }
 

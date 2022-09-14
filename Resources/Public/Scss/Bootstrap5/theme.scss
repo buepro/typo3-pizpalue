@@ -1,4 +1,9 @@
 //
+// Initialize
+// --------------------------------------------------
+@import "Theme/functions";
+
+//
 // Create bootstrap components
 //
 // Remarks:
@@ -23,7 +28,6 @@
 //
 // Create bootstrap package and pizpalue components
 // --------------------------------------------------
-@import "Theme/functions";
 @import "Theme/mixins";
 @import "BootstrapPackage/components";
 @import "Theme/components";

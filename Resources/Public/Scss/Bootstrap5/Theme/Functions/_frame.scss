@@ -1,0 +1,12 @@
+@function pp-get-frame-background-settings($background-color, $overwrite: ()) {
+    @return map-merge((
+        'background':               $background-color,
+        'color':                    color-contrast($background-color),
+        'headings-color':           color-contrast($background-color),
+        'link-color':               color-contrast($background-color),
+        'link-hover-color':         color-contrast($background-color),
+        'link-decoration':          'underline',
+        'link-decoration-style':    'dotted',
+        'link-weight':              null
+    ), $overwrite);
+}

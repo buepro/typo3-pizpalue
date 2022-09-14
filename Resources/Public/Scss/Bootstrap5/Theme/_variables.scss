@@ -4,6 +4,25 @@
 $pp-bootstrap-version: 5 !default;
 
 //
+// Root variables
+// --------------------------------------------------
+:root {
+    //
+    // Set frame border-radius, headings and links
+    // ID: 1637252856
+    // @see pp-make-background, pp-make-link
+    //
+    --frame-embedded-border-radius: 0;
+    @if ($enable-rounded) {
+        --frame-embedded-border-radius: #{$frame-embedded-border-radius};
+    }
+    --pp-frame-headings-color: #{$headings-color};
+    --pp-frame-link-decoration: null;
+    --pp-frame-link-decoration-style: null;
+    --pp-frame-link-weight: null;
+}
+
+//
 // Colors
 // --------------------------------------------------
 $complementary: #f28c0f !default;
@@ -11,6 +30,7 @@ $navbar-light-bg: #e8e8e8 !default;
 $navbar-dark-bg: #2b2b2b !default;
 $footer-bg: #333 !default;
 $footer-meta-bg: #222 !default;
+$headings-color: $body-color !default;
 
 //
 // Headings contrast color
@@ -52,57 +72,40 @@ $footer-sections: map-merge($footer-sections, (
 
 //
 // Frame Backgrounds
-//
-// `inherit-link-style` can be `dotted` (default if absent), `bold` or `user`
-//
-// @see pp-make-link
+// @see pp-make-link, pp-make-background
 // --------------------------------------------------
+$pp-frame-background-primary: () !default;
+$pp-frame-background-primary: map-merge(pp-get-frame-background-settings($primary), $pp-frame-background-primary);
+$pp-frame-background-secondary: () !default;
+$pp-frame-background-secondary: map-merge(pp-get-frame-background-settings($secondary), $pp-frame-background-secondary);
+$pp-frame-background-complementary: () !default;
+$pp-frame-background-complementary: map-merge(pp-get-frame-background-settings($complementary), $pp-frame-background-complementary);
+$pp-frame-background-tertiary: () !default;
+$pp-frame-background-tertiary: map-merge(pp-get-frame-background-settings($tertiary), $pp-frame-background-tertiary);
+$pp-frame-background-quaternary: () !default;
+$pp-frame-background-quaternary: map-merge(pp-get-frame-background-settings($quaternary), $pp-frame-background-quaternary);
+$pp-frame-background-light: () !default;
+$pp-frame-background-light: map-merge(pp-get-frame-background-settings($light, (
+    'color':                    $body-color,
+    'headings-color':           $headings-color,
+    'link-color':               $link-color,
+    'link-hover-color':         $link-hover-color,
+    'link-decoration':          'none',
+    'link-decoration-style':    null,
+)), $pp-frame-background-light);
+$pp-frame-background-dark: () !default;
+$pp-frame-background-dark: map-merge(pp-get-frame-background-settings($dark), $pp-frame-background-dark);
+
 $frame-backgrounds: () !default;
-$frame-backgrounds: map-merge($frame-backgrounds, (
-    'primary': (
-        'background': $primary,
-        'color': color-contrast($primary),
-        'link-color': 'inherit',
-        'inherit-link-style': 'dotted'
-    ),
-    'secondary': (
-        'background': $secondary,
-        'color': color-contrast($secondary),
-        'link-color': 'inherit',
-        'inherit-link-style': 'dotted'
-    ),
-    'complementary': (
-        'background': $complementary,
-        'color': color-contrast($complementary),
-        'link-color': 'inherit',
-        'inherit-link-style': 'dotted'
-    ),
-    'tertiary': (
-        'background': $tertiary,
-        'color': color-contrast($tertiary),
-        'link-color': 'inherit',
-        'inherit-link-style': 'dotted'
-    ),
-    'quaternary': (
-        'background': $quaternary,
-        'color': color-contrast($quaternary),
-        'link-color': 'inherit',
-        'inherit-link-style': 'dotted'
-    ),
-    'light': (
-        'background': $light,
-        'color': $body-color,
-        'headings-color': $headings-color,
-        'link-color': $link-color,
-        'link-hover-color': $link-hover-color
-    ),
-    'dark': (
-        'background': $dark,
-        'color': color-contrast($dark),
-        'link-color': 'inherit',
-        'inherit-link-style': 'dotted'
-    )
-));
+$frame-backgrounds: map-merge((
+    'primary': $pp-frame-background-primary,
+    'secondary': $pp-frame-background-secondary,
+    'complementary': $pp-frame-background-complementary,
+    'tertiary': $pp-frame-background-tertiary,
+    'quaternary': $pp-frame-background-quaternary,
+    'light': $pp-frame-background-light,
+    'dark': $pp-frame-background-dark
+), $frame-backgrounds);
 
 //
 // General space

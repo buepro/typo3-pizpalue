@@ -1,4 +1,9 @@
 //
+// Initialize
+// --------------------------------------------------
+@import "../Bootstrap5/Theme/functions";
+
+//
 // Create bootstrap components
 //
 // Remarks:
@@ -26,7 +31,6 @@
 //
 // Create bootstrap package and pizpalue components
 // --------------------------------------------------
-@import "../Bootstrap5/Theme/functions";
 @import "../Bootstrap5/Theme/mixins";
 @import "BootstrapPackage/components";
 @import "../Bootstrap5/Theme/components";
