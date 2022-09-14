@@ -8,9 +8,16 @@ $pp-bootstrap-version: 5 !default;
 // --------------------------------------------------
 :root {
     //
+    // Font
+    //
+    --pp-headings-font-family: #{inspect($font-family-base)};
+    @if ($headings-font-family) {
+        --pp-headings-font-family: #{inspect($headings-font-family)};
+    }
+
+    //
     // Set frame border-radius, headings and links
-    // ID: 1637252856
-    // @see pp-make-background, pp-make-link
+    // @see pp-make-frame-background, pp-set-frame-background-variables
     //
     --frame-embedded-border-radius: 0;
     @if ($enable-rounded) {

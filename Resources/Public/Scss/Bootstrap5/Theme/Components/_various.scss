@@ -1,14 +1,4 @@
 //
-// Root properties
-// --------------------------------------------------
-:root {
-    --pp-headings-font-family: #{inspect($font-family-base)};
-    @if ($headings-font-family) {
-        --pp-headings-font-family: #{inspect($headings-font-family)};
-    }
-}
-
-//
 // Corrects image overflow on webkit engine
 // --------------------------------------------------
 figure.image {
@@ -39,20 +29,6 @@ figure.image {
 }
 
 //
-// Modal dialog
-// --------------------------------------------------
-.pp-modal-dialog {
-    @if ($pp-bootstrap-version == 4) {
-        .modal-header .close:after {
-            content: "\2715";
-        }
-    }
-    .modal-body {
-        overflow-x: hidden;
-    }
-}
-
-//
 // Page
 // --------------------------------------------------
 body {
@@ -60,27 +36,4 @@ body {
     overflow-x: hidden;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-//
-// Language menu
-// --------------------------------------------------
-#language_menu {
-    &.ppc-icon, &.ppc-icontext {
-        line-height: 1.5em;
-    }
-    &.ppc-icon li {
-        padding-left: 0.15em !important;
-        padding-right: 0.15em !important;
-    }
-    &.ppc-icontext img {
-        margin-right: 0.3em;
-    }
-    img {
-        width: auto;
-        height: 1.5em;
-    }
-    .text-muted img {
-        filter: grayscale(1);
-    }
 }

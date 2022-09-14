@@ -1,13 +1,15 @@
 @import "Components/card";
 @import "Components/classes";
-@import "Components/emphasize-media";
 @import "Components/extensions";
 @import "Components/fluid";
 @import "Components/footer";
 @import "Components/frame";
-@import "Components/list-categorized-content";
-@import "Components/picoverlay";
 @import "Components/rte";
 @import "Components/structure-elements";
 @import "Components/tile";
 @import "Components/various";
+
+@import "Components/ContentElements/emphasize-media";
+@import "Components/ContentElements/list-categorized-content";
+@import "Components/ContentElements/modal-dialog";
+@import "Components/ContentElements/picoverlay";
