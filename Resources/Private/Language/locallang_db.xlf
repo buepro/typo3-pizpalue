@@ -105,22 +105,6 @@
 				<source>Full page width</source>
 			</trans-unit>
 
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-card-primary">
-				<source>Card with primary color background</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-card-secondary">
-				<source>Card with secondary color background</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-card-complementary">
-				<source>Card with complementary color background</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-card-light">
-				<source>Card with light color background</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-card-dark">
-				<source>Card with dark color background</source>
-			</trans-unit>
-
 			<trans-unit id="tx_pizpalue_ttc.classes.bg-primary">
 				<source>Background with primary color</source>
 			</trans-unit>

@@ -80,20 +80,6 @@ The feature can be enabled through the constant editor selecting the category `P
 Pizpalue classes
 =================
 
-Card backgrounds
-----------------
-
-============================= =============================================================================
-Class                         Description
-============================= =============================================================================
-pp-card-primary               Applies the primary color to the card background
-pp-card-secondary             Applies the secondary color to the card background
-pp-card-complementary         Applies the complementary color to the card background
-pp-card-light                 Applies the light color to the card background
-pp-card-dark                  Applies the dark color to the card background
-============================= =============================================================================
-
-
 Content element
 ---------------
 

@@ -29,6 +29,11 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
         'pp-bg-secondary' => 'bg-secondary',
         'pp-bg-complementary' => 'bg-complementary',
         'pp-bg-light' => 'bg-light',
+        'pp-card-primary' => 'pp-inner-panel pp-inner-panel-primary',
+        'pp-card-secondary' => 'pp-inner-panel pp-inner-panel-secondary',
+        'pp-card-complementary' => 'pp-inner-panel pp-inner-panel-complementary',
+        'pp-card-light' => 'pp-inner-panel pp-inner-panel-light',
+        'pp-card-dark' => 'pp-inner-panel pp-inner-panel-dark',
     ];
 
     /**
