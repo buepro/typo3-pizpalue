@@ -105,6 +105,22 @@ div.pp-gallery-item-right {
 }
 
 //
+// Panels
+//
+.pp-panel,
+.pp-inner-panel.pp-frameless-content,
+.pp-inner-panel .frame-inner {
+    @include pp-make-frame-background();
+}
+@each $tmp-name, $tmp-settings in $frame-backgrounds {
+    .pp-panel-#{$tmp-name},
+    .pp-inner-panel-#{$tmp-name}.pp-frameless-content,
+    .pp-inner-panel-#{$tmp-name} .frame-inner {
+        @include pp-set-frame-background-variables($tmp-settings);
+    }
+}
+
+//
 // Cards
 // --------------------------------------------------
 @each $name, $settings in $frame-backgrounds {

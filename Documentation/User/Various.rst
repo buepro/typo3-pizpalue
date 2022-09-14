@@ -84,7 +84,7 @@ Card backgrounds
 ----------------
 
 ============================= =============================================================================
-Class                         Usage
+Class                         Description
 ============================= =============================================================================
 pp-card-primary               Applies the primary color to the card background
 pp-card-secondary             Applies the secondary color to the card background
@@ -99,16 +99,18 @@ Content element
 
 These classes act on content element wrappers.
 
-============================= =============================================================================
-Class                         Usage
-============================= =============================================================================
-pp-frame-collapsible          Applies a negative top margin to compensate the top padding
-pp-inner-margin               Applies a margin to the inner container
-pp-inner-padding              Applies a padding to the inner container
-pp-inner-bgwhite70            Applies a white background with 70% opacity to the inner container
-pp-inner-bggrey70             Applies a grey background with 70% opacity to the inner container
-pp-inner-bgblack70            Applies a black background with 70% opacity to the inner container
-============================= =============================================================================
+=================================== =============================================================================
+Class                               Description
+=================================== =============================================================================
+pp-frame-collapsible                Applies a negative top margin to compensate the top padding
+pp-inner-margin                     Applies a margin to the inner container
+pp-inner-padding                    Applies a padding to the inner container
+pp-inner-bgwhite70                  Applies a white background with 70% opacity to the inner container
+pp-inner-bggrey70                   Applies a grey background with 70% opacity to the inner container
+pp-inner-bgblack70                  Applies a black background with 70% opacity to the inner container
+pp-inner-panel pp-inner-panel-[key] Sets the background and text for the inner container. Replace [key]
+                                    with one of the branding colors (e.g. primary).
+=================================== =============================================================================
 
 
 Gallery / Image
@@ -117,7 +119,7 @@ Gallery / Image
 These classes are used in conjunction with galleries (images, text & images)
 
 ============================= =============================================================================
-Class                         Usage
+Class                         Description
 ============================= =============================================================================
 pp-gallery-item-left          Aligns the gallery items (e.g. images) to the left
 pp-gallery-item-right         Aligns the gallery items to the right
@@ -133,7 +135,7 @@ Utility
 These classes are used in templating or together with JS.
 
 ============================= =============================================================================
-Class                         Usage
+Class                         Description
 ============================= =============================================================================
 pp-label-dataprotection       Used in content element to define a replacement text for a data
                               protection notice check box (see contact page).
@@ -157,9 +159,23 @@ RTE
 The following classes are used in the context of the real text editor.
 
 ============================= =============================================================================
-Class                         Usage
+Class                         Description
 ============================= =============================================================================
 pp-popover                    Used to control the behaviour from popovers.
                               Popovers that were triggered from elements having this class close when the
                               user clicks outside the popover.
 ============================= =============================================================================
+
+
+Various
+-------
+
+============================= ======================================================
+Class                         Description
+============================= ======================================================
+pp-panel pp-panel-[key]       Sets the background and text as for frames.
+                              Replace [key] with one of the branding colors
+                              (e.g. primary). Handy to be used with cards to define
+                              the card background by assigning the classes to the
+                              card body.
+============================= ======================================================

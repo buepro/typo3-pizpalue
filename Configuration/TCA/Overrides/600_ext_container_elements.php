@@ -28,5 +28,11 @@ defined('TYPO3') or die('Access denied.');
             'FILE:EXT:pizpalue/Extensions/container_elements/Configuration/FlexForm/Columns4.xml',
             'ce_columns4'
         );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:EXT:pizpalue/Extensions/container_elements/Configuration/FlexForm/Card.xml',
+            'ce_card'
+        );
     }
 })();

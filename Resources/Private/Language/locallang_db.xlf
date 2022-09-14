@@ -157,6 +157,28 @@
 				<source>Inner element with black background, 70% opacity</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-primary">
+				<source>Inner panel with primary color</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-secondary">
+				<source>Inner panel with secondary color</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-complementary">
+				<source>Inner panel with complementary color</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-tertiary">
+				<source>Inner panel with tertiary color</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-quaternary">
+				<source>Inner panel with quaternary color</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-light">
+				<source>Inner panel with light color</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-dark">
+				<source>Inner panel with dark color</source>
+			</trans-unit>
+
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left">
 				<source>Gallery item left</source>
 			</trans-unit>

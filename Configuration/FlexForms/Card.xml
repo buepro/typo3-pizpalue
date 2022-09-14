@@ -18,6 +18,39 @@
                                 <type>input</type>
                                 <default>card</default>
                                 <eval>trim</eval>
+                                <valuePicker>
+                                    <mode>append</mode>
+                                    <items>
+                                        <numIndex index="0">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:primaryBackgroundColor</numIndex>
+                                            <numIndex index="1"> pp-panel pp-panel-primary</numIndex>
+                                        </numIndex>
+                                        <numIndex index="1">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:secondaryBackgroundColor</numIndex>
+                                            <numIndex index="1"> pp-panel pp-panel-secondary</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:complementaryBackgroundColor</numIndex>
+                                            <numIndex index="1"> pp-panel pp-panel-complementary</numIndex>
+                                        </numIndex>
+                                        <numIndex index="3">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:tertiaryBackgroundColor</numIndex>
+                                            <numIndex index="1"> pp-panel pp-panel-tertiary</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:quaternaryBackgroundColor</numIndex>
+                                            <numIndex index="1"> pp-panel pp-panel-quaternary</numIndex>
+                                        </numIndex>
+                                        <numIndex index="5">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:lightBackgroundColor</numIndex>
+                                            <numIndex index="1"> pp-panel pp-panel-light</numIndex>
+                                        </numIndex>
+                                        <numIndex index="6">
+                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:darkBackgroundColor</numIndex>
+                                            <numIndex index="1"> pp-panel pp-panel-dark</numIndex>
+                                        </numIndex>
+                                    </items>
+                                </valuePicker>
                             </config>
                         </TCEforms>
                     </cardClasses>

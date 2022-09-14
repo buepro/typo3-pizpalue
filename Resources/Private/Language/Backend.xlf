@@ -4,6 +4,28 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+			<trans-unit id="primaryBackgroundColor">
+				<source>Primary background color</source>
+			</trans-unit>
+			<trans-unit id="secondaryBackgroundColor">
+				<source>Secondary background color</source>
+			</trans-unit>
+			<trans-unit id="complementaryBackgroundColor">
+				<source>Complementary background color</source>
+			</trans-unit>
+			<trans-unit id="tertiaryBackgroundColor">
+				<source>Tertiary background color</source>
+			</trans-unit>
+			<trans-unit id="quaternaryBackgroundColor">
+				<source>Quaternary background color</source>
+			</trans-unit>
+			<trans-unit id="lightBackgroundColor">
+				<source>Light background color</source>
+			</trans-unit>
+			<trans-unit id="darkBackgroundColor">
+				<source>Dark background color</source>
+			</trans-unit>
+
 			<trans-unit id="backend_layout.column.subnav">
 				<source>Sub Navigation</source>
 			</trans-unit>
