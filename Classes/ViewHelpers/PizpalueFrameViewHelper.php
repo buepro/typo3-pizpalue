@@ -150,7 +150,7 @@ class PizpalueFrameViewHelper extends AbstractViewHelper
             $spaceBefore = $spaceBefore !== '' ? $spaceBefore : 'none';
             $spaceAfter = $spaceAfter !== '' ? $spaceAfter : 'none';
             $result['classes'] = array_merge(
-                ['pp-content', 'pp-type-' . $data['CType']],
+                ['pp-frameless-content', 'pp-type-' . $data['CType']],
                 $result['classes'],
                 ['pp-space-before-' . $spaceBefore, 'pp-space-after-' . $spaceAfter]
             );
