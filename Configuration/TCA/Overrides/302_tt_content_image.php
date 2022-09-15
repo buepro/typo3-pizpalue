@@ -97,7 +97,7 @@ defined('TYPO3') or die('Access denied.');
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
         '--palette--;;pizpalue_imagesize',
-        'image,textmedia,textpic',
+        'image,textmedia,textpic,pp_card',
         'before: imageorient'
     );
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(

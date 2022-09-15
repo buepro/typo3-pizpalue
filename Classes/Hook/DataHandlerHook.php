@@ -29,7 +29,7 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
     /**
      * @var string[]
      */
-    private $imageContainingTypes = ['image', 'media', 'textpic', 'textmedia', 'carousel'];
+    private $imageContainingTypes = ['image', 'media', 'textpic', 'textmedia', 'carousel', 'pp_card'];
 
     /**
      * Is initialized in case the imageVariants need to be reviewed.

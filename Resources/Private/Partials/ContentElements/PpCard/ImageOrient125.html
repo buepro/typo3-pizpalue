@@ -6,7 +6,7 @@
         <f:render partial="PpCard/Body" arguments="{_all}" />
     </pp:render.bootstrap.column>
     <pp:render.bootstrap.column class="{data.pi_flexform.mediaColumnClasses}" count="2">
-        {pp:structure.variants(as: 'variants')}
+        {pp:structure.variants(as: 'variants', initialVariants: 'tx_pizpalue_image_variants')}
         <f:render partial="Media/Gallery" arguments="{_all}" />
     </pp:render.bootstrap.column>
 </div>
