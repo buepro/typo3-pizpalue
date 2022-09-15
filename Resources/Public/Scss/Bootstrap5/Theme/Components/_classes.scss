@@ -123,6 +123,24 @@ div.pp-gallery-item-right {
 }
 
 //
+// Spaces
+// --------------------------------------------------
+.pp-space-before {
+    margin-top: var(--frame-outer-spacing-before, 0);
+}
+.pp-space-after {
+    margin-bottom: var(--frame-outer-spacing-after, 0);
+}
+@each $name, $scaling in $frame-outer-spacing-scaling {
+    .pp-space-before-#{$name} {
+        --frame-outer-spacing-before: var(--frame-outer-spacing-variant-#{$name});
+    }
+    .pp-space-after-#{$name} {
+        --frame-outer-spacing-after: var(--frame-outer-spacing-variant-#{$name});
+    }
+}
+
+//
 // Various / Utility
 // --------------------------------------------------
 .pp-label-dataprotection {

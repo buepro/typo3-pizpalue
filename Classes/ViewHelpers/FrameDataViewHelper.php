@@ -135,9 +135,11 @@ class FrameDataViewHelper extends AbstractViewHelper
             return;
         }
         if (($class = trim((string)($data['space_before_class'] ?? ''))) !== '') {
+            $result['classes'][] = 'pp-space-before';
             $result['classes'][] = 'pp-space-before-' . $class;
         }
         if (($class = trim((string)($data['space_after_class'] ?? ''))) !== '') {
+            $result['classes'][] = 'pp-space-after';
             $result['classes'][] = 'pp-space-after-' . $class;
         }
         if (($class = trim((string)($data['background_color_class'] ?? 'none'))) !== 'none') {
