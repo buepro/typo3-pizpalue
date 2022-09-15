@@ -81,7 +81,7 @@ class FrameDataViewHelper extends AbstractViewHelper
         self::addJoshAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addTwikitoAssets($assetCollector, $data, $pizpalueConstants, $result);
         self::addAnimateCssAssets($assetCollector, $data, $pizpalueConstants, $result);
-        self::addDependantClasses($assetCollector, $data, $result);
+        self::addFramelessClasses($assetCollector, $data, $result);
         $variableProvider = $renderingContext->getVariableProvider();
         if ($arguments['as']) {
             $variableProvider->add($arguments['as'], $result);
@@ -129,24 +129,26 @@ class FrameDataViewHelper extends AbstractViewHelper
         }
     }
 
-    protected static function addDependantClasses(AssetCollector $assetCollector, array $data, array &$result): void
+    protected static function addFramelessClasses(AssetCollector $assetCollector, array $data, array &$result): void
     {
-        $spaceBefore = trim((string)($data['space_before_class'] ?? ''));
-        $spaceAfter = trim((string)($data['space_after_class'] ?? ''));
-        if (
-            ($data['frame_class'] ?? '') === 'none' &&
-            (
-                count($result['classes']) > 0 || count($result['styles']) > 0 || count($result['attributes']) > 0 ||
-                $spaceBefore !== '' || $spaceAfter !== ''
-            )
-        ) {
-            $spaceBefore = $spaceBefore !== '' ? $spaceBefore : 'none';
-            $spaceAfter = $spaceAfter !== '' ? $spaceAfter : 'none';
-            $result['classes'] = array_merge(
+        if (($data['frame_class'] ?? '') !== 'none') {
+            return;
+        }
+        if (($class = trim((string)($data['space_before_class'] ?? ''))) !== '') {
+            $result['classes'][] = 'pp-space-before-' . $class;
+        }
+        if (($class = trim((string)($data['space_after_class'] ?? ''))) !== '') {
+            $result['classes'][] = 'pp-space-after-' . $class;
+        }
+        if (($class = trim((string)($data['background_color_class'] ?? 'none'))) !== 'none') {
+            $result['classes'][] = 'pp-background-color';
+            $result['classes'][] = 'pp-background-color-' . $class;
+        }
+        if ($result['classes'] !== []) {
+            $result['classes'] = array_unique(array_merge(
                 ['pp-frameless-content', 'pp-type-' . $data['CType']],
-                $result['classes'],
-                ['pp-space-before-' . $spaceBefore, 'pp-space-after-' . $spaceAfter]
-            );
+                $result['classes']
+            ));
         }
     }
 

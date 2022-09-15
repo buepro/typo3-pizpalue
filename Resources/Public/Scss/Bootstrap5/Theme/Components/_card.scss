@@ -1,3 +1,9 @@
+.pp-panel.card,
+.pp-panel .card,
+.pp-background-color.card,
+.pp-background-color .card {
+    @include pp-make-frame-background();
+}
 .card-header, .card-footer {
     :last-child {
         margin-bottom: 0;

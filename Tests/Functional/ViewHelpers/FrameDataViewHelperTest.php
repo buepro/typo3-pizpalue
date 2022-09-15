@@ -178,8 +178,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
                     'tx_pizpalue_classes' => '', 'tx_pizpalue_style' => '', 'tx_pizpalue_attributes' => '']),
                 $this->pizpalueConstants,
                 array_merge($this->getDefaultExpected(), [
-                    'classes' => ['pp-frameless-content', 'pp-type-', 'pp-has-backgroundimage',
-                        'pp-space-before-none', 'pp-space-after-none'],
+                    'classes' => ['pp-frameless-content', 'pp-type-', 'pp-has-backgroundimage'],
                     'styles' => [], 'attributes' => []
                 ]),
             ],

@@ -32,10 +32,11 @@ defined('TYPO3') or die('Access denied.');
     $GLOBALS['TCA']['tt_content']['columns']['background_color_class']['config']['items'] = $items;
 
     /**
-     * Enable background image for all frame classes
+     * Enable background image and background color for all frame classes
      */
     unset($GLOBALS['TCA']['tt_content']['columns']['background_image']['displayCond'],
-        $GLOBALS['TCA']['tt_content']['columns']['background_image_options']['displayCond']);
+        $GLOBALS['TCA']['tt_content']['columns']['background_image_options']['displayCond'],
+        $GLOBALS['TCA']['tt_content']['columns']['background_color_class']['displayCond']);
 
     /**
      * Add 'tile` layout items

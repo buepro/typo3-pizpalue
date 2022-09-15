@@ -109,13 +109,15 @@ div.pp-gallery-item-right {
 //
 .pp-panel,
 .pp-inner-panel.pp-frameless-content,
-.pp-inner-panel .frame-inner {
+.pp-inner-panel .frame-inner,
+.pp-background-color {
     @include pp-make-frame-background();
 }
 @each $tmp-name, $tmp-settings in $frame-backgrounds {
     .pp-panel-#{$tmp-name},
     .pp-inner-panel-#{$tmp-name}.pp-frameless-content,
-    .pp-inner-panel-#{$tmp-name} .frame-inner {
+    .pp-inner-panel-#{$tmp-name} .frame-inner,
+    .pp-background-color-#{$tmp-name} {
         @include pp-set-frame-background-variables($tmp-settings);
     }
 }
