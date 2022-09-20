@@ -19,11 +19,15 @@
     <coverage processUncoveredFiles="true">
         <include>
             <directory suffix=".php">../Classes/</directory>
+            <directory suffix=".php">../Extensions/bootstrap_package/Compatibility120/Classes/</directory>
+            <directory suffix=".php">../Extensions/easyconf/Classes/</directory>
+            <directory suffix=".php">../Sysext/core/Classes/</directory>
         </include>
     </coverage>
     <testsuites>
         <testsuite name="buepro-pizpalue-unit-tests">
             <directory>../Tests/Unit</directory>
+            <directory>../Extensions/easyconf/Tests/Unit</directory>
 <!--            <file>-->
 <!--                ../Tests/Unit/Utility/ColumnVariantsUtilityTest.php-->
 <!--            </file>-->

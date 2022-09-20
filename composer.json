@@ -85,7 +85,8 @@
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Buepro\\Pizpalue\\Tests\\": "Tests/"
+			"Buepro\\Pizpalue\\Tests\\": "Tests/",
+			"Buepro\\Pizpalue\\Easyconf\\Tests\\": "Extensions/easyconf/Tests/"
 		}
 	},
 	"config": {

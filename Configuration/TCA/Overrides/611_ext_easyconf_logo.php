@@ -66,13 +66,15 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ),
     ];
     $tca['columns'] = array_replace($tca['columns'], TcaUtility::getColumns($propertyMaps, $l10nFile));
+    $tca['columns']['appicon_generator_text']['description'] = $l10nFile . ':appicon_generator_text.description';
+    $tca['columns']['appicon_file']['description'] = $l10nFile . ':appicon_file.description';
 
     /**
      * Define palettes
      */
     $tca['palettes'] = array_replace($tca['palettes'], [
         'paletteLogo' => TcaUtility::getPalette($logoProperties, 'logo'),
-        'paletteAppicon' => TcaUtility::getPalette(implode(', ', [$appiconProperties, $faviconProperties]), 'appicon'),
+        'paletteAppicon' => TcaUtility::getPalette('generatorArchive, --linebreak--, file, generatorText', 'appicon'),
     ]);
     $tca['palettes']['paletteAppicon']['description'] = $l10nFile . ':paletteAppicon.description';
 
@@ -85,6 +87,12 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ['displayCond' => 'FIELD:admin_easyconf_show_all_properties:REQ:true'],
         'logo'
     );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        'generatorText',
+        ['displayCond' => 'FIELD:admin_easyconf_show_all_properties:REQ:true'],
+        'appicon'
+    );
 
     /**
      * Fields triggering reload
@@ -95,7 +103,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ['onChange' => 'reload'],
         '',
         'logo_file_reference, logo_file_inverted_reference, ' .
-        'appicon_generator_archive, appicon_generator_text'
+        'appicon_generator_archive'
     );
 
     /**
@@ -153,18 +161,13 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     TcaUtility::modifyColumns(
         $tca['columns'],
         'generatorText',
-        ['config' => ['type' => 'text', 'renderType' => 't3editor', 'format' => 'html', 'eval' => 'trim', 'rows' => 6]],
+        ['config' => ['type' => 'text', 'renderType' => 't3editor', 'format' => 'html', 'eval' => 'trim', 'rows' => 10]],
         'appicon'
     );
     TcaUtility::modifyColumns(
         $tca['columns'],
         'file',
-        ['displayCond' => [
-            'OR' => [
-                'FIELD:appicon_generator_archive:REQ:false',
-                'FIELD:appicon_generator_text:REQ:false'
-            ]
-        ]],
+        ['displayCond' => 'FIELD:appicon_generator_archive:REQ:false'],
         'appicon'
     );
 

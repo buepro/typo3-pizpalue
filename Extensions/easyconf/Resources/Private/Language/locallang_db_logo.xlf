@@ -33,9 +33,12 @@
 				<source>App icons are used by various devices in different formats, for example as screen or
 					bookmark icon. They can be generated under https://realfavicongenerator.net. The website
 					provides an archive called "Favicon package" and a text to be used in the head section.
-					Upload the archive and paste the text here. In case app icons are not needed just define
-					a favicon file. ATTENTION: When an appicon is defined the files from the appicon archive
-					are copied to the website root directory where existing files will be overwritten.</source>
+					Upload the archive here to define the app icons with default settings. To fine tune the settings
+					you might paste as well the text provided by realfavicongenerator.net to the "App icons text"
+					field which is available upon enabling "Show all properties" in the admin tab. In case app
+					icons are not needed just define a favicon file. ATTENTION: When an app icon is defined by
+					an app icons archive its files are copied to the website root directory where existing files
+					will be overwritten.</source>
 			</trans-unit>
 			<trans-unit id="appicon_generator_archive" resname="appicon_generator_archive">
 				<source>App icons archive</source>
@@ -43,8 +46,14 @@
 			<trans-unit id="appicon_generator_text" resname="appicon_generator_text">
 				<source>App icons text</source>
 			</trans-unit>
+			<trans-unit id="appicon_generator_text.description" resname="appicon_generator_text.description">
+				<source>Set the field "Favicon file" to AppIcon or define an app icons archive to insert this text into the website header. In case an app icons archive has been defined this property is set automatically but might be overwritten to fine tune the app icons.</source>
+			</trans-unit>
 			<trans-unit id="appicon_file" resname="appicon_file">
 				<source>Favicon file</source>
+			</trans-unit>
+			<trans-unit id="appicon_file.description" resname="appicon_file.description">
+				<source>Define a favicon by path or with the key word AppIcon. In case an app icons archive has been defined this property is set automatically.</source>
 			</trans-unit>
 		</body>
 	</file>
