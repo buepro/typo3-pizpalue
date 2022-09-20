@@ -45,6 +45,9 @@
 			<trans-unit id="color_navbar-light-bg" resname="color_navbar-light-bg">
 				<source>Background</source>
 			</trans-unit>
+			<trans-unit id="color_navbar-light-bg-opacity" resname="color_navbar-light-bg-opacity">
+				<source>Background opacity</source>
+			</trans-unit>
 			<trans-unit id="color_navbar-light-color" resname="color_navbar-light-color">
 				<source>Text</source>
 			</trans-unit>
@@ -69,6 +72,9 @@
 
 			<trans-unit id="color_navbar-dark-bg" resname="color_navbar-dark-bg">
 				<source>Background</source>
+			</trans-unit>
+			<trans-unit id="color_navbar-dark-bg-opacity" resname="color_navbar-dark-bg-opacity">
+				<source>Background opacity</source>
 			</trans-unit>
 			<trans-unit id="color_navbar-dark-color" resname="color_navbar-dark-color">
 				<source>Text</source>

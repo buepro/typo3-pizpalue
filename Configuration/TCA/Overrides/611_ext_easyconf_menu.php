@@ -180,8 +180,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         '',
         ['onChange' => 'reload'],
         '',
-        'menu_main_enable_subpage_definition, menu_meta_enable, menu_footer_enable, menu_footer_icon_enable, ' .
-        'menu_language_enable, menu_fast_enable, menu_scroll_enable'
+        'menu_main_style, menu_main_enable_subpage_definition, menu_meta_enable, menu_footer_enable, ' .
+        'menu_footer_icon_enable, menu_language_enable, menu_fast_enable, menu_scroll_enable'
     );
 
     /**

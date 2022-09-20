@@ -25,10 +25,12 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
      */
     $colorMainProperties = 'primary, secondary, complementary, tertiary, quaternary, light, dark, body-bg';
     $colorTextProperties = 'body-color, headings-color, link-color, link-hover-color';
-    $colorLightHeaderProperties = 'navbar-light-bg, navbar-light-color, navbar-light-hover-bg, navbar-light-hover-color, ' .
-        'navbar-light-active-bg, navbar-light-active-color, navbar-light-disabled-bg, navbar-light-disabled-color';
-    $colorDarkHeaderProperties = 'navbar-dark-bg, navbar-dark-color, navbar-dark-hover-bg, navbar-dark-hover-color, ' .
-        'navbar-dark-active-bg, navbar-dark-active-color, navbar-dark-disabled-bg, navbar-dark-disabled-color';
+    $colorLightHeaderProperties = 'navbar-light-bg, navbar-light-bg-opacity, navbar-light-color, ' .
+        'navbar-light-hover-bg, navbar-light-hover-color, navbar-light-active-bg, navbar-light-active-color, ' .
+        'navbar-light-disabled-bg, navbar-light-disabled-color';
+    $colorDarkHeaderProperties = 'navbar-dark-bg, navbar-dark-bg-opacity, navbar-dark-color, navbar-dark-hover-bg, ' .
+        'navbar-dark-hover-color, navbar-dark-active-bg, navbar-dark-active-color, navbar-dark-disabled-bg, ' .
+        'navbar-dark-disabled-color';
     $colorFooterProperties = 'footer-bg, footer-color, footer-link-color, footer-link-hover-color';
     $colorFooterMetaProperties = 'footer-meta-bg, footer-meta-color, footer-meta-link-color, footer-meta-link-hover-color';
     $colorProperties = implode(', ', [$colorMainProperties, $colorTextProperties, $colorLightHeaderProperties,
@@ -59,8 +61,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     $tca['palettes'] = array_replace($tca['palettes'], [
         'paletteColorsMain' => TcaUtility::getPalette($colorMainProperties, 'color', 4),
         'paletteColorsText' => TcaUtility::getPalette($colorTextProperties, 'color', 4),
-        'paletteColorsLightHeader' => TcaUtility::getPalette($colorLightHeaderProperties, 'color', 4),
-        'paletteColorsDarkHeader' => TcaUtility::getPalette($colorDarkHeaderProperties, 'color', 4),
+        'paletteColorsLightHeader' => TcaUtility::getPalette($colorLightHeaderProperties, 'color', 3),
+        'paletteColorsDarkHeader' => TcaUtility::getPalette($colorDarkHeaderProperties, 'color', 3),
         'paletteColorsFooter' => TcaUtility::getPalette($colorFooterProperties, 'color', 4),
         'paletteColorsFooterMeta' => TcaUtility::getPalette($colorFooterMetaProperties, 'color', 4),
     ]);
@@ -82,6 +84,18 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         $tca['columns'],
         'primary',
         ['config' => ['renderType' => 'colorpicker']],
+        'color'
+    );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        $colorLightHeaderProperties,
+        ['displayCond' => ['OR' => ['FIELD:menu_main_style:=:default', 'FIELD:menu_main_style:=:default-transition']]],
+        'color'
+    );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        $colorDarkHeaderProperties,
+        ['displayCond' => ['OR' => ['FIELD:menu_main_style:=:inverse', 'FIELD:menu_main_style:=:inverse-transition']]],
         'color'
     );
 

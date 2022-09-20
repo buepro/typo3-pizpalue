@@ -43,6 +43,9 @@ plugin.bootstrap_package.settings.scss {
 
 plugin.bootstrap_package.settings.scss {
 
+    # cat=6040/1034/1020; type=string; label=Background opacity
+    pp-navbar-bg-opacity = 1.0
+
     # cat=6040/1034/1020; type=string; label=Default link color
     navbar-light-color = lighten($navbar-light-active-color,15%)
 

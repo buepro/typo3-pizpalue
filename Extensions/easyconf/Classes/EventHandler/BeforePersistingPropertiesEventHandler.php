@@ -15,6 +15,7 @@ use Buepro\Easyconf\Event\BeforePersistingPropertiesEvent;
 use Buepro\Easyconf\Mapper\TypoScriptConstantMapper;
 use Buepro\Easyconf\Utility\TcaUtility;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\AppiconService;
+use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\ColorService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\CookieService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\FontService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\LogoService;
@@ -30,9 +31,9 @@ class BeforePersistingPropertiesEventHandler
 {
     public function __invoke(BeforePersistingPropertiesEvent $event): void
     {
-        $serviceClassNames = [LogoService::class, AppiconService::class, UrlService::class, MenuService::class,
-            NewsEnhancerService::class, PageNotFoundService::class, SocialNetworkService::class, ScssService::class,
-            FontService::class, CookieService::class];
+        $serviceClassNames = [AppiconService::class, ColorService::class, CookieService::class, FontService::class,
+            LogoService::class, MenuService::class, NewsEnhancerService::class, PageNotFoundService::class,
+            ScssService::class, SocialNetworkService::class, UrlService::class];
         $formFields = $event->getFormFields();
         $configurationRecord = $event->getConfigurationRecord();
         foreach ($serviceClassNames as $serviceClassName) {

@@ -1,0 +1,31 @@
+:root {
+    //
+    // Font
+    // --------------------------------------------------
+    --pp-headings-font-family: #{inspect($font-family-base)};
+    @if ($headings-font-family) {
+        --pp-headings-font-family: #{inspect($headings-font-family)};
+    }
+
+    //
+    // Navbar
+    // --------------------------------------------------
+    --pp-navbar-dark-bg: #{$navbar-dark-bg};
+    --pp-navbar-dark-bg-rgb: #{to-rgb($navbar-dark-bg)};
+    --pp-navbar-light-bg: #{$navbar-light-bg};
+    --pp-navbar-light-bg-rgb: #{to-rgb($navbar-light-bg)};
+    --pp-navbar-bg-opacity: #{$pp-navbar-bg-opacity};
+
+    //
+    // Set frame border-radius, headings and links
+    // @see pp-make-frame-background, pp-set-frame-background-variables
+    // --------------------------------------------------
+    --frame-embedded-border-radius: 0;
+    @if ($enable-rounded) {
+        --frame-embedded-border-radius: #{$frame-embedded-border-radius};
+    }
+    --pp-frame-headings-color: #{$headings-color};
+    --pp-frame-link-decoration: null;
+    --pp-frame-link-decoration-style: null;
+    --pp-frame-link-weight: null;
+}
