@@ -152,7 +152,10 @@ class FrameDataViewHelper extends AbstractViewHelper
             $result['classes'][] = 'pp-space-after';
             $result['classes'][] = 'pp-space-after-' . $class;
         }
-        if (($class = trim((string)($data['background_color_class'] ?? 'none'))) !== 'none') {
+        if (
+            ($class = trim((string)($data['background_color_class'] ?? 'none'))) !== 'none' &&
+            $class !== ''
+        ) {
             $result['classes'][] = 'pp-background-color';
             $result['classes'][] = 'pp-background-color-' . $class;
         }
