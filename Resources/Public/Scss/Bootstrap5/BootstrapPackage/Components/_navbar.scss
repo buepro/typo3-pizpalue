@@ -485,6 +485,11 @@ $pp-header-toggler-line-height: round($pp-header-toggler-line-width / 11) !defau
                 display: block;
             }
         }
+        #mainnavigation:not(.collapsing):not(.show) {
+            .navbar-nav > li > .nav-link::before {
+                background: white;
+            }
+        }
     }
 }
 @media (min-width: $grid-float-breakpoint) {
