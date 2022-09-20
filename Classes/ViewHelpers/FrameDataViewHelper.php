@@ -27,6 +27,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  * As-data is an array containing the following fields:
  *    - classes: Array of classes
+ *    - innerClasses: Array of classes
  *    - styles: Array of style definitions
  *    - attributes: Array of attributes
  *    - isTile: Boolean, true if content element is a tile
@@ -67,6 +68,7 @@ class FrameDataViewHelper extends AbstractViewHelper
         $pizpalueConstants = $arguments['pizpalueConstants'] ?? [];
         $result = [
             'classes' => [],
+            'innerClasses' => [],
             'styles' => [],
             'attributes' => [],
             'isTile' => false,
@@ -75,6 +77,7 @@ class FrameDataViewHelper extends AbstractViewHelper
             'optimizeLinkTargets' => (bool) ($pizpalueConstants['seo']['optimizeLinkTargets'] ?? true),
         ];
         self::addClasses($assetCollector, $data, $result);
+        self::addInnerClasses($assetCollector, $data, $result);
         self::addStylesAndAttributes($assetCollector, $data, $result);
         self::addAnimation($assetCollector, $data, $pizpalueConstants, $result);
         self::addTiles($assetCollector, $data, $result);
@@ -126,6 +129,13 @@ class FrameDataViewHelper extends AbstractViewHelper
                 $result['classes'],
                 GeneralUtility::trimExplode(' ', $classes, true)
             );
+        }
+    }
+
+    protected static function addInnerClasses(AssetCollector $assetCollector, array $data, array &$result): void
+    {
+        if (($classes = trim((string)($data['tx_pizpalue_inner_classes'] ?? ''))) !== '') {
+            $result['innerClasses'] = GeneralUtility::trimExplode(' ', $classes, true);
         }
     }
 

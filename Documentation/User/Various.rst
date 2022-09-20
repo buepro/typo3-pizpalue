@@ -80,23 +80,33 @@ The feature can be enabled through the constant editor selecting the category `P
 Pizpalue classes
 =================
 
+General
+-------
+
+============================= ====================================================================
+Class                         Description
+============================= ====================================================================
+pp-margin                     Applies a margin to the container
+pp-margin-sm                  Applies a small margin to the container
+pp-padding                    Applies a padding to the container
+pp-padding-sm                 Applies a small padding to the container
+pp-panel pp-panel-[key]       Sets the background and text for the container. Replace [key] with
+                              one of the branding colors (e.g. primary).
+pp-bg-gray-[value]            Applies a gray background. Replace [value] with a number from 100
+                              to 900.
+============================= ====================================================================
+
+
 Content element
 ---------------
 
 These classes act on content element wrappers.
 
-=================================== =============================================================================
-Class                               Description
-=================================== =============================================================================
-pp-frame-collapsible                Applies a negative top margin to compensate the top padding
-pp-inner-margin                     Applies a margin to the inner container
-pp-inner-padding                    Applies a padding to the inner container
-pp-inner-bgwhite70                  Applies a white background with 70% opacity to the inner container
-pp-inner-bggrey70                   Applies a grey background with 70% opacity to the inner container
-pp-inner-bgblack70                  Applies a black background with 70% opacity to the inner container
-pp-inner-panel pp-inner-panel-[key] Sets the background and text for the inner container. Replace [key]
-                                    with one of the branding colors (e.g. primary).
-=================================== =============================================================================
+============================= ====================================================================
+Class                         Description
+============================= ====================================================================
+pp-frame-collapsible          Applies a negative top margin to compensate the top padding
+============================= ====================================================================
 
 
 Gallery / Image

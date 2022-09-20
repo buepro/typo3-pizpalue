@@ -13,22 +13,31 @@ defined('TYPO3') or die('Access denied.');
  * Add attribute fields to content elements
  */
 (static function (): void {
-    // Defines available classes for dropdown selector
-    $classesItemsList = 'bg-primary,bg-secondary,bg-complementary,bg-light,bg-dark,'
-        . 'pp-inner-margin,pp-inner-padding,pp-inner-bgwhite70,pp-inner-bggrey70,pp-inner-bgblack70,'
-        . 'pp-inner-panel-primary,pp-inner-panel-secondary,pp-inner-panel-complementary,pp-inner-panel-tertiary,'
-        . 'pp-inner-panel-quaternary,pp-inner-panel-light,pp-inner-panel-dark,'
-        . 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,pp-gallery-item-shadow,'
+    // Defines available items for (outer) classes dropdown selector
+    $classesItemsList = 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,pp-gallery-item-shadow,'
         . 'pp-image-overlay,'
         . 'pp-tile-scroll-y,'
         . 'pp-below-header';
     $classItems = [];
     foreach (explode(',', $classesItemsList) as $class) {
         $value = $class;
-        if (strpos($class, 'pp-inner-panel') === 0) {
-            $value = 'pp-inner-panel ' . $class;
-        }
         $classItems[] = [
+            'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes.' . $class,
+            $value . ' '
+        ];
+    }
+
+    // Defines available items for inner classes dropdown selector
+    $innerClassesItemsList = 'pp-margin,pp-margin-sm,pp-padding,pp-padding-sm,pp-bg-gray-600,opacity-75,'
+        . 'pp-panel-primary,pp-panel-secondary,pp-panel-complementary,pp-panel-tertiary,'
+        . 'pp-panel-quaternary,pp-panel-light,pp-panel-dark';
+    $innerClassItems = [];
+    foreach (explode(',', $innerClassesItemsList) as $class) {
+        $value = $class;
+        if (strpos($class, 'pp-panel') === 0) {
+            $value = 'pp-panel ' . $class;
+        }
+        $innerClassItems[] = [
             'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes.' . $class,
             $value . ' '
         ];
@@ -57,6 +66,7 @@ defined('TYPO3') or die('Access denied.');
         'tx_pizpalue_classes' => [
             'exclude' => true,
             'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes.description',
             'config' => [
                 'type' => 'input',
                 'size' => 100,
@@ -64,6 +74,21 @@ defined('TYPO3') or die('Access denied.');
                 'valuePicker' => [
                     'mode' => 'append',
                     'items' => $classItems,
+                ],
+            ],
+        ],
+        'tx_pizpalue_inner_classes' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.inner_classes',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.inner_classes.description',
+            'displayCond' => 'FIELD:frame_class:!=:none',
+            'config' => [
+                'type' => 'input',
+                'size' => 100,
+                'max' => 255,
+                'valuePicker' => [
+                    'mode' => 'append',
+                    'items' => $innerClassItems,
                 ],
             ],
         ],
@@ -115,6 +140,7 @@ defined('TYPO3') or die('Access denied.');
     $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_attributes'] = [
         'showitem' => '
             tx_pizpalue_classes,--linebreak--,
+            tx_pizpalue_inner_classes,--linebreak--,
             tx_pizpalue_style,--linebreak--,
             tx_pizpalue_attributes
         ',

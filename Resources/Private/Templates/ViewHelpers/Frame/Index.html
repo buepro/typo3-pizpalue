@@ -20,6 +20,9 @@
     {_classes -> bk2k:format.trim() -> f:variable(name: '_classes')}
     {f:variable(name: '_classAttribute', value: 'class="{_classes}"') -> f:if(condition: _classes)}
 
+    <f:comment>Compile inner classes</f:comment>
+    {_ppData.innerClasses -> bk2k:implode() -> f:variable(name: '_ppInnerClasses')}
+
     <f:comment>Compile style attribute</f:comment>
     {_ppData.styles -> bk2k:implode(delimiter: '; ') -> f:variable(name: '_styles')}
     {f:variable(name: '_styleAttribute', value: ' style="{_styles}"') -> f:if(condition: _styles)}
@@ -38,7 +41,7 @@
                     <div class="frame-group-inner">
                         <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
                         <div class="frame-container frame-container-default">
-                            <div class="frame-inner">
+                            <div class="frame-inner{f:if(condition: _ppInnerClasses, then: ' {_ppInnerClasses}')}">
                                 {content -> f:format.raw()}
                             </div>
                         </div>
@@ -58,7 +61,7 @@
                             <f:then>
 
                                 <div class="frame-container">
-                                    <div class="frame-inner">
+                                    <div class="frame-inner{f:if(condition: _ppInnerClasses, then: ' {_ppInnerClasses}')}">
                                         {content -> f:format.raw()}
                                     </div>
                                 </div>

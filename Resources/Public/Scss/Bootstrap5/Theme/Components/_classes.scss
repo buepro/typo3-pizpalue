@@ -3,31 +3,11 @@
 // --------------------------------------------------
 
 //
-// Content inner: act on inner container
+// Background
 // --------------------------------------------------
-.pp-inner-margin {
-    &.pp-frameless-content, .frame-inner {
-        margin: var(--pp-frame-spacing);
-    }
-}
-.pp-inner-padding {
-    &.pp-frameless-content, .frame-inner {
-        padding: var(--pp-frame-spacing);
-    }
-}
-.pp-inner-bgwhite70 {
-    &.pp-frameless-content, .frame-inner {
-        background-color: rgba(white, 0.7);
-    }
-}
-.pp-inner-bggrey70 {
-    &.pp-frameless-content, .frame-inner {
-        background-color: rgba(gray, 0.7);
-    }
-}
-.pp-inner-bgblack70 {
-    &.pp-frameless-content, .frame-inner {
-        background-color: rgba(black, 0.7);
+@each $tmp-value in (100, 200, 300, 400, 500, 600, 700, 800, 900) {
+    .pp-bg-gray-#{$tmp-value} {
+        background: var(--bs-gray-#{$tmp-value});
     }
 }
 
@@ -108,15 +88,11 @@ div.pp-gallery-item-right {
 // Panels
 //
 .pp-panel,
-.pp-inner-panel.pp-frameless-content,
-.pp-inner-panel .frame-inner,
 .pp-background-color {
     @include pp-make-frame-background();
 }
 @each $tmp-name, $tmp-settings in $frame-backgrounds {
     .pp-panel-#{$tmp-name},
-    .pp-inner-panel-#{$tmp-name}.pp-frameless-content,
-    .pp-inner-panel-#{$tmp-name} .frame-inner,
     .pp-background-color-#{$tmp-name} {
         @include pp-set-frame-background-variables($tmp-settings);
     }
@@ -125,6 +101,18 @@ div.pp-gallery-item-right {
 //
 // Spaces
 // --------------------------------------------------
+.pp-margin {
+    margin: var(--pp-frame-spacing);
+}
+.pp-padding {
+    padding: var(--pp-frame-spacing);
+}
+.pp-margin-sm {
+    margin: calc(0.5 * var(--pp-frame-spacing));
+}
+.pp-padding-sm {
+    padding: calc(0.5 * var(--pp-frame-spacing));
+}
 .pp-space-before {
     margin-top: var(--frame-outer-spacing-before, 0);
 }

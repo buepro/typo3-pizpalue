@@ -28,6 +28,15 @@
 			<trans-unit id="tx_pizpalue_ttc.classes">
 				<source>Additional classes</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.description">
+				<source>Classes to be added to the outer tag from the content element.</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.inner_classes">
+				<source>Additional inner classes</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.inner_classes.description">
+				<source>Classes to be added to the inner tag from the content element.</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.style">
 				<source>Additional styles</source>
 			</trans-unit>
@@ -105,62 +114,49 @@
 				<source>Full page width</source>
 			</trans-unit>
 
-			<trans-unit id="tx_pizpalue_ttc.classes.bg-primary">
-				<source>Background with primary color</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.bg-secondary">
-				<source>Background with secondary color</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.bg-complementary">
-				<source>Background with complementary color</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.bg-light">
-				<source>Background with light color</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.bg-dark">
-				<source>Background with dark color</source>
-			</trans-unit>
-
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-image-overlay">
 				<source>Image with overlay heading</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-margin">
-				<source>Inner element with margin</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-margin">
+				<source>Element with margin</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-padding">
-				<source>Inner element with padding</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-margin-sm">
+				<source>Element with small margin</source>
 			</trans-unit>
-
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bgwhite70">
-				<source>Inner element with white background, 70% opacity</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-padding">
+				<source>Element with padding</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bggrey70">
-				<source>Inner element with grey background, 70% opacity</source>
-			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-bgblack70">
-				<source>Inner element with black background, 70% opacity</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-padding-sm">
+				<source>Element with small padding</source>
 			</trans-unit>
 
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-primary">
-				<source>Inner panel with primary color</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-bg-gray-600">
+				<source>Gray background</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-secondary">
-				<source>Inner panel with secondary color</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.opacity-75">
+				<source>75% Opacity</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-complementary">
-				<source>Inner panel with complementary color</source>
+
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-panel-primary">
+				<source>Panel with primary color</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-tertiary">
-				<source>Inner panel with tertiary color</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-panel-secondary">
+				<source>Panel with secondary color</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-quaternary">
-				<source>Inner panel with quaternary color</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-panel-complementary">
+				<source>Panel with complementary color</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-light">
-				<source>Inner panel with light color</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-panel-tertiary">
+				<source>Panel with tertiary color</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.classes.pp-inner-panel-dark">
-				<source>Inner panel with dark color</source>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-panel-quaternary">
+				<source>Panel with quaternary color</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-panel-light">
+				<source>Panel with light color</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-panel-dark">
+				<source>Panel with dark color</source>
 			</trans-unit>
 
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left">

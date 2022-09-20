@@ -44,6 +44,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
         'tx_pizpalue_layout_breakpoint' => '',
         'tx_pizpalue_animation' => 0,
         'tx_pizpalue_classes' => 'test-1636104021 test-1636104031',
+        'tx_pizpalue_inner_classes' => 'test-1663670419',
         'tx_pizpalue_style' => 'border-left-color: blue; border-right-color: green;',
         'tx_pizpalue_attributes' => 'data-1636104078="1" data-1636104091="2"',
     ];
@@ -79,6 +80,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
     {
         return [
             'classes' => ['test-1636104021', 'test-1636104031'],
+            'innerClasses' => ['test-1663670419'],
             'styles' => ['border-left-color: blue', 'border-right-color: green'],
             'attributes' => ['data-1636104078="1"', 'data-1636104091="2"'],
             'isTile' => (bool)$this->contentData['layout'],
@@ -134,12 +136,15 @@ class FrameDataViewHelperTest extends FunctionalTestCase
         $expected = $this->getDefaultExpected();
         $classesData = $this->contentData;
         $classesData['tx_pizpalue_classes'] = ' test-1636104021  test-1636104031 ';
+        $innerClassesData = $this->contentData;
+        $innerClassesData['tx_pizpalue_inner_classes'] = ' test-1663670419 ';
         $styleData = $this->contentData;
         $styleData['tx_pizpalue_style'] = ' border-left-color:blue ;border-right-color:  green; ';
         $attributesData = $this->contentData;
         $attributesData['tx_pizpalue_attributes'] = ' data-1636104078 ="1"   data-1636104091= "2" ';
         return [
             'classes spaces' => [$classesData, $this->pizpalueConstants, $expected],
+            'inner classes spaces' => [$innerClassesData, $this->pizpalueConstants, $expected],
             'style spaces' => [$styleData, $this->pizpalueConstants, $expected],
             'attributes spaces' => [$attributesData, $this->pizpalueConstants, $expected],
         ];
