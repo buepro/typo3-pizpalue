@@ -1,6 +1,11 @@
-@import "../../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/functions";
-@import "../../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
-@import "../../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
+@import "../../../../../Resources/Public/Scss/functions";
+@import "../../../../../Resources/Public/Scss/variables";
+@import "../../../../../Resources/Public/Scss/mixins";
+
+//
+// Variables
+//
+$pagination-line-height: 1.25 !default;
 
 //
 // List
@@ -10,11 +15,11 @@
         &:nth-of-type(1) {
             padding-top: 1rem;
             margin-top: 2rem;
-            border-top: transparentize($primary, 70%) 1px solid;
+            border-top: transparentize($primary, 0.7) 1px solid;
         }
         padding-bottom: 1rem;
         margin-bottom: 1rem;
-        border-bottom: transparentize($primary, 70%) 1px solid;
+        border-bottom: transparentize($primary, 0.7) 1px solid;
         &:nth-last-of-type(1) {
             margin-bottom: 2rem;
         }
@@ -59,11 +64,21 @@
     li {
         &:first-child {
             margin-left: 0;
-            @include border-left-radius($border-radius);
+            @if ($pp-bootstrap-version == 4) {
+                @include border-left-radius($border-radius);
+            }
+            @if ($pp-bootstrap-version == 5) {
+                @include border-start-radius($border-radius);
+            }
         }
 
         &:last-child {
-            @include border-right-radius($border-radius);
+            @if ($pp-bootstrap-version == 4) {
+                @include border-right-radius($border-radius);
+            }
+            @if ($pp-bootstrap-version == 5) {
+                @include border-end-radius($border-radius);
+            }
         }
         a {
             text-decoration: none;
