@@ -11,7 +11,9 @@ namespace Buepro\Pizpalue\Tests\Unit\DataProcessing;
 
 use Buepro\Pizpalue\DataProcessing\PostMenuProcessor;
 use Prophecy\PhpUnit\ProphecyTrait;
+use TYPO3\CMS\Core\Core\SystemEnvironmentBuilder;
 use TYPO3\CMS\Core\Domain\Repository\PageRepository;
+use TYPO3\CMS\Core\Http\ServerRequest;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
@@ -23,8 +25,6 @@ class PostMenuProcessorTest extends UnitTestCase
 
     /** @var array $newProperties */
     protected $newProperties = ['coreActive', 'isInRootLine', 'isShortcut', 'shortcutTargetIsCurrent', 'ppActive'];
-    /** @var ContentObjectRenderer $cObj */
-    protected $cObj;
     /** @var int $currentPageUid */
     protected $currentPageUid = 1;
     /** @var array $rootLine */
@@ -43,26 +43,28 @@ class PostMenuProcessorTest extends UnitTestCase
         'active' => 0,
     ];
 
-    public function __construct(?string $name = null, array $data = [], $dataName = '')
-    {
-        parent::__construct($name, $data, $dataName);
-        $this->cObj = new ContentObjectRenderer();
-    }
-
     public function setUp(): void
     {
         parent::setUp();
         $tsfeProphecy = $this->prophesize(TypoScriptFrontendController::class);
         /** @var TypoScriptFrontendController $GLOBALS['TSFE'] */
         $GLOBALS['TSFE'] = $tsfeProphecy->reveal();
-        $GLOBALS['TSFE']->id = $this->currentPageUid;
         $GLOBALS['TSFE']->rootLine = $this->rootLine;
+        $this->setRequest($this->currentPageUid);
+    }
+
+    protected function setRequest(int $pageUid): void
+    {
+        $GLOBALS['TYPO3_REQUEST'] = (new ServerRequest())
+            ->withAttribute('applicationType', SystemEnvironmentBuilder::REQUESTTYPE_FE)
+            ->withAttribute('routing', new \TYPO3\CMS\Core\Routing\PageArguments($pageUid, '0', []))
+            ->withQueryParams(['id' => $pageUid]);
     }
 
     protected function getActualItem(array $initialProcessedData, array $processorConfiguration =  []): array
     {
         return GeneralUtility::makeInstance(PostMenuProcessor::class)->process(
-            $this->cObj,
+            new ContentObjectRenderer(),
             [],
             $processorConfiguration,
             $initialProcessedData
@@ -82,7 +84,10 @@ class PostMenuProcessorTest extends UnitTestCase
         }
     }
 
-    public function testCoreActiveProperty(): void
+    /**
+     * @test
+     */
+    public function assertCoreActiveProperty(): void
     {
         $this->resetSingletonInstances = true;
         $initial = $this->initialProcessedData;
@@ -94,7 +99,10 @@ class PostMenuProcessorTest extends UnitTestCase
         self::assertSame(1, $actual['coreActive']);
     }
 
-    public function testIsInRootLineProperty(): void
+    /**
+     * @test
+     */
+    public function assertIsInRootLineProperty(): void
     {
         $this->resetSingletonInstances = true;
         $initial = $this->initialProcessedData;
@@ -108,7 +116,10 @@ class PostMenuProcessorTest extends UnitTestCase
         self::assertSame(0, $actual['isInRootLine']);
     }
 
-    public function testIsShortcutProperty(): void
+    /**
+     * @test
+     */
+    public function assertIsShortcutProperty(): void
     {
         $this->resetSingletonInstances = true;
         $initial = $this->initialProcessedData;
@@ -120,7 +131,7 @@ class PostMenuProcessorTest extends UnitTestCase
         self::assertSame(1, $actual['isShortcut']);
     }
 
-    public function testShortcutTargetIsCurrentDataProvider(): array
+    public function assertShortcutTargetIsCurrentDataProvider(): array
     {
         return [
             'default, target current' => [1, PageRepository::DOKTYPE_DEFAULT, 1, 0],
@@ -131,9 +142,10 @@ class PostMenuProcessorTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testShortcutTargetIsCurrentDataProvider
+     * @dataProvider assertShortcutTargetIsCurrentDataProvider
+     * @test
      */
-    public function testShortcutTargetIsCurrent(
+    public function assertShortcutTargetIsCurrent(
         int $currentPageUid,
         int $doktype,
         int $shortcut,
@@ -141,6 +153,7 @@ class PostMenuProcessorTest extends UnitTestCase
     ): void {
         $this->resetSingletonInstances = true;
         $initial = $this->initialProcessedData;
+        /** @extensionScannerIgnoreLine */
         $GLOBALS['TSFE']->id = $currentPageUid;
         $initial['data']['doktype'] = $doktype;
         $initial['data']['shortcut'] = $shortcut;
@@ -148,7 +161,7 @@ class PostMenuProcessorTest extends UnitTestCase
         self::assertSame($expected, $actual['shortcutTargetIsCurrent']);
     }
 
-    public function testPpActiveDataProvider(): array
+    public function assertPpActivePropertyDataProvider(): array
     {
         return [
             'default, not in root line' => [3, 123, PageRepository::DOKTYPE_DEFAULT, 1, 0],
@@ -162,9 +175,10 @@ class PostMenuProcessorTest extends UnitTestCase
     }
 
     /**
-     * @dataProvider testPpActiveDataProvider
+     * @dataProvider assertPpActivePropertyDataProvider
+     * @test
      */
-    public function testPpActive(
+    public function assertPpActiveProperty(
         int $currentPageUid,
         int $uid,
         int $doktype,
@@ -172,8 +186,8 @@ class PostMenuProcessorTest extends UnitTestCase
         int $expected
     ):void {
         $this->resetSingletonInstances = true;
+        $this->setRequest($currentPageUid);
         $initial = $this->initialProcessedData;
-        $GLOBALS['TSFE']->id = $currentPageUid;
         $initial['data']['uid'] = $uid;
         $initial['data']['doktype'] = $doktype;
         $initial['data']['shortcut'] = $shortcut;
@@ -181,13 +195,13 @@ class PostMenuProcessorTest extends UnitTestCase
         self::assertSame($expected, $actual['ppActive']);
     }
 
-    public function testConfiguration(): void
+    public function assertActivePropertyConfiguration(): void
     {
         $this->resetSingletonInstances = true;
+        $this->setRequest(3);
         $initial = $this->initialProcessedData;
         $initial['active'] = 123;
         $initial['foo'] = 246;
-        $GLOBALS['TSFE']->id = 3;
         $initial['data']['uid'] = 123;
         $initial['data']['doktype'] = PageRepository::DOKTYPE_SHORTCUT;
         $initial['data']['shortcut'] = 3;

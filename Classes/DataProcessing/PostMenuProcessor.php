@@ -38,6 +38,9 @@ class PostMenuProcessor implements DataProcessorInterface, SingletonInterface
     /** @var ?array $rootLine Keys correspond to page uid, value to page data */
     protected $rootLine = null;
 
+    /** @var ?int $pageId */
+    protected $pageId;
+
     public function __construct()
     {
         if (is_array($this->rootLine)) {
@@ -62,9 +65,10 @@ class PostMenuProcessor implements DataProcessorInterface, SingletonInterface
         $processedData['isInRootLine'] = (int)isset($this->rootLine[$processedData['data']['uid']]);
         $processedData['isShortcut'] = (int)($processedData['data']['doktype'] === PageRepository::DOKTYPE_SHORTCUT);
         $processedData['shortcutTargetIsCurrent'] = 0;
+        $this->pageId = $this->pageId ?? $GLOBALS['TYPO3_REQUEST']->getAttribute('routing')->getPageId();
         if (
             (int)$processedData['data']['doktype'] === PageRepository::DOKTYPE_SHORTCUT &&
-            (int)$processedData['data']['shortcut'] === $GLOBALS['TSFE']->id
+            (int)$processedData['data']['shortcut'] === $this->pageId
         ) {
             $processedData['shortcutTargetIsCurrent'] = 1;
         }

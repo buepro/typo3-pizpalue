@@ -29,7 +29,7 @@
             <directory>../Tests/Unit</directory>
             <directory>../Extensions/easyconf/Tests/Unit</directory>
 <!--            <file>-->
-<!--                ../Tests/Unit/Utility/ColumnVariantsUtilityTest.php-->
+<!--                ../Tests/Unit/DataProcessing/PostMenuProcessorTest.php-->
 <!--            </file>-->
         </testsuite>
     </testsuites>

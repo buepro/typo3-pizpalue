@@ -121,6 +121,7 @@ class MenuService extends AbstractService
         );
         $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
         $messageQueue = $flashMessageService->getMessageQueueByIdentifier();
+        /** @extensionScannerIgnoreLine */
         $messageQueue->addMessage($message);
     }
 }
