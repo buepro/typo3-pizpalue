@@ -16,6 +16,7 @@ defined('TYPO3') or die('Access denied.');
     // Defines available items for (outer) classes dropdown selector
     $classesItemsList = 'pp-gallery-item-left,pp-gallery-item-right,pp-gallery-item-join,pp-gallery-item-shadow,'
         . 'pp-image-overlay,'
+        . 'pp-row-height,'
         . 'pp-tile-scroll-y,'
         . 'pp-below-header';
     $classItems = [];

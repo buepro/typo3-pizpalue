@@ -114,6 +114,10 @@
 				<source>Full page width</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-row-height">
+				<source>Row height</source>
+			</trans-unit>
+
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-image-overlay">
 				<source>Image with overlay heading</source>
 			</trans-unit>

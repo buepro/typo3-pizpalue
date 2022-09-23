@@ -38,6 +38,42 @@ if ( typeof pp !== 'undefined' ) {
 +function ($) {
 
     /**
+     * Size content elements horizontal to obtain homogeneous look.
+     */
+    $(function () {
+        /**
+         * Size the element height to the embedding row height (e.g. a content element in a column will be as high as
+         * the row it belongs to). the class pp-row-height is used for that purpose.
+         *
+         * Currently just one nesting level is supported.
+         */
+        function sizeToRowHeight() {
+            // get rows
+            var $rows = $('.pp-row-height').closest('.row');
+            $rows.each(function () {
+                var maxHeight = 0;
+
+                // reset heights
+                var $elements = $('.pp-row-height', $(this)).css('height', 'auto');
+
+                // get max height
+                $elements.each(function () {
+                    var $this = $(this);
+                    if ($this.height() > maxHeight) maxHeight = $this.height();
+                });
+
+                // set max height
+                $elements.height(maxHeight);
+            });
+        }
+        if ($('.pp-row-height').length) {
+            $(window).on('load,resize', sizeToRowHeight);
+            $('img').on('load', sizeToRowHeight);
+            sizeToRowHeight();
+        }
+    });
+
+    /**
      * Dataprotection label
      */
     $(function () {

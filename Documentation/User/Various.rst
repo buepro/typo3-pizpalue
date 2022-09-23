@@ -135,6 +135,8 @@ Class                         Description
 ============================= =============================================================================
 pp-label-dataprotection       Used in content element to define a replacement text for a data
                               protection notice check box (see contact page).
+pp-row-height                 Elements in a row using this class will have the same height (wrapping
+                              containers).
 pp-below-header               Used to shift a content element below the page header by applying a negative
                               top margin.
 pp-extend-link                Assign this class to a link to make the closest ancestor container with class
