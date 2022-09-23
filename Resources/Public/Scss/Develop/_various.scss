@@ -32,36 +32,6 @@
 }
 
 //
-// Color palette circles
-// --------------------------------------------------
-$pp-colorplate-radius: 100px;
-#colorset {
-    display: inline-block;
-    .color {
-        float: left;
-        overflow: hidden;
-        width: 2 * $pp-colorplate-radius;
-        height: 2 * $pp-colorplate-radius;
-        border-radius: $pp-colorplate-radius;
-        margin: 10px;
-    }
-    .bottomcolorrow {
-        clear: both;
-    }
-    .maincolor {
-        margin-left: $pp-colorplate-radius + 20px;
-        margin-bottom: -$pp-colorplate-radius / 5;
-        background: $primary;
-    }
-    .secundarycolor {
-        background: $secondary;
-    }
-    .complementarycolor {
-        background: $complementary;
-    }
-}
-
-//
 // Icon demo
 // --------------------------------------------------
 .pp-icondemo .ppicon {

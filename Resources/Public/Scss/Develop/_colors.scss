@@ -1,0 +1,31 @@
+.pp-debug-colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    --pp-debug-radius: 80px;
+    > div {
+        display: inline-block;
+        width: calc(2 * var(--pp-debug-radius));
+        height: calc(2 * var(--pp-debug-radius));
+        border-radius: var(--pp-debug-radius);
+        margin: calc(0.1 * var(--pp-debug-radius))
+    }
+    $tmp-nth: 1;
+    @each $tmp-name, $tmp-color in $theme-colors {
+        div:nth-child(#{$tmp-nth}) {
+            position: relative;
+            background: $tmp-color;
+            color: color-contrast($tmp-color);
+            &:after {
+                content: "#{$tmp-name} #{$tmp-color}";
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                text-align: center;
+            }
+        }
+        $tmp-nth: $tmp-nth + 1;
+    }
+}
