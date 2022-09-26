@@ -1,11 +1,13 @@
-//
+// --------------------------------------------------
 // Might be used by site packages
-//
+// --------------------------------------------------
 
+// bootstrap framework
 @if ($pp-bootstrap-version == 4) {
-    @import "Bootstrap4/mixins";
+    @import "bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
 }
 @if ($pp-bootstrap-version == 5) {
-    @import "Bootstrap5/mixins";
+    @import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/mixins";
 }
-
+// pizpalue
+@import "Theme/mixins";

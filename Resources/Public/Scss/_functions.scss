@@ -2,9 +2,17 @@
 // Might be used by site packages
 //
 
+//
+// bootstrap framework
+// --------------------------------------------------
 @if ($pp-bootstrap-version == 4) {
-    @import "Bootstrap4/functions";
+    @import "bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/functions";
 }
 @if ($pp-bootstrap-version == 5) {
-    @import "Bootstrap5/functions";
+    @import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/functions";
 }
+
+//
+// pizpalue
+// --------------------------------------------------
+@import "Theme/functions";

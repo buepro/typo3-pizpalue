@@ -1,7 +1,7 @@
 //
 // Initialize
 // --------------------------------------------------
-@import "../Bootstrap5/Theme/functions";
+@import "../Theme/functions";
 
 //
 // Create bootstrap components
@@ -15,12 +15,12 @@
 @import "bootstrap_package/Resources/Public/Scss/bootstrap4/compat/mixins";
 @import "bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/functions";
 @import "bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
-@import "../Bootstrap5/Theme/variables";
+@import "../Theme/variables";
 @import "bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/bootstrap";
 
 //
 // Create bootstrap package and pizpalue components
 // --------------------------------------------------
-@import "../Bootstrap5/Theme/mixins";
+@import "../Theme/mixins";
 @import "BootstrapPackage/components";
-@import "../Bootstrap5/Theme/components";
+@import "../Theme/components";

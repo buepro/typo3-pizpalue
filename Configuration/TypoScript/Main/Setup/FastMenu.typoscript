@@ -1,6 +1,6 @@
 page {
     includeCSS {
-        fastMenu = EXT:pizpalue/Resources/Public/Scss/Feature/fastmenu.scss
+        fastMenu = EXT:pizpalue/Resources/Public/Scss/Theme/Feature/fastmenu.scss
     }
 
     includeJSFooterlibs {

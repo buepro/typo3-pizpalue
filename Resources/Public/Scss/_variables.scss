@@ -1,18 +1,26 @@
-//
+// --------------------------------------------------
 // Might be used by site packages
-//
+// --------------------------------------------------
 
 //
 // Presets
-//
+// --------------------------------------------------
 @import "presets";
 
 //
 // Variables
-//
+// --------------------------------------------------
 @if ($pp-bootstrap-version == 4) {
-    @import "Bootstrap4/variables";
+    // bootstrap_package
+    @import "bootstrap_package/Resources/Public/Scss/bootstrap4/variables";
+    // bootstrap framework
+    @import "bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
 }
 @if ($pp-bootstrap-version == 5) {
-    @import "Bootstrap5/variables";
+    // bootstrap_package
+    @import "bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
+    // bootstrap framework
+    @import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
 }
+// pizpalue
+@import "Theme/variables";
