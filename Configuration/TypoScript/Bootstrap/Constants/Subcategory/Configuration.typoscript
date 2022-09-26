@@ -6,8 +6,6 @@ plugin.bootstrap_package.settings.scss {
     pp-bootstrap-version = 5
     # Enable presets in extension user_pizpalue. See `EXT:pizpalue/Resources/Public/Scss/_presets.scss`
     pp-enable-user-presets = false
-    # Set to `composer-root` if pizpalue is used as a root package (e.g. for development)
-    pp-install-dir =
 
     #---------------------------------------------------------#
     # Photoswipe

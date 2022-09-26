@@ -5,21 +5,13 @@
 //
 // bootstrap_package
 // --------------------------------------------------
-@if ($pp-install-dir != 'composer-root') {
-    @import "../../../../../bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
-} @else {
-    @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
-}
+@import "bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
 
 
 //
 // bootstrap framework
 // --------------------------------------------------
-@if ($pp-install-dir != 'composer-root') {
-    @import "../../../../../bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
-} @else {
-    @import "../../../../.build/public/typo3conf/ext/bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
-}
+@import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
 
 //
 // pizpalue
