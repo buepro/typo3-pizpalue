@@ -27,11 +27,17 @@
 			<trans-unit id="paletteMenuMainSubpage" resname="paletteMenuMainSubpage">
 				<source>Main on subpages</source>
 			</trans-unit>
+			<trans-unit id="paletteMenuToggler" resname="paletteMenuToggler">
+				<source>Main toggler</source>
+			</trans-unit>
 			<trans-unit id="paletteMenuSelect" resname="paletteMenuSelect">
 				<source>Select available menus</source>
 			</trans-unit>
-			<trans-unit id="paletteMenuMeta" resname="paletteMenuMeta">
-				<source>Meta menu</source>
+			<trans-unit id="paletteMenuCopyright" resname="paletteMenuCopyright">
+				<source>Copyright menu</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuFast" resname="paletteMenuFast">
+				<source>Fast menu</source>
 			</trans-unit>
 			<trans-unit id="paletteMenuFooter" resname="paletteMenuFooter">
 				<source>Footer menu</source>
@@ -39,11 +45,8 @@
 			<trans-unit id="paletteMenuLanguage" resname="paletteMenuLanguage">
 				<source>Language menu</source>
 			</trans-unit>
-			<trans-unit id="paletteMenuFast" resname="paletteMenuFast">
-				<source>Fast menu</source>
-			</trans-unit>
-			<trans-unit id="paletteMenuToggler" resname="paletteMenuToggler">
-				<source>Main toggler</source>
+			<trans-unit id="paletteMenuMeta" resname="paletteMenuMeta">
+				<source>Meta menu</source>
 			</trans-unit>
 			<trans-unit id="paletteMenuScroll" resname="paletteMenuScroll">
 				<source>Scroll menu</source>

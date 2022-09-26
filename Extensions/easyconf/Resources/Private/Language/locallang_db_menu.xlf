@@ -42,11 +42,36 @@
 				<source>Fixed on top</source>
 			</trans-unit>
 
+			<trans-unit id="menu_toggler_grid-float-breakpoint" resname="menu_toggler_grid-float-breakpoint">
+				<source>Breakpoint</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-width" resname="menu_toggler_pp-header-toggler-width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-padding" resname="menu_toggler_pp-header-toggler-padding">
+				<source>Padding</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-line-gap" resname="menu_toggler_pp-header-toggler-line-gap">
+				<source>Line gap</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-line-width" resname="menu_toggler_pp-header-toggler-line-width">
+				<source>Line width</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-line-height" resname="menu_toggler_pp-header-toggler-line-height">
+				<source>Line height</source>
+			</trans-unit>
+			<trans-unit id="menu_toggler_pp-header-toggler-margin-right" resname="menu_toggler_pp-header-toggler-margin-right">
+				<source>Margin right</source>
+			</trans-unit>
+
 			<trans-unit id="menu_breadcrumb_enable" resname="menu_breadcrumb_enable">
 				<source>Breadcrumb</source>
 			</trans-unit>
-			<trans-unit id="menu_meta_enable" resname="menu_meta_enable">
-				<source>Meta</source>
+			<trans-unit id="menu_copyright_enable" resname="menu_copyright_enable">
+				<source>Copyright</source>
+			</trans-unit>
+			<trans-unit id="menu_fast_enable" resname="menu_fast_enable">
+				<source>Fast</source>
 			</trans-unit>
 			<trans-unit id="menu_footer_enable" resname="menu_footer_enable">
 				<source>Footer</source>
@@ -54,47 +79,15 @@
 			<trans-unit id="menu_language_enable" resname="menu_language_enable">
 				<source>Language</source>
 			</trans-unit>
-			<trans-unit id="menu_fast_enable" resname="menu_fast_enable">
-				<source>Fast</source>
+			<trans-unit id="menu_meta_enable" resname="menu_meta_enable">
+				<source>Meta</source>
 			</trans-unit>
 			<trans-unit id="menu_scroll_enable" resname="menu_scroll_enable">
 				<source>Scroll</source>
 			</trans-unit>
 
-			<trans-unit id="menu_meta_navigation_value" resname="menu_meta_navigation_value">
-				<source>Navigation value</source>
-			</trans-unit>
-			<trans-unit id="menu_meta_navigation_type" resname="menum_eta_navigation_type">
-				<source>Navigation type</source>
-			</trans-unit>
-			<trans-unit id="menu_meta_include_not_in_menu" resname="menu_meta_include_not_in_menu">
-				<source>Include "Not in menu"</source>
-			</trans-unit>
-
-			<trans-unit id="menu_footer_navigation_value" resname="menu_footer_navigation_value">
-				<source>Navigation value</source>
-			</trans-unit>
-			<trans-unit id="menu_footer_navigation_type" resname="menu_footer_navigation_type">
-				<source>Navigation type</source>
-			</trans-unit>
-			<trans-unit id="menu_footer_include_not_in_menu" resname="menu_footer_include_not_in_menu">
-				<source>Include "Not in menu"</source>
-			</trans-unit>
-			<trans-unit id="menu_footer_levels" resname="menu_footer_levels">
-				<source>Levels</source>
-			</trans-unit>
-			<trans-unit id="menu_footer_icon_enable" resname="menu_footer_icon_enable">
-				<source>Enable icons</source>
-			</trans-unit>
-			<trans-unit id="menu_footer_icon_width" resname="menu_footer_icon_width">
-				<source>Icons width</source>
-			</trans-unit>
-			<trans-unit id="menu_footer_icon_height" resname="menu_footer_icon_height">
-				<source>Icons height</source>
-			</trans-unit>
-
-			<trans-unit id="menu_language_language_value" resname="menu_language_language_value">
-				<source>Language value</source>
+			<trans-unit id="menu_copyright_copyright" resname="menu_copyright_copyright">
+				<source>Text</source>
 			</trans-unit>
 
 			<trans-unit id="paletteMenuFast.description" resname="paletteMenuFast.description">
@@ -132,26 +125,40 @@
 				<source>Third item link</source>
 			</trans-unit>
 
-			<trans-unit id="menu_toggler_grid-float-breakpoint" resname="menu_toggler_grid-float-breakpoint">
-				<source>Breakpoint</source>
+			<trans-unit id="menu_footer_navigation_value" resname="menu_footer_navigation_value">
+				<source>Navigation value</source>
 			</trans-unit>
-			<trans-unit id="menu_toggler_pp-header-toggler-width" resname="menu_toggler_pp-header-toggler-width">
-				<source>Width</source>
+			<trans-unit id="menu_footer_navigation_type" resname="menu_footer_navigation_type">
+				<source>Navigation type</source>
 			</trans-unit>
-			<trans-unit id="menu_toggler_pp-header-toggler-padding" resname="menu_toggler_pp-header-toggler-padding">
-				<source>Padding</source>
+			<trans-unit id="menu_footer_include_not_in_menu" resname="menu_footer_include_not_in_menu">
+				<source>Include "Not in menu"</source>
 			</trans-unit>
-			<trans-unit id="menu_toggler_pp-header-toggler-line-gap" resname="menu_toggler_pp-header-toggler-line-gap">
-				<source>Line gap</source>
+			<trans-unit id="menu_footer_levels" resname="menu_footer_levels">
+				<source>Levels</source>
 			</trans-unit>
-			<trans-unit id="menu_toggler_pp-header-toggler-line-width" resname="menu_toggler_pp-header-toggler-line-width">
-				<source>Line width</source>
+			<trans-unit id="menu_footer_icon_enable" resname="menu_footer_icon_enable">
+				<source>Enable icons</source>
 			</trans-unit>
-			<trans-unit id="menu_toggler_pp-header-toggler-line-height" resname="menu_toggler_pp-header-toggler-line-height">
-				<source>Line height</source>
+			<trans-unit id="menu_footer_icon_width" resname="menu_footer_icon_width">
+				<source>Icons width</source>
 			</trans-unit>
-			<trans-unit id="menu_toggler_pp-header-toggler-margin-right" resname="menu_toggler_pp-header-toggler-margin-right">
-				<source>Margin right</source>
+			<trans-unit id="menu_footer_icon_height" resname="menu_footer_icon_height">
+				<source>Icons height</source>
+			</trans-unit>
+
+			<trans-unit id="menu_language_language_value" resname="menu_language_language_value">
+				<source>Language value</source>
+			</trans-unit>
+
+			<trans-unit id="menu_meta_navigation_value" resname="menu_meta_navigation_value">
+				<source>Navigation value</source>
+			</trans-unit>
+			<trans-unit id="menu_meta_navigation_type" resname="menum_eta_navigation_type">
+				<source>Navigation type</source>
+			</trans-unit>
+			<trans-unit id="menu_meta_include_not_in_menu" resname="menu_meta_include_not_in_menu">
+				<source>Include "Not in menu"</source>
 			</trans-unit>
 
 			<trans-unit id="paletteMenuScroll.description" resname="paletteMenuScroll.description">
