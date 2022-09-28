@@ -89,6 +89,17 @@ $frame-backgrounds: map-merge((
 ), $frame-backgrounds);
 
 //
+// Frame inner spacing variants
+//
+$pp-frame-inner-spacing-variants: () !default;
+$pp-frame-inner-spacing-variants: map-merge((
+    'none': 0,
+    'small': 0.5,
+    'large': 1.5,
+    'extra-large': 2.0
+), $pp-frame-inner-spacing-variants);
+
+//
 // General space
 // --------------------------------------------------
 $pp-space-scaling: (

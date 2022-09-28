@@ -121,6 +121,14 @@ class FrameDataViewHelper extends AbstractViewHelper
         if (($breakpoint = trim((string)($data['tx_pizpalue_layout_breakpoint'] ?? ''))) !== '') {
             $result['classes'][] = 'pp-layout-' . $breakpoint;
         }
+        if (($data['frame_class'] ?? '') !== 'none') {
+            if (($innerSpaceClass = $data['tx_pizpalue_inner_space_before_class'] ?? '') !== '') {
+                $result['classes'][] = 'pp-inner-space-before-' . $innerSpaceClass;
+            }
+            if (($innerSpaceClass = $data['tx_pizpalue_inner_space_after_class'] ?? '') !== '') {
+                $result['classes'][] = 'pp-inner-space-after-' . $innerSpaceClass;
+            }
+        }
         if ((bool)($data['background_image'] ?? false)) {
             $result['classes'][] = 'pp-has-backgroundimage';
         }

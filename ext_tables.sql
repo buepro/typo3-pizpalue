@@ -8,6 +8,8 @@ CREATE TABLE tt_content (
 	tx_pizpalue_subheader_class varchar(255) DEFAULT '' NOT NULL,
 	layout varchar(255) DEFAULT '' NOT NULL,
 	tx_pizpalue_layout_breakpoint varchar(15) DEFAULT '' NOT NULL,
+	tx_pizpalue_inner_space_before_class varchar(255) DEFAULT '' NOT NULL,
+	tx_pizpalue_inner_space_after_class varchar(255) DEFAULT '' NOT NULL,
 	tx_pizpalue_classes varchar(255) DEFAULT '' NOT NULL,
 	tx_pizpalue_inner_classes varchar(255) DEFAULT '' NOT NULL,
 	tx_pizpalue_style text,

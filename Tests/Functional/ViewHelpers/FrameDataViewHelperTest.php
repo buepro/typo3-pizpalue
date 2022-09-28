@@ -42,6 +42,8 @@ class FrameDataViewHelperTest extends FunctionalTestCase
         'frame_class' => 'default',
         'background_image' => 0,
         'tx_pizpalue_layout_breakpoint' => '',
+        'tx_pizpalue_inner_space_before_class' => '',
+        'tx_pizpalue_inner_space_after_class' => '',
         'tx_pizpalue_animation' => 0,
         'tx_pizpalue_classes' => 'test-1636104021 test-1636104031',
         'tx_pizpalue_inner_classes' => 'test-1663670419',
@@ -271,5 +273,45 @@ class FrameDataViewHelperTest extends FunctionalTestCase
             $assets = $this->assetCollector->{'get' . $animationAsset['type'] . 's'}();
             self::assertArrayHasKey($animationAsset['id'], $assets);
         }
+    }
+
+    public function innerSpacingsSetPropertiesDataProvider(): array
+    {
+        $expectedClasses = $this->getDefaultExpected()['classes'];
+        return [
+            'inner spacing before' => [
+                array_replace($this->contentData, ['tx_pizpalue_inner_space_before_class' => 'foo']),
+                array_replace(
+                    $this->getDefaultExpected(),
+                    ['classes' => array_merge(['pp-inner-space-before-foo'], $expectedClasses)]
+                ),
+            ],
+            'inner spacing after' => [
+                array_replace($this->contentData, ['tx_pizpalue_inner_space_after_class' => 'bar']),
+                array_replace(
+                    $this->getDefaultExpected(),
+                    ['classes' => array_merge(['pp-inner-space-after-bar'], $expectedClasses)]
+                ),
+            ],
+            'inner spacing before and after' => [
+                array_replace($this->contentData, [
+                    'tx_pizpalue_inner_space_before_class' => 'foo',
+                    'tx_pizpalue_inner_space_after_class' => 'bar',
+                ]),
+                array_replace(
+                    $this->getDefaultExpected(),
+                    ['classes' => array_merge(['pp-inner-space-before-foo', 'pp-inner-space-after-bar'], $expectedClasses)]
+                ),
+            ],
+        ];
+    }
+
+    /**
+     * @dataProvider innerSpacingsSetPropertiesDataProvider
+     * @test
+     */
+    public function innerSpacingsSetProperties(array $data, array $expectedData): void
+    {
+        $this->assertViewHelperRendering($data, $this->pizpalueConstants, $expectedData);
     }
 }

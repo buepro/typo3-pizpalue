@@ -1,16 +1,4 @@
 //
-// Set frame headings and links
-// --------------------------------------------------
-.frame {
-    @include pp-make-frame-background();
-}
-@each $name, $settings in $frame-backgrounds {
-    .frame-background-#{$name} {
-        @include pp-set-frame-background-variables($settings);
-    }
-}
-
-//
 // Add frame spacing variable
 // --------------------------------------------------
 :root {
@@ -21,6 +9,32 @@
             --pp-frame-spacing: var(--frame-spacing-#{$breakpoint}, #{$prevSpacing});
         }
         $prevSpacing: var(--frame-spacing-#{$breakpoint});
+    }
+    --pp-frame-inner-spacing-before: var(--frame-spacing);
+    --pp-frame-inner-spacing-after: var(--frame-spacing);
+}
+
+//
+// Set frame headings, links and inner spacing
+// --------------------------------------------------
+.frame {
+    --pp-frame-inner-spacing-before: var(--frame-spacing);
+    --pp-frame-inner-spacing-after: var(--frame-spacing);
+    @include pp-make-frame-background();
+    @each $tmp-variant, $tmp-scaling in $pp-frame-inner-spacing-variants {
+        &.pp-inner-space-before-#{$tmp-variant} {
+            --pp-frame-inner-spacing-before: calc(#{$tmp-scaling} * var(--frame-spacing));
+        }
+        &.pp-inner-space-after-#{$tmp-variant} {
+            --pp-frame-inner-spacing-after: calc(#{$tmp-scaling} * var(--frame-spacing));
+        }
+    }
+    padding-top: var(--pp-frame-inner-spacing-before);
+    padding-bottom: var(--pp-frame-inner-spacing-after);
+}
+@each $name, $settings in $frame-backgrounds {
+    .frame-background-#{$name} {
+        @include pp-set-frame-background-variables($settings);
     }
 }
 

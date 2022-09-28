@@ -202,6 +202,28 @@
 				<source>Extra large</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.innerSpaceBeforeClass">
+				<source>Inner Space Before</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.innerSpaceAfterClass">
+				<source>Inner Space After</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.innerSpace.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.innerSpace.small">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.innerSpace.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.innerSpace.large">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.innerSpace.extraLarge">
+				<source>Extra large</source>
+			</trans-unit>
+
 			<trans-unit id="tx_pizpalue_ttc.dummyAsset">
 				<source>Dummy asset</source>
 			</trans-unit>
