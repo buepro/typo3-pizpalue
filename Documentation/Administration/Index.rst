@@ -23,8 +23,8 @@ Supported extensions
 ================================ ================
 Extension                        Version tested
 ================================ ================
-container_elements               3.0.0
-easyconf                         1.0.1
+container_elements               4.0.0
+easyconf                         1.3.2
 eventnews                        5.0.0
 news                             9.1.0
 tt_address                       6.0.1
@@ -66,19 +66,17 @@ Upgrade
    Upgrade tasks are only needed to be carried out in case breaking changes were
    introduced between the old and new release. Breaking changes are marked with
    `[!!!]` in the `commit messages <https://github.com/buepro/typo3-pizpalue/commits/main>`__.
-   The :ref:`changelogs <changelog>` might contain a section listing introduced
-   breaking changes.
+   When upgrading please make sure to understand all the breaking changes and
+   carry out the wizards from the upgrade module.
 
 The following upgrade descriptions are available:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   Upgrade_11.0
-   Upgrade_11.2
-   Upgrade_11.4
-   Upgrade_12.0
-   Upgrade_13.0
+   Upgrade/v14.0.0
+   Upgrade/v13.0.0
+   Upgrade/v12.0.0
 
 
 .. _admin_extensions:

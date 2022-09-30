@@ -118,8 +118,20 @@ It might be needed to add the following extensions:
       'typo3conf/ext/pizpalue',
    ];
 
+Documentation
+=============
+
+Create upgrade description
+--------------------------
+
+#. `git log v13.2.0..7ab170cc --pretty="* %s (%cd, %h)%n+++%n%n%b%n"
+   --date=format:%d.%m.%Y --abbrev-commit --grep "\!\!\!" > Upgrade.rst`
+
+#. Format headings
+
 Notes
 =====
 -  Bootstrap package sync status:
+
    - Branch BP-12.0: 22.04.2022 / commit 16734ba6
    - Branch BP-12.1: 26.11.2021 / commit 028a786b

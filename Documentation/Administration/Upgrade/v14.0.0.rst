@@ -1,0 +1,407 @@
+.. include:: /Includes.rst.txt
+
+.. _admin_upgrade_14.0:
+
+==========================================
+Upgrade to version 14.0
+==========================================
+
+Breaking changes
+================
+
+Correct background size in tiles (03.10.2022, 61ce0c8)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+An upgrade wizard step has been altered to
+move background color defining classes to
+the background color field. This might
+lead to a less dominant css definition
+which in turn could result in background
+colors not being overwritten anymore.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Review the content element backgrounds
+and correct them in the site package.
+Focus on content elements that used
+bootstrap classes like `bg-primary`.
+
+
+Add content element inner class field (23.09.2022, a0beac5)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The new content element field allows to assign css
+classes to the inner container enabling more diverse
+styling. Remember the inner container is only
+available when the content element contains a frame.
+
+As a result css classes acting on the inner content
+element container became obsolete and have been
+dropped. This includes the following classes:
+
+`pp-inner-margin, pp-inner-padding,
+pp-inner-bgwhite70, pp-inner-bggrey70,
+pp-inner-bgblack70`.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+*  Carry out the update wizards to rename or move
+   dropped css classes.
+
+*  If still needed add the dropped classes to the
+   site package.
+
+
+Enable background color in frameless ce (23.09.2022, 635b755)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The background color selector is now as well
+available for frameless content elements. In
+this context the classes `pp-space-before-none`
+and `pp-space-after-none` have been dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Adapt your site package to the absent space
+classes `pp-space-before-none` and
+`pp-space-after-none`.
+
+
+Drop frameless content css class (23.09.2022, 2b38309)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The class `pp-content` was initially used in
+content elements to indicate that no frame
+is used. For clarity reasons a more descriptive
+class `pp-frameless-content` has been
+introduced some time ago leading to have two
+classes serving the same purpose. This
+redundancy has now been resolved.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Replace references to the css class
+`pp-content` with `pp-frameless-content`.
+
+
+Drop language menu css + refactor scss (23.09.2022, 217c899)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The language menu style definitions were dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+If needed they should be added to the site
+package.
+
+
+Drop 3rd party extension css (23.09.2022, fb97486)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+Small css adjustments from several extensions
+have been dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+If needed they should be added to the site
+package.
+
+
+Drop scss link and background mixins (23.09.2022, 36b7278)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The scss mixins `pp-make-link` and
+`pp-make-background` have been dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+If needed the mixins should be added to the site
+package.
+
+
+Drop css card classes (23.09.2022, d9bb148)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The classes `pp-card-[color-key]` have been
+dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+*  Use the upgrade wizard to replace the
+   card with the respective panel classes
+   in the content element attributes
+   field.
+
+*  Replace `pp-card-[color-key]` with
+   `pp-inner-panel pp-inner-panel-[color-key]`
+   else where. Replace `[color-key]` with
+   one of the brand colors.
+
+
+Add scss frame background variables (23.09.2022, a08abdc)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+To simplify frame background adjustments scss
+variables `pp-frame-background-[color-key]`
+have been added where `[color-key]` has to be
+substituted with one of the brand colors
+(primary, secondary, etc.).
+
+To adjust a frame with a background color
+a typoscript declaration can be added to
+the site package as following:
+
+.. code-block:: typoscript
+
+   plugin.bootstrap_package.settings.scss {
+      pp-frame-background-primary = ('color': 'red')
+   }
+
+With this change the link styling has been
+simplified by dropping the extended styling
+when `link-color: inherit` has been in place.
+In case a site package makes use of it the
+link styling will be altered.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+Redefine the link styling in the site package.
+
+
+Drop redundant css color classes (23.09.2022, 914f040)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The following classes defining the background color
+have been dropped:
+
+`pp-bg-primary, pp-bg-secondary, pp-bg-complementary,
+pp-bg-light, pp-bg-dark`
+
+The background can already be defined with the
+bootstrap classes.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+*  Run the upgrade wizard to replace the custom
+   classes with their bootstrap counterpart.
+
+*  Replace the dropped classes manually by
+   removing the "pp-" prefix from the class.
+
+
+Rename headings color scss variable (23.09.2022, 90f9c92)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The scss variable `--pp-frame-heading-color`
+has been renamed to `--pp-frame-headings-color`.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Rename the variable where it has been used
+or add the compatibility declaration
+`--pp-frame-heading-color = var
+(--pp-frame-heading-color)` to the site package.
+
+
+Remove obsolete margin from carousel (23.09.2022, fcc3ab3)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+For the carousel item type "Text and image" the
+left margin definition from the text block has
+been dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+If still required the style definition should
+be added to the site package.
+
+
+Drop AOS animation support (23.09.2022, e119e43)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The package `michalsnik/aos` didn't get any
+update for a long time and has a lot of issues.
+This is why the support for it has been dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Use josh or twikito animation instead.
+
+
+Remove deprecated `google-webfontfamily` (23.09.2022, 9431dab)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The deprecated typoscript constant
+`pizpalue.style.google-webfontfamily` has been
+dropped.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+If needed the constant should be added to the site
+package.
+
+
+Remove josh attribute substitution (23.09.2022, a648acf)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The josh animation attribute name has been changed
+from `data-josh-delay` to `data-josh-anim-delay`
+in pizpalue version 12. The substitution method
+that renamed the attribute has been dropped. As a
+result animations still using the old attribute
+name do not work anymore.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+Carry out the upgrade wizard step named `[Pizpalue]
+Migrate the "Additional attributes" field`.
+
+
+Drop deprecated EmailFinisher (23.09.2022, 606ba8e)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The EmailFinisher has been moved.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+Use `\Buepro\Pizpalue\Form\Finishers\EmailFinisher`
+instead.
+
+
+Drop deprecated css classes (23.09.2022, 8d15166)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The deprecated css classes `pp-bg-centercover`
+and `pp-bg-fixed` have been dropped.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+The needed class be added to the site package.
+
+
+Drop css class `pp-ce-overlaycard` (23.09.2022, ae93ec0)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The deprecated css class `pp-ce-overlaycard` has
+been dropped.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+In case the class has still been in use the
+related content element could be changed to
+"Picture with overlay" or the class could
+be added to the site package.
+
+
+Remove custom theme (23.09.2022, 295a93f)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+Pizpalue provided css styles that rather should
+be part of a site package. This included content
+element frame and structure element customizations.
+In order to better separate concerns these styles
+have been dropped.
+
+Corrective actions
+~~~~~~~~~~~~~~~~~~
+
+Check the styles needed for the site and add them
+to the site package. See as well commit `983127cd`
+from extension `user_pizpalue
+<https://github.com/buepro/typo3-user_pizpalue>`__
+
+
+Drop navbar scss properties (05.09.2022, 5bd12ee)
+----------------------------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The scss properties `navbar-height`, `navbar-height-sm`
+and `navbar-height-lg` have been dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Define the navbar heights either with the scss array
+`navbar-heights` or use the breakpoint specific
+variables `pp-navbar-height-[breakpoint]` where
+`[breakpoint]` is one from the list `xs, sm, md, lg,
+xl, xxl`.
+
+
