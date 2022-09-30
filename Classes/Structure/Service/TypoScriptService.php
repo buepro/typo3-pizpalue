@@ -16,6 +16,9 @@ class TypoScriptService
 {
     public function getVariants(string $tsPath = 'variants'): ?array
     {
+        if (!is_array($GLOBALS['TSFE']->tmpl->setup)) {
+            return null;
+        }
         $result = null;
         /** @var CoreTypoScriptService $typoScriptService */
         $typoScriptService = GeneralUtility::makeInstance(CoreTypoScriptService::class);
