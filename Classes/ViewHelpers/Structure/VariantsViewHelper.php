@@ -47,7 +47,8 @@ class VariantsViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $result = (GeneralUtility::makeInstance(VariantsModifierStack::class))->getVariants($arguments['initialVariants']);
+        $result = (GeneralUtility::makeInstance(VariantsModifierStack::class))
+            ->getVariants($arguments['initialVariants'] ?? '');
         if ($arguments['as']) {
             $renderingContext->getVariableProvider()->add($arguments['as'], $result);
             return '';
