@@ -24,17 +24,24 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
     /**
      * @var string[]
      */
-    private $replacementClasses = [
-        'pp-bg-primary' => 'bg-primary',
-        'pp-bg-secondary' => 'bg-secondary',
-        'pp-bg-complementary' => 'bg-complementary',
-        'pp-bg-light' => 'bg-light',
+    private $movedToFrameBackgroundClass = [
+        'pp-bg-primary' => 'primary',
+        'pp-bg-secondary' => 'secondary',
+        'pp-bg-complementary' => 'complementary',
+        'pp-bg-light' => 'light',
+        'bg-primary' => 'primary',
+        'bg-secondary' => 'secondary',
+        'bg-complementary' => 'complementary',
+        'bg-tertiary' => 'tertiary',
+        'bg-quaternary' => 'quaternary',
+        'bg-light' => 'light',
+        'bg-dark' => 'dark',
     ];
 
     /**
      * @var string[]
      */
-    private $movedClasses = [
+    private $movedToInnerClasses = [
         'pp-card-primary' => 'pp-panel pp-panel-primary',
         'pp-card-secondary' => 'pp-panel pp-panel-secondary',
         'pp-card-complementary' => 'pp-panel pp-panel-complementary',
@@ -60,7 +67,7 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
      */
     public function getTitle(): string
     {
-        return '[Pizpalue] Migrate the "Additional classes" field';
+        return '[Pizpalue] Migrate the content element "Additional classes" field';
     }
 
     /**
@@ -68,8 +75,8 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
      */
     public function getDescription(): string
     {
-        return 'This wizard step checks for classes in the filed "Additional classes" to be replaced or moved to the ' .
-            'inner classes field.';
+        return 'This wizard step checks the content element field "Additional classes"  for classes to be moved ' .
+            'to the background color or the inner classes field.';
     }
 
     /**
@@ -82,10 +89,10 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
         ];
     }
 
-    private function getReplacedClassesConstraints(QueryBuilder $queryBuilder): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression
+    private function getMovedToFrameBackgroundClassesConstraints(QueryBuilder $queryBuilder): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression
     {
         $constraints = [];
-        foreach ($this->replacementClasses as $oldClass => $newClass) {
+        foreach ($this->movedToFrameBackgroundClass as $oldClass => $newClass) {
             $constraints[] = $queryBuilder->expr()->orX(
                 $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter($oldClass . '%', \PDO::PARAM_STR)),
                 $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter('% ' . $oldClass . '%', \PDO::PARAM_STR))
@@ -94,10 +101,10 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
         return $queryBuilder->expr()->orX(...$constraints);
     }
 
-    private function getMovedClassesConstraints(QueryBuilder $queryBuilder): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression
+    private function getMovedToInnerClassesConstraints(QueryBuilder $queryBuilder): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression
     {
         $constraints = [];
-        foreach ($this->movedClasses as $oldClass => $newClass) {
+        foreach ($this->movedToInnerClasses as $oldClass => $newClass) {
             $constraints[] = $queryBuilder->expr()->orX(
                 $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter($oldClass . '%', \PDO::PARAM_STR)),
                 $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter('% ' . $oldClass . '%', \PDO::PARAM_STR))
@@ -116,8 +123,8 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
         $result = $queryBuilder->count('uid')
             ->from('tt_content')
             ->where($queryBuilder->expr()->orX(
-                $this->getReplacedClassesConstraints($queryBuilder),
-                $this->getMovedClassesConstraints($queryBuilder)
+                $this->getMovedToFrameBackgroundClassesConstraints($queryBuilder),
+                $this->getMovedToInnerClassesConstraints($queryBuilder)
             ))
             ->execute();
         if ($result instanceof Result) {
@@ -131,50 +138,22 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
      */
     public function executeUpdate(): bool
     {
-        return $this->executeReplaceUpdate() && $this->executeMoveUpdate();
-    }
-
-    private function executeReplaceUpdate(): bool
-    {
         $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
         $queryBuilder = $connection->createQueryBuilder();
         $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $queryResult = $queryBuilder->select('uid', 'tx_pizpalue_classes')
+        $queryResult = $queryBuilder->select('uid', 'background_color_class', 'tx_pizpalue_classes', 'tx_pizpalue_inner_classes')
             ->from('tt_content')
-            ->where($this->getReplacedClassesConstraints($queryBuilder))
-            ->execute();
-        if (!($queryResult instanceof Result)) {
-            return false;
-        }
-        while (is_array($record = $queryResult->fetchAssociative()) && is_string($record['tx_pizpalue_classes'])) {
-            $queryBuilder = $connection->createQueryBuilder();
-            $queryBuilder->update('tt_content')
-                ->where(
-                    $queryBuilder->expr()->eq(
-                        'uid',
-                        $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
-                    )
-                )
-                ->set('tx_pizpalue_classes', $this->replaceClasses($record['tx_pizpalue_classes']));
-            $queryBuilder->execute();
-        }
-        return true;
-    }
-
-    private function executeMoveUpdate(): bool
-    {
-        $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
-        $queryBuilder = $connection->createQueryBuilder();
-        $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $queryResult = $queryBuilder->select('uid', 'tx_pizpalue_classes', 'tx_pizpalue_inner_classes')
-            ->from('tt_content')
-            ->where($this->getMovedClassesConstraints($queryBuilder))
+            ->where($queryBuilder->expr()->orX(
+                $this->getMovedToFrameBackgroundClassesConstraints($queryBuilder),
+                $this->getMovedToInnerClassesConstraints($queryBuilder)
+            ))
             ->execute();
         if (!($queryResult instanceof Result)) {
             return false;
         }
         while (
             is_array($record = $queryResult->fetchAssociative()) &&
+            is_string($record['background_color_class']) &&
             is_string($record['tx_pizpalue_classes']) &&
             is_string($record['tx_pizpalue_inner_classes'])
         ) {
@@ -186,8 +165,9 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
                         $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
                     )
                 )
-                ->set('tx_pizpalue_classes', $this->removeClasses($record['tx_pizpalue_classes']))
-                ->set('tx_pizpalue_inner_classes', $this->addClasses(
+                ->set('background_color_class', $this->getFrameBackgroundClass($record['tx_pizpalue_classes']))
+                ->set('tx_pizpalue_classes', $this->getPizpalueClasses($record['tx_pizpalue_classes']))
+                ->set('tx_pizpalue_inner_classes', $this->getPizpalueInnerClasses(
                     $record['tx_pizpalue_classes'],
                     $record['tx_pizpalue_inner_classes']
                 ));
@@ -196,31 +176,34 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
         return true;
     }
 
-    private function replaceClasses(string $classes): string
+    private function getFrameBackgroundClass(string $classes): string
     {
-        $actualClasses = GeneralUtility::trimExplode(' ', $classes, true);
-        $newClasses = array_map(function (string $actualClass): string {
-            return $this->replacementClasses[$actualClass] ?? $actualClass;
-        }, $actualClasses);
-        return implode(' ', $newClasses);
+        $classes = GeneralUtility::trimExplode(' ', $classes, true);
+        foreach ($classes as $class) {
+            if (isset($this->movedToFrameBackgroundClass[$class])) {
+                return $this->movedToFrameBackgroundClass[$class];
+            }
+        }
+        return 'none';
     }
 
-    private function removeClasses(string $classes): string
+    private function getPizpalueClasses(string $classes): string
     {
         $actualClasses = GeneralUtility::trimExplode(' ', $classes, true);
-        $newClasses = array_filter($actualClasses, function (string $actualClass): bool {
-            return !isset($this->movedClasses[$actualClass]);
+        $movedClasses = array_merge($this->movedToFrameBackgroundClass, $this->movedToInnerClasses);
+        $newClasses = array_filter($actualClasses, function (string $actualClass) use ($movedClasses): bool {
+            return !isset($movedClasses[$actualClass]);
         });
         return implode(' ', $newClasses);
     }
 
-    private function addClasses(string $classes, string $innerClasses): string
+    private function getPizpalueInnerClasses(string $classes, string $innerClasses): string
     {
         $classes = GeneralUtility::trimExplode(' ', $classes, true);
         $actualClasses = GeneralUtility::trimExplode(' ', $innerClasses, true);
         foreach ($classes as $class) {
-            if (isset($this->movedClasses[$class])) {
-                $actualClasses[] = $this->movedClasses[$class];
+            if (isset($this->movedToInnerClasses[$class])) {
+                $actualClasses[] = $this->movedToInnerClasses[$class];
             }
         }
         return implode(' ', array_unique($actualClasses));
