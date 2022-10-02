@@ -3,6 +3,7 @@
 // --------------------------------------------------
 @each $name, $settings in $footer-sections {
     .footer-section-#{$name} {
+        --pp-frame-headings-color: var(--frame-color);
         --frame-link-hover-color: #{map-get($settings, 'link-hover-color')};
         --frame-link-hover-decoration: #{map-get($settings, 'link-hover-decoration')};
     }
