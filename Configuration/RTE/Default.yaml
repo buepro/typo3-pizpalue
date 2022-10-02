@@ -16,12 +16,14 @@ editor:
     defaultContentLanguage: "de"
     defaultLanguage: "de"
     extraAllowedContent:
+      - code
       - div
       - span
       - "*(*)"
       - "*[data-*]"
     stylesSet:
       - { name: "Complementary", element: "span", attributes: { 'class': 'text-complementary' } }
+      - { name: "Code", element: "code" }
 
 classesAnchor:
   page-arrow:
