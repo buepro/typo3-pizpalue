@@ -14,24 +14,25 @@
 //
 // Gallery items
 // --------------------------------------------------
-div.pp-gallery-item-left {
+div.pp-gallery-item-center, div.pp-gallery-item-left, div.pp-gallery-item-right {
     .gallery-item {
-        text-align: left;
+        text-align: center;
         figure {
             display: inline-block;
             width: auto;
             max-width: 100%;
+            text-align: left;
         }
+    }
+}
+div.pp-gallery-item-left {
+    .gallery-item {
+        text-align: left;
     }
 }
 div.pp-gallery-item-right {
     .gallery-item {
         text-align: right;
-        figure {
-            display: inline-block;
-            width: auto;
-            max-width: 100%;
-        }
     }
 }
 .pp-gallery-item-join {

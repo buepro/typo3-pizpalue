@@ -163,6 +163,9 @@
 				<source>Panel with dark color</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-center">
+				<source>Gallery item center</source>
+			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left">
 				<source>Gallery item left</source>
 			</trans-unit>

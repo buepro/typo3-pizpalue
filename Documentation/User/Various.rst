@@ -117,8 +117,9 @@ These classes are used in conjunction with galleries (images, text & images)
 ============================= =============================================================================
 Class                         Description
 ============================= =============================================================================
-pp-gallery-item-left          Aligns the gallery items (e.g. images) to the left
-pp-gallery-item-right         Aligns the gallery items to the right
+pp-gallery-item-center        Center align gallery items (e.g. images) and don't scale images
+pp-gallery-item-left          Left aligns gallery items and don't scale images
+pp-gallery-item-right         Right aligns gallery items and don't scale images
 pp-gallery-item-join          Joins the gallery items by removing any margin and padding
 pp-gallery-item-shadow        Adds a shadow to the gallery items
 pp-image-overlay              Overlays the heading to the image. Used with image content element
