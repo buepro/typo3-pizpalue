@@ -83,7 +83,12 @@ defined('TYPO3') or die('Access denied.');
             'exclude' => true,
             'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.inner_classes',
             'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.inner_classes.description',
-            'displayCond' => 'FIELD:frame_class:!=:none',
+            'displayCond' => ['OR' => [
+                'FIELD:frame_class:!=:none',
+                'FIELD:layout:=:pp-tile-21',
+                'FIELD:layout:=:pp-tile-11',
+                'FIELD:layout:=:pp-tile-12',
+            ]],
             'config' => [
                 'type' => 'input',
                 'size' => 100,
