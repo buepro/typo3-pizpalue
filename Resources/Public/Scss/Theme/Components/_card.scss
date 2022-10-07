@@ -1,13 +1,28 @@
 .card {
     --pp-frame-headings-color: $card-color;
+    // Set overflow to allow border radius
+    overflow: hidden;
 }
 
+//
+// Background
+//
 .pp-panel.card,
 .pp-panel .card,
 .pp-background-color.card,
 .pp-background-color .card {
     @include pp-make-frame-background();
 }
+.pp-type-pp_card.pp-background-color {
+    background: transparent;
+    .card {
+        background: var(--frame-background);
+    }
+}
+
+//
+// Spaces
+//
 .card-header, .card-footer {
     :last-child {
         margin-bottom: 0;
