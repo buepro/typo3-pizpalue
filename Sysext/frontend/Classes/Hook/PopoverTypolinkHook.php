@@ -35,8 +35,12 @@ class PopoverTypolinkHook
      * @param array $params
      * @param ContentObjectRenderer $ref The calling ContentObjectRenderer
      */
-    public function postProcess(&$params, &$ref): void
+    public function postProcess($params, $ref): void
     {
+        // Correct link text. See https://forge.typo3.org/issues/98606
+        if (property_exists($ref, 'lastTypoLinkResult') && $ref->lastTypoLinkResult !== null) {
+            $params['linktxt'] = $ref->lastTypoLinkResult->getLinkText();
+        }
         if (isset($params['linkDetails']['type'], $params['finalTag']) && $params['linkDetails']['type'] === 'pppopover') {
             /** @var HtmlParser $htmlParser */
             $htmlParser = GeneralUtility::makeInstance(HtmlParser::class);
