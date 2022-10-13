@@ -46,6 +46,11 @@ parameters:
 			path: ../Classes/ViewHelpers/Structure/VariantsViewHelper.php
 
 		-
+			message: "#^Call to function property_exists\\(\\) with TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer and 'lastTypoLinkResult' will always evaluate to true\\.$#"
+			count: 1
+			path: ../Sysext/frontend/Classes/Hook/PopoverTypolinkHook.php
+
+		-
 			message: "#^Variable method call on TYPO3\\\\CMS\\\\Core\\\\Page\\\\AssetCollector\\.$#"
 			count: 1
 			path: ../Tests/Functional/ViewHelpers/FrameDataViewHelperTest.php
