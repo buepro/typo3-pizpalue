@@ -33,6 +33,7 @@
     }
     @if (map-get($settings, 'background')) {
         --frame-background: #{map-get($settings, 'background')};
+        --frame-background-rgb: #{to-rgb(map-get($settings, 'background'))}
     }
     @if (map-get($settings, 'link-color')) {
         --frame-link-color: #{map-get($settings, 'link-color')};
