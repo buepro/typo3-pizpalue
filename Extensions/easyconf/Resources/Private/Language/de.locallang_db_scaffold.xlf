@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="scaffold_pp-navbar-height-xs" resname="scaffold_pp-navbar-height-xs" approved="yes">
+        <source>Height on very small screens (xs)</source>
+        <target state="final">Höhe auf sehr kleinen Bildschirmen (xs)</target>
+      </trans-unit>
+      <trans-unit id="scaffold_pp-navbar-height-sm" resname="scaffold_pp-navbar-height-sm" approved="yes">
+        <source>Height on small screens (sm)</source>
+        <target state="final">Höhe auf kleinen Bildschirmen (sm)</target>
+      </trans-unit>
+      <trans-unit id="scaffold_pp-navbar-height-md" resname="scaffold_pp-navbar-height-md" approved="yes">
+        <source>Height on medium-sized screens (md)</source>
+        <target state="final">Höhe auf mittlgrossen Bildschirmen (md)</target>
+      </trans-unit>
+      <trans-unit id="scaffold_pp-navbar-height-lg" resname="scaffold_pp-navbar-height-lg" approved="yes">
+        <source>Height on large screens (lg)</source>
+        <target state="final">Höhe auf großen Bildschirmen (lg)</target>
+      </trans-unit>
+      <trans-unit id="scaffold_pp-navbar-height-xl" resname="scaffold_pp-navbar-height-xl" approved="yes">
+        <source>Height on very large screens (xl)</source>
+        <target state="final">Höhe auf sehr großen Bildschirmen (xl)</target>
+      </trans-unit>
+      <trans-unit id="scaffold_pp-navbar-height-xxl" resname="scaffold_pp-navbar-height-xxl" approved="yes">
+        <source>Height on largest screens (xxl)</source>
+        <target state="final">Höhe auf den größten Bildschirmen (xxl)</target>
+      </trans-unit>
+      <trans-unit id="scaffold_pp-header-overlay-breakpoint" resname="scaffold_pp-header-overlay-breakpoint" approved="yes">
+        <source>Header overlay breakpoint</source>
+        <target state="final">Umschaltpunkt Kopfbereichsüberlagerung</target>
+      </trans-unit>
+      <trans-unit id="scaffold_show_footer" resname="scaffold_show_footer" approved="yes">
+        <source>Show footer</source>
+        <target state="final">Fußbereich anzeigen</target>
+      </trans-unit>
+      <trans-unit id="scaffold_row_class" resname="scaffold_row_class" approved="yes">
+        <source>Row class</source>
+        <target state="final">Reihen-Klassen</target>
+      </trans-unit>
+      <trans-unit id="scaffold_left_column_class" resname="scaffold_left_column_class" approved="yes">
+        <source>Left column class</source>
+        <target state="final">Klasse linke Spalte</target>
+      </trans-unit>
+      <trans-unit id="scaffold_middle_column_class" resname="scaffold_middle_column_class" approved="yes">
+        <source>Middle column class</source>
+        <target state="final">Klasse mittlere Spalte</target>
+      </trans-unit>
+      <trans-unit id="scaffold_right_column_class" resname="scaffold_right_column_class" approved="yes">
+        <source>Right column class</source>
+        <target state="final">Klasse rechte Spalte</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
