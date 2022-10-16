@@ -19,7 +19,7 @@ Bootstrap 5 is enabled by default. To use bootstrap 4 the related static templat
 *  "Bootstrap Package: Bootstrap 4.x (SCSS)" after "Bootstrap Package: Full Package"
 *  "Pizpalue - Bootstrap 4.x" after "Pizpalue - Main"
 
-.. figure:: ../Images/Administration/Upgrade12_Bootstrap4_StaticTemplate.jpg
+.. figure:: /Images/Administration/Upgrade12_Bootstrap4_StaticTemplate.jpg
    :width: 500px
    :alt: Static templates to use bootstrap 4
 

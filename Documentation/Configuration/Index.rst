@@ -18,7 +18,7 @@ to configure typoscript as well as site configurations. Additionally css
 snippets can be defined. Thanks to these features the constant editor isn't
 needed much any more.
 
-.. figure:: ../Images/Configuration/Easyconf.jpg
+.. figure:: /Images/Configuration/Easyconf.jpg
    :alt: Easyconf form to configure main aspects from a website
 
    Easyconf form to configure main aspects from a website
@@ -30,7 +30,7 @@ Constant editor
 
 Many aspects from the web site can be configured through the constant editor.
 
-.. figure:: ../Images/Configuration/ConstantEditor.jpg
+.. figure:: /Images/Configuration/ConstantEditor.jpg
    :alt: Constant editor
 
 To ease configuration parameters were grouped. The following main categories
@@ -215,7 +215,7 @@ If needed follow these steps to setup and register the site at google:
 #. Register domain in google analytics
 #. Add google analytics code to the related seo constant (see figure below)
 
-.. figure:: ../Images/Configuration/ConstantEditorSeo.jpg
+.. figure:: /Images/Configuration/ConstantEditorSeo.jpg
    :width: 500px
    :alt: SEO related constants in "PIZPALUE CUSTOMER" category
 

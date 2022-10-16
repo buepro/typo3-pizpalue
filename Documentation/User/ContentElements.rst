@@ -11,7 +11,7 @@ Content elements
 Schema
 ======
 
-.. figure:: ../Images/User/ContentElements/Schema_Wizard.jpg
+.. figure:: /Images/User/ContentElements/Schema_Wizard.jpg
    :alt: Content element schema in content element wizard
 
 Placeholders

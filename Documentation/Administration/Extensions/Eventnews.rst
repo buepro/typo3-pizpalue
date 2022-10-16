@@ -12,7 +12,7 @@ This extension alters the standard calendar view by removing the filter panel
 and showing event information within the calendar by means of popup dialogs
 (`see example <https://pizpalue.buechler.pro/das-plus/eventnews/>`__).
 
-.. figure:: ../../Images/Introduction/Eventnews.jpg
+.. figure:: /Images/Introduction/Eventnews.jpg
    :width: 500px
    :alt: Calendar view from events
 

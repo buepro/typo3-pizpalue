@@ -11,7 +11,7 @@ Scroll menu
 Creation
 ========
 
-.. figure:: ../Images/User/ScrollMenu/ContentElement.jpg
+.. figure:: /Images/User/ScrollMenu/ContentElement.jpg
    :alt: Scroll navigation properties from a content element
 
    Scroll navigation properties from a content element
@@ -33,7 +33,7 @@ particular page. By help of the :ref:`easyconf form <config-easyconf>` as well
 a :ref:`global scroll menu <user-scrollmenu-globalmenu>` used in one pager
 websites can be set up.
 
-.. figure:: ../Images/User/ScrollMenu/Easyconf.jpg
+.. figure:: /Images/User/ScrollMenu/Easyconf.jpg
    :alt: Easyconf form to define the usage from the scroll menu
 
    Easyconf form to define the usage from the scroll menu

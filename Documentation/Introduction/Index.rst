@@ -68,7 +68,7 @@ to setup their website. The following is taken care of automatically:
 -  Logo and app icon configurations
 -  Google font configurations
 
-.. figure:: ../Images/Introduction/Easyconf.jpg
+.. figure:: /Images/Introduction/Easyconf.jpg
    :alt: Website configuration form
 
    Website configuration form
@@ -142,7 +142,7 @@ Structure elements
 
 `See example <https://pizpalue.buechler.pro/das-plus/strukturemente>`__
 
-.. figure:: ../Images/Introduction/StructureElements.jpg
+.. figure:: /Images/Introduction/StructureElements.jpg
    :width: 700px
    :alt: Page embedding contents covering entire page width
 
@@ -153,7 +153,7 @@ Scroll animation
 
 `See example <https://pizpalue.buechler.pro/das-plus/inhaltselemente/animation>`__
 
-.. figure:: ../Images/Introduction/ScrollAnimationPage.jpg
+.. figure:: /Images/Introduction/ScrollAnimationPage.jpg
    :width: 700px
    :alt: Page embedding scroll animated content
 
@@ -164,7 +164,7 @@ Modal dialog
 
 See as well `demo site <https://pizpalue.buechler.pro/das-plus/inhaltselemente/modaler-dialog>`__.
 
-.. figure:: ../Images/Introduction/ModalDialog.jpg
+.. figure:: /Images/Introduction/ModalDialog.jpg
    :width: 700px
    :alt: Modal dialog
 
@@ -173,7 +173,7 @@ News
 
 `See example <https://pizpalue.buechler.pro/das-plus/news/>`__
 
-.. figure:: ../Images/Introduction/NewsPage.jpg
+.. figure:: /Images/Introduction/NewsPage.jpg
    :width: 700px
    :alt: Page embedding news
 
