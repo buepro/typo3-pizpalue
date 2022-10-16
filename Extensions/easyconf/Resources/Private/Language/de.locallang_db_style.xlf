@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="style_global_enable-rounded" resname="style_global_enable-rounded" approved="yes">
+        <source>Enable rounded</source>
+        <target state="final">Rundungen aktivieren</target>
+      </trans-unit>
+      <trans-unit id="style_global_enable-shadows" resname="style_global_enable-shadows" approved="yes">
+        <source>Enable shadows</source>
+        <target state="final">Schatten aktivieren</target>
+      </trans-unit>
+      <trans-unit id="style_global_enable-gradients" resname="style_global_enable-gradients" approved="yes">
+        <source>Enable gradients</source>
+        <target state="final">Verläufe aktivieren</target>
+      </trans-unit>
+      <trans-unit id="style_global_enable_scss" resname="style_global_enable_scss" approved="yes">
+        <source>Enable additional SCSS</source>
+        <target state="final">Zusätzliche SCSS aktivieren</target>
+      </trans-unit>
+      <trans-unit id="style_rounded_border-radius" resname="style_rounded_border-radius" approved="yes">
+        <source>Border radius</source>
+        <target state="final">Eckenradius</target>
+      </trans-unit>
+      <trans-unit id="style_rounded_border-radius-sm" resname="style_rounded_border-radius-sm" approved="yes">
+        <source>Border radius small</source>
+        <target state="final">Kleiner Eckenradius</target>
+      </trans-unit>
+      <trans-unit id="style_rounded_border-radius-lg" resname="style_rounded_border-radius-lg" approved="yes">
+        <source>Border radius large</source>
+        <target state="final">Großer Eckenradius</target>
+      </trans-unit>
+      <trans-unit id="style_rounded_frame-embedded-border-radius" resname="style_rounded_frame-embedded-border-radius" approved="yes">
+        <source>Embedded frame border radius</source>
+        <target state="final">Radius eingebetteter Rahmen</target>
+      </trans-unit>
+      <trans-unit id="style_scss_declarations" resname="style_scss_declarations" approved="yes">
+        <source>Declarations</source>
+        <target state="final">Deklarationen</target>
+      </trans-unit>
+      <trans-unit id="style_various_headings-margin-bottom" resname="style_various_headings-margin-bottom" approved="yes">
+        <source>Headings margin bottom</source>
+        <target state="final">Überschriftenabstand unten</target>
+      </trans-unit>
+      <trans-unit id="style_various_grid-gutter-width" resname="style_various_grid-gutter-width" approved="yes">
+        <source>Grid gutter width</source>
+        <target state="final">Raster Zwischenraum</target>
+      </trans-unit>
+      <trans-unit id="style_various_pp-tile-gutter" resname="style_various_pp-tile-gutter" approved="yes">
+        <source>Tile gutter width</source>
+        <target state="final">Kacheln Zwischenraum</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
