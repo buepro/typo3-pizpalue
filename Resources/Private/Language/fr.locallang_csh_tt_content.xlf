@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff xmlns:t3="http://typo3.org/schemas/xliff" version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-02-17T09:11:39Z" product-name="pizpalue" target-language="fr">
+    <header/>
+    <body>
+      <trans-unit id="tx_pizpalue_image_scaling.details" approved="yes">
+        <source>The image sizes for the different screen sizes are defined by the selected image variants as well as the image column count.
+
+Some times an editor adds additional elements for structuring the content area resulting in a smaller available space for images. To deliver the optimal image size under such conditions a scaling can be defined.
+
+As an example consider adding a two column grid element with the first column being 33% and the second column 67% from the content width. Let's assume the two columns to be next to each other for screen sizes bigger than md. Now when adding an image to the first column (33% width) the rendered image would be two times bigger than needed (due to the system not knowing how much space is available in the column). To deliver optimal sized images the following scaling definition could be used:
+
+xl: 0.33,
+lg: 0.33,
+md: 0.33,
+sm: 1.0,
+xs: 1.0
+				</source>
+        <target state="final">Les tailles d'image pour les différentes tailles d'écran sont définies par les variantes d'image sélectionnées ainsi que par le nombre de colonnes d'image.
+
+Certains instants un éditeur ajoute des éléments supplémentaires pour structurer la zone de contenu, ce qui donne un espace disponible pour les images plus petit. Pour obtenir la taille d'image optimale dans de telles conditions, une mise à l'échelle peut être définie.
+
+À titre d'exemple, pensez à ajouter un élément de grille à deux colonnes dont la première colonne est de 33% et la seconde colonne 67% de la largeur de contenu. Supposons que les deux colonnes soient les unes à côté des autres pour les tailles d'écran plus grandes que md. Maintenant, lorsque vous ajoutez une image à la première colonne (33% de largeur), l'image rendue serait deux fois plus grande que nécessaire (parce que le système ne sait pas combien d'espace est disponible dans la colonne). Pour fournir des images de taille optimale, la définition de mise à l'échelle suivante pourrait être utilisée:
+
+xl: 0. 3,
+lg: 0.33,
+md: 0.33,
+sm: 1.0,
+xs: 1.0
+				</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
