@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff xmlns:t3="http://typo3.org/schemas/xliff" version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-02-17T09:11:39Z" product-name="pizpalue" target-language="fi">
+    <header/>
+    <body>
+      <trans-unit id="tx_pizpalue_image_scaling.details" approved="yes">
+        <source>The image sizes for the different screen sizes are defined by the selected image variants as well as the image column count.
+
+Some times an editor adds additional elements for structuring the content area resulting in a smaller available space for images. To deliver the optimal image size under such conditions a scaling can be defined.
+
+As an example consider adding a two column grid element with the first column being 33% and the second column 67% from the content width. Let's assume the two columns to be next to each other for screen sizes bigger than md. Now when adding an image to the first column (33% width) the rendered image would be two times bigger than needed (due to the system not knowing how much space is available in the column). To deliver optimal sized images the following scaling definition could be used:
+
+xl: 0.33,
+lg: 0.33,
+md: 0.33,
+sm: 1.0,
+xs: 1.0
+				</source>
+        <target state="final">Eri näyttökokojen kuvakoot määrittelevät valitut kuvavaihtoehdot sekä kuvasarakkeiden lukumäärän.
+
+Toisinaan editori lisää lisäelementtejä sisältöalueen jäsentämiseen, mikä johtaa pienempään tilaan kuville käytettävissä. Kuvan optimaalisen koon saamiseksi tällaisissa olosuhteissa voidaan määritellä skaalaus.
+
+Esimerkiksi harkitse kahden sarakkeen ruudukkoelementin lisäämistä siten, että ensimmäinen sarake on 33% ja toinen sarake 67% sisällön leveydestä. Oletetaan, että kaksi saraketta ovat vierekkäin, kun näytön koko on suurempi kuin md. Kun lisäät kuvan ensimmäiseen sarakkeeseen (leveys 33%), renderoitu kuva olisi kaksi kertaa suurempi kuin tarvitaan (johtuen siitä, että järjestelmä ei tiedä, kuinka paljon tilaa on sarakkeessa). Optimaalisen kokoisten kuvien toimittamiseksi voidaan käyttää seuraavaa skaalausmäärittelyä:
+
+xl: 0.33,
+lg: 0.33,
+md: 0.33,
+sm: 1.0,
+xs: 1.0</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
