@@ -48,7 +48,10 @@ action or `log in <https://demo.buechler.pro/typo3>`__ to the
 `demo site <https://demo.buechler.pro>`__ and discover how easy it is to setup
 a site and create attractive content.
 
-Plesk reseller account owners can easily generate pizpalue websites at
+The `pizpalue distribution <https://extensions.typo3.org/extension/pizpalue_distribution>`__
+can get you started. Install it following the steps outlined in the
+`base package <https://github.com/buepro/typo3-pizpalue_distribution-base>`__
+or easily generate a pizpalue websites with your plesk reseller account at
 `buechler.pro/webseiten/generator <https://www.buechler.pro/webseiten/generator>`__.
 
 ----
