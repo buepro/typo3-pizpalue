@@ -23,7 +23,7 @@ With a page layout the coarse page structure is defined. They can be selected
 in the page properties dialog under the appearance tab. See as well
 `demo site <https://pizpalue.buechler.pro/das-plus/seitenlayout>`__.
 
-.. figure:: ../Images/User/Page_Layouts.jpg
+.. figure:: /Images/User/Page_Layouts.jpg
    :width: 500px
    :alt: Available page layouts
 
@@ -144,7 +144,7 @@ element allowing to adjust the layout depending on the screen width. This is
 currently used in conjunction with tile layouts but might be used in other
 contexts as well.
 
-.. figure:: ../Images/User/ContentElement_Layouts.jpg
+.. figure:: /Images/User/ContentElement_Layouts.jpg
    :alt: Content element layouts and layout breakpoints
 
    Content element layouts and layout breakpoints
@@ -174,7 +174,7 @@ Custom frames
 Additional frames can be selected for content elements
 (`see example <https://pizpalue.buechler.pro/das-plus/gestaltung/rahmen/>`__):
 
-.. figure:: ../Images/User/CustomFrames.jpg
+.. figure:: /Images/User/CustomFrames.jpg
    :alt: Custom frames for content elements
 
    Custom frames for content elements
@@ -222,7 +222,7 @@ This functionality has been added by introducing additional fields to the
 content element table and adapting the rendering accordingly. The new fields
 are available under the appearance tab in the "Attributes" section.
 
-.. figure:: ../Images/User/ContentElement_Attributes.jpg
+.. figure:: /Images/User/ContentElement_Attributes.jpg
    :width: 500px
    :alt: Customizing attributes for a content element
 

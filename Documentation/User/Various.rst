@@ -12,7 +12,7 @@ Various
 Popover
 =======
 
-.. figure:: ../Images/User/Various/PopoversFe.jpg
+.. figure:: /Images/User/Various/PopoversFe.jpg
    :alt: A popover in the front end
 
    A popover in the front end
@@ -30,7 +30,7 @@ This extension provides an easy way to use popovers by defining them in the RTE 
 3. In the link browser dialog select the register `Popover`
 4. Select the class `Popover` and define the title and content
 
-.. figure:: ../Images/User/Various/PopoversLinkBrowser.jpg
+.. figure:: /Images/User/Various/PopoversLinkBrowser.jpg
    :alt: Register popover in link browser
 
    Register popover in link browser
@@ -60,7 +60,7 @@ retrieved depending on the currently selected page language. For this users migh
 brackets within the editor
 (`see example <https://pizpalue.buechler.pro/das-plus/inhaltselemente/texteingabe>`__):
 
-.. figure:: ../Images/User/Various/InlineLocalization.jpg
+.. figure:: /Images/User/Various/InlineLocalization.jpg
    :alt: Use of localized text within the editor
 
    Use of localized text within the editor

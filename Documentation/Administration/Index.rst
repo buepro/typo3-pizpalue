@@ -38,7 +38,7 @@ Static templates
 In an installation using `container_elements` and `user_pizpalue` the following
 static extension templates would be included:
 
-.. figure:: ../Images/Administration/Installation_StaticTemplates.jpg
+.. figure:: /Images/Administration/Installation_StaticTemplates.jpg
    :width: 800px
    :alt: Included static extension templates
 
