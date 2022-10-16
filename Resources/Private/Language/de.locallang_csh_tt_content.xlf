@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff xmlns:t3="http://typo3.org/schemas/xliff" version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2020-02-17T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tx_pizpalue_image_scaling.description" approved="yes">
+        <source>Define the image scaling for the available screen sizes. Note that this changes the image dimensions and not necessarily the shown image size. The CSS for the image might need to be adjusted too (e.g. "width: auto;").</source>
+        <target state="final">Definieren Sie die Bildskalierung für die verfügbaren Bildschirmgrößen. Beachten Sie, dass dies die Bildgröße und nicht unbedingt die angezeigte Bildgröße ändert. Das CSS für das Bild muss eventuell auch angepasst werden (z.B. "Breite: auto;").</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_image_scaling.details" approved="yes">
+        <source>The image sizes for the different screen sizes are defined by the selected image variants as well as the image column count.
+
+Some times an editor adds additional elements for structuring the content area resulting in a smaller available space for images. To deliver the optimal image size under such conditions a scaling can be defined.
+
+As an example consider adding a two column grid element with the first column being 33% and the second column 67% from the content width. Let's assume the two columns to be next to each other for screen sizes bigger than md. Now when adding an image to the first column (33% width) the rendered image would be two times bigger than needed (due to the system not knowing how much space is available in the column). To deliver optimal sized images the following scaling definition could be used:
+
+xl: 0.33,
+lg: 0.33,
+md: 0.33,
+sm: 1.0,
+xs: 1.0
+				</source>
+        <target state="final">Die Bildgrößen für die verschiedenen Bildschirmgrößen werden sowohl durch die ausgewählten Bildvarianten als auch durch die Anzahl der Bildspalten definiert.
+
+Manchmal fügt ein Editor zusätzliche Elemente für die Strukturierung des Inhaltsbereichs hinzu, was zu einem kleineren Raum für Bilder führt. Um die Bilder in der optimalen Größe zu erstellen, kann eine Skalierung definiert werden.
+
+Als Beispiel kann ein zweispaltiges Rasterelement mit den Spaltenbreiten 33% und 67% betrachtet werden. Nehmen wir an, dass die beiden Spalten für Bildschirmgrößen größer als md nebeneinander liegen. Wenn nun ein Bild zur ersten Spalte (33% Breite) hinzugefügt wird, wäre das gerenderte Bild zweimal größer als nötig (da das System nicht weiß, wie viel Platz in der Spalte verfügbar ist). Um Bilder in optimaler Größe zu liefern, könnte folgende Skalierungsdefinition verwendet werden:
+
+xl: 0. 3,
+lg: 0.33,
+md: 0.33,
+sm: 1.0,
+xs: 1.0
+				</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_layout_breakpoint.description" approved="yes">
+        <source>Defines the screen breakpoint where the layout behaviour changes.</source>
+        <target state="final">Definiert den Bildschirm-Umschaltepunkt, bei dem sich das Layoutverhalten ändert.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
