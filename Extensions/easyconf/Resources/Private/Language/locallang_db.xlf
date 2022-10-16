@@ -30,12 +30,13 @@
 			<trans-unit id="paletteMenuToggler" resname="paletteMenuToggler">
 				<source>Main toggler</source>
 			</trans-unit>
-			<trans-unit id="paletteMenuSelect" resname="paletteMenuSelect">
-				<source>Select available menus</source>
-			</trans-unit>
 			<trans-unit id="paletteMenuCopyright" resname="paletteMenuCopyright">
 				<source>Copyright menu</source>
 			</trans-unit>
+			<trans-unit id="paletteMenuSelect" resname="paletteMenuSelect">
+				<source>Select available menus</source>
+			</trans-unit>
+
 			<trans-unit id="paletteMenuFast" resname="paletteMenuFast">
 				<source>Fast menu</source>
 			</trans-unit>
