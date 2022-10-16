@@ -30,32 +30,20 @@
 Introduction
 ============
 
-Preface
-=======
-
-This extension started as a distribution and is now a template serving as a base
-foundation for new websites. The former distribution part became to be a new
-distribution called `pizpalue_distribution` and can be downloaded from
-`the TYPO3 extension repository <https://extensions.typo3.org/extension/pizpalue_distribution>`__.
-
 What does it do?
 ================
 
 The extension builds upon the extension `bootstrap_package from Benjamin Kott <https://extensions.typo3.org/extension/bootstrap_package>`__
 and serves as a base template for the creation of websites or
 `distributions <https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ExtensionArchitecture/CreateNewDistribution/Index.html>`__
-using the `bootstrap framework <https://getbootstrap.com/>`__. As an example the
-distribution `pizpalue_distribution <https://extensions.typo3.org/extension/pizpalue_distribution>`__
-uses this extension. A demo site can be visited `here <http://pizpalue.buechler.pro/das-plus/>`__.
-
-The extension extends and configures TYPO3 and selected extensions to provide
-better structured and attracting content while maintaining or improving speed
-and seo performance.
+using the `bootstrap framework <https://getbootstrap.com/>`__. It extends and
+configures TYPO3 and selected extensions to provide better structured and
+attracting content while maintaining or improving speed and seo performance.
 
 It provides the following main features:
 
-Easy website setup
-------------------
+`Easy website setup <https://pizpalue.buechler.pro/das-plus/verwaltung>`__
+--------------------------------------------------------------------------
 
 The extension `easyconf <https://extensions.typo3.org/extension/easyconf>`__
 has been configured to provide an easy way for non technical website owners
@@ -73,48 +61,66 @@ to setup their website. The following is taken care of automatically:
 
    Website configuration form
 
-Enhancing page
---------------
+`Flexible page design <https://pizpalue.buechler.pro/das-plus/seite>`__
+-----------------------------------------------------------------------
 
+-  Page layouts allowing to add content inside columns with a menu
 -  Background image to cover the entire page
 -  CSS field to easily fine tune individual page styles
 
-Arranging content
------------------
+.. figure:: /Images/Introduction/PageSettings.png
+   :alt: Page settings with additional fields from pizpalue
 
--  Page layouts allowing to add content in side columns with a menu
--  Support for structure elements provided by
-   `container_elements <https://extensions.typo3.org/extension/container_elements>`__.
-   Example structure elements are: columns, grid, accordion, tabs, card, tile unit
-   and randomizer
+   Page settings with additional fields from pizpalue
 
-Enhancing content
------------------
+`Attractive structure elements <https://pizpalue.buechler.pro/das-plus/strukturelemente>`__
+-------------------------------------------------------------------------------------------
 
--  Support for automatic image scaling in structure elements (see
-   :ref:`templating <integration_templating>`)
--  Content element fields to optimize image scaling dependent on the screen size
--  Content element fields to assign custom classes, styles and attributes
--  Content element fields to create a :ref:`scroll menu <user-scrollmenu>`
+Support for structure elements provided by
+`container_elements <https://extensions.typo3.org/extension/container_elements>`__.
+Example structure elements are: columns, grid, accordion, tabs, card, tile unit
+and randomizer. For better search engine ranking all images are optimized
+to each structure element (see :ref:`templating <integration_templating>`).
 
-Animating content
------------------
+.. figure:: /Images/Introduction/StructureElements.png
+   :alt: Structure elements for attractive content arrangements
 
--  Animation effects provided `animate.css <https://github.com/animate-css/animate.css>`__
+   Structure elements for attractive content arrangements
+
+`Versatile content elements <https://pizpalue.buechler.pro/das-plus/inhaltselemente>`__
+---------------------------------------------------------------------------------------
+
+-  Fields to optimize image scaling dependent on the screen size
+-  Layouts to create tiles
+-  Fields to further adjust vertical spacing
+-  Fields to assign custom classes, styles and attributes
+-  Fields to create a :ref:`scroll menu <user-scrollmenu>`
+-  Animation effects provided by `animate.css <https://github.com/animate-css/animate.css>`__
 -  Scroll animation effects provided by `Twikito/onscroll-effect <https://github.com/Twikito/onscroll-effect>`__,
    or `Josh.js <https://github.com/mamunhpath/josh.js>`__
--  A feature to reveal the footer
 
-New content elements
---------------------
+.. figure:: /Images/Introduction/ContentElementsAttributes.png
+   :alt: Fields to further define content element attributes
 
--  A content element to create modal dialogs
--  A content element to create a list of categorized content elements
--  A content element to create structured content (JSON-LD data, see :ref:`user-contentElements-schema`)
--  A layout for media content elements to emphasize media
+   Fields to further define content element attributes
 
-Supporting extensions
----------------------
+`Additional content elements <https://pizpalue.buechler.pro/das-plus/zusaetzliche-inhaltselemente>`__
+-----------------------------------------------------------------------------------------------------
+
+-  Image with overlay
+-  Emphasize media
+-  Card
+-  Modal dialogs
+-  List of categorized content elements
+-  Structured data (JSON-LD data, see :ref:`user-contentElements-schema`)
+
+.. figure:: /Images/Introduction/AdditionalContentElements.svg
+   :alt: Additional content elements
+
+   Additional content elements
+
+`Supporting popular extensions <https://pizpalue.buechler.pro/das-plus/erweiterungen>`__
+----------------------------------------------------------------------------------------
 
 The following extensions are supported:
 
@@ -124,9 +130,10 @@ The following extensions are supported:
 -  `eventnews <https://extensions.typo3.org/extension/eventnews>`__
 -  `tt_address <https://extensions.typo3.org/extension/tt_address>`__
 
-Various
--------
+`Various <https://pizpalue.buechler.pro/das-plus/verschiedenes>`__
+------------------------------------------------------------------
 
+-  A feature to reveal the footer
 -  A menu to be fixed on the side (fastmenu)
 
 Discover more regarding the features on the `demo site <http://pizpalue.buechler.pro/das-plus/>`__.
@@ -142,7 +149,7 @@ Structure elements
 
 `See example <https://pizpalue.buechler.pro/das-plus/strukturemente>`__
 
-.. figure:: /Images/Introduction/StructureElements.jpg
+.. figure:: /Images/Introduction/StructureElementSamples.jpg
    :width: 700px
    :alt: Page embedding contents covering entire page width
 
@@ -178,6 +185,12 @@ News
    :alt: Page embedding news
 
    Page embedding news
+
+Demo site
+=========
+
+`Log in <https://demo.buechler.pro/typo3>`__ to the
+`demo site <https://demo.buechler.pro/>`__ to get first hands on experiences.
 
 Credits
 =======

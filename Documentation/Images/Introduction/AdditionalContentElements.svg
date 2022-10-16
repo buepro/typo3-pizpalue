@@ -1,0 +1,67 @@
+<svg version="1.1" viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg">
+ <g transform="scale(.4)">
+  <rect x="8.93" y="314.25" width="482.14" height="175.33" fill="#005e8e"/>
+  <rect x="8.93" y="13.54" width="477.92" height="248.57" fill="#c7ebff"/>
+  <path d="m31.83 232.82 86.2-36.91 88.19-100.66c4.72-5.39 12.39-5.39 17.11 0l113.55 112.69 46.71-20.68c7.49-3.56 10.61-3.49 17.1 0l44.1 45.56z" fill="#666"/>
+  <circle cx="382.93" cy="78.8" r="32.55" fill="#fff"/>
+  <line x1="8.93" x2="491.07" y1="232.82" y2="232.82" fill="none" stroke="#fff" stroke-miterlimit="22.926" stroke-width="3.66"/>
+  <rect x="4.71" y="232.82" width="489.05" height="196.17" fill="#fefefe"/>
+  <g fill="none" stroke-miterlimit="22.926">
+   <rect x="8.93" y="8.93" width="482.14" height="482.14" stroke="#9d9e9e" stroke-width="17.86"/>
+   <g stroke="#999" stroke-width="21.97">
+    <line x1="66.45" x2="418.47" y1="287.19" y2="287.19"/>
+    <line x1="66.45" x2="330.58" y1="334.76" y2="334.76"/>
+    <line x1="66.45" x2="373.25" y1="380.16" y2="380.16"/>
+   </g>
+  </g>
+ </g>
+ <g clip-rule="evenodd" shape-rendering="geometricPrecision">
+  <rect class="fil0 str0" x="225.59" y="5.5941" width="188.81" height="188.81" fill="#005e8e" fill-rule="evenodd" image-rendering="optimizeQuality" stroke="#005e8e" stroke-miterlimit="22.926" stroke-width="11.188"/>
+  <rect class="fil1" x="252.18" y="39.777" width="137.19" height="115.45" fill="#fefefe" fill-rule="evenodd" image-rendering="optimizeQuality" stroke-width=".32724"/>
+  <path class="fil2" d="m373.89 57.471 3.3149-4.6991-3.0662-4.3752h1.8882l1.4333 2.1434c0.26833 0.4025 0.47776 0.72973 0.62502 0.98498 0.25852-0.36323 0.49084-0.69374 0.69701-0.98825l1.5086-2.1401h1.8816l-3.0858 4.3752 3.2854 4.6991h-1.8718l-1.8751-2.7946-0.42868-0.67411-2.4248 3.4687z" fill="#2b2a29" image-rendering="optimizeQuality" stroke-width=".32724"/>
+  <g fill-rule="evenodd">
+   <rect class="fil3 str1" x="327.87" y="126.92" width="52.456" height="20.603" fill="#3d98d3" image-rendering="optimizeQuality" stroke="#3d98d3" stroke-miterlimit="22.926" stroke-width="1.2599"/>
+   <rect class="fil0 str0" x="445.6" y="5.5951" width="188.81" height="188.81" fill="#fefefe" image-rendering="optimizeQuality" stroke="#fefefe" stroke-miterlimit="22.926" stroke-width="1.0559"/>
+   <path class="fil1" d="m449.43 189.23h183.3v-76.904l-50.13-84.125c-2.6846-4.5056-7.038-4.5056-9.7226 0l-64.541 94.188-26.55-17.289c-2.6846-4.5011-7.038-4.5011-9.7226 0l-22.631 37.987z" fill="#29b7ff" image-rendering="optimizeQuality" stroke-width=".44743"/>
+   <path class="fil1" d="m484.79 21.698c-12.653 0-22.913 10.26-22.913 22.913 0 12.653 10.26 22.913 22.913 22.913s22.913-10.26 22.913-22.913c0-12.653-10.26-22.913-22.913-22.913z" fill="#29b7ff" image-rendering="optimizeQuality" stroke-width=".44743"/>
+   <rect class="fil2 str1" x="450.96" y="149.8" width="181.77" height="39.427" fill="#0083c4" image-rendering="optimizeQuality" stroke="#0083c4" stroke-miterlimit="22.926" stroke-width="1.0559"/>
+   <rect class="fil3 str2" x="592.48" y="149.8" width="36.362" height="39.427" fill="#005e8e" image-rendering="optimizeQuality" stroke="#005e8e" stroke-miterlimit="22.926" stroke-width="1.0559"/>
+  </g>
+  <g stroke-miterlimit="22.926">
+   <polyline class="fil4 str3" transform="matrix(.44743 0 0 .44743 440 .0022582)" points="353.62 395.43 381.86 364.81 410.1 395.43" fill="none" image-rendering="optimizeQuality" stroke="#fefefe" stroke-linecap="round" stroke-width="10"/>
+   <rect class="fil4 str4" x="445.6" y="5.5951" width="188.81" height="188.81" fill="none" image-rendering="optimizeQuality" stroke="#9d9e9e" stroke-width="11.19"/>
+   <rect class="fil0 str0" x="5.5951" y="225.6" width="188.81" height="188.81" fill="#fefefe" fill-rule="evenodd" image-rendering="optimizeQuality" stroke="#2b2a29" stroke-width="1.0559"/>
+   <rect class="fil1 str1" x="5.5951" y="225.6" width="188.81" height="188.81" fill="none" image-rendering="optimizeQuality" stroke="#9d9e9e" stroke-width="11.19"/>
+  </g>
+  <g transform="matrix(.44743 0 0 .44743 .0022556 220)" fill-rule="evenodd" image-rendering="optimizeQuality">
+   <rect class="fil1 str2" x="64.77" y="67.39" width="313.5" height="70.83" fill="none" stroke="#075e8e" stroke-miterlimit="22.926" stroke-width="9.38"/>
+   <rect class="fil2" x="348.37" y="103.13" width="29.9" height="35.09" fill="#075e8e"/>
+   <rect class="fil1 str2" x="64.77" y="185.55" width="313.5" height="70.83" fill="none" stroke="#075e8e" stroke-miterlimit="22.926" stroke-width="9.38"/>
+   <rect class="fil2" x="348.37" y="221.28" width="29.9" height="35.09" fill="#075e8e"/>
+   <rect class="fil1 str2" x="64.77" y="303.7" width="317.03" height="70.83" fill="none" stroke="#075e8e" stroke-miterlimit="22.926" stroke-width="9.38"/>
+   <rect class="fil2" x="351.57" y="339.44" width="30.23" height="35.09" fill="#075e8e"/>
+  </g>
+  <rect class="fil0 str0" x="225.59" y="225.59" width="188.81" height="188.81" fill="#005e8e" fill-rule="evenodd" image-rendering="optimizeQuality" stroke="#005e8e" stroke-miterlimit="22.926" stroke-width="11.188"/>
+  <g fill="#fefefe">
+   <g stroke-width=".32724">
+    <path class="fil1" d="m277.45 394.53c-11.375 0-19.349-1.9569-23.918-5.8739-4.5682-3.917-6.8523-9.9807-6.8523-18.184v-34.271c0-2.6113-0.8639-4.6631-2.5884-6.152-1.7278-1.4955-3.989-2.1467-6.7836-1.9602v-19.163c6.3386-0.55957 9.5095-3.2658 9.5095-8.1154v-27.416c0-17.344 10.213-26.019 30.633-26.019v16.646c-2.6081 0-4.5911 0.51376-5.9426 1.538-1.3515 1.0275-2.3299 2.775-2.9386 5.2456-0.6054 2.4739-0.90645 6.0408-0.90645 10.701v22.802c0 8.6718-4.6173 13.384-13.849 14.127 4.1952 0.74937 7.5297 2.3103 10 4.6893 2.4706 2.3757 3.7076 5.383 3.7076 9.0219v31.192c0 5.6874 0.67411 9.7222 2.0289 12.098 1.3515 2.379 3.9857 3.5669 7.8995 3.5669z" image-rendering="optimizeQuality"/>
+    <path class="fil1" d="m319.7 366c-5.3176 0-11.005-0.32724-17.065-0.97844-6.0637-0.65447-11.191-1.4922-15.387-2.5197v-16.365c8.2987 0.83772 18.79 1.2598 31.474 1.2598 5.6874 0 9.9774-0.76901 12.867-2.3103 2.8928-1.538 4.3359-4.2639 4.3359-8.1809v-3.7763c0-3.076-0.9097-5.4321-2.7259-7.065-1.8194-1.6329-4.4079-2.4477-7.7653-2.4477h-8.8125c-10.256 0-17.926-2.2383-23.008-6.7149-5.082-4.4733-7.6246-11.797-7.6246-21.961v-5.0362c0-19.395 11.142-29.095 33.43-29.095 5.2227 0 10.632 0.35015 16.228 1.0472 5.5957 0.70355 10.629 1.5184 15.108 2.451v16.365c-12.779-0.84099-22.429-1.2598-28.957-1.2598-5.3143 0-9.3262 0.81808-12.029 2.4477-2.7062 1.6329-4.0577 4.6402-4.0577 9.0252v2.7946c0 3.544 1.0046 6.1324 3.0073 7.7653 2.006 1.6296 5.0591 2.4477 9.1626 2.4477h10.21c8.9532 0 15.786 2.4477 20.495 7.3432 4.7089 4.8954 7.065 11.306 7.065 19.235v5.8739c0 7.834-1.4464 13.917-4.3392 18.253-2.8895 4.3359-6.9472 7.3235-12.17 8.9532-5.2227 1.6329-11.702 2.4477-19.441 2.4477z" image-rendering="optimizeQuality"/>
+    <path class="fil1" d="m364.04 379.01c3.917 0 6.5513-1.1879 7.906-3.5669 1.3515-2.3757 2.0256-6.4105 2.0256-12.098v-31.192c0-3.6388 1.237-6.6462 3.7076-9.0219 2.4706-2.379 5.8052-3.9399 10-4.6893-9.2313-0.74284-13.845-5.455-13.845-14.127v-22.802c0-4.7547-0.28141-8.3674-0.84099-10.841-0.55957-2.4674-1.538-4.1952-2.9353-5.1736-1.4006-0.97843-3.4065-1.4693-6.0179-1.4693v-16.646c20.423 0 30.636 8.675 30.636 26.019v27.416c0 4.8496 3.1676 7.5559 9.5095 8.1154v19.163c-2.7979-0.18652-5.0591 0.46468-6.7836 1.9602-1.7245 1.4889-2.5852 3.5407-2.5852 6.152v34.271c0 8.2038-2.2874 14.267-6.8556 18.184-4.5715 3.917-12.543 5.8739-23.921 5.8739z" image-rendering="optimizeQuality"/>
+   </g>
+   <rect class="fil0 str0" x="445.59" y="225.59" width="188.81" height="188.81" fill-rule="evenodd" image-rendering="optimizeQuality" stroke="#fefefe" stroke-miterlimit="22.926" stroke-width="1.056"/>
+  </g>
+  <g fill-rule="evenodd">
+   <path class="fil1" d="m578.71 409.23h-133.12v-76.903l36.405-84.127c1.9481-4.5082 5.1122-4.5082 7.0603 0l46.874 94.188 19.281-17.289c1.9481-4.5002 5.1122-4.5002 7.0603 0l16.437 37.986z" fill="#005e8e" image-rendering="optimizeQuality" stroke-width=".40002"/>
+   <path class="fil2" d="m539.35 245.04c12.652 0 22.913 10.256 22.913 22.913 0 12.652-10.26 22.913-22.913 22.913-12.653 0-22.913-10.26-22.913-22.913 0-12.657 10.26-22.913 22.913-22.913z" fill="#29b7ff" image-rendering="optimizeQuality" stroke-width=".40002"/>
+   <polygon class="fil3 str1" transform="matrix(.40002 0 0 .40002 440 220)" points="225.14 157.5 225.14 363.57 452.35 363.57 452.35 157.5" fill="#fff" fill-opacity=".90196" image-rendering="optimizeQuality" stroke="#0083c4" stroke-miterlimit="22.926" stroke-opacity=".90196" stroke-width="5.97"/>
+  </g>
+  <g fill="none" stroke-miterlimit="22.926">
+   <rect class="fil4 str2" x="445.59" y="225.59" width="188.81" height="188.81" image-rendering="optimizeQuality" stroke="#9d9e9e" stroke-width="11.188"/>
+   <g stroke="#666" stroke-linecap="round" stroke-width="7.1603">
+    <line class="fil4 str3" x1="545.09" x2="603.62" y1="302.77" y2="302.77" image-rendering="optimizeQuality"/>
+    <line class="fil4 str3" x1="544.72" x2="603.25" y1="324.04" y2="324.04" image-rendering="optimizeQuality"/>
+    <line class="fil4 str3" x1="544.29" x2="602.82" y1="344.47" y2="344.47" image-rendering="optimizeQuality"/>
+   </g>
+  </g>
+ </g>
+</svg>
