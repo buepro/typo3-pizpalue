@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="feature_font_awesome_enable" resname="feature_font_awesome_enable" approved="yes">
+        <source>Font awesome</source>
+        <target state="final">Font Awesome</target>
+      </trans-unit>
+      <trans-unit id="feature_reveal_footer" resname="feature_reveal_footer" approved="yes">
+        <source>Reveal footer</source>
+        <target state="final">Fussbereich enthüllen</target>
+      </trans-unit>
+      <trans-unit id="feature_slide_nav_content" resname="feature_slide_nav_content" approved="yes">
+        <source>Slide navigation content</source>
+        <target state="final">Navigationsinhalt rutschen</target>
+      </trans-unit>
+      <trans-unit id="feature_content_insert_data" resname="feature_content_insert_data" approved="yes">
+        <source>Insert data in content</source>
+        <target state="final">Daten in Inhalt einfügen</target>
+      </trans-unit>
+      <trans-unit id="feature_contact_enable" resname="feature_contact_enable" approved="yes">
+        <source>Contact section</source>
+        <target state="final">Kontaktbereich</target>
+      </trans-unit>
+      <trans-unit id="feature_contact_label" resname="feature_contact_label" approved="yes">
+        <source>Label</source>
+        <target state="final">Beschriftung</target>
+      </trans-unit>
+      <trans-unit id="feature_contact_button_label" resname="feature_contact_button_label" approved="yes">
+        <source>Button label</source>
+        <target state="final">Schaltflächentext</target>
+      </trans-unit>
+      <trans-unit id="feature_contact_button_page_uid" resname="feature_contact_button_page_uid" approved="yes">
+        <source>Contact page</source>
+        <target state="final">Kontakt Seite</target>
+      </trans-unit>
+      <trans-unit id="feature_image_loading" resname="feature_image_loading" approved="yes">
+        <source>Image loading</source>
+        <target state="final">Bildladeverhalten</target>
+      </trans-unit>
+      <trans-unit id="feature_image_loading.eager" resname="feature_image_loading.eager" approved="yes">
+        <source>Eager</source>
+        <target state="final">Eifrig</target>
+      </trans-unit>
+      <trans-unit id="feature_image_loading.lazy" resname="feature_image_loading.lazy" approved="yes">
+        <source>Lazy</source>
+        <target state="final">Träg</target>
+      </trans-unit>
+      <trans-unit id="feature_image_loading_auto" resname="feature_image_loading_auto" approved="yes">
+        <source>Auto (Chrome only)</source>
+        <target state="final">Auto (nur Chrome)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
