@@ -21,7 +21,7 @@ Page layout
 
 With a page layout the coarse page structure is defined. They can be selected
 in the page properties dialog under the appearance tab. See as well
-`demo site <https://pizpalue.buechler.pro/das-plus/seitenlayout>`__.
+`demo site <https://pizpalue.buechler.pro/das-plus/seite/layout>`__.
 
 .. figure:: /Images/User/Page_Layouts.jpg
    :width: 500px
@@ -41,7 +41,7 @@ Structure elements
 
 With structure elements the content area might be further organized. Typical
 elements are containers, columns, grid, accordions and tabs. See as well
-`demo site <https://pizpalue.buechler.pro/das-plus/strukturemente>`__.
+`demo site <https://pizpalue.buechler.pro/das-plus/strukturelemente>`__.
 
 This extension mainly supports the extension
 `container_elements <https://extensions.typo3.org/extension/container_elements>`__
@@ -166,24 +166,6 @@ contexts as well.
    In case a tile content needs to be vertically scrolled the class
    `pp-tile-scroll-y` might be assigned to the tile.
 
-.. _user-design-customframes:
-
-Custom frames
-~~~~~~~~~~~~~
-
-Additional frames can be selected for content elements
-(`see example <https://pizpalue.buechler.pro/das-plus/gestaltung/rahmen/>`__):
-
-.. figure:: /Images/User/CustomFrames.jpg
-   :alt: Custom frames for content elements
-
-   Custom frames for content elements
-
-.. note::
-
-   The custom frame 4 doesn't have any style definition. You might use it
-   according your needs.
-
 
 .. _user-design-background-variants:
 
@@ -222,7 +204,7 @@ This functionality has been added by introducing additional fields to the
 content element table and adapting the rendering accordingly. The new fields
 are available under the appearance tab in the "Attributes" section.
 
-.. figure:: /Images/User/ContentElement_Attributes.jpg
+.. figure:: /Images/Introduction/ContentElementAttributes.png
    :width: 500px
    :alt: Customizing attributes for a content element
 
