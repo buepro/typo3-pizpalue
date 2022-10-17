@@ -13,7 +13,7 @@ Installation
 ============
 
 Refer to TYPO3 documentation for further details on
-`installing extensions <https://docs.typo3.org/m/typo3/guide-installation/master/en-us/ExtensionInstallation/Index.html>`__.
+`installing extensions <https://docs.typo3.org/m/typo3/tutorial-getting-started/main/en-us/Extensions/Index.html>`__.
 
 .. _admin_installation_supported_extensions:
 
@@ -43,7 +43,7 @@ static extension templates would be included:
    :alt: Included static extension templates
 
 .. note::
-   The order in which the extension templates are included maters: Pizpalue
+   The order in which the extension templates are included matters: Pizpalue
    related templates are inserted after 3rd party extensions and the site
    package `Customization (user_pizpalue)` comes at the end.
 

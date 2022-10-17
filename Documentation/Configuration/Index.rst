@@ -15,7 +15,7 @@ Easyconf
 The extension `easyconf <https://extensions.typo3.org/extension/easyconf>`__
 provides a module to easily configure main aspects from the website. It allows
 to configure typoscript as well as site configurations. Additionally css
-snippets can be defined. Thanks to these features the constant editor isn't
+snippets can be defined too. Thanks to these features the constant editor isn't
 needed much any more.
 
 .. figure:: /Images/Configuration/Easyconf.jpg
@@ -72,7 +72,7 @@ Scroll animation
 
 This feature is using one of the libraries
 `Twikito/scroll-effect <https://github.com/Twikito/onscroll-effect>`__ or
-`Josh.js <https://github.com/mamunhpath/josh.js>`__. They allows to animate
+`Josh.js <https://github.com/mamunhpath/josh.js>`__. They allow to animate
 content elements while the page is being scrolled.
 
 Four preconfigured animations are available in the animation dropdown menu from

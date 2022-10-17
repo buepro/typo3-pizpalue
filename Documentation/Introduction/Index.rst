@@ -99,7 +99,7 @@ to each structure element (see :ref:`templating <integration_templating>`).
 -  Scroll animation effects provided by `Twikito/onscroll-effect <https://github.com/Twikito/onscroll-effect>`__,
    or `Josh.js <https://github.com/mamunhpath/josh.js>`__
 
-.. figure:: /Images/Introduction/ContentElementsAttributes.png
+.. figure:: /Images/Introduction/ContentElementAttributes.png
    :alt: Fields to further define content element attributes
 
    Fields to further define content element attributes
