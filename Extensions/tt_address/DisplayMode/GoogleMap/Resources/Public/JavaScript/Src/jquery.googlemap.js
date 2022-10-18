@@ -135,7 +135,8 @@
                     $element.attr('href','mailto:' + address[field]);
                 }
                 if ( field === 'www' ) {
-                    var www = address[field];
+                    // Strip tailing link target like '_blank'
+                    var www = address[field].match(/^[\S]*/g)[0];
                     if ( www.indexOf('http') === -1 ) {
                         www = 'https://' + www;
                     }
