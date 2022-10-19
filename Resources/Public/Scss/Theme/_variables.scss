@@ -55,16 +55,18 @@ $footer-sections: map-merge($footer-sections, (
 // Frame Backgrounds
 // @see pp-make-link, pp-make-background
 // --------------------------------------------------
+$pp-frame-background-defaults: () !default;
+$pp-frame-background-defaults: map_merge(('link-decoration': 'underline', 'link-decoration-style': 'dotted', 'link-weight': null), $pp-frame-background-defaults);
 $pp-frame-background-primary: () !default;
-$pp-frame-background-primary: map-merge(pp-get-frame-background-settings($primary), $pp-frame-background-primary);
+$pp-frame-background-primary: map-merge(pp-get-frame-background-settings($primary, $pp-frame-background-defaults), $pp-frame-background-primary);
 $pp-frame-background-secondary: () !default;
-$pp-frame-background-secondary: map-merge(pp-get-frame-background-settings($secondary), $pp-frame-background-secondary);
+$pp-frame-background-secondary: map-merge(pp-get-frame-background-settings($secondary, $pp-frame-background-defaults), $pp-frame-background-secondary);
 $pp-frame-background-complementary: () !default;
-$pp-frame-background-complementary: map-merge(pp-get-frame-background-settings($complementary), $pp-frame-background-complementary);
+$pp-frame-background-complementary: map-merge(pp-get-frame-background-settings($complementary, $pp-frame-background-defaults), $pp-frame-background-complementary);
 $pp-frame-background-tertiary: () !default;
-$pp-frame-background-tertiary: map-merge(pp-get-frame-background-settings($tertiary), $pp-frame-background-tertiary);
+$pp-frame-background-tertiary: map-merge(pp-get-frame-background-settings($tertiary, $pp-frame-background-defaults), $pp-frame-background-tertiary);
 $pp-frame-background-quaternary: () !default;
-$pp-frame-background-quaternary: map-merge(pp-get-frame-background-settings($quaternary), $pp-frame-background-quaternary);
+$pp-frame-background-quaternary: map-merge(pp-get-frame-background-settings($quaternary, $pp-frame-background-defaults), $pp-frame-background-quaternary);
 $pp-frame-background-light: () !default;
 $pp-frame-background-light: map-merge(pp-get-frame-background-settings($light, (
     'color':                    $body-color,
@@ -75,7 +77,7 @@ $pp-frame-background-light: map-merge(pp-get-frame-background-settings($light, (
     'link-decoration-style':    null,
 )), $pp-frame-background-light);
 $pp-frame-background-dark: () !default;
-$pp-frame-background-dark: map-merge(pp-get-frame-background-settings($dark), $pp-frame-background-dark);
+$pp-frame-background-dark: map-merge(pp-get-frame-background-settings($dark, $pp-frame-background-defaults), $pp-frame-background-dark);
 
 $frame-backgrounds: () !default;
 $frame-backgrounds: map-merge((
