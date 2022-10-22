@@ -243,6 +243,12 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     );
     TcaUtility::modifyColumns(
         $tca['columns'],
+        'style, type, subpageStyle, subpageType',
+        ['tx_easyconf' => ['mapAlways' => true]],
+        'menu_main'
+    );
+    TcaUtility::modifyColumns(
+        $tca['columns'],
         'subpageStyle, subpageType',
         ['displayCond' => 'FIELD:menu_main_enable_subpage_definition:REQ:true'],
         'menu_main'
