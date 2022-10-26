@@ -29,6 +29,9 @@
 			<trans-unit id="social_channel_linkedin" resname="social_channel_linkedin">
 				<source>LinkedIn</source>
 			</trans-unit>
+			<trans-unit id="social_channel_pinterest" resname="social_channel_pinterest">
+				<source>Pinterest</source>
+			</trans-unit>
 			<trans-unit id="social_channel_xing" resname="social_channel_xing">
 				<source>Xing</source>
 			</trans-unit>

@@ -17,8 +17,8 @@ use TYPO3\CMS\Frontend\Service\TypoLinkCodecService;
 class SocialNetworkService extends AbstractService
 {
     /** @var string[]  */
-    public static $socialChannels = ['facebook', 'twitter', 'instagram', 'github', 'googleplus', 'linkedin', 'xing',
-        'youtube', 'vk', 'vimeo', 'rss'];
+    public static $socialChannels = ['facebook', 'github', 'googleplus', 'instagram', 'linkedin', 'pinterest',
+        'rss', 'twitter', 'vimeo', 'vk', 'xing', 'youtube'];
 
     public function process(): void
     {
