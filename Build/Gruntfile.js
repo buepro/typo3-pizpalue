@@ -73,8 +73,8 @@ module.exports = function(grunt) {
                 dest: '<%= paths.js %>Dist/pizpalue.revealfooterservice.min.js'
             },
             addressmap: {
-                src: '<%= paths.exts.ttAddress.googleMap.js %>Src/jquery.googlemap.js',
-                dest: '<%= paths.exts.ttAddress.googleMap.js %>Dist/jquery.googlemap.min.js'
+                src: '<%= paths.exts.ttAddress.googleMap.js %>Src/googlemap.js',
+                dest: '<%= paths.exts.ttAddress.googleMap.js %>Dist/googlemap.min.js'
             },
             fastmenu: {
                 src: '<%= paths.js %>Src/pizpalue.fastmenu.js',

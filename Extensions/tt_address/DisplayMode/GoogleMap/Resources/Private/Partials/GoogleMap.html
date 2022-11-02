@@ -38,7 +38,7 @@
             (function () {
                 var jsonData = <f:format.raw>{jsonData}</f:format.raw>;
                 window.addEventListener('buepro.ttaddress.googlemap', function () {
-                    $('#pp-ttaddress-map' + <f:format.raw>{contentObjectData.uid}</f:format.raw>).ppAddressGoogleMap({
+                    document.getElementById('pp-ttaddress-map' + <f:format.raw>{contentObjectData.uid}</f:format.raw>).ppAddressGoogleMap({
                         'addresses': jsonData,
                         'lat': <f:format.raw>{mapConfig.lat}</f:format.raw>,
                         'lng': <f:format.raw>{mapConfig.lng}</f:format.raw>,
@@ -88,15 +88,15 @@
     <f:if condition="{settings.pizpalue.siteMode} == 1 || {settings.pizpalue.siteMode} == 2">
         <f:then>
             {f:asset.script(identifier: 'ppTtAddressGoogleMap',
-                src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Src/jquery.googlemap.js')}
+                src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Src/googlemap.js')}
         </f:then>
         <f:else>
             {f:asset.script(identifier: 'ppTtAddressGoogleMap',
-                src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Dist/jquery.googlemap.min.js')}
+                src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Dist/googlemap.min.js')}
         </f:else>
     </f:if>
     {f:asset.script(identifier: 'ppGoogleMapsApi', defer: 1, async: 1,
-        src: 'https://maps.googleapis.com/maps/api/js?key={settings.pizpalue.googleMap.apiKey}&callback=initMap')}
+        src: 'https://maps.googleapis.com/maps/api/js?key={settings.pizpalue.googleMap.apiKey}&callback=ppGoogleMapsInitMap')}
 </f:section>
 
 </html>
