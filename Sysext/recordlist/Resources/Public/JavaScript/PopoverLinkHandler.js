@@ -3,7 +3,7 @@
  *
  * @see \Buepro\Pizpalue\Sysext\Recordlist\LinkHandler\PopoverLinkHandler
  */
-define(['jquery', 'TYPO3/CMS/Recordlist/LinkBrowser'], function($, LinkBrowser) {
+define(['TYPO3/CMS/Recordlist/LinkBrowser'], function(LinkBrowser) {
     var ppPopover = {};
     var pp = {
         /**
@@ -39,17 +39,24 @@ define(['jquery', 'TYPO3/CMS/Recordlist/LinkBrowser'], function($, LinkBrowser) 
 
     ppPopover.createLink = function(event) {
         event.preventDefault();
-        const href = $(event.currentTarget).find('[name="lhref"]').val();
-        let content = pp.nl2br($(event.currentTarget).find('[name="lcontent"]').val());
+        const href = event.currentTarget.querySelector('[name="lhref"]').value;
+        let content = pp.nl2br(event.currentTarget.querySelector('[name="lcontent"]').value);
         let link = 't3://pppopover?href=' + pp.urlencode(href) + '&content=' + pp.urlencode(content);
         LinkBrowser.finalizeFunction(link);
     };
 
     ppPopover.initialize = function() {
-        $('#pp-popoverform').on('submit', ppPopover.createLink)
+        document.getElementById('pp-popoverform').addEventListener('submit', ppPopover.createLink)
     };
 
-    $(ppPopover.initialize);
+    const ready = (callback) => {
+        if (document.readyState !== "loading") callback();
+        else document.addEventListener("DOMContentLoaded", callback);
+    }
+
+    ready(() => {
+        ppPopover.initialize();
+    });
 
     return ppPopover;
 });
