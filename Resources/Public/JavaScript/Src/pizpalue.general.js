@@ -22,6 +22,13 @@ if ( typeof pp !== 'undefined' ) {
             },
 
             /**
+             * Capitalize first letter
+             *
+             * foo => Foo
+             */
+            ucfirst: (s) => (s && s[0].toUpperCase() + s.slice(1)) || "",
+
+            /**
              * Replacement for jQuery $()
              * @param callback
              */
@@ -31,7 +38,7 @@ if ( typeof pp !== 'undefined' ) {
             },
 
             /**
-             * Replacement for jQuery el.parents()
+             * Replacement for jQuery parents function
              *
              * $(el).parents(selector); => pp.parents(el, selector);
              */
@@ -41,6 +48,34 @@ if ( typeof pp !== 'undefined' ) {
                     if (!selector || el.matches(selector)) parents.unshift(el);
                 }
                 return parents;
+            },
+
+            /**
+             * Replacement for jQuery outerWith(true) function
+             *
+             * $(el).outerWidth(true); => pp.outerWidth(el);
+             */
+            outerWidth: function (el) {
+                const style = getComputedStyle(el);
+                return (
+                    el.getBoundingClientRect().width +
+                    parseFloat(style.getPropertyValue('marginLeft') || '0') +
+                    parseFloat(style.getPropertyValue('marginRight') || '0')
+                );
+            },
+
+            /**
+             * Replacement for jQuery outeHeight(true) function
+             *
+             * $(el).outerHeight(true); => pp.outerHeight(el);
+             */
+            outerHeight: function (el) {
+                const style = getComputedStyle(el);
+                return (
+                    el.getBoundingClientRect().height +
+                    parseFloat(style.getPropertyValue('marginTop') || '0') +
+                    parseFloat(style.getPropertyValue('marginBottom') || '0')
+                );
             }
         }
     }) ();
