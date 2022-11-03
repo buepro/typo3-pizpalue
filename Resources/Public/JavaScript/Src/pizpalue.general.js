@@ -7,7 +7,7 @@
 if ( typeof pp !== 'undefined' ) {
     alert('JS conflict! The variable pizpalue is already in use. Please check your libraries.');
 } else {
-    var pp = (function ( $ ) {
+    var pp = (function () {
         return {
             /**
              * Return value from a key (name) in the url
@@ -20,16 +20,30 @@ if ( typeof pp !== 'undefined' ) {
                 var results = regex.exec(location.search);
                 return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
             },
+
             /**
-             * Replacement for jQuery $();
+             * Replacement for jQuery $()
              * @param callback
              */
             domReady: function (callback) {
                 if (String(document.readyState) !== "loading") callback();
                 else document.addEventListener("DOMContentLoaded", callback);
+            },
+
+            /**
+             * Replacement for jQuery el.parents()
+             *
+             * $(el).parents(selector); => pp.parents(el, selector);
+             */
+            parents: function (el, selector) {
+                const parents = [];
+                while ((el = el.parentNode) && el !== document) {
+                    if (!selector || el.matches(selector)) parents.unshift(el);
+                }
+                return parents;
             }
         }
-    }) (jQuery);
+    }) ();
 }
 
 /**

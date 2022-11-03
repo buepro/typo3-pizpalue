@@ -15,6 +15,13 @@
         <a href="javascript:void(0);"><span class="ppc-icon ppc-hide px-1"><i class="ppicon ppicon-arrow-down"></i></span></a>
     </h{_headerLayout}>
 </div>
-<f:asset.script identifier="pp-picoverlay-bar" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/ContentElement/picoverlay.bar.min.js" />
+<f:if condition="{settings.pizpalue.siteMode} == 1 || {pizpalue.agency.siteMode} == 2">
+    <f:then>
+        <f:asset.script identifier="pp-picoverlay-bar" src="EXT:pizpalue/Resources/Public/JavaScript/Src/ContentElement/picoverlay.bar.js" />
+    </f:then>
+    <f:else>
+        <f:asset.script identifier="pp-picoverlay-bar" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/ContentElement/picoverlay.bar.min.js" />
+    </f:else>
+</f:if>
 
 </html>
