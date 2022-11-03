@@ -25,6 +25,13 @@
             </f:if>
         </f:for>
     </div>
-    <f:asset.script identifier="pp-categorized-content" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/ContentElement/list-categorized-content.min.js" />
+    <f:if condition="{settings.pizpalue.siteMode} == 1 || {pizpalue.agency.siteMode} == 2">
+        <f:then>
+            <f:asset.script identifier="pp-categorized-content" src="EXT:pizpalue/Resources/Public/JavaScript/Src/ContentElement/list-categorized-content.js" />
+        </f:then>
+        <f:else>
+            <f:asset.script identifier="pp-categorized-content" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/ContentElement/list-categorized-content.min.js" />
+        </f:else>
+    </f:if>
 </f:section>
 </html>

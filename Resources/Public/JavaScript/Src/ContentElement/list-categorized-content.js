@@ -33,18 +33,13 @@
             },
         };
         const list = listElement;
-        const settings = Object.assign(
-            {},
-            defaults,
-            {itemHeights: JSON.parse(list.getAttribute('data-pp-heights'))},
-            options
-        );
+        const settings = { ...defaults, ...{ itemHeights: JSON.parse(list.dataset.ppHeights) }, ...options };
 
         /**
          * @return {number}
          */
         const getClosedHeight = () => {
-            let screenWidth = $(window).width(),
+            let screenWidth = document.querySelector('html').clientWidth,
                 result = settings.itemHeights[0],
                 minWidth;
             for (minWidth in settings.itemHeights) {
@@ -83,7 +78,7 @@
          */
         const addEventListeners = () => {
             let resizeTimeout;
-            $(window).on('resize', function () {
+            window.addEventListener('resize', function () {
                 if (resizeTimeout !== undefined) {
                     window.cancelAnimationFrame(resizeTimeout);
                 }
