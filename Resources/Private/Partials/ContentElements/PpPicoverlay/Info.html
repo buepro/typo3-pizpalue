@@ -16,6 +16,13 @@
 </f:if>
 <span class="ppc-show"></span>
 <span class="ppc-hide"></span>
-<f:asset.script identifier="pp-picoverlay-info" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/ContentElement/picoverlay.info.min.js" />
+<f:if condition="{settings.pizpalue.siteMode} == 1 || {pizpalue.agency.siteMode} == 2">
+    <f:then>
+        <f:asset.script identifier="pp-picoverlay-info" src="EXT:pizpalue/Resources/Public/JavaScript/Src/ContentElement/picoverlay.info.js" />
+    </f:then>
+    <f:else>
+        <f:asset.script identifier="pp-picoverlay-info" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/ContentElement/picoverlay.info.min.js" />
+    </f:else>
+</f:if>
 
 </html>
