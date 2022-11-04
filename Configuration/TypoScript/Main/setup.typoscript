@@ -143,6 +143,7 @@ page {
 
 page {
     includeJSFooterlibs {
+        pizpalueUtility = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.utility.min.js
         pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.general.min.js
         pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.smoothscroll.min.js
         bootstrap_smoothscroll >

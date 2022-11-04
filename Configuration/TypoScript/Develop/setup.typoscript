@@ -37,9 +37,10 @@ page {
         #contrib_cookieconsent = EXT:bootstrap_package/Resources/Public/Contrib/cookieconsent/cookieconsent.min.js
         #bootstrap_cookieconsent = EXT:bootstrap_package/Resources/Public/JavaScript/Src/jquery.cookieconsent.js
         #bootstrap_smoothscroll = EXT:bootstrap_package/Resources/Public/JavaScript/Src/bootstrap.smoothscroll.js
+        pizpalueUtility = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.utility.js
+        pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.general.js
         pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.cookieconsentservice.js
         #pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.revealfooterservice.js
-        pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.general.js
         #pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.smoothscroll.js
     }
 }

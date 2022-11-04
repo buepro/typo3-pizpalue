@@ -56,6 +56,10 @@ module.exports = function(grunt) {
                     comments: false
                 }
             },
+            utility: {
+                src: '<%= paths.js %>Src/pizpalue.utility.js',
+                dest: '<%= paths.js %>Dist/pizpalue.utility.min.js'
+            },
             general: {
                 src: '<%= paths.js %>Src/pizpalue.general.js',
                 dest: '<%= paths.js %>Dist/pizpalue.general.min.js'
