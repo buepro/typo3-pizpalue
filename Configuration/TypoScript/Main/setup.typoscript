@@ -147,6 +147,7 @@ page {
         pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.general.min.js
         pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.smoothscroll.min.js
         bootstrap_smoothscroll >
+        pizpalueShowScroll = EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.showscroll.min.js
         js-cookie = EXT:pizpalue/Resources/Public/Contrib/js-cookie/js.cookie.min.js
     }
 }

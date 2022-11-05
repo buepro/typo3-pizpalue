@@ -41,6 +41,7 @@ page {
         pizpalueGeneral = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.general.js
         pizpalueCookieConsent = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.cookieconsentservice.js
         #pizpalueRevealFooter = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.revealfooterservice.js
-        #pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.smoothscroll.js
+        pizpalueSmoothscroll = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.smoothscroll.js
+        pizpalueShowScroll = EXT:pizpalue/Resources/Public/JavaScript/Src/pizpalue.showscroll.js
     }
 }

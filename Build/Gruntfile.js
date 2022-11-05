@@ -68,6 +68,10 @@ module.exports = function(grunt) {
                 src: '<%= paths.js %>Src/pizpalue.smoothscroll.js',
                 dest: '<%= paths.js %>Dist/pizpalue.smoothscroll.min.js'
             },
+            showscroll: {
+                src: '<%= paths.js %>Src/pizpalue.showscroll.js',
+                dest: '<%= paths.js %>Dist/pizpalue.showscroll.min.js'
+            },
             cookieconsentservice: {
                 src: '<%= paths.js %>Src/pizpalue.cookieconsentservice.js',
                 dest: '<%= paths.js %>Dist/pizpalue.cookieconsentservice.min.js'
