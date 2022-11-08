@@ -9,6 +9,7 @@
 
 namespace Buepro\Pizpalue\Tests\Functional;
 
+use Prophecy\PhpUnit\ProphecyTrait;
 use Symfony\Component\Yaml\Yaml;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Cache\CacheManager;
@@ -24,6 +25,8 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 class FunctionalFrontendTestCase extends FunctionalTestCase
 {
+    use ProphecyTrait;
+
     protected function setupFrontendSite(int $pageId = 1, array $additionalLanguages = []): void
     {
         $languages = [
