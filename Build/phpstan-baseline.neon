@@ -51,7 +51,31 @@ parameters:
 			path: ../Sysext/frontend/Classes/Hook/PopoverTypolinkHook.php
 
 		-
+			message: """
+				#^Call to deprecated method prophesize\\(\\) of class Buepro\\\\Pizpalue\\\\Tests\\\\Functional\\\\FunctionalFrontendTestCase\\:
+				https\\://github\\.com/sebastianbergmann/phpunit/issues/4141$#
+			"""
+			count: 1
+			path: ../Tests/Functional/FunctionalFrontendTestCase.php
+
+		-
 			message: "#^Variable method call on TYPO3\\\\CMS\\\\Core\\\\Page\\\\AssetCollector\\.$#"
 			count: 1
 			path: ../Tests/Functional/ViewHelpers/FrameDataViewHelperTest.php
+
+		-
+			message: """
+				#^Call to deprecated method prophesize\\(\\) of class Buepro\\\\Pizpalue\\\\Tests\\\\Unit\\\\DataProcessing\\\\PostMenuProcessorTest\\:
+				https\\://github\\.com/sebastianbergmann/phpunit/issues/4141$#
+			"""
+			count: 1
+			path: ../Tests/Unit/DataProcessing/PostMenuProcessorTest.php
+
+		-
+			message: """
+				#^Call to deprecated method prophesize\\(\\) of class Buepro\\\\Pizpalue\\\\Tests\\\\Unit\\\\Structure\\\\TypoScriptBasedTest\\:
+				https\\://github\\.com/sebastianbergmann/phpunit/issues/4141$#
+			"""
+			count: 2
+			path: ../Tests/Unit/Structure/TypoScriptBasedTest.php
 
