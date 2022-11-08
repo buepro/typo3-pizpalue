@@ -17,12 +17,12 @@ finishers:
       attachUploads: true
     identifier: EmailToReceiver
   -
+    identifier: DeleteUploads
+  -
     options:
       pageUid: '1'
       additionalParameters: ''
     identifier: Redirect
-  -
-    identifier: DeleteUploads
 renderables:
   -
     renderingOptions:
