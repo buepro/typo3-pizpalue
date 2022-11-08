@@ -1,0 +1,47 @@
+<html data-namespace-typo3-fluid="true" xmlns:core="TYPO3\CMS\Core\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:if condition="{newsItem.isEvent}">
+    <f:then>
+        <f:render partial="General/EventInformation" arguments="{_all}" />
+    </f:then>
+    <f:else>
+        <ul class="extra mb-3 nav mx-n2">
+            <f:comment>Author</f:comment>
+            <f:if condition="{newsItem.author}">
+                <li class="mx-2">
+                    <i class="ppicon ppicon-user me-1"></i>
+                    <f:translate arguments="{0:newsItem.author}" key="author"/>
+                </li>
+            </f:if>
+
+            <f:comment>Date</f:comment>
+            <li class="mx-2">
+                <i class="ppicon ppicon-calendar me-1"> </i>
+                <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" itemprop="datePublished">
+                    <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+                </time>
+            </li>
+
+            <f:comment>Category</f:comment>
+            <li class="mx-2">
+                <f:if condition="{newsItem.firstCategory}">
+                    <i class="ppicon ppicon-folder-open me-1"></i>
+                    <span class="badge rounded-pill bg-primary">{newsItem.firstCategory.title}</span>
+                </f:if>
+            </li>
+
+            <f:comment>Tags</f:comment>
+            <f:if condition="{newsItem.tags}">
+                <li class="mx-2">
+                    <i class="ppicon ppicon-tags me-1"></i> <span class="news-list-tags me-1" itemprop="keywords">
+                    <f:for as="tag" each="{newsItem.tags}">
+                        <span class="badge rounded-pill bg-primary me-1">{tag.title}</span>
+                    </f:for>
+                    </span>
+                </li>
+            </f:if>
+        </ul>
+    </f:else>
+</f:if>
+</html>

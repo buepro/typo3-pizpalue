@@ -47,6 +47,11 @@ defined('TYPO3') or die('Access denied.');
         );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             'pizpalue',
+            'Extensions/news/Configuration/TypoScript/Twb5',
+            'Pizpalue - news twb5'
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            'pizpalue',
             'Extensions/news/Configuration/TypoScript/RSS',
             'Pizpalue - news RSS feed'
         );

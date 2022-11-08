@@ -1,9 +1,9 @@
 @font-face {
     font-family: "pizpalueicon";
-    src: url("./pizpalueicon.eot?c4cc72a26478659beda99640acb7bc39#iefix") format("embedded-opentype"),
-url("./pizpalueicon.woff2?c4cc72a26478659beda99640acb7bc39") format("woff2"),
-url("./pizpalueicon.woff?c4cc72a26478659beda99640acb7bc39") format("woff"),
-url("./pizpalueicon.ttf?c4cc72a26478659beda99640acb7bc39") format("truetype");
+    src: url("./pizpalueicon.eot?f20c2dd6e3410bf84fe7e5c7d174cf3c#iefix") format("embedded-opentype"),
+url("./pizpalueicon.woff2?f20c2dd6e3410bf84fe7e5c7d174cf3c") format("woff2"),
+url("./pizpalueicon.woff?f20c2dd6e3410bf84fe7e5c7d174cf3c") format("woff"),
+url("./pizpalueicon.ttf?f20c2dd6e3410bf84fe7e5c7d174cf3c") format("truetype");
 }
 
 .ppicon::before, .bootstrappackageicon::before, .glyphicon::before {
@@ -60,3 +60,4 @@ url("./pizpalueicon.ttf?c4cc72a26478659beda99640acb7bc39") format("truetype");
 .ppicon-user::before, .bootstrappackageicon-user::before, .glyphicon-user::before { content: "\f180"; }
 .ppicon-envelope-solid::before, .bootstrappackageicon-envelope-solid::before, .glyphicon-envelope-solid::before { content: "\f110"; }
 .ppicon-envelope::before, .bootstrappackageicon-envelope::before, .glyphicon-envelope::before { content: "\f111"; }
+.ppicon-folder-open::before, .bootstrappackageicon-folder-open::before, .glyphicon-folder-open::before { content: "\f112"; }

@@ -110,3 +110,21 @@ $font-size-base: 1rem !default;
         }
     }
 }
+
+// This is repeated here to maintain the style when using news twb5
+.pp-news-infobar {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+    li {
+        padding-right: 0.7rem;
+        white-space: nowrap;
+    }
+    .glyphicon {
+        margin-right: 0.1em;
+    }
+    .badge {
+        margin-right: 3px;
+    }
+}

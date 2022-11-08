@@ -11,12 +11,12 @@ Static templates
 
 This extension provides more flexibility by adding a dummy asset field, a
 layout with an image on top and optimized image rendering. To get these features
-the static template (from extension) `Pizpalue - news (pizpalue)` needs to be
+the static template (from extension) `Pizpalue - news twb5 (pizpalue)` needs to be
 added. The resulting template hierarchy would be as following:
 
 #. News (news)
 #. News Styles Twitter Bootstrap V5 (news)
-#. Pizpalue - news (pizpalue)
+#. Pizpalue - news twb5 (pizpalue)
 
 .. note::
    In case the extension `eventnews` is installed the template hierarchy
@@ -25,7 +25,7 @@ added. The resulting template hierarchy would be as following:
    #. News (news)
    #. News Styles Twitter Bootstrap V5 (news)
    #. Eventnews (eventnews)
-   #. Pizpalue - news (pizpalue)
+   #. Pizpalue - news twb5 (pizpalue)
    #. Pizpalue - eventnews (eventnews)
 
 .. note::
@@ -34,7 +34,7 @@ added. The resulting template hierarchy would be as following:
 
    #. News (news)
    #. News Styles Twitter Bootstrap V5 (news)
-   #. Pizpalue - news (pizpalue)
+   #. Pizpalue - news twb5 (pizpalue)
    #. Pizpalue - Main (pizpalue)
 
 .. _admin_news_rss_feed:
