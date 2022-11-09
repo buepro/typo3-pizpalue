@@ -2,27 +2,47 @@
 # Adjust content elements from bootstrap package
 #=========================================================#
 
-#---------------------------------------------------------#
-# Use real size for image backgrounds defined by pizpalue
-# variants.
-#---------------------------------------------------------#
-lib.contentElement.settings.responsiveimages.contentelements {
-    carousel {
-        background_image {
-            multiplier {
-                default = 1.0
-                xlarge = 1.0
-                large = 1.0
+lib.contentElement {
+
+    templateRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+        10 = EXT:pizpalue/Resources/Private/Templates/ContentElements/
+        1000 = {$plugin.bootstrap_package_contentelements.view.templateRootPath}
+    }
+    partialRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+        10 = EXT:pizpalue/Resources/Private/Partials/ContentElements/
+        1000 = {$plugin.bootstrap_package_contentelements.view.partialRootPath}
+    }
+    layoutRootPaths {
+        0 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
+        10 = EXT:pizpalue/Resources/Private/Layouts/ContentElements/
+        1000 = {$plugin.bootstrap_package_contentelements.view.layoutRootPath}
+    }
+
+    settings {
+        responsiveimages.contentelements {
+
+            #---------------------------------------------------------#
+            # Use real size for image backgrounds defined by pizpalue
+            # variants.
+            #---------------------------------------------------------#
+            carousel {
+                background_image {
+                    multiplier {
+                        default = 1.0
+                        xlarge = 1.0
+                        large = 1.0
+                    }
+                }
             }
+            carousel_fullscreen.background_image.multiplier < .carousel.background_image.multiplier
+            carousel_small.background_image.multiplier < .carousel.background_image.multiplier
+
+            #---------------------------------------------------------#
+            # Correct bugs
+            #---------------------------------------------------------#
+            menu_thumbnail_dir.3.multiplier.small >
         }
     }
-    carousel_fullscreen.background_image.multiplier < .carousel.background_image.multiplier
-    carousel_small.background_image.multiplier < .carousel.background_image.multiplier
-}
-
-#---------------------------------------------------------#
-# Correct bugs
-#---------------------------------------------------------#
-lib.contentElement.settings.responsiveimages.contentelements {
-    menu_thumbnail_dir.3.multiplier.small >
 }

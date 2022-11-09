@@ -42,6 +42,21 @@ page {
     #: FLUIDTEMPLATE
     #.
     10 {
+        templateRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
+            1 = EXT:pizpalue/Resources/Private/Templates/Page/
+            1000 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
+            1 = EXT:pizpalue/Resources/Private/Partials/Page/
+            1000 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
+            1 = EXT:pizpalue/Resources/Private/Layouts/Page/
+            1000 = {$page.fluidtemplate.layoutRootPath}
+        }
         dataProcessing {
             # Add properties to items from main menu and alter active property
             10.dataProcessing.1648044588 = Buepro\Pizpalue\DataProcessing\PostMenuProcessor
