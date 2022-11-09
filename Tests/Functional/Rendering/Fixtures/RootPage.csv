@@ -1,0 +1,22 @@
+pages
+,uid,pid,backend_layout,backend_layout_next_level
+,1,0,pagets__none,pagets__none
+sys_template
+,uid,pid,root,clear,include_static_file,constants,config
+,1,1,1,3,"EXT:bootstrap_package/Configuration/TypoScript,EXT:pizpalue/Configuration/TypoScript/Main","
+page.theme {
+    cookieconsent.enable = 0
+    language.enable = 0
+    copyright.enable = 0
+    socialmedia.enable = 0
+    breadcrumb.enable = 0
+    meta.enable = 0
+}","
+page {
+    includeCSS >
+    includeCSSLibs >
+    includeJSFooterlibs >
+    includeJSLibs >
+    jsInline >
+    meta >
+}"

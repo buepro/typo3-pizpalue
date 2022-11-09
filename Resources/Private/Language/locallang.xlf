@@ -13,6 +13,9 @@
 			<trans-unit id="close">
 				<source>Close</source>
 			</trans-unit>
+			<trans-unit id="normal" resname="normal">
+				<source>Normal</source>
+			</trans-unit>
 			<trans-unit id="less">
 				<source>Less</source>
 			</trans-unit>
@@ -21,6 +24,37 @@
 			</trans-unit>
 			<trans-unit id="moreDetails">
 				<source>More details</source>
+			</trans-unit>
+
+			<trans-unit id="primary" resname="primary">
+				<source>Primary</source>
+			</trans-unit>
+			<trans-unit id="secondary" resname="secondary">
+				<source>Secondary</source>
+			</trans-unit>
+			<trans-unit id="complementary" resname="complementary">
+				<source>Complementary</source>
+			</trans-unit>
+			<trans-unit id="success" resname="success">
+				<source>Success</source>
+			</trans-unit>
+			<trans-unit id="danger" resname="danger">
+				<source>Danger</source>
+			</trans-unit>
+			<trans-unit id="muted" resname="muted">
+				<source>Muted</source>
+			</trans-unit>
+			<trans-unit id="tertiary" resname="tertiary">
+				<source>Tertiary</source>
+			</trans-unit>
+			<trans-unit id="quaternary" resname="quaternary">
+				<source>Quaternary</source>
+			</trans-unit>
+			<trans-unit id="light" resname="light">
+				<source>Light</source>
+			</trans-unit>
+			<trans-unit id="dark" resname="dark">
+				<source>Dark</source>
 			</trans-unit>
 
 			<trans-unit id="cookieconsent.common.header">

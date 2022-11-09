@@ -27,6 +27,14 @@ class FunctionalFrontendTestCase extends FunctionalTestCase
 {
     use ProphecyTrait;
 
+    /**
+     * @var non-empty-string[]
+     */
+    protected $testExtensionsToLoad = [
+        'typo3conf/ext/bootstrap_package',
+        'typo3conf/ext/pizpalue',
+    ];
+
     protected function setupFrontendSite(int $pageId = 1, array $additionalLanguages = []): void
     {
         $languages = [

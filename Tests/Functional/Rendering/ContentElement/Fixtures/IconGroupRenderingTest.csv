@@ -1,0 +1,6 @@
+tt_content
+,uid,pid,CType
+,1,1,"icon_group"
+tx_bootstrappackage_icon_group_item
+,uid,pid,tt_content,icon_set,icon_identifier
+,1,1,1,EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/,EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/alert.svg

@@ -231,6 +231,10 @@
 				<source>Dummy asset</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_ttc.icon_group.icon_color">
+				<source>Icon color</source>
+			</trans-unit>
+
 			<trans-unit id="tca.tabs.text">
 				<source>Text</source>
 			</trans-unit>
