@@ -1,0 +1,3 @@
+tt_content
+,uid,pid,CType,bodytext,icon_position,icon_type,icon_size,icon_color,icon_background,icon_set,icon
+,1,1,texticon,"text goes here",left,circle,default,,,EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/,EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/alert.svg

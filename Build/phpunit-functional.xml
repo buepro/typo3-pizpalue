@@ -24,7 +24,7 @@
         <testsuite name="buepro-pizpalue-functional-tests">
             <directory>../Tests/Functional</directory>
 <!--            <file>-->
-<!--                ../Tests/Functional/Rendering/ContentElement/IconGroupRenderingTest.php-->
+<!--                ../Tests/Functional/Rendering/ContentElement/TexticonRenderingTest.php-->
 <!--            </file>-->
         </testsuite>
     </testsuites>
