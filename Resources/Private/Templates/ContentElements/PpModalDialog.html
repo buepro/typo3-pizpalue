@@ -4,6 +4,12 @@
 <f:section name="Header" />
 <f:section name="Main">
 
+    <f:comment>
+        The field readmore_label is used to hold the iframe url.
+        As soon as an iframe url is defined the dialog height is fixed to 75% and the
+        overflow property is changed for some elements (search for readmore_label).
+    </f:comment>
+
     <button type="button"
             class="{data.pi_flexform.button_class}"
             data-bs-toggle="modal"
@@ -13,18 +19,23 @@
         {data.header}
     </button>
 
-    <div class="modal fade pp-modal-dialog" id="pp-modal-dialog-{data.uid}" tabindex="-1" role="dialog"
+    <div class="modal fade pp-modal-dialog{f:if(condition: data.readmore_label, then: ' ppc-iframe')}" id="pp-modal-dialog-{data.uid}" tabindex="-1" role="dialog"
          aria-labelledby="pp-modal-dialog-title-{data.uid}" aria-hidden="true">
         <div class="{data.pi_flexform.dialog_class}" role="document">
-            <div class="modal-content">
+            <div class="modal-content{f:if(condition: data.readmore_label, then: ' h-75')}">
                 <div class="modal-header">
                     <h5 class="modal-title" id="pp-modal-dialog-title-{data.uid}">{f:if(condition: data.subheader, then: data.subheader, else: data.header)}</h5>
                     <button type="button" class="close btn-close" data-bs-dismiss="modal" data-dismiss="modal"
                             aria-label="{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:close')}">
                     </button>
                 </div>
-                <div class="modal-body">
-                    <f:format.raw>{shortcuts}</f:format.raw>
+                <div class="modal-body{f:if(condition: data.readmore_label, then: ' overflow-hidden')}">
+                    {shortcuts -> f:format.raw() -> f:if(condition: shortcuts)}
+                    <f:if condition="{data.readmore_label}">
+                        <iframe class="w-100 h-100 overflow-auto" data-pp-src="{data.readmore_label}">
+                        </iframe>
+                        <f:asset.script identifier="pp-modal-dialog" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/ContentElement/modal-dialog.min.js" />
+                    </f:if>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-dismiss="modal">

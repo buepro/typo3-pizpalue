@@ -250,6 +250,9 @@
 			<trans-unit id="tca.modal_dialog.options">
 				<source>Button options</source>
 			</trans-unit>
+			<trans-unit id="tca.modal_dialog.readmore_label">
+				<source>URL</source>
+			</trans-unit>
 			<trans-unit id="tca.list_categorized_content.options">
 				<source>List options</source>
 			</trans-unit>

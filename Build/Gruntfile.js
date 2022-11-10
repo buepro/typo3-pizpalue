@@ -112,6 +112,10 @@ module.exports = function(grunt) {
                 src: '<%= paths.contrib %>josh.js/src/josh.js',
                 dest: '<%= paths.contrib %>josh.js/dist/josh.pp.min.js'
             },
+            modalDialog: {
+                src: '<%= paths.js %>Src/ContentElement/modal-dialog.js',
+                dest: '<%= paths.js %>Dist/ContentElement/modal-dialog.min.js'
+            },
         },
         watch: {
             general: {
