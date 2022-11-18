@@ -40,7 +40,7 @@
 	},
 	"require-dev": {
 		"buepro/typo3-container-elements": "^4.0.0",
-		"buepro/typo3-user-pizpalue": "dev-main",
+		"buepro/typo3-user-pizpalue": "^4.0.0 || dev-main",
 		"ergebnis/composer-normalize": "^2.15.0",
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
