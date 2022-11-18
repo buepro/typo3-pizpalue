@@ -94,6 +94,9 @@ pp.domReady(() => {
  */
 pp.domReady(function () {
     const nav = document.getElementById('mainnavigation');
+    if (nav === null) {
+        return;
+    }
     nav.addEventListener('show.bs.collapse', () => {
         document.getElementById('page-header').classList.add('pp-dropdown-active');
     });
