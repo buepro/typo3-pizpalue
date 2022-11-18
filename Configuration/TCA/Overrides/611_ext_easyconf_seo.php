@@ -23,7 +23,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     /**
      * Properties
      */
-    $googleProperties = 'meta.google-site-verification, tracking.google.trackingId';
+    $googleProperties = 'meta.google-site-verification, tracking.google.trackingID';
     $seoProperties = 'optimizeLinkTargets';
 
     /**

@@ -7,7 +7,7 @@
 			<trans-unit id="seo_meta_google-site-verification" resname="seo_meta_google-site-verification">
 				<source>Site verification code</source>
 			</trans-unit>
-			<trans-unit id="seo_tracking_google_tracking_id" resname="seo_tracking_google_tracking_id">
+			<trans-unit id="seo_tracking_google_tracking_i_d" resname="seo_tracking_google_tracking_i_d">
 				<source>Tracking ID</source>
 			</trans-unit>
 			<trans-unit id="seo_optimize_link_targets" resname="seo_optimize_link_targets">
