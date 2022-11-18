@@ -9,6 +9,9 @@
      * buepro.ccs.framechange: Fired when the padding from the framing container changes
      * buepro.ccs.borderchange: Fired when the margin from a border element changes
      */
+    if (document.getElementById('cookieconsent') === null) {
+        return;
+    }
     const cookieConsentService = {
         dialog: null,
         dialogPosition: 'top',

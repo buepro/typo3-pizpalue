@@ -56,6 +56,9 @@ if ( typeof pp !== 'undefined' ) {
              * $(el).outerWidth(true); => pp.outerWidth(el);
              */
             outerWidth: function (el) {
+                if (el === null) {
+                    return null;
+                }
                 const style = getComputedStyle(el);
                 return (
                     el.getBoundingClientRect().width +
@@ -70,6 +73,9 @@ if ( typeof pp !== 'undefined' ) {
              * $(el).outerHeight(true); => pp.outerHeight(el);
              */
             outerHeight: function (el) {
+                if (el === null) {
+                    return null;
+                }
                 const style = getComputedStyle(el);
                 return (
                     el.getBoundingClientRect().height +
