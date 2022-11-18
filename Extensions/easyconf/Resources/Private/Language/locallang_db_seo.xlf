@@ -10,8 +10,23 @@
 			<trans-unit id="seo_tracking_google_tracking_i_d" resname="seo_tracking_google_tracking_i_d">
 				<source>Tracking ID</source>
 			</trans-unit>
+			<trans-unit id="seo_tracking_google_ga4_measure_id" resname="seo_tracking_google_ga4_measure_id">
+				<source>Google analytics 4 measure ID</source>
+			</trans-unit>
+			<trans-unit id="seo_tracking_google_tag_manager_container_id" resname="seo_tracking_google_tag_manager_container_id">
+				<source>Google tag manager container ID</source>
+			</trans-unit>
 			<trans-unit id="seo_optimize_link_targets" resname="seo_optimize_link_targets">
 				<source>Optimize link targets</source>
+			</trans-unit>
+			<trans-unit id="seo_optimize_link_targets.description" resname="seo_optimize_link_targets.description">
+				<source>By default empty anchor tags are prepended to frameless content elements and serve as link targets. Empty anchor elements might cause seo issues. By enabling this parameter the id from the anchor tag is tried to be assigned to the anchor's sibling or one of its descendents.</source>
+			</trans-unit>
+			<trans-unit id="seo_consent_tracking_code" resname="seo_consent_tracking_code">
+				<source>Consent tracking code</source>
+			</trans-unit>
+			<trans-unit id="seo_consent_tracking_code.description" resname="seo_consent_tracking_code.description">
+				<source>If set 3rd party code is only embedded if user consented cookies. Otherwise the tracking code is embedded always and data protection compliance has to be verified.</source>
 			</trans-unit>
 		</body>
 	</file>

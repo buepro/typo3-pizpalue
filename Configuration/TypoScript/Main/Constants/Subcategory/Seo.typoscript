@@ -8,11 +8,21 @@ page {
     # cat=6030/1410/010; type=string; label=Google meta tag site verification
     meta.google-site-verification =
 
-    # cat=6030/1410/020; type=string; label=Google tracking ID
-    tracking.google.trackingID =
+    tracking {
+        google {
+            # cat=6030/1410/030; type=string; label=Google tracking ID
+            trackingID =
+            # cat=6030/1410/040; type=string; label=Google analytics 4 measure ID
+            ga4MeasureId =
+            # cat=6030/1410/050; type=string; label=Google tag manager container ID
+            tagManagerContainerId =
+        }
+    }
 }
 
 pizpalue.seo {
     # cat=6060/1410/010; type=boolean; label=Optimize link targets:By default empty anchor tags are prepended to frameless content elements and serve as link targets. Empty anchor elements might cause seo issues. By enabling this parameter the id from the anchor tag is tried to be assigned to the anchor's sibling or one of its descendents.
     optimizeLinkTargets = 0
+    # cat=6030/1410/020; type=boolean; label=Consent tracking code:If set 3rd party code is only embedded if user consented cookies. Otherwise the tracking code is embedded always and data protection compliance has to be verified.
+    consentTrackingCode = 0
 }

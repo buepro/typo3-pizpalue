@@ -23,8 +23,9 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     /**
      * Properties
      */
-    $googleProperties = 'meta.google-site-verification, tracking.google.trackingID';
-    $seoProperties = 'optimizeLinkTargets';
+    $googleProperties = 'meta.google-site-verification, tracking.google.trackingID, tracking.google.ga4MeasureId, ' .
+        'tracking.google.tagManagerContainerId';
+    $seoProperties = 'optimizeLinkTargets, consentTrackingCode';
 
     /**
      * Define columns
@@ -44,6 +45,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ),
     ];
     $tca['columns'] = array_replace($tca['columns'], TcaUtility::getColumns($propertyMaps, $l10nFile));
+    $tca['columns']['seo_optimize_link_targets']['description'] = $l10nFile . ':seo_optimize_link_targets.description';
+    $tca['columns']['seo_consent_tracking_code']['description'] = $l10nFile . ':seo_consent_tracking_code.description';
 
     /**
      * Define palettes
@@ -55,7 +58,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ),
         'paletteSeo' => TcaUtility::getPalette(
             $seoProperties,
-            'seo'
+            'seo',
+            3
         ),
     ]);
 
@@ -64,7 +68,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
      */
     TcaUtility::modifyColumns(
         $tca['columns'],
-        'optimizeLinkTargets',
+        $seoProperties,
         ['config' => ['type' => 'check', 'renderType' => 'checkboxToggle']],
         'seo'
     );

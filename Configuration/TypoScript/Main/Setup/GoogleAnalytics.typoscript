@@ -1,0 +1,59 @@
+page {
+    jsInline {
+        #---------------------------------------------------------#
+        # Google analytics 4
+        #---------------------------------------------------------#
+        98 >
+        98 = COA
+        98 {
+            if {
+                isTrue = {$page.tracking.google.ga4MeasureId}
+            }
+            10 = TEXT
+            10.value (
+    (function (consentCode, ga4Id) {
+        const cookies = '; ' + document.cookie;
+        var parts = cookies.split('; cookieconsent_status=');
+        const cookieValue = parts.length < 2 ? undefined : parts.pop().split(';').shift();
+        if (parseInt(consentCode) && cookieValue !== 'allow') {
+            return;
+        }
+        const script = document.createElement('script');
+        script.onload = function () {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            if (cookieValue !== 'allow') {
+                gtag('config', '{$page.tracking.google.ga4MeasureId}', { 'anonymize_ip': true });
+            } else {
+                gtag('config', '{$page.tracking.google.ga4MeasureId}');
+            }
+        };
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga4Id;
+        document.head.appendChild(script);
+    })('{$pizpalue.seo.consentTrackingCode}', '{$page.tracking.google.ga4MeasureId}');
+
+            )
+        }
+
+        #---------------------------------------------------------#
+        # Deprecated universal attribute
+        #---------------------------------------------------------#
+        99.5 = TEXT
+        99.5.value (
+    (function (consentCode) {
+        const cookies = '; ' + document.cookie;
+        var parts = cookies.split('; cookieconsent_status=');
+        const cookieValue = parts.length < 2 ? undefined : parts.pop().split(';').shift();
+        if (parseInt(consentCode) && cookieValue !== 'allow') {
+            return;
+        }
+
+        )
+        99.95 = TEXT
+        99.95.value (
+
+    })('{$pizpalue.seo.consentTrackingCode}');
+        )
+    }
+}
