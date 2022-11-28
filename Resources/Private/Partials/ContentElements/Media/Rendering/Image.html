@@ -9,7 +9,8 @@
         <f:if condition="{width}">
             <f:if condition="{variant.aspectRatio}">
                 <f:variable name="aspectRatio">{variant.aspectRatio as float}</f:variable>
-                <f:variable name="height" value="{width / aspectRatio}" />
+                <f:variable name="_aspectRatioPercent">{aspectRatio * 100}</f:variable>
+                <f:variable name="height" value="{width * 100 / _aspectRatioPercent}" />
                 <f:variable name="height">{height as integer}</f:variable>
             </f:if>
             <f:variable name="mediaQuery">{f:if(condition: breakpoint, then: 'media="(min-width: {breakpoint}px)"')}</f:variable>
