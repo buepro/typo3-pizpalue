@@ -17,12 +17,14 @@
         const contentIcon = document.getElementById(content.dataset.ppFmContenticon);
         content.classList.remove('pp-show');
         contentIcon.classList.remove('pp-active');
+        this.element.classList.remove('ppc-content-show');
     };
 
     Plugin.prototype._showContent = function (content) {
         const contentIcon = document.getElementById(content.dataset.ppFmContenticon);
         content.classList.add('pp-show');
         contentIcon.classList.add('pp-active');
+        this.element.classList.add('ppc-content-show');
     };
 
     Plugin.prototype._contentIconClickHandler = function (event) {

@@ -1,4 +1,18 @@
+@import "../../functions";
+@import "../../variables";
+@import "../../mixins";
+
 .pp-fastmenu {
+    --pp-fastmenu-icon-size: calc(0.6 * #{$pp-fastmenu-icon-size});
+    --pp-fastmenu-content-min-width: 260px;
+    @include media-breakpoint-up(sm) {
+        --pp-fastmenu-icon-size: calc(0.8 * #{$pp-fastmenu-icon-size});
+        --pp-fastmenu-content-min-width: 400px;
+    }
+    @include media-breakpoint-up(lg) {
+        --pp-fastmenu-icon-size: #{$pp-fastmenu-icon-size};
+        --pp-fastmenu-content-min-width: 600px;
+    }
     position: fixed;
     z-index: 2000;
     top: 40%;
@@ -26,8 +40,8 @@
             cursor: pointer;
             transition: color 0.7s;
             &:before {
-                width: $pp-fastmenu-icon-size;
-                font-size: $pp-fastmenu-icon-size;
+                width: var(--pp-fastmenu-icon-size);
+                font-size: var(--pp-fastmenu-icon-size);
                 line-height: 1;
                 text-align: center;
             }
@@ -42,18 +56,23 @@
 
     .pp-fm-handle {
         z-index: 1;
+        display: flex;
         color: $pp-fastmenu-handle-color;
         cursor: pointer;
+        transition: opacity 0.7s;
         .ppicon {
             transition: transform 0.7s;
             &:before {
-                font-size: 0.6 * $pp-fastmenu-icon-size;
+                font-size: 30px;
             }
         }
     }
+    &.ppc-content-show .pp-fm-handle {
+        opacity: 0;
+    }
 
     &.pp-minimize {
-        right: -($pp-fastmenu-icon-size + 5px);
+        right: calc(-1 * (var(--pp-fastmenu-icon-size) + 5px));
         .pp-fm-handle .ppicon {
             transform: rotate(180deg);
         }
@@ -61,13 +80,13 @@
 
     .pp-fm-content {
         position: relative;
-        margin-right: 20px;
+        margin-right: -15px;
         .pp-fm-item {
-            position: relative;
+            position: absolute;
             overflow: hidden;
-            max-width: 500px;
-            right: -100%;
-            opacity: 0;
+            min-width: var(--pp-fastmenu-content-min-width);
+            transform: translate(calc(2 * var(--pp-fastmenu-icon-size)), -50%);
+            opacity: 1;
             transition: all 0.7s;
             .pp-fm-wrap {
                 width: 100%;
@@ -75,10 +94,14 @@
                 border: $pp-fastmenu-content-border-color 1px solid;
             }
             &.pp-show {
-                right: 0;
+                transform: translate(-100%, -50%);
                 opacity: 1;
             }
         }
+    }
+    .pp-fm-wrap > .frame {
+        padding-top: var(--bs-gutter-x, #{$container-padding-x});
+        padding-bottom: var(--bs-gutter-x, #{$container-padding-x});
     }
 
 }
