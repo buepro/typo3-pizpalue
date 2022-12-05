@@ -193,6 +193,11 @@
                 transition: all 0.3s linear 0.5s;
             }
         }
+        @include media-breakpoint-up(xl) {
+            .ppc-hide {
+                display: none;
+            }
+        }
     }
 
     //
