@@ -1,5 +1,5 @@
 .card {
-    --pp-frame-headings-color: $card-color;
+    --pp-frame-headings-color: #{$card-color};
     // Set overflow to allow border radius
     overflow: hidden;
 }
