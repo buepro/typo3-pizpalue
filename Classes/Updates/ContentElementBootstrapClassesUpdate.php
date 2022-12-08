@@ -10,16 +10,12 @@ declare(strict_types = 1);
 
 namespace Buepro\Pizpalue\Updates;
 
-use Doctrine\DBAL\ForwardCompatibility\Result;
-use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
-use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\RepeatableInterface;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
-class ContentElementBootstrapClassesUpdate implements UpgradeWizardInterface, RepeatableInterface
+class ContentElementBootstrapClassesUpdate extends AbstractUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
     /**
      * @var string[]
@@ -52,72 +48,32 @@ class ContentElementBootstrapClassesUpdate implements UpgradeWizardInterface, Re
     ];
 
     /**
-     * @inheritDoc
+     * @var string
      */
-    public function getIdentifier(): string
-    {
-        return self::class;
-    }
+    protected $title = 'Ext:pizpalue: Migrate the "Additional classes" field to Bootstrap 5';
 
     /**
-     * @inheritDoc
+     * @var string
      */
-    public function getTitle(): string
-    {
-        return '[Pizpalue] Migrate the "Additional classes" field to Bootstrap 5';
-    }
+    protected $description = 'Bootstrap 5 replaced some css classes. This wizard step checks the filed "Additional '
+            . 'classes" for replacement classes and adds the new classes as needed. The resulting classes should be '
+            . 'compatible with Bootstrap 4 and Bootstrap 5.';
 
     /**
-     * @inheritDoc
+     * @var string
      */
-    public function getDescription(): string
-    {
-        return 'Bootstrap 5 replaced some css classes. This wizard step checks the filed "Additional classes" for '
-            . 'replacement classes and adds the new classes as needed. The resulting classes should be compatible '
-            . 'with Bootstrap 4 and Bootstrap 5.';
-    }
+    protected $field = 'tx_pizpalue_classes';
 
-    /**
-     * @inheritDoc
-     */
-    public function getPrerequisites(): array
+    protected function getCriteria(QueryBuilder $queryBuilder): array
     {
-        return [
-            DatabaseUpdatedPrerequisite::class
-        ];
-    }
-
-    private function getConstraints(QueryBuilder $queryBuilder): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression
-    {
-        $constraints = [];
-        foreach ($this->replacementClasses as $oldClass => $newClass) {
-            $constraints[] = $queryBuilder->expr()->andX(
-                $queryBuilder->expr()->orX(
-                    $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter($oldClass . '%', \PDO::PARAM_STR)),
-                    $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter('% ' . $oldClass . '%', \PDO::PARAM_STR))
-                ),
-                $queryBuilder->expr()->notLike('tx_pizpalue_classes', $queryBuilder->createNamedParameter($newClass . '%', \PDO::PARAM_STR)),
-                $queryBuilder->expr()->notLike('tx_pizpalue_classes', $queryBuilder->createNamedParameter('% ' . $newClass . '%', \PDO::PARAM_STR))
+        $criteria = [];
+        foreach ($this->replacementClasses as $oldValue => $newValue) {
+            $criteria[] = $queryBuilder->expr()->andX(
+                (string) $this->createLikeCriteria($queryBuilder, $this->field, "%$oldValue%"),
+                (string) $this->createNotLikeCriteria($queryBuilder, $this->field, "%$newValue%")
             );
         }
-        return $queryBuilder->expr()->orX(...$constraints);
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function updateNecessary(): bool
-    {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
-        $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $result = $queryBuilder->count('uid')
-            ->from('tt_content')
-            ->where($this->getConstraints($queryBuilder))
-            ->execute();
-        if ($result instanceof Result) {
-            return (bool)$result->fetchOne();
-        }
-        return false;
+        return [$queryBuilder->expr()->orX(...$criteria)];
     }
 
     /**
@@ -125,28 +81,16 @@ class ContentElementBootstrapClassesUpdate implements UpgradeWizardInterface, Re
      */
     public function executeUpdate(): bool
     {
-        $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
-        $queryBuilder = $connection->createQueryBuilder();
-        $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $queryResult = $queryBuilder->select('uid', 'tx_pizpalue_classes')
-            ->from('tt_content')
-            ->where($this->getConstraints($queryBuilder))
-            ->execute();
-        if (!($queryResult instanceof Result)) {
-            return false;
+        $queryBuilder = $this->createQueryBuilder();
+        $records = $this->getRecordsByCriteria($queryBuilder, $this->getCriteria($queryBuilder));
+
+        foreach ($records as $record) {
+            $this->updateRecord(
+                (int) $record['uid'],
+                [$this->field => $this->addNewClasses($record[$this->field])]
+            );
         }
-        while (is_array($record = $queryResult->fetchAssociative()) && is_string($record['tx_pizpalue_classes'])) {
-            $queryBuilder = $connection->createQueryBuilder();
-            $queryBuilder->update('tt_content')
-                ->where(
-                    $queryBuilder->expr()->eq(
-                        'uid',
-                        $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
-                    )
-                )
-                ->set('tx_pizpalue_classes', $this->addNewClasses($record['tx_pizpalue_classes']));
-            $queryBuilder->execute();
-        }
+
         return true;
     }
 

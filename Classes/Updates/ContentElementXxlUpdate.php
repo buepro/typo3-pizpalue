@@ -10,92 +10,50 @@ declare(strict_types = 1);
 
 namespace Buepro\Pizpalue\Updates;
 
-use Doctrine\DBAL\ForwardCompatibility\Result;
-use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
+use TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression;
+use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\RepeatableInterface;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
-class ContentElementXxlUpdate implements UpgradeWizardInterface, RepeatableInterface
+class ContentElementXxlUpdate extends AbstractUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
     /**
-     * @inheritDoc
+     * @var string
      */
-    public function getIdentifier(): string
-    {
-        return self::class;
-    }
+    protected $title = 'Ext:pizpalue: Migrate the "Scaling" and "Aspect ratio" fields to Bootstrap 5';
 
     /**
-     * @inheritDoc
+     * @var string
      */
-    public function getTitle(): string
-    {
-        return '[Pizpalue] Migrate the "Scaling" and "Aspect ratio" fields to Bootstrap 5';
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getDescription(): string
-    {
-        return 'Bootstrap 5 introduced the screen breakpoint "xxl". If the fields "Scaling" or "Aspect ratio" from '
-            . 'content elements don\'t contain a definition for the new breakpoint default values will be used '
-            . 'for the image calculation. In most cases the value defined for the xl-breakpoint is more appropriate. '
+    protected $description =  'Bootstrap 5 introduced the screen breakpoint "xxl". If the fields "Scaling" or "Aspect '
+            . 'ratio" from content elements don\'t contain a definition for the new breakpoint default values will be '
+            . 'used for the image calculation. In most cases the value defined for the xl-breakpoint is more appropriate. '
             . 'This wizard step will add an "xxl" entry with the value from the defined xl-breakpoint to the fields. '
             . 'In case no xl-breakpoint entry exists nothing will be none.';
+
+    protected function getScalingCriteria(QueryBuilder $queryBuilder): CompositeExpression
+    {
+        return $queryBuilder->expr()->andX(
+            (string) $this->createLikeCriteria($queryBuilder, 'tx_pizpalue_image_scaling', '%xl%'),
+            (string) $this->createNotLikeCriteria($queryBuilder, 'tx_pizpalue_image_scaling', '%xxl%')
+        );
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function getPrerequisites(): array
+    protected function getAspectRatioCriteria(QueryBuilder $queryBuilder): CompositeExpression
     {
-        return [
-            DatabaseUpdatedPrerequisite::class
-        ];
+        return $queryBuilder->expr()->andX(
+            (string) $this->createLikeCriteria($queryBuilder, 'tx_pizpalue_image_aspect_ratio', '%xl%'),
+            (string) $this->createNotLikeCriteria($queryBuilder, 'tx_pizpalue_image_aspect_ratio', '%xxl%')
+        );
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function updateNecessary(): bool
+    protected function getCriteria(QueryBuilder $queryBuilder): array
     {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
-        $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $result = $queryBuilder->count('uid')
-            ->from('tt_content')
-            ->where(
-                $queryBuilder->expr()->orX(
-                    $queryBuilder->expr()->andX(
-                        $queryBuilder->expr()->like(
-                            'tx_pizpalue_image_scaling',
-                            $queryBuilder->createNamedParameter('%xl%', \PDO::PARAM_STR)
-                        ),
-                        $queryBuilder->expr()->notLike(
-                            'tx_pizpalue_image_scaling',
-                            $queryBuilder->createNamedParameter('%xxl%', \PDO::PARAM_STR)
-                        )
-                    ),
-                    $queryBuilder->expr()->andX(
-                        $queryBuilder->expr()->like(
-                            'tx_pizpalue_image_aspect_ratio',
-                            $queryBuilder->createNamedParameter('%xl%', \PDO::PARAM_STR)
-                        ),
-                        $queryBuilder->expr()->notLike(
-                            'tx_pizpalue_image_aspect_ratio',
-                            $queryBuilder->createNamedParameter('%xxl%', \PDO::PARAM_STR)
-                        )
-                    )
-                )
-            )
-            ->execute();
-        if ($result instanceof Result) {
-            return (bool)$result->fetchOne();
-        }
-        return false;
+        return [$queryBuilder->expr()->orX(
+            $this->getScalingCriteria($queryBuilder),
+            $this->getAspectRatioCriteria($queryBuilder)
+        )];
     }
 
     /**
@@ -103,37 +61,21 @@ class ContentElementXxlUpdate implements UpgradeWizardInterface, RepeatableInter
      */
     public function executeUpdate(): bool
     {
-        $this->updateField('tx_pizpalue_image_scaling');
-        $this->updateField('tx_pizpalue_image_aspect_ratio');
+        $this->updateField('tx_pizpalue_image_scaling', [$this, 'getScalingCriteria']);
+        $this->updateField('tx_pizpalue_image_aspect_ratio', [$this, 'getAspectRatioCriteria']);
         return true;
     }
 
-    private function updateField(string $fieldName): void
+    private function updateField(string $fieldName, callable $getCriteriaMethod): void
     {
-        $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
-        $queryBuilder = $connection->createQueryBuilder();
-        $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $queryResult = $queryBuilder->select('uid', $fieldName)
-            ->from('tt_content')
-            ->where(
-                $queryBuilder->expr()->like($fieldName, $queryBuilder->createNamedParameter('%xl%', \PDO::PARAM_STR)),
-                $queryBuilder->expr()->notLike($fieldName, $queryBuilder->createNamedParameter('%xxl%', \PDO::PARAM_STR))
-            )
-            ->execute();
-        if (!($queryResult instanceof Result)) {
-            return;
-        }
-        while (is_array($record = $queryResult->fetchAssociative()) && is_string($record[$fieldName])) {
-            $queryBuilder = $connection->createQueryBuilder();
-            $queryBuilder->update('tt_content')
-                ->where(
-                    $queryBuilder->expr()->eq(
-                        'uid',
-                        $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
-                    )
-                )
-                ->set($fieldName, $this->addXxlBreakpoint($record[$fieldName]));
-            $queryBuilder->execute();
+        $queryBuilder = $this->createQueryBuilder();
+        $records = $this->getRecordsByCriteria($queryBuilder, [$getCriteriaMethod($queryBuilder)]);
+
+        foreach ($records as $record) {
+            $this->updateRecord(
+                (int) $record['uid'],
+                [$fieldName => $this->addXxlBreakpoint($record[$fieldName])]
+            );
         }
     }
 

@@ -10,16 +10,12 @@ declare(strict_types = 1);
 
 namespace Buepro\Pizpalue\Updates;
 
-use Doctrine\DBAL\ForwardCompatibility\Result;
-use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
-use TYPO3\CMS\Core\Database\Query\Restriction\DeletedRestriction;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Install\Updates\DatabaseUpdatedPrerequisite;
 use TYPO3\CMS\Install\Updates\RepeatableInterface;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
-class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, RepeatableInterface
+class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
     /**
      * @var string[]
@@ -55,48 +51,26 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
     ];
 
     /**
-     * @inheritDoc
+     * @var string
      */
-    public function getIdentifier(): string
-    {
-        return self::class;
-    }
+    protected $title = 'Ext:pizpalue: Migrate the content element "Additional classes" field';
 
     /**
-     * @inheritDoc
+     * @var string
      */
-    public function getTitle(): string
-    {
-        return '[Pizpalue] Migrate the content element "Additional classes" field';
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function getDescription(): string
-    {
-        return 'This wizard step checks the content element field "Additional classes"  for classes to be moved ' .
+    protected $description =  'This wizard step checks the content element field "Additional classes"  for classes to be moved ' .
             'to the background color or the inner classes field.';
-    }
 
     /**
-     * @inheritDoc
+     * @var string
      */
-    public function getPrerequisites(): array
-    {
-        return [
-            DatabaseUpdatedPrerequisite::class
-        ];
-    }
+    protected $field = 'tx_pizpalue_classes';
 
     private function getMovedToFrameBackgroundClassesConstraints(QueryBuilder $queryBuilder): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression
     {
         $constraints = [];
         foreach ($this->movedToFrameBackgroundClass as $oldClass => $newClass) {
-            $constraints[] = $queryBuilder->expr()->orX(
-                $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter($oldClass . '%', \PDO::PARAM_STR)),
-                $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter('% ' . $oldClass . '%', \PDO::PARAM_STR))
-            );
+            $constraints[] = (string) $this->createLikeCriteria($queryBuilder, $this->field, "%$oldClass%");
         }
         return $queryBuilder->expr()->orX(...$constraints);
     }
@@ -105,32 +79,17 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
     {
         $constraints = [];
         foreach ($this->movedToInnerClasses as $oldClass => $newClass) {
-            $constraints[] = $queryBuilder->expr()->orX(
-                $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter($oldClass . '%', \PDO::PARAM_STR)),
-                $queryBuilder->expr()->like('tx_pizpalue_classes', $queryBuilder->createNamedParameter('% ' . $oldClass . '%', \PDO::PARAM_STR))
-            );
+            $constraints[] = (string) $this->createLikeCriteria($queryBuilder, $this->field, "%$oldClass%");
         }
         return $queryBuilder->expr()->orX(...$constraints);
     }
 
-    /**
-     * @inheritDoc
-     */
-    public function updateNecessary(): bool
+    protected function getCriteria(QueryBuilder $queryBuilder): array
     {
-        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
-        $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $result = $queryBuilder->count('uid')
-            ->from('tt_content')
-            ->where($queryBuilder->expr()->orX(
-                $this->getMovedToFrameBackgroundClassesConstraints($queryBuilder),
-                $this->getMovedToInnerClassesConstraints($queryBuilder)
-            ))
-            ->execute();
-        if ($result instanceof Result) {
-            return (bool)$result->fetchOne();
-        }
-        return false;
+        return [$queryBuilder->expr()->orX(
+            $this->getMovedToFrameBackgroundClassesConstraints($queryBuilder),
+            $this->getMovedToInnerClassesConstraints($queryBuilder)
+        )];
     }
 
     /**
@@ -138,41 +97,23 @@ class ContentElementPizpalueClassesUpdate implements UpgradeWizardInterface, Rep
      */
     public function executeUpdate(): bool
     {
-        $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
-        $queryBuilder = $connection->createQueryBuilder();
-        $queryBuilder->getRestrictions()->removeAll()->add(GeneralUtility::makeInstance(DeletedRestriction::class));
-        $queryResult = $queryBuilder->select('uid', 'background_color_class', 'tx_pizpalue_classes', 'tx_pizpalue_inner_classes')
-            ->from('tt_content')
-            ->where($queryBuilder->expr()->orX(
-                $this->getMovedToFrameBackgroundClassesConstraints($queryBuilder),
-                $this->getMovedToInnerClassesConstraints($queryBuilder)
-            ))
-            ->execute();
-        if (!($queryResult instanceof Result)) {
-            return false;
+        $queryBuilder = $this->createQueryBuilder();
+        $records = $this->getRecordsByCriteria($queryBuilder, $this->getCriteria($queryBuilder));
+
+        foreach ($records as $record) {
+            $this->updateRecord(
+                (int) $record['uid'],
+                [
+                    'background_color_class' => $this->getFrameBackgroundClass($record[$this->field]),
+                    $this->field => $this->getPizpalueClasses($record[$this->field]),
+                    'tx_pizpalue_inner_classes' => $this->getPizpalueInnerClasses(
+                        $record[$this->field],
+                        $record['tx_pizpalue_inner_classes']
+                    ),
+                ]
+            );
         }
-        while (
-            is_array($record = $queryResult->fetchAssociative()) &&
-            is_string($record['background_color_class']) &&
-            is_string($record['tx_pizpalue_classes']) &&
-            is_string($record['tx_pizpalue_inner_classes'])
-        ) {
-            $queryBuilder = $connection->createQueryBuilder();
-            $queryBuilder->update('tt_content')
-                ->where(
-                    $queryBuilder->expr()->eq(
-                        'uid',
-                        $queryBuilder->createNamedParameter($record['uid'], \PDO::PARAM_INT)
-                    )
-                )
-                ->set('background_color_class', $this->getFrameBackgroundClass($record['tx_pizpalue_classes']))
-                ->set('tx_pizpalue_classes', $this->getPizpalueClasses($record['tx_pizpalue_classes']))
-                ->set('tx_pizpalue_inner_classes', $this->getPizpalueInnerClasses(
-                    $record['tx_pizpalue_classes'],
-                    $record['tx_pizpalue_inner_classes']
-                ));
-            $queryBuilder->execute();
-        }
+
         return true;
     }
 
