@@ -42,10 +42,10 @@ class ExplodeViewHelper extends AbstractViewHelper
      *
      * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
      */
-    public function initializeArguments(): void
+    public function initializeArguments()
     {
         parent::initializeArguments();
-        $this->registerArgument('data', 'string', 'The input string', false);
+        $this->registerArgument('data', 'string', 'The input string', true);
         $this->registerArgument('as', 'string', 'Name of variable to create', false, 'items');
         $this->registerArgument('delimiter', 'string', 'The boundary string', false, "\n");
     }
@@ -61,21 +61,14 @@ class ExplodeViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $data = $arguments['data'] ?? $renderChildrenClosure();
-        if (!is_string($data)) {
-            return '';
-        }
-
-        $variableProvider = $renderingContext->getVariableProvider();
-        $items = GeneralUtility::trimExplode($arguments['delimiter'], $data);
-        $variableProvider->add($arguments['as'], $items);
-
-        if ($arguments['data'] !== null && $renderChildrenClosure() !== null) {
+        $content = '';
+        if (isset($arguments['data'])) {
+            $variableProvider = $renderingContext->getVariableProvider();
+            $items = GeneralUtility::trimExplode($arguments['delimiter'], $arguments['data']);
+            $variableProvider->add($arguments['as'], $items);
             $content = $renderChildrenClosure();
             $variableProvider->remove($arguments['as']);
-            return $content;
         }
-
-        return '';
+        return $content;
     }
 }
