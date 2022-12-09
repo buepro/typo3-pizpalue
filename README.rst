@@ -41,11 +41,12 @@ action or `log in <https://demo.buechler.pro/typo3>`__ to the
 `demo site <https://demo.buechler.pro>`__ and discover how easy it is to setup
 a site and create attractive content.
 
-The `pizpalue distribution <https://extensions.typo3.org/extension/pizpalue_distribution>`__
-can get you started. Install it following the steps outlined in the
-`base package <https://github.com/buepro/typo3-pizpalue_distribution-base>`__
-or easily generate a pizpalue websites with your plesk reseller account at
-`buechler.pro/webseiten/generator <https://www.buechler.pro/webseiten/generator>`__.
+To install the demo site you might try our
+`site generator <https://www.buechler.pro/webseiten/generator>`__, the
+`site package <https://github.com/buepro/typo3-user_pizpalue>`__ or the
+`pizpalue distribution <https://extensions.typo3.org/extension/pizpalue_distribution>`__
+using the
+`distribution base package <https://github.com/buepro/typo3-pizpalue_distribution-base>`__.
 
 :Repository:  https://github.com/buepro/typo3-pizpalue
 :Read online: https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/
