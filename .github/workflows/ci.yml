@@ -19,51 +19,76 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        typo3: [ '^10', '^11' ]
-        php: [ '7.3', '7.4', '8.0', '8.1' ]
-        mysql: [ '5.7' ]
+        typo3: [ '^11', '^12' ]
+        php: [ '7.4', '8.0', '8.1' ]
+        mysql: [ '5.7', '8.0' ]
         exclude:
-          - typo3: '^10'
-            php: '8.0'
-          - typo3: '^10'
-            php: '8.1'
           - typo3: '^11'
-            php: '7.3'
+            mysql: '8.0'
+          - typo3: '^12'
+            mysql: '5.7'
+          - typo3: '^12'
+            php: '7.4'
+          - typo3: '^12'
+            php: '8.0'
     steps:
-      - name: Checkout Code
+      - id: checkout
+        name: Checkout Code
         uses: actions/checkout@v3
-      - name: Set up MySQL ${{ matrix.mysql }}
+      - id: setup_mysql
+        name: Set up MySQL ${{ matrix.mysql }}
         uses: mirromutth/mysql-action@v1.1
         with:
           mysql version: ${{ matrix.mysql }}
           mysql root password: 'root'
-      - name: Set up PHP ${{ matrix.php }}
+      - id: setup_php
+        name: Set up PHP ${{ matrix.php }}
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
           tools: composer:v2
-      - name: Install
+      - name: Composer Cache Vars
+        id: composer-cache-vars
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+          echo "timestamp=$(date +"%s")" >> $GITHUB_OUTPUT
+      - name: Cache Composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache-vars.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ matrix.php }}-${{ matrix.typo3 }}-${{ steps.composer-cache-vars.outputs.timestamp }}
+          restore-keys: |
+            ${{ runner.os }}-composer-${{ matrix.php }}-${{ matrix.typo3 }}-
+            ${{ runner.os }}-composer-${{ matrix.php }}-
+            ${{ runner.os }}-composer-
+      - id: install
+        name: Install
         run: |
           rm composer.lock
-          [ ${{ matrix.php }} = "^10" ] || composer rem --dev --no-update buepro/typo3-easyconf
           composer require typo3/cms-core:${{ matrix.typo3 }} --no-progress
           git checkout composer.json
-      - name: CGL
+      - id: cgl
+        name: CGL
+        if: ${{ always() && steps.install.conclusion == 'success' }}
         run: |
           composer ci:php:cs
-      -
+      - id: lint
         name: Lint
         run: |
           composer ci:php:lint
-      -
+      - id: phpstan
         name: PHPStan
+        if: ${{ always() && steps.install.conclusion == 'success' }}
         run: |
           composer ci:php:stan -- --error-format=github
-      -
+      - id: tests_unit
         name: Unit Tests
+        if: ${{ always() && steps.install.conclusion == 'success' }}
         run: |
           composer ci:tests:unit
-      - name: Functional Tests
+      - id: tests_functional
+        name: Functional Tests
+        if: ${{ always() && steps.install.conclusion == 'success' && matrix.typo3 == '^11' }}
         run: |
           composer ci:tests:functional
         env:

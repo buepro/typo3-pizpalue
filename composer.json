@@ -33,32 +33,30 @@
 		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
 	},
 	"require": {
-		"php": ">=7.3.0",
-		"bk2k/bootstrap-package": "~12.0.5",
-		"buepro/typo3-pvh": "^1.0",
-		"typo3/cms-core": "^10.4 || ^11.5"
+		"bk2k/bootstrap-package": "^13.0",
+		"buepro/typo3-pvh": "^2.0",
+		"typo3/cms-core": "^11.5 || ^12.1 || 12.*.*@dev"
 	},
 	"require-dev": {
 		"buepro/typo3-container-elements": "^4.0.0",
-		"buepro/typo3-user-pizpalue": "^4.0.0 || dev-main",
+		"buepro/typo3-user-pizpalue": "^5.0.0",
 		"ergebnis/composer-normalize": "^2.15.0",
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
 		"friendsoftypo3/tt-address": "^6.0.1",
 		"georgringer/eventnews": "5.0.0",
 		"georgringer/news": "^9.1.0",
-		"helhum/typo3-console": "^6.6 || ^7.0.2",
+		"helhum/typo3-console": "^7.1.2",
 		"overtrue/phplint": "^3.2.0 || ^4.3.0 || ^5.3.0",
 		"phpspec/prophecy-phpunit": "^2.0",
 		"phpstan/phpstan": "^1.8.5",
 		"phpstan/phpstan-deprecation-rules": "^1.0.0",
 		"phpstan/phpstan-phpunit": "^1.1.1",
 		"phpstan/phpstan-strict-rules": "^1.4.3",
-		"typo3/cms-base-distribution": "^10.4 || ^11.5",
-		"typo3/cms-impexp": "^10.4 || ^11.5",
-		"typo3/cms-lowlevel": "^10.4 || ^11.5",
-		"typo3/cms-recycler": "^10.4 || ^11.5",
-		"typo3/testing-framework": "^6.4"
+		"typo3/cms-base-distribution": "^11.5 || 12.*.*@dev",
+		"typo3/cms-lowlevel": "^11.5 || ^12.1 || 12.*.*@dev",
+		"typo3/cms-recycler": "^11.5 || ^12.1 || 12.*.*@dev",
+		"typo3/testing-framework": "^6.4 || 7.*.*@dev"
 	},
 	"suggest": {
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
@@ -101,7 +99,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "14.2.x-dev"
+			"dev-main": "15.0.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",
@@ -111,10 +109,12 @@
 	},
 	"scripts": {
 		"post-autoload-dump": [
-			"mkdir -p .build/public/typo3conf/ext/",
-			"[ -L .build/public/typo3conf/ext/pizpalue ] || ln -snvf ../../../../. .build/public/typo3conf/ext/pizpalue",
-			"mkdir -p .build/config/sites/default",
-			"[ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml"
+			"[ -d .build/public/_assets ] || mkdir -p .build/public/typo3conf/ext/",
+			"[ -d .build/public/_assets ] || [ -L .build/public/typo3conf/ext/pizpalue ] || ln -snvf ../../../../. .build/public/typo3conf/ext/pizpalue",
+			"[ -d .build/public/_assets ] || mkdir -p .build/config/sites/default",
+			"[ -d .build/public/_assets ] || [ -L .build/config/sites/default/config.yaml ] || ln -svf ../../../../Build/site/config.yaml .build/config/sites/default/config.yaml",
+			"[ ! -d .build/public/_assets ] || mkdir -p config/sites/default",
+			"[ ! -d .build/public/_assets ] || [ -L config/sites/default/config.yaml ] || ln -svf ../../../Build/site/config.yaml config/sites/default/config.yaml"
 		],
 		"ci": [
 			"@ci:static",
