@@ -46,6 +46,11 @@ parameters:
 			path: ../Classes/ViewHelpers/Structure/VariantsViewHelper.php
 
 		-
+			message: "#^Call to static method getExtensionVersion\\(\\) on an unknown class Buepro\\\\ContainerElements\\\\Utility\\\\VersionUtility\\.$#"
+			count: 1
+			path: ../Configuration/TCA/Overrides/101_sys_template.php
+
+		-
 			message: "#^Call to function property_exists\\(\\) with TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer and 'lastTypoLinkResult' will always evaluate to true\\.$#"
 			count: 1
 			path: ../Sysext/frontend/Classes/Hook/PopoverTypolinkHook.php
