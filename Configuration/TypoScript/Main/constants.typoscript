@@ -1,33 +1,31 @@
-/**
-* ======================================================================================================================
-*
-*                                                     Introduction
-*                                                     ------------
-*
-* From a user perspective the main configurations should be carried out on one page (category "CUSTOMER") and result in
-* a productive site. On further configuration pages (categories "CUSTOMER X") more details might be defined. As an
-* example the basic color for the header panel (e.g. background) might be defined on one page and detailed color
-* definitions (e.g. link and color) might be defined on other pages.
-*
-* As well there should be just one parameter to define an item. In case there would be two parameters, paramA and
-* paramB, to define an item and initially paramB is mapped to paramA (paramA = {$paramB}; paramB = Value) everything
-* goes good until a value is assigned to paramA. Now paramA and paramB have different values hence the result depends
-* on where each parameter is used.
-*
-* Considering the above mentioned points parameters that are already available in the bootstrap_package are used
-* directly using a different category and subcategory assignment. Like this parameters can be grouped to better serve.
-* Unfortunately the constant editor seems to be a bit buggy when already introduced constants are redeclared. For the
-* categories to be listed correctly in the "Category selector" the category declarations need to preceed the constants
-* (re-) declarations in each file. This is why the file "CategoryDefinitions.typoscript" is included in each constant
-*  definition file.
-*
-* As well it has been observed that the order from the main categories depends on the hierarchy where a constant has
-* been defined. In case "some.hierarchy.paramA" has already been defined and belongs to categoryA1 then categoryB1 that
-* would be assigned to "some.other.hierarchy.paramB" would be listed after categoryA1. It would be desirable to have
-* categoryB1 listed after all categories belonging to group A (categoryA1, categoryA2, etc.)
-*
-* ======================================================================================================================
-*/
+# ======================================================================================================================
+#
+#                                                     Introduction
+#                                                     ------------
+#
+# From a user perspective the main configurations should be carried out on one page (category "CUSTOMER") and result in
+# a productive site. On further configuration pages (categories "CUSTOMER X") more details might be defined. As an
+# example the basic color for the header panel (e.g. background) might be defined on one page and detailed color
+# definitions (e.g. link and color) might be defined on other pages.
+#
+# As well there should be just one parameter to define an item. In case there would be two parameters, paramA and
+# paramB, to define an item and initially paramB is mapped to paramA (paramA = {$paramB}; paramB = Value) everything
+# goes good until a value is assigned to paramA. Now paramA and paramB have different values hence the result depends
+# on where each parameter is used.
+#
+# Considering the above mentioned points parameters that are already available in the bootstrap_package are used
+# directly using a different category and subcategory assignment. Like this parameters can be grouped to better serve.
+# Unfortunately the constant editor seems to be a bit buggy when already introduced constants are redeclared. For the
+# categories to be listed correctly in the "Category selector" the category declarations need to preceed the constants
+# (re-) declarations in each file. This is why the file "CategoryDefinitions.typoscript" is included in each constant
+#  definition file.
+#
+# As well it has been observed that the order from the main categories depends on the hierarchy where a constant has
+# been defined. In case "some.hierarchy.paramA" has already been defined and belongs to categoryA1 then categoryB1 that
+# would be assigned to "some.other.hierarchy.paramB" would be listed after categoryA1. It would be desirable to have
+# categoryB1 listed after all categories belonging to group A (categoryA1, categoryA2, etc.)
+#
+# ======================================================================================================================
 
 
 #=========================================================#
