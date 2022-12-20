@@ -1,17 +1,148 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="500px" height="500px" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
-viewBox="0 0 500 500">
- <g>
-  <rect fill="#005E8E" x="8.93" y="314.25" width="482.14" height="175.33"/>
-  <g>
-   <rect fill="#C7EBFF" x="8.93" y="13.54" width="477.92" height="248.57"/>
-   <path fill="#666666" d="M31.83 232.82l86.2 -36.91 88.19 -100.66c4.72,-5.39 12.39,-5.39 17.11,0l113.55 112.69 46.71 -20.68c7.49,-3.56 10.61,-3.49 17.1,0l44.1 45.56 -412.96 0z"/>
-   <circle fill="white" cx="382.93" cy="78.8" r="32.55"/>
-   <line fill="none" stroke="white" stroke-width="3.66" stroke-miterlimit="22.9256" x1="8.93" y1="232.82" x2="491.07" y2= "232.82" />
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="139.99951"
+   height="139.99951"
+   viewBox="0 0 37.041537 37.041537"
+   version="1.1"
+   id="svg13574"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01, custom)"
+   sodipodi:docname="card.svg"
+   inkscape:dataloss="true"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13576"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2.3304714"
+     inkscape:cx="335.98352"
+     inkscape:cy="260.46232"
+     inkscape:window-width="1920"
+     inkscape:window-height="1163"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs13571" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.458397,-26.458397)">
+    <g
+       id="g13733"
+       transform="matrix(0.07408333,0,0,0.07408333,26.458332,26.458333)"
+       inkscape:export-filename="card.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+  <rect
+   fill="#005e8e"
+   x="8.9300003"
+   y="314.25"
+   width="482.14001"
+   height="175.33"
+   id="rect13711" />
+
+  <g
+   id="g13721">
+   <rect
+   fill="#c7ebff"
+   x="8.9300003"
+   y="13.54"
+   width="477.92001"
+   height="248.57001"
+   id="rect13713" />
+
+   <path
+   fill="#666666"
+   d="m 31.83,232.82 86.2,-36.91 88.19,-100.66 c 4.72,-5.39 12.39,-5.39 17.11,0 l 113.55,112.69 46.71,-20.68 c 7.49,-3.56 10.61,-3.49 17.1,0 l 44.1,45.56 z"
+   id="path13715" />
+
+   <circle
+   fill="#ffffff"
+   cx="382.92999"
+   cy="78.800003"
+   r="32.549999"
+   id="circle13717" />
+
+   <line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3.66"
+   stroke-miterlimit="22.9256"
+   x1="8.9300003"
+   y1="232.82001"
+   x2="491.07001"
+   y2="232.82001"
+   id="line13719" />
+
   </g>
-  <rect fill="#FEFEFE" x="4.71" y="232.82" width="489.05" height="196.17"/>
-  <rect fill="none" stroke="#9D9E9E" stroke-width="17.86" stroke-miterlimit="22.9256" x="8.93" y="8.93" width="482.14" height="482.14"/>
-  <line fill="none" stroke="#999999" stroke-width="21.97" stroke-miterlimit="22.9256" x1="66.45" y1="287.19" x2="418.47" y2= "287.19" />
-  <line fill="none" stroke="#999999" stroke-width="21.97" stroke-miterlimit="22.9256" x1="66.45" y1="334.76" x2="330.58" y2= "334.76" />
-  <line fill="none" stroke="#999999" stroke-width="21.97" stroke-miterlimit="22.9256" x1="66.45" y1="380.16" x2="373.25" y2= "380.16" />
+
+  <rect
+   fill="#fefefe"
+   x="4.71"
+   y="232.82001"
+   width="489.04999"
+   height="196.17"
+   id="rect13723" />
+
+  <rect
+   fill="none"
+   stroke="#9d9e9e"
+   stroke-width="17.86"
+   stroke-miterlimit="22.9256"
+   x="8.9300003"
+   y="8.9300003"
+   width="482.14001"
+   height="482.14001"
+   id="rect13725"
+   style="stroke-width:17.8583;stroke-dasharray:none" />
+
+  <line
+   fill="none"
+   stroke="#999999"
+   stroke-width="21.97"
+   stroke-miterlimit="22.9256"
+   x1="66.449997"
+   y1="287.19"
+   x2="418.47"
+   y2="287.19"
+   id="line13727" />
+
+  <line
+   fill="none"
+   stroke="#999999"
+   stroke-width="21.97"
+   stroke-miterlimit="22.9256"
+   x1="66.449997"
+   y1="334.76001"
+   x2="330.57999"
+   y2="334.76001"
+   id="line13729" />
+
+  <line
+   fill="none"
+   stroke="#999999"
+   stroke-width="21.97"
+   stroke-miterlimit="22.9256"
+   x1="66.449997"
+   y1="380.16"
+   x2="373.25"
+   y2="380.16"
+   id="line13731" />
+
  </g>
+  </g>
 </svg>

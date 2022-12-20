@@ -1,37 +1,98 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW 2021 (64-Bit Not for commercial use) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="500px" height="500px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 499.99 499.99"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .str1 {stroke:#0083C4;stroke-width:5.97;stroke-miterlimit:22.9256;stroke-opacity:0.901961}
-    .str0 {stroke:#FEFEFE;stroke-width:2.64;stroke-miterlimit:22.9256}
-    .str2 {stroke:#9D9E9E;stroke-width:27.97;stroke-miterlimit:22.9256}
-    .str3 {stroke:#666666;stroke-width:17.9;stroke-linecap:round;stroke-miterlimit:22.9256}
-    .fil4 {fill:none}
-    .fil1 {fill:#005E8E}
-    .fil2 {fill:#29B7FF}
-    .fil0 {fill:#FEFEFE}
-    .fil3 {fill:white;fill-opacity:0.901961}
-   ]]>
-  </style>
- </defs>
- <g id="Layer_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <rect class="fil0 str0" x="13.99" y="13.99" width="472.01" height="472.01"/>
-  <path class="fil1" d="M346.77 473.06l-332.78 0 0 -192.25 91.01 -210.31c4.87,-11.27 12.78,-11.27 17.65,0l117.18 235.46 48.2 -43.22c4.87,-11.25 12.78,-11.25 17.65,0l41.09 94.96 0 115.36 0 0z"/>
-  <path class="fil2" d="M248.36 62.61c31.63,0 57.28,25.64 57.28,57.28 0,31.63 -25.65,57.28 -57.28,57.28 -31.63,0 -57.28,-25.65 -57.28,-57.28 0,-31.64 25.65,-57.28 57.28,-57.28z"/>
-  <polygon class="fil3 str1" points="225.14,363.57 452.35,363.57 452.35,157.5 225.14,157.5 "/>
-  <rect class="fil4 str2" x="13.99" y="13.99" width="472.01" height="472.01"/>
- </g>
- <g id="Layer_x0020_1_0">
-  <metadata id="CorelCorpID_1Corel-Layer"/>
-  <line class="fil4 str3" x1="262.73" y1="206.93" x2="409.05" y2= "206.93" />
-  <line class="fil4 str3" x1="261.79" y1="260.09" x2="408.11" y2= "260.09" />
-  <line class="fil4 str3" x1="260.72" y1="311.16" x2="407.05" y2= "311.16" />
- </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="137.1684"
+   height="137.16841"
+   viewBox="0 0 36.292471 36.292475"
+   version="1.1"
+   id="svg13574"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01, custom)"
+   sodipodi:docname="card.svg"
+   inkscape:dataloss="true"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13576"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2.3304714"
+     inkscape:cx="335.98352"
+     inkscape:cy="260.46232"
+     inkscape:window-width="1920"
+     inkscape:window-height="1163"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs13571" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-69.166267,-69.16626)">
+    <g
+       id="g20540"
+       transform="matrix(0.28000561,0,0,0.28000561,57.038315,48.566526)">
+      <rect
+         class="fil4 str2"
+         x="45.675682"
+         y="75.931465"
+         width="124.88847"
+         height="124.88847"
+         id="rect20325"
+         style="clip-rule:evenodd;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#9b9d9d;stroke-width:4.72491;stroke-miterlimit:22.9256;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+         transform="translate(3.2806005e-6)" />
+      <path
+         class="fil1"
+         d="M 136.14736,198.3386 H 48.097566 v -50.86716 l 24.08021,-55.645639 c 1.288547,-2.981914 3.381443,-2.981914 4.669989,0 l 31.004495,62.300039 12.75317,-11.43552 c 1.28854,-2.97662 3.38144,-2.97662 4.66999,0 l 10.87194,25.12534 z"
+         id="path20319"
+         style="clip-rule:evenodd;fill:#005e8e;fill-rule:evenodd;stroke-width:0.264589;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <path
+         class="fil2"
+         d="m 107.68732,88.795761 c 8.36894,0 15.15563,6.784053 15.15563,15.155639 0,8.36894 -6.78669,15.15563 -15.15563,15.15563 -8.36894,0 -15.155638,-6.78669 -15.155638,-15.15563 0,-8.371586 6.786698,-15.155639 15.155638,-15.155639 z"
+         id="path20321"
+         style="clip-rule:evenodd;fill:#29b7ff;fill-rule:evenodd;stroke-width:0.264589;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <polygon
+         class="fil3 str1"
+         points="452.35,157.5 225.14,157.5 225.14,363.57 452.35,363.57 "
+         id="polygon20323"
+         style="clip-rule:evenodd;fill:#ffffff;fill-opacity:0.901961;fill-rule:evenodd;stroke:#0083c4;stroke-width:5.97;stroke-miterlimit:22.9256;stroke-opacity:0.901961;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+         transform="matrix(0.26458862,0,0,0.26458862,41.974088,72.229868)" />
+      <line
+         class="fil4 str3"
+         x1="111.48946"
+         y1="126.98119"
+         x2="150.20406"
+         y2="126.98119"
+         id="line20329"
+         style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#666666;stroke-width:4.73614;stroke-linecap:round;stroke-miterlimit:22.9256;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <line
+         class="fil4 str3"
+         x1="111.24075"
+         y1="141.04672"
+         x2="149.95535"
+         y2="141.04672"
+         id="line20331"
+         style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#666666;stroke-width:4.73614;stroke-linecap:round;stroke-miterlimit:22.9256;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <line
+         class="fil4 str3"
+         x1="110.95763"
+         y1="154.55927"
+         x2="149.67488"
+         y2="154.55927"
+         id="line20333"
+         style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#666666;stroke-width:4.73614;stroke-linecap:round;stroke-miterlimit:22.9256;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+    </g>
+  </g>
 </svg>

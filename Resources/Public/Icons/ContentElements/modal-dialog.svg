@@ -1,26 +1,78 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW 2017 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="143px" height="143px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 611.19 611.19"
- xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .str0 {stroke:#005E8E;stroke-width:34.19;stroke-miterlimit:22.9256}
-    .str1 {stroke:#3D98D3;stroke-width:3.85;stroke-miterlimit:22.9256}
-    .fil1 {fill:#FEFEFE}
-    .fil3 {fill:#3D98D3}
-    .fil0 {fill:#005E8E}
-    .fil2 {fill:#2B2A29;fill-rule:nonzero}
-   ]]>
-  </style>
- </defs>
- <g id="Layer_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <rect class="fil0 str0" x="17.1" y="17.1" width="576.99" height="576.99"/>
-  <rect class="fil1" x="98.33" y="121.56" width="419.25" height="352.8"/>
-  <path class="fil2" d="M470.29 175.63l10.13 -14.36 -9.37 -13.37 5.77 0 4.38 6.55c0.82,1.23 1.46,2.23 1.91,3.01 0.79,-1.11 1.5,-2.12 2.13,-3.02l4.61 -6.54 5.75 0 -9.43 13.37 10.04 14.36 -5.72 0 -5.73 -8.54 -1.31 -2.06 -7.41 10.6 -5.75 0z"/>
-  <rect class="fil3 str1" x="329.66" y="387.85" width="160.3" height="62.96"/>
- </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="139.99998"
+   height="140"
+   viewBox="0 0 37.041662 37.041666"
+   version="1.1"
+   id="svg13574"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01, custom)"
+   sodipodi:docname="card.svg"
+   inkscape:dataloss="true"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13576"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2.3304714"
+     inkscape:cx="335.98352"
+     inkscape:cy="260.46232"
+     inkscape:window-width="1920"
+     inkscape:window-height="1163"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs13571" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-68.791664,-26.458332)">
+    <g
+       id="g14209"
+       transform="matrix(0.99924616,0,0,0.99924616,-90.941798,-21.040941)">
+      <rect
+         class="fil0 str0"
+         x="160.52963"
+         y="48.210773"
+         width="35.718281"
+         height="35.718281"
+         id="rect14030"
+         style="clip-rule:evenodd;fill:#005e8e;fill-rule:evenodd;stroke:#9d9e9e;stroke-width:1.35133;stroke-miterlimit:22.9256;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <rect
+         class="fil1"
+         x="165.55814"
+         y="54.677319"
+         width="25.953466"
+         height="21.839911"
+         id="rect14032"
+         style="clip-rule:evenodd;fill:#fefefe;fill-rule:evenodd;stroke-width:0.0619045;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <path
+         class="fil2"
+         d="m 188.58413,58.024495 0.62709,-0.888949 -0.58004,-0.827663 h 0.35719 l 0.27114,0.405475 c 0.0508,0.07614 0.0904,0.138047 0.11824,0.186332 0.0489,-0.06871 0.0928,-0.131237 0.13185,-0.186951 l 0.28538,-0.404856 h 0.35596 l -0.58376,0.827663 0.62152,0.888949 h -0.3541 l -0.35471,-0.528664 -0.0811,-0.127524 -0.45872,0.656188 z"
+         id="path14034"
+         style="clip-rule:evenodd;fill:#2b2a29;fill-rule:nonzero;stroke-width:0.0619045;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+      <rect
+         class="fil3 str1"
+         x="179.87849"
+         y="71.161873"
+         width="9.9232931"
+         height="3.8975079"
+         id="rect14036"
+         style="clip-rule:evenodd;fill:#3d98d3;fill-rule:evenodd;stroke:#3d98d3;stroke-width:0.238332;stroke-miterlimit:22.9256;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision" />
+    </g>
+  </g>
 </svg>
