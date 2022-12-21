@@ -183,6 +183,7 @@ defined('TYPO3') || die('Access denied.');
     if (
         (bool)($pizpalueConfiguration['autoLoadStaticTSForExtensions'] ?? true) &&
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements') &&
+        method_exists('\\Buepro\\ContainerElements\\Utility\\VersionUtility', 'getExtensionVersion') &&
         (($containerElementsVersion = Buepro\ContainerElements\Utility\VersionUtility::getExtensionVersion('container_elements'))
             === 0 || $containerElementsVersion > 3001001)
     ) {
