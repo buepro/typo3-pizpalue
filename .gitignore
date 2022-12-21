@@ -1,11 +1,13 @@
 # Folders
-.build/
-.idea/
-Documentation-GENERATED-temp/
+/.build/
+/.idea/
+/config/
+/Build/node_modules/
+/Documentation-GENERATED-temp/
+/var/
 
 # Files
 *.cache
 *.zip
-Build/node_modules
 composer-dev.lock
-.ddev/docker-compose.mount.yaml
+/.ddev/docker-compose.mount.yaml
