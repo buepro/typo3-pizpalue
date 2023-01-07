@@ -72,5 +72,6 @@ return (new PhpCsFixer\Config())
             ->exclude('Contrib')
             ->exclude('Initialisation')
             ->exclude('var')
+            ->exclude('config')
             ->in(__DIR__)
     );
