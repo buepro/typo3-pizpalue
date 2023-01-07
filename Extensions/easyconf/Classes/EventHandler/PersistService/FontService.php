@@ -90,7 +90,6 @@ class FontService extends AbstractService
         } else {
             $this->disableGoogleHeadingsFont();
         }
-        $this->updateGoogleFontUrl();
     }
 
     protected function disableGoogleFont(): void
@@ -102,15 +101,6 @@ class FontService extends AbstractService
         ));
         $this->disableGoogleHeadingsFont();
         $this->typoScriptMapper->removePropertyFromBuffer('pizpalue.style.googleFontsUrl');
-    }
-
-    protected function disableGoogleHeadingsFont(): void
-    {
-        $field = 'font_headings_headings-font-family';
-        $this->typoScriptMapper->bufferProperty(TcaUtility::getMappingPath($field), $this->excludeItemFromList(
-            $this->getPropertyValueByFieldName($field),
-            '"#{$google-headings-webfont}"'
-        ));
     }
 
     protected function enableGoogleNormalFont(): self
@@ -152,30 +142,22 @@ class FontService extends AbstractService
                 'font_headings_headings-font-weight',
                 $this->getGoogleHeadingsFontWeight()
             );
-        return $this;
-    }
-
-    protected function updateGoogleFontUrl(): self
-    {
-        if (
-            !(bool)$this->getPropertyValueByFieldName('font_control_enable_headings_font') ||
-            $this->getGoogleFont() === '' ||
-            $this->getGoogleFontWeight() === '' ||
-            $this->getGoogleHeadingsFont() === '' ||
-            $this->getGoogleHeadingsFontWeight() === '' ||
-            $this->getGoogleFont() === $this->getGoogleHeadingsFont()
-        ) {
-            $this->typoScriptMapper->removePropertyFromBuffer('pizpalue.style.googleFontsUrl');
-            return $this;
-        }
-        $this->typoScriptMapper->bufferProperty('pizpalue.style.googleFontsUrl', sprintf(
-            'https://fonts.googleapis.com/css?display=swap&family=%s:%s|%s:%s',
-            $this->getGoogleFont(),
-            $this->getGoogleFontWeight(),
+        $this->typoScriptMapper->bufferProperty('pizpalue.style.googleFontsUrlHeadingsSegment', sprintf(
+            '|%s:%s',
             $this->getGoogleHeadingsFont(),
             $this->getGoogleHeadingsFontWeight(),
         ));
         return $this;
+    }
+
+    protected function disableGoogleHeadingsFont(): void
+    {
+        $field = 'font_headings_headings-font-family';
+        $this->typoScriptMapper->bufferProperty(TcaUtility::getMappingPath($field), $this->excludeItemFromList(
+            $this->getPropertyValueByFieldName($field),
+            '"#{$google-headings-webfont}"'
+        ));
+        $this->typoScriptMapper->removePropertyFromBuffer('pizpalue.style.googleFontsUrlHeadingsSegment');
     }
 
     protected function addGoogleFontToFontFamily(string $field, string $scssFontInterpolation): self

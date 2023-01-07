@@ -126,7 +126,7 @@ page {
         #:::::::::::::::::::::::
         #: Google font(s)
         #.
-        googlewebfont = {$pizpalue.style.googleFontsUrl}
+        googlewebfont = https://fonts.googleapis.com/css?display=swap&family={$page.theme.googleFont.font}:{$page.theme.googleFont.weight}{$pizpalue.style.googleFontsUrlHeadingsSegment}
 
         #:::::::::::::::::::::::
         #: Icons (ppicon, bootstrappackageicon, glyphicon)

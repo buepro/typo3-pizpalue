@@ -16,13 +16,16 @@ page.theme.googleFont {
 
 plugin.bootstrap_package.settings.scss {
     # cat=6040/1033/1014; type=string; label=Google Headings Webfont
-    google-headings-webfont = {$page.theme.googleFont.font}
+    google-headings-webfont = Source Sans Pro
 
     # cat=6040/1033/1016; type=string; label=Google Headings Webfont Weights: Comma separated list of font weights
-    google-headings-webfont-weight = {$page.theme.googleFont.weight}
+    google-headings-webfont-weight = 700
 }
 
 pizpalue.style {
     # cat=6040/1033/1014; type=string; label=Google Webfont family declaration: Alter in case more than one font family are used
     googleFontsUrl = https://fonts.googleapis.com/css?display=swap&family={$page.theme.googleFont.font}:{$page.theme.googleFont.weight}
+
+    # cat=6040/1033/1014; type=string; label=Google Webfont url headings segment:This segment will be added to the base font segment (e.g. |Lobster Two:400,700)
+    googleFontsUrlHeadingsSegment =
 }
