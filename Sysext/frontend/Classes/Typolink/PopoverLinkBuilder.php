@@ -14,6 +14,8 @@ namespace Buepro\Pizpalue\Sysext\Frontend\Typolink;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\Typolink\AbstractTypolinkBuilder;
+use TYPO3\CMS\Frontend\Typolink\LinkResult;
+use TYPO3\CMS\Frontend\Typolink\LinkResultInterface;
 
 /**
  * PopoverLinkBuilder
@@ -30,7 +32,7 @@ class PopoverLinkBuilder extends AbstractTypolinkBuilder
      * @see \Buepro\Pizpalue\Sysext\Recordlist\LinkHandler\PopoverLinkHandler
      * @inheritdoc
      */
-    public function build(array &$linkDetails, string $linkText, string $target, array $conf): array
+    public function build(array &$linkDetails, string $linkText, string $target, array $conf): LinkResultInterface
     {
         $url = '';
         if (isset($linkDetails['href'])) {
@@ -42,16 +44,14 @@ class PopoverLinkBuilder extends AbstractTypolinkBuilder
             ];
             /** @var ContentObjectRenderer $cObjRenderer (new instance to avoid overriding data from parent) */
             $cObjRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
-            $url = $cObjRenderer->stdWrap('', $urlConf);
+            $url = $cObjRenderer->stdWrap('', $urlConf) ?? '';
             if ($linkDetails['href'] === 'void') {
                 $url = 'javascript:void(0);';
             }
         }
-        return [$url, $linkText, ''];
-//        This return statement can be used since TYPO3 v11.4
-//        return (new LinkResult('pppopover', $url))
-//            ->withTarget($target)
-//            ->withLinkConfiguration($conf)
-//            ->withLinkText($linkText);
+        return (new LinkResult('pppopover', $url))
+            ->withTarget($target)
+            ->withLinkConfiguration($conf)
+            ->withLinkText($linkText);
     }
 }
