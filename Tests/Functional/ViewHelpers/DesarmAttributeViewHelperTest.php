@@ -20,12 +20,12 @@ class DesarmAttributeViewHelperTest extends FunctionalTestCase
     /**
      * @var bool Speed up this test case, it needs no database
      */
-    protected $initializeDatabase = false;
+    protected bool $initializeDatabase = false;
 
     /**
      * @var non-empty-string[]
      */
-    protected $testExtensionsToLoad = [
+    protected array $testExtensionsToLoad = [
         'typo3conf/ext/bootstrap_package',
         'typo3conf/ext/pizpalue',
     ];

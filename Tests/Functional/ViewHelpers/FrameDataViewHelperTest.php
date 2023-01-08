@@ -21,7 +21,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
     /**
      * @var bool Speed up this test case, it needs no database
      */
-    protected $initializeDatabase = false;
+    protected bool $initializeDatabase = false;
 
     /**
      * @var StandaloneView
@@ -33,10 +33,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
      */
     protected $assetCollector;
 
-    /**
-     * @var array
-     */
-    protected $contentData = [
+    protected array $contentData = [
         'uid' => 1,
         'layout' => 0,
         'frame_class' => 'default',
@@ -51,10 +48,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
         'tx_pizpalue_attributes' => 'data-1636104078="1" data-1636104091="2"',
     ];
 
-    /**
-     * @var array
-     */
-    protected $pizpalueConstants = [
+    protected array $pizpalueConstants = [
         'seo' => [
             'optimizeLinkTargets' => 0,
         ],
@@ -73,7 +67,7 @@ class FrameDataViewHelperTest extends FunctionalTestCase
     /**
      * @var non-empty-string[]
      */
-    protected $testExtensionsToLoad = [
+    protected array $testExtensionsToLoad = [
         'typo3conf/ext/bootstrap_package',
         'typo3conf/ext/pizpalue',
     ];

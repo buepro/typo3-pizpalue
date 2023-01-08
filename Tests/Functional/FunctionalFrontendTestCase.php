@@ -30,7 +30,7 @@ class FunctionalFrontendTestCase extends FunctionalTestCase
     /**
      * @var non-empty-string[]
      */
-    protected $testExtensionsToLoad = [
+    protected array $testExtensionsToLoad = [
         'typo3conf/ext/bootstrap_package',
         'typo3conf/ext/pizpalue',
     ];

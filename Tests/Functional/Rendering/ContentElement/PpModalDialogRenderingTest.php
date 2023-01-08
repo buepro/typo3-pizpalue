@@ -23,7 +23,7 @@ class PpModalDialogRenderingTest extends FunctionalFrontendTestCase
     /**
     * @var array<string, non-empty-string>
     */
-    protected $pathsToProvideInTestInstance = [
+    protected array $pathsToProvideInTestInstance = [
         'typo3conf/ext/pizpalue/Initialisation/Files/' => 'fileadmin/pizpalue/',
     ];
 

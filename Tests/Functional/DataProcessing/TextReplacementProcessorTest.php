@@ -27,7 +27,7 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
     /**
      * @var non-empty-string[]
      */
-    protected $coreExtensionsToLoad = [
+    protected array $coreExtensionsToLoad = [
         'impexp',
         'seo',
     ];
@@ -35,21 +35,15 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
     /**
      * @var non-empty-string[]
      */
-    protected $testExtensionsToLoad = [
+    protected array $testExtensionsToLoad = [
         'typo3conf/ext/pvh',
         'typo3conf/ext/bootstrap_package',
         'typo3conf/ext/pizpalue',
     ];
 
-    /**
-     * @var Connection
-     */
-    protected $dbConnection;
+    protected Connection $dbConnection;
 
-    /**
-     * @var array $pageData
-     */
-    protected $pageData = [
+    protected array $pageData = [
         'title' => 'Pizpalue title',
         'seo_title' => 'SEO title goes here',
         'description' => 'SEO description goes here'
@@ -58,7 +52,7 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
     /**
      * @var string[] $contentData
      */
-    protected $contentData = [
+    protected array $contentData = [
         'bodytext' =>
 '{
   "@context": "http://schema.org",
@@ -92,10 +86,7 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
 }',
     ];
 
-    /**
-     * @var string $defaultExpected
-     */
-    protected $defaultExpected =
+    protected string $defaultExpected =
 '{
   "@context": "http://schema.org",
   "@graph": [
