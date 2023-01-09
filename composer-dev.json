@@ -35,12 +35,11 @@
 	"require": {
 		"bk2k/bootstrap-package": "^13.0",
 		"buepro/typo3-pvh": "^2.0",
-		"typo3/cms-core": "^12.1 || 12.*.*@dev"
+		"typo3/cms-core": "^11.5"
 	},
 	"require-dev": {
 		"buepro/typo3-container-elements": "^5.0.0",
 		"buepro/typo3-easyconf": "^1.4.0 || ^2.0.0",
-		"buepro/typo3-user-pizpalue": "^5.0.0",
 		"ergebnis/composer-normalize": "^2.15.0",
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
