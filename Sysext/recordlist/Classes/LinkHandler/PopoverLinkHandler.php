@@ -153,6 +153,9 @@ class PopoverLinkHandler implements LinkHandlerInterface
 
     public function render(ServerRequestInterface $request)
     {
+        if ($this->view === null) {
+            return '';
+        }
         $this->pageRenderer->addRequireJsConfiguration(['paths' => [
             'Buepro/Pizpalue/Sysext/Recordlist' =>
                 '/typo3conf/ext/pizpalue/Sysext/recordlist/Resources/Public/JavaScript']]);
