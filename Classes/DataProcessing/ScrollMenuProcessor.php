@@ -117,8 +117,8 @@ class ScrollMenuProcessor implements DataProcessorInterface, SingletonInterface
             $scrollMenuItem['pageUid'] = $contentElement['pid'];
             $scrollMenuItem['section'] = $localCObj->stdWrapValue('section', $processorConfiguration, 'c' . $contentElement['uid']);
             $scrollMenuItem['data'] = $contentElement;
-            $scrollMenuItem['link'] = $localCObj->getTypoLink_URL(
-                sprintf('t3://page?uid=%d#%d', $contentElement['pid'], $contentElement['uid'])
+            $scrollMenuItem['link'] = $localCObj->typoLink_URL(
+                ['parameter' => sprintf('t3://page?uid=%d#%d', $contentElement['pid'], $contentElement['uid'])]
             );
             $scrollMenuItems[] = $scrollMenuItem;
         }
