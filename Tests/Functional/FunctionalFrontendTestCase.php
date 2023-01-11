@@ -113,7 +113,10 @@ class FunctionalFrontendTestCase extends FunctionalTestCase
             $request->getAttribute('frontend.user', null)
         );
         $controller->determineId($request);
-        $controller->getConfigArray($request);
+        // Used for TYPO3 v12, where method has been dropped.
+        if (method_exists($controller, 'getConfigArray')) {
+            $controller->getConfigArray($request);
+        }
         $GLOBALS['TSFE'] = $controller;
     }
 
