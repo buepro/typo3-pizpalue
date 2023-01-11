@@ -16,7 +16,6 @@ use Buepro\Pizpalue\Updates\Criteria\InCriteria;
 use Buepro\Pizpalue\Updates\Criteria\LikeCriteria;
 use Buepro\Pizpalue\Updates\Criteria\NotEqualStringCriteria;
 use Buepro\Pizpalue\Updates\Criteria\NotLikeCriteria;
-use Doctrine\DBAL\Result;
 use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
@@ -89,12 +88,7 @@ abstract class AbstractUpdate
 
     protected function tableHasColumn(string $column): bool
     {
-        /** @phpstan-ignore-next-line */
-        if (method_exists($this->getConnection(), 'createSchemaManager')) {
-            $schemaManager = $this->getConnection()->createSchemaManager();
-        } else {
-            $schemaManager = $this->getConnection()->getSchemaManager();
-        }
+        $schemaManager = $this->getConnection()->createSchemaManager();
         $tableColumns = $schemaManager->listTableColumns($this->table);
 
         if (array_key_exists($column, $tableColumns)) {
@@ -152,13 +146,7 @@ abstract class AbstractUpdate
             $queryBuilder->orWhere(...$criteria);
         }
 
-        /** @phpstan-ignore-next-line */
-        if (method_exists($queryBuilder, 'executeQuery')) {
-            $result = $queryBuilder->executeQuery();
-        } else {
-            /** @var Result $result */
-            $result = $queryBuilder->execute();
-        }
+        $result = $queryBuilder->executeQuery();
 
         return $result->fetchAllAssociative();
     }
@@ -181,11 +169,6 @@ abstract class AbstractUpdate
             $queryBuilder->set($field, $value);
         }
 
-        /** @phpstan-ignore-next-line */
-        if (method_exists($queryBuilder, 'executeStatement')) {
-            $queryBuilder->executeStatement();
-        } else {
-            $queryBuilder->execute();
-        }
+        $queryBuilder->executeStatement();
     }
 }
