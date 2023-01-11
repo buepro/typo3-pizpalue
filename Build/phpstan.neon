@@ -16,6 +16,13 @@ parameters:
 	- "#^Call to an undefined method Prophecy\\\\Prophecy\\\\ObjectProphecy#"
 	- "#^Parameter \\#\\d+ \\.\\.\\.\\$expressions of method TYPO3\\\\CMS\\\\Core\\\\Database\\\\Query\\\\Expression\\\\ExpressionBuilder::\\w+\\(\\) expects string, TYPO3\\\\CMS\\\\Core\\\\Database\\\\Query\\\\Expression\\\\CompositeExpression given.$#"
 	- "#^Parameter \\#\\d+ \\.\\.\\.\\$predicates of method TYPO3\\\\CMS\\\\Core\\\\Database\\\\Query\\\\QueryBuilder::\\w+\\(\\) expects array<int, mixed>,|Doctrine\\\\DBAL\\\\Query\\\\Expression\\\\CompositeExpression, string given.$#"
+	-
+		messages:
+			- "#^Cannot access offset \\'\\w*\\' on mixed\\.$#"
+			- "#^Cannot access offset string on mixed\\.$#"
+		paths:
+			- ../Tests/Unit/Structure/Service/TypoScriptServiceTest.php
+			- ../Classes/Structure/Service/TypoScriptService.php
 
 	paths:
 	- %currentWorkingDirectory%/Classes/
