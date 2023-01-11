@@ -34,7 +34,7 @@ class ContentElementXxlUpdate extends AbstractUpdate implements UpgradeWizardInt
 
     protected function getScalingCriteria(QueryBuilder $queryBuilder): CompositeExpression
     {
-        return $queryBuilder->expr()->andX(
+        return $queryBuilder->expr()->and(
             (string) $this->createLikeCriteria($queryBuilder, 'tx_pizpalue_image_scaling', '%xl%'),
             (string) $this->createNotLikeCriteria($queryBuilder, 'tx_pizpalue_image_scaling', '%xxl%')
         );
@@ -42,7 +42,7 @@ class ContentElementXxlUpdate extends AbstractUpdate implements UpgradeWizardInt
 
     protected function getAspectRatioCriteria(QueryBuilder $queryBuilder): CompositeExpression
     {
-        return $queryBuilder->expr()->andX(
+        return $queryBuilder->expr()->and(
             (string) $this->createLikeCriteria($queryBuilder, 'tx_pizpalue_image_aspect_ratio', '%xl%'),
             (string) $this->createNotLikeCriteria($queryBuilder, 'tx_pizpalue_image_aspect_ratio', '%xxl%')
         );
@@ -50,7 +50,7 @@ class ContentElementXxlUpdate extends AbstractUpdate implements UpgradeWizardInt
 
     protected function getCriteria(QueryBuilder $queryBuilder): array
     {
-        return [$queryBuilder->expr()->orX(
+        return [$queryBuilder->expr()->or(
             $this->getScalingCriteria($queryBuilder),
             $this->getAspectRatioCriteria($queryBuilder)
         )];

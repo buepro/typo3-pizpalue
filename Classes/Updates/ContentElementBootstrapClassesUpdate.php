@@ -68,12 +68,12 @@ class ContentElementBootstrapClassesUpdate extends AbstractUpdate implements Upg
     {
         $criteria = [];
         foreach ($this->replacementClasses as $oldValue => $newValue) {
-            $criteria[] = $queryBuilder->expr()->andX(
+            $criteria[] = $queryBuilder->expr()->and(
                 (string) $this->createLikeCriteria($queryBuilder, $this->field, "%$oldValue%"),
                 (string) $this->createNotLikeCriteria($queryBuilder, $this->field, "%$newValue%")
             );
         }
-        return [$queryBuilder->expr()->orX(...$criteria)];
+        return [$queryBuilder->expr()->or(...$criteria)];
     }
 
     /**

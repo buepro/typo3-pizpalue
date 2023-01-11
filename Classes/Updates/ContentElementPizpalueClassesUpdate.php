@@ -72,7 +72,7 @@ class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements Upgr
         foreach ($this->movedToFrameBackgroundClass as $oldClass => $newClass) {
             $constraints[] = (string) $this->createLikeCriteria($queryBuilder, $this->field, "%$oldClass%");
         }
-        return $queryBuilder->expr()->orX(...$constraints);
+        return $queryBuilder->expr()->or(...$constraints);
     }
 
     private function getMovedToInnerClassesConstraints(QueryBuilder $queryBuilder): \TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression
@@ -81,12 +81,12 @@ class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements Upgr
         foreach ($this->movedToInnerClasses as $oldClass => $newClass) {
             $constraints[] = (string) $this->createLikeCriteria($queryBuilder, $this->field, "%$oldClass%");
         }
-        return $queryBuilder->expr()->orX(...$constraints);
+        return $queryBuilder->expr()->or(...$constraints);
     }
 
     protected function getCriteria(QueryBuilder $queryBuilder): array
     {
-        return [$queryBuilder->expr()->orX(
+        return [$queryBuilder->expr()->or(
             $this->getMovedToFrameBackgroundClassesConstraints($queryBuilder),
             $this->getMovedToInnerClassesConstraints($queryBuilder)
         )];
