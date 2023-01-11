@@ -86,6 +86,7 @@ defined('TYPO3') || die('Access denied.');
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
         "@import 'EXT:pizpalue/Sysext/recordlist/Configuration/TsConfig/Page/TCEMAIN.tsconfig'"
     );
+    /** @extensionScannerIgnoreLine */
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['pppopover'] =
         \Buepro\Pizpalue\Sysext\Core\LinkHandling\PopoverLinkHandler::class;
     $GLOBALS['TYPO3_CONF_VARS']['FE']['typolinkBuilder']['pppopover'] =
@@ -104,6 +105,7 @@ defined('TYPO3') || die('Access denied.');
     /**
      * EXT:core
      * Register TelephoneLinkHandler
+     * @extensionScannerIgnoreLine
      */
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['telephone'] =
         \Buepro\Pizpalue\Sysext\Core\LinkHandling\TelephoneLinkHandler::class;
