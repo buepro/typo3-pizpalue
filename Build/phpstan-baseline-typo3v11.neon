@@ -1,0 +1,25 @@
+parameters:
+	ignoreErrors:
+		-
+			message: """
+				#^Call to deprecated method getFileFieldTCAConfig\\(\\) of class TYPO3\\\\CMS\\\\Core\\\\Utility\\\\ExtensionManagementUtility\\:
+				since TYPO3 v12\\.0\\. Use the TCA type "file" directly$#
+			"""
+			count: 1
+			path: ../Configuration/TCA/Overrides/100_pages.php
+
+		-
+			message: """
+				#^Call to deprecated method getFileFieldTCAConfig\\(\\) of class TYPO3\\\\CMS\\\\Core\\\\Utility\\\\ExtensionManagementUtility\\:
+				since TYPO3 v12\\.0\\. Use the TCA type "file" directly$#
+			"""
+			count: 2
+			path: ../Configuration/TCA/Overrides/611_ext_easyconf_logo.php
+
+		-
+			message: """
+				#^Call to deprecated method loadRequireJsModule\\(\\) of class TYPO3\\\\CMS\\\\Core\\\\Page\\\\PageRenderer\\:
+				will be removed in TYPO3 v13\\.0\\. Use loadJavaScriptModule\\(\\) instead, available since TYPO3 v12\\.0\\.$#
+			"""
+			count: 1
+			path: ../Sysext/recordlist/Classes/LinkHandler/PopoverLinkHandler.php
