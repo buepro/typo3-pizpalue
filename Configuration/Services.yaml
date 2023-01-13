@@ -7,9 +7,6 @@ services:
   Buepro\Pizpalue\:
     resource: '../Classes/*'
 
-  Buepro\Pizpalue\BootstrapPackage\Compatibility120\:
-    resource: '../Extensions/bootstrap_package/Compatibility120/Classes/*'
-
   Buepro\Pizpalue\Sysext\Backend\LinkHandler\PopoverLinkHandler:
     public: true
     shared: false

@@ -1,7 +1,0 @@
-plugin {
-    tx_bootstrappackage {
-        view {
-            partialRootPaths.10 = EXT:pizpalue/Extensions/bootstrap_package/Compatibility120/Resources/Private/Partials/
-        }
-    }
-}

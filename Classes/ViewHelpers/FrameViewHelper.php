@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\ViewHelpers;
 
-use Buepro\Pizpalue\BootstrapPackage\Compatibility120\ViewHelpers\FrameViewHelper as BootstrapPackageFrameViewHelper;
+use BK2K\BootstrapPackage\ViewHelpers\FrameViewHelper as BootstrapPackageFrameViewHelper;
 
 /**
  * FrameViewHelper
