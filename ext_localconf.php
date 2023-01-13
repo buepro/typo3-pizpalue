@@ -169,10 +169,7 @@ defined('TYPO3') || die('Access denied.');
      *
      * @todo Might be removed once the bootstrap package provides it (v12.1?)
      */
-    $bootstrapPackageVersion = \TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionStringToArray(ltrim(
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getExtensionVersion('bootstrap_package'),
-        'vV'
-    ))['version_int'];
+    $bootstrapPackageVersion = \Buepro\Pizpalue\Utility\VersionUtility::getExtensionVersion('bootstrap_package');
     if ($bootstrapPackageVersion >= 12000000 && $bootstrapPackageVersion < 12001000) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
             '@import "EXT:pizpalue/Extensions/bootstrap_package/Compatibility120/Configuration/TypoScript/setup.typoscript"'
@@ -186,7 +183,7 @@ defined('TYPO3') || die('Access denied.');
         (bool)($pizpalueConfiguration['autoLoadStaticTSForExtensions'] ?? true) &&
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements') &&
         method_exists('\\Buepro\\ContainerElements\\Utility\\VersionUtility', 'getExtensionVersion') &&
-        (($containerElementsVersion = Buepro\ContainerElements\Utility\VersionUtility::getExtensionVersion('container_elements'))
+        (($containerElementsVersion = \Buepro\Pizpalue\Utility\VersionUtility::getExtensionVersion('container_elements'))
             === 0 || $containerElementsVersion > 3001001)
     ) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants(
