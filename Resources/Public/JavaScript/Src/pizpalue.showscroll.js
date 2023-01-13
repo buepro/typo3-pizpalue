@@ -9,12 +9,12 @@
  * Currently just the scrollOffset is available as an option parameter.
  *
  * Usage:
- * Set new default scroll offset: $('body').ppShowScroll('setDefaults',{scrollOffset: 50});
- * Scroll to content element using default scroll offset: $('#cUID').ppShowScroll();
- * Scroll to a content element with a different scroll offset: $('#cUID').ppShowScroll({scrollOffset: 60});
+ * Set new default scroll offset: document.getElementsByTagName('body')[0].ppShowScroll('setDefaults',{scrollOffset: 50});
+ * Scroll to content element using default scroll offset: document.getElementById('#cUID').ppShowScroll();
+ * Scroll to a content element with a different scroll offset: document.getElementById('#cUID').ppShowScroll({scrollOffset: 60});
  *
  */
-;+function ($, window, document, undefined) {
+;+function (window, document, undefined) {
 
     const pluginName = 'ppShowScroll';
 
@@ -58,7 +58,7 @@
 
         /*
          * Checks whether the content is a tab content element (having class .tab-pane) or is embedded to one.
-         * In case a tab content element can be identified the plugin property $tabPane is set.
+         * In case a tab content element can be identified the plugin property tabPane is set.
          *
          * @return boolean
          */
@@ -94,7 +94,7 @@
         /*
          * Checks whether the content is an accordion content element (having class .accordion-collapse) or is
          * embedded to one. In case an accordion content element can be identified the plugin property
-         * $accordionCollapse is set.
+         * accordionCollapse is set.
          *
          * @return boolean
          */
@@ -185,4 +185,4 @@
         }
     }
 
-}(jQuery, window, document);
+}(window, document);
