@@ -69,6 +69,7 @@ jobs:
           composer remove --dev --no-update buepro/typo3-container-elements buepro/typo3-user-pizpalue friendsoftypo3/tt-address georgringer/eventnews georgringer/news
           composer require typo3/cms-core:${{ matrix.typo3 }} --no-progress
           git checkout composer.json
+          [ -d .build/public/typo3/sysext/dummy ] || mkdir -p .build/public/typo3/sysext/dummy
       - id: cgl
         name: CGL
         if: ${{ always() && steps.install.conclusion == 'success' }}
@@ -76,6 +77,7 @@ jobs:
           composer ci:php:cs
       - id: lint
         name: Lint
+        if: ${{ always() && steps.install.conclusion == 'success' }}
         run: |
           composer ci:php:lint
       - id: phpstan
