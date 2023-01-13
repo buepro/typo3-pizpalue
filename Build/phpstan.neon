@@ -23,11 +23,15 @@ parameters:
 		paths:
 			- ../Tests/Unit/Structure/Service/TypoScriptServiceTest.php
 			- ../Classes/Structure/Service/TypoScriptService.php
+	- """
+			#^Call to deprecated method getFileFieldTCAConfig\\(\\) of class TYPO3\\\\CMS\\\\Core\\\\Utility\\\\ExtensionManagementUtility\\:
+			since TYPO3 v12\\.0\\. Use the TCA type "file" directly$#
+		"""
 
 	paths:
 	- %currentWorkingDirectory%/Classes/
 	- %currentWorkingDirectory%/Configuration/TCA/
 	- %currentWorkingDirectory%/Sysext/core/Classes/
 	- %currentWorkingDirectory%/Sysext/frontend/Classes/
-	- %currentWorkingDirectory%/Sysext/recordlist/Classes/
+	- %currentWorkingDirectory%/Sysext/backend/Classes/
 	- %currentWorkingDirectory%/Tests/

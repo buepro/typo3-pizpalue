@@ -83,14 +83,11 @@ defined('TYPO3') || die('Access denied.');
  * Bootstrap popover implementation
  */
 (static function () {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        "@import 'EXT:pizpalue/Sysext/recordlist/Configuration/TsConfig/Page/TCEMAIN.tsconfig'"
-    );
     /** @extensionScannerIgnoreLine */
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['pppopover'] =
         \Buepro\Pizpalue\Sysext\Core\LinkHandling\PopoverLinkHandler::class;
     $GLOBALS['TYPO3_CONF_VARS']['FE']['typolinkBuilder']['pppopover'] =
-        \Buepro\Pizpalue\Sysext\Frontend\Typolink\PopoverLinkBuilder::class;
+        \Buepro\Pizpalue\Sysext\Frontend\TypoLink\PopoverLinkBuilder::class;
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['typoLink_PostProc']['pppopover'] =
         \Buepro\Pizpalue\Sysext\Frontend\Hook\PopoverTypolinkHook::class . '->postProcess';
 })();
@@ -116,6 +113,9 @@ defined('TYPO3') || die('Access denied.');
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('backend')) {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
             '@import "EXT:pizpalue/Sysext/backend/Configuration/TypoScript/setup.typoscript"'
+        );
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            '@import "EXT:pizpalue/Sysext/backend/Configuration/TsConfig/page.tsconfig"'
         );
         foreach (['frame', 'no-frame'] as $icon) {
             $iconRegistry->registerIcon(

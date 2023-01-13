@@ -7,16 +7,17 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace Buepro\Pizpalue\Sysext\Recordlist\LinkHandler;
+namespace Buepro\Pizpalue\Sysext\Backend\LinkHandler;
 
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Imaging\IconFactory;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Fluid\View\StandaloneView;
+use TYPO3\CMS\Core\Utility\VersionNumberUtility;
+use TYPO3\CMS\Core\View\ViewInterface;
 use TYPO3\CMS\Recordlist\Controller\AbstractLinkBrowserController;
 use TYPO3\CMS\Recordlist\LinkHandler\LinkHandlerInterface;
-use TYPO3Fluid\Fluid\View\ViewInterface;
+use TYPO3Fluid\Fluid\View\ViewInterface as TYPO3FluidViewInterface;
 
 /**
  * Defines the popover register from the link browser.
@@ -62,7 +63,7 @@ class PopoverLinkHandler implements LinkHandlerInterface
     protected $iconFactory;
 
     /**
-     * @var ?ViewInterface
+     * @var ViewInterface|TYPO3FluidViewInterface|null
      */
     protected $view;
 
@@ -123,21 +124,17 @@ class PopoverLinkHandler implements LinkHandlerInterface
     /**
      * Introduced with feature "Use SVG Trees in Record Selector" (#a79bd29)
      *
-     * @param ViewInterface $view
+     * @param ViewInterface|TYPO3FluidViewInterface $view
      */
-    public function setView(ViewInterface $view): void
+    public function setView($view): void
     {
-        /** @phpstan-ignore-next-line */
-        $view->setTemplateRootPaths(array_merge(
-            $view->getTemplateRootPaths(), /** @phpstan-ignore-line */
-            [GeneralUtility::getFileAbsFileName('EXT:pizpalue/Sysext/recordlist/Resources/Private/Templates/LinkBrowser')]
-        ));
-        /** @phpstan-ignore-next-line */
-        $view->setTemplate('PpPopover');
         $this->view = $view;
     }
 
-    private function assignVariablesToView(ViewInterface $view): void
+    /**
+     * @param ViewInterface|TYPO3FluidViewInterface $view
+     */
+    private function assignVariablesToView($view): void
     {
         if (isset($this->linkParts['url']['href'])) {
             $view->assign('href', $this->linkParts['url']['href']);
@@ -153,14 +150,44 @@ class PopoverLinkHandler implements LinkHandlerInterface
 
     public function render(ServerRequestInterface $request)
     {
+        if (VersionNumberUtility::convertVersionNumberToInteger(VersionNumberUtility::getNumericTypo3Version()) < 12000000) {
+            return $this->renderForTypo3V11($request);
+        }
         if ($this->view === null) {
             return '';
         }
-        $this->pageRenderer->addRequireJsConfiguration(['paths' => [
-            'Buepro/Pizpalue/Sysext/Recordlist' =>
-                '/typo3conf/ext/pizpalue/Sysext/recordlist/Resources/Public/JavaScript']]);
-        $this->pageRenderer->loadRequireJsModule('Buepro/Pizpalue/Sysext/Recordlist/PopoverLinkHandler');
+        $this->pageRenderer->loadJavaScriptModule('@buepro/pizpalue/sysext/backend/popover-link-handler.js');
         $this->assignVariablesToView($this->view);
+        return $this->view->render('LinkBrowser/PpPopover');
+    }
+
+    private function renderForTypo3V11(ServerRequestInterface $request): string
+    {
+        if (
+            $this->view === null ||
+            !method_exists($this->view, 'setTemplateRootPaths') ||
+            !method_exists($this->view, 'getTemplateRootPaths') ||
+            !method_exists($this->view, 'setTemplate')
+        ) {
+            return '';
+        }
+
+        // Add JS
+        $this->pageRenderer->addRequireJsConfiguration(['paths' => [
+            'Buepro/Pizpalue/Sysext/Backend' =>
+                '/typo3conf/ext/pizpalue/Sysext/backend/Resources/Public/JavaScript']]);
+        $this->pageRenderer->loadRequireJsModule('Buepro/Pizpalue/Sysext/Backend/PopoverLinkHandler');
+
+        // Set template
+        $this->view->setTemplateRootPaths(array_merge(
+            $this->view->getTemplateRootPaths(),
+            [GeneralUtility::getFileAbsFileName('EXT:pizpalue/Sysext/backend/Resources/Private/Templates/LinkBrowser')]
+        ));
+        $this->view->setTemplate('PpPopover');
+
+        // Assign variables
+        $this->assignVariablesToView($this->view);
+
         return '';
     }
 }

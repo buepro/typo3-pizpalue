@@ -1,25 +1,81 @@
 parameters:
 	ignoreErrors:
 		-
-			message: """
-				#^Call to deprecated method getFileFieldTCAConfig\\(\\) of class TYPO3\\\\CMS\\\\Core\\\\Utility\\\\ExtensionManagementUtility\\:
-				since TYPO3 v12\\.0\\. Use the TCA type "file" directly$#
-			"""
+			message: "#^Call to an undefined method TYPO3\\\\CMS\\\\Core\\\\Page\\\\PageRenderer\\:\\:loadJavaScriptModule\\(\\)\\.$#"
 			count: 1
-			path: ../Configuration/TCA/Overrides/100_pages.php
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
 
 		-
-			message: """
-				#^Call to deprecated method getFileFieldTCAConfig\\(\\) of class TYPO3\\\\CMS\\\\Core\\\\Utility\\\\ExtensionManagementUtility\\:
-				since TYPO3 v12\\.0\\. Use the TCA type "file" directly$#
-			"""
-			count: 2
-			path: ../Configuration/TCA/Overrides/611_ext_easyconf_logo.php
+			message: "#^Call to method assign\\(\\) on an unknown class TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\.$#"
+			count: 3
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
 
 		-
-			message: """
-				#^Call to deprecated method loadRequireJsModule\\(\\) of class TYPO3\\\\CMS\\\\Core\\\\Page\\\\PageRenderer\\:
-				will be removed in TYPO3 v13\\.0\\. Use loadJavaScriptModule\\(\\) instead, available since TYPO3 v12\\.0\\.$#
-			"""
+			message: "#^Call to method getTemplateRootPaths\\(\\) on an unknown class TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\.$#"
 			count: 1
-			path: ../Sysext/recordlist/Classes/LinkHandler/PopoverLinkHandler.php
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Call to method render\\(\\) on an unknown class TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\.$#"
+			count: 1
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Call to method setTemplate\\(\\) on an unknown class TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\.$#"
+			count: 1
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Call to method setTemplateRootPaths\\(\\) on an unknown class TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\.$#"
+			count: 1
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Parameter \\$view of method Buepro\\\\Pizpalue\\\\Sysext\\\\Backend\\\\LinkHandler\\\\PopoverLinkHandler\\:\\:assignVariablesToView\\(\\) has invalid type TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\.$#"
+			count: 1
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Parameter \\$view of method Buepro\\\\Pizpalue\\\\Sysext\\\\Backend\\\\LinkHandler\\\\PopoverLinkHandler\\:\\:setView\\(\\) has invalid type TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\.$#"
+			count: 1
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Property Buepro\\\\Pizpalue\\\\Sysext\\\\Backend\\\\LinkHandler\\\\PopoverLinkHandler\\:\\:\\$view has unknown class TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface as its type\\.$#"
+			count: 1
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Call to method getLinkResult\\(\\) on an unknown class TYPO3\\\\CMS\\\\Frontend\\\\Event\\\\AfterLinkIsGeneratedEvent\\.$#"
+			count: 1
+			path: ../Sysext/frontend/Classes/TypoLink/PopoverLinkModifier.php
+
+		-
+			message: "#^Call to method setLinkResult\\(\\) on an unknown class TYPO3\\\\CMS\\\\Frontend\\\\Event\\\\AfterLinkIsGeneratedEvent\\.$#"
+			count: 1
+			path: ../Sysext/frontend/Classes/TypoLink/PopoverLinkModifier.php
+
+		-
+			message: "#^Parameter \\$event of method Buepro\\\\Pizpalue\\\\Sysext\\\\Frontend\\\\TypoLink\\\\PopoverLinkModifier\\:\\:__invoke\\(\\) has invalid type TYPO3\\\\CMS\\\\Frontend\\\\Event\\\\AfterLinkIsGeneratedEvent\\.$#"
+			count: 1
+			path: ../Sysext/frontend/Classes/TypoLink/PopoverLinkModifier.php
+
+		-
+			message: "#^Call to function method_exists\\(\\) with TYPO3\\\\CMS\\\\Frontend\\\\Controller\\\\TypoScriptFrontendController and 'getConfigArray' will always evaluate to true\\.$#"
+			count: 1
+			path: ../Tests/Functional/FunctionalFrontendTestCase.php
+
+		-
+			message: "#^Call to method setSetupArray\\(\\) on an unknown class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\FrontendTypoScript\\.$#"
+			count: 1
+			path: ../Tests/Unit/Structure/TypoScriptBasedTest.php
+
+		-
+			message: "#^Instantiated class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\AST\\\\Node\\\\RootNode not found\\.$#"
+			count: 1
+			path: ../Tests/Unit/Structure/TypoScriptBasedTest.php
+
+		-
+			message: "#^Instantiated class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\FrontendTypoScript not found\\.$#"
+			count: 1
+			path: ../Tests/Unit/Structure/TypoScriptBasedTest.php

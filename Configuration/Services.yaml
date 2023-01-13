@@ -10,6 +10,10 @@ services:
   Buepro\Pizpalue\BootstrapPackage\Compatibility120\:
     resource: '../Extensions/bootstrap_package/Compatibility120/Classes/*'
 
+  Buepro\Pizpalue\Sysext\Backend\LinkHandler\PopoverLinkHandler:
+    public: true
+    shared: false
+
   Buepro\Pizpalue\Service\BrandingService:
     tags:
       - name: event.listener
@@ -48,3 +52,8 @@ services:
       - name: event.listener
         identifier: 'buepro/pizpalue/easyconf/before-persisting'
         event: Buepro\Easyconf\Event\BeforePersistingPropertiesEvent
+
+  Buepro\Pizpalue\Sysext\Frontend\TypoLink\PopoverLinkModifier:
+    tags:
+      - name: event.listener
+        identifier: 'buepro/pizpalue/frontend/popover-link-modifier'

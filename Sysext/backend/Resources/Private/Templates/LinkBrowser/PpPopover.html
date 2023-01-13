@@ -1,10 +1,14 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
 <f:layout name="LinkBrowser"/>
 
 <f:section name="Content">
     <form action="" id="pp-popoverform" class="form-horizontal">
         <input name="lhref" type="hidden" value="{href}" />
         <div class="form-group form-group-sm" id="pp-content">
-            <label class="col-xs-4 control-label">{f:translate(key: 'LLL:EXT:pizpalue/Sysext/recordlist/Resources/Private/Language/Backend.xlf:linkhandler-popover-content')}</label>
+            <label class="col-xs-4 control-label">{f:translate(key: 'LLL:EXT:pizpalue/Sysext/backend/Resources/Private/Language/Backend.xlf:linkhandler-popover-content')}</label>
             <div class="col-xs-8">
                 <textarea
                     name="lcontent"
@@ -16,8 +20,9 @@
             <div class="col-xs-4"></div>
             <div class="col-xs-8">
                 <input class="btn btn-sm btn-default" type="submit"
-                       value="{f:translate(key: 'LLL:EXT:pizpalue/Sysext/recordlist/Resources/Private/Language/Backend.xlf:linkhandler-popover-setPopover')}" />
+                       value="{f:translate(key: 'LLL:EXT:pizpalue/Sysext/backend/Resources/Private/Language/Backend.xlf:linkhandler-popover-setPopover')}" />
             </div>
         </div>
     </form>
 </f:section>
+</html>

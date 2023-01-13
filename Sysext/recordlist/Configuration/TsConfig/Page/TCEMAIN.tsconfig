@@ -1,9 +1,0 @@
-#=========================================================#
-# Popover link handler
-#=========================================================#
-TCEMAIN.linkHandler.pppopover {
-    handler = Buepro\Pizpalue\Sysext\Recordlist\LinkHandler\PopoverLinkHandler
-    label = LLL:EXT:pizpalue/Sysext/recordlist/Resources/Private/Language/Backend.xlf:linkhandler-popover-registerTitle
-    displayAfter = telephone
-    scanBefore = url
-}

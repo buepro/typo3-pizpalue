@@ -2,6 +2,14 @@ parameters:
 	ignoreErrors:
 		-
 			message: """
+				#^Fetching deprecated class constant INFO of class TYPO3\\\\CMS\\\\Core\\\\Messaging\\\\FlashMessage\\:
+				Use \\\\TYPO3\\\\CMS\\\\Core\\\\Type\\\\ContextualFeedbackSeverity\\:\\:INFO instead$#
+			"""
+			count: 1
+			path: ../Classes/Hook/DataHandlerHook.php
+
+		-
+			message: """
 				#^Call to deprecated method getTypoScriptStupArrayFromDeprecatedProperty\\(\\) of class Buepro\\\\Pizpalue\\\\Structure\\\\Service\\\\TypoScriptService\\:
 				since pizpalue v15, remove with dropping support for TYPO3 v11$#
 			"""
@@ -54,7 +62,25 @@ parameters:
 			path: ../Classes/ViewHelpers/Structure/VariantsViewHelper.php
 
 		-
+			message: """
+				#^Call to deprecated method loadRequireJsModule\\(\\) of class TYPO3\\\\CMS\\\\Core\\\\Page\\\\PageRenderer\\:
+				will be removed in TYPO3 v13\\.0\\. Use loadJavaScriptModule\\(\\) instead, available since TYPO3 v12\\.0\\.$#
+			"""
+			count: 1
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Cannot call method render\\(\\) on TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\|TYPO3Fluid\\\\Fluid\\\\View\\\\ViewInterface\\|null\\.$#"
+			count: 1
+			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
 			message: "#^Call to function property_exists\\(\\) with TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer and 'lastTypoLinkResult' will always evaluate to true\\.$#"
+			count: 1
+			path: ../Sysext/frontend/Classes/Hook/PopoverTypolinkHook.php
+
+		-
+			message: "#^Parameter \\#2 \\$conf of method TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer\\:\\:parseFunc\\(\\) expects non\\-empty\\-array\\<string, mixed\\>\\|null, array\\{\\} given\\.$#"
 			count: 1
 			path: ../Sysext/frontend/Classes/Hook/PopoverTypolinkHook.php
 
@@ -83,19 +109,4 @@ parameters:
 			message: "#^Cannot access offset 'TSFE' on TYPO3\\\\CMS\\\\Frontend\\\\Controller\\\\TypoScriptFrontendController\\.$#"
 			count: 2
 			path: ../Tests/Unit/DataProcessing/PostMenuProcessorTest.php
-
-		-
-			message: "#^Call to method setSetupArray\\(\\) on an unknown class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\FrontendTypoScript\\.$#"
-			count: 1
-			path: ../Tests/Unit/Structure/TypoScriptBasedTest.php
-
-		-
-			message: "#^Instantiated class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\AST\\\\Node\\\\RootNode not found\\.$#"
-			count: 1
-			path: ../Tests/Unit/Structure/TypoScriptBasedTest.php
-
-		-
-			message: "#^Instantiated class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\FrontendTypoScript not found\\.$#"
-			count: 1
-			path: ../Tests/Unit/Structure/TypoScriptBasedTest.php
 

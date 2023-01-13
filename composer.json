@@ -39,7 +39,8 @@
 	},
 	"require-dev": {
 		"buepro/typo3-container-elements": "^5.0.0",
-		"buepro/typo3-user-pizpalue": "^5.0.0",
+		"buepro/typo3-easyconf": "^1.4.0 || ^2.0.0",
+		"buepro/typo3-user-pizpalue": "^4.0.0 || ^5.0.0",
 		"ergebnis/composer-normalize": "^2.15.0",
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
@@ -74,7 +75,7 @@
 			"Buepro\\Pizpalue\\BootstrapPackage\\Compatibility120\\": "Extensions/bootstrap_package/Compatibility120/Classes/",
 			"Buepro\\Pizpalue\\Sysext\\Core\\": "Sysext/core/Classes/",
 			"Buepro\\Pizpalue\\Sysext\\Frontend\\": "Sysext/frontend/Classes/",
-			"Buepro\\Pizpalue\\Sysext\\Recordlist\\": "Sysext/recordlist/Classes/"
+			"Buepro\\Pizpalue\\Sysext\\Backend\\": "Sysext/backend/Classes/"
 		}
 	},
 	"autoload-dev": {

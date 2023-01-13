@@ -67,6 +67,7 @@ class PopoverTypolinkHook
                 $popoverAttributes['data-content'] = $popoverAttributes['data-bs-content'];
             }
             // Create tag
+            unset($attributes['popover-content']);
             $finalAttributes = array_merge($popoverAttributes, $attributes);
             $params['finalTag'] = '<a ' . $htmlParser->compileTagAttribs($finalAttributes, $attributesMetadata) . '>';
         }
