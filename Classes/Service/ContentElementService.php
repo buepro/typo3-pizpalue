@@ -34,6 +34,11 @@ class ContentElementService
         $this->variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
     }
 
+    public function setContentObjectRenderer(ContentObjectRenderer $contentObjectRenderer): void
+    {
+        $this->cObj = $contentObjectRenderer;
+    }
+
     /**
      * @param string $text
      * @return array
