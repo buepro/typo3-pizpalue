@@ -121,7 +121,7 @@ defined('TYPO3') || die('Access denied.');
             $iconRegistry->registerIcon(
                 'pizpalue-' . $icon,
                 \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-                ['source' => sprintf('EXT:pizpalue/Sysext/backend/Resources/Public/Icons/%s.svg', $icon)]
+                ['source' => sprintf('EXT:pizpalue/Resources/Public/Sysext/backend/Icons/%s.svg', $icon)]
             );
         }
     }
