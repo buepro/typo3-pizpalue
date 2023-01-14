@@ -6,9 +6,4 @@
 //
 // Theme
 //
-@if ($pp-bootstrap-version == 4) {
-    @import "Bootstrap4/theme";
-}
-@if ($pp-bootstrap-version == 5) {
-    @import "Bootstrap5/theme";
-}
+@import "Bootstrap5/theme";

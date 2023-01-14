@@ -1,7 +1,0 @@
-#=========================================================#
-# Remove xxl breakpoint
-#=========================================================#
-lib.contentElement.settings.responsiveimages.variants.default < lib.contentElement.settings.responsiveimages.variants.xlarge
-lib.contentElement.settings.responsiveimages.variants.xlarge >
-lib.contentElement.settings.responsiveimages.pageVariants.default < lib.contentElement.settings.responsiveimages.pageVariants.xlarge
-lib.contentElement.settings.responsiveimages.pageVariants.xlarge >

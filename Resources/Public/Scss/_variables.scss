@@ -10,17 +10,10 @@
 //
 // Variables
 // --------------------------------------------------
-@if ($pp-bootstrap-version == 4) {
-    // bootstrap_package
-    @import "bootstrap_package/Resources/Public/Scss/bootstrap4/variables";
-    // bootstrap framework
-    @import "bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/variables";
-}
-@if ($pp-bootstrap-version == 5) {
-    // bootstrap_package
-    @import "bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
-    // bootstrap framework
-    @import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
-}
+// bootstrap_package
+@import "bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
+// bootstrap framework
+@import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
+
 // pizpalue
 @import "Theme/variables";

@@ -3,11 +3,7 @@
 // --------------------------------------------------
 
 // bootstrap framework
-@if ($pp-bootstrap-version == 4) {
-    @import "bootstrap_package/Resources/Public/Contrib/bootstrap4/scss/mixins";
-}
-@if ($pp-bootstrap-version == 5) {
-    @import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/mixins";
-}
+@import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/mixins";
+
 // pizpalue
 @import "Theme/mixins";

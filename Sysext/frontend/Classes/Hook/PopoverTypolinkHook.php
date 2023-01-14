@@ -49,8 +49,6 @@ class PopoverTypolinkHook
             // Define popover attributes
             $popoverAttributes = [
                 'tabindex' => '0',
-                'data-toggle' => 'popover',
-                'data-html' => 'true',
                 'data-bs-toggle' => 'popover',
                 'data-bs-html' => 'true',
                 'role' => 'button',
@@ -64,7 +62,6 @@ class PopoverTypolinkHook
                     $cObjRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
                     $popoverAttributes['data-bs-content'] = htmlspecialchars($cObjRenderer->parseFunc($content, [], '< lib.parseFunc_RTE'));
                 }
-                $popoverAttributes['data-content'] = $popoverAttributes['data-bs-content'];
             }
             // Create tag
             unset($attributes['popover-content']);

@@ -20,12 +20,6 @@ defined('TYPO3') or die('Access denied.');
         'Pizpalue - Main'
     );
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        'pizpalue',
-        'Configuration/TypoScript/Bootstrap4',
-        'Pizpalue - Bootstrap 4.x'
-    );
-
     if (
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements') &&
         !(bool)($pizpalueConfiguration['autoLoadStaticTSForExtensions'] ?? true) &&
