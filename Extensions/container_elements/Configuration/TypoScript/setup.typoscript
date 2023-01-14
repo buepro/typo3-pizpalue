@@ -2,7 +2,7 @@
 # Content element
 #=========================================================#
 
-lib.containerContentElement {
+lib.contentElement {
     templateRootPaths {
         6 = EXT:pizpalue/Extensions/container_elements/Resources/Private/Templates
     }

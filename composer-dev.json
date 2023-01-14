@@ -66,6 +66,10 @@
 		"georgringer/news": "Flexible news system"
 	},
 	"repositories": {
+		"container-elements": {
+			"type": "path",
+			"url": "/mnt/public/package/typo3-container_elements"
+		},
 		"user-pizpalue": {
 			"type": "path",
 			"url": "/mnt/public/package/typo3-user_pizpalue"
