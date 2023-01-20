@@ -36,8 +36,6 @@ pizpalue.customer {
     uid = CHE-xxx.xxx.xxx
 }
 
-page.theme.copyright.text = &copy; {$pizpalue.customer.company}
-
 
 #---------------------------------------------------------#
 # customer various
@@ -76,26 +74,15 @@ pizpalue.customer {
 
     # cat=6060/1020/0048; type=string; label=Review aspect:This Review or Rating is relevant to this part or facet of the itemReviewed
     reviewAspect = Overall customer satisfation
-
-    # cat=6060/1020/0080; type=string; label=Copyright text
-    copyright = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.company}</span><span class="pp-separator"> | </span>{$pizpalue.agency.reference}
 }
 
+page.theme {
+    # cat=6060/1020/0080; type=string; label=Copyright text
+    copyright.text = <span class="pp-customer-copyright">&copy; {date:Y} Company GmbH</span><span class="pp-separator"> | </span><span class="pp-agency-reference">Eine Webseite von <a href="#" title="Agency GmbH | Agency slogan" target="_blank">Agency GmbH</a></span>
+}
 
-#---------------------------------------------------------#
-# Unify (remove constants from constant editor to ensure
-# they are just edited at one place)
-#---------------------------------------------------------#
-
-page.theme.contact.data >
-page.theme.contact.data {
-    title = {$pizpalue.customer.company}
-    addressLine1 = {$pizpalue.customer.contactAddress}
-    addressLine2 = {$pizpalue.customer.contactAddressAddition}
-    addressLine3 = {$pizpalue.customer.contactZip} {$pizpalue.customer.contactCity}
-    country = {$pizpalue.customer.contactCountry}
-    phone = {$pizpalue.customer.contactPhone}
-    fax = {$pizpalue.customer.contactFax}
-    email = {$pizpalue.customer.contactEmail}
-    www = {$pizpalue.customer.domain}
+easyconf.substitutions {
+    page.theme {
+        copyright.text = <span class="pp-customer-copyright">&copy; {date:Y} {$pizpalue.customer.company}</span><span class="pp-separator"> | </span><span class="pp-agency-reference">Eine Webseite von <a href="{$pizpalue.agency.link}" title="{$pizpalue.agency.name} | {$pizpalue.agency.slogan}" target="_blank">{$pizpalue.agency.name}</a></span>
+    }
 }

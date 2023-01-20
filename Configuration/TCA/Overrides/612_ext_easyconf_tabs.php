@@ -30,14 +30,17 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
             '--palette--;;paletteCustomerContact',
         ]),
         'tabScaffold' => implode(', ', [
+            sprintf('--palette--;%s:paletteScaffoldElements;paletteScaffoldElements', $l10nFile),
             sprintf('--palette--;%s:paletteScaffoldHeader;paletteScaffoldHeader', $l10nFile),
             sprintf('--palette--;%s:paletteScaffoldFooter;paletteScaffoldFooter', $l10nFile),
+            sprintf('--palette--;%s:paletteScaffoldCopyright;paletteScaffoldCopyright', $l10nFile),
+            sprintf('--palette--;%s:paletteScaffoldContact;paletteScaffoldContact', $l10nFile),
         ]),
         'tabMenu' => implode(', ', [
+            sprintf('--palette--;%s:paletteMenuSelect;paletteMenuSelect', $l10nFile),
             sprintf('--palette--;%s:paletteMenuMain;paletteMenuMain', $l10nFile),
             sprintf('--palette--;%s:paletteMenuMainSubpage;paletteMenuMainSubpage', $l10nFile),
             sprintf('--palette--;%s:paletteMenuToggler;paletteMenuToggler', $l10nFile),
-            sprintf('--palette--;%s:paletteMenuSelect;paletteMenuSelect', $l10nFile),
             sprintf('--palette--;%s:paletteMenuFast;paletteMenuFast', $l10nFile),
             sprintf('--palette--;%s:paletteMenuFooter;paletteMenuFooter', $l10nFile),
             sprintf('--palette--;%s:paletteMenuCopyright;paletteMenuCopyright', $l10nFile),
@@ -76,7 +79,6 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ]),
         'tabFeature' => implode(', ', [
             sprintf('--palette--;%s:paletteFeatureControl;paletteFeatureControl', $l10nFile),
-            sprintf('--palette--;%s:paletteFeatureContact;paletteFeatureContact', $l10nFile),
             sprintf('--palette--;%s:paletteFeatureVarious;paletteFeatureVarious', $l10nFile),
         ]),
         'tabVarious' => implode(', ', [

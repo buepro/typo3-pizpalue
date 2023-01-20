@@ -29,6 +29,7 @@ CREATE TABLE tx_bootstrappackage_icon_group_item (
 );
 
 CREATE TABLE tx_easyconf_configuration (
+	scaffold_contact_button_page_uid varchar(100) DEFAULT '' NOT NULL,
 	logo_file_reference int(11) unsigned DEFAULT '0',
 	logo_file_inverted_reference int(11) unsigned DEFAULT '0',
 	appicon_generator_archive int(11) unsigned DEFAULT '0',
@@ -52,7 +53,5 @@ CREATE TABLE tx_easyconf_configuration (
 	social_channel_vk varchar(100) DEFAULT '' NOT NULL,
 	social_channel_xing varchar(100) DEFAULT '' NOT NULL,
 	social_channel_youtube varchar(100) DEFAULT '' NOT NULL,
-
-	feature_contact_button_page_uid varchar(100) DEFAULT '' NOT NULL,
 	cookie_content_href varchar(100) DEFAULT '' NOT NULL
 );

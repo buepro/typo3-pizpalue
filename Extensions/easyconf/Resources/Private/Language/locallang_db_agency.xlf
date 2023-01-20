@@ -19,9 +19,6 @@
 			<trans-unit id="agency_slogan" resname="agency_slogan">
 				<source>Slogan</source>
 			</trans-unit>
-			<trans-unit id="agency_reference" resname="agency_reference">
-				<source>Reference</source>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -4,6 +4,16 @@
 		  product-name="pizpalue">
 		<header/>
 		<body>
+			<trans-unit id="scaffold_show_footer" resname="scaffold_show_footer">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="scaffold_copyright_enable" resname="scaffold_copyright_enable">
+				<source>Copyright</source>
+			</trans-unit>
+			<trans-unit id="scaffold_contact_enable" resname="scaffold_contact_enable">
+				<source>Contact</source>
+			</trans-unit>
+
 			<trans-unit id="scaffold_pp-navbar-height-xs" resname="scaffold_pp-navbar-height-xs">
 				<source>Height on very small screens (xs)</source>
 			</trans-unit>
@@ -26,9 +36,6 @@
 				<source>Header overlay breakpoint</source>
 			</trans-unit>
 
-			<trans-unit id="scaffold_show_footer" resname="scaffold_show_footer">
-				<source>Show footer</source>
-			</trans-unit>
 			<trans-unit id="scaffold_row_class" resname="scaffold_row_class">
 				<source>Row class</source>
 			</trans-unit>
@@ -40,6 +47,20 @@
 			</trans-unit>
 			<trans-unit id="scaffold_right_column_class" resname="scaffold_right_column_class">
 				<source>Right column class</source>
+			</trans-unit>
+
+			<trans-unit id="scaffold_copyright_text" resname="scaffold_copyright_text">
+				<source>Text</source>
+			</trans-unit>
+
+			<trans-unit id="scaffold_contact_label" resname="scaffold_contact_label">
+				<source>Label</source>
+			</trans-unit>
+			<trans-unit id="scaffold_contact_button_label" resname="scaffold_contact_button_label">
+				<source>Button label</source>
+			</trans-unit>
+			<trans-unit id="scaffold_contact_button_page_uid" resname="scaffold_contact_button_page_uid">
+				<source>Contact page</source>
 			</trans-unit>
 		</body>
 	</file>

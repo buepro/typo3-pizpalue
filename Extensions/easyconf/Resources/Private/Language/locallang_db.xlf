@@ -11,15 +11,27 @@
 			<trans-unit id="tabScaffold" resname="tabScaffold">
 				<source>Scaffold</source>
 			</trans-unit>
+			<trans-unit id="paletteScaffoldElements" resname="paletteScaffoldElements">
+				<source>Available sections</source>
+			</trans-unit>
 			<trans-unit id="paletteScaffoldHeader" resname="paletteScaffoldHeader">
 				<source>Header</source>
 			</trans-unit>
 			<trans-unit id="paletteScaffoldFooter" resname="paletteScaffoldFooter">
 				<source>Footer</source>
 			</trans-unit>
+			<trans-unit id="paletteScaffoldCopyright" resname="paletteScaffoldCopyright">
+				<source>Copyright</source>
+			</trans-unit>
+			<trans-unit id="paletteScaffoldContact" resname="paletteScaffoldContact">
+				<source>Contact</source>
+			</trans-unit>
 
 			<trans-unit id="tabMenu" resname="tabMenu">
 				<source>Menu</source>
+			</trans-unit>
+			<trans-unit id="paletteMenuSelect" resname="paletteMenuSelect">
+				<source>Available menus</source>
 			</trans-unit>
 			<trans-unit id="paletteMenuMain" resname="paletteMenuMain">
 				<source>Main</source>
@@ -32,9 +44,6 @@
 			</trans-unit>
 			<trans-unit id="paletteMenuCopyright" resname="paletteMenuCopyright">
 				<source>Copyright menu</source>
-			</trans-unit>
-			<trans-unit id="paletteMenuSelect" resname="paletteMenuSelect">
-				<source>Select available menus</source>
 			</trans-unit>
 
 			<trans-unit id="paletteMenuFast" resname="paletteMenuFast">
@@ -96,7 +105,7 @@
 				<source>Style</source>
 			</trans-unit>
 			<trans-unit id="paletteStyleGlobal" resname="paletteStyleGlobal">
-				<source>Element selection</source>
+				<source>Enable styles</source>
 			</trans-unit>
 			<trans-unit id="paletteStyleRounded" resname="paletteStyleRounded">
 				<source>Rounded</source>
@@ -132,9 +141,6 @@
 			</trans-unit>
 			<trans-unit id="paletteFeatureControl" resname="paletteFeatureControl">
 				<source>Element selection</source>
-			</trans-unit>
-			<trans-unit id="paletteFeatureContact" resname="paletteFeatureContact">
-				<source>Contact section</source>
 			</trans-unit>
 			<trans-unit id="paletteFeatureVarious" resname="paletteFeatureVarious">
 				<source>Various</source>

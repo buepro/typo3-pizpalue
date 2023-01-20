@@ -41,9 +41,9 @@ page.logo {
     fileInverted = EXT:pizpalue/Resources/Public/Images/logo_inv.svg
 
     # cat=6060/1040/0018; type=string; label=Alternative text: Text of the alt attribute of the logo image (default: "<website title> logo")
-    alt = {$pizpalue.customer.company}
+    alt = Company GmbH
 
     # cat=6060/1040/0020; type=string; label=Link title: Title of the link attribute of the logo image
-    linktitle = {$pizpalue.customer.company}
+    linktitle = Company GmbH
 
 }

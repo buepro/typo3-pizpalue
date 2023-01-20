@@ -8,11 +8,6 @@
 # example the basic color for the header panel (e.g. background) might be defined on one page and detailed color
 # definitions (e.g. link and color) might be defined on other pages.
 #
-# As well there should be just one parameter to define an item. In case there would be two parameters, paramA and
-# paramB, to define an item and initially paramB is mapped to paramA (paramA = {$paramB}; paramB = Value) everything
-# goes good until a value is assigned to paramA. Now paramA and paramB have different values hence the result depends
-# on where each parameter is used.
-#
 # Considering the above mentioned points parameters that are already available in the bootstrap_package are used
 # directly using a different category and subcategory assignment. Like this parameters can be grouped to better serve.
 # Unfortunately the constant editor seems to be a bit buggy when already introduced constants are redeclared. For the

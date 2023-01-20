@@ -3,7 +3,14 @@ plugin {
         defaultLanguageISOCode = DE
         defaultCountryISOCode = DE
         defaultLanguageTitle = Deutsch
-        languagesUidsList = {$pizpalue.menu.language.languageValue}
         languageTitle = 1
+    }
+}
+
+easyconf.substitutions {
+    plugin {
+        tx_srlanguagemenu {
+            languagesUidsList = {$pizpalue.menu.language.languageValue}
+        }
     }
 }

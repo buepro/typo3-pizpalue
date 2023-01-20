@@ -33,10 +33,9 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     $menuTogglerProperties = 'grid-float-breakpoint, pp-header-toggler-width, pp-header-toggler-padding, ' .
         'pp-header-toggler-line-gap, pp-header-toggler-line-width, pp-header-toggler-line-height';
     $menuTogglerAdvancedProperties = 'pp-header-toggler-line-gap, pp-header-toggler-line-width, pp-header-toggler-line-height';
-    $menuThemeSelectProperties = 'breadcrumb.enable, copyright.enable, footer.enable, language.enable, meta.enable';
+    $menuThemeSelectProperties = 'breadcrumb.enable, footer.enable, language.enable, meta.enable';
     $menuPizpalueSelectProperties = 'fast.enable, scroll.enable';
     $menuMetaProperties = 'navigationValue, navigationType, includeNotInMenu';
-    $menuCopyrightProperties = 'copyright';
     $menuFooterProperties = 'navigationValue, navigationType, includeNotInMenu, levels, icon.enable, ' .
         'icon.width, icon.height';
     $menuLanguageProperties = 'languageValue';
@@ -85,12 +84,6 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
             'pizpalue.menu',
             $menuPizpalueSelectProperties,
             'menu'
-        ),
-        TcaUtility::getPropertyMap(
-            TypoScriptConstantMapper::class,
-            'pizpalue.customer',
-            $menuCopyrightProperties,
-            'menu_copyright'
         ),
         TcaUtility::getPropertyMap(
             TypoScriptConstantMapper::class,
@@ -143,9 +136,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         'paletteMenuSelect' => TcaUtility::getPalette(
             implode(', ', [$menuThemeSelectProperties, $menuPizpalueSelectProperties]),
             'menu',
-            4
+            3
         ),
-        'paletteMenuCopyright' => TcaUtility::getPalette($menuCopyrightProperties, 'menu_copyright', 0),
         'paletteMenuFast' => TcaUtility::getPalette($menuFastProperties, 'menu_fast', 3),
         'paletteMenuFooter' => TcaUtility::getPalette(
             'navigationValue, navigationType, levels, includeNotInMenu, ' .
@@ -188,7 +180,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         '',
         ['onChange' => 'reload'],
         '',
-        'menu_main_style, menu_main_enable_subpage_definition, menu_copyright_enable, menu_fast_enable, ' .
+        'menu_main_style, menu_main_enable_subpage_definition, menu_fast_enable, ' .
         'menu_footer_enable, menu_footer_icon_enable, menu_language_enable, menu_meta_enable, menu_scroll_enable'
     );
 
@@ -200,8 +192,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         '',
         ['config' => ['type' => 'check', 'renderType' => 'checkboxToggle']],
         '',
-        'menu_main_enable_subpage_definition, menu_breadcrumb_enable, menu_copyright_enable, ' .
-            'menu_meta_include_not_in_menu, menu_fast_enable, menu_fast_items_second_enable, menu_fast_items_third_enable, ' .
+        'menu_main_enable_subpage_definition, menu_breadcrumb_enable, menu_meta_include_not_in_menu, ' .
+            'menu_fast_enable, menu_fast_items_second_enable, menu_fast_items_third_enable, ' .
             'menu_footer_enable, menu_footer_include_not_in_menu, menu_footer_icon_enable, ' .
             'menu_language_enable, menu_meta_enable, menu_scroll_enable'
     );
@@ -253,13 +245,6 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
         ['displayCond' => 'FIELD:menu_main_enable_subpage_definition:REQ:true'],
         'menu_main'
     );
-    TcaUtility::modifyColumns(
-        $tca['columns'],
-        $menuCopyrightProperties,
-        ['displayCond' => 'FIELD:menu_copyright_enable:REQ:true'],
-        'menu_copyright'
-    );
-    $tca['columns']['menu_copyright_copyright']['config']['size'] = 50;
     TcaUtility::modifyColumns(
         $tca['columns'],
         TcaUtility::excludeProperties($menuFastProperties, 'enable'),

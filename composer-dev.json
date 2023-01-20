@@ -70,6 +70,10 @@
 			"type": "path",
 			"url": "/mnt/public/package/typo3-container_elements"
 		},
+		"easyconf": {
+			"type": "path",
+			"url": "/mnt/public/package/typo3-easyconf"
+		},
 		"user-pizpalue": {
 			"type": "path",
 			"url": "/mnt/public/package/typo3-user_pizpalue"

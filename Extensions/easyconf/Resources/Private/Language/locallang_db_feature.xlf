@@ -16,18 +16,6 @@
 			<trans-unit id="feature_content_insert_data" resname="feature_content_insert_data">
 				<source>Insert data in content</source>
 			</trans-unit>
-			<trans-unit id="feature_contact_enable" resname="feature_contact_enable">
-				<source>Contact section</source>
-			</trans-unit>
-			<trans-unit id="feature_contact_label" resname="feature_contact_label">
-				<source>Label</source>
-			</trans-unit>
-			<trans-unit id="feature_contact_button_label" resname="feature_contact_button_label">
-				<source>Button label</source>
-			</trans-unit>
-			<trans-unit id="feature_contact_button_page_uid" resname="feature_contact_button_page_uid">
-				<source>Contact page</source>
-			</trans-unit>
 			<trans-unit id="feature_image_loading" resname="feature_image_loading">
 				<source>Image loading</source>
 			</trans-unit>

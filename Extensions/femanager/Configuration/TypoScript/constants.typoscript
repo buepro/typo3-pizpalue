@@ -1,3 +1,6 @@
-plugin.tx_femanager.settings.adminName = {$pizpalue.customer.company}
-plugin.tx_femanager.settings.adminEmail = {$pizpalue.customer.contactEmail}
-plugin.tx_femanager.persistence.storagePid = {$pizpalue.storage.feUserPid}
+easyconf.substitutions {
+    plugin.tx_femanager.settings.adminName = {$pizpalue.customer.company}
+    plugin.tx_femanager.settings.adminEmail = {$pizpalue.customer.contactEmail}
+    plugin.tx_femanager.persistence.storagePid = {$pizpalue.storage.feUserPid}
+}
+

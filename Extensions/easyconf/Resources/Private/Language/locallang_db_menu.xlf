@@ -67,9 +67,6 @@
 			<trans-unit id="menu_breadcrumb_enable" resname="menu_breadcrumb_enable">
 				<source>Breadcrumb</source>
 			</trans-unit>
-			<trans-unit id="menu_copyright_enable" resname="menu_copyright_enable">
-				<source>Copyright</source>
-			</trans-unit>
 			<trans-unit id="menu_fast_enable" resname="menu_fast_enable">
 				<source>Fast</source>
 			</trans-unit>
@@ -84,10 +81,6 @@
 			</trans-unit>
 			<trans-unit id="menu_scroll_enable" resname="menu_scroll_enable">
 				<source>Scroll</source>
-			</trans-unit>
-
-			<trans-unit id="menu_copyright_copyright" resname="menu_copyright_copyright">
-				<source>Text</source>
 			</trans-unit>
 
 			<trans-unit id="paletteMenuFast.description" resname="paletteMenuFast.description">

@@ -24,7 +24,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
      * Properties
      */
     $contactProperties = 'name, link, phone, email';
-    $brandProperties = 'slogan, reference';
+    $brandProperties = 'slogan';
 
     /**
      * Define columns
@@ -44,7 +44,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
      */
     $tca['palettes'] = array_replace($tca['palettes'], [
         'paletteAgency' => TcaUtility::getPalette(
-            'name, link, phone, email, slogan, --linebreak--, reference',
+            'name, link, phone, email, slogan',
             'agency'
         ),
     ]);
@@ -62,12 +62,6 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     /**
      * Modify columns
      */
-    TcaUtility::modifyColumns(
-        $tca['columns'],
-        'reference',
-        ['config' => ['type' => 'text', 'renderType' => 't3editor', 'format' => 'html']],
-        'agency'
-    );
     TcaUtility::modifyColumns(
         $tca['columns'],
         $contactProperties . ', ' . $brandProperties,

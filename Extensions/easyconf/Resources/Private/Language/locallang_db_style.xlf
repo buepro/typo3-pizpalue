@@ -5,16 +5,16 @@
 		<header/>
 		<body>
 			<trans-unit id="style_global_enable-rounded" resname="style_global_enable-rounded">
-				<source>Enable rounded</source>
+				<source>Rounded</source>
 			</trans-unit>
 			<trans-unit id="style_global_enable-shadows" resname="style_global_enable-shadows">
-				<source>Enable shadows</source>
+				<source>Shadows</source>
 			</trans-unit>
 			<trans-unit id="style_global_enable-gradients" resname="style_global_enable-gradients">
-				<source>Enable gradients</source>
+				<source>Gradients</source>
 			</trans-unit>
 			<trans-unit id="style_global_enable_scss" resname="style_global_enable_scss">
-				<source>Enable additional SCSS</source>
+				<source>Additional SCSS</source>
 			</trans-unit>
 
 			<trans-unit id="style_rounded_border-radius" resname="style_rounded_border-radius">

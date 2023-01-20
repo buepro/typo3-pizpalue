@@ -4,7 +4,6 @@
 
 styles.content.loginform {
     templateFile = EXT:pizpalue/Extensions/felogin/Resources/Private/Templates/Legacy/FrontendLogin.html
-    dateFormat = {$pizpalue.general.dateTimeFormat}
 }
 
 plugin {
@@ -13,5 +12,11 @@ plugin {
             templateRootPath = EXT:pizpalue/Extensions/felogin/Resources/Private/Templates
             partialRootPath = EXT:pizpalue/Extensions/felogin/Resources/Private/Partials
         }
+    }
+}
+
+easyconf.substitutions {
+    styles.content.loginform {
+        dateFormat = {$pizpalue.general.dateTimeFormat}
     }
 }

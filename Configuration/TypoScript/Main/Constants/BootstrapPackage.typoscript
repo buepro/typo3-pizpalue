@@ -1,4 +1,35 @@
-config.admPanel = 0
+#=========================================================#
+# Easyconf substitutions
+#=========================================================#
+
+easyconf.substitutions {
+    page {
+        logo {
+            alt = {$pizpalue.customer.company}
+            linktitle = {$pizpalue.customer.company}
+        }
+        theme {
+            contact.data {
+                title = {$pizpalue.customer.company}
+                addressLine1 = {$pizpalue.customer.contactAddress}
+                addressLine2 = {$pizpalue.customer.contactAddressAddition}
+                addressLine3 = {$pizpalue.customer.contactZip} {$pizpalue.customer.contactCity}
+                country = {$pizpalue.customer.contactCountry}
+                phone = {$pizpalue.customer.contactPhone}
+                fax = {$pizpalue.customer.contactFax}
+                email = {$pizpalue.customer.contactEmail}
+                www = {$pizpalue.customer.domain}
+            }
+        }
+    }
+    plugin.bootstrap_package.settings.cssSourceMapping = {$pizpalue.agency.siteMode}
+    plugin.bootstrap_package_contentelements.timeline.date.format = {$pizpalue.general.dateStrftimeFormat}
+}
+
+
+#=========================================================#
+# Templates
+#=========================================================#
 
 plugin {
     bootstrap_package_contentelements {
@@ -8,7 +39,6 @@ plugin {
             templateRootPath =
         }
         header.defaultHeaderType = 2
-        timeline.date.format = {$pizpalue.general.dateStrftimeFormat}
     }
     tx_bootstrappackage {
         view {
@@ -26,3 +56,10 @@ page {
         templateRootPath =
     }
 }
+
+
+#=========================================================#
+# Various
+#=========================================================#
+
+config.admPanel = 0

@@ -1,7 +1,7 @@
 lib.pizpalue {
     copyright = TEXT
     copyright {
-        value = {$pizpalue.customer.copyright}
+        value = {$page.theme.copyright.text}
         insertData = 1
     }
     renderContent = CONTENT
