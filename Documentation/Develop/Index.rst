@@ -133,5 +133,4 @@ Notes
 =====
 -  Bootstrap package sync status:
 
-   - Branch BP-12.0: 22.04.2022 / commit 16734ba6
-   - Branch BP-12.1: 26.11.2021 / commit 028a786b
+   - Branch master: 13.12.2022 / commit 33ccae28
