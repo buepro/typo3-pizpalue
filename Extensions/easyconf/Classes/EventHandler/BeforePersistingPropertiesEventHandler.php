@@ -22,6 +22,7 @@ use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\LogoService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\MenuService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\NewsEnhancerService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\PageNotFoundService;
+use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\ScaffoldService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\ScssService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\SocialNetworkService;
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\UrlService;
@@ -33,7 +34,7 @@ class BeforePersistingPropertiesEventHandler
     {
         $serviceClassNames = [AppiconService::class, ColorService::class, CookieService::class, FontService::class,
             LogoService::class, MenuService::class, NewsEnhancerService::class, PageNotFoundService::class,
-            ScssService::class, SocialNetworkService::class, UrlService::class];
+            ScaffoldService::class, ScssService::class, SocialNetworkService::class, UrlService::class];
         $formFields = $event->getFormFields();
         $configurationRecord = $event->getConfigurationRecord();
         foreach ($serviceClassNames as $serviceClassName) {
