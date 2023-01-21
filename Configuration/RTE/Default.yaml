@@ -73,3 +73,12 @@ classes:
     name: 'Mail link'
   pp-popover:
     name: 'Popover'
+
+processing:
+  entryHTMLparser_db:
+    keepNonMatchedTags: 1
+    tags:
+      a:
+        fixAttrib:
+          href:
+            userFunc: 'Buepro\Pizpalue\UserFunction\HtmlParser\TagModifier->fixATagHrefAttribute'
