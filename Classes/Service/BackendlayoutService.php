@@ -22,14 +22,17 @@ class BackendlayoutService
 
     /**
      * Reference to the parent (calling) cObject set from TypoScript
-     *
-     * @var ContentObjectRenderer
      */
-    public $cObj;
+    public ?ContentObjectRenderer $cObj;
 
     public function __construct()
     {
         $this->variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
+    }
+
+    public function setContentObjectRenderer(ContentObjectRenderer $contentObjectRenderer): void
+    {
+        $this->cObj = $contentObjectRenderer;
     }
 
     /**
