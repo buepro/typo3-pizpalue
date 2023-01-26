@@ -140,7 +140,6 @@ pizpalue.menu {
         dataKey = scrollnavigation
         # cat=6060/1060/0622; type=string; label=Menu ID:The value from the scroll menu id attribute.
         menuId = pp-scroll-nav
-        # cat=6060/1060/0624; type=int; label=Offset:Used to define intersection observer rootMargin. Usually corresponds to the height from the fix positioned header.
-        offset = 200
-    }
+        # cat=6060/1060/0624; type=string; label=Root margin:The value will be used to configure the javascript IntersectionObserver.
+        rootMargin = -40% 0px -60% 0px
 }
