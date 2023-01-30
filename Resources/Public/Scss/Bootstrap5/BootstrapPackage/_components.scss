@@ -1,47 +1,47 @@
 //
 // Original components
 // --------------------------------------------------
-@import "bootstrap_package/Resources/Public/Scss/bootstrap5/compat/text";
-@import "bootstrap_package/Resources/Public/Scss/bootstrap5/compat/form";
-@import "bootstrap_package/Resources/Public/Scss/bootstrap5/compat/embed";
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/compat/_text";
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/compat/_form";
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/compat/_embed";
 
-@import "bootstrap_package/Resources/Public/Scss/components/button";
-//@import "bootstrap_package/Resources/Public/Scss/components/navbar";
-@import "bootstrap_package/Resources/Public/Scss/components/backendlayout";
-@import "bootstrap_package/Resources/Public/Scss/components/section";
-@import "bootstrap_package/Resources/Public/Scss/components/frame";
-@import "bootstrap_package/Resources/Public/Scss/components/breadcrumb";
-@import "bootstrap_package/Resources/Public/Scss/components/subnav";
-@import "bootstrap_package/Resources/Public/Scss/components/footer";
-@import "bootstrap_package/Resources/Public/Scss/components/carousel";
-@import "bootstrap_package/Resources/Public/Scss/components/accordion";
-@import "bootstrap_package/Resources/Public/Scss/components/tab";
-@import "bootstrap_package/Resources/Public/Scss/components/card";
-@import "bootstrap_package/Resources/Public/Scss/components/audio";
-@import "bootstrap_package/Resources/Public/Scss/components/link";
-@import "bootstrap_package/Resources/Public/Scss/components/figure";
-@import "bootstrap_package/Resources/Public/Scss/components/gallery";
-@import "bootstrap_package/Resources/Public/Scss/components/address";
-@import "bootstrap_package/Resources/Public/Scss/components/table";
-@import "bootstrap_package/Resources/Public/Scss/components/list";
-@import "bootstrap_package/Resources/Public/Scss/components/filelink";
-@import "bootstrap_package/Resources/Public/Scss/components/blockquote";
-@import "bootstrap_package/Resources/Public/Scss/components/icongroup";
-@import "bootstrap_package/Resources/Public/Scss/components/timeline";
-@import "bootstrap_package/Resources/Public/Scss/components/textpic";
-@import "bootstrap_package/Resources/Public/Scss/components/textteaser";
-@import "bootstrap_package/Resources/Public/Scss/components/texticon";
-@import "bootstrap_package/Resources/Public/Scss/components/text";
-@import "bootstrap_package/Resources/Public/Scss/components/thumbnail-menu";
-@import "bootstrap_package/Resources/Public/Scss/components/sociallink";
-@import "bootstrap_package/Resources/Public/Scss/components/well";
-@import "bootstrap_package/Resources/Public/Scss/components/pagination";
-@import "bootstrap_package/Resources/Public/Scss/components/scrolltop";
-@import "bootstrap_package/Resources/Public/Scss/components/misc";
-@import "bootstrap_package/Resources/Public/Scss/components/contentcontainer";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_button";
+//@import "EXT:bootstrap_package/Resources/Public/Scss/components/_navbar";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_backendlayout";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_section";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_frame";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_breadcrumb";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_subnav";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_footer";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_carousel";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_accordion";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_tab";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_card";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_audio";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_link";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_figure";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_gallery";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_address";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_table";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_list";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_filelink";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_blockquote";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_icongroup";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_timeline";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_textpic";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_textteaser";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_texticon";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_text";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_thumbnail-menu";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_sociallink";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_well";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_pagination";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_scrolltop";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_misc";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/_contentcontainer";
 
-//@import "bootstrap_package/Resources/Public/Scss/plugins/cookieconsent";
-@import "bootstrap_package/Resources/Public/Scss/plugins/photoswipe";
+//@import "EXT:bootstrap_package/Resources/Public/Scss/plugins/_cookieconsent";
+@import "EXT:bootstrap_package/Resources/Public/Scss/plugins/_photoswipe";
 
 //
 // Adjusted components

@@ -11,9 +11,9 @@
 // Variables
 // --------------------------------------------------
 // bootstrap_package
-@import "bootstrap_package/Resources/Public/Scss/bootstrap5/variables";
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/_variables";
 // bootstrap framework
-@import "bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/variables";
+@import "EXT:bootstrap_package/Resources/Public/Contrib/bootstrap5/scss/_variables";
 
 // pizpalue
 @import "Theme/variables";
