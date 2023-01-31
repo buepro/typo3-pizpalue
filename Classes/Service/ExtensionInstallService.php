@@ -14,6 +14,7 @@ use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotCon
 use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
 use TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException;
@@ -39,9 +40,9 @@ class ExtensionInstallService
      */
     private function copyBootstrapPackageTranslations()
     {
-        $source = Environment::getPublicPath() . '/typo3conf/ext/pizpalue/Resources/Private/'
-            . 'FolderStructureTemplateFiles/l10n/fi/bootstrap_package';
-        $destination = Environment::getPublicPath() . '/typo3conf/l10n/fi/bootstrap_package';
+        $source = ExtensionManagementUtility::extPath('pizpalue') .
+            '/Resources/Private/FolderStructureTemplateFiles/l10n/fi/bootstrap_package';
+        $destination = Environment::getLabelsPath() . '/fi/bootstrap_package';
         if (!file_exists($destination)) {
             GeneralUtility::copyDirectory($source, $destination);
             if (!file_exists($destination)) {
