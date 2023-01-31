@@ -2,16 +2,18 @@
       xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:if condition="{languagenavigation}">
+    {pvh:core.version(as: '_coreVersion')}
+    {f:if(condition: '{_coreVersion} > 12000000', then: 'webp', else: 'png') -> f:variable(name: '_ext')}
     <ul id="language_menu" class="language-menu ppc-{theme.language.style}">
         <f:for each="{languagenavigation}" as="item">
-            {item.flag -> pvh:format.replace(substring: 'flags-', replacement: '') -> f:format.case(mode:'upper')
-                -> f:variable(name: '_flagName')}
+            {item.flag -> pvh:format.replace(substring: 'flags-', replacement: '') -> f:variable(name: '_flagName')}
+            {_flagName -> f:format.case(mode:'upper') -> f:variable(name: '_flagName') -> f:if(condition: '{_coreVersion} < 12000000')}
             {item.flag -> pvh:format.replace(substring: 'flags-', replacement: '') -> f:variable(name: '_flagName')
                 -> f:if(condition: '{item.flag} == "flags-catalonia" || {item.flag} =="flags-en-us-gb"')}
             <f:variable name="_itemContent">
                 <f:if condition="{theme.language.style} == 'icon' || {theme.language.style} == 'icontext'">
                     <span class="ppc-flag"><f:image
-                        src="EXT:core/Resources/Public/Icons/Flags/{_flagName}.png" title="{item.title}"
+                        src="EXT:core/Resources/Public/Icons/Flags/{_flagName}.{_ext}" title="{item.title}"
                     /></span>
                 </f:if>
                 <f:if condition="{theme.language.style} == 'text' || {theme.language.style} == 'icontext'">
