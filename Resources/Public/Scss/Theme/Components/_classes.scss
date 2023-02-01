@@ -141,9 +141,5 @@ div.pp-gallery-item-right {
     display: none;
 }
 .pp-below-header {
-    @each $breakpoint in map-keys($navbar-heights) {
-        @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
-            margin-top: -#{map-get($navbar-heights, $breakpoint)};
-        }
-    }
+    margin-top: calc(-1 * var(--pp-navbar-height));
 }
