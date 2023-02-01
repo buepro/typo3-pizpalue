@@ -7,11 +7,32 @@
 			<trans-unit id="tx_pizpalue_pages.css">
 				<source>CSS declarations</source>
 			</trans-unit>
-			<trans-unit id="tx_pizpalue_ttc.undefined">
-				<source>Undefined</source>
+
+			<trans-unit id="tx_pizpalue_ttc.palette.layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.palette.frames">
+				<source>Frame</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.palette.space">
+				<source>Space</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.palette.background">
+				<source>Background</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.palette.pp-scroll-navigation">
 				<source>Scroll navigation</source>
+			</trans-unit>
+
+			<trans-unit id="tx_pizpalue_ttc.layout">
+				<source>Layout type</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.frame_class">
+				<source>Frame type</source>
+			</trans-unit>
+
+			<trans-unit id="tx_pizpalue_ttc.undefined">
+				<source>Undefined</source>
 			</trans-unit>
 			<trans-unit id="tx_pizpalue_ttc.scroll_navigation_enable">
 				<source>Enable</source>

@@ -26,23 +26,11 @@ defined('TYPO3') or die('Access denied.');
         [$llFile . ':tx_pizpalue_ttc.innerSpace.large', 'large'],
         [$llFile . ':tx_pizpalue_ttc.innerSpace.extraLarge', 'extra-large'],
     ];
+
+    /**
+     * Add columns
+     */
     $pizpalueColumns = [
-        'tx_pizpalue_layout_breakpoint' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.layoutBreakpoint',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'default' => '',
-                'items' => [
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.all', ''],
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.small', 'sm'],
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.medium', 'md'],
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.large', 'lg'],
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.extralarge', 'xl'],
-                ],
-            ],
-        ],
         'tx_pizpalue_inner_space_before_class' => [
             'exclude' => true,
             'label' => $llFile . ':tx_pizpalue_ttc.innerSpaceBeforeClass',
@@ -74,35 +62,22 @@ defined('TYPO3') or die('Access denied.');
     );
 
     /**
-     * Add fields
+     * Palette
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_space'] = [
+        'label' => $llFile . ':tx_pizpalue_ttc.palette.space',
+        'showitem' => 'space_before_class, space_after_class, --linebreak--, tx_pizpalue_inner_space_before_class, tx_pizpalue_inner_space_after_class',
+    ];
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'frames',
-        'tx_pizpalue_layout_breakpoint',
-        'after:layout'
+        '--palette--;;pizpalue_space',
+        '',
+        'after:frame_options'
     );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+    \Buepro\Pizpalue\Utility\TcaUtility::removeFieldsFromPalette(
         'tt_content',
         'frames',
-        '--linebreak--, tx_pizpalue_inner_space_before_class, tx_pizpalue_inner_space_after_class',
-        'after:space_after_class'
-    );
-
-    /**
-     * Group frame fields
-     */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
-        'tt_content',
-        'frames',
-        '--linebreak--',
-        'replace:frame_class'
-    );
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
-        'tt_content',
-        'frames',
-        'frame_class',
-        'before:frame_layout'
+        'space_before_class, space_after_class, tx_pizpalue_inner_space_before_class, tx_pizpalue_inner_space_after_class'
     );
 
     unset($tcaColumns);

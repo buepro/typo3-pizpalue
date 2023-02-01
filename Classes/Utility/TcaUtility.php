@@ -9,6 +9,8 @@
 
 namespace Buepro\Pizpalue\Utility;
 
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 class TcaUtility
 {
     /** @var ?array */
@@ -148,5 +150,37 @@ class TcaUtility
             $GLOBALS['TCA'][$table]['types'][$cType]['columnsOverrides']
                 [$field]['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']
         );
+    }
+
+    public static function removeFieldsFromPalette(string $table, string $palette, string $fields): void
+    {
+        if (($items = $GLOBALS['TCA'][$table]['palettes'][$palette]['showitem'] ?? null) === null) {
+            return;
+        }
+        $removeFields = GeneralUtility::trimExplode(',', $fields, true);
+        $paletteItems = GeneralUtility::trimExplode(',', $items, true);
+        $newPaletteItems = [];
+        $previousPaletteItem = '';
+        foreach ($paletteItems as $paletteItem) {
+            $paletteItemParts = GeneralUtility::trimExplode(';', $paletteItem);
+            if (
+                ($paletteField = array_shift($paletteItemParts)) !== null &&
+                in_array($paletteField, $removeFields, true)
+            ) {
+                continue;
+            }
+            // Prevent add subsequent '--linebreak--'
+            if ($previousPaletteItem !== $paletteItem) {
+                $newPaletteItems[] = $paletteItem;
+                $previousPaletteItem = $paletteItem;
+            }
+        }
+        if (reset($newPaletteItems) === '--linebreak--') {
+            array_shift($newPaletteItems);
+        }
+        if (end($newPaletteItems) === '--linebreak--') {
+            array_pop($newPaletteItems);
+        }
+        $GLOBALS['TCA'][$table]['palettes'][$palette]['showitem'] = implode(',', $newPaletteItems);
     }
 }
