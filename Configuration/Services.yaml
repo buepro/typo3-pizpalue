@@ -11,6 +11,10 @@ services:
     public: true
     shared: false
 
+  Buepro\Pizpalue\Helper\AssetHelper:
+    public: true
+    shared: false
+
   Buepro\Pizpalue\Service\BrandingService:
     tags:
       - name: event.listener

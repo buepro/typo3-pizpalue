@@ -149,6 +149,9 @@
 			<trans-unit id="tabVarious" resname="tabVarious">
 				<source>Various</source>
 			</trans-unit>
+			<trans-unit id="paletteAnimation" resname="paletteAnimation">
+				<source>Animation</source>
+			</trans-unit>
 			<trans-unit id="paletteSeo" resname="paletteSeo">
 				<source>SEO</source>
 			</trans-unit>

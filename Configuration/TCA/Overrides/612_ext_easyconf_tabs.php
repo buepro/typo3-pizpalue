@@ -82,6 +82,7 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
             sprintf('--palette--;%s:paletteFeatureVarious;paletteFeatureVarious', $l10nFile),
         ]),
         'tabVarious' => implode(', ', [
+            sprintf('--palette--;%s:paletteAnimation;paletteAnimation', $l10nFile),
             sprintf('--palette--;%s:paletteSeo;paletteSeo', $l10nFile),
             sprintf('--palette--;%s:paletteGoogle;paletteGoogle', $l10nFile),
             sprintf('--palette--;%s:paletteCookie;paletteCookie', $l10nFile),

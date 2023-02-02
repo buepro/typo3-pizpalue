@@ -11,9 +11,20 @@
 #    attributes =
 # }
 pizpalue.animation {
+    animateCss {
+        # cat=6030/1520/0002; type=boolean; label=Include animate css always
+        includeAlways = 0
+    }
     josh {
-        # cat=6060/1520/0004; type=string; label=Josh initialization parameters
+        # cat=6030/1520/0004; type=boolean; label=Include josh.js scroll animation always
+        includeAlways = 0
+
+        # cat=6060/1520/0006; type=string; label=Josh initialization parameters
         initParams = offset: 0.0, margin: "0px 0px -20% 0px", animateInMobile: false
+    }
+    twikito {
+        # cat=6030/1520/0008; type=boolean; label=Include twikito scroll animation always
+        includeAlways = 0
     }
     1 {
         # cat=6060/1520/0014; type=string; label=LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animation1

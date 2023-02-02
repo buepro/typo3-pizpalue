@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\ViewHelpers;
 
+use Buepro\Pizpalue\Helper\AssetHelper;
 use TYPO3\CMS\Core\Page\AssetCollector;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
@@ -39,6 +40,9 @@ class FrameDataViewHelper extends AbstractViewHelper
 {
     use CompileWithRenderStatic;
 
+    private static AssetHelper $assetHelper;
+    private static AssetCollector $assetCollector;
+
     /**
      * Initialize arguments.
      *
@@ -63,7 +67,8 @@ class FrameDataViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ) {
-        $assetCollector = GeneralUtility::makeInstance(AssetCollector::class);
+        self::$assetHelper = GeneralUtility::makeInstance(AssetHelper::class);
+        self::$assetCollector = GeneralUtility::makeInstance(AssetCollector::class);
         $data = $arguments['data'];
         $pizpalueConstants = $arguments['pizpalueConstants'] ?? [];
         $result = [
@@ -76,15 +81,15 @@ class FrameDataViewHelper extends AbstractViewHelper
             'hasScrollAnimation' => false,
             'optimizeLinkTargets' => (bool) ($pizpalueConstants['seo']['optimizeLinkTargets'] ?? true),
         ];
-        self::addClasses($assetCollector, $data, $result);
-        self::addInnerClasses($assetCollector, $data, $result);
-        self::addStylesAndAttributes($assetCollector, $data, $result);
-        self::addAnimation($assetCollector, $data, $pizpalueConstants, $result);
-        self::addTiles($assetCollector, $data, $result);
-        self::addJoshAssets($assetCollector, $data, $pizpalueConstants, $result);
-        self::addTwikitoAssets($assetCollector, $data, $pizpalueConstants, $result);
-        self::addAnimateCssAssets($assetCollector, $data, $pizpalueConstants, $result);
-        self::addFramelessClasses($assetCollector, $data, $result);
+        self::addClasses($data, $result);
+        self::addInnerClasses($data, $result);
+        self::addStylesAndAttributes($data, $result);
+        self::addAnimation($data, $pizpalueConstants, $result);
+        self::addTiles($data, $result);
+        self::addJoshAssets($pizpalueConstants, $result);
+        self::addTwikitoAssets($result);
+        self::addAnimateCssAssets($result);
+        self::addFramelessClasses($data, $result);
         $variableProvider = $renderingContext->getVariableProvider();
         if ($arguments['as']) {
             $variableProvider->add($arguments['as'], $result);
@@ -107,13 +112,12 @@ class FrameDataViewHelper extends AbstractViewHelper
         return [];
     }
 
-    private static function addAnimateCssToAssetCollector(AssetCollector $assetCollector): void
+    private static function addAnimateCssToAssetCollector(): void
     {
-        /** @extensionScannerIgnoreLine */
-        $assetCollector->addStyleSheet('ppAnimateCss', 'EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css');
+        self::$assetHelper->includeAnimateCss();
     }
 
-    protected static function addClasses(AssetCollector $assetCollector, array $data, array &$result): void
+    protected static function addClasses(array $data, array &$result): void
     {
         if (($layout = trim((string)($data['layout'] ?? '0'))) !== '0' && strpos($layout, 'pp-tile') !== 0) {
             $result['classes'][] = 'layout-' . $layout;
@@ -140,14 +144,14 @@ class FrameDataViewHelper extends AbstractViewHelper
         }
     }
 
-    protected static function addInnerClasses(AssetCollector $assetCollector, array $data, array &$result): void
+    protected static function addInnerClasses(array $data, array &$result): void
     {
         if (($classes = trim((string)($data['tx_pizpalue_inner_classes'] ?? ''))) !== '') {
             $result['innerClasses'] = GeneralUtility::trimExplode(' ', $classes, true);
         }
     }
 
-    protected static function addFramelessClasses(AssetCollector $assetCollector, array $data, array &$result): void
+    protected static function addFramelessClasses(array $data, array &$result): void
     {
         if (($data['frame_class'] ?? '') !== 'none') {
             return;
@@ -175,7 +179,7 @@ class FrameDataViewHelper extends AbstractViewHelper
         }
     }
 
-    protected static function addStylesAndAttributes(AssetCollector $assetCollector, array $data, array &$result): void
+    protected static function addStylesAndAttributes(array $data, array &$result): void
     {
         $uid = (int) $data['uid'];
         $result['styles'] = [];
@@ -184,7 +188,7 @@ class FrameDataViewHelper extends AbstractViewHelper
             if (strpos($styles, '{') !== false) {
                 // Add styles to asset collector
                 $css = trim(str_replace('#self', '#c' . $uid, $styles));
-                $assetCollector->addInlineStyleSheet('ppCe' . $uid, $css, [], ['priority' => true]);
+                self::$assetCollector->addInlineStyleSheet('ppCe' . $uid, $css, [], ['priority' => true]);
                 $result['styles'] = [];
             } else {
                 // Add styles inline
@@ -198,7 +202,6 @@ class FrameDataViewHelper extends AbstractViewHelper
     }
 
     protected static function addAnimation(
-        AssetCollector $assetCollector,
         array $data,
         array $pizpalueConstants,
         array &$result
@@ -225,7 +228,7 @@ class FrameDataViewHelper extends AbstractViewHelper
         }
     }
 
-    protected static function addTiles(AssetCollector $assetCollector, array $data, array &$result): void
+    protected static function addTiles(array $data, array &$result): void
     {
         if (
             ($layout = trim((string)($data['layout'] ?? ''))) !== '' &&
@@ -238,8 +241,6 @@ class FrameDataViewHelper extends AbstractViewHelper
     }
 
     protected static function addJoshAssets(
-        AssetCollector $assetCollector,
-        array $data,
         array $pizpalueConstants,
         array &$result
     ): void {
@@ -249,21 +250,15 @@ class FrameDataViewHelper extends AbstractViewHelper
         }
         $result['hasScrollAnimation'] = true;
         $result['classes'][] = 'josh-js';
-        self::addAnimateCssToAssetCollector($assetCollector);
-        $assetCollector->addJavaScript(
-            'ppJosh',
-            'EXT:pizpalue/Resources/Public/Contrib/josh.js/dist/josh.pp.min.js'
-        );
-        $assetCollector->addInlineJavaScript('ppJoshInit', sprintf(
+        self::addAnimateCssToAssetCollector();
+        self::$assetHelper->includeJosh();
+        self::$assetCollector->addInlineJavaScript('ppJoshInit', sprintf(
             ';+function () { const josh = new Josh({ %s }); }();',
             $pizpalueConstants['animation']['josh']['initParams'] ?? ''
         ));
     }
 
     protected static function addTwikitoAssets(
-        AssetCollector $assetCollector,
-        array $data,
-        array $pizpalueConstants,
         array &$result
     ): void {
         $attributes = implode(' ', $result['attributes']);
@@ -290,12 +285,9 @@ class FrameDataViewHelper extends AbstractViewHelper
         if (strpos($attributes, 'data-scroll-reverse') === false) {
             $result['attributes'][] = 'data-scroll-reverse="true"';
         }
-        self::addAnimateCssToAssetCollector($assetCollector);
-        $assetCollector->addJavaScript(
-            'ppTwikitoOnscroll',
-            'EXT:pizpalue/Resources/Public/Contrib/Twikito/onscroll-effect/dist/onscroll-effect.min.js'
-        );
-        $assetCollector->addInlineStyleSheet(
+        self::addAnimateCssToAssetCollector();
+        self::$assetHelper->includeTwikito();
+        self::$assetCollector->addInlineStyleSheet(
             'twikitoOnscroll',
             '[data-scroll].is-outside { transition: none; animation: none; }',
             [],
@@ -304,9 +296,6 @@ class FrameDataViewHelper extends AbstractViewHelper
     }
 
     protected static function addAnimateCssAssets(
-        AssetCollector $assetCollector,
-        array $data,
-        array $pizpalueConstants,
         array &$result
     ): void {
         $classes = implode(' ', $result['classes']);
@@ -318,6 +307,6 @@ class FrameDataViewHelper extends AbstractViewHelper
         if (strpos($classes, 'animate__animated') === false) {
             $result['classes'][] = 'animate__animated';
         }
-        self::addAnimateCssToAssetCollector($assetCollector);
+        self::addAnimateCssToAssetCollector();
     }
 }
