@@ -11,8 +11,9 @@ finishers:
       subject: '{idSubject}'
       senderAddress: '{idEmail}'
       senderName: '{idName}'
+      recipients: {  }
       replyToRecipients:
-        '{email}': ''
+        '{idEmail}': '{idName}'
       format: html
       attachUploads: true
     identifier: EmailToReceiver
