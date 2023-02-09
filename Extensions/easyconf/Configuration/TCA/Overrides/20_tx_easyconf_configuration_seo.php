@@ -12,18 +12,16 @@ use Buepro\Easyconf\Utility\TcaUtility;
 
 defined('TYPO3') or die('Access denied.');
 
-if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
-    return;
-}
-
 (static function () {
-    $l10nFile = 'LLL:EXT:pizpalue/Extensions/easyconf/Resources/Private/Language/locallang_db_animation.xlf';
+    $l10nFile = 'LLL:EXT:pizpalue/Extensions/easyconf/Resources/Private/Language/locallang_db_seo.xlf';
     $tca = &$GLOBALS['TCA']['tx_easyconf_configuration'];
 
     /**
      * Properties
      */
-    $animationProperties = 'animateCss.includeAlways, josh.includeAlways, twikito.includeAlways';
+    $googleProperties = 'meta.google-site-verification, tracking.google.trackingID, tracking.google.ga4MeasureId, ' .
+        'tracking.google.tagManagerContainerId';
+    $seoProperties = 'optimizeLinkTargets, consentTrackingCode';
 
     /**
      * Define columns
@@ -31,33 +29,44 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     $propertyMaps = [
         TcaUtility::getPropertyMap(
             TypoScriptConstantMapper::class,
-            'pizpalue.animation',
-            $animationProperties,
-            'animation'
+            'page',
+            $googleProperties,
+            'seo'
+        ),
+        TcaUtility::getPropertyMap(
+            TypoScriptConstantMapper::class,
+            'pizpalue.seo',
+            $seoProperties,
+            'seo'
         ),
     ];
     $tca['columns'] = array_replace($tca['columns'], TcaUtility::getColumns($propertyMaps, $l10nFile));
+    $tca['columns']['seo_optimize_link_targets']['description'] = $l10nFile . ':seo_optimize_link_targets.description';
+    $tca['columns']['seo_consent_tracking_code']['description'] = $l10nFile . ':seo_consent_tracking_code.description';
 
     /**
      * Define palettes
      */
     $tca['palettes'] = array_replace($tca['palettes'], [
-        'paletteAnimation' => TcaUtility::getPalette(
-            $animationProperties,
-            'animation',
+        'paletteGoogle' => TcaUtility::getPalette(
+            $googleProperties,
+            'seo'
+        ),
+        'paletteSeo' => TcaUtility::getPalette(
+            $seoProperties,
+            'seo',
             3
         ),
     ]);
-    $tca['palettes']['paletteAnimation']['description'] = $l10nFile . ':paletteAnimation.description';
 
     /**
      * Modify columns
      */
     TcaUtility::modifyColumns(
         $tca['columns'],
-        $animationProperties,
+        $seoProperties,
         ['config' => ['type' => 'check', 'renderType' => 'checkboxToggle']],
-        'animation'
+        'seo'
     );
 
     unset($tca);

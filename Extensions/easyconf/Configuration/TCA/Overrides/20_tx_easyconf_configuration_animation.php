@@ -12,19 +12,14 @@ use Buepro\Easyconf\Utility\TcaUtility;
 
 defined('TYPO3') or die('Access denied.');
 
-if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
-    return;
-}
-
 (static function () {
-    $l10nFile = 'LLL:EXT:pizpalue/Extensions/easyconf/Resources/Private/Language/locallang_db_agency.xlf';
+    $l10nFile = 'LLL:EXT:pizpalue/Extensions/easyconf/Resources/Private/Language/locallang_db_animation.xlf';
     $tca = &$GLOBALS['TCA']['tx_easyconf_configuration'];
 
     /**
      * Properties
      */
-    $contactProperties = 'name, link, phone, email';
-    $brandProperties = 'slogan';
+    $animationProperties = 'animateCss.includeAlways, josh.includeAlways, twikito.includeAlways';
 
     /**
      * Define columns
@@ -32,9 +27,9 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     $propertyMaps = [
         TcaUtility::getPropertyMap(
             TypoScriptConstantMapper::class,
-            'pizpalue.agency',
-            implode(', ', [$contactProperties, $brandProperties]),
-            'agency'
+            'pizpalue.animation',
+            $animationProperties,
+            'animation'
         ),
     ];
     $tca['columns'] = array_replace($tca['columns'], TcaUtility::getColumns($propertyMaps, $l10nFile));
@@ -43,30 +38,22 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
      * Define palettes
      */
     $tca['palettes'] = array_replace($tca['palettes'], [
-        'paletteAgency' => TcaUtility::getPalette(
-            'name, link, phone, email, slogan',
-            'agency'
+        'paletteAnimation' => TcaUtility::getPalette(
+            $animationProperties,
+            'animation',
+            3
         ),
     ]);
-
-    /**
-     * Advanced fields
-     */
-    TcaUtility::modifyColumns(
-        $tca['columns'],
-        'reference',
-        ['displayCond' => 'FIELD:admin_easyconf_show_all_properties:REQ:true'],
-        'agency'
-    );
+    $tca['palettes']['paletteAnimation']['description'] = $l10nFile . ':paletteAnimation.description';
 
     /**
      * Modify columns
      */
     TcaUtility::modifyColumns(
         $tca['columns'],
-        $contactProperties . ', ' . $brandProperties,
-        ['exclude' => 1],
-        'agency'
+        $animationProperties,
+        ['config' => ['type' => 'check', 'renderType' => 'checkboxToggle']],
+        'animation'
     );
 
     unset($tca);

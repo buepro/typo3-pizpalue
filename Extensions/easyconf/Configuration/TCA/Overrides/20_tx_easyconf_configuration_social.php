@@ -14,10 +14,6 @@ use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\SocialNetworkService;
 
 defined('TYPO3') or die('Access denied.');
 
-if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
-    return;
-}
-
 (static function () {
     $l10nFile = 'LLL:EXT:pizpalue/Extensions/easyconf/Resources/Private/Language/locallang_db_social.xlf';
     $tca = &$GLOBALS['TCA']['tx_easyconf_configuration'];
