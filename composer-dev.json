@@ -68,6 +68,10 @@
 		"container-elements": {
 			"type": "path",
 			"url": "/mnt/public/package/typo3-container_elements"
+		},
+		"easyconf": {
+			"type": "path",
+			"url": "/mnt/public/package/typo3-easyconf"
 		}
 	},
 	"minimum-stability": "dev",

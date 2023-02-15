@@ -24,6 +24,7 @@ editor:
     stylesSet:
       - { name: "Complementary", element: "span", attributes: { 'class': 'text-complementary' } }
       - { name: "Code", element: "code" }
+      - { name: "Popover", element: "a", attributes: { 'class': 'pp-popover' } }
 
 classesAnchor:
   page-arrow:

@@ -7,7 +7,7 @@ easyconf:
   data:
     admin:
       siteConfiguration:
-        overwriteBase: '0'
+        overwriteBase: '1'
         overwriteBaseVariants: '0'
         overwriteRobots: '0'
         overwriteSitemap: '0'
