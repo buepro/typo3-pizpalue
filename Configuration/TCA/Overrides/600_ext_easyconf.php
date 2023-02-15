@@ -24,7 +24,7 @@ if (!ExtensionManagementUtility::isLoaded('easyconf')) {
     return;
 }
 
-(function() {
+(function () {
     $GLOBALS['TCA']['tx_easyconf_configuration']['columns'] = [];
     $tcaOverridesPathForPackage = ExtensionManagementUtility::extPath('pizpalue')
         . 'Extensions/easyconf/Configuration/TCA/Overrides';
@@ -32,6 +32,9 @@ if (!ExtensionManagementUtility::isLoaded('easyconf')) {
         return;
     }
     $files = scandir($tcaOverridesPathForPackage);
+    if ($files === false) {
+        return;
+    }
     foreach ($files as $file) {
         if (is_file($tcaOverridesPathForPackage . '/' . $file)
             && ($file !== '.')

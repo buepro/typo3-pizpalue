@@ -79,3 +79,10 @@ parameters:
 			message: "#^Instantiated class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\FrontendTypoScript not found\\.$#"
 			count: 1
 			path: ../Tests/Unit/Structure/TypoScriptBasedTest.php
+		-
+			message: """
+				#^Fetching deprecated class constant PARAM_STR_ARRAY of class TYPO3\\\\CMS\\\\Core\\\\Database\\\\Connection\\:
+				Use \\{@see ArrayParameterType\\:\\:STRING\\} instead\\.$#
+			"""
+			count: 1
+			path: ../Classes/Updates/Criteria/InCriteria.php
