@@ -16,11 +16,48 @@ defined('TYPO3') or die('Access denied.');
     $llFile = 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf';
 
     /**
+     * Add background image variants field
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+        'tt_content',
+        [
+            'tx_pizpalue_background_image_variants' => [
+                'exclude' => true,
+                'label' => $llFile . ':tx_pizpalue_ttc.background_image_variants',
+                'description' => $llFile . ':tx_pizpalue_ttc.background_image_variants.description',
+                'default' => 'pageVariants',
+                'config' => [
+                    'type' => 'select',
+                    'renderType' => 'selectSingle',
+                    'default' => 'pageVariants',
+                    'items' => [
+                        [$llFile . ':tx_pizpalue_ttc.image_variants.content', 'variants'],
+                        [$llFile . ':tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
+                    ],
+                ],
+            ],
+        ]
+    );
+
+    /**
+     * Enable background image and background color for all frame classes
+     */
+    unset($GLOBALS['TCA']['tt_content']['columns']['background_image']['displayCond'],
+        $GLOBALS['TCA']['tt_content']['columns']['background_color_class']['displayCond']);
+
+    /**
+     * Conditionally show background image related fields
+     */
+    $GLOBALS['TCA']['tt_content']['columns']['background_image']['onChange'] = 'reload';
+    $GLOBALS['TCA']['tt_content']['columns']['background_image_options']['displayCond'] = 'FIELD:background_image:REQ:true';
+    $GLOBALS['TCA']['tt_content']['columns']['tx_pizpalue_background_image_variants']['displayCond'] = 'FIELD:background_image:REQ:true';
+
+    /**
      * Palette
      */
     $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_background'] = [
         'label' => $llFile . ':tx_pizpalue_ttc.palette.background',
-        'showitem' => 'background_color_class, --linebreak--, background_image, --linebreak--, background_image_options, --linebreak--, tx_pizpalue_background_image_variants',
+        'showitem' => 'background_color_class, --linebreak--, background_image, --linebreak--, tx_pizpalue_background_image_variants, background_image_options',
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
@@ -31,6 +68,6 @@ defined('TYPO3') or die('Access denied.');
     \Buepro\Pizpalue\Utility\TcaUtility::removeFieldsFromPalette(
         'tt_content',
         'frames',
-        'background_color_class, background_image, tx_pizpalue_background_image_variants, background_image_options'
+        'background_color_class, background_image, background_image_options'
     );
 })();

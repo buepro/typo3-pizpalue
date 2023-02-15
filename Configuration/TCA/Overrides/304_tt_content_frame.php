@@ -39,6 +39,6 @@ defined('TYPO3') or die('Access denied.');
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
         'tt_content',
         'frames',
-        'frame_class;' . $llFile . ':tx_pizpalue_ttc.frame_class, frame_layout, --linebreak--, frame_options'
+        'frame_class;' . $llFile . ':tx_pizpalue_ttc.frame_class, frame_layout, frame_options'
     );
 })();

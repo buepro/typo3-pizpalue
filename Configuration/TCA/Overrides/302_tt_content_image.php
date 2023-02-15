@@ -62,21 +62,6 @@ defined('TYPO3') or die('Access denied.');
                 'rows' => 6,
             ],
         ],
-        'tx_pizpalue_background_image_variants' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background_image_variants',
-            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.background_image_variants.description',
-            'default' => 'pageVariants',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'default' => 'pageVariants',
-                'items' => [
-                    ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.content', 'variants'],
-                    ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
-                ],
-            ],
-        ],
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
@@ -86,13 +71,6 @@ defined('TYPO3') or die('Access denied.');
     $GLOBALS['TCA']['tt_content']['palettes']['pizpalue_imagesize'] = [
         'showitem' => 'tx_pizpalue_image_variants, tx_pizpalue_image_scaling, tx_pizpalue_image_aspect_ratio',
     ];
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
-        'tt_content',
-        'frames',
-        '--linebreak--, tx_pizpalue_background_image_variants',
-        'after: background_image_options'
-    );
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
