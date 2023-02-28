@@ -11,6 +11,8 @@ defined('TYPO3') or die('Access denied.');
 
 if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
     $GLOBALS['TCA']['tx_easyconf_configuration']['ctrl'] = [
+        'title' => '',
+        'readOnly'  => true,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
