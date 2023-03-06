@@ -10,7 +10,11 @@
 defined('TYPO3') or die('Access denied.');
 
 (static function (): void {
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
+    if (
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news') &&
+        // The following prevents errors in case news is installed after pizpalue
+        isset($GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['news_pi1'])
+    ) {
         // Enable dummy asset field
         $fields = $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['news_pi1'];
         $fields = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $fields, true);
