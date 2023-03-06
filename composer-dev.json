@@ -36,7 +36,7 @@
 		"b13/container": "dev-master",
 		"bk2k/bootstrap-package": "^13.0",
 		"buepro/typo3-pvh": "^2.0",
-		"typo3/cms-core": "^12.2"
+		"typo3/cms-core": "^12.3"
 	},
 	"require-dev": {
 		"buepro/typo3-container-elements": "^5.0.0",
@@ -51,8 +51,8 @@
 		"phpstan/phpstan-phpunit": "^1.1.1",
 		"phpstan/phpstan-strict-rules": "^1.4.3",
 		"typo3/cms-base-distribution": "^11.5 || 12.*.*@dev",
-		"typo3/cms-lowlevel": "^11.5 || ^12.1 || 12.*.*@dev",
-		"typo3/cms-recycler": "^11.5 || ^12.1 || 12.*.*@dev",
+		"typo3/cms-lowlevel": "^11.5 || ^12.3 || 12.*.*@dev",
+		"typo3/cms-recycler": "^11.5 || ^12.3 || 12.*.*@dev",
 		"typo3/testing-framework": "7.x-dev"
 	},
 	"suggest": {
