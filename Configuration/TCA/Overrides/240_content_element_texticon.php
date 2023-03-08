@@ -14,9 +14,7 @@ defined('TYPO3') || die('Access denied.');
     foreach (['icon_color', 'icon_background'] as $fieldName) {
         $fieldColumn = &$GLOBALS['TCA']['tt_content']['columns'][$fieldName];
         unset($fieldColumn['displayCond']);
-        $fieldColumn['config']['valuePicker'] = [
-            'items' => \Buepro\Pizpalue\Helper\TcaConfig::getColorItems(false, 'var(--bs-%s)'),
-        ];
+        $fieldColumn['config'] = \Buepro\Pizpalue\Helper\TcaConfig::getColorConfig();
         unset($fieldColumn);
     }
 })();

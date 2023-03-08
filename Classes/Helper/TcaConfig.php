@@ -30,4 +30,14 @@ class TcaConfig
         }
         return $result;
     }
+
+    public static function getColorConfig(): array
+    {
+        return [
+            'type' => 'input',
+            'valuePicker' => [
+                'items' => self::getColorItems(false, 'var(--bs-%s)'),
+            ]
+        ];
+    }
 }
