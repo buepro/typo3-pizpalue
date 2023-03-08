@@ -2,7 +2,7 @@
 
 module.tx_easyconf {
     settings {
-        support {
+        agency {
             url = {$pizpalue.agency.link}
             phone = {$pizpalue.agency.phone}
             email = {$pizpalue.agency.email}
