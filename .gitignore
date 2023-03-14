@@ -8,6 +8,7 @@
 
 # Root files
 /.ddev/docker-compose.mount.yaml
+/composer.lock
 /composer-dev.lock
 
 # Files
