@@ -22,7 +22,8 @@ defined('TYPO3') or die('Access denied.');
      * Properties
      */
     $logoProperties = 'fileReference, fileInvertedReference, file, fileInverted, width, height, alt, linktitle';
-    $logoTsProperties = 'file, fileInverted, width, height, alt, linktitle';
+    $logoTsProperties = 'file, fileInverted, width, height';
+    $logoTsSubstitutionProperties = 'alt, linktitle';
     $logoHelperProperties = 'fileReference, fileInvertedReference';
     $logoAdvancedProperties = 'alt, linktitle';
 
@@ -40,6 +41,12 @@ defined('TYPO3') or die('Access denied.');
             TypoScriptConstantMapper::class,
             'page.logo',
             $logoTsProperties,
+            'logo'
+        ),
+        TcaUtility::getPropertyMap(
+            TypoScriptConstantMapper::class,
+            'easyconf.substitutions.page.logo',
+            $logoTsSubstitutionProperties,
             'logo'
         ),
         TcaUtility::getPropertyMap(
