@@ -26,7 +26,8 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
      * Properties
      */
     $logoProperties = 'fileReference, fileInvertedReference, file, fileInverted, width, height, alt, linktitle';
-    $logoTsProperties = 'file, fileInverted, width, height, alt, linktitle';
+    $logoTsProperties = 'file, fileInverted, width, height';
+    $logoTsSubstitutionProperties = 'alt, linktitle';
     $logoHelperProperties = 'fileReference, fileInvertedReference';
     $logoAdvancedProperties = 'alt, linktitle';
 
@@ -44,6 +45,12 @@ if (!\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('easyconf')) {
             TypoScriptConstantMapper::class,
             'page.logo',
             $logoTsProperties,
+            'logo'
+        ),
+        TcaUtility::getPropertyMap(
+            TypoScriptConstantMapper::class,
+            'easyconf.substitutions.page.logo',
+            $logoTsSubstitutionProperties,
             'logo'
         ),
         TcaUtility::getPropertyMap(
