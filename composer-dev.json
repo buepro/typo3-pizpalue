@@ -51,8 +51,8 @@
 		"phpstan/phpstan-phpunit": "^1.1.1",
 		"phpstan/phpstan-strict-rules": "^1.4.3",
 		"typo3/cms-base-distribution": "^11.5 || 12.*.*@dev",
-		"typo3/cms-lowlevel": "^11.5 || ^12.3 || 12.*.*@dev",
-		"typo3/cms-recycler": "^11.5 || ^12.3 || 12.*.*@dev",
+		"typo3/cms-lowlevel": "^11.5 || 12.*.*@dev || ^12.3",
+		"typo3/cms-recycler": "^11.5 || 12.*.*@dev || ^12.3",
 		"typo3/testing-framework": "7.x-dev"
 	},
 	"suggest": {
@@ -81,15 +81,15 @@
 			"Buepro\\Pizpalue\\": "Classes/",
 			"Buepro\\Pizpalue\\Easyconf\\": "Extensions/easyconf/Classes/",
 			"Buepro\\Pizpalue\\Form\\": "Extensions/form/Classes/",
+			"Buepro\\Pizpalue\\Sysext\\Backend\\": "Sysext/backend/Classes/",
 			"Buepro\\Pizpalue\\Sysext\\Core\\": "Sysext/core/Classes/",
-			"Buepro\\Pizpalue\\Sysext\\Frontend\\": "Sysext/frontend/Classes/",
-			"Buepro\\Pizpalue\\Sysext\\Backend\\": "Sysext/backend/Classes/"
+			"Buepro\\Pizpalue\\Sysext\\Frontend\\": "Sysext/frontend/Classes/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Buepro\\Pizpalue\\Tests\\": "Tests/",
-			"Buepro\\Pizpalue\\Easyconf\\Tests\\": "Extensions/easyconf/Tests/"
+			"Buepro\\Pizpalue\\Easyconf\\Tests\\": "Extensions/easyconf/Tests/",
+			"Buepro\\Pizpalue\\Tests\\": "Tests/"
 		}
 	},
 	"config": {
