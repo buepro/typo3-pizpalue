@@ -20,7 +20,9 @@
 .frame {
     --pp-frame-inner-spacing-before: var(--frame-spacing);
     --pp-frame-inner-spacing-after: var(--frame-spacing);
-    @include pp-make-frame-background();
+    &:not(.frame-type-subnavigation) {
+        @include pp-make-frame-background();
+    }
     @each $tmp-variant, $tmp-scaling in $pp-frame-inner-spacing-variants {
         &.pp-inner-space-before-#{$tmp-variant} {
             --pp-frame-inner-spacing-before: calc(#{$tmp-scaling} * var(--frame-spacing));
