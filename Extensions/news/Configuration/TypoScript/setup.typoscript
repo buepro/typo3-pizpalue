@@ -12,6 +12,8 @@ plugin.tx_news {
         detail.media.image.width = 400
         # todo: Removed after ext:news provides it
         alert = danger
+        ppButtonMoreColor = primary
+        ppButtonBackColor = default
     }
 }
 
