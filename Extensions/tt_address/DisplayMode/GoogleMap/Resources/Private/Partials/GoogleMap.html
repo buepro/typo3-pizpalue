@@ -12,7 +12,9 @@
     -> f:variable(name: 'jsonData')}
 
 {f:variable(name: '_pageEnabled', value: 0)}
-{mapConfig.pages -> bk2k:explode(delimiter: ',', as: '_pages')}
+<bk2k:explode data="{mapConfig.pages}" delimiter="," as="_tempPages">
+    {f:variable(name: '_pages', value: _tempPages)}
+</bk2k:explode>
 <f:for each="{_pages}" as="_pageUid">
     {f:variable(name: '_pageEnabled', value: 1) -> f:if(condition: '{contentObjectData.pid} == {_pageUid}')}
 </f:for>
