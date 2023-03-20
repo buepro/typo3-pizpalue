@@ -7,8 +7,8 @@
 RELEASE.md export-ignore
 
 # Files
-/.lock
-composer-dev.json
+/*.lock export-ignore
+/composer-dev.json export-ignore
 
 # Enforce checkout with linux lf consistent over all plattforms
 *.xml text eol=lf
