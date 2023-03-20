@@ -28,24 +28,23 @@ echo ".. include:: /Includes.rst.txt
 
 .. highlight:: none
 
-====================================
 Changelog for release $2
 ====================================
 
 Features
-========
+--------
 $(write_commits "$1" "$2" "\\[FEATURE\\]")
 
 Bugfixes
-========
+--------
 $(write_commits "$1" "$2" "\\[BUGFIX\\]")
 
 Breaking changes
-================
+----------------
 $(write_commits "$1" "$2" "\\[!!!\\]")
 
 Reference
-=========
+---------
 
 .. highlight:: shell
 
