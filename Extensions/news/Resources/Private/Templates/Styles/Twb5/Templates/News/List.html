@@ -37,7 +37,7 @@
 <f:section name="ItemList">
     {f:render(partial: 'List/GetPartialName', arguments: _all) -> pvh:format.trim() -> f:variable(name: '_partialName')}
     {f:variable(name: '_partialName', value: 'Item') -> f:if(condition: '{_partialName} == ""')}
-    <ul class="list-group mb-3">
+    <ul class="list-group">
         <f:for each="{newsItems}" as="newsItem" iteration="iterator">
             <f:render partial="List/{_partialName}" arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
         </f:for>

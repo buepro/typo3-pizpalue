@@ -20,6 +20,9 @@ $table-border-color: $gray-300 !default;
             margin-top: 2rem;
         }
     }
+    .list-group, .news-list-item {
+        margin-bottom: 1rem;
+    }
 }
 .news-list-item {
     img.img-dummy {
