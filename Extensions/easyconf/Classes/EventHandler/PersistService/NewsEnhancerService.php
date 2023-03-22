@@ -53,8 +53,9 @@ class NewsEnhancerService extends AbstractService
         $result = $queryBuilder
             ->select('pid')
             ->from('tt_content')
-            ->where(
-                $queryBuilder->expr()->eq('list_type', $queryBuilder->createNamedParameter('news_pi1'))
+            ->orWhere(
+                $queryBuilder->expr()->eq('list_type', $queryBuilder->createNamedParameter('news_pi1')),
+                $queryBuilder->expr()->like('CType', $queryBuilder->createNamedParameter('news_%'))
             )
             ->executeQuery();
         if (
