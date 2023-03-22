@@ -52,11 +52,22 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
 
     public function render()
     {
-        $this->tagName = $this->arguments['tagName'];
-        $this->tag->setTagName($this->arguments['tagName']);
-        $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
-        $multiplier = ColumnVariantsUtility::getMultiplier($this->arguments['class'], $this->arguments['rowClass'], $this->arguments['count']);
-        $correction = StructureVariantsUtility::getVectorProperty($this->arguments['correction']);
+        /**
+         * @var array{
+         *     tagName: string,
+         *     gutter: array|float,
+         *     class: string,
+         *     rowClass: string,
+         *     count: int,
+         *     correction: array|float
+         * } $arguments
+         */
+        $arguments = $this->arguments;
+        $this->tagName = $arguments['tagName'];
+        $this->tag->setTagName($arguments['tagName']);
+        $gutter = StructureVariantsUtility::getVectorProperty($arguments['gutter']);
+        $multiplier = ColumnVariantsUtility::getMultiplier($arguments['class'], $arguments['rowClass'], $arguments['count']);
+        $correction = StructureVariantsUtility::getVectorProperty($arguments['correction']);
         $modifier = (new VariantsModifier())
             ->setMargins(VectorUtility::negate($gutter))
             ->setMultiplier($multiplier)

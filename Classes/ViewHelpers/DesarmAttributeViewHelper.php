@@ -139,6 +139,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ): string {
+        /** @var array{encoding: ?string, keepQuotes: bool} $arguments */
         $value = $renderChildrenClosure();
         $encoding = (string) $arguments['encoding'];
         $keepQuotes = $arguments['keepQuotes'];
