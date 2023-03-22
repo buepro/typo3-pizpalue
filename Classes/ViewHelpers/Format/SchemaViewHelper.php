@@ -36,6 +36,7 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ): string {
+        /** @var array{decodeOptions: ?string, encodeOptions: ?string, removeEmptyElements: ?bool} $arguments */
         $decodeOptions = self::getJsonOptions($arguments['decodeOptions']);
         $encodeOptions = self::getJsonOptions($arguments['encodeOptions']);
         $value = $renderChildrenClosure();

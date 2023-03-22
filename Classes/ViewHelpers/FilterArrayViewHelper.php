@@ -45,8 +45,10 @@ class FilterArrayViewHelper extends AbstractViewHelper
      */
     public function render(): ?array
     {
-        $source = $this->arguments['source'];
-        $keylist = $this->arguments['keylist'];
+        /** @var array{source: ?array, keylist: string} $arguments */
+        $arguments = $this->arguments;
+        $source = $arguments['source'];
+        $keylist = $arguments['keylist'];
         if ($source === null) {
             return $source;
         }

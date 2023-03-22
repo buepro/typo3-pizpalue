@@ -67,6 +67,15 @@ class ColumnViewHelper extends AbstractViewHelper
         \Closure $renderChildrenClosure,
         RenderingContextInterface $renderingContext
     ): string {
+        /**
+         * @var array{
+         *     gutter: array|float,
+         *     class: string,
+         *     rowClass: string,
+         *     count: int,
+         *     correction: array|float
+         * } $arguments
+         */
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
             $gutter = StructureVariantsUtility::getVectorProperty($arguments['gutter']);
             $multiplier = ColumnVariantsUtility::getMultiplier($arguments['class'], $arguments['rowClass'], $arguments['count']);
