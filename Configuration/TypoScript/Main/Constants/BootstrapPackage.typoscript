@@ -23,7 +23,7 @@ easyconf.substitutions {
         }
     }
     plugin.bootstrap_package.settings.cssSourceMapping = {$pizpalue.agency.siteMode}
-    plugin.bootstrap_package_contentelements.timeline.date.format = {$pizpalue.general.dateStrftimeFormat}
+    plugin.bootstrap_package_contentelements.timeline.date.format = {$pizpalue.general.dateFormat}
 }
 
 
