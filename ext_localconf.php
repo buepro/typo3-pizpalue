@@ -101,11 +101,13 @@ defined('TYPO3') || die('Access denied.');
 
     /**
      * EXT:core
-     * Register TelephoneLinkHandler
+     * Register TelephoneLinkHandler and EmailLinkHandler
      * @extensionScannerIgnoreLine
      */
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['telephone'] =
         \Buepro\Pizpalue\Sysext\Core\LinkHandling\TelephoneLinkHandler::class;
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['email'] =
+        \Buepro\Pizpalue\Sysext\Core\LinkHandling\EmailLinkHandler::class;
 
     /**
      * EXT:backend
