@@ -23,8 +23,8 @@ class TagModifier
     public function fixATagHrefAttribute($tag, RteHtmlParser $parser): string
     {
         $href = is_string($tag) ? $tag : (string)$tag[0];
-        if (($pos = (int)strpos($href, '###@')) > 0) {
-            $href = substr($href, 0, $pos) . '###';
+        if (strpos($href, 'mailto:') === 0 && ($pos = (int)strpos($href, '###@')) > 0) {
+            $href = preg_replace('/###(@[^?]*)/', '###', $href) ?? $href;
         }
         return $href;
     }
