@@ -6,8 +6,8 @@
         Partials/List/ItemImageTop.html
 -->
 <n:excludeDisplayedNews newsItem="{newsItem}"/>
-<div class="news-list-item pp-news-list-item-imagetop">
-    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+<div class="news-list-item pp-news-list-item-imagetop textpic">
+    <n:link class="pp-newsimage textpic-item" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
         <f:if condition="{newsItem.mediaPreviews}">
             <f:then>
                 <f:render partial="Plugin/RenderMedia" arguments="{
@@ -22,7 +22,7 @@
             </f:else>
         </f:if>
     </n:link>
-    <div class="pp-newstext articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}"
+    <div class="pp-newstext articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')} textpic-item"
          itemscope="itemscope" itemtype="http://schema.org/Article">
         <h3 itemprop="headline">
             <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
