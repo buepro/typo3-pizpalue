@@ -23,11 +23,9 @@ Supported extensions
 ================================ ================
 Extension                        Version tested
 ================================ ================
-container_elements               4.0.0
-easyconf                         1.3.2
-eventnews                        5.0.0
-news                             9.1.0
-tt_address                       6.0.1
+container_elements               5.0.0
+easyconf                         2.0.0
+news                             11.0.0
 ================================ ================
 
 .. _admin_installation_static_templates:
@@ -74,6 +72,7 @@ The following upgrade descriptions are available:
 .. toctree::
    :maxdepth: 1
 
+   Upgrade/v15.0.0
    Upgrade/v14.0.0
    Upgrade/v13.0.0
    Upgrade/v12.0.0

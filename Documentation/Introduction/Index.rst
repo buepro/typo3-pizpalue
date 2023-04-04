@@ -127,8 +127,6 @@ The following extensions are supported:
 -  `container_elements <https://extensions.typo3.org/extension/container_elements>`__
 -  `easyconf <https://extensions.typo3.org/extension/easyconf>`__
 -  `news <https://extensions.typo3.org/extension/news>`__
--  `eventnews <https://extensions.typo3.org/extension/eventnews>`__
--  `tt_address <https://extensions.typo3.org/extension/tt_address>`__
 
 `Various <https://pizpalue.buechler.pro/das-plus/verschiedenes>`__
 ------------------------------------------------------------------

@@ -1,0 +1,149 @@
+.. include:: /Includes.rst.txt
+
+.. _admin_upgrade_15.0:
+
+==========================================
+Upgrade to version 15.0
+==========================================
+
+Breaking changes
+================
+
+Drop extension news date localization
+-------------------------------------
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Add the necessary configuration to the site package.
+
+Replace bootstrap scroll spy js
+-------------------------------
+
+Description
+~~~~~~~~~~~
+
+Since the bootstrap scroll spy is buggy a replacement
+has been introduced, dropping the typoscript configuration
+constant `pizpalue.menu.scroll.offset` in favor of
+`pizpalue.menu.scroll.rootMargin`.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Review the typoscript scroll configuration.
+
+Use easyconf constants substitution
+-----------------------------------
+
+Description
+~~~~~~~~~~~
+
+Since TYPO3 v12 typoscript constants are not
+substituted anymore. The substitution is now
+carried out by the extension easyconf by moving
+the related constants to the typoscript path
+`easyconf.substitutions`. Further the following
+typoscript constants have been dropped:
+
+- `pizpalue.agency.reference`
+- `pizpalue.cutomer.copyright`
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+In case the extension easyconf is present save
+the configurations through the easyconf form.
+
+In case easyconf is not present define the
+various constants manually.
+
+Where the above-mentioned dropped constants
+are used the following replacements should
+be used:
+
+- `pizpalue.agency.reference` -> no replacement
+- `pizpalue.cutomer.copyright` ->
+`page.theme.copyright.text`
+
+Drop bootstrap 4
+----------------
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Adapt site package accordingly.
+
+Drop deprecated view helpers
+----------------------------
+
+Description
+~~~~~~~~~~~
+
+The deprecated view helpers
+`BootstrapPackageFrameViewHelper` and
+`PizpalueFrameViewHelper` have been dropped.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Use the following replacements:
+
+- `BootstrapPackageFrameViewHelper` ->
+`\Buepro\Pizpalue\ViewHelpers\FrameViewHelper`
+
+- `PizpalueFrameViewHelper` ->
+`\Buepro\Pizpalue\ViewHelpers\FrameDataViewHelper`
+
+Change google fonts url
+-----------------------
+
+Description
+~~~~~~~~~~~
+
+To use a different google fonts for headings the
+typoscript constant `pizpalue.style.googleFontsUrl`
+has been adapted. This constant itself referenced
+other constants to specify the font families and
+the font weights. Since the TYPO3 version 12.1
+constants in constants aren't substituted anymore
+hence the google url is faulty. The issue has been
+addressed by dropping the constant
+`pizpalue.style.googleFontsUrl` and adding the
+constant `pizpalue.style.googleFontsUrlHeadingsSegment`
+defining the url segment specifying the headings
+font.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+In case you used the constant
+`pizpalue.style.googleFontsUrl` you need to
+extract the additional font segment part and
+assign it to the constant
+`pizpalue.style.googleFontsUrlHeadingsSegment`.
+Please Note that the leading pipe character
+needs to be available.
+
+Before:
+
+`pizpalue.style.googleFontsUrl = https://fonts
+.googleapis.com/css?display=swap&family=
+{$page.theme.googleFont.font}:{$page.theme.
+googleFont.weight}|Lobster:400`
+
+Now:
+
+`pizpalue.style.googleFontsUrlHeadingsSegment =
+|Lobster:400`
+
+Mind the leading `|` character.
+
+Bump TYPO3 to v12.1
+-------------------
+
+Description
+~~~~~~~~~~~
+
+By supporting the main branch 12 support for the
+main branch 10 has been dropped.
