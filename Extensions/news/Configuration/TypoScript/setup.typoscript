@@ -27,5 +27,8 @@ plugin.tx_news {
 # Bugfixes
 #=========================================================#
 
-// https://github.com/georgringer/news/issues/1841
-tt_content.shortcut.variables.shortcuts.conf.tx_news_domain_model_news.settings.singleNews = CONTENT
+// https://github.com/georgringer/news/issues/2062
+tt_content.shortcut.20.conf.tx_news_domain_model_news {
+	pluginName = NewsDetail
+}
+tt_content.shortcut.variables.shortcuts.conf.tx_news_domain_model_news < tt_content.shortcut.20.conf.tx_news_domain_model_news
