@@ -23,14 +23,14 @@ class EmailLinkHandler extends \TYPO3\CMS\Core\LinkHandling\EmailLinkHandler
      */
     public function resolveHandlerData(array $data): array
     {
-        $linkParts = parse_url($data['email'] ?? '');
-        $data['email'] = $linkParts['path'] ?? '';
-        if ($data['email'] === '' && ($linkParts['fragment'] ?? '') !== '') {
-            $data['email'] = '#' . $linkParts['fragment'];
+        /** @var array{email: string} $data */
+        [$data['email'], $queryPart] = [...explode('?', $data['email'], 2), null];
+        if (stripos($data['email'], 'mailto:') === 0) {
+            $data['email'] = substr($data['email'], 7);
         }
-        if (isset($linkParts['query'])) {
+        if (isset($queryPart)) {
             $result = [];
-            parse_str($linkParts['query'], $result);
+            parse_str($queryPart, $result);
             foreach (['subject', 'cc', 'bcc', 'body'] as $additionalInfo) {
                 if (isset($result[$additionalInfo])) {
                     $data[$additionalInfo] = $result[$additionalInfo];
