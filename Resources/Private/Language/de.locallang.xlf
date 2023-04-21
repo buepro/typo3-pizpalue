@@ -15,6 +15,10 @@
         <source>Close</source>
         <target state="final">Schliessen</target>
       </trans-unit>
+      <trans-unit id="normal" resname="normal" approved="yes">
+        <source>Normal</source>
+        <target state="final">Normal</target>
+      </trans-unit>
       <trans-unit id="less" approved="yes">
         <source>Less</source>
         <target state="final">Weniger</target>
@@ -26,6 +30,46 @@
       <trans-unit id="moreDetails" approved="yes">
         <source>More details</source>
         <target state="final">Mehr Details</target>
+      </trans-unit>
+      <trans-unit id="primary" resname="primary" approved="yes">
+        <source>Primary</source>
+        <target state="final">Primär</target>
+      </trans-unit>
+      <trans-unit id="secondary" resname="secondary" approved="yes">
+        <source>Secondary</source>
+        <target state="final">Sekundär</target>
+      </trans-unit>
+      <trans-unit id="complementary" resname="complementary" approved="yes">
+        <source>Complementary</source>
+        <target state="final">Komplementär</target>
+      </trans-unit>
+      <trans-unit id="success" resname="success" approved="yes">
+        <source>Success</source>
+        <target state="final">Erfolg</target>
+      </trans-unit>
+      <trans-unit id="danger" resname="danger" approved="yes">
+        <source>Danger</source>
+        <target state="final">Gefahr</target>
+      </trans-unit>
+      <trans-unit id="muted" resname="muted" approved="yes">
+        <source>Muted</source>
+        <target state="final">Ignorieren</target>
+      </trans-unit>
+      <trans-unit id="tertiary" resname="tertiary" approved="yes">
+        <source>Tertiary</source>
+        <target state="final">Tertiär</target>
+      </trans-unit>
+      <trans-unit id="quaternary" resname="quaternary" approved="yes">
+        <source>Quaternary</source>
+        <target state="final">Quaternär</target>
+      </trans-unit>
+      <trans-unit id="light" resname="light" approved="yes">
+        <source>Light</source>
+        <target state="final">Hell</target>
+      </trans-unit>
+      <trans-unit id="dark" resname="dark" approved="yes">
+        <source>Dark</source>
+        <target state="final">Dunkel</target>
       </trans-unit>
       <trans-unit id="cookieconsent.common.header" approved="yes">
         <source>Cookies used on the website!</source>
