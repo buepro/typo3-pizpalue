@@ -38,7 +38,7 @@
 		"typo3/cms-core": "^12.3"
 	},
 	"require-dev": {
-		"buepro/typo3-container-elements": "^5.0.0",
+		"buepro/typo3-container-elements": "^5.0.1",
 		"buepro/typo3-easyconf": "^1.4.0 || ^2.0.0",
 		"buepro/typo3-user-pizpalue": "dev-main",
 		"ergebnis/composer-normalize": "^2.15.0",

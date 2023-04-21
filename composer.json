@@ -37,6 +37,9 @@
 		"buepro/typo3-pvh": "^2.0",
 		"typo3/cms-core": "^11.5 || ^12.3"
 	},
+	"conflict": {
+		"buepro/typo3-container-elements": "<=5"
+	},
 	"require-dev": {
 		"friendsofphp/php-cs-fixer": "^3.0.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",

@@ -38,23 +38,3 @@ lib.containerContentElement {
         }
     }
 }
-
-
-#=========================================================#
-# Container content, used in fluid templates
-#=========================================================#
-
-lib.containerElements {
-    renderContent >
-    renderContent = CONTENT
-    renderContent {
-        table = tt_content
-        select {
-            uidInList {
-                field = uid
-                override.field = l18n_parent
-            }
-            pidInList = 0
-        }
-    }
-}

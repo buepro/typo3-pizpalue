@@ -22,7 +22,9 @@ $EM_CONF[$_EXTKEY] = [
             'bootstrap_package'     => '13.0.0-13.99.99',
             'pvh'                   => '2.0.0-2.99.99'
         ],
-        'conflicts' => [],
+        'conflicts' => [
+            'container_elements'      => '0.0.0-5.0.0'
+        ],
         'suggests'  => [
             'container_elements'    => '',
             'easyconf'              => '',
