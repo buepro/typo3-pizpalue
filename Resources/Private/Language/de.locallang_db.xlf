@@ -7,13 +7,13 @@
         <source>CSS declarations</source>
         <target state="final">CSS-Deklarationen</target>
       </trans-unit>
-      <trans-unit id="tx_pizpalue_ttc.undefined" approved="yes">
-        <source>Undefined</source>
-        <target state="final">Nicht definiert</target>
-      </trans-unit>
       <trans-unit id="tx_pizpalue_ttc.palette.pp-scroll-navigation" approved="yes">
         <source>Scroll navigation</source>
         <target state="final">Scrollnavigation</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.undefined" approved="yes">
+        <source>Undefined</source>
+        <target state="final">Nicht definiert</target>
       </trans-unit>
       <trans-unit id="tx_pizpalue_ttc.scroll_navigation_enable" approved="yes">
         <source>Enable</source>
