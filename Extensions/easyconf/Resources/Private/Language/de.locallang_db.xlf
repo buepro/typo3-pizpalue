@@ -11,6 +11,10 @@
         <source>Scaffold</source>
         <target state="final">Gerüst</target>
       </trans-unit>
+      <trans-unit id="paletteScaffoldElements" resname="paletteScaffoldElements" approved="yes">
+        <source>Available sections</source>
+        <target state="final">Verfügbare Bereiche</target>
+      </trans-unit>
       <trans-unit id="paletteScaffoldHeader" resname="paletteScaffoldHeader" approved="yes">
         <source>Header</source>
         <target state="final">Kopfbereich</target>
@@ -19,9 +23,21 @@
         <source>Footer</source>
         <target state="final">Fussbereich</target>
       </trans-unit>
+      <trans-unit id="paletteScaffoldCopyright" resname="paletteScaffoldCopyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">Copyright</target>
+      </trans-unit>
+      <trans-unit id="paletteScaffoldContact" resname="paletteScaffoldContact" approved="yes">
+        <source>Contact</source>
+        <target state="final">Kontakt</target>
+      </trans-unit>
       <trans-unit id="tabMenu" resname="tabMenu" approved="yes">
         <source>Menu</source>
         <target state="final">Menü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuSelect" resname="paletteMenuSelect" approved="yes">
+        <source>Available menus</source>
+        <target state="final">Verfügbare Menüs</target>
       </trans-unit>
       <trans-unit id="paletteMenuMain" resname="paletteMenuMain" approved="yes">
         <source>Main</source>
@@ -31,13 +47,17 @@
         <source>Main on subpages</source>
         <target state="final">Hauptmenü auf Unterseiten</target>
       </trans-unit>
-      <trans-unit id="paletteMenuSelect" resname="paletteMenuSelect" approved="yes">
-        <source>Select available menus</source>
-        <target state="final">Verfügbare Menüs auswählen</target>
+      <trans-unit id="paletteMenuToggler" resname="paletteMenuToggler" approved="yes">
+        <source>Main toggler</source>
+        <target state="final">Togglemenü</target>
       </trans-unit>
-      <trans-unit id="paletteMenuMeta" resname="paletteMenuMeta" approved="yes">
-        <source>Meta menu</source>
-        <target state="final">Metamenü</target>
+      <trans-unit id="paletteMenuCopyright" resname="paletteMenuCopyright" approved="yes">
+        <source>Copyright menu</source>
+        <target state="final">Copyrightmenü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuFast" resname="paletteMenuFast" approved="yes">
+        <source>Fast menu</source>
+        <target state="final">Schnellmenü</target>
       </trans-unit>
       <trans-unit id="paletteMenuFooter" resname="paletteMenuFooter" approved="yes">
         <source>Footer menu</source>
@@ -47,13 +67,9 @@
         <source>Language menu</source>
         <target state="final">Sprachmenü</target>
       </trans-unit>
-      <trans-unit id="paletteMenuFast" resname="paletteMenuFast" approved="yes">
-        <source>Fast menu</source>
-        <target state="final">Schnellmenü</target>
-      </trans-unit>
-      <trans-unit id="paletteMenuToggler" resname="paletteMenuToggler" approved="yes">
-        <source>Main toggler</source>
-        <target state="final">Togglemenü</target>
+      <trans-unit id="paletteMenuMeta" resname="paletteMenuMeta" approved="yes">
+        <source>Meta menu</source>
+        <target state="final">Metamenü</target>
       </trans-unit>
       <trans-unit id="paletteMenuScroll" resname="paletteMenuScroll" approved="yes">
         <source>Scroll menu</source>
@@ -112,8 +128,8 @@
         <target state="final">Stil</target>
       </trans-unit>
       <trans-unit id="paletteStyleGlobal" resname="paletteStyleGlobal" approved="yes">
-        <source>Element selection</source>
-        <target state="final">Elementauswahl</target>
+        <source>Enable styles</source>
+        <target state="final">Stile aktivieren</target>
       </trans-unit>
       <trans-unit id="paletteStyleRounded" resname="paletteStyleRounded" approved="yes">
         <source>Rounded</source>
@@ -159,10 +175,6 @@
         <source>Element selection</source>
         <target state="final">Elementauswahl</target>
       </trans-unit>
-      <trans-unit id="paletteFeatureContact" resname="paletteFeatureContact" approved="yes">
-        <source>Contact section</source>
-        <target state="final">Kontaktbereich</target>
-      </trans-unit>
       <trans-unit id="paletteFeatureVarious" resname="paletteFeatureVarious" approved="yes">
         <source>Various</source>
         <target state="final">Verschiedenes</target>
@@ -170,6 +182,10 @@
       <trans-unit id="tabVarious" resname="tabVarious" approved="yes">
         <source>Various</source>
         <target state="final">Verschiedenes</target>
+      </trans-unit>
+      <trans-unit id="paletteAnimation" resname="paletteAnimation" approved="yes">
+        <source>Animation</source>
+        <target state="final">Animation</target>
       </trans-unit>
       <trans-unit id="paletteSeo" resname="paletteSeo" approved="yes">
         <source>SEO</source>
