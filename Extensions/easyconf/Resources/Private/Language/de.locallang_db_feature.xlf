@@ -19,22 +19,6 @@
         <source>Insert data in content</source>
         <target state="final">Daten in Inhalt einfügen</target>
       </trans-unit>
-      <trans-unit id="feature_contact_enable" resname="feature_contact_enable" approved="yes">
-        <source>Contact section</source>
-        <target state="final">Kontaktbereich</target>
-      </trans-unit>
-      <trans-unit id="feature_contact_label" resname="feature_contact_label" approved="yes">
-        <source>Label</source>
-        <target state="final">Beschriftung</target>
-      </trans-unit>
-      <trans-unit id="feature_contact_button_label" resname="feature_contact_button_label" approved="yes">
-        <source>Button label</source>
-        <target state="final">Schaltflächentext</target>
-      </trans-unit>
-      <trans-unit id="feature_contact_button_page_uid" resname="feature_contact_button_page_uid" approved="yes">
-        <source>Contact page</source>
-        <target state="final">Kontakt Seite</target>
-      </trans-unit>
       <trans-unit id="feature_image_loading" resname="feature_image_loading" approved="yes">
         <source>Image loading</source>
         <target state="final">Bildladeverhalten</target>
