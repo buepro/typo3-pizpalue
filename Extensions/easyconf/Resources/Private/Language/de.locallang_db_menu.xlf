@@ -51,13 +51,41 @@
         <source>Fixed on top</source>
         <target state="final">Oben fixiert</target>
       </trans-unit>
+      <trans-unit id="menu_toggler_grid-float-breakpoint" resname="menu_toggler_grid-float-breakpoint" approved="yes">
+        <source>Breakpoint</source>
+        <target state="final">Umschaltpunkt</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-width" resname="menu_toggler_pp-header-toggler-width" approved="yes">
+        <source>Width</source>
+        <target state="final">Breite</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-padding" resname="menu_toggler_pp-header-toggler-padding" approved="yes">
+        <source>Padding</source>
+        <target state="final">Innenabstand</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-line-gap" resname="menu_toggler_pp-header-toggler-line-gap" approved="yes">
+        <source>Line gap</source>
+        <target state="final">Zeilenabstand</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-line-width" resname="menu_toggler_pp-header-toggler-line-width" approved="yes">
+        <source>Line width</source>
+        <target state="final">Linienbreite</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-line-height" resname="menu_toggler_pp-header-toggler-line-height" approved="yes">
+        <source>Line height</source>
+        <target state="final">Linienhöhe</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-margin-right" resname="menu_toggler_pp-header-toggler-margin-right" approved="yes">
+        <source>Margin right</source>
+        <target state="final">Äußerer Abstand rechts</target>
+      </trans-unit>
       <trans-unit id="menu_breadcrumb_enable" resname="menu_breadcrumb_enable" approved="yes">
         <source>Breadcrumb</source>
         <target state="final">Brotkrumenmenü</target>
       </trans-unit>
-      <trans-unit id="menu_meta_enable" resname="menu_meta_enable" approved="yes">
-        <source>Meta</source>
-        <target state="final">Metamenü</target>
+      <trans-unit id="menu_fast_enable" resname="menu_fast_enable" approved="yes">
+        <source>Fast</source>
+        <target state="final">Schnellmenü</target>
       </trans-unit>
       <trans-unit id="menu_footer_enable" resname="menu_footer_enable" approved="yes">
         <source>Footer</source>
@@ -67,57 +95,13 @@
         <source>Language</source>
         <target state="final">Sprachmenü</target>
       </trans-unit>
-      <trans-unit id="menu_fast_enable" resname="menu_fast_enable" approved="yes">
-        <source>Fast</source>
-        <target state="final">Schnellmenü</target>
+      <trans-unit id="menu_meta_enable" resname="menu_meta_enable" approved="yes">
+        <source>Meta</source>
+        <target state="final">Metamenü</target>
       </trans-unit>
       <trans-unit id="menu_scroll_enable" resname="menu_scroll_enable" approved="yes">
         <source>Scroll</source>
         <target state="final">Scroll</target>
-      </trans-unit>
-      <trans-unit id="menu_meta_navigation_value" resname="menu_meta_navigation_value" approved="yes">
-        <source>Navigation value</source>
-        <target state="final">Navigationswert</target>
-      </trans-unit>
-      <trans-unit id="menu_meta_navigation_type" resname="menum_eta_navigation_type" approved="yes">
-        <source>Navigation type</source>
-        <target state="final">Navigationstyp</target>
-      </trans-unit>
-      <trans-unit id="menu_meta_include_not_in_menu" resname="menu_meta_include_not_in_menu" approved="yes">
-        <source>Include "Not in menu"</source>
-        <target state="final">"Nicht im Menü" einschließen</target>
-      </trans-unit>
-      <trans-unit id="menu_footer_navigation_value" resname="menu_footer_navigation_value" approved="yes">
-        <source>Navigation value</source>
-        <target state="final">Navigationswert</target>
-      </trans-unit>
-      <trans-unit id="menu_footer_navigation_type" resname="menu_footer_navigation_type" approved="yes">
-        <source>Navigation type</source>
-        <target state="final">Navigationstyp</target>
-      </trans-unit>
-      <trans-unit id="menu_footer_include_not_in_menu" resname="menu_footer_include_not_in_menu" approved="yes">
-        <source>Include "Not in menu"</source>
-        <target state="final">"Nicht im Menü" einschließen</target>
-      </trans-unit>
-      <trans-unit id="menu_footer_levels" resname="menu_footer_levels" approved="yes">
-        <source>Levels</source>
-        <target state="final">Ebenen</target>
-      </trans-unit>
-      <trans-unit id="menu_footer_icon_enable" resname="menu_footer_icon_enable" approved="yes">
-        <source>Enable icons</source>
-        <target state="final">Icons aktivieren</target>
-      </trans-unit>
-      <trans-unit id="menu_footer_icon_width" resname="menu_footer_icon_width" approved="yes">
-        <source>Icons width</source>
-        <target state="final">Icons-Breite</target>
-      </trans-unit>
-      <trans-unit id="menu_footer_icon_height" resname="menu_footer_icon_height" approved="yes">
-        <source>Icons height</source>
-        <target state="final">Icons-Höhe</target>
-      </trans-unit>
-      <trans-unit id="menu_language_language_value" resname="menu_language_language_value" approved="yes">
-        <source>Language value</source>
-        <target state="final">Sprachwert</target>
       </trans-unit>
       <trans-unit id="paletteMenuFast.description" resname="paletteMenuFast.description" approved="yes">
         <source>
@@ -164,33 +148,49 @@ Dieses Icon-Menü ist auf der Seite fixiert. Ein Menüpunkt wird aktiviert, inde
         <source>Third item link</source>
         <target state="final">Drittes Element Link</target>
       </trans-unit>
-      <trans-unit id="menu_toggler_grid-float-breakpoint" resname="menu_toggler_grid-float-breakpoint" approved="yes">
-        <source>Breakpoint</source>
-        <target state="final">Umschaltpunkt</target>
+      <trans-unit id="menu_footer_navigation_value" resname="menu_footer_navigation_value" approved="yes">
+        <source>Navigation value</source>
+        <target state="final">Navigationswert</target>
       </trans-unit>
-      <trans-unit id="menu_toggler_pp-header-toggler-width" resname="menu_toggler_pp-header-toggler-width" approved="yes">
-        <source>Width</source>
-        <target state="final">Breite</target>
+      <trans-unit id="menu_footer_navigation_type" resname="menu_footer_navigation_type" approved="yes">
+        <source>Navigation type</source>
+        <target state="final">Navigationstyp</target>
       </trans-unit>
-      <trans-unit id="menu_toggler_pp-header-toggler-padding" resname="menu_toggler_pp-header-toggler-padding" approved="yes">
-        <source>Padding</source>
-        <target state="final">Innenabstand</target>
+      <trans-unit id="menu_footer_include_not_in_menu" resname="menu_footer_include_not_in_menu" approved="yes">
+        <source>Include "Not in menu"</source>
+        <target state="final">"Nicht im Menü" einschließen</target>
       </trans-unit>
-      <trans-unit id="menu_toggler_pp-header-toggler-line-gap" resname="menu_toggler_pp-header-toggler-line-gap" approved="yes">
-        <source>Line gap</source>
-        <target state="final">Zeilenabstand</target>
+      <trans-unit id="menu_footer_levels" resname="menu_footer_levels" approved="yes">
+        <source>Levels</source>
+        <target state="final">Ebenen</target>
       </trans-unit>
-      <trans-unit id="menu_toggler_pp-header-toggler-line-width" resname="menu_toggler_pp-header-toggler-line-width" approved="yes">
-        <source>Line width</source>
-        <target state="final">Linienbreite</target>
+      <trans-unit id="menu_footer_icon_enable" resname="menu_footer_icon_enable" approved="yes">
+        <source>Enable icons</source>
+        <target state="final">Icons aktivieren</target>
       </trans-unit>
-      <trans-unit id="menu_toggler_pp-header-toggler-line-height" resname="menu_toggler_pp-header-toggler-line-height" approved="yes">
-        <source>Line height</source>
-        <target state="final">Linienhöhe</target>
+      <trans-unit id="menu_footer_icon_width" resname="menu_footer_icon_width" approved="yes">
+        <source>Icons width</source>
+        <target state="final">Icons-Breite</target>
       </trans-unit>
-      <trans-unit id="menu_toggler_pp-header-toggler-margin-right" resname="menu_toggler_pp-header-toggler-margin-right" approved="yes">
-        <source>Margin right</source>
-        <target state="final">Äußerer Abstand rechts</target>
+      <trans-unit id="menu_footer_icon_height" resname="menu_footer_icon_height" approved="yes">
+        <source>Icons height</source>
+        <target state="final">Icons-Höhe</target>
+      </trans-unit>
+      <trans-unit id="menu_language_language_value" resname="menu_language_language_value" approved="yes">
+        <source>Language value</source>
+        <target state="final">Sprachwert</target>
+      </trans-unit>
+      <trans-unit id="menu_meta_navigation_value" resname="menu_meta_navigation_value" approved="yes">
+        <source>Navigation value</source>
+        <target state="final">Navigationswert</target>
+      </trans-unit>
+      <trans-unit id="menu_meta_navigation_type" resname="menum_eta_navigation_type" approved="yes">
+        <source>Navigation type</source>
+        <target state="final">Navigationstyp</target>
+      </trans-unit>
+      <trans-unit id="menu_meta_include_not_in_menu" resname="menu_meta_include_not_in_menu" approved="yes">
+        <source>Include "Not in menu"</source>
+        <target state="final">"Nicht im Menü" einschließen</target>
       </trans-unit>
       <trans-unit id="paletteMenuScroll.description" resname="paletteMenuScroll.description" approved="yes">
         <source>If content elements on a page have the scroll navigation activated they will be used to create a scroll menu.</source>
