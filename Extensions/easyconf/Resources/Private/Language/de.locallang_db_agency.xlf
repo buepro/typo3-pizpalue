@@ -23,10 +23,6 @@
         <source>Slogan</source>
         <target state="final">Slogan</target>
       </trans-unit>
-      <trans-unit id="agency_reference" resname="agency_reference" approved="yes">
-        <source>Reference</source>
-        <target state="final">Referenz</target>
-      </trans-unit>
     </body>
   </file>
 </xliff>
