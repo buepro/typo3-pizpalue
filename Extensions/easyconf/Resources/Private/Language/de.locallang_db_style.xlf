@@ -4,20 +4,20 @@
     <header/>
     <body>
       <trans-unit id="style_global_enable-rounded" resname="style_global_enable-rounded" approved="yes">
-        <source>Enable rounded</source>
-        <target state="final">Rundungen aktivieren</target>
+        <source>Rounded</source>
+        <target state="final">Gerundet</target>
       </trans-unit>
       <trans-unit id="style_global_enable-shadows" resname="style_global_enable-shadows" approved="yes">
-        <source>Enable shadows</source>
-        <target state="final">Schatten aktivieren</target>
+        <source>Shadows</source>
+        <target state="final">Schatten</target>
       </trans-unit>
       <trans-unit id="style_global_enable-gradients" resname="style_global_enable-gradients" approved="yes">
-        <source>Enable gradients</source>
-        <target state="final">Verläufe aktivieren</target>
+        <source>Gradients</source>
+        <target state="final">Gradienten</target>
       </trans-unit>
       <trans-unit id="style_global_enable_scss" resname="style_global_enable_scss" approved="yes">
-        <source>Enable additional SCSS</source>
-        <target state="final">Zusätzliche SCSS aktivieren</target>
+        <source>Additional SCSS</source>
+        <target state="final">Zusätzliches SCSS</target>
       </trans-unit>
       <trans-unit id="style_rounded_border-radius" resname="style_rounded_border-radius" approved="yes">
         <source>Border radius</source>
