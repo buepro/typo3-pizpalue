@@ -142,4 +142,5 @@ pizpalue.menu {
         menuId = pp-scroll-nav
         # cat=6060/1060/0624; type=string; label=Root margin:The value will be used to configure the javascript IntersectionObserver.
         rootMargin = -40% 0px -60% 0px
+    }
 }
