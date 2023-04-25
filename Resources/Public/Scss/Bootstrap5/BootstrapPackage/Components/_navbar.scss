@@ -325,7 +325,7 @@ $pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
             left: 0;
             width: 4px;
             height: 100%;
-            background: $primary;
+            background: var(--#{$prefix}nav-link-color);
             opacity: 0;
             transition: opacity .25s ease-in-out;
         }
