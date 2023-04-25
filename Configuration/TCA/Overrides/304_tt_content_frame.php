@@ -20,6 +20,9 @@ defined('TYPO3') or die('Access denied.');
      */
     $GLOBALS['TCA']['tt_content']['palettes']['frames']['label'] = $llFile . ':tx_pizpalue_ttc.palette.frames';
     foreach ($GLOBALS['TCA']['tt_content']['types'] as &$type) {
+        if (!isset($type['showitem'])) {
+            continue;
+        }
         $type['showitem'] = str_replace(
             '--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames',
             '--palette--;;frames',
