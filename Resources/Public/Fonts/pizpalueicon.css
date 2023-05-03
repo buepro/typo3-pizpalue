@@ -1,9 +1,9 @@
 @font-face {
     font-family: "pizpalueicon";
-    src: url("./pizpalueicon.eot?f20c2dd6e3410bf84fe7e5c7d174cf3c#iefix") format("embedded-opentype"),
-url("./pizpalueicon.woff2?f20c2dd6e3410bf84fe7e5c7d174cf3c") format("woff2"),
-url("./pizpalueicon.woff?f20c2dd6e3410bf84fe7e5c7d174cf3c") format("woff"),
-url("./pizpalueicon.ttf?f20c2dd6e3410bf84fe7e5c7d174cf3c") format("truetype");
+    src: url("./pizpalueicon.eot?645cddf13ab0df716aca8add135e2b45#iefix") format("embedded-opentype"),
+url("./pizpalueicon.woff2?645cddf13ab0df716aca8add135e2b45") format("woff2"),
+url("./pizpalueicon.woff?645cddf13ab0df716aca8add135e2b45") format("woff"),
+url("./pizpalueicon.ttf?645cddf13ab0df716aca8add135e2b45") format("truetype");
 }
 
 .ppicon::before, .bootstrappackageicon::before, .glyphicon::before {
@@ -61,3 +61,5 @@ url("./pizpalueicon.ttf?f20c2dd6e3410bf84fe7e5c7d174cf3c") format("truetype");
 .ppicon-envelope-solid::before, .bootstrappackageicon-envelope-solid::before, .glyphicon-envelope-solid::before { content: "\f110"; }
 .ppicon-envelope::before, .bootstrappackageicon-envelope::before, .glyphicon-envelope::before { content: "\f111"; }
 .ppicon-folder-open::before, .bootstrappackageicon-folder-open::before, .glyphicon-folder-open::before { content: "\f112"; }
+.ppicon-earth-europe-solid::before, .bootstrappackageicon-earth-europe-solid::before, .glyphicon-earth-europe-solid::before { content: "\f113"; }
+.ppicon-globe-solid::before, .bootstrappackageicon-globe-solid::before, .glyphicon-globe-solid::before { content: "\f114"; }
