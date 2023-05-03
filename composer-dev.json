@@ -54,7 +54,7 @@
 		"typo3/cms-base-distribution": "^11.5 || ^12.1",
 		"typo3/cms-lowlevel": "^11.5 || ^12.3",
 		"typo3/cms-recycler": "^11.5 || ^12.3",
-		"typo3/testing-framework": "7.x-dev"
+		"typo3/testing-framework": "^7.0.0 || ^8.0.0"
 	},
 	"suggest": {
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
