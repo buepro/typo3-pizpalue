@@ -8,11 +8,10 @@
   "version": "9.0.1",
   "license": "MIT",
   "devDependencies": {
-    "fantasticon": "^1.2.3",
-    "grunt": "^1.5.2",
+    "fantasticon": "^2.0.0",
+    "grunt": "^1.6.1",
     "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-uglify": "^5.2.1",
-    "grunt-contrib-watch": "^1.1.0"
+    "grunt-contrib-uglify": "^5.2.2"
   },
   "scripts": {
     "build": "./node_modules/.bin/grunt build",

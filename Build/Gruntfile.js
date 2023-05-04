@@ -117,25 +117,6 @@ module.exports = function(grunt) {
                 dest: '<%= paths.js %>Dist/ContentElement/modal-dialog.min.js'
             },
         },
-        watch: {
-            general: {
-                files: '<%= paths.js %>Src/pizpalue.general.js',
-                tasks: 'uglify:general'
-            },
-            smoothscroll: {
-                files: '<%= paths.js %>Src/pizpalue.smoothscroll.js',
-                tasks: 'uglify:smoothscroll'
-            },
-            cookieconsentservice: {
-                files: '<%= paths.js %>Src/pizpalue.cookieconsentservice.js',
-                tasks: 'uglify:cookieconsentservice'
-            },
-            revealfooterservice: {
-                files: '<%= paths.js %>Src/pizpalue.revealfooterservice.js',
-                tasks: 'uglify:revealfooterservice'
-            },
-
-        },
         webfont: {
             pizpalueicon: {
                 options: {
@@ -181,7 +162,6 @@ module.exports = function(grunt) {
      */
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
 
     /**
      * Grunt update task
