@@ -35,6 +35,9 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *    - hasCssAnimation: Boolean, indication the presence from a css animation
  *    - hasScrollAnimation: Boolean, indicating the presence from a scroll animation
  *    - optimizeLinkTargets: Boolean, passes through the constant value from `pizpalue.seo.optimizeLinkTargets`
+ *
+ * @deprecated since 13.0.2
+ * @todo Refactor to service class
  */
 class FrameDataViewHelper extends AbstractViewHelper
 {

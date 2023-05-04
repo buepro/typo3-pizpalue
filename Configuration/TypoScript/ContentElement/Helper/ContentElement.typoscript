@@ -18,6 +18,22 @@ lib.contentElement.dataProcessing {
     210 = Buepro\Pizpalue\DataProcessing\StructureProcessor
 }
 
+
+#=========================================================#
+# Add attributes and needed assets
+#=========================================================#
+
+lib.contentElement.dataProcessing {
+    1683187600 = BK2K\BootstrapPackage\DataProcessing\ArrayProcessor
+    1683187600 {
+        data {
+        }
+        as = ppFramelessAttributes
+    }
+    1683187700 = Buepro\Pizpalue\DataProcessing\ContentElementDataProcessor
+}
+
+
 #=========================================================#
 # Adjust image rendering
 #=========================================================#

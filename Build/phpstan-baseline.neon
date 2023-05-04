@@ -2,6 +2,14 @@ parameters:
 	ignoreErrors:
 		-
 			message: """
+				#^Call to method renderStatic\\(\\) of deprecated class Buepro\\\\Pizpalue\\\\ViewHelpers\\\\FrameDataViewHelper\\:
+				since 13\\.0\\.2$#
+			"""
+			count: 1
+			path: ../Classes/DataProcessing/ContentElementDataProcessor.php
+
+		-
+			message: """
 				#^Fetching deprecated class constant INFO of class TYPO3\\\\CMS\\\\Core\\\\Messaging\\\\FlashMessage\\:
 				Use \\\\TYPO3\\\\CMS\\\\Core\\\\Type\\\\ContextualFeedbackSeverity\\:\\:INFO instead$#
 			"""
@@ -85,28 +93,7 @@ parameters:
 			path: ../Sysext/frontend/Classes/Hook/PopoverTypolinkHook.php
 
 		-
-			message: """
-				#^Call to deprecated method prophesize\\(\\) of class Buepro\\\\Pizpalue\\\\Tests\\\\Functional\\\\FunctionalFrontendTestCase\\:
-				https\\://github\\.com/sebastianbergmann/phpunit/issues/4141$#
-			"""
-			count: 1
-			path: ../Tests/Functional/FunctionalFrontendTestCase.php
-
-		-
 			message: "#^Variable method call on TYPO3\\\\CMS\\\\Core\\\\Page\\\\AssetCollector\\.$#"
 			count: 1
 			path: ../Tests/Functional/ViewHelpers/FrameDataViewHelperTest.php
-
-		-
-			message: """
-				#^Call to deprecated method prophesize\\(\\) of class Buepro\\\\Pizpalue\\\\Tests\\\\Unit\\\\DataProcessing\\\\PostMenuProcessorTest\\:
-				https\\://github\\.com/sebastianbergmann/phpunit/issues/4141$#
-			"""
-			count: 1
-			path: ../Tests/Unit/DataProcessing/PostMenuProcessorTest.php
-
-		-
-			message: "#^Cannot access offset 'TSFE' on TYPO3\\\\CMS\\\\Frontend\\\\Controller\\\\TypoScriptFrontendController\\.$#"
-			count: 2
-			path: ../Tests/Unit/DataProcessing/PostMenuProcessorTest.php
 

@@ -26,11 +26,9 @@
         </f:for>
     </f:if>
 
-    {pp:frameData(data: data, pizpalueConstants: pizpalue, as: '_ppData')}
-
     {pvh:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}})
         -> f:variable(name: 'settings')
-        -> f:if(condition: '{_ppData.hasScrollAnimation} == 1 || {_ppData.hasCssAnimation} == 1')}
+        -> f:if(condition: '{ppData.hasScrollAnimation} == 1 || {ppData.hasCssAnimation} == 1')}
 
     <pp:frame
         id="c{data.uid}"
@@ -38,6 +36,7 @@
         size="default"
         layout="{data.frame_layout}"
         frameClass="{data.frame_class}"
+        frameAttributes="{frameAttributes}"
         spaceBefore="{data.space_before_class}"
         spaceAfter="{data.space_after_class}"
         options="{data.frame_options}"
@@ -45,7 +44,7 @@
         backgroundColor="{data.background_color_class}"
         backgroundImage="{backgroundImage.0}"
         backgroundImageOptions="{data.background_image_options}"
-        ppData="{_ppData}"
+        ppData="{ppData}"
     >
         <f:if condition="{data._LOCALIZED_UID}"><a id="c{data._LOCALIZED_UID}" class="pp-link-target"></a></f:if>
         <f:render section="Before" optional="true"><f:render partial="DropIn/Before/All" arguments="{_all}" /></f:render>
@@ -53,7 +52,7 @@
         <f:render section="Main"   optional="true" />
         <f:render section="Footer" optional="true"><f:render partial="Footer/All" arguments="{_all}" /></f:render>
         <f:render section="After"  optional="true"><f:render partial="DropIn/After/All" arguments="{_all}" /></f:render>
-        <f:if condition="{data._LOCALIZED_UID} && {_ppData.optimizeLinkTargets}">
+        <f:if condition="{data._LOCALIZED_UID} && {ppData.optimizeLinkTargets}">
             <f:asset.script identifier="ppLinkTarget" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.linktarget.min.js" />
         </f:if>
     </pp:frame>

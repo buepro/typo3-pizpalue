@@ -12,30 +12,13 @@
     <f:comment>Initialize variables</f:comment>
     {f:variable(name: '_ppData', value: configuration.ppData)}
 
-    <f:comment>Compile classes</f:comment>
-    {classes -> bk2k:implode() -> f:variable(name: '_bpClasses') -> f:if(condition: configuration.displayFrame)}
-    {f:variable(name: '_ppClasses', value: '{_ppData.classes -> bk2k:implode()}')}
-    {f:variable(name: '_classes', value: '{_bpClasses} {_ppClasses}')}
-    {_classes -> bk2k:format.trim() -> f:variable(name: '_classes')}
-    {f:variable(name: '_classAttribute', value: 'class="{_classes}"') -> f:if(condition: _classes)}
-
     <f:comment>Compile inner classes</f:comment>
     {_ppData.innerClasses -> bk2k:implode() -> f:variable(name: '_ppInnerClasses')}
-
-    <f:comment>Compile style attribute</f:comment>
-    {_ppData.styles -> bk2k:implode(delimiter: '; ') -> f:variable(name: '_styles')}
-    {f:variable(name: '_styleAttribute', value: ' style="{_styles}"') -> f:if(condition: _styles)}
-
-    <f:comment>Compile other attributes</f:comment>
-    {f:variable(name: '_otherAttributes', value: ' {_ppData.attributes -> bk2k:implode()}') -> f:if(condition: _ppData.attributes)}
-
-    <f:comment>Compile all attributes</f:comment>
-    {f:variable(name: '_allAttributes', value: '{_classAttribute}{_styleAttribute}{_otherAttributes}')}
 
     <f:if condition="{configuration.displayFrame}">
         <f:then>
 
-            <div id="{configuration.id}" {_allAttributes -> pp:desarmAttribute()}>
+            <div {frameAttributes -> f:format.raw()}>
                 <div class="frame-group-container">
                     <div class="frame-group-inner">
                         <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
@@ -51,10 +34,10 @@
         </f:then>
         <f:else>
 
-            <f:if condition="{configuration.backgroundImage} || {_ppData.classes} || {_ppData.styles} || {_ppData.attributes}">
+            <f:if condition="{configuration.backgroundImage} || {_ppData.framelessAttributes}">
                 <f:then>
 
-                    <div id="{configuration.id}" {_allAttributes -> pp:desarmAttribute()}>
+                    <div id="{configuration.id}" {_ppData.framelessAttributes -> f:format.raw()}>
                         <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
                         <f:if condition="{_ppData.isTile}">
                             <f:then>
