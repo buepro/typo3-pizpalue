@@ -12,9 +12,7 @@
                 -> f:if(condition: '{item.flag} == "flags-catalonia" || {item.flag} =="flags-en-us-gb"')}
             <f:variable name="_itemContent">
                 <f:if condition="{theme.language.style} == 'icon' || {theme.language.style} == 'icontext'">
-                    <span class="ppc-flag"><f:image
-                        src="EXT:core/Resources/Public/Icons/Flags/{_flagName}.{_ext}" title="{item.title}"
-                    /></span>
+                    <span class="ppc-flag"><img src="{f:uri.image(src: 'EXT:core/Resources/Public/Icons/Flags/{_flagName}.{_ext}')}" title="{item.title}" /></span>
                 </f:if>
                 <f:if condition="{theme.language.style} == 'text' || {theme.language.style} == 'icontext'">
                     <span class="ppc-text">{item.navigationTitle}</span>
