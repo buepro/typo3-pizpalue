@@ -92,6 +92,77 @@ lib.contentElement {
             }
 
             #---------------------------------------------------------#
+            # Remove fix scaling for footer columns
+            #---------------------------------------------------------#
+            backendlayout {
+                2_columns {
+                    10 >
+                    11 >
+                    12 >
+                }
+                2_columns_25_75 {
+                    10 >
+                    11 >
+                    12 >
+                }
+                2_columns_50_50 {
+                    10 >
+                    11 >
+                    12 >
+                }
+                2_columns_offset_right {
+                    10 >
+                    11 >
+                    12 >
+                }
+                3_columns {
+                    10 >
+                    11 >
+                    12 >
+                }
+                default {
+                    10 >
+                    11 >
+                    12 >
+                }
+                simple {
+                    10 >
+                    11 >
+                    12 >
+                }
+                special_feature {
+                    10 >
+                    11 >
+                    12 >
+                }
+                special_start {
+                    10 >
+                    11 >
+                    12 >
+                }
+                subnavigation_left {
+                    10 >
+                    11 >
+                    12 >
+                }
+                subnavigation_left_2_columns {
+                    10 >
+                    11 >
+                    12 >
+                }
+                subnavigation_right {
+                    10 >
+                    11 >
+                    12 >
+                }
+                subnavigation_right_2_columns {
+                    10 >
+                    11 >
+                    12 >
+                }
+            }
+
+            #---------------------------------------------------------#
             # Default variants adjustments for small screens
             #---------------------------------------------------------#
             variants {
