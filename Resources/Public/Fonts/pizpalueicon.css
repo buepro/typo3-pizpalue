@@ -1,4 +1,5 @@
 @font-face {
+    font-display: swap;
     font-family: "pizpalueicon";
     src: url("./pizpalueicon.eot?645cddf13ab0df716aca8add135e2b45#iefix") format("embedded-opentype"),
 url("./pizpalueicon.woff2?645cddf13ab0df716aca8add135e2b45") format("woff2"),
