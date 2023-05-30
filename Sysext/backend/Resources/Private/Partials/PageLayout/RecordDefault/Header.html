@@ -8,15 +8,15 @@
         <span class="pp-frame-indicator mx-1" title="{f:translate(key: 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:page_layout.frame.{_frameIdentifier}')}">{core:icon(identifier: _frameIdentifier)}</span>
     </div>
     {f:render(partial: 'PageLayout/RecordDefault/Preview', arguments: _all)
-        -> pvh:format.replace(substring: '<br/>', replacement: '  ')
-        -> pvh:format.replace(substring: '<br />', replacement: '  ')
-        -> pvh:format.replace(substring: '<br>', replacement: '  ')
-        -> f:format.stripTags(allowedTags: '<strong>')
-        -> f:format.crop(maxCharacters: 80)
+        -> pvh:format.replace(substring: '<br/>', replacement: ' - ')
+        -> pvh:format.replace(substring: '<br />', replacement: ' - ')
+        -> pvh:format.replace(substring: '<br>', replacement: ' - ')
+        -> f:format.stripTags()
         -> pvh:format.trim()
+        -> f:format.crop(maxCharacters: 80)
         -> f:variable(name: '_title')}
     <div class="t3-page-ce-header-title">
-        <span class="ppc-expanded">{item.contentTypeLabel}</span></span><span class="ppc-collapsed d-none" title="{_title -> f:format.stripTags()}">{_title -> f:format.raw()}</span>
+        <span class="ppc-expanded">{item.contentTypeLabel}</span><span class="ppc-collapsed d-none">{_title -> f:format.raw()}</span>
     </div>
     <div class="t3-page-ce-header-right">
         <div class="btn-toolbar">
