@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}</f:variable>
+<f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
+<f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}</f:variable>
+<header id="page-header" class="{headerClass}">
+    <div class="container">
+        <f:render partial="Header/Logo" arguments="{_all}" />
+        <f:if condition="{mainnavigation} || {scrollnavigation}">
+            <f:render partial="Header/Toggle" arguments="{_all}" />
+            <nav id="mainnavigation" class="collapse navbar-collapse">
+                <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
+                <f:render partial="Navigation/MainNavigation" arguments="{_all}" />
+                <f:if condition="{scrollnavigation}">
+                    <f:render partial="Navigation/ScrollNavigation" arguments="{scrollnavigation: scrollnavigation}" />
+                </f:if>
+                <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
+            </nav>
+        </f:if>
+    </div>
+</header>
+
+</html>
