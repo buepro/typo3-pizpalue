@@ -165,3 +165,22 @@ pp.domReady(function () {
         })
     }
 });
+
+/**
+ * Improve touch device support in thumbnail menus by showing the overlay text upon the first touch and opening the
+ * associated link with the second touch.
+ */
+pp.domReady(function () {
+    const items = document.querySelectorAll('.thumbnail-menu-link');
+    items.forEach(function (item) {
+        item.addEventListener('touchstart', e => {
+            if (item.dataset.ppState !== 'hover') {
+                e.preventDefault();
+                e.stopPropagation();
+                items.forEach(item => item.dataset.ppState = '');
+                item.focus();
+                item.dataset.ppState = 'hover';
+            }
+        });
+    });
+});
