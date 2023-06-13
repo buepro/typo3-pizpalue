@@ -22,6 +22,14 @@ editor:
       - "*(*)"
       - "*[data-*]"
     stylesSet:
+      - { name: "Button Complementary", element: "a", attributes: { 'class': 'btn btn-complementary' } }
+      - { name: "Button Light", element: "a", attributes: { 'class': 'btn btn-light' } }
+      - { name: "Button Dark", element: "a", attributes: { 'class': 'btn btn-dark' } }
+
+      - { name: "Button Outline Complementary", element: "a", attributes: { 'class': 'btn btn-outline-complementary' } }
+      - { name: "Button Outline Light", element: "a", attributes: { 'class': 'btn btn-outline-light' } }
+      - { name: "Button Outline Dark", element: "a", attributes: { 'class': 'btn btn-outline-dark' } }
+
       - { name: "Complementary", element: "span", attributes: { 'class': 'text-complementary' } }
       - { name: "Code", element: "code" }
       - { name: "Popover", element: "a", attributes: { 'class': 'pp-popover' } }
