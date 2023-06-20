@@ -34,6 +34,8 @@ editor:
       - { name: "Code", element: "code" }
       - { name: "Popover", element: "a", attributes: { 'class': 'pp-popover' } }
 
+      - { name: "Columns", element: "div", attributes: { 'class': 'text-column' } }
+
 classesAnchor:
   page-arrow:
     class: 'link-arrow'
