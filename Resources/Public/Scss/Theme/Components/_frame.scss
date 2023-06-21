@@ -15,11 +15,18 @@
 }
 
 //
-// Set frame headings, links and inner spacing
+// Set elements, frame headings, links and inner spacing
 // --------------------------------------------------
 .frame {
     --pp-frame-inner-spacing-before: var(--frame-spacing);
     --pp-frame-inner-spacing-after: var(--frame-spacing);
+    .table {
+        --bs-table-bg: var(--frame-background);
+        --bs-table-color: var(--frame-color);
+        --bs-table-striped-color: var(--frame-color);
+        --bs-table-active-color: var(--frame-color);
+        --bs-table-hover-color: var(--frame-color);
+    }
     &:not(.frame-type-subnavigation, .frame-layout-embedded) {
         @include pp-make-frame-background();
     }
