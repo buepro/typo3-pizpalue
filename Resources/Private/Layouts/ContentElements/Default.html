@@ -13,48 +13,47 @@
     @see https://github.com/aentan/Parallax-Scroll
     -->
 </f:comment>
-<f:spaceless>
-    {pp:structure.variants(as: 'variants', initialVariants: 'tx_pizpalue_image_variants')}
 
-    <f:if condition="{containerContext}">
-        <f:for each="{containerContext}" as="context">
-            <f:variable name="containerConfig">{settings.responsiveimages.container.{context.CType}}</f:variable>
-            <f:variable name="containerColumnConfig">{containerConfig.{data.colPos}}</f:variable>
-            <f:if condition="{containerColumnConfig}">
-                <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{containerColumnConfig.multiplier}" gutters="{containerColumnConfig.gutters}" corrections="{containerColumnConfig.corrections}" />
-            </f:if>
-        </f:for>
-    </f:if>
+{pp:structure.variants(as: 'variants', initialVariants: 'tx_pizpalue_image_variants')}
 
-    {pvh:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}})
-        -> f:variable(name: 'settings')
-        -> f:if(condition: '{ppData.hasScrollAnimation} == 1 || {ppData.hasCssAnimation} == 1')}
-
-    <pp:frame
-        id="c{data.uid}"
-        type="{data.CType}"
-        size="default"
-        layout="{data.frame_layout}"
-        frameClass="{data.frame_class}"
-        frameAttributes="{frameAttributes}"
-        spaceBefore="{data.space_before_class}"
-        spaceAfter="{data.space_after_class}"
-        options="{data.frame_options}"
-        variants="{variants}"
-        backgroundColor="{data.background_color_class}"
-        backgroundImage="{backgroundImage.0}"
-        backgroundImageOptions="{data.background_image_options}"
-        ppData="{ppData}"
-    >
-        <f:if condition="{data._LOCALIZED_UID}"><a id="c{data._LOCALIZED_UID}" class="pp-link-target"></a></f:if>
-        <f:render section="Before" optional="true"><f:render partial="DropIn/Before/All" arguments="{_all}" /></f:render>
-        <f:render section="Header" optional="true"><f:render partial="Header/All" arguments="{_all}" /></f:render>
-        <f:render section="Main"   optional="true" />
-        <f:render section="Footer" optional="true"><f:render partial="Footer/All" arguments="{_all}" /></f:render>
-        <f:render section="After"  optional="true"><f:render partial="DropIn/After/All" arguments="{_all}" /></f:render>
-        <f:if condition="{data._LOCALIZED_UID} && {ppData.optimizeLinkTargets}">
-            <f:asset.script identifier="ppLinkTarget" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.linktarget.min.js" />
+<f:if condition="{containerContext}">
+    <f:for each="{containerContext}" as="context">
+        <f:variable name="containerConfig">{settings.responsiveimages.container.{context.CType}}</f:variable>
+        <f:variable name="containerColumnConfig">{containerConfig.{data.colPos}}</f:variable>
+        <f:if condition="{containerColumnConfig}">
+            <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{containerColumnConfig.multiplier}" gutters="{containerColumnConfig.gutters}" corrections="{containerColumnConfig.corrections}" />
         </f:if>
-    </pp:frame>
-</f:spaceless>
+    </f:for>
+</f:if>
+
+{pvh:iterator.merge(a: settings, b:{gallery: {imageLoading: "eager"}})
+    -> f:variable(name: 'settings')
+    -> f:if(condition: '{ppData.hasScrollAnimation} == 1 || {ppData.hasCssAnimation} == 1')}
+
+<pp:frame
+    id="c{data.uid}"
+    type="{data.CType}"
+    size="default"
+    layout="{data.frame_layout}"
+    frameClass="{data.frame_class}"
+    frameAttributes="{frameAttributes}"
+    spaceBefore="{data.space_before_class}"
+    spaceAfter="{data.space_after_class}"
+    options="{data.frame_options}"
+    variants="{variants}"
+    backgroundColor="{data.background_color_class}"
+    backgroundImage="{backgroundImage.0}"
+    backgroundImageOptions="{data.background_image_options}"
+    ppData="{ppData}"
+>
+    <f:if condition="{data._LOCALIZED_UID}"><a id="c{data._LOCALIZED_UID}" class="pp-link-target"></a></f:if>
+    <f:render section="Before" optional="true"><f:render partial="DropIn/Before/All" arguments="{_all}" /></f:render>
+    <f:render section="Header" optional="true"><f:render partial="Header/All" arguments="{_all}" /></f:render>
+    <f:render section="Main"   optional="true" />
+    <f:render section="Footer" optional="true"><f:render partial="Footer/All" arguments="{_all}" /></f:render>
+    <f:render section="After"  optional="true"><f:render partial="DropIn/After/All" arguments="{_all}" /></f:render>
+    <f:if condition="{data._LOCALIZED_UID} && {ppData.optimizeLinkTargets}">
+        <f:asset.script identifier="ppLinkTarget" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.linktarget.min.js" />
+    </f:if>
+</pp:frame>
 </html>

@@ -52,7 +52,7 @@ class PpModalDialogRenderingTest extends FunctionalFrontendTestCase
             ],
             'content' => [
                 '', '', 'tt_content_2', '', '', '',
-                '@id="c1"[\s\S]*class="modal-body">[\r\n\w]*<div id="c2"@'
+                '@id="c1"[\s\S]*class="modal-body">[\r\n\w\s]*<div id="c2"@'
             ],
             'url' => [
                 '', '', '', 'https://example.com', '', '',

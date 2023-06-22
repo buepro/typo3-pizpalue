@@ -3,79 +3,78 @@
       xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
-<f:spaceless>
-    <f:comment>Background image variants</f:comment>
-    {pp:structure.variants(as: '_backgroundVariants', initialVariants: 'tx_pizpalue_background_image_variants')}
-    {f:variable(name: '_backgroundAll', value: _all)}
-    {_backgroundVariants -> pvh:variable.set(name: '_backgroundAll.variants')}
 
-    <f:comment>Initialize variables</f:comment>
-    {f:variable(name: '_ppData', value: configuration.ppData)}
+<f:comment>Background image variants</f:comment>
+{pp:structure.variants(as: '_backgroundVariants', initialVariants: 'tx_pizpalue_background_image_variants')}
+{f:variable(name: '_backgroundAll', value: _all)}
+{_backgroundVariants -> pvh:variable.set(name: '_backgroundAll.variants')}
 
-    <f:comment>Compile inner classes</f:comment>
-    {_ppData.innerClasses -> bk2k:implode() -> f:variable(name: '_ppInnerClasses')}
+<f:comment>Initialize variables</f:comment>
+{f:variable(name: '_ppData', value: configuration.ppData)}
 
-    <f:if condition="{configuration.displayFrame}">
-        <f:then>
+<f:comment>Compile inner classes</f:comment>
+{_ppData.innerClasses -> bk2k:implode() -> f:variable(name: '_ppInnerClasses')}
 
-            <div {frameAttributes -> f:format.raw()}>
-                <div class="frame-group-container">
-                    <div class="frame-group-inner">
-                        <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
-                        <div class="frame-container frame-container-default">
-                            <div class="frame-inner{f:if(condition: _ppInnerClasses, then: ' {_ppInnerClasses}')}">
-                                {content -> f:format.raw()}
-                            </div>
+<f:if condition="{configuration.displayFrame}">
+    <f:then>
+
+        <div {frameAttributes -> f:format.raw()}>
+            <div class="frame-group-container">
+                <div class="frame-group-inner">
+                    <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
+                    <div class="frame-container frame-container-default">
+                        <div class="frame-inner{f:if(condition: _ppInnerClasses, then: ' {_ppInnerClasses}')}">
+                            {content -> f:format.raw()}
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-        </f:then>
-        <f:else>
+    </f:then>
+    <f:else>
 
-            <f:if condition="{configuration.backgroundImage} || {_ppData.framelessAttributes}">
-                <f:then>
+        <f:if condition="{configuration.backgroundImage} || {_ppData.framelessAttributes}">
+            <f:then>
 
-                    <div id="{configuration.id}" {_ppData.framelessAttributes -> f:format.raw()}>
-                        <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
-                        <f:if condition="{_ppData.isTile}">
-                            <f:then>
+                <div id="{configuration.id}" {_ppData.framelessAttributes -> f:format.raw()}>
+                    <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
+                    <f:if condition="{_ppData.isTile}">
+                        <f:then>
 
-                                <div class="frame-container">
-                                    <div class="frame-inner{f:if(condition: _ppInnerClasses, then: ' {_ppInnerClasses}')}">
-                                        {content -> f:format.raw()}
-                                    </div>
+                            <div class="frame-container">
+                                <div class="frame-inner{f:if(condition: _ppInnerClasses, then: ' {_ppInnerClasses}')}">
+                                    {content -> f:format.raw()}
                                 </div>
+                            </div>
 
-                            </f:then>
-                            <f:else>
+                        </f:then>
+                        <f:else>
 
-                                {content -> f:format.raw()}
+                            {content -> f:format.raw()}
 
-                            </f:else>
-                        </f:if>
-                    </div>
-
-                </f:then>
-                <f:else>
-
-                    <a id="{configuration.id}" class="pp-link-target"></a>
-                    <f:if condition="{configuration.spaceBefore} !== none">
-                        <div class="frame-space-before frame-space-before-{configuration.spaceBefore}"></div>
+                        </f:else>
                     </f:if>
-                    {content -> f:format.raw()}
-                    <f:if condition="{configuration.spaceAfter} !== none">
-                        <div class="frame-space-after frame-space-after-{configuration.spaceAfter}"></div>
-                    </f:if>
-                    <f:if condition="{configuration.ppData.optimizeLinkTargets}">
-                        <f:asset.script identifier="ppLinkTarget" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.linktarget.min.js" />
-                    </f:if>
+                </div>
 
-                </f:else>
-            </f:if>
+            </f:then>
+            <f:else>
 
-        </f:else>
-    </f:if>
-</f:spaceless>
+                <a id="{configuration.id}" class="pp-link-target"></a>
+                <f:if condition="{configuration.spaceBefore} !== none">
+                    <div class="frame-space-before frame-space-before-{configuration.spaceBefore}"></div>
+                </f:if>
+                {content -> f:format.raw()}
+                <f:if condition="{configuration.spaceAfter} !== none">
+                    <div class="frame-space-after frame-space-after-{configuration.spaceAfter}"></div>
+                </f:if>
+                <f:if condition="{configuration.ppData.optimizeLinkTargets}">
+                    <f:asset.script identifier="ppLinkTarget" src="EXT:pizpalue/Resources/Public/JavaScript/Dist/pizpalue.linktarget.min.js" />
+                </f:if>
+
+            </f:else>
+        </f:if>
+
+    </f:else>
+</f:if>
 </html>
