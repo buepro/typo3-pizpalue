@@ -147,10 +147,9 @@
             if (cookieconsent && targetOffset !== 0) {
                 targetOffset -= cookieconsent.getBoundingClientRect().height;
             }
-            window.scroll({
-                top: targetOffset,
-                behavior: "smooth"
-            });
+            this.element.setAttribute('tabindex', '-1');
+            this.element.focus();
+            scroll({ top: targetOffset, behavior: "smooth" });
         },
     };
 

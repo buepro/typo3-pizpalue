@@ -6,18 +6,16 @@ pp.domReady(() => {
     /*
      * Smooth Sroll
      */
-    const ankers = document.querySelectorAll('a[href*="#"]:not([href^="http"]):not([href$="#"])');
+    const ankers = document.querySelectorAll('a[href*="#"]:not([href$="#"])');
     ankers.forEach(function (anker) {
         anker.addEventListener('click', function (event) {
-            event.preventDefault();
             const element = event.currentTarget;
             if (location.pathname.replace(/^\//, '') === element.pathname.replace(/^\//, '')
-                && location.hostname === element.hostname
-                && element.dataset.toggle === undefined
-                && element.dataset.slide === undefined) {
+                && location.hostname === element.hostname) {
                 let target = document.querySelectorAll(element.hash.replace(/(:|\.|\[|\]|,|=|\/)/g, '\\$1'));
                 target = target.length && target || document.querySelectorAll('[name=' + element.hash.slice(1) + ']');
                 if (target.length) {
+                    event.preventDefault();
                     target[0].ppShowScroll();
                     return false;
                 }
