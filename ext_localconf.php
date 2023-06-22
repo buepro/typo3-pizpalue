@@ -56,20 +56,9 @@ defined('TYPO3') || die('Access denied.');
  */
 (static function () {
     // Initialization
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
     $pizpalueConfiguration = (\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
     ))->get('pizpalue');
-
-    // Register icons
-    $icons = ['modal-dialog', 'list-categorized-content', 'schema', 'picoverlay', 'emphasize-media', 'card'];
-    foreach ($icons as $icon) {
-        $iconRegistry->registerIcon(
-            'content-pizpalue-' . $icon,
-            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-            ['source' => 'EXT:pizpalue/Resources/Public/Icons/ContentElements/' . $icon . '.svg']
-        );
-    }
 
     // Add page tsconfig
     if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
@@ -96,9 +85,6 @@ defined('TYPO3') || die('Access denied.');
  * Configure system extensions
  */
 (static function () {
-    // Initialization
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-
     /**
      * EXT:core
      * Register TelephoneLinkHandler and EmailLinkHandler
@@ -119,13 +105,6 @@ defined('TYPO3') || die('Access denied.');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '@import "EXT:pizpalue/Sysext/backend/Configuration/TsConfig/page.tsconfig"'
         );
-        foreach (['frame', 'no-frame'] as $icon) {
-            $iconRegistry->registerIcon(
-                'pizpalue-' . $icon,
-                \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-                ['source' => sprintf('EXT:pizpalue/Resources/Public/Sysext/backend/Icons/%s.svg', $icon)]
-            );
-        }
     }
 
     /**
@@ -234,16 +213,6 @@ defined('TYPO3') || die('Access denied.');
  * Various
  */
 (static function () {
-    /**
-     * Register icons (used in VersionToolBarItem)
-     */
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-    $iconRegistry->registerIcon(
-        'systeminformation-pizpalue',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:pizpalue/Resources/Public/Icons/SystemInformation/pizpalue.svg']
-    );
-
     /**
      * RTE: Add default configuration for pizpalue
      */
