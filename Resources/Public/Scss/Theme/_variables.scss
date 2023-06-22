@@ -17,7 +17,7 @@ $headings-color: $body-color !default;
 // Headings contrast color
 // --------------------------------------------------
 $pp-headings-yiq: color-contrast($body-color);
-@if $headings-color {
+@if $headings-color and $headings-color != inherit {
     $pp-headings-yiq: color-contrast($headings-color);
 }
 

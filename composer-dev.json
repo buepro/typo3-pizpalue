@@ -33,7 +33,7 @@
 		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
 	},
 	"require": {
-		"bk2k/bootstrap-package": "^13.0.2",
+		"bk2k/bootstrap-package": "dev-main || 13.0.3",
 		"buepro/typo3-pvh": "^2.0",
 		"typo3/cms-core": "^12.3"
 	},
@@ -82,6 +82,10 @@
 		"user_pizpalue": {
 			"type": "path",
 			"url": "/mnt/public/package/typo3-user_pizpalue"
+		},
+		"bootstrap_package": {
+			"type": "path",
+			"url": "/mnt/public/package/bootstrap_package"
 		}
 	},
 	"minimum-stability": "dev",
