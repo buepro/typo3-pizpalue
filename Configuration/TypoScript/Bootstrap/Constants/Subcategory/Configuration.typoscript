@@ -6,9 +6,4 @@ plugin.bootstrap_package.settings.scss {
     pp-bootstrap-version = 5
     # Enable presets in extension user_pizpalue. See `EXT:pizpalue/Resources/Public/Scss/_presets.scss`
     pp-enable-user-presets = false
-
-    #---------------------------------------------------------#
-    # Photoswipe
-    #---------------------------------------------------------#
-    pswp__assets-path = ../Images/PhotoSwipe/
 }
