@@ -24,7 +24,11 @@
     @if ($enable-rounded) {
         --frame-embedded-border-radius: #{$frame-embedded-border-radius};
     }
-    --pp-frame-headings-color: #{$headings-color};
+    @if $headings-color and $headings-color != inherit {
+        --pp-frame-headings-color: #{$headings-color};
+    } @else {
+        --pp-frame-headings-color: currentColor;
+    }
     --pp-frame-link-decoration: null;
     --pp-frame-link-decoration-style: null;
     --pp-frame-link-weight: null;

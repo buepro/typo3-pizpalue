@@ -17,7 +17,7 @@ $headings-color: $body-color !default;
 // Headings contrast color
 // --------------------------------------------------
 $pp-headings-yiq: color-contrast($body-color);
-@if $headings-color and $headings-color != inherit {
+@if $headings-color and $headings-color != inherit and $headings-color != currentColor {
     $pp-headings-yiq: color-contrast($headings-color);
 }
 
@@ -55,6 +55,10 @@ $footer-sections: map-merge($footer-sections, (
 // Frame Backgrounds
 // @see pp-make-link, pp-make-background
 // --------------------------------------------------
+$_default-headings-color: currentColor;
+@if $headings-color and $headings-color != inherit {
+    $_default-headings-color: $headings-color;
+}
 $pp-frame-background-defaults: () !default;
 $pp-frame-background-defaults: map_merge(('link-decoration': 'underline', 'link-decoration-style': 'dotted', 'link-weight': null), $pp-frame-background-defaults);
 $pp-frame-background-primary: () !default;
@@ -70,7 +74,7 @@ $pp-frame-background-quaternary: map-merge(pp-get-frame-background-settings($qua
 $pp-frame-background-light: () !default;
 $pp-frame-background-light: map-merge(pp-get-frame-background-settings($light, (
     'color':                    $body-color,
-    'headings-color':           $headings-color,
+    'headings-color':           $_default-headings-color,
     'link-color':               $link-color,
     'link-hover-color':         $link-hover-color,
     'link-decoration':          'none',
