@@ -30,6 +30,7 @@
 @mixin pp-set-frame-background-variables($settings) {
     @if (map-get($settings, 'color')) {
         --frame-color: #{map-get($settings, 'color')};
+        --frame-color-rgb: #{to-rgb(map-get($settings, 'color'))};
     }
     @if (map-get($settings, 'background')) {
         --frame-background: #{map-get($settings, 'background')};
@@ -37,14 +38,23 @@
     }
     @if (map-get($settings, 'link-color')) {
         --frame-link-color: #{map-get($settings, 'link-color')};
+        --frame-link-color-rgb: #{to-rgb(map-get($settings, 'link-color'))};
     }
     @if (map-get($settings, 'link-hover-color')) {
         --frame-link-hover-color: #{map-get($settings, 'link-hover-color')};
+        --frame-link-hover-color-rgb: #{to-rgb(map-get($settings, 'link-hover-color'))};
     }
     @if (map-get($settings, 'headings-color')) {
         --pp-frame-headings-color: #{map-get($settings, 'headings-color')};
+        $_headings-color: map-get($settings, 'headings-color');
+        @if $_headings-color and $_headings-color != inherit and $_headings-color != currentColor {
+            --pp-frame-headings-color-rgb: #{to-rgb(map-get($settings, 'headings-color'))};
+        } @else {
+            --pp-frame-headings-color-rgb: var(--frame-color-rgb);
+        }
     } @else {
         --pp-frame-headings-color: var(--frame-color);
+        --pp-frame-headings-color-rgb: var(--frame-color-rgb);
     }
     @if (map-get($settings, 'link-decoration')) {
         --pp-frame-link-decoration: #{map-get($settings, 'link-decoration')};
