@@ -58,7 +58,7 @@
                 let closedHeight = getClosedHeight(),
                     button = element.querySelector('.ppc-more'),
                     toggleBarDisplay = "none";
-                if (element.firstChild.getBoundingClientRect().height > closedHeight) {
+                if (element.firstElementChild.getBoundingClientRect().height > closedHeight) {
                     toggleBarDisplay = "block";
                     if (button.classList.contains('open')) {
                         element.style.height = element.firstChild.getBoundingClientRect().height + 'px';
@@ -93,7 +93,7 @@
                 element.addEventListener('click', (e) => {
                     let button = e.currentTarget,
                         item = button.parentElement,
-                        height = item.firstChild.getBoundingClientRect().height;
+                        height = item.firstElementChild.getBoundingClientRect().height;
                     if (button.classList.contains('open')) {
                         item.style.height = getClosedHeight() + 'px';
                         item.querySelector('.ppc-bottom').style.display = 'block';
