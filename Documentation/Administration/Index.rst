@@ -26,6 +26,7 @@ Extension                        Version tested
 container_elements               5.0.0
 easyconf                         2.0.0
 news                             11.0.0
+tt_address                       8.0.1
 ================================ ================
 
 .. _admin_installation_static_templates:

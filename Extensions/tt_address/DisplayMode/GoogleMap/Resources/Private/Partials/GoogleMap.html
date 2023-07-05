@@ -73,7 +73,7 @@
     <f:spaceless>
         <div class="pp-ttaddress-mapdata">
             <f:for each="{addresses}" as="address">
-                {f:uri.action(action: 'show', arguments: {address: address}, pageUid: settings.singlePid)
+                {f:uri.action(action: 'show', arguments: {address: address}, pageUid: '{settings.singlePid as integer}')
                     -> f:variable(name: 'addressUri')
                     -> f:if(condition: settings.singlePid)}
                 <f:if condition="{address.image}">
@@ -88,11 +88,11 @@
     <f:if condition="{settings.pizpalue.siteMode} == 1 || {settings.pizpalue.siteMode} == 2">
         <f:then>
             {f:asset.script(identifier: 'ppTtAddressGoogleMap',
-                src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Src/googlemap.js')}
+                src: 'EXT:pizpalue/Resources/Public/Extension/tt_address/DisplayMode/GoogleMap/JavaScript/Src/googlemap.js')}
         </f:then>
         <f:else>
             {f:asset.script(identifier: 'ppTtAddressGoogleMap',
-                src: 'EXT:pizpalue/Extensions/tt_address/DisplayMode/GoogleMap/Resources/Public/JavaScript/Dist/googlemap.min.js')}
+                src: 'EXT:pizpalue/Resources/Public/Extension/tt_address/DisplayMode/GoogleMap/JavaScript/Dist/googlemap.min.js')}
         </f:else>
     </f:if>
     {f:asset.script(identifier: 'ppGoogleMapsApi', defer: 1, async: 1,
