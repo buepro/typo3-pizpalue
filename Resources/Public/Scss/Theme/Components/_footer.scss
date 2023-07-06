@@ -27,7 +27,7 @@
 // Reveal footer
 // --------------------------------------------------
 .pp-reveal-footer {
-    > header, > div:not(#cookieconsent), > nav {
+    > header, > div:not(#cookieconsent), > main, > nav {
         z-index: 10;
         position: relative;
     }
