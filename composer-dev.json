@@ -33,7 +33,7 @@
 		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
 	},
 	"require": {
-		"bk2k/bootstrap-package": "dev-main || ~13.0.3",
+		"bk2k/bootstrap-package": "~13.0.3 || dev-main",
 		"buepro/typo3-pvh": "^2.0",
 		"typo3/cms-core": "^12.3"
 	},
@@ -45,8 +45,8 @@
 		"friendsofphp/php-cs-fixer": "^3.14",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
 		"friendsoftypo3/tt-address": "^8.0.1",
-		"georgringer/news": "^11",
 		"georgringer/eventnews": "compat-12-dev",
+		"georgringer/news": "^11",
 		"overtrue/phplint": "^3.2.0 || ^4.3.0 || ^5.3.0",
 		"phpspec/prophecy-phpunit": "^2.0",
 		"phpstan/phpstan": "^1.8.5",
@@ -120,7 +120,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "15.2.x-dev"
+			"dev-main": "15.3.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",

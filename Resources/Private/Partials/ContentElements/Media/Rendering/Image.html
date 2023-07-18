@@ -2,6 +2,7 @@
       xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <picture>
+    {f:format.date(date: 'now', format: '?U') -> f:variable(name: '_reloadUrlSegment') -> f:if(condition: data.tx_pizpalue_image_reload_url_segment)}
     <f:for each="{variants}" key="name" as="variant">
         <f:variable name="breakpoint">{variant.breakpoint as integer}</f:variable>
         <f:variable name="width">{variant.width as integer}</f:variable>
@@ -24,10 +25,10 @@
                         <f:then>
                             <f:variable name="sizeHeight">{sizeConfig.multiplier as float}</f:variable>
                             <f:variable name="sizeHeight">{sizeHeight * height}</f:variable>
-                            <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, width: '{sizeWidth}c', height: '{sizeHeight}c')}</f:variable>
+                            <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, width: '{sizeWidth}c', height: '{sizeHeight}c')}{_reloadUrlSegment}</f:variable>
                         </f:then>
                         <f:else>
-                            <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, maxWidth: sizeWidth)}</f:variable>
+                            <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, maxWidth: sizeWidth)}{_reloadUrlSegment}</f:variable>
                         </f:else>
                     </f:if>
                     <f:variable name="srcset">{srcset}{sizeUrl} {sizeKey}{f:if(condition: iteration.isLast, else: ',')}</f:variable>
@@ -45,10 +46,10 @@
     </f:if>
     <f:if condition="{defaultHeight}">
         <f:then>
-            <f:variable name="src" value="{f:uri.image(image: file, cropVariant: 'default', width: defaultWidth, height: defaultHeight)}" />
+            <f:variable name="src" value="{f:uri.image(image: file, cropVariant: 'default', width: defaultWidth, height: defaultHeight)}{_reloadUrlSegment}" />
         </f:then>
         <f:else>
-            <f:variable name="src" value="{f:uri.image(image: file, cropVariant: 'default', width: defaultWidth)}" />
+            <f:variable name="src" value="{f:uri.image(image: file, cropVariant: 'default', width: defaultWidth)}{_reloadUrlSegment}" />
         </f:else>
     </f:if>
     <f:variable name="finalWidth" value="{bk2k:data.imageInfo(src: src, property: 'width')}" />

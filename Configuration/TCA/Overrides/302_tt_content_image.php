@@ -62,6 +62,16 @@ defined('TYPO3') or die('Access denied.');
                 'rows' => 6,
             ],
         ],
+        'tx_pizpalue_image_reload_url_segment' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_reload_url_segment',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_reload_url_segment.description',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'default' => 0,
+            ],
+        ],
     ];
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
@@ -89,5 +99,11 @@ defined('TYPO3') or die('Access denied.');
         'tx_pizpalue_image_variants',
         'list',
         'after: list_type'
+    );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content',
+        'imagelinks',
+        'tx_pizpalue_image_reload_url_segment',
+        'after: image_zoom'
     );
 })();

@@ -134,6 +134,12 @@
 			<trans-unit id="tx_pizpalue_ttc.image_variants.page">
 				<source>Full page width</source>
 			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.image_reload_url_segment">
+				<source>Reload url segment</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_ttc.image_reload_url_segment.description">
+				<source>Activate to add a cache dependent url segment to the image url. This ensures browsers reload the image even if its name didn't change on the server.</source>
+			</trans-unit>
 
 			<trans-unit id="tx_pizpalue_ttc.classes.pp-row-height">
 				<source>Row height</source>
