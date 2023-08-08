@@ -1,10 +1,10 @@
 @font-face {
     font-display: swap;
     font-family: "pizpalueicon";
-    src: url("./pizpalueicon.eot?645cddf13ab0df716aca8add135e2b45#iefix") format("embedded-opentype"),
-url("./pizpalueicon.woff2?645cddf13ab0df716aca8add135e2b45") format("woff2"),
-url("./pizpalueicon.woff?645cddf13ab0df716aca8add135e2b45") format("woff"),
-url("./pizpalueicon.ttf?645cddf13ab0df716aca8add135e2b45") format("truetype");
+    src: url("./pizpalueicon.eot?b330f83801c6ce8b86f20ca063442c13#iefix") format("embedded-opentype"),
+url("./pizpalueicon.woff2?b330f83801c6ce8b86f20ca063442c13") format("woff2"),
+url("./pizpalueicon.woff?b330f83801c6ce8b86f20ca063442c13") format("woff"),
+url("./pizpalueicon.ttf?b330f83801c6ce8b86f20ca063442c13") format("truetype");
 }
 
 .ppicon::before, .bootstrappackageicon::before, .glyphicon::before {
@@ -26,7 +26,6 @@ url("./pizpalueicon.ttf?645cddf13ab0df716aca8add135e2b45") format("truetype");
 .ppicon-file-video::before, .bootstrappackageicon-file-video::before, .glyphicon-file-video::before { content: "\f104"; }
 .ppicon-file::before, .bootstrappackageicon-file::before, .glyphicon-file::before { content: "\f105"; }
 .ppicon-github::before, .bootstrappackageicon-github::before, .glyphicon-github::before { content: "\f106"; }
-.ppicon-googleplus::before, .bootstrappackageicon-googleplus::before, .glyphicon-googleplus::before { content: "\f107"; }
 .ppicon-instagram::before, .bootstrappackageicon-instagram::before, .glyphicon-instagram::before { content: "\f108"; }
 .ppicon-linkedin::before, .bootstrappackageicon-linkedin::before, .glyphicon-linkedin::before { content: "\f109"; }
 .ppicon-twitter::before, .bootstrappackageicon-twitter::before, .glyphicon-twitter::before { content: "\f10a"; }
@@ -64,3 +63,4 @@ url("./pizpalueicon.ttf?645cddf13ab0df716aca8add135e2b45") format("truetype");
 .ppicon-folder-open::before, .bootstrappackageicon-folder-open::before, .glyphicon-folder-open::before { content: "\f112"; }
 .ppicon-earth-europe-solid::before, .bootstrappackageicon-earth-europe-solid::before, .glyphicon-earth-europe-solid::before { content: "\f113"; }
 .ppicon-globe-solid::before, .bootstrappackageicon-globe-solid::before, .glyphicon-globe-solid::before { content: "\f114"; }
+.ppicon-search::before, .bootstrappackageicon-search::before, .glyphicon-search::before { content: "\f115"; }
