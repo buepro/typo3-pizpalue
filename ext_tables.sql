@@ -44,7 +44,6 @@ CREATE TABLE tx_easyconf_configuration (
 	menu_scroll_page_uid varchar(100) DEFAULT '' NOT NULL,
 	social_channel_facebook varchar(100) DEFAULT '' NOT NULL,
 	social_channel_github varchar(100) DEFAULT '' NOT NULL,
-	social_channel_googleplus varchar(100) DEFAULT '' NOT NULL,
 	social_channel_instagram varchar(100) DEFAULT '' NOT NULL,
 	social_channel_linkedin varchar(100) DEFAULT '' NOT NULL,
 	social_channel_pinterest varchar(100) DEFAULT '' NOT NULL,

@@ -30,12 +30,6 @@ page.theme {
                 url = https://github.com/buepro/typo3-pizpalue
             }
 
-            googleplus {
-                label =
-                # cat=6050/2910/05_googleplus_url; type=string; label=Google+: Insert the full account url
-                url =
-            }
-
             linkedin {
                 label = LinkedIn
                 # cat=6050/2910/06_linkedin_url; type=string; label=LinkedIn: Insert the full account url

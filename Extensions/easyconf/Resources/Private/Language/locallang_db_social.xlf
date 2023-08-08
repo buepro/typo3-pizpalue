@@ -23,9 +23,6 @@
 			<trans-unit id="social_channel_github" resname="social_channel_github">
 				<source>Github</source>
 			</trans-unit>
-			<trans-unit id="social_channel_googleplus" resname="social_channel_googleplus">
-				<source>Google+</source>
-			</trans-unit>
 			<trans-unit id="social_channel_linkedin" resname="social_channel_linkedin">
 				<source>LinkedIn</source>
 			</trans-unit>
