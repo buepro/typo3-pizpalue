@@ -73,7 +73,7 @@
     .element-header, .element-subheader {
         color: var(--pp-frame-headings-color);
     }
-    a:not(.btn) {
+    a:not(.btn, .page-link) {
         color: var(--frame-link-color);
         font-weight: var(--pp-frame-link-weight);
         text-decoration: var(--pp-frame-link-decoration);
