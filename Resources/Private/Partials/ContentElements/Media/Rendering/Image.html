@@ -25,13 +25,22 @@
                         <f:then>
                             <f:variable name="sizeHeight">{sizeConfig.multiplier as float}</f:variable>
                             <f:variable name="sizeHeight">{sizeHeight * height}</f:variable>
-                            <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, width: '{sizeWidth}c', height: '{sizeHeight}c')}{_reloadUrlSegment}</f:variable>
+                            <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, width: '{sizeWidth}c', height: '{sizeHeight}c')}</f:variable>
                         </f:then>
                         <f:else>
-                            <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, maxWidth: sizeWidth)}{_reloadUrlSegment}</f:variable>
+                            <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, maxWidth: sizeWidth)}</f:variable>
+                            <f:comment>
+                                -----------------------------------------------------------------------------
+                                Using maxWidth doesn't work always, so we use the width property as fallback.
+                                -----------------------------------------------------------------------------
+                            </f:comment>
+                            <f:variable name="_sizedWidth">{bk2k:data.imageInfo(src: sizeUrl, property: 'width')}</f:variable>
+                            <f:if condition="{_sizedWidth as integer} > {sizeWidth}">
+                                <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, width: sizeWidth)}</f:variable>
+                            </f:if>
                         </f:else>
                     </f:if>
-                    <f:variable name="srcset">{srcset}{sizeUrl} {sizeKey}{f:if(condition: iteration.isLast, else: ',')}</f:variable>
+                    <f:variable name="srcset">{srcset}{sizeUrl}{_reloadUrlSegment} {sizeKey}{f:if(condition: iteration.isLast, else: ',')}</f:variable>
                 </f:for>
             </f:if>
             <source data-variant="{name}" {f:if(condition: sizeHeight, then: 'data-width="{width}" data-height="{sizeHeight}"', else: 'data-maxwidth="{width}"')} {mediaQuery->f:format.raw()} srcset="{srcset}">
