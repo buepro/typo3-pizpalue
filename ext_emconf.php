@@ -11,7 +11,7 @@ $EM_CONF[$_EXTKEY] = [
     'title'            => 'Pizpalue template',
     'description'      => 'Extension to create websites using bootstrap. It builds upon the bootstrap_package from Benjamin Kott and increases functionality by supporting the following extensions:  container_elements, news, eventnews, tt_address',
     'category'         => 'template',
-    'version'          => '15.3.0-dev',
+    'version'          => '16.0.0-dev',
     'state'            => 'stable',
     'clearCacheOnLoad' => 1,
     'author'           => 'Roman Büchler',
@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints'      => [
         'depends'   => [
             'typo3'                 => '11.5.0-12.99.99',
-            'bootstrap_package'     => '13.0.3-13.99.99',
+            'bootstrap_package'     => '14.0.7-14.99.99',
             'pvh'                   => '2.0.0-2.99.99'
         ],
         'conflicts' => [

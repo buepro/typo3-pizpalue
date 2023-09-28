@@ -33,7 +33,7 @@
 		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
 	},
 	"require": {
-		"bk2k/bootstrap-package": "~13.0.3 || dev-main",
+		"bk2k/bootstrap-package": "~14.0.7 || dev-main",
 		"buepro/typo3-pvh": "^2.0",
 		"typo3/cms-core": "^12.3"
 	},
@@ -80,9 +80,13 @@
 			"type": "path",
 			"url": "/mnt/public/package/eventnews"
 		},
-		"user_pizpalue": {
+		"pizpalue_distribution": {
 			"type": "path",
 			"url": "/mnt/public/package/typo3-user_pizpalue"
+		},
+		"user_pizpalue": {
+			"type": "path",
+			"url": "/mnt/public/package/typo3-pizpalue_distribution"
 		},
 		"bootstrap_package": {
 			"type": "path",
@@ -120,7 +124,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "15.3.x-dev"
+			"dev-main": "16.0.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",
