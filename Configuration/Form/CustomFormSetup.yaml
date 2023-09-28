@@ -10,6 +10,7 @@ TYPO3:
           formElementsDefinition:
             Form:
               renderingOptions:
+                templateVariant: version2
                 translation:
                   translationFiles:
                     210: 'EXT:pizpalue/Resources/Private/Language/Forms.xlf'
