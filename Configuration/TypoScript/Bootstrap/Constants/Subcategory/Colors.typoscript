@@ -92,7 +92,7 @@ plugin.bootstrap_package.settings.scss {
     footer-color = color-contrast($footer-bg)
 
     # cat=6040/1035/1084; type=string; label=Footer link color
-    footer-link-color = mix($primary,$footer-color,30%)
+    footer-link-color = a11y-color($footer-bg, $link-color)
 
     # cat=6040/1035/1086; type=string; label=Footer link hover color
     footer-link-hover-color = lighten($footer-link-color, 10%)
@@ -104,7 +104,7 @@ plugin.bootstrap_package.settings.scss {
     footer-meta-color = color-contrast($footer-meta-bg)
 
     # cat=6040/1035/1094; type=string; label=Footer meta section link color
-    footer-meta-link-color = mix($primary,$footer-meta-color,30%)
+    footer-meta-link-color = a11y-color($footer-meta-bg, $link-color)
 
     # cat=6040/1035/1096; type=string; label=Footer meta section link hover color
     footer-meta-link-hover-color = lighten($footer-meta-link-color, 10%)

@@ -14,7 +14,7 @@
 // --------------------------------------------------
 .footer-section {
     color: var(--frame-color);
-    a {
+    a:not(.btn) {
         color: var(--frame-link-color);
         &:hover {
             color: var(--frame-link-hover-color);
