@@ -53,7 +53,7 @@ class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements Upgr
     /**
      * @var string
      */
-    protected $title = 'Ext:pizpalue: Migrate the content element "Additional classes" field';
+    protected $title = 'EXT:pizpalue: Migrate the content element "Additional classes" field';
 
     /**
      * @var string

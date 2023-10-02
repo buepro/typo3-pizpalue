@@ -21,7 +21,7 @@ class ContentElementXxlUpdate extends AbstractUpdate implements UpgradeWizardInt
     /**
      * @var string
      */
-    protected $title = 'Ext:pizpalue: Migrate the "Scaling" and "Aspect ratio" fields to Bootstrap 5';
+    protected $title = 'EXT:pizpalue: Migrate the "Scaling" and "Aspect ratio" fields to Bootstrap 5';
 
     /**
      * @var string

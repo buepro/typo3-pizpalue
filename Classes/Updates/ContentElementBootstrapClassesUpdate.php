@@ -50,7 +50,7 @@ class ContentElementBootstrapClassesUpdate extends AbstractUpdate implements Upg
     /**
      * @var string
      */
-    protected $title = 'Ext:pizpalue: Migrate the "Additional classes" field to Bootstrap 5';
+    protected $title = 'EXT:pizpalue: Migrate the "Additional classes" field to Bootstrap 5';
 
     /**
      * @var string

@@ -1,21 +1,16 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
-      data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:comment>
-    The subheader is only rendered in case the header is set.
-    @see 1602678897780
+    The subheading is only rendered in case the header is set.
+    The heading fields may contain span-, i- or b-tags.
 </f:comment>
-{f:variable(name: '_headerClasses', value: data.tx_pizpalue_header_class) -> f:if(condition: '{data.tx_pizpalue_header_class} != "none"')}
-{pvh:format.trim(content: '{_headerClasses} {settings.header.class}') -> f:variable(name: '_headerClasses')}
-{f:variable(name: '_subheaderClasses', value: data.tx_pizpalue_subheader_class) -> f:if(condition: '{data.tx_pizpalue_subheader_class} != "none"')}
-{pvh:format.trim(content: '{_subheaderClasses} {settings.subheader.class}') -> f:variable(name: '_subheaderClasses')}
 <f:if condition="{data.header_layout} != 100">
     <f:if condition="{data.header} || {data.date}">
-        <header class="frame-header">
+        <div class="frame-header">
             <f:render partial="Header/Header" arguments="{
                 header: '{data.header -> f:format.html() -> f:format.stripTags(allowedTags: \'<span><i><b>\')}',
                 layout: data.header_layout,
-                class: _headerClasses,
+                class: settings.header.class,
+                displayClass: data.header_class,
                 positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')}',
                 link: data.header_link,
                 default: settings.header.defaultHeaderType}" />
@@ -23,7 +18,8 @@
                 <f:render partial="Header/SubHeader" arguments="{
                     subheader: '{data.subheader -> f:format.html() -> f:format.stripTags(allowedTags: \'<span><i><b>\')}',
                     layout: data.header_layout,
-                    class: _subheaderClasses,
+                    class: settings.subheader.class,
+                    displayClass: data.subheader_class,
                     positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')}',
                     default: settings.header.defaultHeaderType}" />
             </f:if>
@@ -31,7 +27,7 @@
                 date: data.date,
                 format: settings.header.date.format,
                 positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')}'}" />
-        </header>
+        </div>
     </f:if>
 </f:if>
 </html>

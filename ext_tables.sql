@@ -4,8 +4,6 @@ CREATE TABLE pages (
 );
 
 CREATE TABLE tt_content (
-	tx_pizpalue_header_class varchar(255) DEFAULT '' NOT NULL,
-	tx_pizpalue_subheader_class varchar(255) DEFAULT '' NOT NULL,
 	layout varchar(255) DEFAULT '' NOT NULL,
 	tx_pizpalue_layout_breakpoint varchar(15) DEFAULT '' NOT NULL,
 	tx_pizpalue_inner_space_before_class varchar(255) DEFAULT '' NOT NULL,
