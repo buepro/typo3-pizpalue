@@ -10,26 +10,35 @@
 namespace Buepro\Pizpalue\Tests\Functional\ViewHelpers\Render\Bootstrap;
 
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
+use Buepro\Pizpalue\Tests\Functional\FunctionalFrontendTestCase;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
-use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
-class ColumnViewHelperTest extends FunctionalTestCase
+class ColumnViewHelperTest extends FunctionalFrontendTestCase
 {
     private const TEMPLATE_PATH = 'EXT:pizpalue/Tests/Functional/ViewHelpers/Fixtures/Render/Bootstrap/Column.html';
 
     /**
-     * @var bool Speed up this test case, it needs no database
-     */
-    protected bool $initializeDatabase = false;
-
-    /**
      * @var non-empty-string[]
      */
-    protected array $testExtensionsToLoad = [
-        'typo3conf/ext/bootstrap_package',
-        'typo3conf/ext/pizpalue',
+    protected array $coreExtensionsToLoad = [
+        'impexp',
+        'seo',
     ];
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        foreach (['pages', 'sys_template', 'tt_content'] as $table) {
+            $this->importCSVDataSet(sprintf(
+                '%s/db_table_%s.csv',
+                __DIR__ . '/../../../Fixtures',
+                $table
+            ));
+        }
+        $this->setupFrontendSite(1);
+        $this->setupFrontendController(1);
+    }
 
     /** @test */
     public function variantsGetModified(): void

@@ -32,15 +32,6 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
         'seo',
     ];
 
-    /**
-     * @var non-empty-string[]
-     */
-    protected array $testExtensionsToLoad = [
-        'typo3conf/ext/pvh',
-        'typo3conf/ext/bootstrap_package',
-        'typo3conf/ext/pizpalue',
-    ];
-
     protected Connection $dbConnection;
 
     protected array $pageData = [
@@ -126,9 +117,8 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
         parent::setUp();
         foreach (['pages', 'sys_template', 'tt_content'] as $table) {
             $this->importCSVDataSet(sprintf(
-                '%s%s/db_table_%s.csv',
-                ORIGINAL_ROOT,
-                'typo3conf/ext/pizpalue/Tests/Functional/Fixtures',
+                '%s/db_table_%s.csv',
+                __DIR__ . '/../Fixtures',
                 $table
             ));
         }

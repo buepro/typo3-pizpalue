@@ -33,6 +33,7 @@ class FunctionalFrontendTestCase extends FunctionalTestCase
     protected array $testExtensionsToLoad = [
         'typo3conf/ext/bootstrap_package',
         'typo3conf/ext/pizpalue',
+        'typo3conf/ext/pvh',
     ];
 
     protected function setupFrontendSite(int $pageId = 1, array $additionalLanguages = []): void
@@ -84,12 +85,13 @@ class FunctionalFrontendTestCase extends FunctionalTestCase
      */
     protected function setupFrontendController(int $pageUid = 1): void
     {
-        // $GLOBALS['TYPO3_REQUEST'] is required in the frontend controller
+        GeneralUtility::makeInstance(CacheManager::class)->flushCachesInGroup('pages');
         $request = (new ServerRequest())
             ->withAttribute('applicationType', SystemEnvironmentBuilder::REQUESTTYPE_FE)
             ->withQueryParams(['id' => $pageUid]);
         $frontendUser = GeneralUtility::makeInstance(FrontendUserAuthentication::class);
         $request = $request->withAttribute('frontend.user', $frontendUser);
+        // Required in the frontend controller
         $GLOBALS['TYPO3_REQUEST'] = $request;
 
         /** @var Context $context */
@@ -116,6 +118,8 @@ class FunctionalFrontendTestCase extends FunctionalTestCase
         // Used for TYPO3 v12, where method has been dropped.
         if (method_exists($controller, 'getConfigArray')) {
             $controller->getConfigArray($request);
+        } elseif (method_exists($controller, 'getFromCache')) {
+            $GLOBALS['TYPO3_REQUEST'] = $controller->getFromCache($request);
         }
         $GLOBALS['TSFE'] = $controller;
     }
