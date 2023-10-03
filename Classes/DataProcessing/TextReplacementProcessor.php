@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace Buepro\Pizpalue\DataProcessing;
 
+use BK2K\BootstrapPackage\Utility\TypoScriptUtility;
 use TYPO3\CMS\Core\Resource\FileReference;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
@@ -53,7 +54,7 @@ class TextReplacementProcessor implements DataProcessorInterface
             $text = $this->replaceProcessedData($text, $processedData, $cObj);
             $text = $this->replaceData($text, $cObj);
             $text = $this->replaceParentData($text, $cObj);
-            $text = $this->replaceConstants($text);
+            $text = $this->replaceConstants($text, $cObj);
             $text = $this->replaceFunction($text);
             $processedData['data'][$fieldName] = $text;
         }
@@ -67,19 +68,12 @@ class TextReplacementProcessor implements DataProcessorInterface
      * In case a TS constant definition `myext.name = Roman` exists 'Hi {$myext.name}' would become 'Hi Roman'.
      *
      * @param string $text
+     * @param ContentObjectRenderer $cObj
      * @return string
      */
-    private function replaceConstants(string $text): string
+    private function replaceConstants(string $text, ContentObjectRenderer $cObj): string
     {
-        // Get constants
-        if (
-            $GLOBALS['TSFE']->tmpl->flatSetup === null
-            || !is_array($GLOBALS['TSFE']->tmpl->flatSetup ?? false)
-            || count($GLOBALS['TSFE']->tmpl->flatSetup) === 0
-        ) {
-            $GLOBALS['TSFE']->tmpl->generateConfig();
-        }
-        $constants = $GLOBALS['TSFE']->tmpl->flatSetup;
+        $constants = TypoScriptUtility::getConstants($cObj->getRequest());
 
         // Replace constants
         if ((int)preg_match_all('/{\$([\w.\-]+)}/', $text, $matches) > 0) {
