@@ -64,7 +64,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
             ],
         ],
         'extrasmall' => [
-            'width' => 374,
+            'width' => 576,
             'sizes' => [
                 '1x' => [
                     'multiplier' => 1

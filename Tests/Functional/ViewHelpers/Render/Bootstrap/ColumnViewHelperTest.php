@@ -9,6 +9,7 @@
 
 namespace Buepro\Pizpalue\Tests\Functional\ViewHelpers\Render\Bootstrap;
 
+use BK2K\BootstrapPackage\Utility\TypoScriptUtility;
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use Buepro\Pizpalue\Tests\Functional\FunctionalFrontendTestCase;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -46,7 +47,8 @@ class ColumnViewHelperTest extends FunctionalFrontendTestCase
         $doc = $this->getDOMDocument();
         $variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
         $variantsModifierStack->resetStack();
-        $initialVariants = $variantsModifierStack->getVariants([]);
+        $initialVariants = $this->getReducedVariantsFromTypoScript();
+
         $outerVariants = array_replace_recursive($initialVariants, [
             'default' => ['width' => (int)ceil($initialVariants['default']['width'] / 12 * 8)],
             'xlarge' => ['width' => (int)ceil($initialVariants['xlarge']['width'] / 12 * 8)],
@@ -100,6 +102,35 @@ class ColumnViewHelperTest extends FunctionalFrontendTestCase
     private function getVariants(\DOMDocument $doc, string $id): array
     {
         $json = $doc->getElementById($id)->textContent ?? '';
-        return is_array($result = json_decode($json, true, 512, JSON_THROW_ON_ERROR)) ? $result : [];
+        $extendedVariants = is_array($result = json_decode($json, true, 512, JSON_THROW_ON_ERROR)) ? $result : [];
+        return $this->getReducedVariants($extendedVariants);
+    }
+
+    private function getReducedVariants(array $extendedVariants): array
+    {
+        return array_map(static function (array $variant): array {
+            $result = [];
+            if (isset($variant['breakpoint'])) {
+                $result['breakpoint'] = $variant['breakpoint'];
+            }
+            if (isset($variant['width'])) {
+                $result['width'] = $variant['width'];
+            }
+            return $result;
+        }, $extendedVariants);
+    }
+
+    private function getReducedVariantsFromTypoScript(): array
+    {
+        $tsVariantsWithDotInKey = TypoScriptUtility::unflatten(TypoScriptUtility::getSetup($GLOBALS['TYPO3_REQUEST']))
+        ['lib']['']['contentElement.']['settings.']['responsiveimages.']['variants.'] ?? [];
+        $initialVariants = [];
+        foreach ($tsVariantsWithDotInKey as $keyWithDot => $value) {
+            $value['breakpoint'] = (int) $value['breakpoint'];
+            $value['width'] = (int) $value['width'];
+            $initialVariants[trim($keyWithDot, '.')] = $value;
+        }
+        unset($initialVariants['extrasmall']['breakpoint']);
+        return $this->getReducedVariants($initialVariants);
     }
 }
