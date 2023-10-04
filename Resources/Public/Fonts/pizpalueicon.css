@@ -1,10 +1,10 @@
 @font-face {
     font-display: swap;
     font-family: "pizpalueicon";
-    src: url("./pizpalueicon.eot?b330f83801c6ce8b86f20ca063442c13#iefix") format("embedded-opentype"),
-url("./pizpalueicon.woff2?b330f83801c6ce8b86f20ca063442c13") format("woff2"),
-url("./pizpalueicon.woff?b330f83801c6ce8b86f20ca063442c13") format("woff"),
-url("./pizpalueicon.ttf?b330f83801c6ce8b86f20ca063442c13") format("truetype");
+    src: url("./pizpalueicon.eot?9026bf77484117ba0e3ad97dfd380127#iefix") format("embedded-opentype"),
+url("./pizpalueicon.woff2?9026bf77484117ba0e3ad97dfd380127") format("woff2"),
+url("./pizpalueicon.woff?9026bf77484117ba0e3ad97dfd380127") format("woff"),
+url("./pizpalueicon.ttf?9026bf77484117ba0e3ad97dfd380127") format("truetype");
 }
 
 .ppicon::before, .bootstrappackageicon::before, .glyphicon::before {
@@ -64,3 +64,4 @@ url("./pizpalueicon.ttf?b330f83801c6ce8b86f20ca063442c13") format("truetype");
 .ppicon-earth-europe-solid::before, .bootstrappackageicon-earth-europe-solid::before, .glyphicon-earth-europe-solid::before { content: "\f113"; }
 .ppicon-globe-solid::before, .bootstrappackageicon-globe-solid::before, .glyphicon-globe-solid::before { content: "\f114"; }
 .ppicon-search::before, .bootstrappackageicon-search::before, .glyphicon-search::before { content: "\f115"; }
+.ppicon-mastodon::before, .bootstrappackageicon-mastodon::before, .glyphicon-mastodon::before { content: "\f107"; }

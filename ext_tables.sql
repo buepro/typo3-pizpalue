@@ -44,6 +44,7 @@ CREATE TABLE tx_easyconf_configuration (
 	social_channel_github varchar(100) DEFAULT '' NOT NULL,
 	social_channel_instagram varchar(100) DEFAULT '' NOT NULL,
 	social_channel_linkedin varchar(100) DEFAULT '' NOT NULL,
+	social_channel_mastodon varchar(100) DEFAULT '' NOT NULL,
 	social_channel_pinterest varchar(100) DEFAULT '' NOT NULL,
 	social_channel_rss varchar(100) DEFAULT '' NOT NULL,
 	social_channel_twitter varchar(100) DEFAULT '' NOT NULL,

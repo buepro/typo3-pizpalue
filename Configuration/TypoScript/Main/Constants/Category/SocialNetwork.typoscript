@@ -11,6 +11,40 @@ page.theme {
                 # cat=6050/2910/01_facebook_url; type=string; label=Facebook: Insert the full account url
                 url = https://www.facebook.com/typo3/
             }
+            github {
+                label = GitHub
+                # cat=6050/2910/04_github_url; type=string; label=GitHub: Insert the full account url
+                url = https://github.com/buepro/typo3-pizpalue
+            }
+            instagram {
+                label = Instagram
+                # cat=6050/2910/03_instagram_url; type=string; label=Instagram: Insert the full account url
+                url = https://www.instagram.com/
+            }
+
+            linkedin {
+                label = LinkedIn
+                # cat=6050/2910/06_linkedin_url; type=string; label=LinkedIn: Insert the full account url
+                url = https://www.linkedin.com/
+            }
+
+            mastodon {
+                label = Mastodon
+                # cat=6050/2910/07_mastodon_url; type=string; label=Mastodon: Insert the full account url
+                url = https://mastodon-swiss.org/@buepro
+            }
+
+            pinterest {
+                label = Pinterest
+                # cat=6050/2910/09_pinterest_url; type=string; label=Pinterest: Insert the full account url
+                url = https://www.pinterest.com/
+            }
+
+            rss {
+                label = RSS
+                # cat=6050/2910/12_rss_url; type=string; label=RSS: Insert the full url
+                url = https://www.srf.ch/allgemeines/rss-feeds-von-srf
+            }
 
             twitter {
                 label = Twitter
@@ -18,22 +52,16 @@ page.theme {
                 url = https://twitter.com/typo3
             }
 
-            instagram {
-                label = Instagram
-                # cat=6050/2910/03_instagram_url; type=string; label=Instagram: Insert the full account url
-                url = https://www.instagram.com/
+            vimeo {
+                label = Vimeo
+                # cat=6050/2910/11_vimeo_url; type=string; label=Vimeo: Insert the full account url
+                url = https://vimeo.com/
             }
 
-            github {
-                label = GitHub
-                # cat=6050/2910/04_github_url; type=string; label=GitHub: Insert the full account url
-                url = https://github.com/buepro/typo3-pizpalue
-            }
-
-            linkedin {
-                label = LinkedIn
-                # cat=6050/2910/06_linkedin_url; type=string; label=LinkedIn: Insert the full account url
-                url = https://www.linkedin.com/
+            vk {
+                label = VK
+                # cat=6050/2910/10_vk_url; type=string; label=VK: Insert the full account url
+                url = https://vk.com/
             }
 
             xing {
@@ -48,29 +76,6 @@ page.theme {
                 url = https://www.youtube.com/user/typo3
             }
 
-            pinterest {
-                label = Pinterest
-                # cat=6050/2910/09_pinterest_url; type=string; label=Pinterest: Insert the full account url
-                url = https://www.pinterest.com/
-            }
-
-            vk {
-                label = VK
-                # cat=6050/2910/10_vk_url; type=string; label=VK: Insert the full account url
-                url = https://vk.com/
-            }
-
-            vimeo {
-                label = Vimeo
-                # cat=6050/2910/11_vimeo_url; type=string; label=Vimeo: Insert the full account url
-                url = https://vimeo.com/
-            }
-
-            rss {
-                label = RSS
-                # cat=6050/2910/12_rss_url; type=string; label=RSS: Insert the full url
-                url = https://www.srf.ch/allgemeines/rss-feeds-von-srf
-            }
         }
     }
 }
