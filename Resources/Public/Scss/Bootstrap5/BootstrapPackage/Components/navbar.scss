@@ -1,0 +1,82 @@
+// --------------------------------------------------
+//
+// Additional features:
+// - Set background colors
+// - Overlay the page header on screens wider than $pp-header-overlay-breakpoint (default-transition)
+//   NOTE: It is assumed that $pp-header-overlay-breakpoint is smaller than $grid-float-breakpoint
+//
+// --------------------------------------------------
+
+$pp-header-overlay-breakpoint: $grid-float-breakpoint !default;
+
+:root {
+    @each $breakpoint in map-keys($navbar-heights) {
+        @include media-breakpoint-up($breakpoint) {
+            --pp-navbar-height: #{map-get($navbar-heights, $breakpoint)};
+        }
+    }
+}
+
+//
+// Main Navigation
+//
+.navbar-mainnavigation {
+    @each $breakpoint in map-keys($navbar-heights) {
+        @include media-breakpoint-up($breakpoint) {
+            --mainnavigation-nav-height: #{map-get($navbar-heights, $breakpoint)};
+        }
+    }
+    --pp-mainnavigation-row-count: 1;
+    --mainnavigation-hightlight: #{$primary};
+    --mainnavigation-nav-spacing-y: 1px;
+    --mainnavigation-nav-spacing-x: .75em;
+    --mainnavigation-link-font-size: 1rem;
+    --mainnavigation-link-line-height: 1.45;
+    --mainnavigation-link-padding-y: .5rem;
+    --mainnavigation-link-padding-x: .75rem;
+    --mainnavigation-link-height: calc((var(--mainnavigation-link-padding-y) * 2) + (var(--mainnavigation-link-line-height) * var(--mainnavigation-link-font-size)));
+    @media (min-width: $grid-float-breakpoint) {
+        --mainnavigation-link-padding-x: .5em;
+    }
+    --mainnavigation-dropdown-spacer: 0;
+    @media (min-width: $grid-float-breakpoint) {
+        --mainnavigation-dropdown-spacer: .5rem;
+    }
+    --mainnavigation-dropdown-column-spacing: 1px;
+    --mainnavigation-dropdown-column-min-width: 220px;
+    --mainnavigation-dropdown-padding-y: 1rem;
+    --mainnavigation-dropdown-padding-x: 1rem;
+    --mainnavigation-dropdown-link-padding-y: .2rem;
+    --mainnavigation-dropdown-link-padding-x: .5rem;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, .15);
+    padding-top: calc((var(--mainnavigation-nav-height) - (var(--pp-mainnavigation-row-count) * var(--mainnavigation-link-height))) / 2);
+    padding-bottom: calc((var(--mainnavigation-nav-height) - (var(--pp-mainnavigation-row-count) * var(--mainnavigation-link-height))) / 2);
+    .nav-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    .navbar-nav {
+        gap: var(--mainnavigation-nav-spacing-y) var(--mainnavigation-nav-spacing-x);
+        line-height: var(--mainnavigation-link-line-height);
+        --#{$prefix}nav-link-font-size: var(--mainnavigation-link-font-size);
+        --#{$prefix}nav-link-padding-y: var(--mainnavigation-link-padding-y);
+        --#{$prefix}nav-link-padding-x: var(--mainnavigation-link-padding-x);
+    }
+}
+.container-mainnavigation {
+    position: relative;
+    //align-items: unset !important;
+    gap: 0 2rem;
+}
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/navbar/_fixed";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/navbar/_brand";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/navbar/_link";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/navbar/_dropdown";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/navbar/_status";
+//@import "EXT:bootstrap_package/Resources/Public/Scss/components/navbar/_toggle";
+@import "Navbar/toggle";
+@import "Navbar/style";
+@import "Navbar/carousel";
+@import "EXT:bootstrap_package/Resources/Public/Scss/components/navbar/_responsive";
+@import "Navbar/transition";

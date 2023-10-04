@@ -1,0 +1,73 @@
+//
+// Toggler
+// --------------------------------------------------
+$pp-header-toggler-width: 34px !default;
+$pp-header-toggler-padding: 0 !default;
+$pp-header-toggler-line-gap: round($pp-header-toggler-width / 5.67) !default;
+$pp-header-toggler-line-width: $pp-header-toggler-width - 2 * $pp-header-toggler-padding !default;
+$pp-header-toggler-line-height: round($pp-header-toggler-line-width / 11) !default;
+.navbar-toggler {
+    padding: 0;
+    height: $pp-header-toggler-width;
+    width: $pp-header-toggler-width;
+    position: relative;
+    border: 0;
+    align-self: center;
+    //&:focus {
+    //    outline: 0;
+    //}
+}
+.navbar-toggler-icon:after,
+.navbar-toggler-icon,
+.navbar-toggler-icon:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: none !important;
+    display: inline-block;
+    width: $pp-header-toggler-line-width;
+    height: $pp-header-toggler-line-height;
+    background-color: currentColor;
+    transition: all .3s ease-in;
+}
+.navbar-toggler-icon {
+    top: 50%;
+    left: 50%;
+    height: 0;
+    transform: translate(-50%, -50%);
+}
+.navbar-toggler-icon:before {
+    transition-delay: .1s;
+    transform: rotate(-45deg);
+    top: 0;
+}
+.navbar-toggler-icon:after {
+    transition-delay: .1s;
+    transform: rotate(45deg);
+    top: 0;
+}
+.navbar-toggler.collapsed {
+    .navbar-toggler-icon {
+        transition-delay: .2s;
+        height: $pp-header-toggler-line-height;
+    }
+    .navbar-toggler-icon:before {
+        transition-delay: 0s;
+        transform: rotate(0);
+        top: -$pp-header-toggler-line-gap;
+    }
+    .navbar-toggler-icon:after {
+        transition-delay: 0s;
+        transform: rotate(0);
+        top: $pp-header-toggler-line-gap;
+    }
+}
+@media (min-width: $pp-header-overlay-breakpoint) and (max-width: $grid-float-breakpoint - 1) {
+    .navbar-default-transition:not(.navbar-transition, .pp-dropdown-active),
+    .navbar-inverse-transition:not(.navbar-transition, .pp-dropdown-active) {
+        .navbar-toggler {
+            --bs-navbar-color: #ffffff;
+        }
+    }
+}

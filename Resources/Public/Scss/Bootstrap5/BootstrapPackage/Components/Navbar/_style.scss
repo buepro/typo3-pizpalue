@@ -1,0 +1,23 @@
+//
+// Navigation Style
+// --------------------------------------------------
+.navbar-mainnavigation {
+    --bs-bg-opacity: var(--pp-navbar-bg-opacity, 1.0) !important;
+    transition: background-color 0.3s ease-in;
+    &.pp-dropdown-active {
+        --bs-bg-opacity: 1 !important;
+    }
+}
+.navbar-default, .navbar-default-transition.navbar-transition {
+    @extend .bg-white;
+    background-color: rgba(var(--pp-navbar-light-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+.navbar-inverse, .navbar-inverse-transition.navbar-transition  {
+    @extend .navbar-dark;
+    @extend .bg-dark;
+    background-color: rgba(var(--pp-navbar-dark-bg-rgb), var(--bs-bg-opacity)) !important;
+    .dropdown-menu {
+        --#{$prefix}dropdown-color: var(--#{$prefix}gray-300);
+        --#{$prefix}dropdown-bg: var(--#{$prefix}dark);
+    }
+}

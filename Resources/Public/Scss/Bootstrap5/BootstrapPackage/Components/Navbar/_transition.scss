@@ -1,0 +1,52 @@
+//
+// Transision
+// --------------------------------------------------
+.navbar-default-transition,
+.navbar-default-transition.navbar-transition {
+    @extend .navbar-default;
+}
+.navbar-inverse-transition,
+.navbar-inverse-transition.navbar-transition {
+    @extend .navbar-inverse;
+}
+.navbar-transition {
+    --mainnavigation-nav-height: #{map-get($navbar-heights, xs)};
+}
+@media (min-width: $pp-header-overlay-breakpoint) {
+    .navbar {
+        transition: all .27s cubic-bezier(0, 0, .58, 1) 0s;
+    }
+    .navbar-default-transition:not(.navbar-transition, .pp-dropdown-active),
+    .navbar-inverse-transition:not(.navbar-transition, .pp-dropdown-active) {
+        background: transparent !important;
+        box-shadow: none;
+        .navbar-nav > li {
+            > .nav-link {
+                --bs-nav-link-color: #ffffff;
+                --bs-nav-link-hover-color: #ffffff;
+                --bs-navbar-active-color: #ffffff;
+                --mainnavigation-hightlight: #ffffff;
+            }
+        }
+        .navbar-brand {
+            > .navbar-brand-logo-normal {
+                display: none;
+            }
+            > .navbar-brand-logo-inverted {
+                display: block;
+            }
+        }
+    }
+}
+//@media (min-width: $grid-float-breakpoint) {
+//    .navbar-default-transition:not(.navbar-transition),
+//    .navbar-inverse-transition:not(.navbar-transition) {
+//        .navbar-nav > li {
+//            > .nav-link,
+//            > .nav-link:hover,
+//            > .nav-link:focus {
+//                color: #ffffff !important;
+//            }
+//        }
+//    }
+//}
