@@ -1,7 +1,7 @@
 .pp-emphasize-media {
     .ppc-wrap {
         @if ($enable-rounded) {
-            border-radius: $border-radius;
+            border-radius: var(--bs-border-radius);
         }
     }
     &.textmedia-left, &.textmedia-right {
@@ -33,7 +33,7 @@
         &.textmedia-left, &.textmedia-right {
             flex-wrap: nowrap;
             .textmedia-gallery {
-                width: calc((100% - #{$grid-gutter-width}) * 0.7);
+                width: calc((100% - var(--bs-gutter-x)) * 0.7);
             }
         }
         &.textmedia-left {
@@ -47,9 +47,9 @@
             }
         }
         .ppc-wrap {
-            background: rgba($body-bg, 0.9);
-            box-shadow: 0 0 4px $primary;
-            padding: $grid-gutter-width / 2;
+            background: rgba(var(--bs-body-bg-rgb), 0.9);
+            box-shadow: 0 0 4px var(--bs-primary);
+            padding: calc(var(--bs-gutter-x) / 2);
         }
     }
 
