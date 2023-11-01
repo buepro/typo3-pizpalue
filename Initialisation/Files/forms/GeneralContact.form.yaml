@@ -105,6 +105,9 @@ renderables:
       -
         properties:
           containerClassAttribute: 'custom-checkbox-multiple pp-dataprotection'
+          fluidAdditionalAttributes:
+            data:
+              pizpalue: form-field-dataprotection
           options:
             dataprotectionRead: 'Please confirm that you have read our data protection notice by checking this checkbox'
         type: MultiCheckbox

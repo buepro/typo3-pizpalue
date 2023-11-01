@@ -84,6 +84,10 @@ pp.domReady(() => {
         // In case it is a checkbox (single)
         label = document.querySelector('.pp-dataprotection > label');
     }
+    if (label === null) {
+        // Try to get it by help of data attribute
+        label = document.querySelector('[data-pizpalue="form-field-dataprotection"]').parentElement;
+    }
     if (label !== null) {
         label.querySelectorAll(`:scope ${'> span'}`)[0].innerHTML = textElement.innerHTML;
     }
