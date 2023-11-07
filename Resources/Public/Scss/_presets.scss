@@ -5,5 +5,5 @@
 //
 $pp-enable-user-presets: false !default;
 @if ($pp-enable-user-presets) {
-    @import "user_pizpalue/Resources/Public/Scss/presets.scss";
+    @import "EXT:user_pizpalue/Resources/Public/Scss/_presets.scss";
 }
