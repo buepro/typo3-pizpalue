@@ -15,12 +15,10 @@ editor:
   config:
     defaultContentLanguage: "de"
     defaultLanguage: "de"
-    extraAllowedContent:
-      - code
-      - div
-      - span
-      - "*(*)"
-      - "*[data-*]"
+    htmlSupport:
+      allow:
+        - { classes: true, attributes: { pattern: 'data-.+' } }
+
     stylesSet:
       - { name: "Button Complementary", element: "a", attributes: { 'class': 'btn btn-complementary' } }
       - { name: "Button Light", element: "a", attributes: { 'class': 'btn btn-light' } }
