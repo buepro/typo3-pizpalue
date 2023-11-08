@@ -104,12 +104,21 @@ renderables:
         label: Image
       -
         properties:
-          containerClassAttribute: 'custom-checkbox-multiple pp-dataprotection'
           fluidAdditionalAttributes:
             data:
               pizpalue: form-field-dataprotection
           options:
             dataprotectionRead: 'Please confirm that you have read our data protection notice by checking this checkbox'
+        variants:
+          - identifier: template-variant
+            condition: 'getRootFormProperty("renderingOptions.templateVariant") == "version2"'
+            properties:
+              renderFieldset: 0
+              containerClassAttribute: 'pp-form-check mb-2'
+              elementClassAttribute: 'form-check-input me-2'
+              elementErrorClassAttribute: ~
+              labelClassAttribute: 'form-check-wrapping-label mb-2'
+              labelTextClassAttribute: form-check-label
         type: MultiCheckbox
         identifier: idDataprotectionMultiCheckbox
         label: 'Data protection notice'
