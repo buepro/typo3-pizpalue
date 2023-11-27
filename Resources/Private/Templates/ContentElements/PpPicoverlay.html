@@ -6,7 +6,7 @@
     {f:variable(name: '_headerLayout', value: data.header_layout)}
     {f:variable(name: '_headerLayout', value: settings.header.defaultHeaderType) -> f:if(condition: '{data.header_layout as integer} === 0')}
     {f:variable(name: '_headerPosition', value: ' text-{data.header_position}') -> f:if(condition: data.header_position)}
-    {f:variable(name: '_headerClass', value: ' {data.tx_pizpalue_header_class}') -> f:if(condition: '{data.tx_pizpalue_header_class} != "none"')}
+    {f:variable(name: '_headerClass', value: ' {data.header_class}') -> f:if(condition: '{data.tx_pizpalue_header_class} != "none"')}
     {f:variable(name: '_type', value: 'bar')}
     {data.pi_flexform.type -> f:variable(name: '_type') -> f:if(condition: data.pi_flexform.type)}
     {f:variable(name: '_class', value: 'ppc-{_type}')}
