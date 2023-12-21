@@ -4,7 +4,6 @@
 pp.domReady(function () {
     const data = JSON.parse(document.getElementById('pp-scrollnav-data').dataset.settings);
     const menu = document.getElementById(data.menuId);
-    const menuItems = menu.querySelectorAll('.nav-item');
     const links = [...menu.getElementsByTagName('a')];
 
     document.body.setAttribute('tabindex', '0');
@@ -15,13 +14,12 @@ pp.domReady(function () {
             for (const entry of entries) {
                 if (entry.isIntersecting) {
                     // Activate the link associated with the section
-                    menuItems.forEach((menuItem) => {
-                        menuItem.classList.remove('active');
+                    links.forEach((link) => {
+                        link.classList.remove('active');
                     });
                     const id = entry.target.getAttribute('id');
                     const link = document.querySelector('[href="#' + id + '"]');
-                    const menuItem = link.closest('.nav-item') ?? link.parentElement;
-                    menuItem.classList.add('active');
+                    link.classList.add('active');
                 }
             }
         },

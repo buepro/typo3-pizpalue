@@ -5,7 +5,7 @@
 <f:if condition="{scrollnavigation}">
     <ul id="pp-scroll-nav" class="navbar-nav">
         <f:for each="{scrollnavigation}" as="item">
-            <li class="nav-item"><f:link.page class="nav-link" pageUid="{item.pageUid}" section="{item.section}" title="{item.titleTag}">{item.title}</f:link.page></li>
+            <li class="nav-item"><f:link.page class="nav-link nav-link-main{f:if(condition: item.active, then:' active')}" pageUid="{item.pageUid}" section="{item.section}" title="{item.titleTag}">{item.title}</f:link.page></li>
         </f:for>
     </ul>
 </f:if>
