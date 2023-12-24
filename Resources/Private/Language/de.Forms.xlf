@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="idGeneralContactForm.element.idName.properties.label" approved="yes">
+        <source>Name</source>
+        <target state="final">Name</target>
+      </trans-unit>
+      <trans-unit id="idGeneralContactForm.element.idEmail.properties.label" approved="yes">
+        <source>Email</source>
+        <target state="final">E-Mail</target>
+      </trans-unit>
+      <trans-unit id="idGeneralContactForm.element.idTelephone.properties.label" approved="yes">
+        <source>Phone</source>
+        <target state="final">Telefon</target>
+      </trans-unit>
+      <trans-unit id="idGeneralContactForm.element.idSubject.properties.label" approved="yes">
+        <source>Subject</source>
+        <target state="final">Betreff</target>
+      </trans-unit>
+      <trans-unit id="idGeneralContactForm.element.idMessage.properties.label" approved="yes">
+        <source>Message</source>
+        <target state="final">Nachricht</target>
+      </trans-unit>
+      <trans-unit id="idGeneralContactForm.element.idFileupload.properties.label" approved="yes">
+        <source>PDF-File</source>
+        <target state="final">PDF-Datei</target>
+      </trans-unit>
+      <trans-unit id="idGeneralContactForm.element.idImageupload.properties.label" approved="yes">
+        <source>Image</source>
+        <target state="final">Bild</target>
+      </trans-unit>
+      <trans-unit id="idGeneralContactForm.element.idDataprotectionMultiCheckbox.properties.label" approved="yes">
+        <source>Data protection notice</source>
+        <target state="final">Datenschutzhinweis</target>
+      </trans-unit>
+      <trans-unit id="element.idGeneralContactForm.renderingOptions.submitButtonLabel" approved="yes">
+        <source>Send</source>
+        <target state="final">Senden</target>
+      </trans-unit>
+      <trans-unit id="formEditor.elements.Form.editor.finishers.MailToSystem.label" approved="yes">
+        <source>Email to system</source>
+        <target state="final">Email an System</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
