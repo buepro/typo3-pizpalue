@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="none" resname="none" approved="yes">
+        <source>None</source>
+        <target state="final">Kein</target>
+      </trans-unit>
+      <trans-unit id="menu_main_enable_subpage_definition" resname="menu_main_enable_subpage_definition" approved="yes">
+        <source>Enable definition for subpages</source>
+        <target state="final">Definition für Unterseiten aktivieren</target>
+      </trans-unit>
+      <trans-unit id="menu_main_style" resname="menu_main_style" approved="yes">
+        <source>Style</source>
+        <target state="final">Stil</target>
+      </trans-unit>
+      <trans-unit id="menu_main_subpage_style" resname="menu_main_subpage_style" approved="yes">
+        <source>Style from subpages</source>
+        <target state="final">Stil von Unterseiten</target>
+      </trans-unit>
+      <trans-unit id="menu_main_style.default" resname="menu_main_style.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="menu_main_style.default-transition" resname="menu_main_style.default-transition" approved="yes">
+        <source>Default transition</source>
+        <target state="final">Standard mit Übergang</target>
+      </trans-unit>
+      <trans-unit id="menu_main_style.inverse" resname="menu_main_style.inverse" approved="yes">
+        <source>Inverse</source>
+        <target state="final">Umgekehrt</target>
+      </trans-unit>
+      <trans-unit id="menu_main_style.inverse-transition" resname="menu_main_style.inverse-transition" approved="yes">
+        <source>Inverse transition</source>
+        <target state="final">Umgekehrt mit Übergang</target>
+      </trans-unit>
+      <trans-unit id="menu_main_type" resname="menu_main_type" approved="yes">
+        <source>Type</source>
+        <target state="final">Typ</target>
+      </trans-unit>
+      <trans-unit id="menu_main_subpage_type" resname="menu_main_subpage_type" approved="yes">
+        <source>Type from subpages</source>
+        <target state="final">Typ von Unterseiten</target>
+      </trans-unit>
+      <trans-unit id="menu_main_type.default" resname="menu_main_type.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="menu_main_type.top" resname="menu_main_type.top" approved="yes">
+        <source>Fixed on top</source>
+        <target state="final">Oben fixiert</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_grid-float-breakpoint" resname="menu_toggler_grid-float-breakpoint" approved="yes">
+        <source>Breakpoint</source>
+        <target state="final">Umschaltpunkt</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-width" resname="menu_toggler_pp-header-toggler-width" approved="yes">
+        <source>Width</source>
+        <target state="final">Breite</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-padding" resname="menu_toggler_pp-header-toggler-padding" approved="yes">
+        <source>Padding</source>
+        <target state="final">Innenabstand</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-line-gap" resname="menu_toggler_pp-header-toggler-line-gap" approved="yes">
+        <source>Line gap</source>
+        <target state="final">Zeilenabstand</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-line-width" resname="menu_toggler_pp-header-toggler-line-width" approved="yes">
+        <source>Line width</source>
+        <target state="final">Linienbreite</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-line-height" resname="menu_toggler_pp-header-toggler-line-height" approved="yes">
+        <source>Line height</source>
+        <target state="final">Linienhöhe</target>
+      </trans-unit>
+      <trans-unit id="menu_toggler_pp-header-toggler-margin-right" resname="menu_toggler_pp-header-toggler-margin-right" approved="yes">
+        <source>Margin right</source>
+        <target state="final">Äußerer Abstand rechts</target>
+      </trans-unit>
+      <trans-unit id="menu_breadcrumb_enable" resname="menu_breadcrumb_enable" approved="yes">
+        <source>Breadcrumb</source>
+        <target state="final">Brotkrumenmenü</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_enable" resname="menu_fast_enable" approved="yes">
+        <source>Fast</source>
+        <target state="final">Schnellmenü</target>
+      </trans-unit>
+      <trans-unit id="menu_footer_enable" resname="menu_footer_enable" approved="yes">
+        <source>Footer</source>
+        <target state="final">Fussmenü</target>
+      </trans-unit>
+      <trans-unit id="menu_language_enable" resname="menu_language_enable" approved="yes">
+        <source>Language</source>
+        <target state="final">Sprachmenü</target>
+      </trans-unit>
+      <trans-unit id="menu_meta_enable" resname="menu_meta_enable" approved="yes">
+        <source>Meta</source>
+        <target state="final">Metamenü</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_enable" resname="menu_scroll_enable" approved="yes">
+        <source>Scroll</source>
+        <target state="final">Scroll</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuFast.description" resname="paletteMenuFast.description" approved="yes">
+        <source>
+					This icon menu is fixed on the side. A menu item is enabled by defining a
+					css class for it. When clicking on an item a content is shown or a new page
+					is opened. Just define one action by setting either a content or a link.
+				</source>
+        <target state="final">
+Dieses Icon-Menü ist auf der Seite fixiert. Ein Menüpunkt wird aktiviert, indem ihm eine CSS-Klasse zugewiesen wird. Beim Anklicken eines Icons wird ein Inhalt angezeigt oder eine Seite geladen. Inhalt und Verlinkung eines Menüpunktes sollten nicht zusammen definiert werden.</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_first_icon_class" resname="menu_fast_items_first_icon_class" approved="yes">
+        <source>First item icon class</source>
+        <target state="final">Erstes Element Icon-Klasse</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_first_content_uid" resname="menu_fast_items_first_content_uid" approved="yes">
+        <source>First item content</source>
+        <target state="final">Erstes Element Inhalt</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_first_page_uid" resname="menu_fast_items_first_page_uid" approved="yes">
+        <source>First item link</source>
+        <target state="final">Erstes Element Link</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_second_icon_class" resname="menu_fast_items_second_icon_class" approved="yes">
+        <source>Second item icon class</source>
+        <target state="final">Zweites Element Icon-Klasse</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_second_content_uid" resname="menu_fast_items_second_content_uid" approved="yes">
+        <source>Second item content</source>
+        <target state="final">Zweites Element Inhalt</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_second_page_uid" resname="menu_fast_items_second_page_uid" approved="yes">
+        <source>Second item link</source>
+        <target state="final">Zweites Element Link</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_third_icon_class" resname="menu_fast_items_third_icon_class" approved="yes">
+        <source>Third item icon class</source>
+        <target state="final">Drittes Element Icon-Klasse</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_third_content_uid" resname="menu_fast_items_third_content_uid" approved="yes">
+        <source>Third item content</source>
+        <target state="final">Drittes Element Inhalt</target>
+      </trans-unit>
+      <trans-unit id="menu_fast_items_third_page_uid" resname="menu_fast_items_third_page_uid" approved="yes">
+        <source>Third item link</source>
+        <target state="final">Drittes Element Link</target>
+      </trans-unit>
+      <trans-unit id="menu_footer_navigation_value" resname="menu_footer_navigation_value" approved="yes">
+        <source>Navigation value</source>
+        <target state="final">Navigationswert</target>
+      </trans-unit>
+      <trans-unit id="menu_footer_navigation_type" resname="menu_footer_navigation_type" approved="yes">
+        <source>Navigation type</source>
+        <target state="final">Navigationstyp</target>
+      </trans-unit>
+      <trans-unit id="menu_footer_include_not_in_menu" resname="menu_footer_include_not_in_menu" approved="yes">
+        <source>Include "Not in menu"</source>
+        <target state="final">"Nicht im Menü" einschließen</target>
+      </trans-unit>
+      <trans-unit id="menu_footer_levels" resname="menu_footer_levels" approved="yes">
+        <source>Levels</source>
+        <target state="final">Ebenen</target>
+      </trans-unit>
+      <trans-unit id="menu_footer_icon_enable" resname="menu_footer_icon_enable" approved="yes">
+        <source>Enable icons</source>
+        <target state="final">Icons aktivieren</target>
+      </trans-unit>
+      <trans-unit id="menu_footer_icon_width" resname="menu_footer_icon_width" approved="yes">
+        <source>Icons width</source>
+        <target state="final">Icons-Breite</target>
+      </trans-unit>
+      <trans-unit id="menu_footer_icon_height" resname="menu_footer_icon_height" approved="yes">
+        <source>Icons height</source>
+        <target state="final">Icons-Höhe</target>
+      </trans-unit>
+      <trans-unit id="menu_language_language_value" resname="menu_language_language_value" approved="yes">
+        <source>Language value</source>
+        <target state="final">Sprachwert</target>
+      </trans-unit>
+      <trans-unit id="menu_meta_navigation_value" resname="menu_meta_navigation_value" approved="yes">
+        <source>Navigation value</source>
+        <target state="final">Navigationswert</target>
+      </trans-unit>
+      <trans-unit id="menu_meta_navigation_type" resname="menum_eta_navigation_type" approved="yes">
+        <source>Navigation type</source>
+        <target state="final">Navigationstyp</target>
+      </trans-unit>
+      <trans-unit id="menu_meta_include_not_in_menu" resname="menu_meta_include_not_in_menu" approved="yes">
+        <source>Include "Not in menu"</source>
+        <target state="final">"Nicht im Menü" einschließen</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuScroll.description" resname="paletteMenuScroll.description" approved="yes">
+        <source>If content elements on a page have the scroll navigation activated they will be used to create a scroll menu.</source>
+        <target state="final">Wenn Inhaltselemente auf einer Seite die Scroll-Navigation aktiviert haben, werden sie verwendet, um ein Scroll-Menü zu erstellen.</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_page_uid" resname="menu_scroll_page_uid" approved="yes">
+        <source>Page</source>
+        <target state="final">Seite</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_page_uid.description" resname="menu_scroll_page_uid.description" approved="yes">
+        <source>If set the menu will be on all pages as on the page with this UID. Otherwise each page will have its own menu.</source>
+        <target state="final">Das Menü wird auf allen Seiten wie auf der hier ausgewählten Seite angezeigt. Andernfalls wird für jede Seite ein eigenes Menü erstellt.</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_data_key" resname="menu_scroll_data_key" approved="yes">
+        <source>Data key</source>
+        <target state="final">Datenschlüssel</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_data_key.description" resname="menu_scroll_data_key.description" approved="yes">
+        <source>Set to "mainnavigation" to use the scroll menu as main menu. Typically, this is used on one pager websites with additional pages (e.g. for data protection).</source>
+        <target state="final">Setze den Wert auf "mainnavigation" um das Scrollmenü als Hauptmenü zu verwenden. Normalerweise wird dies auf Einseiten-Webseiten mit zusätzlichen Seiten (z.B. zum Datenschutz) verwendet.</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_menu_id" resname="menu_scroll_menu_id" approved="yes">
+        <source>Menu ID</source>
+        <target state="final">Menü ID</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_menu_id.description" resname="menu_scroll_menu_id.description" approved="yes">
+        <source>The value from the scroll menu id attribute.</source>
+        <target state="final">Der Wert des ID-Attributes des Scrollmenüs.</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_offset" resname="menu_scroll_offset" approved="yes">
+        <source>Offset</source>
+        <target state="final">Offset</target>
+      </trans-unit>
+      <trans-unit id="menu_scroll_offset.description" resname="menu_scroll_offset.description" approved="yes">
+        <source>Used to define intersection observer rootMargin. Usually corresponds to the height from the fix positioned header.</source>
+        <target state="final">Wird verwendet, um "intersection observer rootMargin" zu definieren. In der Regel entspricht dies der Höhe des fix positionierten Kopfbereiches.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
