@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tabOwner" resname="tabOwner" approved="yes">
+        <source>Owner</source>
+        <target state="final">Eigentümer</target>
+      </trans-unit>
+      <trans-unit id="tabScaffold" resname="tabScaffold" approved="yes">
+        <source>Scaffold</source>
+        <target state="final">Gerüst</target>
+      </trans-unit>
+      <trans-unit id="paletteScaffoldElements" resname="paletteScaffoldElements" approved="yes">
+        <source>Available sections</source>
+        <target state="final">Verfügbare Bereiche</target>
+      </trans-unit>
+      <trans-unit id="paletteScaffoldHeader" resname="paletteScaffoldHeader" approved="yes">
+        <source>Header</source>
+        <target state="final">Kopfbereich</target>
+      </trans-unit>
+      <trans-unit id="paletteScaffoldFooter" resname="paletteScaffoldFooter" approved="yes">
+        <source>Footer</source>
+        <target state="final">Fussbereich</target>
+      </trans-unit>
+      <trans-unit id="paletteScaffoldCopyright" resname="paletteScaffoldCopyright" approved="yes">
+        <source>Copyright</source>
+        <target state="final">Copyright</target>
+      </trans-unit>
+      <trans-unit id="paletteScaffoldContact" resname="paletteScaffoldContact" approved="yes">
+        <source>Contact</source>
+        <target state="final">Kontakt</target>
+      </trans-unit>
+      <trans-unit id="tabMenu" resname="tabMenu" approved="yes">
+        <source>Menu</source>
+        <target state="final">Menü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuSelect" resname="paletteMenuSelect" approved="yes">
+        <source>Available menus</source>
+        <target state="final">Verfügbare Menüs</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuMain" resname="paletteMenuMain" approved="yes">
+        <source>Main</source>
+        <target state="final">Hauptmenü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuMainSubpage" resname="paletteMenuMainSubpage" approved="yes">
+        <source>Main on subpages</source>
+        <target state="final">Hauptmenü auf Unterseiten</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuToggler" resname="paletteMenuToggler" approved="yes">
+        <source>Main toggler</source>
+        <target state="final">Togglemenü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuCopyright" resname="paletteMenuCopyright" approved="yes">
+        <source>Copyright menu</source>
+        <target state="final">Copyrightmenü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuFast" resname="paletteMenuFast" approved="yes">
+        <source>Fast menu</source>
+        <target state="final">Schnellmenü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuFooter" resname="paletteMenuFooter" approved="yes">
+        <source>Footer menu</source>
+        <target state="final">Menü Fußzeile</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuLanguage" resname="paletteMenuLanguage" approved="yes">
+        <source>Language menu</source>
+        <target state="final">Sprachmenü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuMeta" resname="paletteMenuMeta" approved="yes">
+        <source>Meta menu</source>
+        <target state="final">Metamenü</target>
+      </trans-unit>
+      <trans-unit id="paletteMenuScroll" resname="paletteMenuScroll" approved="yes">
+        <source>Scroll menu</source>
+        <target state="final">Scrollmenü</target>
+      </trans-unit>
+      <trans-unit id="tabLogo" resname="tabLogo" approved="yes">
+        <source>Logo</source>
+        <target state="final">Logo</target>
+      </trans-unit>
+      <trans-unit id="paletteLogo" resname="paletteLogo" approved="yes">
+        <source>Logo</source>
+        <target state="final">Logo</target>
+      </trans-unit>
+      <trans-unit id="paletteAppicon" resname="paletteAppicon" approved="yes">
+        <source>App- and Favicon</source>
+        <target state="final">App- und Favicon</target>
+      </trans-unit>
+      <trans-unit id="tabColors" resname="tabColors" approved="yes">
+        <source>Colors</source>
+        <target state="final">Farben</target>
+      </trans-unit>
+      <trans-unit id="paletteColorsMain" resname="paletteColorsMain" approved="yes">
+        <source>Main</source>
+        <target state="final">Generell</target>
+      </trans-unit>
+      <trans-unit id="paletteColorsText" resname="paletteColorsText" approved="yes">
+        <source>Text</source>
+        <target state="final">Text</target>
+      </trans-unit>
+      <trans-unit id="paletteColorsLightHeader" resname="paletteColorsLightHeader" approved="yes">
+        <source>Light header</source>
+        <target state="final">Heller Kopfbereich</target>
+      </trans-unit>
+      <trans-unit id="paletteColorsDarkHeader" resname="paletteColorsDarkHeader" approved="yes">
+        <source>Dark header</source>
+        <target state="final">Dunkler Kopfbereich</target>
+      </trans-unit>
+      <trans-unit id="paletteColorsFooter" resname="paletteColorsFooter" approved="yes">
+        <source>Footer</source>
+        <target state="final">Fussbereich</target>
+      </trans-unit>
+      <trans-unit id="paletteColorsFooterMeta" resname="paletteColorsFooterMeta" approved="yes">
+        <source>Footer meta section</source>
+        <target state="final">Fussbereich Meta-Abschnitt</target>
+      </trans-unit>
+      <trans-unit id="tabSocial" resname="tabSocial" approved="yes">
+        <source>Social</source>
+        <target state="final">Sozial</target>
+      </trans-unit>
+      <trans-unit id="paletteSocialChannel" resname="paletteSocialChannel" approved="yes">
+        <source>Social network channels</source>
+        <target state="final">Soziale Netzwerke</target>
+      </trans-unit>
+      <trans-unit id="tabStyle" resname="tabStyle" approved="yes">
+        <source>Style</source>
+        <target state="final">Stil</target>
+      </trans-unit>
+      <trans-unit id="paletteStyleGlobal" resname="paletteStyleGlobal" approved="yes">
+        <source>Enable styles</source>
+        <target state="final">Stile aktivieren</target>
+      </trans-unit>
+      <trans-unit id="paletteStyleRounded" resname="paletteStyleRounded" approved="yes">
+        <source>Rounded</source>
+        <target state="final">Gerundet</target>
+      </trans-unit>
+      <trans-unit id="paletteStyleScss" resname="paletteStyleScss" approved="yes">
+        <source>SCSS</source>
+        <target state="final">SCSS</target>
+      </trans-unit>
+      <trans-unit id="paletteStyleVarious" resname="paletteStyleVarious" approved="yes">
+        <source>Various</source>
+        <target state="final">Verschiedenes</target>
+      </trans-unit>
+      <trans-unit id="tabFont" resname="tabFont" approved="yes">
+        <source>Font</source>
+        <target state="final">Schrift</target>
+      </trans-unit>
+      <trans-unit id="paletteFontControl" resname="paletteFontControl" approved="yes">
+        <source>Element selection</source>
+        <target state="final">Elementauswahl</target>
+      </trans-unit>
+      <trans-unit id="paletteFontGeneral" resname="paletteFontGeneral" approved="yes">
+        <source>General</source>
+        <target state="final">Allgemein</target>
+      </trans-unit>
+      <trans-unit id="paletteFontNormal" resname="paletteFontNormal" approved="yes">
+        <source>Normal</source>
+        <target state="final">Normal</target>
+      </trans-unit>
+      <trans-unit id="paletteFontHeadings" resname="paletteFontHeadings" approved="yes">
+        <source>Headings</source>
+        <target state="final">Überschriften</target>
+      </trans-unit>
+      <trans-unit id="paletteFontGoogle" resname="paletteFontGoogle" approved="yes">
+        <source>Google font</source>
+        <target state="final">Google-Schriftarten</target>
+      </trans-unit>
+      <trans-unit id="tabFeature" resname="tabFeature" approved="yes">
+        <source>Features</source>
+        <target state="final">Funktionen</target>
+      </trans-unit>
+      <trans-unit id="paletteFeatureControl" resname="paletteFeatureControl" approved="yes">
+        <source>Element selection</source>
+        <target state="final">Elementauswahl</target>
+      </trans-unit>
+      <trans-unit id="paletteFeatureVarious" resname="paletteFeatureVarious" approved="yes">
+        <source>Various</source>
+        <target state="final">Verschiedenes</target>
+      </trans-unit>
+      <trans-unit id="tabVarious" resname="tabVarious" approved="yes">
+        <source>Various</source>
+        <target state="final">Verschiedenes</target>
+      </trans-unit>
+      <trans-unit id="paletteAnimation" resname="paletteAnimation" approved="yes">
+        <source>Animation</source>
+        <target state="final">Animation</target>
+      </trans-unit>
+      <trans-unit id="paletteSeo" resname="paletteSeo" approved="yes">
+        <source>SEO</source>
+        <target state="final">SEO</target>
+      </trans-unit>
+      <trans-unit id="paletteGoogle" resname="paletteGoogle" approved="yes">
+        <source>Google</source>
+        <target state="final">Google</target>
+      </trans-unit>
+      <trans-unit id="paletteCookie" resname="paletteCookie" approved="yes">
+        <source>Cookie consent</source>
+        <target state="final">Cookie-Einwilligung</target>
+      </trans-unit>
+      <trans-unit id="tabAdmin" resname="tabAdmin" approved="yes">
+        <source>Admin</source>
+        <target state="final">Admin</target>
+      </trans-unit>
+      <trans-unit id="paletteAdminGeneral" resname="paletteAdminGeneral" approved="yes">
+        <source>General</source>
+        <target state="final">Allgemein</target>
+      </trans-unit>
+      <trans-unit id="paletteAgency" resname="paletteAgency" approved="yes">
+        <source>Agency</source>
+        <target state="final">Agentur</target>
+      </trans-unit>
+      <trans-unit id="paletteAdminSiteconf" resname="paletteAdminSiteconf" approved="yes">
+        <source>Site configuration</source>
+        <target state="final">Seitenkonfiguration</target>
+      </trans-unit>
+      <trans-unit id="paletteAdminFormat" resname="paletteAdminFormat" approved="yes">
+        <source>Format</source>
+        <target state="final">Format</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
