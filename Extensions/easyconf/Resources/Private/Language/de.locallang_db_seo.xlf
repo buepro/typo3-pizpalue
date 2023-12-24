@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="seo_meta_google-site-verification" resname="seo_meta_google-site-verification" approved="yes">
+        <source>Site verification code</source>
+        <target state="final">Webseitenprüfcode</target>
+      </trans-unit>
+      <trans-unit id="seo_tracking_google_tracking_i_d" resname="seo_tracking_google_tracking_i_d" approved="yes">
+        <source>Tracking ID</source>
+        <target state="final">Tracking ID</target>
+      </trans-unit>
+      <trans-unit id="seo_tracking_google_ga4_measure_id" resname="seo_tracking_google_ga4_measure_id" approved="yes">
+        <source>Google analytics 4 measure ID</source>
+        <target state="final">Google Analytics 4 Mess-ID</target>
+      </trans-unit>
+      <trans-unit id="seo_tracking_google_tag_manager_container_id" resname="seo_tracking_google_tag_manager_container_id" approved="yes">
+        <source>Google tag manager container ID</source>
+        <target state="final">Google Tag Manager Container-ID</target>
+      </trans-unit>
+      <trans-unit id="seo_optimize_link_targets" resname="seo_optimize_link_targets" approved="yes">
+        <source>Optimize link targets</source>
+        <target state="final">Link-Ziele optimieren</target>
+      </trans-unit>
+      <trans-unit id="seo_optimize_link_targets.description" resname="seo_optimize_link_targets.description" approved="yes">
+        <source>By default empty anchor tags are prepended to frameless content elements and serve as link targets. Empty anchor elements might cause seo issues. By enabling this parameter the id from the anchor tag is tried to be assigned to the anchor's sibling or one of its descendents.</source>
+        <target state="final">Standardmäßig werden leere Anker-Tags den rahmenlosen Inhaltselementen vorangestellt und dienen als Linkziele. Leere Ankerelemente können SEO-Benachteiligungen verursachen. Durch die Aktivierung dieses Parameters wird versucht, die ID des Anker-Tags dem Geschwister, oder einem seiner Unter-Container, zuzuordnen.</target>
+      </trans-unit>
+      <trans-unit id="seo_consent_tracking_code" resname="seo_consent_tracking_code" approved="yes">
+        <source>Consent tracking code</source>
+        <target state="final">Tracking-Code einwilligen</target>
+      </trans-unit>
+      <trans-unit id="seo_consent_tracking_code.description" resname="seo_consent_tracking_code.description" approved="yes">
+        <source>If set 3rd party code is only embedded if user consented cookies. Otherwise the tracking code is embedded always and data protection compliance has to be verified.</source>
+        <target state="final">Wenn diese Einstellung gesetzt ist, wird der Code von Drittanbietern nur dann eingebettet, wenn der Benutzer Cookies akzeptiert hat. Andernfalls ist der Tracking-Code immer eingebettet und die Datenschutz-Konformität muss überprüft werden.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
