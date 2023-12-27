@@ -1,4 +1,5 @@
-$table-border-color: $gray-300 !default;
+@import "EXT:pizpalue/Resources/Public/Scss/_functions";
+@import "EXT:pizpalue/Resources/Public/Scss/_variables";
 
 .news {
     img {
