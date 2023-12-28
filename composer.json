@@ -92,7 +92,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "16.0.x-dev"
+			"dev-main": "16.1.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",
