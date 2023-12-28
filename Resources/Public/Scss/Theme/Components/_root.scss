@@ -32,4 +32,14 @@
     --pp-frame-link-decoration: null;
     --pp-frame-link-decoration-style: null;
     --pp-frame-link-weight: null;
+
+    //
+    // Contrast colors
+    //
+    @each $_color-name in map-keys($pp-colors) {
+        $_color: map-get($pp-colors, $_color-name);
+        --pp-#{$_color-name}-contrast: #{color-contrast($_color)};
+        --pp-#{$_color-name}-contrast-rgb: #{to-rgb(color-contrast($_color))};
+    }
+
 }

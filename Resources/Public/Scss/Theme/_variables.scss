@@ -12,6 +12,16 @@ $navbar-dark-bg: #2b2b2b !default;
 $footer-bg: #333 !default;
 $footer-meta-bg: #222 !default;
 $headings-color: $body-color !default;
+$pp-colors: () !default;
+$pp-colors: map-merge((
+    'primary': $primary,
+    'secondary': $secondary,
+    'complementary': $complementary,
+    'tertiary': $tertiary,
+    'quaternary': $quaternary,
+    'light': $light,
+    'dark': $dark
+), $pp-colors);
 
 //
 // Headings contrast color
