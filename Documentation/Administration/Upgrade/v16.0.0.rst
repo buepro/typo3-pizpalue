@@ -1,0 +1,66 @@
+.. include:: /Includes.rst.txt
+
+.. _admin_upgrade_16.0:
+
+==========================================
+Upgrade to version 16.0
+==========================================
+
+Breaking changes
+================
+
+Make main navigation more accessible (04.10.2023, 7bdb001d)
+-----------------------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The adaption to a more accessible main menu
+might lead to visual changes.
+
+The main menu height depends on the rows used.
+For a correct height calculatiuon the variable
+`--pp-mainnavigation-row-count` has been added.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Fine tune the visual appearance in the site
+package. When working with more then one
+main menu row use the variable
+`--pp-mainnavigation-row-count` for the
+height to be calculated correctly.
+
+Related: bk2k/bootstrap_package#2775146d
+
+
+Move main tag to contain all relevant content (02.10.2023, 46e68455)
+--------------------------------------------------------------------
+
+Related: bk2k/bootstrap_package#2bceb149
+
+
+Migrate heading classes (02.10.2023, 1dc06af7)
+----------------------------------------------
+
+Description
+~~~~~~~~~~~
+
+The bootstrap package now provides as well
+fields to alter the headings classes making
+the pizpalue fields obsolete.
+
+Corrective action
+~~~~~~~~~~~~~~~~~
+
+Use the provided upgrade wizard to migrate
+the heading settings to the bootstrap
+package domain. ATTENTION: Each time you
+run the wizard the field values in the
+bootstrap package domain are overridden.
+Use this wizard with care, usually just
+once.
+
+Related: bk2k/bootstrap_package#c37afe30
+
+

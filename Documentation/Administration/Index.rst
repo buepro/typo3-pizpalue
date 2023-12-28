@@ -23,9 +23,9 @@ Supported extensions
 ================================ ================
 Extension                        Version tested
 ================================ ================
-container_elements               5.0.0
-easyconf                         2.0.0
-news                             11.0.0
+container_elements               5.1.0
+easyconf                         2.1.0
+news                             11.3.0
 tt_address                       8.0.1
 ================================ ================
 
@@ -73,6 +73,7 @@ The following upgrade descriptions are available:
 .. toctree::
    :maxdepth: 1
 
+   Upgrade/v16.0.0
    Upgrade/v15.0.0
    Upgrade/v14.0.0
    Upgrade/v13.0.0
