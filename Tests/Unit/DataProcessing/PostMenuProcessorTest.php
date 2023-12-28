@@ -131,7 +131,7 @@ class PostMenuProcessorTest extends UnitTestCase
         self::assertSame(1, $actual['isShortcut']);
     }
 
-    public function assertShortcutTargetIsCurrentDataProvider(): array
+    public static function assertShortcutTargetIsCurrentDataProvider(): array
     {
         return [
             'default, target current' => [1, PageRepository::DOKTYPE_DEFAULT, 1, 0],
@@ -161,7 +161,7 @@ class PostMenuProcessorTest extends UnitTestCase
         self::assertSame($expected, $actual['shortcutTargetIsCurrent']);
     }
 
-    public function assertPpActivePropertyDataProvider(): array
+    public static function assertPpActivePropertyDataProvider(): array
     {
         return [
             'default, not in root line' => [3, 123, PageRepository::DOKTYPE_DEFAULT, 1, 0],

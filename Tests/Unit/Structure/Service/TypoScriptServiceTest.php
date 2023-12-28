@@ -10,11 +10,11 @@
 namespace Buepro\Pizpalue\Tests\Unit\Structure\Service;
 
 use Buepro\Pizpalue\Structure\Service\TypoScriptService;
-use Buepro\Pizpalue\Tests\Unit\Structure\TypoScriptBasedTest;
+use Buepro\Pizpalue\Tests\Unit\Structure\TypoScriptBasedTestCase;
 use TYPO3\CMS\Core\TypoScript\TypoScriptService as CoreTypoScriptService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class TypoScriptServiceTest extends TypoScriptBasedTest
+class TypoScriptServiceTest extends TypoScriptBasedTestCase
 {
     public function testGetVariants(): void
     {

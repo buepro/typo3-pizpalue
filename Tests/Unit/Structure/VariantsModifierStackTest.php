@@ -14,7 +14,7 @@ use Buepro\Pizpalue\Structure\VariantsModifier;
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class VariantsModifierStackTest extends TypoScriptBasedTest
+class VariantsModifierStackTest extends TypoScriptBasedTestCase
 {
     /** @var VariantsModifierStack $variantsModifierStack */
     protected $variantsModifierStack;

@@ -14,7 +14,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 class VectorUtilityTest extends UnitTestCase
 {
-    public function negateGetsNegativeVectorDataProvider(): array
+    public static function negateGetsNegativeVectorDataProvider(): array
     {
         return [
             'array with numeric keys' => [[1, -2, 3], [-(float)1, (float)2, -(float)3]],
@@ -34,7 +34,7 @@ class VectorUtilityTest extends UnitTestCase
         self::assertSame($expected, VectorUtility::negate($vector));
     }
 
-    public function addVectorReturnsSumDataProvider(): array
+    public static function addVectorReturnsSumDataProvider(): array
     {
         return [
             'arrays with numeric keys 1' => [

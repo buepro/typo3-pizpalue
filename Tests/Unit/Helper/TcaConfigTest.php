@@ -15,7 +15,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 class TcaConfigTest extends UnitTestCase
 {
-    private function getDefaultColorItems(): array
+    private static function getDefaultColorItems(): array
     {
         $result = [[TcaConfig::LL_PREFIX . 'normal', '']];
         foreach (TcaConfig::BOOTSTRAP_PACKAGE_COLORS as $color) {
@@ -24,9 +24,9 @@ class TcaConfigTest extends UnitTestCase
         return $result;
     }
 
-    public function getColorItemsReturnsCorrectItemsDataProvider(): array
+    public static function getColorItemsReturnsCorrectItemsDataProvider(): array
     {
-        $defaultColorItems = $this->getDefaultColorItems();
+        $defaultColorItems = self::getDefaultColorItems();
         $colorItemsWithoutNormal = $defaultColorItems;
         unset($colorItemsWithoutNormal[0]);
         $colorItemsWithFormat = array_map(static function (array $item): array {

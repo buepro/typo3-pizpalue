@@ -15,7 +15,7 @@ use TYPO3\CMS\Core\TypoScript\AST\Node\RootNode;
 use TYPO3\CMS\Core\TypoScript\FrontendTypoScript;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
-abstract class TypoScriptBasedTest extends UnitTestCase
+abstract class TypoScriptBasedTestCase extends UnitTestCase
 {
     use ProphecyTrait;
 

@@ -86,3 +86,17 @@ parameters:
 			"""
 			count: 1
 			path: ../Classes/Updates/Criteria/InCriteria.php
+		-
+			message: "#^Call to method setSetupArray\\(\\) on an unknown class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\FrontendTypoScript\\.$#"
+			count: 1
+			path: ../Tests/Unit/Structure/TypoScriptBasedTestCase.php
+
+		-
+			message: "#^Instantiated class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\AST\\\\Node\\\\RootNode not found\\.$#"
+			count: 1
+			path: ../Tests/Unit/Structure/TypoScriptBasedTestCase.php
+
+		-
+			message: "#^Instantiated class TYPO3\\\\CMS\\\\Core\\\\TypoScript\\\\FrontendTypoScript not found\\.$#"
+			count: 1
+			path: ../Tests/Unit/Structure/TypoScriptBasedTestCase.php

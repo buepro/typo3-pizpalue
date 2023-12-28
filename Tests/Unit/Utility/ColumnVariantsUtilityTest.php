@@ -16,7 +16,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
 {
     public const BREAKPOINTS = ['extrasmall', 'small', 'medium', 'large', 'xlarge', 'default'];
 
-    public function testGetOrderedColumnClassesDataProvider(): array
+    public static function testGetOrderedColumnClassesDataProvider(): array
     {
         return [
             'logical order' => [
@@ -42,7 +42,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
         self::assertSame($expected, ColumnVariantsUtility::getOrderedColumnClasses($classes));
     }
 
-    public function testGetColumnCountsFromRowClassesDataProvider(): array
+    public static function testGetColumnCountsFromRowClassesDataProvider(): array
     {
         return [
             'no row column classes' => [
@@ -119,7 +119,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
         self::assertSame($expected, ColumnVariantsUtility::getColumnCountsFromRowClasses($rowClasses, $defaultCount));
     }
 
-    public function testGetMultiplierDataProvider(): array
+    public static function testGetMultiplierDataProvider(): array
     {
         return [
             'col, no row' => ['col', '', 0, [], array_fill_keys(self::BREAKPOINTS, 1.0)],

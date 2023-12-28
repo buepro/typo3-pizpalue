@@ -17,7 +17,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
     /**
      * @var array $initialVariants
      */
-    protected $initialVariants = [
+    protected static $initialVariants = [
         'default' => [
             'breakpoint' => 1400,
             'width' => 1280,
@@ -73,7 +73,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
         ]
     ];
 
-    public function getVectorPropertyReturnsVectorDataProvider(): array
+    public static function getVectorPropertyReturnsVectorDataProvider(): array
     {
         $expected = array_fill_keys(StructureVariantsUtility::BREAKPOINTS, 5.5);
         return [
@@ -94,7 +94,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
         $this::assertSame($expected, StructureVariantsUtility::getVectorProperty($property));
     }
 
-    private function removeMarginsFromVariants(array $variants, array $margins): array
+    private static function removeMarginsFromVariants(array $variants, array $margins): array
     {
         $result = $variants;
         foreach ($variants as $breakpoint => $value) {
@@ -103,29 +103,29 @@ class StructureVariantsUtilityTest extends UnitTestCase
         return $result;
     }
 
-    public function marginIsRespectedDataProvider(): array
+    public static function marginIsRespectedDataProvider(): array
     {
         $partialMargins = ['medium' => 20];
-        $partialExpected = $this->initialVariants;
+        $partialExpected = self::$initialVariants;
         $partialExpected['medium']['width'] -= 20;
         $partialMixedMargins = $partialMargins;
         $partialMixedMargins['small'] = -20;
         $partialMixedExpected = $partialExpected;
         $partialMixedExpected['small']['width'] -= -20;
         return [
-            'null' => [$this->initialVariants, null, $this->initialVariants],
+            'null' => [self::$initialVariants, null, self::$initialVariants],
             'positive margins' => [
-                $this->initialVariants,
+                self::$initialVariants,
                 $margins = array_fill_keys(StructureVariantsUtility::BREAKPOINTS, 5),
-                $this->removeMarginsFromVariants($this->initialVariants, $margins)
+                self::removeMarginsFromVariants(self::$initialVariants, $margins)
             ],
             'negative margins' => [
-                $this->initialVariants,
+                self::$initialVariants,
                 $margins = array_fill_keys(StructureVariantsUtility::BREAKPOINTS, -5),
-                $this->removeMarginsFromVariants($this->initialVariants, $margins)
+                self::removeMarginsFromVariants(self::$initialVariants, $margins)
             ],
-            'partially defined margins' => [$this->initialVariants, $partialMargins, $partialExpected],
-            'partially defined mixed margins' => [$this->initialVariants, $partialMixedMargins, $partialMixedExpected],
+            'partially defined margins' => [self::$initialVariants, $partialMargins, $partialExpected],
+            'partially defined mixed margins' => [self::$initialVariants, $partialMixedMargins, $partialMixedExpected],
         ];
     }
 
