@@ -15,6 +15,9 @@ use Buepro\Pizpalue\Tests\Functional\FunctionalFrontendTestCase;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 
+/**
+ * @todo Running more than one tests leads to unterminated run
+ */
 class ColumnViewHelperTest extends FunctionalFrontendTestCase
 {
     private const TEMPLATE_PATH = 'EXT:pizpalue/Tests/Functional/ViewHelpers/Fixtures/Render/Bootstrap/Column.html';
@@ -24,6 +27,7 @@ class ColumnViewHelperTest extends FunctionalFrontendTestCase
      */
     protected array $coreExtensionsToLoad = [
         'impexp',
+        'rte_ckeditor',
         'seo',
     ];
 
