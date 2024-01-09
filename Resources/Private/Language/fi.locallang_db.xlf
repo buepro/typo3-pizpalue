@@ -1,13 +1,136 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-  <file source-language="en" datatype="plaintext" original="messages" date="2023-12-19T09:11:39Z" product-name="cookie_content" target-language="fi">
+  <file source-language="en" datatype="plaintext" original="messages" date="2018-05-31T09:11:39Z" product-name="pizpalue" target-language="fi">
     <header/>
     <body>
-			
-			
-			
-			
-			
-		</body>
+      <trans-unit id="tx_pizpalue_ttc.attributes" approved="yes">
+        <source>Attributes</source>
+        <target state="final">Ominaisuudet</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes" approved="yes">
+        <source>Additional classes</source>
+        <target state="final">Lisäluokat</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.additionalAttributes" approved="yes">
+        <source>Additional attributes</source>
+        <target state="final">Lisäominaisuudet</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.background" approved="yes">
+        <source>Background</source>
+        <target state="final">Tausta</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.bgmedia" approved="yes">
+        <source>Background image (inline)</source>
+        <target state="final">Taustakuva (määritetty)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.behaviour" approved="yes">
+        <source>Behaviour</source>
+        <target state="final">Käyttäytyminen</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation" approved="yes">
+        <source>Animation</source>
+        <target state="final">Animaatio</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animationNone" approved="yes">
+        <source>No animation</source>
+        <target state="final">Ei animointia</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation1" approved="yes">
+        <source>Fade up right (on scrolling)</source>
+        <target state="final">Häivytä oikealle (vieritettäessä)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation2" approved="yes">
+        <source>Fade up left (on scrolling)</source>
+        <target state="final">Häivytä vasemmalle (vieritettäessä)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation3" approved="yes">
+        <source>Zoom in (on scrolling)</source>
+        <target state="final">Zoom in (vieritettäessä)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation4" approved="yes">
+        <source>Flip up (on scrolling)</source>
+        <target state="final">Flip up (vieritettäessä)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.background_image_variants" approved="yes">
+        <source>Background image variants</source>
+        <target state="final">Taustakuvan variantit</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_variants.content" approved="yes">
+        <source>Default (content width)</source>
+        <target state="final">Oletus (sisällön leveys)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_variants.page" approved="yes">
+        <source>Full page width</source>
+        <target state="final">Koko sivun leveys</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-image-overlay" approved="yes">
+        <source>Image with overlay heading</source>
+        <target state="final">Kuva, jossa on päällekkäinen otsikko</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left" approved="yes">
+        <source>Gallery item left</source>
+        <target state="final">Galleria kohde vasemmalla</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-right" approved="yes">
+        <source>Gallery item right</source>
+        <target state="final">Galleria kohde oikealla</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-join" approved="yes">
+        <source>Gallery item join</source>
+        <target state="final">Galleria kohde yhdistämällä</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-shadow" approved="yes">
+        <source>Gallery item shadow</source>
+        <target state="final">Galleria kohde varjolla</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-tile-scroll-y" approved="yes">
+        <source>Tile with vertical scrollbar</source>
+        <target state="final">Laatikko pystysuunnassa vierityspalkilla</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-below-header" approved="yes">
+        <source>Move content below header</source>
+        <target state="final">Siirrä sisältö otsikon alle</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.all" approved="yes">
+        <source>All</source>
+        <target state="final">Kaikki</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.small" approved="yes">
+        <source>Small</source>
+        <target state="final">Pieni</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.medium" approved="yes">
+        <source>Medium</source>
+        <target state="final">Keskikokoinen</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.large" approved="yes">
+        <source>Large</source>
+        <target state="final">Suuri</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.extralarge" approved="yes">
+        <source>Extra large</source>
+        <target state="final">Erittäin suuri</target>
+      </trans-unit>
+      <trans-unit id="tca.modal_dialog.header" approved="yes">
+        <source>Button text</source>
+        <target state="final">Painikkeen teksti</target>
+      </trans-unit>
+      <trans-unit id="tca.modal_dialog.options" approved="yes">
+        <source>Button options</source>
+        <target state="final">Painikevalinnat</target>
+      </trans-unit>
+      <trans-unit id="tca.list_categorized_content.options" approved="yes">
+        <source>List options</source>
+        <target state="final">Luettelovalinnat</target>
+      </trans-unit>
+      <trans-unit id="tca.schema.jsonLdCode" approved="yes">
+        <source>JSON-LD Code</source>
+        <target state="final">JSON-LD-koodi</target>
+      </trans-unit>
+      <trans-unit id="tca.schema.options" approved="yes">
+        <source>Schema options</source>
+        <target state="final">Kaaviovaihtoehdot</target>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
