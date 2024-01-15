@@ -28,11 +28,11 @@
                 </f:if>
                 <f:if condition="{item.contentUid}">
                     {f:variable(name:'justShowIcon', value:0)}
-                    <a href="#">
+                    <button class="btn btn-link border border-0 p-0">
                         <span id="pp-fm-contenticon-{item.contentUid}" class="{item.iconClass} pp-fm-contenticon"
                               data-pp-fm-content="pp-fm-content-{item.contentUid}"
                               title="{f:cObject(typoscriptObjectPath: 'lib.pizpalue.renderContentTitle', data: '{uid:item.contentUid}')}"></span>
-                    </a>
+                    </button>
                 </f:if>
                 <f:if condition="{justShowIcon}">
                     <span class="{item.iconClass}"></span>
