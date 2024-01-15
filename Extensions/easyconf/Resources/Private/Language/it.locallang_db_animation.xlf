@@ -3,10 +3,22 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2023-02-03T09:11:39Z" product-name="pizpalue" target-language="it">
     <header/>
     <body>
-			
-			
-			
-			
-		</body>
+      <trans-unit id="paletteAnimation.description" resname="paletteAnimation.description" approved="yes">
+        <source>Enabling an animation results in the related library to be loaded. In most cases some additional definition or initialization is needed. Please refer to the respective library documentation for further details.</source>
+        <target state="final">Abilitare un'animazione significa caricare la relativa libreria. Nella maggior parte dei casi è necessaria una definizione o inizializzazione aggiuntive. Fare riferimento alla relativa documentazione della libreria per ulteriori dettagli.</target>
+      </trans-unit>
+      <trans-unit id="animation_animate_css_include_always" resname="animation_animate_css_include_always" approved="yes">
+        <source>Include animate.css</source>
+        <target state="final">Includi animazione.css</target>
+      </trans-unit>
+      <trans-unit id="animation_josh_include_always" resname="animation_josh_include_always" approved="yes">
+        <source>Include mamunhpath/josh.js</source>
+        <target state="final">Includi mamunhpath/josh.js</target>
+      </trans-unit>
+      <trans-unit id="animation_twikito_include_always" resname="animation_twikito_include_always" approved="yes">
+        <source>Include Twikito/onscroll-effect</source>
+        <target state="final">Includi Twikito/effetto di scorrimento</target>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
