@@ -3,7 +3,10 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2022-06-15T09:11:39Z" product-name="pizpalue" target-language="it">
     <header/>
     <body>
-			
-		</body>
+      <trans-unit id="flashMessage.scrollMenuPropertyChange" resname="flashMessage.scrollMenuPropertyChange" approved="yes">
+        <source>Some additional scroll menu properties have been changed too.</source>
+        <target state="final">Sono state modificate anche alcune proprietà aggiuntive del menu di scorrimento.</target>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
