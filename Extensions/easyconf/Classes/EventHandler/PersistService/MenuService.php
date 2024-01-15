@@ -63,15 +63,6 @@ class MenuService extends AbstractService
                 $this->typoScriptMapper->bufferProperty($path, substr($this->formFields[$field], 11));
             }
         }
-        foreach (['menu_fast_items_first_page_uid', 'menu_fast_items_second_page_uid', 'menu_fast_items_third_page_uid'] as $field) {
-            if (
-                isset($this->formFields[$field]) &&
-                strpos($this->formFields[$field], 'pages') === 0 &&
-                ($path = TcaUtility::getMappingPath($field)) !== null
-            ) {
-                $this->typoScriptMapper->bufferProperty($path, substr($this->formFields[$field], 6));
-            }
-        }
         return $this;
     }
 

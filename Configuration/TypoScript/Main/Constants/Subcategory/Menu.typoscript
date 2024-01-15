@@ -104,6 +104,7 @@ pizpalue.menu {
         useSrLanguageMenu = 0
     }
 
+    // todo: Rename pageUid to typolink (results in breaking change).
     fast {
         items {
             first {
@@ -111,7 +112,7 @@ pizpalue.menu {
                 iconClass = ppicon ppicon-log-in
                 # cat=6060/1060/0512; type=string; label=Fastmenu first item content uid:Uid from content element being rendered. Leave empty if not used.
                 contentUid =
-                # cat=6060/1060/0514; type=string; label=Fastmenu first item page uid:Uid from page linked to. Leave empty if not used.
+                # cat=6060/1060/0514; type=string; label=Fastmenu first item typolink. Leave empty if not used.
                 pageUid =
             }
 
@@ -120,7 +121,7 @@ pizpalue.menu {
                 iconClass = ppicon ppicon-call
                 # cat=6060/1060/0522; type=string; label=Fastmenu second item content uid:Uid from content element being rendered. Leave empty if not used.
                 contentUid =
-                # cat=6060/1060/0524; type=string; label=Fastmenu second item page uid:Uid from page linked to. Leave empty if not used.
+                # cat=6060/1060/0524; type=string; label=Fastmenu second item typolink. Leave empty if not used.
                 pageUid =
             }
 
@@ -129,7 +130,7 @@ pizpalue.menu {
                 iconClass = ppicon ppicon-location
                 # cat=6060/1060/0532; type=string; label=Fastmenu third item content uid:Uid from content element being rendered. Leave empty if not used.
                 contentUid =
-                # cat=6060/1060/0534; type=string; label=Fastmenu third item page uid:Uid from page linked to. Leave empty if not used.
+                # cat=6060/1060/0534; type=string; label=Fastmenu third item typolink. Leave empty if not used.
                 pageUid =
             }
         }
