@@ -16,9 +16,9 @@ defined('TYPO3') or die('Access denied.');
 (static function () {
     $l10nFile = 'LLL:EXT:pizpalue/Extensions/easyconf/Resources/Private/Language/locallang_db_menu.xlf';
     $tca = &$GLOBALS['TCA']['tx_easyconf_configuration'];
-    $tca['ctrl']['EXT']['easyconf']['dataHandlerAllowedFields'] .= ', menu_fast_items_first_content_uid, ' .
-        'menu_fast_items_first_page_uid, menu_fast_items_second_content_uid, menu_fast_items_second_page_uid' .
-        'menu_fast_items_third_content_uid, menu_fast_items_third_page_uid, menu_scroll_page_uid';
+    $tca['ctrl']['EXT']['easyconf']['dataHandlerAllowedFields'] .= ', menu_fast_items_first_page_uid, ' .
+        'menu_fast_items_first_content_uid, menu_fast_items_second_page_uid, menu_fast_items_second_content_uid, ' .
+        'menu_fast_items_third_page_uid, menu_fast_items_third_content_uid, menu_scroll_page_uid';
 
     /**
      * Properties
@@ -35,9 +35,9 @@ defined('TYPO3') or die('Access denied.');
     $menuFooterProperties = 'navigationValue, navigationType, includeNotInMenu, levels, icon.enable, ' .
         'icon.width, icon.height';
     $menuLanguageProperties = 'languageValue';
-    $menuFastProperties = 'items.first.iconClass, items.first.contentUid, items.first.pageUid, ' .
-        'items.second.iconClass, items.second.contentUid, items.second.pageUid, ' .
-        'items.third.iconClass, items.third.contentUid, items.third.pageUid';
+    $menuFastProperties = 'items.first.iconClass, items.first.pageUid, items.first.contentUid, ' .
+        'items.second.iconClass, items.second.pageUid, items.second.contentUid, ' .
+        'items.third.iconClass, items.third.pageUid, items.third.contentUid';
     $menuScrollProperties = 'pageUid';
     $menuScrollAdvancedProperties = 'dataKey, menuId, offset';
 
@@ -256,7 +256,7 @@ defined('TYPO3') or die('Access denied.');
     TcaUtility::modifyColumns(
         $tca['columns'],
         'items.first.pageUid, items.second.pageUid, items.third.pageUid',
-        ['config' => ['type' => 'group', 'allowed' => 'pages', 'maxitems' => 1, 'size' => 1]],
+        ['config' => ['type' => 'input', 'renderType' => 'inputLink']],
         'menu_fast'
     );
     $tca['columns']['menu_fast_enable']['tx_easyconf']['path'] = 'pizpalue.menu.fast.enable';

@@ -22,9 +22,9 @@
                 {f:variable(name:'justShowIcon', value:1)}
                 <f:if condition="{item.pageUid}">
                     {f:variable(name:'justShowIcon', value:0)}
-                    <f:link.page pageUid="{item.pageUid}">
+                    <f:link.typolink parameter="{item.pageUid}">
                         <span class="{item.iconClass} pp-fm-linkicon"></span>
-                    </f:link.page>
+                    </f:link.typolink>
                 </f:if>
                 <f:if condition="{item.contentUid}">
                     {f:variable(name:'justShowIcon', value:0)}
