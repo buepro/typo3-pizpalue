@@ -3,14 +3,38 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="it">
     <header/>
     <body>
-			
-			
-			
-			
-			
-			
-			
-			
-		</body>
+      <trans-unit id="feature_font_awesome_enable" resname="feature_font_awesome_enable" approved="yes">
+        <source>Font awesome</source>
+        <target state="final">Carattere fantastico</target>
+      </trans-unit>
+      <trans-unit id="feature_reveal_footer" resname="feature_reveal_footer" approved="yes">
+        <source>Reveal footer</source>
+        <target state="final">Mostra piè di pagina</target>
+      </trans-unit>
+      <trans-unit id="feature_slide_nav_content" resname="feature_slide_nav_content" approved="yes">
+        <source>Slide navigation content</source>
+        <target state="final">Contenuto della navigazione della diapositiva</target>
+      </trans-unit>
+      <trans-unit id="feature_content_insert_data" resname="feature_content_insert_data" approved="yes">
+        <source>Insert data in content</source>
+        <target state="final">Inserisci dati nel contenuto</target>
+      </trans-unit>
+      <trans-unit id="feature_image_loading" resname="feature_image_loading" approved="yes">
+        <source>Image loading</source>
+        <target state="final">Caricamento immagine</target>
+      </trans-unit>
+      <trans-unit id="feature_image_loading.eager" resname="feature_image_loading.eager" approved="yes">
+        <source>Eager</source>
+        <target state="final">Veloce</target>
+      </trans-unit>
+      <trans-unit id="feature_image_loading.lazy" resname="feature_image_loading.lazy" approved="yes">
+        <source>Lazy</source>
+        <target state="final">Pigro</target>
+      </trans-unit>
+      <trans-unit id="feature_image_loading_auto" resname="feature_image_loading_auto" approved="yes">
+        <source>Auto (Chrome only)</source>
+        <target state="final">Automatico (solo Chrome)</target>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
