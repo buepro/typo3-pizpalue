@@ -3,49 +3,158 @@
   <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="it">
     <header/>
     <body>
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-			
-			
-
-			
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-			
-			
-
-			
-			
-			
-			
-		</body>
+      <trans-unit id="color_primary" resname="color_primary" approved="yes">
+        <source>Primary</source>
+        <target state="final">Primario</target>
+      </trans-unit>
+      <trans-unit id="color_secondary" resname="color_secondary" approved="yes">
+        <source>Secondary</source>
+        <target state="final">Secondario</target>
+      </trans-unit>
+      <trans-unit id="color_complementary" resname="color_complementary" approved="yes">
+        <source>Complementary</source>
+        <target state="final">Complementare</target>
+      </trans-unit>
+      <trans-unit id="color_tertiary" resname="color_tertiary" approved="yes">
+        <source>Tertiary</source>
+        <target state="final">Terziario</target>
+      </trans-unit>
+      <trans-unit id="color_quaternary" resname="color_quaternary" approved="yes">
+        <source>Quaternary</source>
+        <target state="final">Quarto</target>
+      </trans-unit>
+      <trans-unit id="color_light" resname="color_light" approved="yes">
+        <source>Light</source>
+        <target state="final">Chiaro</target>
+      </trans-unit>
+      <trans-unit id="color_dark" resname="color_dark" approved="yes">
+        <source>Dark</source>
+        <target state="final">Scuro</target>
+      </trans-unit>
+      <trans-unit id="color_body-bg" resname="color_body-bg" approved="yes">
+        <source>Website background</source>
+        <target state="final">Sfondo del Sito Web</target>
+      </trans-unit>
+      <trans-unit id="color_body-color" resname="color_body-color" approved="yes">
+        <source>Normal</source>
+        <target state="final">Normale</target>
+      </trans-unit>
+      <trans-unit id="color_headings-color" resname="color_headings-color" approved="yes">
+        <source>Headings</source>
+        <target state="final">Intestazioni</target>
+      </trans-unit>
+      <trans-unit id="color_link-color" resname="color_link-color" approved="yes">
+        <source>Link color</source>
+        <target state="final">Colore dei link</target>
+      </trans-unit>
+      <trans-unit id="color_link-hover-color" resname="color_link-hover-color" approved="yes">
+        <source>Link hover color</source>
+        <target state="final">Colore del link al passaggio del mouse:</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-bg" resname="color_navbar-light-bg" approved="yes">
+        <source>Background</source>
+        <target state="final">Sfondo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-bg-opacity" resname="color_navbar-light-bg-opacity" approved="yes">
+        <source>Background opacity</source>
+        <target state="final">Opacità sfondo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-color" resname="color_navbar-light-color" approved="yes">
+        <source>Text</source>
+        <target state="final">Testo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-hover-bg" resname="color_navbar-light-hover-bg" approved="yes">
+        <source>Hover background</source>
+        <target state="final">Sfondo sovrapposto</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-hover-color" resname="color_navbar-light-hover-color" approved="yes">
+        <source>Hover text</source>
+        <target state="final">Testo al passaggio del mouse</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-active-bg" resname="color_navbar-light-active-bg" approved="yes">
+        <source>Active background</source>
+        <target state="final">Sfondo attivo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-active-color" resname="color_navbar-light-active-color" approved="yes">
+        <source>Active text</source>
+        <target state="final">Testo Attivo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-disabled-bg" resname="color_navbar-light-disabled-bg" approved="yes">
+        <source>Disabled background</source>
+        <target state="final">Sfondo disabilitato</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-light-disabled-color" resname="color_navbar-light-disabled-color" approved="yes">
+        <source>Disabled text</source>
+        <target state="final">Testo disabilitato</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-bg" resname="color_navbar-dark-bg" approved="yes">
+        <source>Background</source>
+        <target state="final">Sfondo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-bg-opacity" resname="color_navbar-dark-bg-opacity" approved="yes">
+        <source>Background opacity</source>
+        <target state="final">Opacità sfondo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-color" resname="color_navbar-dark-color" approved="yes">
+        <source>Text</source>
+        <target state="final">Testo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-hover-bg" resname="color_navbar-dark-hover-bg" approved="yes">
+        <source>Hover background</source>
+        <target state="final">Sfondo sovrapposto</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-hover-color" resname="color_navbar-dark-hover-color" approved="yes">
+        <source>Hover text</source>
+        <target state="final">Testo al passaggio del mouse</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-active-bg" resname="color_navbar-dark-active-bg" approved="yes">
+        <source>Active background</source>
+        <target state="final">Sfondo attivo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-active-color" resname="color_navbar-dark-active-color" approved="yes">
+        <source>Active text</source>
+        <target state="final">Testo Attivo</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-disabled-bg" resname="color_navbar-dark-disabled-bg" approved="yes">
+        <source>Disabled background</source>
+        <target state="final">Sfondo disabilitato</target>
+      </trans-unit>
+      <trans-unit id="color_navbar-dark-disabled-color" resname="color_navbar-dark-disabled-color" approved="yes">
+        <source>Disabled text</source>
+        <target state="final">Testo disabilitato</target>
+      </trans-unit>
+      <trans-unit id="color_footer-bg" resname="color_footer-bg" approved="yes">
+        <source>Background</source>
+        <target state="final">Sfondo</target>
+      </trans-unit>
+      <trans-unit id="color_footer-color" resname="color_footer-color" approved="yes">
+        <source>Text</source>
+        <target state="final">Testo</target>
+      </trans-unit>
+      <trans-unit id="color_footer-link-color" resname="color_footer-link-color" approved="yes">
+        <source>Link text</source>
+        <target state="final">Testo del link</target>
+      </trans-unit>
+      <trans-unit id="color_footer-link-hover-color" resname="color_footer-link-hover-color" approved="yes">
+        <source>Hover text</source>
+        <target state="final">Testo al passaggio del mouse</target>
+      </trans-unit>
+      <trans-unit id="color_footer-meta-bg" resname="color_footer-meta-bg" approved="yes">
+        <source>Background</source>
+        <target state="final">Sfondo</target>
+      </trans-unit>
+      <trans-unit id="color_footer-meta-color" resname="color_footer-meta-color" approved="yes">
+        <source>Text</source>
+        <target state="final">Testo</target>
+      </trans-unit>
+      <trans-unit id="color_footer-meta-link-color" resname="color_footer-meta-link-color" approved="yes">
+        <source>Link text</source>
+        <target state="final">Testo del link</target>
+      </trans-unit>
+      <trans-unit id="color_footer-meta-link-hover-color" resname="color_footer-meta-link-hover-color" approved="yes">
+        <source>Hover text</source>
+        <target state="final">Testo al passaggio del mouse</target>
+      </trans-unit>
+    </body>
   </file>
 </xliff>
