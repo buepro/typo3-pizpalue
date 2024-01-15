@@ -30,7 +30,8 @@
                     {f:variable(name:'justShowIcon', value:0)}
                     <a href="#">
                         <span id="pp-fm-contenticon-{item.contentUid}" class="{item.iconClass} pp-fm-contenticon"
-                              data-pp-fm-content="pp-fm-content-{item.contentUid}"></span>
+                              data-pp-fm-content="pp-fm-content-{item.contentUid}"
+                              title="{f:cObject(typoscriptObjectPath: 'lib.pizpalue.renderContentTitle', data: '{uid:item.contentUid}')}"></span>
                     </a>
                 </f:if>
                 <f:if condition="{justShowIcon}">

@@ -15,4 +15,17 @@ lib.pizpalue {
             pidInList = 0
         }
     }
+    renderContentTitle = CONTENT
+    renderContentTitle {
+        table = tt_content
+        select {
+            uidInList {
+                field = uid
+                override.field = l18n_parent
+            }
+            pidInList = 0
+        }
+        renderObj = TEXT
+        renderObj.field = header
+    }
 }
