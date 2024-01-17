@@ -112,10 +112,6 @@
         <target state="final">
 Dieses Icon-Menü ist auf der Seite fixiert. Ein Menüpunkt wird aktiviert, indem ihm eine CSS-Klasse zugewiesen wird. Beim Anklicken eines Icons wird ein Inhalt angezeigt oder eine Seite geladen. Inhalt und Verlinkung eines Menüpunktes sollten nicht zusammen definiert werden.</target>
       </trans-unit>
-      <trans-unit id="menu_fast_items_first_icon_class" resname="menu_fast_items_first_icon_class" approved="yes">
-        <source>First item icon class</source>
-        <target state="final">Erstes Element Icon-Klasse</target>
-      </trans-unit>
       <trans-unit id="menu_fast_items_first_content_uid" resname="menu_fast_items_first_content_uid" approved="yes">
         <source>First item content</source>
         <target state="final">Erstes Element Inhalt</target>
@@ -124,10 +120,6 @@ Dieses Icon-Menü ist auf der Seite fixiert. Ein Menüpunkt wird aktiviert, inde
         <source>First item link</source>
         <target state="final">Erstes Element Link</target>
       </trans-unit>
-      <trans-unit id="menu_fast_items_second_icon_class" resname="menu_fast_items_second_icon_class" approved="yes">
-        <source>Second item icon class</source>
-        <target state="final">Zweites Element Icon-Klasse</target>
-      </trans-unit>
       <trans-unit id="menu_fast_items_second_content_uid" resname="menu_fast_items_second_content_uid" approved="yes">
         <source>Second item content</source>
         <target state="final">Zweites Element Inhalt</target>
@@ -135,10 +127,6 @@ Dieses Icon-Menü ist auf der Seite fixiert. Ein Menüpunkt wird aktiviert, inde
       <trans-unit id="menu_fast_items_second_page_uid" resname="menu_fast_items_second_page_uid" approved="yes">
         <source>Second item link</source>
         <target state="final">Zweites Element Link</target>
-      </trans-unit>
-      <trans-unit id="menu_fast_items_third_icon_class" resname="menu_fast_items_third_icon_class" approved="yes">
-        <source>Third item icon class</source>
-        <target state="final">Drittes Element Icon-Klasse</target>
       </trans-unit>
       <trans-unit id="menu_fast_items_third_content_uid" resname="menu_fast_items_third_content_uid" approved="yes">
         <source>Third item content</source>
