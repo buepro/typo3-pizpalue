@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2017-05-19T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="deprecated" approved="yes">
+        <source>deprecated</source>
+        <target state="final">veraltet</target>
+      </trans-unit>
+      <trans-unit id="deprecatedItemNote" approved="yes">
+        <source>DEPRECATED. The item is deprecated and will be removed soon. Please don't use it any more.</source>
+        <target state="final">VERALTET. Die Funktion oder der Gegenstand ist veraltet und wird bald entfernt. Bitte nicht mehr verwenden.</target>
+      </trans-unit>
+      <trans-unit id="close" approved="yes">
+        <source>Close</source>
+        <target state="final">Schliessen</target>
+      </trans-unit>
+      <trans-unit id="normal" resname="normal" approved="yes">
+        <source>Normal</source>
+        <target state="final">Normal</target>
+      </trans-unit>
+      <trans-unit id="less" approved="yes">
+        <source>Less</source>
+        <target state="final">Weniger</target>
+      </trans-unit>
+      <trans-unit id="events" approved="yes">
+        <source>Events</source>
+        <target state="final">Ereignisse</target>
+      </trans-unit>
+      <trans-unit id="moreDetails" approved="yes">
+        <source>More details</source>
+        <target state="final">Mehr Details</target>
+      </trans-unit>
+      <trans-unit id="primary" resname="primary" approved="yes">
+        <source>Primary</source>
+        <target state="final">Primär</target>
+      </trans-unit>
+      <trans-unit id="secondary" resname="secondary" approved="yes">
+        <source>Secondary</source>
+        <target state="final">Sekundär</target>
+      </trans-unit>
+      <trans-unit id="complementary" resname="complementary" approved="yes">
+        <source>Complementary</source>
+        <target state="final">Komplementär</target>
+      </trans-unit>
+      <trans-unit id="success" resname="success" approved="yes">
+        <source>Success</source>
+        <target state="final">Erfolg</target>
+      </trans-unit>
+      <trans-unit id="danger" resname="danger" approved="yes">
+        <source>Danger</source>
+        <target state="final">Gefahr</target>
+      </trans-unit>
+      <trans-unit id="muted" resname="muted" approved="yes">
+        <source>Muted</source>
+        <target state="final">Ignorieren</target>
+      </trans-unit>
+      <trans-unit id="tertiary" resname="tertiary" approved="yes">
+        <source>Tertiary</source>
+        <target state="final">Tertiär</target>
+      </trans-unit>
+      <trans-unit id="quaternary" resname="quaternary" approved="yes">
+        <source>Quaternary</source>
+        <target state="final">Quaternär</target>
+      </trans-unit>
+      <trans-unit id="light" resname="light" approved="yes">
+        <source>Light</source>
+        <target state="final">Hell</target>
+      </trans-unit>
+      <trans-unit id="dark" resname="dark" approved="yes">
+        <source>Dark</source>
+        <target state="final">Dunkel</target>
+      </trans-unit>
+      <trans-unit id="cookieconsent.common.header" approved="yes">
+        <source>Cookies used on the website!</source>
+        <target state="final">Diese Webseite benutzt Cookies!</target>
+      </trans-unit>
+      <trans-unit id="cookieconsent.common.message" approved="yes">
+        <source>This website uses cookies to ensure you get the best experience on our website.</source>
+        <target state="final">Um Ihnen eine optimale Nutzung unserer Website zu ermöglichen, werden Cookies
+					eingesetzt.
+				</target>
+      </trans-unit>
+      <trans-unit id="cookieconsent.common.dismiss" approved="yes">
+        <source>Got it!</source>
+        <target state="final">Alles klar!</target>
+      </trans-unit>
+      <trans-unit id="cookieconsent.common.allow" approved="yes">
+        <source>Allow cookies</source>
+        <target state="final">Cookies erlauben</target>
+      </trans-unit>
+      <trans-unit id="cookieconsent.common.deny" approved="yes">
+        <source>Decline</source>
+        <target state="final">Ablehnen</target>
+      </trans-unit>
+      <trans-unit id="cookieconsent.common.link" approved="yes">
+        <source>Learn more</source>
+        <target state="final">Mehr erfahren</target>
+      </trans-unit>
+      <trans-unit id="googleanalyticsstatus.title" approved="yes">
+        <source>Google Analytics Status</source>
+        <target state="final">Google Analytics Status</target>
+      </trans-unit>
+      <trans-unit id="googleanalyticsstatus.description" approved="yes">
+        <source>Here you can object to the anonymous collection by Google Analytics on this website for your
+					browser by using an "Opt-Out-Cookie". Please note that if you delete the exclusion cookie or use a
+					different computer or web browser, you will need to re-set the exclusion.
+				</source>
+        <target state="final">Für diese Webseite können Sie hier, durch ein "Opt-Out-Cookie", die anonymen
+					Datenerfassung durch Google Analytics deaktivieren. Bitte beachten Sie, dass wenn Sie das
+					Ausschluss-Cookie löschen oder einen anderen Computer oder Webbrowser verwenden, den Ausschluss neu
+					setzen müssen.
+				</target>
+      </trans-unit>
+      <trans-unit id="googleanalyticsstatus.link.enable" approved="yes">
+        <source>Enable Google Analytics (Opt-In)</source>
+        <target state="final">Google Analytics aktivieren (Opt-In)</target>
+      </trans-unit>
+      <trans-unit id="googleanalyticsstatus.link.disable" approved="yes">
+        <source>Deactivate Google Analytics (Opt-Out)</source>
+        <target state="final">Google Analytics deaktivieren (Opt-Out)</target>
+      </trans-unit>
+      <trans-unit id="tt_content.layout.tile21" approved="yes">
+        <source>Tile with side ratio 2:1</source>
+        <target state="final">Kachel mit Seitenverhältniss 2:1</target>
+      </trans-unit>
+      <trans-unit id="tt_content.layout.tile11" approved="yes">
+        <source>Tile with side ratio 1:1</source>
+        <target state="final">Kachel mit Seitenverhältniss 1:1</target>
+      </trans-unit>
+      <trans-unit id="tt_content.layout.tile12" approved="yes">
+        <source>Tile with side ratio 1:2</source>
+        <target state="final">Kachel mit Seitenverhältniss 1:2</target>
+      </trans-unit>
+      <trans-unit id="tx-eventnews-locationDetailLink" approved="yes">
+        <source>Show on map</source>
+        <target state="final">Auf Karte anzeigen</target>
+      </trans-unit>
+      <trans-unit id="tx-bookmarkpages-manageBookmarks" approved="yes">
+        <source>Button group to manage and select bookmarks</source>
+        <target state="final">Schaltflächengruppe zum Verwalten und Auswählen von Lesezeichen</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

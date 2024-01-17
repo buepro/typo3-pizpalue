@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2018-10-11T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="primaryBackgroundColor" approved="yes">
+        <source>Primary background color</source>
+        <target state="final">Primäre Hintergrundfarbe</target>
+      </trans-unit>
+      <trans-unit id="secondaryBackgroundColor" approved="yes">
+        <source>Secondary background color</source>
+        <target state="final">Sekundäre Hintergrundfarbe</target>
+      </trans-unit>
+      <trans-unit id="complementaryBackgroundColor" approved="yes">
+        <source>Complementary background color</source>
+        <target state="final">Komplementäre Hintergrundfarbe</target>
+      </trans-unit>
+      <trans-unit id="tertiaryBackgroundColor" approved="yes">
+        <source>Tertiary background color</source>
+        <target state="final">Tertiäre Hintergrundfarbe</target>
+      </trans-unit>
+      <trans-unit id="quaternaryBackgroundColor" approved="yes">
+        <source>Quaternary background color</source>
+        <target state="final">Quaternäre Hintergrundfarbe</target>
+      </trans-unit>
+      <trans-unit id="lightBackgroundColor" approved="yes">
+        <source>Light background color</source>
+        <target state="final">Helle Hintergrundfarbe</target>
+      </trans-unit>
+      <trans-unit id="darkBackgroundColor" approved="yes">
+        <source>Dark background color</source>
+        <target state="final">Dunkle Hintergrundfarbe</target>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.subnav" approved="yes">
+        <source>Sub Navigation</source>
+        <target state="final">Subnavigation</target>
+      </trans-unit>
+      <trans-unit id="page_layout.frame.pizpalue-frame" approved="yes">
+        <source>With frame</source>
+        <target state="final">Mit Rahmen</target>
+      </trans-unit>
+      <trans-unit id="page_layout.frame.pizpalue-no-frame" approved="yes">
+        <source>Without frame</source>
+        <target state="final">Ohne Rahmen</target>
+      </trans-unit>
+      <trans-unit id="constCategory.admin" approved="yes">
+        <source>pizpalue: administration</source>
+        <target state="final">pizpalue: Administration</target>
+      </trans-unit>
+      <trans-unit id="constCategory.customerBase" approved="yes">
+        <source>pizpalue: customer base</source>
+        <target state="final">pizpalue: Kunde Basis</target>
+      </trans-unit>
+      <trans-unit id="constCategory.customerStyle" approved="yes">
+        <source>pizpalue: customer style</source>
+        <target state="final">pizpalue: Kunde Stil</target>
+      </trans-unit>
+      <trans-unit id="constCategory.customerSocial" approved="yes">
+        <source>pizpalue: customer social</source>
+        <target state="final">pizpalue: Kunde Soziale Netzwerke</target>
+      </trans-unit>
+      <trans-unit id="constCategory.customerExtended" approved="yes">
+        <source>pizpalue: customer extended</source>
+        <target state="final">pizpalue: Kunde Erweitert</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.general" approved="yes">
+        <source>General</source>
+        <target state="final">Generell</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.agency" approved="yes">
+        <source>Agency</source>
+        <target state="final">Agentur</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.customer" approved="yes">
+        <source>Customer</source>
+        <target state="final">Kunde</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.scaffold" approved="yes">
+        <source>Scaffold</source>
+        <target state="final">Gerüst</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.colors" approved="yes">
+        <source>Colors</source>
+        <target state="final">Farben</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.font" approved="yes">
+        <source>Font</source>
+        <target state="final">Schrift</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.header" approved="yes">
+        <source>Header</source>
+        <target state="final">Kopf</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.footer" approved="yes">
+        <source>Footer</source>
+        <target state="final">Fuss</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.various" approved="yes">
+        <source>Various</source>
+        <target state="final">Verschiedenes</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.deprecated" approved="yes">
+        <source>Deprecated</source>
+        <target state="final">Veraltet</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.logo" approved="yes">
+        <source>Logo</source>
+        <target state="final">Logo</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.menu" approved="yes">
+        <source>Menu</source>
+        <target state="final">Menü</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.cookieConsent" approved="yes">
+        <source>Cookie consent</source>
+        <target state="final">Cookie-Einwilligung</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.appicon" approved="yes">
+        <source>Appicon</source>
+        <target state="final">Programmicons</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.storage" approved="yes">
+        <source>Storage</source>
+        <target state="final">Speicherung</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.seo" approved="yes">
+        <source>SEO</source>
+        <target state="final">Suchmaschinenoptimierung (SEO)</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.features" approved="yes">
+        <source>Features</source>
+        <target state="final">Funktionen</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.animation" approved="yes">
+        <source>Animation</source>
+        <target state="final">Animation</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.newsRSSFeed" approved="yes">
+        <source>News RSS feed</source>
+        <target state="final">News RSS-Feed</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.ttaddressGoogleMap" approved="yes">
+        <source>Addresses Google Map (pizpalue)</source>
+        <target state="final">Google Map Adressen (pizpalue)</target>
+      </trans-unit>
+      <trans-unit id="constSubCategory.ttaddressTeaser" approved="yes">
+        <source>Addresses Teaser (pizpalue)</source>
+        <target state="final">Teaser Adressen (pizpalue)</target>
+      </trans-unit>
+      <trans-unit id="ce_modal_dialog.button_class" approved="yes">
+        <source>Button class</source>
+        <target state="final">Klassendefinition des Knopfes</target>
+      </trans-unit>
+      <trans-unit id="ce_modal_dialog.dialog_class" approved="yes">
+        <source>Dialog class</source>
+        <target state="final">Klassendefinition des Dialoges</target>
+      </trans-unit>
+      <trans-unit id="ce_modal_dialog.dialog_class.sm" approved="yes">
+        <source>Small dialog</source>
+        <target state="final">Kleiner Dialog</target>
+      </trans-unit>
+      <trans-unit id="ce_modal_dialog.dialog_class.md" approved="yes">
+        <source>Default dialog</source>
+        <target state="final">Standarddialog</target>
+      </trans-unit>
+      <trans-unit id="ce_modal_dialog.dialog_class.lg" approved="yes">
+        <source>Large dialog</source>
+        <target state="final">Grosser Dialog</target>
+      </trans-unit>
+      <trans-unit id="ce_modal_dialog.dialog_class.xl" approved="yes">
+        <source>Extra large dialog</source>
+        <target state="final">Extra grosser Dialog</target>
+      </trans-unit>
+      <trans-unit id="ce_modal_dialog.title" approved="yes">
+        <source>Modal Dialog</source>
+        <target state="final">Modaler Dialog</target>
+      </trans-unit>
+      <trans-unit id="ce_modal_dialog.description" approved="yes">
+        <source>Renders a button to show content in a modal dialog window.</source>
+        <target state="final">Zeigt einen Knopf zur Anzeige von Inhalten in einem modalen Dialogfenster.</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.title" approved="yes">
+        <source>List categorized content</source>
+        <target state="final">Liste kategorisierter Inhalte</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.description" approved="yes">
+        <source>Lists content elements from selected categories.</source>
+        <target state="final">Erstellt eine Liste von Inhalselementen ausgewählter Kategorieen.</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.general" approved="yes">
+        <source>General</source>
+        <target state="final">Allgemein</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.item_count" approved="yes">
+        <source>Item count</source>
+        <target state="final">Anzahl Listenelemente</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.collapsible" approved="yes">
+        <source>Collapsible</source>
+        <target state="final">Kollabierbar</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.collapse" approved="yes">
+        <source>Collapse</source>
+        <target state="final">Kollabieren</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.item_height" approved="yes">
+        <source>Height from list item</source>
+        <target state="final">Höhe eines Listenelementes</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.item_height_sm" approved="yes">
+        <source>SM-Height from list item (screen width &gt; 575px)</source>
+        <target state="final">SM-Höhe eines Listenelementes (Bildschirmbreite &gt; 575px)</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.item_height_md" approved="yes">
+        <source>MD-Height from list item (screen width &gt; 767px)</source>
+        <target state="final">MD-Höhe eines Listenelementes (Bildschirmbreite &gt; 767px)</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.item_height_lg" approved="yes">
+        <source>LG-Height from list item (screen width &gt; 991px)</source>
+        <target state="final">LG-Höhe eines Listenelementes (Bildschirmbreite &gt; 991px)</target>
+      </trans-unit>
+      <trans-unit id="ce_list_categorized_content.item_height_xl" approved="yes">
+        <source>XL-Height from list item (screen width &gt; 1199px)</source>
+        <target state="final">XL-Höhe eines Listenelementes (Bildschirmbreite &gt; 1199px)</target>
+      </trans-unit>
+      <trans-unit id="ce_schema.title" approved="yes">
+        <source>Schema definition</source>
+        <target state="final">Schema-Definition</target>
+      </trans-unit>
+      <trans-unit id="ce_schema.description" approved="yes">
+        <source>Structured data in JSON-LD format embedded in a script tag (as used by schema.org)</source>
+        <target state="final">Strukturierte Daten im JSON-LD-Format, welche mit einem Script-Tag ausgegeben werden (wie bei schema.org gebraucht).</target>
+      </trans-unit>
+      <trans-unit id="ce_schema.image_width" approved="yes">
+        <source>Image width</source>
+        <target state="final">Bildbreite</target>
+      </trans-unit>
+      <trans-unit id="ce_schema.show_content" approved="yes">
+        <source>Show content</source>
+        <target state="final">Zeige Inhalt</target>
+      </trans-unit>
+      <trans-unit id="ce_picoverlay.title" approved="yes">
+        <source>Picture with overlay</source>
+        <target state="final">Bild mit Überlagerung</target>
+      </trans-unit>
+      <trans-unit id="ce_picoverlay.description" approved="yes">
+        <source>Picture with a footer bar to show an overlaid text</source>
+        <target state="final">Bild mit einem Fussbalken zur Anzeige eines überlagerten Textes</target>
+      </trans-unit>
+      <trans-unit id="ce_picoverlay.type" approved="yes">
+        <source>Type</source>
+        <target state="final">Typ</target>
+      </trans-unit>
+      <trans-unit id="ce_picoverlay.bar" approved="yes">
+        <source>Bar</source>
+        <target state="final">Balken</target>
+      </trans-unit>
+      <trans-unit id="ce_picoverlay.info" approved="yes">
+        <source>Info</source>
+        <target state="final">Information</target>
+      </trans-unit>
+      <trans-unit id="ce_picoverlay.image" approved="yes">
+        <source>Image</source>
+        <target state="final">Bild</target>
+      </trans-unit>
+      <trans-unit id="ce_emphasize_media.title" approved="yes">
+        <source>Emphasize media</source>
+        <target state="final">Medien hervorheben</target>
+      </trans-unit>
+      <trans-unit id="ce_emphasize_media.description" approved="yes">
+        <source>Media element with text where the media element gets more attention</source>
+        <target state="final">Medienelement mit Text, wo das Medienelement mehr Aufmerksamkeit erhält</target>
+      </trans-unit>
+      <trans-unit id="ce_card.title" approved="yes">
+        <source>Card</source>
+        <target state="final">Karte</target>
+      </trans-unit>
+      <trans-unit id="ce_card.description" approved="yes">
+        <source>Card with header and footer.</source>
+        <target state="final">Karte mit Kopf- und Fußbereich.</target>
+      </trans-unit>
+      <trans-unit id="ce_card.tab.border" approved="yes">
+        <source>Border</source>
+        <target state="final">Rahmen</target>
+      </trans-unit>
+      <trans-unit id="ce_card.headerText" approved="yes">
+        <source>Header text</source>
+        <target state="final">Text Kopfzeile</target>
+      </trans-unit>
+      <trans-unit id="ce_card.footerText" approved="yes">
+        <source>Footer text</source>
+        <target state="final">Text Fußzeile</target>
+      </trans-unit>
+      <trans-unit id="ce_card.tab.adjust" approved="yes">
+        <source>Adjust</source>
+        <target state="final">Anpassung</target>
+      </trans-unit>
+      <trans-unit id="ce_card.tab.general" approved="yes">
+        <source>General</source>
+        <target state="final">Allgemein</target>
+      </trans-unit>
+      <trans-unit id="ce_card.cardClasses" approved="yes">
+        <source>Card classes</source>
+        <target state="final">Klassen Karte</target>
+      </trans-unit>
+      <trans-unit id="ce_card.headerClasses" approved="yes">
+        <source>Header classes</source>
+        <target state="final">Klassen Kopfbereich</target>
+      </trans-unit>
+      <trans-unit id="ce_card.footerClasses" approved="yes">
+        <source>Footer classes</source>
+        <target state="final">Klassen Fußbereich</target>
+      </trans-unit>
+      <trans-unit id="ce_card.tab.horizontal" approved="yes">
+        <source>Horizontal</source>
+        <target state="final">Horizontal</target>
+      </trans-unit>
+      <trans-unit id="ce_card.rowClasses" approved="yes">
+        <source>Row classes</source>
+        <target state="final">Zeilenklassen</target>
+      </trans-unit>
+      <trans-unit id="ce_card.textColumnClasses" approved="yes">
+        <source>Text column classes</source>
+        <target state="final">Textspaltenklassen</target>
+      </trans-unit>
+      <trans-unit id="ce_card.mediaColumnClasses" approved="yes">
+        <source>Media column classes</source>
+        <target state="final">Medien-Spaltenklassen</target>
+      </trans-unit>
+      <trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts" approved="yes">
+        <source>Enable bootstrap package page layouts</source>
+        <target state="final">Seitenlayouts des bootstrap_package aktivieren</target>
+      </trans-unit>
+      <trans-unit id="ext_conf.enableBootstrapPackageContainerElements" approved="yes">
+        <source>Enable bootstrap package container elements when the extension container_elements is loaded</source>
+        <target state="final">Bootstrap Package Container-Elemente aktivieren, wenn die Erweiterung container_elements geladen ist</target>
+      </trans-unit>
+      <trans-unit id="ext_conf.enableDefaultPageTSconfig" approved="yes">
+        <source>Enable default pageTS configuration. If disabled configurations can be added manually in page properties resources register.</source>
+        <target state="final">Aktiviere die Standardeinstellungen für pageTS config. Wenn deaktiviert, können Konfigurationen manuell, über die Seiten-Eigenschaften - Register Ressourcen, hinzugefügt werden.</target>
+      </trans-unit>
+      <trans-unit id="ext_conf.autoLoadStaticTSForExtensions" approved="yes">
+        <source>Automatically load static typoscript for extensions. If disabled configurations can be added manually to template records.</source>
+        <target state="final">Automatisches Laden von statischem Typoscript von Erweiterungen. Wenn deaktiviert, können die Konfigurationen manuell den Vorlagen-Datensätzen hinzugefügt werden.</target>
+      </trans-unit>
+      <trans-unit id="tx-news-imageOnTop" approved="yes">
+        <source>Image on top</source>
+        <target state="final">Bild oben</target>
+      </trans-unit>
+      <trans-unit id="tx-eventnews-monthCompact" approved="yes">
+        <source>Compact (month)</source>
+        <target state="final">Kompakt (Monat)</target>
+      </trans-unit>
+      <trans-unit id="tx-eventnews-monthExtended" approved="yes">
+        <source>Extended (month)</source>
+        <target state="final">Erweitert (Monat)</target>
+      </trans-unit>
+      <trans-unit id="flash-message-change-setting" approved="yes">
+        <source>Pizpalue changed a setting</source>
+        <target state="final">Pizpalue hat eine Einstellung geändert</target>
+      </trans-unit>
+      <trans-unit id="flash-message-image-variants-changed" approved="yes">
+        <source>The image variants changed. Please check if the current setting is fine.</source>
+        <target state="final">Die Bildvarianten wurden geändert. Bitte überprüfen Sie, ob die aktuelle Einstellung in Ordnung ist.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
