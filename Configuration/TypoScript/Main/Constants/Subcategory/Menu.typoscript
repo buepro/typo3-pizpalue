@@ -108,7 +108,7 @@ pizpalue.menu {
     fast {
         items {
             first {
-                # cat=6060/1060/0510; type=string; label=Fastmenu first item icon class
+                # cat=6060/1060/0510; type=string; label=Fastmenu first item icon:Icon font class or svg-file path
                 iconClass = ppicon ppicon-log-in
                 # cat=6060/1060/0512; type=string; label=Fastmenu first item content uid:Uid from content element being rendered. Leave empty if not used.
                 contentUid =
@@ -117,7 +117,7 @@ pizpalue.menu {
             }
 
             second {
-                # cat=6060/1060/0520; type=string; label=Fastmenu second item icon class
+                # cat=6060/1060/0520; type=string; label=Fastmenu second item icon:Icon font class or svg-file path
                 iconClass = ppicon ppicon-call
                 # cat=6060/1060/0522; type=string; label=Fastmenu second item content uid:Uid from content element being rendered. Leave empty if not used.
                 contentUid =
@@ -126,7 +126,7 @@ pizpalue.menu {
             }
 
             third {
-                # cat=6060/1060/0530; type=string; label=Fastmenu third item icon class
+                # cat=6060/1060/0530; type=string; label=Fastmenu third item icon:Icon font class or svg-file path
                 iconClass = ppicon ppicon-location
                 # cat=6060/1060/0532; type=string; label=Fastmenu third item content uid:Uid from content element being rendered. Leave empty if not used.
                 contentUid =

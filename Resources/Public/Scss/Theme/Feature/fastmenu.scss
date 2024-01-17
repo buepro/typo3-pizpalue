@@ -51,6 +51,10 @@
             &.pp-active {
                 color: $pp-fastmenu-icon-active-color;
             }
+            &.ppc-inline svg {
+                width: var(--pp-fastmenu-icon-size);
+                height: var(--pp-fastmenu-icon-size);
+            }
         }
     }
 
