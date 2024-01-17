@@ -90,8 +90,11 @@
 					is opened. Just define one action by setting either a content or a link.
 				</source>
 			</trans-unit>
+			<trans-unit id="menu_fast_items_icon_class.description" resname="menu_fast_items_icon_class.description">
+				<source>Icon font class or svg-file path (e.g. EXT:your_extension/...)</source>
+			</trans-unit>
 			<trans-unit id="menu_fast_items_first_icon_class" resname="menu_fast_items_first_icon_class">
-				<source>First item icon class</source>
+				<source>First item icon</source>
 			</trans-unit>
 			<trans-unit id="menu_fast_items_first_content_uid" resname="menu_fast_items_first_content_uid">
 				<source>First item content</source>
@@ -100,7 +103,7 @@
 				<source>First item link</source>
 			</trans-unit>
 			<trans-unit id="menu_fast_items_second_icon_class" resname="menu_fast_items_second_icon_class">
-				<source>Second item icon class</source>
+				<source>Second item icon</source>
 			</trans-unit>
 			<trans-unit id="menu_fast_items_second_content_uid" resname="menu_fast_items_second_content_uid">
 				<source>Second item content</source>
@@ -109,7 +112,7 @@
 				<source>Second item link</source>
 			</trans-unit>
 			<trans-unit id="menu_fast_items_third_icon_class" resname="menu_fast_items_third_icon_class">
-				<source>Third item icon class</source>
+				<source>Third item icon</source>
 			</trans-unit>
 			<trans-unit id="menu_fast_items_third_content_uid" resname="menu_fast_items_third_content_uid">
 				<source>Third item content</source>

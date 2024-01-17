@@ -29,7 +29,7 @@
 
     Plugin.prototype._contentIconClickHandler = function (event) {
         const
-            contentIcon = event.target,
+            contentIcon = event.target.closest('.pp-fm-contenticon'),
             content = document.getElementById(contentIcon.dataset.ppFmContent);
         if ( content.classList.contains('pp-show') ) {
             // Hides selected content

@@ -117,6 +117,9 @@ defined('TYPO3') or die('Access denied.');
     $tca['columns']['menu_scroll_data_key']['description'] = $l10nFile . ':menu_scroll_data_key.description';
     $tca['columns']['menu_scroll_menu_id']['description'] = $l10nFile . ':menu_scroll_menu_id.description';
     $tca['columns']['menu_scroll_offset']['description'] = $l10nFile . ':menu_scroll_offset.description';
+    $tca['columns']['menu_fast_items_first_icon_class']['description'] = $l10nFile . ':menu_fast_items_icon_class.description';
+    $tca['columns']['menu_fast_items_second_icon_class']['description'] = $l10nFile . ':menu_fast_items_icon_class.description';
+    $tca['columns']['menu_fast_items_third_icon_class']['description'] = $l10nFile . ':menu_fast_items_icon_class.description';
 
     /**
      * Define palettes
