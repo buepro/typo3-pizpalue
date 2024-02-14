@@ -38,7 +38,7 @@ class TypoScriptService
         $typoScriptService = GeneralUtility::makeInstance(CoreTypoScriptService::class);
         $setup = $typoScriptService->convertTypoScriptArrayToPlainArray($setupArray);
         $parts = GeneralUtility::trimExplode('.', $tsPath, true);
-        if (count($parts) === 1 && is_array($setup['lib']['contentElement']['settings']['responsiveimages'][$parts[0]])) {
+        if (count($parts) === 1 && is_array($setup['lib']['contentElement']['settings']['responsiveimages'][$parts[0]] ?? false)) {
             $result = $setup['lib']['contentElement']['settings']['responsiveimages'][$parts[0]];
         }
         if ($result === null && count($parts) > 0) {

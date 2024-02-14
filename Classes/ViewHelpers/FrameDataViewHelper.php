@@ -201,7 +201,7 @@ class FrameDataViewHelper extends AbstractViewHelper
                 }
             }
         }
-        $result['attributes'] = self::getAttributes($data['tx_pizpalue_attributes']);
+        $result['attributes'] = self::getAttributes($data['tx_pizpalue_attributes'] ?? '');
     }
 
     protected static function addAnimation(
