@@ -25,12 +25,23 @@
 // Columns
 // --------------------------------------------------
 
-//
 // Content element with background
-//
 .row > div > .frame:not(.frame-background-none) {
     padding-left: var(--pp-frame-spacing);
     padding-right: var(--pp-frame-spacing);
+}
+
+// Ensure spacing is correct when columns are serialized (two visually subsequent content elements just have one
+// padding). Assumes that all content elements in columns have a frame without spacing before.
+.pp-col-collapse, .fe-col-collapse, .ce-col-collapse {
+    > .frame.frame-background-none.frame-space-before-none:not(.frame-has-backgroundimage):first-child {
+        @extend .pp-frame-collapsible;
+    }
+}
+
+// Compensate bottom space
+.pp-row-collapse, .fe-row-collapse, .ce-row-collapse {
+    margin-bottom: calc(-1 * var(--pp-frame-spacing));
 }
 
 // If columns are realized within a frame
@@ -42,18 +53,6 @@
         padding-right: 0;
     }
 
-    // Ensure spacing is correct when columns are serialized (two visually subsequent content elements just have one
-    // padding). Assumes that all content elements in columns have a frame without spacing before.
-    .pp-col-collapse, .fe-col-collapse, .ce-col-collapse {
-        > .frame.frame-background-none.frame-space-before-none:not(.frame-has-backgroundimage):first-child {
-            @extend .pp-frame-collapsible;
-        }
-    }
-
-    // Compensate bottom space
-    > .pp-row-collapse, > .fe-row-collapse, > .ce-row-collapse {
-        margin-bottom: calc(-1 * var(--pp-frame-spacing));
-    }
 }
 
 //
