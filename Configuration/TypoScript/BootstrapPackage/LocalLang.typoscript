@@ -77,4 +77,25 @@ plugin.tx_bootstrap_package._LOCAL_LANG {
             link.disable = Hylkää Google analytiikka (poista valinta)
         }
     }
+
+    it {
+        readmore = Leggi di più
+        form.selectfile = Selezionare il file
+        cookieconsent.common {
+            header = Questo sito web utilizza i cookie.
+            message = Questo sito web potrebbe utilizzare i cookie per assicurarti la migliore esperienza sul nostro sito.
+            dismiss = Capito!
+            allow = Consenti i cookie
+            deny = Rifiuta i cookie
+            link = Per saperne di più
+        }
+
+        googleanalyticsstatus {
+            title = Stato di Google Analytics
+            description = Qui è possibile opporsi alla raccolta anonima da parte di Google Analytics su questo sito web per il proprio browser utilizzando un "Opt-Out-Cookie". Si noti che se si cancella il cookie di esclusione o si utilizza un computer o un browser diverso, sarà necessario impostare nuovamente l'esclusione.
+            link.enable = Attiva Google Analytics (Opt-In)
+            link.disable = Disattiva Google Analytics (Opt-Out)
+        }
+    }
+
 }
