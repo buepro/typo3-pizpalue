@@ -51,6 +51,15 @@
                     <default>btn btn-default btn-read-more</default>
                 </config>
             </settings.advanced.backButtonClasses>
+            <settings.advanced.imageVariants.listMultiplier type="array">
+                <label>List image variants multiplier</label>
+                <description>If set these multipliers are taken into account when rendering images in list views. Use for each breakpoint a new line and use a coma at the end of the line. Possible breakpoints are: xxl, xl, lg, md, sm, xs. Example: xxl: 0.33,</description>
+                <config type="array">
+                    <type>text</type>
+                    <cols>20</cols>
+                    <rows>6</rows>
+                </config>
+            </settings.advanced.imageVariants.listMultiplier>
         </el>
     </ROOT>
 </ppAdvanced>

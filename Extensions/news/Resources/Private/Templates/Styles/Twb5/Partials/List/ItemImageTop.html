@@ -10,10 +10,16 @@
         <n:link class="pp-newsimage textpic-item" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
             <f:if condition="{newsItem.mediaPreviews}">
                 <f:then>
+                    <f:if condition="{settings.advanced.imageVariants.listMultiplier}">
+                        {pp:structure.variants(as: '_variants')}
+                        {pp:data.imageVariantsTextToArray(as: '_multiplier', text: settings.advanced.imageVariants.listMultiplier, default: 1.0)}
+                        <bk2k:data.imageVariants as="_variants" variants="{_variants}" multiplier="{_multiplier}" />
+                    </f:if>
                     <f:render partial="Plugin/RenderMedia" arguments="{
                         file: newsItem.mediaPreviews.0.originalResource,
                         data: newsItem,
-                        settings: settings}" />
+                        settings: settings,
+                        variants: _variants}" />
                 </f:then>
                 <f:else>
                     <f:if condition="{settings.displayDummyIfNoMedia}">
