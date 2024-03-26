@@ -8,22 +8,16 @@
 	<!--TYPO3SEARCH_end-->
 	<f:if condition="{news}">
 		<f:then>
-			<div class="news-list-view" id="news-container-{contentObjectData.uid}">
-				<f:if condition="{settings.hidePagination}">
-					<f:then>
-                        <f:render section="ItemList" arguments="{newsItems: news, settings:settings, iterator:iterator}" />
-					</f:then>
-					<f:else>
-                        <f:if condition="{settings.list.paginate.insertAbove}">
-                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-                        </f:if>
-                        <f:render section="ItemList" arguments="{newsItems: pagination.paginator.paginatedItems, settings:settings, iterator:iterator}" />
-                        <f:if condition="{settings.list.paginate.insertBelow}">
-                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
-                        </f:if>
-                    </f:else>
-				</f:if>
-			</div>
+            <f:if condition="{settings.advanced.template.dropWrap}">
+                <f:then>
+                    <f:render section="ListWithPagination" arguments="{_all}" />
+                </f:then>
+                <f:else>
+                    <div class="news-list-view" id="news-container-{contentObjectData.uid}">
+                        <f:render section="ListWithPagination" arguments="{_all}" />
+                    </div>
+                </f:else>
+            </f:if>
 		</f:then>
 		<f:else>
 			<div class="alert alert-{settings.alert}">
@@ -34,10 +28,29 @@
 	<!--TYPO3SEARCH_begin-->
 </f:section>
 
+<f:section name="ListWithPagination">
+    <f:if condition="{settings.hidePagination}">
+        <f:then>
+            <f:render section="ItemList" arguments="{newsItems: news, settings:settings, iterator:iterator}" />
+        </f:then>
+        <f:else>
+            <f:if condition="{settings.list.paginate.insertAbove}">
+                <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+            </f:if>
+            <f:render section="ItemList" arguments="{newsItems: pagination.paginator.paginatedItems, settings:settings, iterator:iterator}" />
+            <f:if condition="{settings.list.paginate.insertBelow}">
+                <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+            </f:if>
+        </f:else>
+    </f:if>
+</f:section>
+
 <f:section name="ItemList">
     {f:render(partial: 'List/GetPartialName', arguments: _all) -> pvh:format.trim() -> f:variable(name: '_partialName')}
     {f:variable(name: '_partialName', value: 'Item') -> f:if(condition: '{_partialName} == ""')}
-    <ul class="list-group">
+    {f:variable(name: '_listClasses', value: settings.advanced.listClasses)}
+    {f:variable(name: '_listClasses', value: 'list-group') -> f:if(condition: '{_listClasses} == ""')}
+    <ul class="{_listClasses}">
         <f:for each="{newsItems}" as="newsItem" iteration="iterator">
             <f:render partial="List/{_partialName}" arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
         </f:for>

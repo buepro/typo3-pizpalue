@@ -54,6 +54,12 @@ services:
         identifier: 'buepro/pizpalue/easyconf/before-persisting'
         event: Buepro\Easyconf\Event\BeforePersistingPropertiesEvent
 
+  Buepro\Pizpalue\News\EventHandler\ModifyFlexformEvent:
+    tags:
+      - name: event.listener
+        identifier: 'buepro/pizpalue/news/modify-flexform'
+        event: TYPO3\CMS\Core\Configuration\Event\AfterFlexFormDataStructureParsedEvent
+
   Buepro\Pizpalue\Sysext\Frontend\TypoLink\PopoverLinkModifier:
     tags:
       - name: event.listener

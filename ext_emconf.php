@@ -40,6 +40,7 @@ $EM_CONF[$_EXTKEY] = [
             'Buepro\\Pizpalue\\' => 'Classes',
             'Buepro\\Pizpalue\\Easyconf\\' => 'Extensions/easyconf/Classes',
             'Buepro\\Pizpalue\\Form\\' => 'Extensions/form/Classes',
+            'Buepro\\Pizpalue\\News\\' => 'Extensions/news/Classes',
             'Buepro\\Pizpalue\\Sysext\\Core\\' => 'Sysext/core/Classes',
             'Buepro\\Pizpalue\\Sysext\\Frontend\\' => 'Sysext/frontend/Classes',
             'Buepro\\Pizpalue\\Sysext\\Backend\\' => 'Sysext/backend/Classes',

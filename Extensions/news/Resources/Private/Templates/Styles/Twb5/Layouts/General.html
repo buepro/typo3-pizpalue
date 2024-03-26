@@ -4,8 +4,16 @@
       data-namespace-typo3-fluid="true">
 
 {pp:data.filesProcessor(data: contentObjectData, field: 'assets') -> pvh:variable.set(name: 'settings.dummyAsset')}
-<div class="news">
-    <f:render section="content"/>
-</div>
+<f:if condition="{settings.advanced.layout.dropWrap}">
+    <f:then>
+        <f:render section="content"/>
+    </f:then>
+    <f:else>
+        <div class="news">
+            <f:render section="content"/>
+        </div>
+    </f:else>
+</f:if>
+
 
 </html>

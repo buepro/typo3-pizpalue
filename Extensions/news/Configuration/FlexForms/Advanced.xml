@@ -1,0 +1,57 @@
+<ppAdvanced>
+    <ROOT>
+        <sheetTitle>Advanced</sheetTitle>
+        <type>array</type>
+        <el>
+            <settings.advanced.layout.dropWrap>
+                <label>Drop layout wrap</label>
+                <config>
+                    <type>check</type>
+                    <renderType>checkboxToggle</renderType>
+                    <default>0</default>
+                </config>
+            </settings.advanced.layout.dropWrap>
+            <settings.advanced.template.dropWrap>
+                <label>Drop template wrap</label>
+                <config>
+                    <type>check</type>
+                    <renderType>checkboxToggle</renderType>
+                    <default>0</default>
+                </config>
+            </settings.advanced.template.dropWrap>
+            <settings.advanced.listClasses>
+                <label>List classes</label>
+                <description>Default is "list-group".</description>
+                <config>
+                    <type>input</type>
+                    <default>list-group</default>
+                </config>
+            </settings.advanced.listClasses>
+            <settings.advanced.listItemClasses>
+                <label>List item classes</label>
+                <description>Default is "list-group-item".</description>
+                <config>
+                    <type>input</type>
+                    <default>list-group-item</default>
+                </config>
+            </settings.advanced.listItemClasses>
+            <settings.advanced.defaultButtonClasses>
+                <label>Default button classes</label>
+                <description>Default is "btn btn-primary btn-read-more".</description>
+                <config>
+                    <type>input</type>
+                    <default>btn btn-primary btn-read-more</default>
+                </config>
+            </settings.advanced.defaultButtonClasses>
+            <settings.advanced.backButtonClasses>
+                <label>Back button classes</label>
+                <description>Default is "btn btn-default mb-3".</description>
+                <config>
+                    <type>input</type>
+                    <default>btn btn-default btn-read-more</default>
+                </config>
+            </settings.advanced.backButtonClasses>
+        </el>
+    </ROOT>
+</ppAdvanced>
+

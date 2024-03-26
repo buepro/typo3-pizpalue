@@ -3,7 +3,9 @@
       data-namespace-typo3-fluid="true">
 
 <n:excludeDisplayedNews newsItem="{newsItem}"/>
-<li class="list-group-item">
+{f:variable(name: '_itemClasses', value: settings.advanced.listItemClasses)}
+{f:variable(name: '_itemClasses', value: 'list-group-item') -> f:if(condition: '{_itemClasses} == ""')}
+<li class="{_itemClasses}">
     <div class="news-list-item pp-news-list-item-imagetop textpic">
         <n:link class="pp-newsimage textpic-item" newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
             <f:if condition="{newsItem.mediaPreviews}">
@@ -44,7 +46,9 @@
                 </n:removeMediaTags>
             </div>
 
-            <n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-{settings.ppButtonMoreColor} btn-read-more" title="{newsItem.title}">
+            {f:variable(name: '_buttonClasses', value: settings.advanced.defaultButtonClasses)}
+            {f:variable(name: '_buttonClasses', value: 'btn btn-{settings.ppButtonMoreColor} btn-read-more') -> f:if(condition: '{_buttonClasses} == ""')}
+            <n:link newsItem="{newsItem}" settings="{settings}" class="{_buttonClasses}" title="{newsItem.title}">
                 <f:translate key="more-link"/>
             </n:link>
         </div>
