@@ -6,7 +6,7 @@
 <n:excludeDisplayedNews newsItem="{newsItem}" />
 {f:variable(name: '_itemClasses', value: settings.advanced.listItemClasses)}
 {f:variable(name: '_itemClasses', value: 'list-group-item') -> f:if(condition: '{_itemClasses} == ""')}
-<li class="{_itemClasses}">
+<pp:render.bootstrap.column class="{_itemClasses}" rowClass="{settings.advanced.listClasses}" tagName="li">
 	<div class="row news-list-item">
         <pp:render.bootstrap.column class="col-md-3" count="2">
             <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
@@ -62,5 +62,5 @@
             </n:link>
         </pp:render.bootstrap.column>
     </div>
-</li>
+</pp:render.bootstrap.column>
 </html>
