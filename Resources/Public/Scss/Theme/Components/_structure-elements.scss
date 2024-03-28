@@ -40,8 +40,10 @@
 }
 
 // Compensate bottom space
-.pp-row-collapse, .fe-row-collapse, .ce-row-collapse {
-    margin-bottom: calc(-1 * var(--pp-frame-spacing));
+:not(.none) {
+    .pp-row-collapse, .fe-row-collapse, .ce-row-collapse {
+        margin-bottom: calc(-1 * var(--pp-frame-spacing));
+    }
 }
 
 // If columns are realized within a frame
