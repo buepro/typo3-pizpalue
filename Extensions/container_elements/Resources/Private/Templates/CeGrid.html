@@ -10,40 +10,20 @@
     {f:variable(name: '_correction', value: _settings.correction.variants) -> f:if(condition: '{_settings.correction.enable as integer} == 1')}
     <f:if condition="{children_101}">
         <div class="{_config.rowClasses}">
-            <f:if condition="{ceAspect.pizpalueMainVersion} >= 12 || {ceAspect.pizpalueMainVersion} == 'dev-main' || {ceAspect.pizpalueMainVersion} == 'dev-master'">
-                <f:then>
-                    <f:for each="{children_101}" as="_record">
-                        <f:if condition="{_record.ce_grid_classes} == '!external'">
-                            <f:then>
-                                <pp:structure.wrap.column class="{_record.ce_grid_classes}" rowClass="{_config.rowClasses}" gutter="{_gutter}" correction="{_correction}">
-                                    {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
-                                </pp:structure.wrap.column>
-                            </f:then>
-                            <f:else>
-                                <pp:render.bootstrap.column class="{_record.ce_grid_classes}" rowClass="{_config.rowClasses}" gutter="{_gutter}" correction="{_correction}">
-                                    {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
-                                </pp:render.bootstrap.column>
-                            </f:else>
-                        </f:if>
-                    </f:for>
-                </f:then>
-                <f:else>
-                    <f:for each="{children_101}" as="_record">
-                        <f:if condition="{_record.ce_grid_classes} == '!external'">
-                            <f:then>
-                                <pp:structure.wrap.column class="{_record.ce_grid_classes}" gutter="{_gutter}" correction="{_correction}">
-                                {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
-                                </pp:structure.wrap.column>
-                            </f:then>
-                            <f:else>
-                                <pp:render.bootstrap.column class="{_record.ce_grid_classes}" gutter="{_gutter}" correction="{_correction}">
-                                    {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
-                                </pp:render.bootstrap.column>
-                            </f:else>
-                        </f:if>
-                    </f:for>
-                </f:else>
-            </f:if>
+            <f:for each="{children_101}" as="_record">
+                <f:if condition="{_record.ce_grid_classes} == '!external'">
+                    <f:then>
+                        <pp:structure.wrap.column class="{_record.ce_grid_classes}" rowClass="{_config.rowClasses}" gutter="{_gutter}" correction="{_correction}">
+                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                        </pp:structure.wrap.column>
+                    </f:then>
+                    <f:else>
+                        <pp:render.bootstrap.column class="{_record.ce_grid_classes}" rowClass="{_config.rowClasses}" gutter="{_gutter}" correction="{_correction}">
+                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                        </pp:render.bootstrap.column>
+                    </f:else>
+                </f:if>
+            </f:for>
         </div>
     </f:if>
 </f:section>
