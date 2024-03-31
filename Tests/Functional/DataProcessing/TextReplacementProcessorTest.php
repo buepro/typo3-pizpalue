@@ -78,7 +78,7 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
     ];
 
     protected string $defaultExpected =
-'{
+        '{
   "@context": "http://schema.org",
   "@graph": [
     {
