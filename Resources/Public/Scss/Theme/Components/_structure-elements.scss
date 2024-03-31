@@ -42,7 +42,7 @@
 // Compensate bottom space
 :not(.none) {
     .pp-row-collapse, .fe-row-collapse, .ce-row-collapse {
-        margin-bottom: calc(-1 * var(--pp-frame-spacing));
+        margin-bottom: calc(-1 * var(--frame-spacing, var(--pp-frame-spacing)));
     }
 }
 

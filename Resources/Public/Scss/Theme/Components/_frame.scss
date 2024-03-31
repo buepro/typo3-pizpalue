@@ -1,5 +1,6 @@
 //
 // Add frame spacing variable
+// Remark: --frame-spacing is available in .frame, not root
 // --------------------------------------------------
 :root {
     --pp-frame-spacing: var(--frame-spacing-xs);
@@ -70,7 +71,7 @@
 // Various
 // --------------------------------------------------
 .pp-frame-collapsible {
-    margin-top: calc(-1 * var(--pp-frame-spacing));
+    margin-top: calc(-1 * var(--frame-spacing, var(--pp-frame-spacing)));
 }
 .pp-frameless-content {
     &, > .frame-backgroundimage-container ~ * {
