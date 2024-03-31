@@ -59,7 +59,7 @@ class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements Upgr
      * @var string
      */
     protected $description =  'This wizard step checks the content element field "Additional classes"  for classes to be moved ' .
-            'to the background color or the inner classes field.';
+        'to the background color or the inner classes field.';
 
     /**
      * @var string

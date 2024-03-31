@@ -27,10 +27,10 @@ class ContentElementXxlUpdate extends AbstractUpdate implements UpgradeWizardInt
      * @var string
      */
     protected $description =  'Bootstrap 5 introduced the screen breakpoint "xxl". If the fields "Scaling" or "Aspect '
-            . 'ratio" from content elements don\'t contain a definition for the new breakpoint default values will be '
-            . 'used for the image calculation. In most cases the value defined for the xl-breakpoint is more appropriate. '
-            . 'This wizard step will add an "xxl" entry with the value from the defined xl-breakpoint to the fields. '
-            . 'In case no xl-breakpoint entry exists nothing will be none.';
+        . 'ratio" from content elements don\'t contain a definition for the new breakpoint default values will be '
+        . 'used for the image calculation. In most cases the value defined for the xl-breakpoint is more appropriate. '
+        . 'This wizard step will add an "xxl" entry with the value from the defined xl-breakpoint to the fields. '
+        . 'In case no xl-breakpoint entry exists nothing will be none.';
 
     protected function getScalingCriteria(QueryBuilder $queryBuilder): CompositeExpression
     {

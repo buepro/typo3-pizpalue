@@ -56,8 +56,8 @@ class ContentElementBootstrapClassesUpdate extends AbstractUpdate implements Upg
      * @var string
      */
     protected $description = 'Bootstrap 5 replaced some css classes. This wizard step checks the filed "Additional '
-            . 'classes" for replacement classes and adds the new classes as needed. The resulting classes should be '
-            . 'compatible with Bootstrap 4 and Bootstrap 5.';
+        . 'classes" for replacement classes and adds the new classes as needed. The resulting classes should be '
+        . 'compatible with Bootstrap 4 and Bootstrap 5.';
 
     /**
      * @var string

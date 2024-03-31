@@ -79,7 +79,13 @@ class ColumnViewHelper extends AbstractViewHelper
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
             $gutter = StructureVariantsUtility::getVectorProperty($arguments['gutter']);
             $multiplier = ColumnVariantsUtility::getMultiplier(
-                $arguments['class'] ?? '', $arguments['rowClass'] ?? 'row-cols-1', $arguments['count'] ?? 1);
+                /** @phpstan-ignore-next-line */
+                $arguments['class'] ?? '',
+                /** @phpstan-ignore-next-line */
+                $arguments['rowClass'] ?? 'row-cols-1',
+                /** @phpstan-ignore-next-line */
+                $arguments['count'] ?? 1
+            );
             $correction = StructureVariantsUtility::getVectorProperty($arguments['correction']);
             $modifier = (new VariantsModifier())
                 ->setMargins(VectorUtility::negate($gutter))

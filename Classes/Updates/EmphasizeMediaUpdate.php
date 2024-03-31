@@ -24,9 +24,9 @@ class EmphasizeMediaUpdate extends AbstractUpdate implements UpgradeWizardInterf
      * @var string
      */
     protected $description = 'The layout option "Emphasize media" has been removed in favor of an own content element. '
-            . 'This wizard converts content elements using the "Emphasize media" layout to the related content type. '
-            . 'Please note that this conversion leads to the frame class "frame-layout-pp-emphasize-media" being dropped '
-            . 'hence the site package should be reviewed for possible usages.';
+        . 'This wizard converts content elements using the "Emphasize media" layout to the related content type. '
+        . 'Please note that this conversion leads to the frame class "frame-layout-pp-emphasize-media" being dropped '
+        . 'hence the site package should be reviewed for possible usages.';
 
     /**
      * @var string
