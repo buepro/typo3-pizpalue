@@ -5,6 +5,9 @@
     document.querySelectorAll('.pp-link-target').forEach((anchor) => {
         let id = anchor.getAttribute('id');
         let sibling = anchor.nextElementSibling;
+        if ( id === '' || !sibling ) {
+            return;
+        }
         if (sibling.matches('a') && sibling.textContent === "") {
             // The sibling was a link target too (the one for `_LOCALIZED_UID`)
             sibling = sibling.nextElementSibling;
