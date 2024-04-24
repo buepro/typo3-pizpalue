@@ -176,7 +176,8 @@ class TextReplacementProcessor implements DataProcessorInterface
                         $urlPrefix = GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST');
                         // @phpstan-ignore-next-line
                         if (is_string($urlPrefix) && is_array($imageResource = $cObj->getImgResource($value, $config))) {
-                            $replacements[] = $urlPrefix . '/' . $imageResource[3];
+                            $relativePath = trim(\TYPO3\CMS\Core\Utility\PathUtility::getRelativePathTo($imageResource[3]), '\\/');
+                            $replacements[] = $urlPrefix . '/' . $relativePath;
                         }
                     } elseif (
                         $parts[0] === 'breadcrumb' &&
