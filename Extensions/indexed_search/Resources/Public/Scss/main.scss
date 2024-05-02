@@ -36,11 +36,12 @@ $pagination-line-height: 1.25 !default;
     @include border-radius();
 }
 .tx-indexedsearch-browsebox {
+    margin-top: 2rem;
     li {
         position: relative;
         display: block;
         padding: $pagination-padding-y $pagination-padding-x;
-        margin-left: -$pagination-border-width;
+        margin-left: calc(-1 * #{$pagination-border-width});
         line-height: $pagination-line-height;
         color: $pagination-color;
         background-color: $pagination-bg;
@@ -52,33 +53,18 @@ $pagination-line-height: 1.25 !default;
             background-color: $pagination-hover-bg;
             border-color: $pagination-hover-border-color;
         }
-
         &:focus {
             z-index: 2;
             outline: $pagination-focus-outline;
             box-shadow: $pagination-focus-box-shadow;
         }
-    }
-}
-.tx-indexedsearch-browsebox {
-    li {
         &:first-child {
             margin-left: 0;
-            @if ($pp-bootstrap-version == 4) {
-                @include border-left-radius($border-radius);
-            }
-            @if ($pp-bootstrap-version == 5) {
-                @include border-start-radius($border-radius);
-            }
+            @include border-start-radius($border-radius);
         }
 
         &:last-child {
-            @if ($pp-bootstrap-version == 4) {
-                @include border-right-radius($border-radius);
-            }
-            @if ($pp-bootstrap-version == 5) {
-                @include border-end-radius($border-radius);
-            }
+            @include border-end-radius($border-radius);
         }
         a {
             text-decoration: none;
@@ -88,7 +74,7 @@ $pagination-line-height: 1.25 !default;
             background-color: $pagination-active-bg;
             border-color: $pagination-active-border-color;
             a {
-                color: $pagination-active-color;
+                color: $pagination-active-color !important;
             }
         }
     }
