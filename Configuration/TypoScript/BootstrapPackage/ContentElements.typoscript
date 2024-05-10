@@ -46,3 +46,13 @@ lib.contentElement {
         }
     }
 }
+
+tt_content {
+    // Remove media restriction
+    media {
+        dataProcessing {
+            10 < tt_content.textmedia.dataProcessing.10
+            20 >
+        }
+    }
+}
