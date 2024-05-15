@@ -23,6 +23,11 @@ CREATE TABLE tt_content (
 	tx_pizpalue_scroll_navigation_position int(11) unsigned DEFAULT '0' NOT NULL
 );
 
+CREATE TABLE sys_file_reference (
+	tx_pizpalue_poster int(11) unsigned DEFAULT '0' NOT NULL,
+	tx_pizpalue_poster_width tinyint(4) DEFAULT '0' NOT NULL,
+);
+
 CREATE TABLE tx_bootstrappackage_icon_group_item (
 	tx_pizpalue_icon_color varchar(255) DEFAULT '' NOT NULL,
 );

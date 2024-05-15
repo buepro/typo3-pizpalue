@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+<f:if condition="{file.posterReference}">
+    <f:then>
+        {f:variable(name: '_videoVariants', value: variants)}
+        {pp:structure.variants(as: '_videoVariants') -> f:if(condition: '!{variants}')}
+        {f:variable(name: '_width', value: file.posterWidth)}
+        {f:variable(name: '_width', value: _videoVariants.default.width) -> f:if(condition: '{file.posterWidth} == 0')}
+        {f:uri.image(image: file.poster, cropVariant: 'default', width: _width) -> f:variable(name: '_posterUri')}
+        <f:media class="embed-responsive-item" file="{file}" alt="{file.properties.alternative}" title="{file.properties.title}" additionalAttributes="{poster: _posterUri}" additionalConfig="{settings.media.additionalConfig}" />
+    </f:then>
+    <f:else>
+        <f:media class="embed-responsive-item" file="{file}" alt="{file.properties.alternative}" title="{file.properties.title}" additionalConfig="{settings.media.additionalConfig}" />
+    </f:else>
+</f:if>
+</f:spaceless>
+</html>

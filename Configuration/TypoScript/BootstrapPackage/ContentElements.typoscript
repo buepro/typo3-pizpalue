@@ -48,11 +48,18 @@ lib.contentElement {
 }
 
 tt_content {
-    // Remove media restriction
     media {
         dataProcessing {
+            // Remove media restriction
             10 < tt_content.textmedia.dataProcessing.10
             20 >
+            // Add poster
+            1715762620 = Buepro\Pizpalue\DataProcessing\PosterProcessor
+        }
+    }
+    textmedia {
+        dataProcessing {
+            1715762620 = Buepro\Pizpalue\DataProcessing\PosterProcessor
         }
     }
 }

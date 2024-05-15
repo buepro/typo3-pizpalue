@@ -15,6 +15,10 @@ services:
     public: true
     shared: false
 
+  Buepro\Pizpalue\DataProcessing\PosterProcessor:
+    public: true
+    shared: false
+
   Buepro\Pizpalue\Service\BrandingService:
     tags:
       - name: event.listener

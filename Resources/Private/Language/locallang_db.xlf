@@ -262,6 +262,16 @@
 				<source>Icon color</source>
 			</trans-unit>
 
+			<trans-unit id="tx_pizpalue_sfr.tx_pizpalue_poster">
+				<source>Poster</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_sfr.tx_pizpalue_poster_width">
+				<source>Poster width</source>
+			</trans-unit>
+			<trans-unit id="tx_pizpalue_sfr.tx_pizpalue_poster_width.description">
+				<source>Use 0 to automatically calculate the width based on the widest screen.</source>
+			</trans-unit>
+
 			<trans-unit id="tca.tabs.text">
 				<source>Text</source>
 			</trans-unit>
