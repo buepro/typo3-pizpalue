@@ -7,7 +7,7 @@
         {f:variable(name: '_width', value: file.posterWidth)}
         {f:variable(name: '_width', value: _videoVariants.default.width) -> f:if(condition: '{file.posterWidth} == 0')}
         {f:uri.image(image: file.poster, cropVariant: 'default', width: _width) -> f:variable(name: '_posterUri')}
-        <f:media class="embed-responsive-item" file="{file}" alt="{file.properties.alternative}" title="{file.properties.title}" additionalAttributes="{poster: _posterUri}" additionalConfig="{settings.media.additionalConfig}" />
+        <f:media class="embed-responsive-item" file="{file}" alt="{file.properties.alternative}" title="{file.properties.title}" additionalAttributes="{poster: _posterUri, preload: 'metadata'}" additionalConfig="{settings.media.additionalConfig}" />
     </f:then>
     <f:else>
         <f:media class="embed-responsive-item" file="{file}" alt="{file.properties.alternative}" title="{file.properties.title}" additionalConfig="{settings.media.additionalConfig}" />
