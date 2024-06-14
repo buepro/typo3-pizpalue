@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2018-05-31T09:11:39Z" product-name="pizpalue" target-language="fr">
+    <header/>
+    <body>
+      <trans-unit id="tx_pizpalue_ttc.attributes" approved="yes">
+        <source>Attributes</source>
+        <target state="final">Attributs</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes" approved="yes">
+        <source>Additional classes</source>
+        <target state="final">Classes additionelles</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.style" approved="yes">
+        <source>Additional styles</source>
+        <target state="final">Styles additionelles</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.additionalAttributes" approved="yes">
+        <source>Additional attributes</source>
+        <target state="final">Attributs additionelles</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.additionalAttributesDescription" approved="yes">
+        <source>For josh scroll animation see github.com/mamunhpath/josh.js and animate.style</source>
+        <target state="final">Pour l'animation de défilement de josh, voir github.com/mamunhpath/josh.js et animate.style</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.background" approved="yes">
+        <source>Background</source>
+        <target state="final">Fond</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.bgmedia" approved="yes">
+        <source>Background image (inline)</source>
+        <target state="final">Image d'arrière-plan (en ligne)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.behaviour" approved="yes">
+        <source>Behaviour</source>
+        <target state="final">Comportement</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animationNone" approved="yes">
+        <source>No animation</source>
+        <target state="final">Aucune animation</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation1" approved="yes">
+        <source>Fade up right (on scrolling)</source>
+        <target state="final">Fondu vers la droite (sur défilement)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation2" approved="yes">
+        <source>Fade up left (on scrolling)</source>
+        <target state="final">Fondu vers la gauche (sur défilement)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation3" approved="yes">
+        <source>Zoom in (on scrolling)</source>
+        <target state="final">Agrandir (sur défilement)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation4" approved="yes">
+        <source>Flip up (on scrolling)</source>
+        <target state="final">Retournez (sur défilement)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation21" approved="yes">
+        <source>Zoom in down</source>
+        <target state="final">Zoomer vers le bas</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation23" approved="yes">
+        <source>Rubber band</source>
+        <target state="final">Bande de caoutchouc</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.background_image_variants" approved="yes">
+        <source>Background image variants</source>
+        <target state="final">Variantes de l'image d'arrière-plan</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_variants.content" approved="yes">
+        <source>Default (content width)</source>
+        <target state="final">Défaut (largeur du contenu)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_variants.page" approved="yes">
+        <source>Full page width</source>
+        <target state="final">Largeur de page complète</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-image-overlay" approved="yes">
+        <source>Image with overlay heading</source>
+        <target state="final">Image avec titre en superposition</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left" approved="yes">
+        <source>Gallery item left</source>
+        <target state="final">Pièce de galerie gauche</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-right" approved="yes">
+        <source>Gallery item right</source>
+        <target state="final">Pièce de galerie droite</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-join" approved="yes">
+        <source>Gallery item join</source>
+        <target state="final">Pièce de galerie rejoindre</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-shadow" approved="yes">
+        <source>Gallery item shadow</source>
+        <target state="final">Pièce de galerie ombre</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-tile-scroll-y" approved="yes">
+        <source>Tile with vertical scrollbar</source>
+        <target state="final">Carreau avec barre de défilement verticale</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-below-header" approved="yes">
+        <source>Move content below header</source>
+        <target state="final">Déplacer le contenu sous l'en-tête</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.all" approved="yes">
+        <source>All</source>
+        <target state="final">Tous</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.small" approved="yes">
+        <source>Small</source>
+        <target state="final">Petit</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.medium" approved="yes">
+        <source>Medium</source>
+        <target state="final">Moyen</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.large" approved="yes">
+        <source>Large</source>
+        <target state="final">Grand</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.extralarge" approved="yes">
+        <source>Extra large</source>
+        <target state="final">Extra grand</target>
+      </trans-unit>
+      <trans-unit id="tca.modal_dialog.header" approved="yes">
+        <source>Button text</source>
+        <target state="final">Texte du bouton</target>
+      </trans-unit>
+      <trans-unit id="tca.modal_dialog.options" approved="yes">
+        <source>Button options</source>
+        <target state="final">Options du bouton</target>
+      </trans-unit>
+      <trans-unit id="tca.list_categorized_content.options" approved="yes">
+        <source>List options</source>
+        <target state="final">Options de liste</target>
+      </trans-unit>
+      <trans-unit id="tca.schema.options" approved="yes">
+        <source>Schema options</source>
+        <target state="final">Options du schéma</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
