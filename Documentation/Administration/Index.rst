@@ -25,6 +25,7 @@ Extension                        Version tested
 ================================ ================
 container_elements               5.1.0
 easyconf                         2.1.0
+eventnews                        6.0.2
 news                             11.3.0
 tt_address                       8.0.1
 ================================ ================

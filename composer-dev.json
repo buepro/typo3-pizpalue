@@ -35,7 +35,7 @@
 	"require": {
 		"bk2k/bootstrap-package": "~14.0.7 || dev-main",
 		"buepro/typo3-pvh": "^2.0",
-		"typo3/cms-core": "^12.3"
+		"typo3/cms-core": "^12.4"
 	},
 	"require-dev": {
 		"buepro/typo3-container-elements": "^5.0.1",
@@ -45,7 +45,7 @@
 		"friendsofphp/php-cs-fixer": "^3.14",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
 		"friendsoftypo3/tt-address": "^8.0.1",
-		"georgringer/eventnews": "compat-12-dev",
+		"georgringer/eventnews": "6.0.2",
 		"georgringer/news": "^11",
 		"overtrue/phplint": "^3.2.0 || ^4.3.0 || ^5.3.0",
 		"phpspec/prophecy-phpunit": "^2.0",
@@ -53,9 +53,9 @@
 		"phpstan/phpstan-deprecation-rules": "^1.0.0",
 		"phpstan/phpstan-phpunit": "^1.1.1",
 		"phpstan/phpstan-strict-rules": "^1.4.3",
-		"typo3/cms-base-distribution": "^11.5 || ^12.1",
-		"typo3/cms-lowlevel": "^11.5 || ^12.3",
-		"typo3/cms-recycler": "^11.5 || ^12.3",
+		"typo3/cms-base-distribution": "^11.5 || ^12.4",
+		"typo3/cms-lowlevel": "^11.5 || ^12.4",
+		"typo3/cms-recycler": "^11.5 || ^12.4",
 		"typo3/testing-framework": "^7.0.0 || ^8.0.0"
 	},
 	"suggest": {
@@ -82,11 +82,11 @@
 		},
 		"pizpalue_distribution": {
 			"type": "path",
-			"url": "/mnt/public/package/typo3-user_pizpalue"
+			"url": "/mnt/public/package/typo3-pizpalue_distribution"
 		},
 		"user_pizpalue": {
 			"type": "path",
-			"url": "/mnt/public/package/typo3-pizpalue_distribution"
+			"url": "/mnt/public/package/typo3-user_pizpalue"
 		},
 		"bootstrap_package": {
 			"type": "path",

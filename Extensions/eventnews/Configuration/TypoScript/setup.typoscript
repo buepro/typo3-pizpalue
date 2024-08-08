@@ -1,4 +1,3 @@
-# TYPO3 < v12
 plugin.tx_news {
     view {
         templateRootPaths {
@@ -8,10 +7,11 @@ plugin.tx_news {
         partialRootPaths.21 = EXT:pizpalue/Extensions/eventnews/Resources/Private/Partials
     }
 }
+
 # TYPO3 >= v12
 tt_content.eventnews_newsmonth.20.view {
-    templateRootPaths.21 = EXT:pizpalue/Extensions/eventnews/Resources/Private/Templates
-    partialRootPaths.21 = EXT:pizpalue/Extensions/eventnews/Resources/Private/Partials
+    templateRootPaths < plugin.tx_news.view.templateRootPaths
+    partialRootPaths < plugin.tx_news.view.partialRootPaths
 }
 
 page {
