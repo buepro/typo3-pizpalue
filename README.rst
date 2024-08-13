@@ -51,3 +51,16 @@ using the
 :Repository:  https://github.com/buepro/typo3-pizpalue
 :Read online: https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/
 :TER:         https://extensions.typo3.org/extension/pizpalue
+
+Credits
+=======
+
+This extension can be provided thanks to outstanding work from TYPO3 community
+members and generous support from partners. A big thanks goes to:
+
+-  Benjamin Kott, extension `bootstrap_package <https://extensions.typo3.org/extension/bootstrap_package>`__
+-  B13 GmbH, extension `container <https://extensions.typo3.org/extension/container>`__
+-  Georg Ringer, extensions `news <https://extensions.typo3.org/extension/news>`__,
+   `eventnews <https://extensions.typo3.org/extension/eventnews>`__
+-  tt_address Development Team, extension `tt_address <https://extensions.typo3.org/extension/tt_address>`__
+-  `PopNet Informatik AG <https://www.popnet.ch/>`__
