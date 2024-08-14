@@ -19,7 +19,7 @@ defined('TYPO3') or die('Access denied.');
     /**
      * Properties
      */
-    $googleProperties = 'meta.google-site-verification, tracking.google.trackingID, tracking.google.ga4MeasureId, ' .
+    $googleProperties = 'meta.google-site-verification, tracking.google.ga4MeasureId, ' .
         'tracking.google.tagManagerContainerId';
     $seoProperties = 'optimizeLinkTargets, consentTrackingCode';
 

@@ -10,8 +10,6 @@ page {
 
     tracking {
         google {
-            # cat=6030/1410/030; type=string; label=Google tracking ID
-            trackingID =
             # cat=6030/1410/040; type=string; label=Google analytics 4 measure ID
             ga4MeasureId =
             # cat=6030/1410/050; type=string; label=Google tag manager container ID

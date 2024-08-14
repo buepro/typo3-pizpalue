@@ -35,25 +35,5 @@ page {
 
             )
         }
-
-        #---------------------------------------------------------#
-        # Deprecated universal attribute
-        #---------------------------------------------------------#
-        99.5 = TEXT
-        99.5.value (
-    (function (consentCode) {
-        const cookies = '; ' + document.cookie;
-        var parts = cookies.split('; cookieconsent_status=');
-        const cookieValue = parts.length < 2 ? undefined : parts.pop().split(';').shift();
-        if (parseInt(consentCode) && cookieValue !== 'allow') {
-            return;
-        }
-
-        )
-        99.95 = TEXT
-        99.95.value (
-
-    })('{$pizpalue.seo.consentTrackingCode}');
-        )
     }
 }
