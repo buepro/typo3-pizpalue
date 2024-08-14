@@ -15,7 +15,7 @@
         -> pvh:format.trim()
         -> f:format.crop(maxCharacters: 80)
         -> f:variable(name: '_title')}
-    <div class="t3-page-ce-header-title">
+    <div id="pp-header-title-{item.record.uid}" class="pp-header-title t3-page-ce-header-title">
         <span class="ppc-expanded">{item.contentTypeLabel}</span><span class="ppc-collapsed d-none">{_title -> f:format.raw()}</span>
     </div>
     <div class="t3-page-ce-header-right">
@@ -51,7 +51,7 @@
                         <core:icon identifier="actions-menu-alternative" />
                     </button>
                 </f:if>
-                <a class="ppc-toggler btn btn-default btn-borderless btn-sm" data-bs-toggle="collapse" href="#pp-collapse-{item.record.uid}" role="button" aria-expanded="true" aria-controls="pp-collapse-{item.record.uid}">{core:icon(identifier: 'actions-chevron-bar-up')}</a>
+                <a id="pp-toggler-{item.record.uid}" class="pp-toggler btn btn-default btn-borderless btn-sm" data-bs-toggle="collapse" href="#pp-collapse-{item.record.uid}" role="button" aria-expanded="true" aria-controls="pp-collapse-{item.record.uid}">{core:icon(identifier: 'actions-chevron-bar-up')}</a>
             </div>
         </div>
     </div>

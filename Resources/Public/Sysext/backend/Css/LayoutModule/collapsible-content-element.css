@@ -1,7 +1,7 @@
-.pp-page-ce .ppc-toggler .icon {
+.pp-page-ce .pp-toggler .icon {
     transition: transform 0.5s;
 }
-.pp-page-ce .ppc-toggler.collapsed .icon{
+.pp-page-ce .pp-toggler.collapsed .icon{
     transform: scaleY(-1);
 }
 .pp-page-ce .ppc-title {

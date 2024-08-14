@@ -1,16 +1,53 @@
 (function () {
-    function getTitleElement(collapsible, selector) {
-        return collapsible.closest('.pp-page-ce').querySelector('.' + selector);
+    const collapsedIds = {
+        _ids: [],
+        _saveIds: function () {
+            document.cookie = 'ppCollapsed=' + JSON.stringify(this._ids);
+        },
+        init: function () {
+            this._ids = JSON.parse(document.cookie.split('; ').find((row) => row.startsWith('ppCollapsed'))?.split('=')[1] ?? '[]');
+            return this;
+        },
+        get: function () {
+            return this._ids;
+        },
+        add: function (id) {
+            if (this._ids.indexOf(id) >= 0) {
+                return;
+            }
+            this._ids.push(id);
+            this._saveIds();
+        },
+        remove: function (id) {
+            let index = this._ids.indexOf(id);
+            if ( index >= 0) {
+                this._ids.splice(index, 1);
+                this._saveIds();
+            }
+        }
     }
-    const pageCeCollapsibles = document.querySelectorAll('.pp-page-ce .ppc-collapse');
-    pageCeCollapsibles.forEach((el) => {
+    document.querySelectorAll('.pp-collapse').forEach((el) => {
         el.addEventListener('show.bs.collapse', (e) => {
-            getTitleElement(e.target, 'ppc-expanded').classList.remove('d-none');
-            getTitleElement(e.target, 'ppc-collapsed').classList.add('d-none');
+            e.stopPropagation();
+            const id = e.target.dataset.ppId;
+            document.getElementById('pp-header-title-' + id).classList.remove('ppc-collapsed');
+            collapsedIds.remove(id);
         });
         el.addEventListener('hide.bs.collapse', (e) => {
-            getTitleElement(e.target, 'ppc-expanded').classList.add('d-none');
-            getTitleElement(e.target, 'ppc-collapsed').classList.remove('d-none');
+            e.stopPropagation();
+            const id = e.target.dataset.ppId;
+            document.getElementById('pp-header-title-' + id).classList.add('ppc-collapsed');
+            collapsedIds.add(id);
         });
     })
+    collapsedIds.init().get().forEach(id => {
+        const toggler = document.getElementById('pp-toggler-' + id);
+        if (!toggler) {
+            return;
+        }
+        toggler.classList.add('collapsed');
+        toggler.setAttribute('aria-expanded', 'false');
+        document.getElementById('pp-header-title-' + id).classList.add('ppc-collapsed');
+        document.getElementById('pp-collapse-' + id).classList.remove('show');
+    });
 })();
