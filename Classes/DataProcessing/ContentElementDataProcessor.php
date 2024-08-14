@@ -10,12 +10,12 @@ declare(strict_types = 1);
 
 namespace Buepro\Pizpalue\DataProcessing;
 
-use Buepro\Pizpalue\ViewHelpers\FrameDataViewHelper;
+use Buepro\Pizpalue\Service\FrameDataService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContext;
+use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
-class ContentElementDataProcessor implements \TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface
+class ContentElementDataProcessor implements DataProcessorInterface
 {
     /**
      * @inheritDoc
@@ -26,12 +26,7 @@ class ContentElementDataProcessor implements \TYPO3\CMS\Frontend\ContentObject\D
         array $processorConfiguration,
         array $processedData
     ) {
-        $arguments = [
-            'data' => $processedData['data'],
-            'pizpalueConstants' => $processedData['pizpalue'],
-            'as' => '',
-        ];
-        $processedData['ppData'] = FrameDataViewHelper::renderStatic($arguments, fn () => '', new RenderingContext());
+        $processedData['ppData'] = (new FrameDataService)->getData($processedData['data'] ?? [], $processedData['pizpalue'] ?? []);
         $processedData['frameAttributes'] = $this->addAttributes(
             $processedData['frameAttributes'],
             $processedData['ppData']
