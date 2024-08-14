@@ -9,6 +9,16 @@ parameters:
 			path: ../Classes/DataProcessing/ContentElementDataProcessor.php
 
 		-
+			message: "#^Cannot access offset 'framelessAttributes' on mixed\\.$#"
+			count: 1
+			path: ../Classes/DataProcessing/ContentElementDataProcessor.php
+
+		-
+			message: "#^Parameter \\#2 \\$ppData of method Buepro\\\\Pizpalue\\\\DataProcessing\\\\ContentElementDataProcessor\\:\\:addAttributes\\(\\) expects array, mixed given\\.$#"
+			count: 2
+			path: ../Classes/DataProcessing/ContentElementDataProcessor.php
+
+		-
 			message: """
 				#^Fetching deprecated class constant INFO of class TYPO3\\\\CMS\\\\Core\\\\Messaging\\\\FlashMessage\\:
 				Use \\\\TYPO3\\\\CMS\\\\Core\\\\Type\\\\ContextualFeedbackSeverity\\:\\:INFO instead$#
@@ -21,6 +31,11 @@ parameters:
 				#^Call to deprecated method getTypoScriptStupArrayFromDeprecatedProperty\\(\\) of class Buepro\\\\Pizpalue\\\\Structure\\\\Service\\\\TypoScriptService\\:
 				since pizpalue v15, remove with dropping support for TYPO3 v11$#
 			"""
+			count: 1
+			path: ../Classes/Structure/Service/TypoScriptService.php
+
+		-
+			message: "#^Cannot access offset non\\-empty\\-string on mixed\\.$#"
 			count: 1
 			path: ../Classes/Structure/Service/TypoScriptService.php
 
@@ -45,14 +60,20 @@ parameters:
 			path: ../Classes/ViewHelpers/FrameDataViewHelper.php
 
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\PizpalueFrameViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
-			count: 1
-			path: ../Classes/ViewHelpers/PizpalueFrameViewHelper.php
+			message: """
+				#^Call to deprecated method registerTagAttribute\\(\\) of class TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\AbstractTagBasedViewHelper\\:
+				Will log deprecation in v4, will be removed in v5\\. No longer necessary since arbitrary arguments are allowed\\.$#
+			"""
+			count: 3
+			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
 
 		-
-			message: "#^Strict comparison using \\!\\=\\= between int\\<0, max\\> and false will always evaluate to true\\.$#"
+			message: """
+				#^Call to deprecated method registerUniversalTagAttributes\\(\\) of class TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\AbstractTagBasedViewHelper\\:
+				Will log deprecation in v4, will be removed in v5\\. No longer necessary since arbitrary arguments are allowed\\.$#
+			"""
 			count: 1
-			path: ../Classes/ViewHelpers/PizpalueFrameViewHelper.php
+			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
 
 		-
 			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\ModificationStackViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
@@ -81,6 +102,11 @@ parameters:
 			message: "#^Cannot call method render\\(\\) on TYPO3\\\\CMS\\\\Core\\\\View\\\\ViewInterface\\|TYPO3Fluid\\\\Fluid\\\\View\\\\ViewInterface\\|null\\.$#"
 			count: 1
 			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
+
+		-
+			message: "#^Cannot cast mixed to int\\.$#"
+			count: 1
+			path: ../Sysext/core/Classes/Resource/FileReference.php
 
 		-
 			message: "#^Call to function property_exists\\(\\) with TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer and 'lastTypoLinkResult' will always evaluate to true\\.$#"
