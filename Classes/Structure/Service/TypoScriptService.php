@@ -27,9 +27,6 @@ class TypoScriptService
             $setupArray = $frontendTypoScript->getSetupArray();
         }
         if ($setupArray === null) {
-            $setupArray = $this->getTypoScriptStupArrayFromDeprecatedProperty();
-        }
-        if ($setupArray === null) {
             return null;
         }
 
@@ -54,14 +51,4 @@ class TypoScriptService
         return is_array($result) && $result !== [] ? $result : null;
     }
 
-    /**
-     * @deprecated since pizpalue v15, remove with dropping support for TYPO3 v11
-     */
-    private function getTypoScriptStupArrayFromDeprecatedProperty(): ?array
-    {
-        if (isset($GLOBALS['TSFE']->tmpl->setup) && is_array($GLOBALS['TSFE']->tmpl->setup)) {
-            return $GLOBALS['TSFE']->tmpl->setup;
-        }
-        return null;
-    }
 }
