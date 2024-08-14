@@ -172,16 +172,4 @@
         return this;
     };
 
-    /*
-     * Backward compatibility
-     * @deprecated since version 14, will be removed in 16
-     */
-    if (typeof Element.prototype.showAndScroll === undefined) {
-        Element.prototype.showAndScroll = (options) => {
-            console.log('WARNING: You are using the deprecated plugin "ShowAndScroll" from the TYPO3 extension ' +
-                'pizpalue. Please update the code to ensure smooth operation.');
-            return Element.prototype.ppShowScroll(options);
-        }
-    }
-
 }(window, document);
