@@ -99,9 +99,6 @@ defined('TYPO3') || die('Access denied.');
      * EXT:backend
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('backend')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
-            '@import "EXT:pizpalue/Sysext/backend/Configuration/TypoScript/setup.typoscript"'
-        );
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             '@import "EXT:pizpalue/Sysext/backend/Configuration/TsConfig/page.tsconfig"'
         );
