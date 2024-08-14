@@ -156,7 +156,6 @@
 			"phpstan analyze --configuration Build/phpstan.neon"
 		],
 		"ci:static": [
-			"@ci:composer:normalize",
 			"@ci:php:cs",
 			"@ci:php:lint",
 			"@ci:php:stan"
