@@ -53,9 +53,9 @@
 		"phpstan/phpstan-deprecation-rules": "^1.0.0",
 		"phpstan/phpstan-phpunit": "^1.1.1",
 		"phpstan/phpstan-strict-rules": "^1.4.3",
-		"typo3/cms-base-distribution": "^11.5 || ^12.4",
-		"typo3/cms-lowlevel": "^11.5 || ^12.4",
-		"typo3/cms-recycler": "^11.5 || ^12.4",
+		"typo3/cms-base-distribution": "^12.4",
+		"typo3/cms-lowlevel": "^12.4",
+		"typo3/cms-recycler": "^12.4",
 		"typo3/testing-framework": "^7.0.0 || ^8.0.0"
 	},
 	"suggest": {
@@ -125,7 +125,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "16.3.x-dev"
+			"dev-main": "17.0.x-dev"
 		},
 		"typo3/cms": {
 			"app-dir": ".build",
