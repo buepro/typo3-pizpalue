@@ -77,52 +77,51 @@ defined('TYPO3') or die('Access denied.');
     $GLOBALS['TCA']['pages']['columns']['tx_pizpalue_background_image'] = [
         'exclude' => true,
         'label' => 'LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.background_image',
-        'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-            'tx_pizpalue_background_image',
-            [
-                'appearance' => [
-                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
-                ],
-                'overrideChildTca' => [
-                    'types' => [
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
-                            'showitem' => '
+        'config' => [
+            'type' => 'file',
+            'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+            'disallowed' => '',
+            'appearance' => [
+                'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+            ],
+            'overrideChildTca' => [
+                'types' => [
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
+                        'showitem' => '
                             --palette--;;filePalette
                         '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
-                            'showitem' => '
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
+                        'showitem' => '
                             --palette--;;filePalette
                         '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                            'showitem' => '
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                        'showitem' => '
                             crop,
                             --palette--;;filePalette
                         '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
-                            'showitem' => '
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
+                        'showitem' => '
                             --palette--;;filePalette
                         '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
-                            'showitem' => '
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
+                        'showitem' => '
                             --palette--;;filePalette
                         '
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
-                            'showitem' => '
+                    ],
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
+                        'showitem' => '
                             --palette--;;filePalette
                         '
-                        ],
                     ],
                 ],
-                'minitems' => 0,
-                'maxitems' => 1,
             ],
-            $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-        ),
+            'minitems' => 0,
+            'maxitems' => 1,
+        ],
         'l10n_mode' => 'exclude',
     ];
     $GLOBALS['TCA']['pages']['columns']['tx_pizpalue_css'] = [
