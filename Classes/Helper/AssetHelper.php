@@ -22,6 +22,7 @@ class AssetHelper
 
     public function includeAnimateCss(): void
     {
+        /** @extensionScannerIgnoreLine */
         $this->assetCollector->addStyleSheet(
             'ppAnimateCss',
             'EXT:pizpalue/Resources/Public/Contrib/animate.css/animate.min.css'
