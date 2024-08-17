@@ -48,8 +48,9 @@ using the
 :Read online: https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/
 :TER:         https://extensions.typo3.org/extension/pizpalue
 
-Credits
-=======
+----
+
+**Credits**
 
 This extension can be provided thanks to outstanding work from TYPO3 community
 members and generous support from partners. A big thanks goes to:
