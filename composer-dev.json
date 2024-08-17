@@ -33,36 +33,33 @@
 		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
 	},
 	"require": {
-		"bk2k/bootstrap-package": "~14.0.7 || dev-main",
-		"buepro/typo3-pvh": "^2.0",
-		"typo3/cms-core": "^12.4"
+		"bk2k/bootstrap-package": "^14.0.7 || ^15.0.0@dev",
+		"buepro/typo3-pvh": "^3.0.0@dev",
+		"typo3/cms-core": "^12.4 || ^13.2"
 	},
 	"require-dev": {
-		"buepro/typo3-container-elements": "^5.0.1",
-		"buepro/typo3-easyconf": "^1.4.0 || ^2.0.0",
-		"buepro/typo3-user-pizpalue": "dev-main",
-		"ergebnis/composer-normalize": "^2.15.0",
-		"friendsofphp/php-cs-fixer": "^3.14",
+		"b13/container": "^2.3.6 || dev-master",
+		"buepro/typo3-container-elements": "^6.0.0@dev",
+		"buepro/typo3-pvh": "^3.0.0",
+		"ergebnis/composer-normalize": "^2.43.0",
+		"friendsofphp/php-cs-fixer": "^3.62.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
-		"friendsoftypo3/tt-address": "^8.0.1",
-		"georgringer/eventnews": "6.0.2",
-		"georgringer/news": "^11",
-		"overtrue/phplint": "^3.2.0 || ^4.3.0 || ^5.3.0",
-		"phpspec/prophecy-phpunit": "^2.0",
-		"phpstan/phpstan": "^1.8.5",
-		"phpstan/phpstan-deprecation-rules": "^1.0.0",
-		"phpstan/phpstan-phpunit": "^1.1.1",
-		"phpstan/phpstan-strict-rules": "^1.4.3",
-		"typo3/cms-base-distribution": "^12.4",
-		"typo3/cms-lowlevel": "^12.4",
-		"typo3/cms-recycler": "^12.4",
-		"typo3/testing-framework": "^7.0.0 || ^8.0.0"
+		"overtrue/phplint": "^9.0.0",
+		"phpspec/prophecy-phpunit": "^2.2.0",
+		"phpstan/phpstan": "^1.11.10",
+		"phpstan/phpstan-deprecation-rules": "^1.2.0",
+		"phpstan/phpstan-phpunit": "^1.4.0",
+		"phpstan/phpstan-strict-rules": "^1.6.0",
+		"typo3/cms-core": "^12.4",
+		"typo3/cms-impexp": "^12.4 || ^13.2",
+		"typo3/testing-framework": "^8.2.0"
+	},
+	"conflict": {
+		"buepro/typo3-container-elements": "<5.3"
 	},
 	"suggest": {
 		"buepro/typo3-container-elements": "Flexibel elements to structure the content area with container",
 		"buepro/typo3-easyconf": "Backend module to provide an easy website configuration",
-		"buepro/typo3-flux-elements": "Flexibel elements to structure the content area with flux",
-		"buepro/typo3-pp-gridelements": "Flexibel elements to structure the content area with gridelements",
 		"friendsoftypo3/tt-address": "Manage addresses",
 		"georgringer/eventnews": "Calendar based on extension news",
 		"georgringer/news": "Flexible news system"
@@ -170,18 +167,6 @@
 		"ci:tests:unit": [
 			"phpunit -c Build/phpunit-unit.xml"
 		],
-		"ddev:install": [
-			"composer install",
-			"ddev start",
-			"ddev composer site:install",
-			"ddev launch typo3",
-			"echo '\\033[0;32mINFO: Login to BE using admin/admin\\033[0m'"
-		],
-		"ddev:uninstall": [
-			"ddev composer typo3cms:database:export",
-			"ddev delete",
-			"rm -rf .build/"
-		],
 		"fix": [
 			"@fix:composer:normalize",
 			"@fix:php:cs"
@@ -193,20 +178,6 @@
 		],
 		"fix:php:stan": [
 			"phpstan analyze --level max --configuration Build/phpstan.neon --generate-baseline Build/phpstan-baseline.neon"
-		],
-		"site:install": [
-			"@typo3cms:install:setup",
-			"@typo3cms:database:import"
-		],
-		"typo3cms:database:export": [
-			".build/bin/typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log | gzip -c > Build/site/db12.sql.gz",
-			"ls -l Build/site/db12.sql.gz"
-		],
-		"typo3cms:database:import": [
-			"gzip -cdk Build/site/db12.sql.gz | .build/bin/typo3cms database:import"
-		],
-		"typo3cms:install:setup": [
-			".build/bin/typo3cms install:setup --no-interaction --use-existing-database --database-host-name='db' --database-name='db' --database-user-name='db' --database-user-password='db' --admin-user-name='admin' --admin-password='admin123ADMIN:)' --site-name='pizpalue dev' --web-server-config='apache'"
 		]
 	}
 }

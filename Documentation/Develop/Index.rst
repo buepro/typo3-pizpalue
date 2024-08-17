@@ -58,26 +58,6 @@ following steps:
          }
       }
 
-
-Work with the container
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Use the ddev container during development. Like this the system environment
-is being respected. E.g.:
-
-.. code-block:: bash
-
-   ddev composer update
-
-Uninstallation
---------------
-
-To remove the development site use:
-
-.. code-block:: bash
-
-   composer ddev:uninstall
-
 Create tests
 ============
 

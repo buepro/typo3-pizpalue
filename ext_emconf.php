@@ -18,20 +18,18 @@ $EM_CONF[$_EXTKEY] = [
     'author_email'     => 'rb@buechler.pro',
     'constraints'      => [
         'depends'   => [
-            'typo3'                 => '12.4.18-12.99.99',
-            'bootstrap_package'     => '14.0.7-14.99.99',
-            'pvh'                   => '2.0.0-2.99.99'
+            'typo3'                 => '12.4.18-13.99.99',
+            'bootstrap_package'     => '14.0.7-15.99.99',
+            'pvh'                   => '3.0.0-3.99.99'
         ],
         'conflicts' => [
-            'container_elements'      => '0.0.0-5.0.0'
+            'container_elements'      => '0.0.0-5.3.0'
         ],
         'suggests'  => [
             'container_elements'    => '',
             'easyconf'              => '',
             'eventnews'             => '5.0.0',
-            'flux_elements'         => '',
             'news'                  => '',
-            'pp_gridelements'       => '',
             'tt_address'            => '',
         ],
     ],
