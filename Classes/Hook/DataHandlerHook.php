@@ -95,7 +95,7 @@ class DataHandlerHook implements \TYPO3\CMS\Core\SingletonInterface
                     FlashMessage::class,
                     $GLOBALS['LANG']->sL('LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:flash-message-image-variants-changed'),
                     $GLOBALS['LANG']->sL('LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:flash-message-change-setting'),
-                    FlashMessage::INFO,
+                    \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::INFO,
                     true
                 );
                 $flashMessageService = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Messaging\FlashMessageService::class);

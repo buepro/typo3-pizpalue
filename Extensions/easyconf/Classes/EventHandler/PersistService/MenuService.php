@@ -107,7 +107,7 @@ class MenuService extends AbstractService
             FlashMessage::class,
             $text,
             '',
-            FlashMessage::INFO,
+            \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::INFO,
             true
         );
         $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
