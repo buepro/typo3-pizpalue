@@ -134,9 +134,18 @@ defined('TYPO3') or die('Access denied.');
         $tca['columns'],
         'layout',
         ['config' => ['type' => 'select', 'renderType' => 'selectSingle', 'items' => [
-            [$l10nFile . ':cookie_layout.basic', 'basic'],
-            [$l10nFile . ':cookie_layout.basic-close', 'basic-close'],
-            [$l10nFile . ':cookie_layout.basic-header', 'basic-header'],
+            [
+                'label' => $l10nFile . ':cookie_layout.basic',
+                'value' => 'basic',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_layout.basic-close',
+                'value' => 'basic-close',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_layout.basic-header',
+                'value' => 'basic-header',
+            ],
         ]]],
         'cookie'
     );
@@ -144,9 +153,18 @@ defined('TYPO3') or die('Access denied.');
         $tca['columns'],
         'type',
         ['config' => ['type' => 'select', 'renderType' => 'selectSingle', 'items' => [
-            [$l10nFile . ':cookie_type.info', 'info'],
-            [$l10nFile . ':cookie_type.opt-in', 'opt-in'],
-            [$l10nFile . ':cookie_type.opt-out', 'opt-out'],
+            [
+                'label' => $l10nFile . ':cookie_type.info',
+                'value' => 'info',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_type.opt-in',
+                'value' => 'opt-in',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_type.opt-out',
+                'value' => 'opt-out',
+            ],
         ]]],
         'cookie'
     );
@@ -154,12 +172,30 @@ defined('TYPO3') or die('Access denied.');
         $tca['columns'],
         'position',
         ['config' => ['type' => 'select', 'renderType' => 'selectSingle', 'items' => [
-            [$l10nFile . ':cookie_position.top', 'top'],
-            [$l10nFile . ':cookie_position.bottom', 'bottom'],
-            [$l10nFile . ':cookie_position.top-left', 'top-left'],
-            [$l10nFile . ':cookie_position.top-right', 'top-right'],
-            [$l10nFile . ':cookie_position.bottom-left', 'bottom-left'],
-            [$l10nFile . ':cookie_position.bottom-right', 'bottom-right'],
+            [
+                'label' => $l10nFile . ':cookie_position.top',
+                'value' => 'top',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_position.bottom',
+                'value' => 'bottom',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_position.top-left',
+                'value' => 'top-left',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_position.top-right',
+                'value' => 'top-right',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_position.bottom-left',
+                'value' => 'bottom-left',
+            ],
+            [
+                'label' => $l10nFile . ':cookie_position.bottom-right',
+                'value' => 'bottom-right',
+            ],
         ]]],
         'cookie'
     );

@@ -205,11 +205,26 @@ defined('TYPO3') or die('Access denied.');
                 'renderType' => 'selectSingle',
                 'default' => 'none',
                 'items' => [
-                    [sprintf('%s:none', $l10nFile), 'none'],
-                    [sprintf('%s:menu_main_style.default', $l10nFile), 'default'],
-                    [sprintf('%s:menu_main_style.default-transition', $l10nFile), 'default-transition'],
-                    [sprintf('%s:menu_main_style.inverse', $l10nFile), 'inverse'],
-                    [sprintf('%s:menu_main_style.inverse-transition', $l10nFile), 'inverse-transition'],
+                    [
+                        'label' => sprintf('%s:none', $l10nFile),
+                        'value' => 'none',
+                    ],
+                    [
+                        'label' => sprintf('%s:menu_main_style.default', $l10nFile),
+                        'value' => 'default',
+                    ],
+                    [
+                        'label' => sprintf('%s:menu_main_style.default-transition', $l10nFile),
+                        'value' => 'default-transition',
+                    ],
+                    [
+                        'label' => sprintf('%s:menu_main_style.inverse', $l10nFile),
+                        'value' => 'inverse',
+                    ],
+                    [
+                        'label' => sprintf('%s:menu_main_style.inverse-transition', $l10nFile),
+                        'value' => 'inverse-transition',
+                    ],
                 ],
             ],
         ],
@@ -224,9 +239,18 @@ defined('TYPO3') or die('Access denied.');
                 'renderType' => 'selectSingle',
                 'default' => 'none',
                 'items' => [
-                    [sprintf('%s:none', $l10nFile), 'none'],
-                    [sprintf('%s:menu_main_type.default', $l10nFile), ''],
-                    [sprintf('%s:menu_main_type.top', $l10nFile), 'top'],
+                    [
+                        'label' => sprintf('%s:none', $l10nFile),
+                        'value' => 'none'
+                    ],
+                    [
+                        'label' => sprintf('%s:menu_main_type.default', $l10nFile),
+                        'value' => ''
+                    ],
+                    [
+                        'label' => sprintf('%s:menu_main_type.top', $l10nFile),
+                        'value' => 'top'
+                    ],
                 ],
             ],
         ],

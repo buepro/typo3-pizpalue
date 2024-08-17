@@ -32,8 +32,14 @@ defined('TYPO3') or die('Access denied.');
                 'renderType' => 'selectSingle',
                 'default' => 'variants',
                 'items' => [
-                    ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.content', 'variants'],
-                    ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
+                    [
+                        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.content',
+                        'value' => 'variants',
+                    ],
+                    [
+                        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.image_variants.page',
+                        'value' => 'pageVariants',
+                    ],
                 ],
             ],
         ],

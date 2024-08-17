@@ -116,10 +116,22 @@ defined('TYPO3') or die('Access denied.');
         $tca['columns'],
         'siteMode',
         ['config' => ['type' => 'select', 'renderType' => 'selectSingle', 'items' => [
-            [$l10nFile . ':admin_site_site_mode.production', 0],
-            [$l10nFile . ':admin_site_site_mode.maintenance', 1],
-            [$l10nFile . ':admin_site_site_mode.develop', 2],
-            [$l10nFile . ':admin_site_site_mode.review', 3],
+            [
+                'label' => $l10nFile . ':admin_site_site_mode.production',
+                'value' => 0,
+            ],
+            [
+                'label' => $l10nFile . ':admin_site_site_mode.maintenance',
+                'value' => 1,
+            ],
+            [
+                'label' => $l10nFile . ':admin_site_site_mode.develop',
+                'value' => 2,
+            ],
+            [
+                'label' => $l10nFile . ':admin_site_site_mode.review',
+                'value' => 3,
+            ],
         ]]],
         'admin_site'
     );

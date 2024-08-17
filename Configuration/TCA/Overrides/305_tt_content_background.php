@@ -31,8 +31,14 @@ defined('TYPO3') or die('Access denied.');
                     'renderType' => 'selectSingle',
                     'default' => 'pageVariants',
                     'items' => [
-                        [$llFile . ':tx_pizpalue_ttc.image_variants.content', 'variants'],
-                        [$llFile . ':tx_pizpalue_ttc.image_variants.page', 'pageVariants'],
+                        [
+                            'label' => $llFile . ':tx_pizpalue_ttc.image_variants.content',
+                            'value' => 'variants',
+                        ],
+                        [
+                            'label' => $llFile . ':tx_pizpalue_ttc.image_variants.page',
+                            'value' => 'pageVariants',
+                        ],
                     ],
                 ],
             ],

@@ -18,9 +18,9 @@
         <testsuite name="buepro-pizpalue-unit-tests">
             <directory>../Tests/Unit</directory>
             <directory>../Extensions/easyconf/Tests/Unit</directory>
-            <!--            <file>-->
-            <!--                ../Tests/Unit/Structure/Service/TypoScriptServiceTest.php-->
-            <!--            </file>-->
+<!--            <file>-->
+<!--                ../Tests/Unit/Helper/TcaConfigTest.php-->
+<!--            </file>-->
         </testsuite>
     </testsuites>
     <source>

@@ -20,11 +20,26 @@ defined('TYPO3') or die('Access denied.');
      * Add columns
      */
     $pizpalueInnerSpaceItems = [
-        [$llFile . ':tx_pizpalue_ttc.innerSpace.none', 'none'],
-        [$llFile . ':tx_pizpalue_ttc.innerSpace.small', 'small'],
-        [$llFile . ':tx_pizpalue_ttc.innerSpace.default', ''],
-        [$llFile . ':tx_pizpalue_ttc.innerSpace.large', 'large'],
-        [$llFile . ':tx_pizpalue_ttc.innerSpace.extraLarge', 'extra-large'],
+        [
+            'label' => $llFile . ':tx_pizpalue_ttc.innerSpace.none',
+            'value' => 'none',
+        ],
+        [
+            'label' => $llFile . ':tx_pizpalue_ttc.innerSpace.small',
+            'value' => 'small',
+        ],
+        [
+            'label' => $llFile . ':tx_pizpalue_ttc.innerSpace.default',
+            'value' => '',
+        ],
+        [
+            'label' => $llFile . ':tx_pizpalue_ttc.innerSpace.large',
+            'value' => 'large',
+        ],
+        [
+            'label' => $llFile . ':tx_pizpalue_ttc.innerSpace.extraLarge',
+            'value' => 'extra-large',
+        ],
     ];
 
     /**

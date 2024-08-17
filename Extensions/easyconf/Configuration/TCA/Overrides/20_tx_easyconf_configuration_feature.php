@@ -73,9 +73,18 @@ defined('TYPO3') or die('Access denied.');
         $tca['columns'],
         'imageLoading',
         ['config' => ['type' => 'select', 'renderType' => 'selectSingle', 'items' => [
-            [$l10nFile . ':feature_image_loading.eager', 'eager'],
-            [$l10nFile . ':feature_image_loading.lazy', 'lazy'],
-            [$l10nFile . ':feature_image_loading.auto', 'auto'],
+            [
+                'label' => $l10nFile . ':feature_image_loading.eager',
+                'value' => 'eager'
+            ],
+            [
+                'label' => $l10nFile . ':feature_image_loading.lazy',
+                'value' => 'lazy'
+            ],
+            [
+                'label' => $l10nFile . ':feature_image_loading.auto',
+                'value' => 'auto'
+            ],
         ]]],
         'feature'
     );

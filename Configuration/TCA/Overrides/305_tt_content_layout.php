@@ -27,11 +27,26 @@ defined('TYPO3') or die('Access denied.');
                 'renderType' => 'selectSingle',
                 'default' => '',
                 'items' => [
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.all', ''],
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.small', 'sm'],
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.medium', 'md'],
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.large', 'lg'],
-                    [$llFile . ':tx_pizpalue_ttc.layoutBreakpoint.extralarge', 'xl'],
+                    [
+                        'label' => $llFile . ':tx_pizpalue_ttc.layoutBreakpoint.all',
+                        'value' => '',
+                    ],
+                    [
+                        'label' => $llFile . ':tx_pizpalue_ttc.layoutBreakpoint.small',
+                        'value' => 'sm',
+                    ],
+                    [
+                        'label' => $llFile . ':tx_pizpalue_ttc.layoutBreakpoint.medium',
+                        'value' => 'md',
+                    ],
+                    [
+                        'label' => $llFile . ':tx_pizpalue_ttc.layoutBreakpoint.large',
+                        'value' => 'lg',
+                    ],
+                    [
+                        'label' => $llFile . ':tx_pizpalue_ttc.layoutBreakpoint.extralarge',
+                        'value' => 'xl',
+                    ],
                 ],
             ],
         ],

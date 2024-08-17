@@ -25,7 +25,10 @@ defined('TYPO3') or die('Access denied.');
                 'renderType' => 'selectSingle',
                 'default' => 0,
                 'items' => [
-                    ['LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animationNone', 0],
+                    [
+                        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animationNone',
+                        'value' => 0
+                    ],
                 ],
             ],
         ],

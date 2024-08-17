@@ -17,9 +17,15 @@ class TcaConfigTest extends UnitTestCase
 {
     private static function getDefaultColorItems(): array
     {
-        $result = [[TcaConfig::LL_PREFIX . 'normal', '']];
+        $result = [[
+            'label' => TcaConfig::LL_PREFIX . 'normal',
+            'value' => ''
+        ]];
         foreach (TcaConfig::BOOTSTRAP_PACKAGE_COLORS as $color) {
-            $result[] = [TcaConfig::LL_PREFIX . $color, $color];
+            $result[] = [
+                'label' => TcaConfig::LL_PREFIX . $color,
+                'value' => $color
+            ];
         }
         return $result;
     }
@@ -30,7 +36,7 @@ class TcaConfigTest extends UnitTestCase
         $colorItemsWithoutNormal = $defaultColorItems;
         unset($colorItemsWithoutNormal[0]);
         $colorItemsWithFormat = array_map(static function (array $item): array {
-            return $item[1] === '' ? $item : [$item[0], sprintf('var(--bs-%s)', $item[1])];
+            return $item['value'] === '' ? $item : [ 'label' => $item['label'], 'value' => sprintf('var(--bs-%s)', $item['value']) ];
         }, $defaultColorItems);
         return [
             'default parameters' => [true, '', $defaultColorItems],

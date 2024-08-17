@@ -19,14 +19,20 @@ class TcaConfig
     {
         $result = [];
         if ($includeNormal) {
-            $result[] = [self::LL_PREFIX . 'normal', ''];
+            $result[] = [
+                'label' => self::LL_PREFIX . 'normal',
+                'value' =>''
+            ];
         }
         foreach (self::BOOTSTRAP_PACKAGE_COLORS as $color) {
             $value = $color;
             if ($format !== '') {
                 $value = sprintf($format, $value);
             }
-            $result[] = [self::LL_PREFIX . $color, $value];
+            $result[] = [
+                'label' => self::LL_PREFIX . $color,
+                'value' => $value
+            ];
         }
         return $result;
     }
