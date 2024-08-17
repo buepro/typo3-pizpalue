@@ -39,8 +39,10 @@
 	},
 	"require-dev": {
 		"b13/container": "^2.3.6 || dev-master",
+		"bk2k/bootstrap-package": "14.0.7",
 		"buepro/typo3-container-elements": "^6.0.0@dev",
 		"buepro/typo3-pvh": "^3.0.0",
+		"buepro/typo3-user-pizpalue": "^7.0.0@dev",
 		"ergebnis/composer-normalize": "^2.43.0",
 		"friendsofphp/php-cs-fixer": "^3.62.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
@@ -50,7 +52,8 @@
 		"phpstan/phpstan-deprecation-rules": "^1.2.0",
 		"phpstan/phpstan-phpunit": "^1.4.0",
 		"phpstan/phpstan-strict-rules": "^1.6.0",
-		"typo3/cms-core": "^12.4",
+		"typo3/cms-base-distribution": "^12.4 || ^13.1",
+		"typo3/cms-core": "^12.4.18",
 		"typo3/cms-impexp": "^12.4 || ^13.2",
 		"typo3/testing-framework": "^8.2.0"
 	},
@@ -84,14 +87,8 @@
 		"user_pizpalue": {
 			"type": "path",
 			"url": "/mnt/public/package/typo3-user_pizpalue"
-		},
-		"bootstrap_package": {
-			"type": "path",
-			"url": "/mnt/public/package/bootstrap_package"
 		}
 	},
-	"minimum-stability": "dev",
-	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
 			"Buepro\\Pizpalue\\": "Classes/",
