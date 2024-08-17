@@ -7,10 +7,6 @@
         <source>Site verification code</source>
         <target state="final">Webseitenprüfcode</target>
       </trans-unit>
-      <trans-unit id="seo_tracking_google_tracking_i_d" resname="seo_tracking_google_tracking_i_d" approved="yes">
-        <source>Tracking ID</source>
-        <target state="final">Tracking ID</target>
-      </trans-unit>
       <trans-unit id="seo_tracking_google_ga4_measure_id" resname="seo_tracking_google_ga4_measure_id" approved="yes">
         <source>Google analytics 4 measure ID</source>
         <target state="final">Google Analytics 4 Mess-ID</target>
