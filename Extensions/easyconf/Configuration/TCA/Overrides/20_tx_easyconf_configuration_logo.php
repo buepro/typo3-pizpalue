@@ -113,39 +113,10 @@ defined('TYPO3') or die('Access denied.');
      * Modify columns
      */
     foreach (['logo_file_reference', 'logo_file_inverted_reference'] as $fieldName) {
-        $tca['columns'][$fieldName]['config'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-            $fieldName,
-            [
-                'maxitems' => 1,
-                'appearance' => [
-                    'useSortable' => false,
-                    'enabledControls' => ['hide' => false],
-                ],
-                'overrideChildTca' => [
-                    'types' => [
-                        ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
-                        ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
-                        ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette']
-                    ],
-                ],
-            ],
-            'svg,jpg,png,gif'
-        );
-    }
-    TcaUtility::modifyColumns(
-        $tca['columns'],
-        'file, fileInverted, width, height',
-        ['displayCond' => [
-            'AND' => [
-                'FIELD:logo_file_reference:REQ:false',
-                'FIELD:logo_file_inverted_reference:REQ:false'
-            ]
-        ]],
-        'logo'
-    );
-    $tca['columns']['appicon_generator_archive']['config'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-        'appicon_generator_archive',
-        [
+        $tca['columns'][$fieldName]['config'] = [
+            'type' => 'file',
+            'allowed' => 'svg,jpg,png,gif',
+            'disallowed' => '',
             'maxitems' => 1,
             'appearance' => [
                 'useSortable' => false,
@@ -158,9 +129,36 @@ defined('TYPO3') or die('Access denied.');
                     ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette']
                 ],
             ],
-        ],
-        'zip'
+        ];
+    }
+    TcaUtility::modifyColumns(
+        $tca['columns'],
+        'file, fileInverted, width, height',
+        ['displayCond' => [
+            'AND' => [
+                'FIELD:logo_file_reference:REQ:false',
+                'FIELD:logo_file_inverted_reference:REQ:false'
+            ]
+        ]],
+        'logo'
     );
+    $tca['columns']['appicon_generator_archive']['config'] = [
+        'type' => 'file',
+        'allowed' => 'zip',
+        'disallowed' => '',
+        'maxitems' => 1,
+        'appearance' => [
+            'useSortable' => false,
+            'enabledControls' => ['hide' => false],
+        ],
+        'overrideChildTca' => [
+            'types' => [
+                ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
+                ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
+                ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette']
+            ],
+        ],
+    ];
     TcaUtility::modifyColumns(
         $tca['columns'],
         'generatorText',

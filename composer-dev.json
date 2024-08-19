@@ -41,6 +41,7 @@
 		"b13/container": "^2.3.6 || dev-master",
 		"bk2k/bootstrap-package": "14.0.7",
 		"buepro/typo3-container-elements": "^6.0.0@dev",
+		"buepro/typo3-easyconf": "dev-main",
 		"buepro/typo3-pvh": "^3.0.0",
 		"buepro/typo3-user-pizpalue": "^7.0.0@dev",
 		"ergebnis/composer-normalize": "^2.43.0",
