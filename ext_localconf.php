@@ -21,6 +21,7 @@ defined('TYPO3') || die('Access denied.');
     $pizpalueConfiguration = $extensionConfiguration->get('pizpalue');
 
     // Add BackendLayouts for the BackendLayout DataProvider
+    // @todo Remove once bootstrap_package switched to using page.tsconfig (ref 1724069741)
     if (!(bool) $bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
         // Disable some bootstrap_package backend layouts
         if (!(bool) $pizpalueConfiguration['enableBootstrapPackageBackendLayouts']) {
