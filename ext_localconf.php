@@ -77,8 +77,6 @@ defined('TYPO3') || die('Access denied.');
         \Buepro\Pizpalue\Sysext\Core\LinkHandling\PopoverLinkHandler::class;
     $GLOBALS['TYPO3_CONF_VARS']['FE']['typolinkBuilder']['pppopover'] =
         \Buepro\Pizpalue\Sysext\Frontend\TypoLink\PopoverLinkBuilder::class;
-    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['typoLink_PostProc']['pppopover'] =
-        \Buepro\Pizpalue\Sysext\Frontend\Hook\PopoverTypolinkHook::class . '->postProcess';
 })();
 
 /**
