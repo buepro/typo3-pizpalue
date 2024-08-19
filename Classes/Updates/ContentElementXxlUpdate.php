@@ -13,9 +13,11 @@ namespace Buepro\Pizpalue\Updates;
 use TYPO3\CMS\Core\Database\Query\Expression\CompositeExpression;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Install\Attribute\UpgradeWizard;
 use TYPO3\CMS\Install\Updates\RepeatableInterface;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
+#[UpgradeWizard('ppContentElementXxlUpdate')]
 class ContentElementXxlUpdate extends AbstractUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
     /**

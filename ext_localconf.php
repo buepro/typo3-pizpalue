@@ -90,6 +90,7 @@ defined('TYPO3') || die('Access denied.');
      */
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['telephone'] =
         \Buepro\Pizpalue\Sysext\Core\LinkHandling\TelephoneLinkHandler::class;
+    /** @extensionScannerIgnoreLine */
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']['email'] =
         \Buepro\Pizpalue\Sysext\Core\LinkHandling\EmailLinkHandler::class;
 
@@ -225,16 +226,6 @@ defined('TYPO3') || die('Access denied.');
      */
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tce']['formevals']
     ['Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval'] = '';
-
-    /**
-     * Upgrade wizards
-     */
-    $upgradeSteps = ['ContentElementXxl', 'ContentElementBootstrapClasses', 'ContentElementAttributes',
-        'EmphasizeMedia', 'ContentElementPizpalueClasses', 'ContentElementHeadingClasses'];
-    foreach ($upgradeSteps as $upgradeStep) {
-        $className = 'Buepro\\Pizpalue\\Updates\\' . $upgradeStep . 'Update';
-        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/install']['update'][$className] = $className;
-    }
 
     /**
      * Register "pp" as global fluid namespace

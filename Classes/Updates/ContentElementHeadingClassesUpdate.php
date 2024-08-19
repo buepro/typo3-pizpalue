@@ -12,9 +12,11 @@ namespace Buepro\Pizpalue\Updates;
 
 use Symfony\Component\Console\Output\OutputInterface;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+use TYPO3\CMS\Install\Attribute\UpgradeWizard;
 use TYPO3\CMS\Install\Updates\ChattyInterface;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
+#[UpgradeWizard('ppContentElementHeadingClassesUpdate')]
 class ContentElementHeadingClassesUpdate extends AbstractUpdate implements UpgradeWizardInterface, ChattyInterface
 {
     /**

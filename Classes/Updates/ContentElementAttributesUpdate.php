@@ -11,9 +11,11 @@ declare(strict_types = 1);
 namespace Buepro\Pizpalue\Updates;
 
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+use TYPO3\CMS\Install\Attribute\UpgradeWizard;
 use TYPO3\CMS\Install\Updates\RepeatableInterface;
 use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 
+#[UpgradeWizard('ppContentElementAttributesUpdate')]
 class ContentElementAttributesUpdate extends AbstractUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
     /**
