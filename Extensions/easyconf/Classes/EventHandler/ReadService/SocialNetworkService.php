@@ -12,8 +12,8 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\Easyconf\EventHandler\ReadService;
 
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\SocialNetworkService as SocialNetworkPersistService;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\LinkHandling\TypoLinkCodecService;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class SocialNetworkService extends AbstractService
 {
