@@ -15,8 +15,8 @@ use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 use TYPO3\CMS\Core\View\ViewInterface;
-use TYPO3\CMS\Recordlist\Controller\AbstractLinkBrowserController;
-use TYPO3\CMS\Recordlist\LinkHandler\LinkHandlerInterface;
+use TYPO3\CMS\Backend\Controller\AbstractLinkBrowserController;
+use TYPO3\CMS\Backend\LinkHandler\LinkHandlerInterface;
 use TYPO3Fluid\Fluid\View\ViewInterface as TYPO3FluidViewInterface;
 
 /**
