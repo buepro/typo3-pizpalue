@@ -13,7 +13,7 @@ namespace Buepro\Pizpalue\Easyconf\EventHandler\ReadService;
 
 use Buepro\Pizpalue\Easyconf\EventHandler\PersistService\SocialNetworkService as SocialNetworkPersistService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Frontend\Service\TypoLinkCodecService;
+use TYPO3\CMS\Core\LinkHandling\TypoLinkCodecService;
 
 class SocialNetworkService extends AbstractService
 {
