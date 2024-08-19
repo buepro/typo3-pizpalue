@@ -140,20 +140,6 @@ defined('TYPO3') || die('Access denied.');
     ))->get('pizpalue');
 
     /**
-     * EXT:bootstrap_package
-     *
-     * Load TS for bootstrap_package 12.0 compatibility.
-     *
-     * @todo Might be removed once the bootstrap package provides it (v12.1?)
-     */
-    $bootstrapPackageVersion = \Buepro\Pizpalue\Utility\VersionUtility::getExtensionVersion('bootstrap_package');
-    if ($bootstrapPackageVersion >= 12000000 && $bootstrapPackageVersion < 12001000) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
-            '@import "EXT:pizpalue/Extensions/bootstrap_package/Compatibility120/Configuration/TypoScript/setup.typoscript"'
-        );
-    }
-
-    /**
      * EXT:container_elements
      */
     if (
