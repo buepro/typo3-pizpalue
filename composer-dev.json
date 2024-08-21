@@ -33,13 +33,13 @@
 		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
 	},
 	"require": {
-		"bk2k/bootstrap-package": "^14.0.7 || ^15.0.0@dev",
+		"bk2k/bootstrap-package": "^14.0.7 || ^14.0.0@dev || ^15.0.0@dev",
 		"buepro/typo3-pvh": "^3.0.0@dev",
 		"typo3/cms-core": "^12.4 || ^13.2"
 	},
 	"require-dev": {
 		"b13/container": "^2.3.6 || dev-master",
-		"bk2k/bootstrap-package": "14.0.7",
+		"bk2k/bootstrap-package": "^14.0.0@dev",
 		"buepro/typo3-container-elements": "^6.0.0@dev",
 		"buepro/typo3-easyconf": "dev-main",
 		"buepro/typo3-pvh": "^3.0.0",

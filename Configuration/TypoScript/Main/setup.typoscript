@@ -88,6 +88,10 @@ page {
     }
 }
 
+// Skip links
+[{$pizpalue.scaffold.showFooter} == '0']
+page.10.dataProcessing.1692697283.entries.footer >
+[END]
 
 #---------------------------------------------------------#
 # CSS/SCSS
