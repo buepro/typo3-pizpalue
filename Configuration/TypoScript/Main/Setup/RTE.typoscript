@@ -19,13 +19,18 @@ lib.parseFunc_RTE.nonTypoTagStdWrap {
     }
 }
 
-# Allow TS setup constants in links
+# Allow TS setup constants
 lib.parseFunc_RTE {
+
+    # Substitute setup constants
+    userFunc = Buepro\Pizpalue\UserFunction\HtmlParser\SetupConstantsSubstitutor->process
+    nonTypoTagUserFunc = Buepro\Pizpalue\UserFunction\HtmlParser\SetupConstantsSubstitutor->process
+
+    # Allow TS setup constants in links
     tags {
         a {
             typolink.parameter {
                 parseFunc {
-                    constants = 1
                     plainTextStdWrap.replacement {
                         10 {
                             search = #(\s)#i
@@ -35,7 +40,6 @@ lib.parseFunc_RTE {
                     }
                 }
             }
-            parseFunc.constants = 1
         }
     }
 }
