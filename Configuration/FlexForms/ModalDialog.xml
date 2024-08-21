@@ -6,52 +6,54 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>General</sheetTitle>
-                </TCEforms>
+                <sheetTitle>General</sheetTitle>
                 <type>array</type>
                 <el>
                     <button_class>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.button_class
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <size>30</size>
-                                <default>btn btn-primary</default>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.button_class
+                        </label>
+                        <config>
+                            <type>input</type>
+                            <size>30</size>
+                            <default>btn btn-primary</default>
+                        </config>
                     </button_class>
                     <dialog_class>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class
-                            </label>
-                            <config>
-                                <type>input</type>
-                                <size>50</size>
-                                <default>modal-dialog modal-dialog-centered modal-dialog-scrollable</default>
-                                <valuePicker>
-                                    <items type="array">
-                                        <numIndex index="0" type="array">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.sm</numIndex>
-                                            <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm</numIndex>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class
+                        </label>
+                        <config>
+                            <type>input</type>
+                            <size>50</size>
+                            <default>modal-dialog modal-dialog-centered modal-dialog-scrollable</default>
+                            <valuePicker>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.sm
                                         </numIndex>
-                                        <numIndex index="1" type="array">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.md</numIndex>
-                                            <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable</numIndex>
+                                        <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.md
                                         </numIndex>
-                                        <numIndex index="2" type="array">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.lg</numIndex>
-                                            <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg</numIndex>
+                                        <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.lg
                                         </numIndex>
-                                        <numIndex index="3" type="array">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.xl</numIndex>
-                                            <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl</numIndex>
+                                        <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.xl
                                         </numIndex>
-                                    </items>
-                                </valuePicker>
-                            </config>
-                        </TCEforms>
+                                        <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl</numIndex>
+                                    </numIndex>
+                                </items>
+                            </valuePicker>
+                        </config>
                     </dialog_class>
                 </el>
             </ROOT>

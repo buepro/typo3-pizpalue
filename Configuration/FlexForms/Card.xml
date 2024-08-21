@@ -6,113 +6,112 @@
     <sheets>
         <sheetGeneral>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.tab.general</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.tab.general</sheetTitle>
                 <type>array</type>
                 <el>
                     <cardClasses>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.cardClasses</label>
-                            <config>
-                                <type>input</type>
-                                <default>card</default>
-                                <eval>trim</eval>
-                                <valuePicker>
-                                    <mode>append</mode>
-                                    <items>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.cardClasses</label>
+                        <config>
+                            <type>input</type>
+                            <default>card</default>
+                            <eval>trim</eval>
+                            <valuePicker>
+                                <mode>append</mode>
+                                <items>
+                                    <numIndex index="0">
                                         <numIndex index="0">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:primaryBackgroundColor</numIndex>
-                                            <numIndex index="1"> pp-panel pp-panel-primary</numIndex>
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:primaryBackgroundColor
                                         </numIndex>
-                                        <numIndex index="1">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:secondaryBackgroundColor</numIndex>
-                                            <numIndex index="1"> pp-panel pp-panel-secondary</numIndex>
+                                        <numIndex index="1"> pp-panel pp-panel-primary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:secondaryBackgroundColor
                                         </numIndex>
-                                        <numIndex index="2">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:complementaryBackgroundColor</numIndex>
-                                            <numIndex index="1"> pp-panel pp-panel-complementary</numIndex>
+                                        <numIndex index="1"> pp-panel pp-panel-secondary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:complementaryBackgroundColor
                                         </numIndex>
-                                        <numIndex index="3">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:tertiaryBackgroundColor</numIndex>
-                                            <numIndex index="1"> pp-panel pp-panel-tertiary</numIndex>
+                                        <numIndex index="1"> pp-panel pp-panel-complementary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:tertiaryBackgroundColor
                                         </numIndex>
-                                        <numIndex index="4">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:quaternaryBackgroundColor</numIndex>
-                                            <numIndex index="1"> pp-panel pp-panel-quaternary</numIndex>
+                                        <numIndex index="1"> pp-panel pp-panel-tertiary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:quaternaryBackgroundColor
                                         </numIndex>
-                                        <numIndex index="5">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:lightBackgroundColor</numIndex>
-                                            <numIndex index="1"> pp-panel pp-panel-light</numIndex>
+                                        <numIndex index="1"> pp-panel pp-panel-quaternary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:lightBackgroundColor
                                         </numIndex>
-                                        <numIndex index="6">
-                                            <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:darkBackgroundColor</numIndex>
-                                            <numIndex index="1"> pp-panel pp-panel-dark</numIndex>
+                                        <numIndex index="1"> pp-panel pp-panel-light</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">
+                                            LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:darkBackgroundColor
                                         </numIndex>
-                                    </items>
-                                </valuePicker>
-                            </config>
-                        </TCEforms>
+                                        <numIndex index="1"> pp-panel pp-panel-dark</numIndex>
+                                    </numIndex>
+                                </items>
+                            </valuePicker>
+                        </config>
                     </cardClasses>
                     <headerClasses>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.headerClasses</label>
-                            <config>
-                                <type>input</type>
-                                <default>card-header</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.headerClasses</label>
+                        <config>
+                            <type>input</type>
+                            <default>card-header</default>
+                            <eval>trim</eval>
+                        </config>
                     </headerClasses>
                     <footerClasses>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.footerClasses</label>
-                            <config>
-                                <type>input</type>
-                                <default>card-footer</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.footerClasses</label>
+                        <config>
+                            <type>input</type>
+                            <default>card-footer</default>
+                            <eval>trim</eval>
+                        </config>
                     </footerClasses>
                 </el>
             </ROOT>
         </sheetGeneral>
         <sheetHorizontal>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.tab.horizontal</sheetTitle>
-                </TCEforms>
+                <sheetTitle>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.tab.horizontal</sheetTitle>
                 <type>array</type>
                 <el>
                     <rowClasses>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.rowClasses</label>
-                            <config>
-                                <type>input</type>
-                                <default>row g-0</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.rowClasses</label>
+                        <config>
+                            <type>input</type>
+                            <default>row g-0</default>
+                            <eval>trim</eval>
+                        </config>
                     </rowClasses>
                     <textColumnClasses>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.textColumnClasses</label>
-                            <config>
-                                <type>input</type>
-                                <default>col-md-8</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.textColumnClasses</label>
+                        <config>
+                            <type>input</type>
+                            <default>col-md-8</default>
+                            <eval>trim</eval>
+                        </config>
                     </textColumnClasses>
                     <mediaColumnClasses>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.mediaColumnClasses</label>
-                            <config>
-                                <type>input</type>
-                                <default>col-md-4</default>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.mediaColumnClasses
+                        </label>
+                        <config>
+                            <type>input</type>
+                            <default>col-md-4</default>
+                            <eval>trim</eval>
+                        </config>
                     </mediaColumnClasses>
                 </el>
             </ROOT>

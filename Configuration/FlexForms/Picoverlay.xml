@@ -6,35 +6,37 @@
     <sheets>
         <sDEF>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>General</sheetTitle>
-                </TCEforms>
+                <sheetTitle>General</sheetTitle>
                 <type>array</type>
                 <el>
                     <type>
-                        <TCEforms>
-                            <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.type
-                            </label>
-                            <config>
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <default>bar</default>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.bar</numIndex>
-                                        <numIndex index="1">bar</numIndex>
+                        <label>LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.type
+                        </label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <default>bar</default>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.bar
                                     </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.info</numIndex>
-                                        <numIndex index="1">info</numIndex>
+                                    <numIndex index="1">bar</numIndex>
+                                </numIndex>
+                                <numIndex index="1" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.info
                                     </numIndex>
-                                    <numIndex index="2" type="array">
-                                        <numIndex index="0">LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.image</numIndex>
-                                        <numIndex index="1">image</numIndex>
+                                    <numIndex index="1">info</numIndex>
+                                </numIndex>
+                                <numIndex index="2" type="array">
+                                    <numIndex index="0">
+                                        LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.image
                                     </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
+                                    <numIndex index="1">image</numIndex>
+                                </numIndex>
+                            </items>
+                        </config>
                     </type>
                 </el>
             </ROOT>
