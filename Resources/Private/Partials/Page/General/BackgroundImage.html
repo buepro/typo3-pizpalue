@@ -33,7 +33,7 @@
                 </f:if>
                 <f:variable name="variantStyle">{variantStyle} <f:if condition="{mediaQuery}">@media {mediaQuery} { </f:if>body{backgroundImageIdentifier} { background-image: url('{f:uri.image(image: backgroundImageObject, cropVariant: cropVariant, maxWidth: sizeWidth)}'); }<f:if condition="{mediaQuery}"> }</f:if></f:variable>
             </f:for>
-            <f:variable name="styles" value="{variantStyle -> bk2k:format.trim()} {styles}"/>
+            <f:variable name="styles" value="{variantStyle -> f:format.trim()} {styles}"/>
         </f:if>
     </f:for>
     <style>{styles -> f:format.raw()}</style>
