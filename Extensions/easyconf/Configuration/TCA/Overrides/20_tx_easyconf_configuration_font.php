@@ -126,7 +126,7 @@ defined('TYPO3') or die('Access denied.');
         $tca['columns'],
         $fontGoogleProperties,
         [
-            'config' => ['eval' => 'required'],
+            'config' => ['required' => true],
             'displayCond' => 'FIELD:font_control_google_font_enable:REQ:true'
         ],
         'font_google'
@@ -135,7 +135,7 @@ defined('TYPO3') or die('Access denied.');
         $tca['columns'],
         $fontGoogleHeadingsProperties,
         [
-            'config' => ['eval' => 'required'],
+            'config' => ['required' => true],
             'displayCond' => ['AND' => [
                 'FIELD:font_control_google_font_enable:REQ:true',
                 'FIELD:font_control_enable_headings_font:REQ:true'
@@ -190,7 +190,7 @@ defined('TYPO3') or die('Access denied.');
     TcaUtility::modifyColumns(
         $tca['columns'],
         '',
-        ['config' => ['eval' => 'required,num']],
+        ['config' => ['eval' => 'num', 'required' => true]],
         '',
         'font_normal_font-weight-normal, font_headings_headings-font-weight'
     );

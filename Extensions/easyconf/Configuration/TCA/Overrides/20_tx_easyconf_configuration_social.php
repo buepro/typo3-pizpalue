@@ -64,7 +64,7 @@ defined('TYPO3') or die('Access denied.');
     TcaUtility::modifyColumns(
         $tca['columns'],
         $socialChannelProperties,
-        ['config' => ['renderType' => 'inputLink']],
+        ['config' => ['type' => 'link', 'allowedTypes' => ['url']]],
         'social_channel'
     );
 

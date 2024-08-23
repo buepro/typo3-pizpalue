@@ -79,7 +79,7 @@ defined('TYPO3') or die('Access denied.');
     TcaUtility::modifyColumns(
         $tca['columns'],
         'primary',
-        ['config' => ['renderType' => 'colorpicker']],
+        ['config' => ['type' => 'color']],
         'color'
     );
     TcaUtility::modifyColumns(

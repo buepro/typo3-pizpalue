@@ -202,7 +202,7 @@ defined('TYPO3') or die('Access denied.');
     TcaUtility::modifyColumns(
         $tca['columns'],
         'content.href',
-        ['config' => ['renderType' => 'inputLink']],
+        ['config' => ['type' => 'link', 'allowedTypes' => ['page']]],
         'cookie'
     );
     TcaUtility::modifyColumns(

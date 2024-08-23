@@ -283,7 +283,7 @@ defined('TYPO3') or die('Access denied.');
     TcaUtility::modifyColumns(
         $tca['columns'],
         'items.first.pageUid, items.second.pageUid, items.third.pageUid',
-        ['config' => ['type' => 'input', 'renderType' => 'inputLink']],
+        ['config' => ['type' => 'link']],
         'menu_fast'
     );
     $tca['columns']['menu_fast_enable']['tx_easyconf']['path'] = 'pizpalue.menu.fast.enable';
