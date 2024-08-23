@@ -61,6 +61,8 @@ class NewsEnhancerService extends AbstractService
         if (
             is_array($records = $result->fetchAllAssociative()) &&
             count($pids = array_column($records, 'pid')) > 0 &&
+            (bool)($pids = array_unique($pids)) &&
+            sort($pids) &&
             $this->getLimitToPages() !== $pids
         ) {
             $newsRouteEnhancerTemplate = (new YamlFileLoader())->load(

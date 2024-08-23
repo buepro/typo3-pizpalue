@@ -11,7 +11,7 @@ easyconf:
         overwriteBaseVariants: '0'
         overwriteRobots: '0'
         overwriteSitemap: '0'
-        manageNewsRouteEnhancer: '0'
+        manageNewsRouteEnhancer: '1'
         removeLegacyNewsRouteEnhancers: '0'
         overwritePageNotFound: '0'
       easyconf:
@@ -105,9 +105,8 @@ routeEnhancers:
         routeFieldName: slug
     limitToPages:
       - 13
-      - 15
       - 14
-      - 31
+      - 15
       - 32
 routes:
   -

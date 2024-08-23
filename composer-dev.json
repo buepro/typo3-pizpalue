@@ -39,7 +39,6 @@
 	},
 	"require-dev": {
 		"b13/container": "^2.3.6 || dev-master",
-		"bk2k/bootstrap-package": "^14.0.0@dev",
 		"buepro/typo3-container-elements": "^6.0.0@dev",
 		"buepro/typo3-easyconf": "dev-main",
 		"buepro/typo3-pvh": "^3.0.0",
@@ -47,6 +46,7 @@
 		"ergebnis/composer-normalize": "^2.43.0",
 		"friendsofphp/php-cs-fixer": "^3.62.0",
 		"friendsoftypo3/phpstan-typo3": "^0.9.0",
+		"georgringer/news": "^11.4.2",
 		"overtrue/phplint": "^9.0.0",
 		"phpspec/prophecy-phpunit": "^2.2.0",
 		"phpstan/phpstan": "^1.11.10",
@@ -54,7 +54,7 @@
 		"phpstan/phpstan-phpunit": "^1.4.0",
 		"phpstan/phpstan-strict-rules": "^1.6.0",
 		"typo3/cms-base-distribution": "^12.4 || ^13.1",
-		"typo3/cms-core": "^12.4.18",
+		"typo3/cms-core": "^12.4",
 		"typo3/cms-impexp": "^12.4 || ^13.2",
 		"typo3/testing-framework": "^8.2.0"
 	},
