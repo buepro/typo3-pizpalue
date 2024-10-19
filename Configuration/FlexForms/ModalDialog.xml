@@ -28,28 +28,28 @@
                             <valuePicker>
                                 <items type="array">
                                     <numIndex index="0" type="array">
-                                        <numIndex index="0">
+                                        <label>
                                             LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.sm
-                                        </numIndex>
-                                        <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm</numIndex>
+                                        </label>
+                                        <value>modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm</value>
                                     </numIndex>
                                     <numIndex index="1" type="array">
-                                        <numIndex index="0">
+                                        <label>
                                             LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.md
-                                        </numIndex>
-                                        <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable</numIndex>
+                                        </label>
+                                        <value>modal-dialog modal-dialog-centered modal-dialog-scrollable</value>
                                     </numIndex>
                                     <numIndex index="2" type="array">
-                                        <numIndex index="0">
+                                        <label>
                                             LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.lg
-                                        </numIndex>
-                                        <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg</numIndex>
+                                        </label>
+                                        <value>modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg</value>
                                     </numIndex>
                                     <numIndex index="3" type="array">
-                                        <numIndex index="0">
+                                        <label>
                                             LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.dialog_class.xl
-                                        </numIndex>
-                                        <numIndex index="1">modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl</numIndex>
+                                        </label>
+                                        <value>modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl</value>
                                     </numIndex>
                                 </items>
                             </valuePicker>

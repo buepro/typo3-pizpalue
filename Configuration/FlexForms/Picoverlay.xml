@@ -18,22 +18,22 @@
                             <default>bar</default>
                             <items type="array">
                                 <numIndex index="0" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.bar
-                                    </numIndex>
-                                    <numIndex index="1">bar</numIndex>
+                                    </label>
+                                    <value>bar</value>
                                 </numIndex>
                                 <numIndex index="1" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.info
-                                    </numIndex>
-                                    <numIndex index="1">info</numIndex>
+                                    </label>
+                                    <value>info</value>
                                 </numIndex>
                                 <numIndex index="2" type="array">
-                                    <numIndex index="0">
+                                    <label>
                                         LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.image
-                                    </numIndex>
-                                    <numIndex index="1">image</numIndex>
+                                    </label>
+                                    <value>image</value>
                                 </numIndex>
                             </items>
                         </config>
