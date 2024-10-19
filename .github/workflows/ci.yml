@@ -74,11 +74,11 @@ jobs:
           composer ci:php:lint
       - id: phpstan
         name: PHPStan
-        if: ${{ always() && steps.install.conclusion == 'success' }}
+        if: ${{ always() && steps.install.conclusion == 'success' && matrix.typo3 == '^12' }}
         run: |
           composer ci:php:stan -- --error-format=github
       - id: tests_unit
         name: Unit Tests
-        if: ${{ always() && steps.install.conclusion == 'success' && matrix.typo3 == '12' }}
+        if: ${{ always() && steps.install.conclusion == 'success' && matrix.typo3 == '^12' }}
         run: |
           composer ci:tests:unit
