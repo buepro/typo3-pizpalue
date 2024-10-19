@@ -73,17 +73,7 @@ class BrandingService
                 $backendConfiguration['backendLogo'] = 'EXT:pizpalue/Resources/Public/Images/backend-logo.svg';
             }
 
-            // Workaround for
-            // https://review.typo3.org/c/Packages/TYPO3.CMS/+/62650
-            $reflection = new \ReflectionClass(ExtensionConfiguration::class);
-            $parameters = $reflection->getMethod('set')->getParameters();
-            if (count($parameters) === 3) {
-                /** @phpstan-ignore-next-line */
-                $extensionConfiguration->set('backend', '', $backendConfiguration);
-            } else {
-                /** @phpstan-ignore-next-line */
-                $extensionConfiguration->set('backend', $backendConfiguration);
-            }
+            $extensionConfiguration->set('backend', $backendConfiguration);
         }
     }
 }
