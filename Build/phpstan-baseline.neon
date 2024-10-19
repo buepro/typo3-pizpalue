@@ -1,63 +1,104 @@
 parameters:
 	ignoreErrors:
 		-
-			message: """
-				#^Call to method renderStatic\\(\\) of deprecated class Buepro\\\\Pizpalue\\\\ViewHelpers\\\\FrameDataViewHelper\\:
-				since 13\\.0\\.2$#
-			"""
-			count: 1
-			path: ../Classes/DataProcessing/ContentElementDataProcessor.php
-
-		-
-			message: "#^Cannot access offset 'framelessAttributes' on mixed\\.$#"
-			count: 1
-			path: ../Classes/DataProcessing/ContentElementDataProcessor.php
-
-		-
-			message: "#^Parameter \\#2 \\$ppData of method Buepro\\\\Pizpalue\\\\DataProcessing\\\\ContentElementDataProcessor\\:\\:addAttributes\\(\\) expects array, mixed given\\.$#"
-			count: 2
-			path: ../Classes/DataProcessing/ContentElementDataProcessor.php
-
-		-
-			message: """
-				#^Fetching deprecated class constant INFO of class TYPO3\\\\CMS\\\\Core\\\\Messaging\\\\FlashMessage\\:
-				Use \\\\TYPO3\\\\CMS\\\\Core\\\\Type\\\\ContextualFeedbackSeverity\\:\\:INFO instead$#
-			"""
-			count: 1
-			path: ../Classes/Hook/DataHandlerHook.php
-
-		-
-			message: """
-				#^Call to deprecated method getTypoScriptStupArrayFromDeprecatedProperty\\(\\) of class Buepro\\\\Pizpalue\\\\Structure\\\\Service\\\\TypoScriptService\\:
-				since pizpalue v15, remove with dropping support for TYPO3 v11$#
-			"""
-			count: 1
-			path: ../Classes/Structure/Service/TypoScriptService.php
-
-		-
 			message: "#^Cannot access offset non\\-empty\\-string on mixed\\.$#"
 			count: 1
 			path: ../Classes/Structure/Service/TypoScriptService.php
 
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Data\\\\FilesProcessorViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			message: "#^Cannot call method getSetupArray\\(\\) on mixed\\.$#"
+			count: 1
+			path: ../Classes/UserFunction/HtmlParser/SetupConstantsSubstitutor.php
+
+		-
+			message: "#^Cannot call method hasSetup\\(\\) on mixed\\.$#"
+			count: 1
+			path: ../Classes/UserFunction/HtmlParser/SetupConstantsSubstitutor.php
+
+		-
+			message: "#^Cannot access offset mixed on mixed\\.$#"
 			count: 1
 			path: ../Classes/ViewHelpers/Data/FilesProcessorViewHelper.php
 
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Data\\\\ImageVariantsTextToArrayViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			message: "#^Parameter \\#1 \\$data of method TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer\\:\\:start\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/FilesProcessorViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$identifier of method TYPO3Fluid\\\\Fluid\\\\Core\\\\Variables\\\\VariableProviderInterface\\:\\:add\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/FilesProcessorViewHelper.php
+
+		-
+			message: "#^Parameter \\#2 \\$table of method TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer\\:\\:start\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/FilesProcessorViewHelper.php
+
+		-
+			message: "#^Cannot cast mixed to float\\.$#"
 			count: 1
 			path: ../Classes/ViewHelpers/Data/ImageVariantsTextToArrayViewHelper.php
 
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Data\\\\ImageVariantsViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			message: "#^Parameter \\#1 \\$identifier of method TYPO3Fluid\\\\Fluid\\\\Core\\\\Variables\\\\VariableProviderInterface\\:\\:add\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/ImageVariantsTextToArrayViewHelper.php
+
+		-
+			message: "#^Parameter \\#2 \\$string of static method TYPO3\\\\CMS\\\\Core\\\\Utility\\\\GeneralUtility\\:\\:trimExplode\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/ImageVariantsTextToArrayViewHelper.php
+
+		-
+			message: "#^Parameter \\#2 \\$subject of function preg_match_all expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Data/ImageVariantsTextToArrayViewHelper.php
+
+		-
+			message: "#^Cannot access offset 'aspectRatio' on mixed\\.$#"
 			count: 1
 			path: ../Classes/ViewHelpers/Data/ImageVariantsViewHelper.php
 
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\FrameDataViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 2
+			path: ../Classes/ViewHelpers/Data/ImageVariantsViewHelper.php
+
+		-
+			message: "#^Cannot cast mixed to float\\.$#"
+			count: 2
+			path: ../Classes/ViewHelpers/Data/ImageVariantsViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$identifier of method TYPO3Fluid\\\\Fluid\\\\Core\\\\Variables\\\\VariableProviderInterface\\:\\:add\\(\\) expects string, mixed given\\.$#"
 			count: 1
-			path: ../Classes/ViewHelpers/FrameDataViewHelper.php
+			path: ../Classes/ViewHelpers/Data/ImageVariantsViewHelper.php
+
+		-
+			message: "#^Cannot cast mixed to string\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/DesarmAttributeViewHelper.php
+
+		-
+			message: "#^Parameter \\#2 \\$keepQuotes of static method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\DesarmAttributeViewHelper\\:\\:desarmAttributes\\(\\) expects bool, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/DesarmAttributeViewHelper.php
+
+		-
+			message: "#^Parameter \\#2 \\$string of static method TYPO3\\\\CMS\\\\Core\\\\Utility\\\\GeneralUtility\\:\\:trimExplode\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/FilterArrayViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$json of function json_decode expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Format/SchemaViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$optionsList of static method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Format\\\\SchemaViewHelper\\:\\:getJsonOptions\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 2
+			path: ../Classes/ViewHelpers/Format/SchemaViewHelper.php
 
 		-
 			message: """
@@ -76,19 +117,99 @@ parameters:
 			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
 
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\ModificationStackViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			message: "#^Parameter \\#1 \\$class of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$property of static method Buepro\\\\Pizpalue\\\\Utility\\\\StructureVariantsUtility\\:\\:getVectorProperty\\(\\) expects array\\|float, mixed given\\.$#"
+			count: 2
+			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$tagName of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\TagBuilder\\:\\:setTagName\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#2 \\$rowClass of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#3 \\$count of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
+
+		-
+			message: "#^Property Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Render\\\\Bootstrap\\\\ColumnViewHelper\\:\\:\\$tagName \\(string\\) does not accept mixed\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Render/Bootstrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$identifier of method TYPO3Fluid\\\\Fluid\\\\Core\\\\Variables\\\\VariableProviderInterface\\:\\:add\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: ../Classes/ViewHelpers/Structure/ModificationStackViewHelper.php
 
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\Multiplier\\\\GetForColumnViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			message: "#^Parameter \\#1 \\$class of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: ../Classes/ViewHelpers/Structure/Multiplier/GetForColumnViewHelper.php
 
 		-
-			message: "#^Return type \\(mixed\\) of method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\VariantsViewHelper\\:\\:renderStatic\\(\\) should be covariant with return type \\(string\\) of method TYPO3Fluid\\\\Fluid\\\\Core\\\\ViewHelper\\\\ViewHelperInterface\\:\\:renderStatic\\(\\)$#"
+			message: "#^Parameter \\#1 \\$identifier of method TYPO3Fluid\\\\Fluid\\\\Core\\\\Variables\\\\VariableProviderInterface\\:\\:add\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/Multiplier/GetForColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#2 \\$rowClass of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/Multiplier/GetForColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#3 \\$count of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/Multiplier/GetForColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#4 \\$baseMultiplier of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects array, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/Multiplier/GetForColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$identifier of method TYPO3Fluid\\\\Fluid\\\\Core\\\\Variables\\\\VariableProviderInterface\\:\\:add\\(\\) expects string, mixed given\\.$#"
 			count: 1
 			path: ../Classes/ViewHelpers/Structure/VariantsViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$specifier of method Buepro\\\\Pizpalue\\\\Structure\\\\VariantsModifierStack\\:\\:getVariants\\(\\) expects array\\|string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/VariantsViewHelper.php
+
+		-
+			message: "#^Method Buepro\\\\Pizpalue\\\\ViewHelpers\\\\Structure\\\\Wrap\\\\ColumnViewHelper\\:\\:render\\(\\) should return string but returns mixed\\.$#"
+			count: 2
+			path: ../Classes/ViewHelpers/Structure/Wrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$class of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/Wrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#1 \\$property of static method Buepro\\\\Pizpalue\\\\Utility\\\\StructureVariantsUtility\\:\\:getVectorProperty\\(\\) expects array\\|float, mixed given\\.$#"
+			count: 2
+			path: ../Classes/ViewHelpers/Structure/Wrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#2 \\$rowClass of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/Wrap/ColumnViewHelper.php
+
+		-
+			message: "#^Parameter \\#3 \\$count of static method Buepro\\\\Pizpalue\\\\Utility\\\\ColumnVariantsUtility\\:\\:getMultiplier\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: ../Classes/ViewHelpers/Structure/Wrap/ColumnViewHelper.php
 
 		-
 			message: """
@@ -104,22 +225,12 @@ parameters:
 			path: ../Sysext/backend/Classes/LinkHandler/PopoverLinkHandler.php
 
 		-
+			message: "#^Offset 0 does not exist on array\\{0\\?\\: string\\}\\.$#"
+			count: 1
+			path: ../Sysext/core/Classes/LinkHandling/TelephoneLinkHandler.php
+
+		-
 			message: "#^Cannot cast mixed to int\\.$#"
 			count: 1
 			path: ../Sysext/core/Classes/Resource/FileReference.php
-
-		-
-			message: "#^Call to function property_exists\\(\\) with TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer and 'lastTypoLinkResult' will always evaluate to true\\.$#"
-			count: 1
-			path: ../Sysext/frontend/Classes/Hook/PopoverTypolinkHook.php
-
-		-
-			message: "#^Parameter \\#2 \\$conf of method TYPO3\\\\CMS\\\\Frontend\\\\ContentObject\\\\ContentObjectRenderer\\:\\:parseFunc\\(\\) expects non\\-empty\\-array\\<string, mixed\\>\\|null, array\\{\\} given\\.$#"
-			count: 1
-			path: ../Sysext/frontend/Classes/Hook/PopoverTypolinkHook.php
-
-		-
-			message: "#^Variable method call on TYPO3\\\\CMS\\\\Core\\\\Page\\\\AssetCollector\\.$#"
-			count: 1
-			path: ../Tests/Functional/ViewHelpers/FrameDataViewHelperTest.php
 
