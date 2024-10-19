@@ -46,9 +46,9 @@ page.theme {
                 url = https://www.srf.ch/allgemeines/rss-feeds-von-srf
             }
 
-            twitter {
-                label = Twitter
-                # cat=6050/2910/02_twitter_url; type=string; label=Twitter: Insert the full account url
+            x {
+                label = X
+                # cat=6050/2910/02_x_url; type=string; label=X: Insert the full account url
                 url = https://twitter.com/typo3
             }
 

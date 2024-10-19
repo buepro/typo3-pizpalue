@@ -14,8 +14,8 @@
 			<trans-unit id="social_channel_facebook" resname="social_channel_facebook">
 				<source>Facebook</source>
 			</trans-unit>
-			<trans-unit id="social_channel_twitter" resname="social_channel_twitter">
-				<source>Twitter</source>
+			<trans-unit id="social_channel_x" resname="social_channel_x">
+				<source>X</source>
 			</trans-unit>
 			<trans-unit id="social_channel_instagram" resname="social_channel_instagram">
 				<source>Instagram</source>

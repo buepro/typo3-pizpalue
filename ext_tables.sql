@@ -52,7 +52,7 @@ CREATE TABLE tx_easyconf_configuration (
 	social_channel_mastodon varchar(100) DEFAULT '' NOT NULL,
 	social_channel_pinterest varchar(100) DEFAULT '' NOT NULL,
 	social_channel_rss varchar(100) DEFAULT '' NOT NULL,
-	social_channel_twitter varchar(100) DEFAULT '' NOT NULL,
+	social_channel_x varchar(100) DEFAULT '' NOT NULL,
 	social_channel_vimeo varchar(100) DEFAULT '' NOT NULL,
 	social_channel_vk varchar(100) DEFAULT '' NOT NULL,
 	social_channel_xing varchar(100) DEFAULT '' NOT NULL,

@@ -18,7 +18,7 @@ class SocialNetworkService extends AbstractService
 {
     /** @var string[]  */
     public static $socialChannels = ['facebook', 'github', 'instagram', 'linkedin', 'mastodon', 'pinterest',
-        'rss', 'twitter', 'vimeo', 'vk', 'xing', 'youtube'];
+        'rss', 'x', 'vimeo', 'vk', 'xing', 'youtube'];
 
     public function process(): void
     {
