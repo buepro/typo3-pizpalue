@@ -24,10 +24,11 @@ defined('TYPO3') or die('Access denied.');
         'tt_content',
         'CType',
         [
-            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.title',
-            'pp_list_categorized_content',
-            'content-pizpalue-list-categorized-content',
-            'pizpalue',
+            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.title',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.description',
+            'value' => 'pp_list_categorized_content',
+            'icon' => 'content-pizpalue-list-categorized-content',
+            'group' => 'pizpalue',
         ]
     );
 

@@ -17,10 +17,11 @@ defined('TYPO3') or die('Access denied.');
         'tt_content',
         'CType',
         [
-            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.title',
-            'pp_card',
-            'content-pizpalue-card',
-            'pizpalue',
+            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.title',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.description',
+            'value' => 'pp_card',
+            'icon' => 'content-pizpalue-card',
+            'group' => 'pizpalue',
         ]
     );
 

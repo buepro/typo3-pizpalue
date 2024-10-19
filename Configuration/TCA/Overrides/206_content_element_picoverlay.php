@@ -17,10 +17,11 @@ defined('TYPO3') or die('Access denied.');
         'tt_content',
         'CType',
         [
-            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.title',
-            'pp_picoverlay',
-            'content-pizpalue-picoverlay',
-            'pizpalue',
+            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.title',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.description',
+            'value' => 'pp_picoverlay',
+            'icon' => 'content-pizpalue-picoverlay',
+            'group' => 'pizpalue',
         ]
     );
 

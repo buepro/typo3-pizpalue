@@ -24,10 +24,11 @@ defined('TYPO3') or die('Access denied.');
         'tt_content',
         'CType',
         [
-            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.title',
-            'pp_schema',
-            'content-pizpalue-schema',
-            'pizpalue',
+            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.title',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.description',
+            'value' => 'pp_schema',
+            'icon' => 'content-pizpalue-schema',
+            'group' => 'pizpalue',
         ]
     );
 

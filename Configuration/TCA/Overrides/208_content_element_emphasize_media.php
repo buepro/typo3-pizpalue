@@ -17,10 +17,11 @@ defined('TYPO3') or die('Access denied.');
         'tt_content',
         'CType',
         [
-            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_emphasize_media.title',
-            'pp_emphasize_media',
-            'content-pizpalue-emphasize-media',
-            'pizpalue',
+            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_emphasize_media.title',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_emphasize_media.descriptiom',
+            'value' => 'pp_emphasize_media',
+            'icon' => 'content-pizpalue-emphasize-media',
+            'group' => 'pizpalue',
         ]
     );
 

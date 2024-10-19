@@ -29,10 +29,11 @@ defined('TYPO3') or die('Access denied.');
         'tt_content',
         'CType',
         [
-            'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.title',
-            'pp_modal_dialog',
-            'content-pizpalue-modal-dialog',
-            'pizpalue',
+            'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.title',
+            'description' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_modal_dialog.description',
+            'value' => 'pp_modal_dialog',
+            'icon' => 'content-pizpalue-modal-dialog',
+            'group' => 'pizpalue',
         ]
     );
 
