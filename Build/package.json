@@ -8,9 +8,9 @@
   "version": "9.0.1",
   "license": "MIT",
   "devDependencies": {
-    "fantasticon": "^2.0.0",
+    "fantasticon": "^3.0.0",
     "grunt": "^1.6.1",
-    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
     "grunt-contrib-uglify": "^5.2.2"
   },
   "scripts": {

@@ -1,10 +1,10 @@
 @font-face {
     font-display: swap;
     font-family: "pizpalueicon";
-    src: url("./pizpalueicon.eot?ee0a37a3e66592cd87579fb0c5d2d300#iefix") format("embedded-opentype"),
-url("./pizpalueicon.woff2?ee0a37a3e66592cd87579fb0c5d2d300") format("woff2"),
-url("./pizpalueicon.woff?ee0a37a3e66592cd87579fb0c5d2d300") format("woff"),
-url("./pizpalueicon.ttf?ee0a37a3e66592cd87579fb0c5d2d300") format("truetype");
+    src: url("./pizpalueicon.eot?4b2f9a12a0d0e3976caa2db36cf9426c#iefix") format("embedded-opentype"),
+url("./pizpalueicon.woff2?4b2f9a12a0d0e3976caa2db36cf9426c") format("woff2"),
+url("./pizpalueicon.woff?4b2f9a12a0d0e3976caa2db36cf9426c") format("woff"),
+url("./pizpalueicon.ttf?4b2f9a12a0d0e3976caa2db36cf9426c") format("truetype");
 }
 
 .ppicon::before, .bootstrappackageicon::before, .glyphicon::before {
