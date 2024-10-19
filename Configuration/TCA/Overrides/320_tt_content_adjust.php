@@ -18,16 +18,19 @@ defined('TYPO3') or die('Access denied.');
      */
     $tcaItems = $GLOBALS['TCA']['tt_content']['columns']['background_color_class']['config']['items'];
     $items = [];
+    $complementaryItem = [
+        'label' => 'complementary',
+        'value' => 'complementary'
+    ];
     $complementaryAdded = false;
-    foreach ($tcaItems as [$value, $text]) {
-        $items[] = [$value, $text];
-        if ($value === 'secondary') {
-            $items[] = ['complementary', 'complementary'];
+    foreach ($tcaItems as $tcaItem) {
+        if ($tcaItem['value'] === 'secondary') {
+            $items[] = $complementaryItem;
             $complementaryAdded = true;
         }
     }
     if (!$complementaryAdded) {
-        $items[] = ['complementary', 'complementary'];
+        $items[] = $complementaryItem;
     }
     $GLOBALS['TCA']['tt_content']['columns']['background_color_class']['config']['items'] = $items;
 
@@ -36,16 +39,16 @@ defined('TYPO3') or die('Access denied.');
      */
     $items = $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
     $items[] = [
-        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile21',
-        'pp-tile-21'
+        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile21',
+        'value' => 'pp-tile-21'
     ];
     $items[] = [
-        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile11',
-        'pp-tile-11'
+        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile11',
+        'value' => 'pp-tile-11'
     ];
     $items[] = [
-        'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile12',
-        'pp-tile-12'
+        'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile12',
+        'value' => 'pp-tile-12'
     ];
     $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = $items;
 })();
