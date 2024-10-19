@@ -19,12 +19,12 @@ class TcaConfigTest extends UnitTestCase
     {
         $result = [[
             'label' => TcaConfig::LL_PREFIX . 'normal',
-            'value' => ''
+            'value' => '',
         ]];
         foreach (TcaConfig::BOOTSTRAP_PACKAGE_COLORS as $color) {
             $result[] = [
                 'label' => TcaConfig::LL_PREFIX . $color,
-                'value' => $color
+                'value' => $color,
             ];
         }
         return $result;

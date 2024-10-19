@@ -23,7 +23,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
             'width' => 1280,
             'sizes' => [
                 '1x' => [
-                    'multiplier' => 1
+                    'multiplier' => 1,
                 ],
             ],
         ],
@@ -32,7 +32,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
             'width' => 1100,
             'sizes' => [
                 '1x' => [
-                    'multiplier' => 1
+                    'multiplier' => 1,
                 ],
             ],
         ],
@@ -41,7 +41,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
             'width' => 920,
             'sizes' => [
                 '1x' => [
-                    'multiplier' => 1
+                    'multiplier' => 1,
                 ],
             ],
         ],
@@ -50,7 +50,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
             'width' => 680,
             'sizes' => [
                 '1x' => [
-                    'multiplier' => 1
+                    'multiplier' => 1,
                 ],
             ],
         ],
@@ -59,7 +59,7 @@ class StructureVariantsUtilityTest extends UnitTestCase
             'width' => 500,
             'sizes' => [
                 '1x' => [
-                    'multiplier' => 1
+                    'multiplier' => 1,
                 ],
             ],
         ],
@@ -67,10 +67,10 @@ class StructureVariantsUtilityTest extends UnitTestCase
             'width' => 576,
             'sizes' => [
                 '1x' => [
-                    'multiplier' => 1
+                    'multiplier' => 1,
                 ],
             ],
-        ]
+        ],
     ];
 
     public static function getVectorPropertyReturnsVectorDataProvider(): array
@@ -117,12 +117,12 @@ class StructureVariantsUtilityTest extends UnitTestCase
             'positive margins' => [
                 self::$initialVariants,
                 $margins = array_fill_keys(StructureVariantsUtility::BREAKPOINTS, 5),
-                self::removeMarginsFromVariants(self::$initialVariants, $margins)
+                self::removeMarginsFromVariants(self::$initialVariants, $margins),
             ],
             'negative margins' => [
                 self::$initialVariants,
                 $margins = array_fill_keys(StructureVariantsUtility::BREAKPOINTS, -5),
-                self::removeMarginsFromVariants(self::$initialVariants, $margins)
+                self::removeMarginsFromVariants(self::$initialVariants, $margins),
             ],
             'partially defined margins' => [self::$initialVariants, $partialMargins, $partialExpected],
             'partially defined mixed margins' => [self::$initialVariants, $partialMixedMargins, $partialMixedExpected],

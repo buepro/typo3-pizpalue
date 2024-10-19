@@ -20,7 +20,7 @@ defined('TYPO3') or die('Access denied.');
             'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_emphasize_media.title',
             'pp_emphasize_media',
             'content-pizpalue-emphasize-media',
-            'pizpalue'
+            'pizpalue',
         ]
     );
 

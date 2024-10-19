@@ -126,7 +126,7 @@ defined('TYPO3') or die('Access denied.');
                 'types' => [
                     ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
                     ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
-                    ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette']
+                    ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
                 ],
             ],
         ];
@@ -137,8 +137,8 @@ defined('TYPO3') or die('Access denied.');
         ['displayCond' => [
             'AND' => [
                 'FIELD:logo_file_reference:REQ:false',
-                'FIELD:logo_file_inverted_reference:REQ:false'
-            ]
+                'FIELD:logo_file_inverted_reference:REQ:false',
+            ],
         ]],
         'logo'
     );
@@ -155,7 +155,7 @@ defined('TYPO3') or die('Access denied.');
             'types' => [
                 ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
                 ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
-                ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette']
+                ['showitem' => '--palette--;;filePalette'], ['showitem' => '--palette--;;filePalette'],
             ],
         ],
     ];

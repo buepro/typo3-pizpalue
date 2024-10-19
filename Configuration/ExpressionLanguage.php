@@ -11,5 +11,5 @@ declare(strict_types = 1);
 return [
     'typoscript' => [
         \Buepro\Pizpalue\ExpressionLanguage\CustomTypoScriptConditionProvider::class,
-    ]
+    ],
 ];

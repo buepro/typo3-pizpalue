@@ -32,7 +32,7 @@ class SocialNetworkService extends AbstractService
             $label = $this->typoScriptConstantMapper->getProperty($path . 'label');
             $this->formFields['social_channel_' . $channel] = $linkCodecService->encode([
                 'url' => $url,
-                'title' => $label
+                'title' => $label,
             ]);
         }
         return $this;

@@ -40,31 +40,31 @@ class PpModalDialogRenderingTest extends FunctionalFrontendTestCase
         return [
             'button and dialog' => [
                 '', '', '', '', '', '',
-                '/id="c1"[\s\S]*frame-inner">[\r\n\s]*<button[\s\S]*data-bs-target="#pp-modal-dialog-1"[\s\S]*class="modal [\s\S]*id="pp-modal-dialog-1/'
+                '/id="c1"[\s\S]*frame-inner">[\r\n\s]*<button[\s\S]*data-bs-target="#pp-modal-dialog-1"[\s\S]*class="modal [\s\S]*id="pp-modal-dialog-1/',
             ],
             'button text' => [
                 'Show modal dialog', '', '', '', '', '',
-                '@data-bs-target="#pp-modal-dialog-1"[\s\S\\]*Show modal dialog[\s\\n]*</button>@'
+                '@data-bs-target="#pp-modal-dialog-1"[\s\S\\]*Show modal dialog[\s\\n]*</button>@',
             ],
             'dialog header' => [
                 '', 'Dialog header goes here', '', '', '', '',
-                '@id="pp-modal-dialog-1"[\s\S]*class="modal-title"[\s\S]*>Dialog header goes here</@'
+                '@id="pp-modal-dialog-1"[\s\S]*class="modal-title"[\s\S]*>Dialog header goes here</@',
             ],
             'content' => [
                 '', '', 'tt_content_2', '', '', '',
-                '@id="c1"[\s\S]*class="modal-body">[\r\n\w\s]*<div id="c2"@'
+                '@id="c1"[\s\S]*class="modal-body">[\r\n\w\s]*<div id="c2"@',
             ],
             'url' => [
                 '', '', '', 'https://example.com', '', '',
-                '@pp-modal-dialog ppc-iframe[\s\S]*data-pp-src="https://example\.com"@'
+                '@pp-modal-dialog ppc-iframe[\s\S]*data-pp-src="https://example\.com"@',
             ],
             'button class' => [
                 '', '', '', '', 'foo', '',
-                '@<button[\s\S\\\]*class="foo"[\s\S\\\]*data-bs-target="#pp-modal-dialog-1"@'
+                '@<button[\s\S\\\]*class="foo"[\s\S\\\]*data-bs-target="#pp-modal-dialog-1"@',
             ],
             'dialog class' => [
                 '', '', '', '', '', 'foo',
-                '@id="pp-modal-dialog-1"[\s\S]*<div class="foo" role="document">[\r\n\s]*<div class="modal-content">@'
+                '@id="pp-modal-dialog-1"[\s\S]*<div class="foo" role="document">[\r\n\s]*<div class="modal-content">@',
             ],
         ];
     }

@@ -39,22 +39,22 @@ class ImageVariantsViewHelperTest extends FunctionalTestCase
         $view->setTemplatePathAndFilename(self::TEMPLATE_PATH);
         $variants = [
             'default' => [
-                'aspectRatio' => 1
+                'aspectRatio' => 1,
             ],
             'xlarge' => [
-                'aspectRatio' => 1
+                'aspectRatio' => 1,
             ],
             'large' => [
-                'aspectRatio' => 1
+                'aspectRatio' => 1,
             ],
             'medium' => [
-                'aspectRatio' => 1
+                'aspectRatio' => 1,
             ],
             'small' => [
-                'aspectRatio' => 1
+                'aspectRatio' => 1,
             ],
             'extrasmall' => [
-                'aspectRatio' => 1
+                'aspectRatio' => 1,
             ],
         ];
         $aspectRatio = [
@@ -67,27 +67,27 @@ class ImageVariantsViewHelperTest extends FunctionalTestCase
         ];
         $expected = [
             'default' => [
-                'aspectRatio' => 0.8
+                'aspectRatio' => 0.8,
             ],
             'xlarge' => [
-                'aspectRatio' => 0.7
+                'aspectRatio' => 0.7,
             ],
             'large' => [
-                'aspectRatio' => 0.6
+                'aspectRatio' => 0.6,
             ],
             'medium' => [
-                'aspectRatio' => 0.5
+                'aspectRatio' => 0.5,
             ],
             'small' => [
-                'aspectRatio' => 0.4
+                'aspectRatio' => 0.4,
             ],
             'extrasmall' => [
-                'aspectRatio' => 0.3
+                'aspectRatio' => 0.3,
             ],
         ];
         $view->assignMultiple([
             'variants' => $variants,
-            'aspectRatio' => $aspectRatio
+            'aspectRatio' => $aspectRatio,
         ]);
         $html = trim($view->render());
         self::assertSame($expected, json_decode($html, true));

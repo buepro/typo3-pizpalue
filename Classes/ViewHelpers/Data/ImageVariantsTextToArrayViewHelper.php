@@ -43,7 +43,7 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
         'lg' => 'large',
         'md' => 'medium',
         'sm' => 'small',
-        'xs' => 'extrasmall'
+        'xs' => 'extrasmall',
     ];
 
     /**

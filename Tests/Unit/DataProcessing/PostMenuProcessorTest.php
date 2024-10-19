@@ -31,7 +31,7 @@ class PostMenuProcessorTest extends UnitTestCase
     protected $rootLine = [
         ['uid' => 1],
         ['uid' => 2],
-        ['uid' => 3]
+        ['uid' => 3],
     ];
     /** @var array $initialProcessedData */
     protected $initialProcessedData = [

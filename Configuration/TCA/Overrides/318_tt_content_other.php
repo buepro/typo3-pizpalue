@@ -27,7 +27,7 @@ defined('TYPO3') or die('Access denied.');
                 'items' => [
                     [
                         'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.animationNone',
-                        'value' => 0
+                        'value' => 0,
                     ],
                 ],
             ],

@@ -20,7 +20,7 @@ defined('TYPO3') or die('Access denied.');
             'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.title',
             'pp_card',
             'content-pizpalue-card',
-            'pizpalue'
+            'pizpalue',
         ]
     );
 
@@ -45,7 +45,7 @@ defined('TYPO3') or die('Access denied.');
             'teaser' => [
                 'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_card.footerText',
                 'config' => [
-                    'enableRichtext' => true
+                    'enableRichtext' => true,
                 ],
             ],
         ]]

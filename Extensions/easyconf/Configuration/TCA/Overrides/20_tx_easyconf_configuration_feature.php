@@ -75,15 +75,15 @@ defined('TYPO3') or die('Access denied.');
         ['config' => ['type' => 'select', 'renderType' => 'selectSingle', 'items' => [
             [
                 'label' => $l10nFile . ':feature_image_loading.eager',
-                'value' => 'eager'
+                'value' => 'eager',
             ],
             [
                 'label' => $l10nFile . ':feature_image_loading.lazy',
-                'value' => 'lazy'
+                'value' => 'lazy',
             ],
             [
                 'label' => $l10nFile . ':feature_image_loading.auto',
-                'value' => 'auto'
+                'value' => 'auto',
             ],
         ]]],
         'feature'

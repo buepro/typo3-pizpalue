@@ -21,7 +21,7 @@ class TcaConfig
         if ($includeNormal) {
             $result[] = [
                 'label' => self::LL_PREFIX . 'normal',
-                'value' =>''
+                'value' =>'',
             ];
         }
         foreach (self::BOOTSTRAP_PACKAGE_COLORS as $color) {
@@ -31,7 +31,7 @@ class TcaConfig
             }
             $result[] = [
                 'label' => self::LL_PREFIX . $color,
-                'value' => $value
+                'value' => $value,
             ];
         }
         return $result;
@@ -43,7 +43,7 @@ class TcaConfig
             'type' => 'input',
             'valuePicker' => [
                 'items' => self::getColorItems(false, 'var(--bs-%s)'),
-            ]
+            ],
         ];
     }
 }

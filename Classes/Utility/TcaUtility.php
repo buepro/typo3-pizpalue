@@ -46,35 +46,35 @@ class TcaUtility
         self::$aspectRatios = [
             '2:1' => [
                 'title' => '2:1',
-                'value' => 2
+                'value' => 2,
             ],
             '16:9' => [
                 'title' => '16:9',
-                'value' => 16 / 9
+                'value' => 16 / 9,
             ],
             '4:3' => [
                 'title' => '4:3',
-                'value' => 4 / 3
+                'value' => 4 / 3,
             ],
             '1:1' => [
                 'title' => '1:1',
-                'value' => 1.0
+                'value' => 1.0,
             ],
             '3:4' => [
                 'title' => '3:4',
-                'value' => 3 / 4
+                'value' => 3 / 4,
             ],
             '9:16' => [
                 'title' => '9:16',
-                'value' => 9 / 16
+                'value' => 9 / 16,
             ],
             '1:2' => [
                 'title' => '1:2',
-                'value' => 0.5
+                'value' => 0.5,
             ],
             'NaN' => [
                 'title' => 'Free',
-                'value' => 0.0
+                'value' => 0.0,
             ],
         ];
         $predefinedAspectRatios = $GLOBALS['TCA']['tt_content']['columns']['background_image']['config']['overrideChildTca']

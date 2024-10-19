@@ -26,7 +26,7 @@ class ColumnVariantsUtility
         'medium' => 1.0,
         'large' => 1.0,
         'xlarge' => 1.0,
-        'default' => 1.0
+        'default' => 1.0,
     ];
 
     /**

@@ -20,7 +20,7 @@ defined('TYPO3') or die('Access denied.');
     $items = [];
     $complementaryItem = [
         'label' => 'complementary',
-        'value' => 'complementary'
+        'value' => 'complementary',
     ];
     $complementaryAdded = false;
     foreach ($tcaItems as $tcaItem) {
@@ -40,15 +40,15 @@ defined('TYPO3') or die('Access denied.');
     $items = $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'];
     $items[] = [
         'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile21',
-        'value' => 'pp-tile-21'
+        'value' => 'pp-tile-21',
     ];
     $items[] = [
         'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile11',
-        'value' => 'pp-tile-11'
+        'value' => 'pp-tile-11',
     ];
     $items[] = [
         'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xlf:tt_content.layout.tile12',
-        'value' => 'pp-tile-12'
+        'value' => 'pp-tile-12',
     ];
     $GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = $items;
 })();

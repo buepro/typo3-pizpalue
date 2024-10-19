@@ -40,23 +40,23 @@ class FilterArrayViewHelperTest extends FunctionalTestCase
             'filter for name' => [
                 $sourceArray,
                 'name',
-                json_encode([['name' => 'Name 1'], ['name' => 'Name 2']])
+                json_encode([['name' => 'Name 1'], ['name' => 'Name 2']]),
             ],
             'filter for name and phone' => [
                 $sourceArray,
                 'name,phone',
                 json_encode([
                     ['name' => 'Name 1', 'phone' => 'Phone 1'],
-                    ['name' => 'Name 2', 'phone' => 'Phone 2']
-                ])
+                    ['name' => 'Name 2', 'phone' => 'Phone 2'],
+                ]),
             ],
             'filter for name and phone with spaces' => [
                 $sourceArray,
                 ' name , phone ',
                 json_encode([
                     ['name' => 'Name 1', 'phone' => 'Phone 1'],
-                    ['name' => 'Name 2', 'phone' => 'Phone 2']
-                ])
+                    ['name' => 'Name 2', 'phone' => 'Phone 2'],
+                ]),
             ],
         ];
     }
@@ -71,7 +71,7 @@ class FilterArrayViewHelperTest extends FunctionalTestCase
         $view->setTemplatePathAndFilename(self::TEMPLATE_PATH);
         $view->assignMultiple([
             'source' => $source,
-            'keylist' => $keylist
+            'keylist' => $keylist,
         ]);
         $actual = trim($view->render());
         self::assertSame($expected, $actual);

@@ -30,7 +30,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
             'column class contains other classes' => [
                 'ce-col col-6 col-sm-12 mt-sm-5 ce-col-collapse',
                 ['col-6', 'col-sm-12'],
-            ]
+            ],
         ];
     }
 
@@ -46,7 +46,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
     {
         return [
             'no row column classes' => [
-                '', 1, array_fill_keys(self::BREAKPOINTS, 1)
+                '', 1, array_fill_keys(self::BREAKPOINTS, 1),
             ],
             'without breakpoint' => [
                 'row-cols-4', 1, array_fill_keys(self::BREAKPOINTS, 4),
@@ -132,7 +132,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
             'col-sm-4, no row' => [
                 'col-sm-4', '', 0, [],
                 array_merge(array_fill_keys(self::BREAKPOINTS, 1/3), [
-                    'extrasmall' => 1.0
+                    'extrasmall' => 1.0,
                 ]),
             ],
             'col-md-4, no row' => [
@@ -178,7 +178,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
                     'large' => 1/3,
                     'xlarge' => 1/3,
                     'default' => 1/4,
-                ]
+                ],
             ],
             'col-md-6 col-lg-4 col-xxl-3 with base multiplier' => [
                 'col-md-6 col-lg-4 col-xxl-3', '', 0,
@@ -197,7 +197,7 @@ class ColumnVariantsUtilityTest extends UnitTestCase
                     'large' => 0.5 * 1/3,
                     'xlarge' => 0.4 * 1/3,
                     'default' => 0.3 * 1/4,
-                ]
+                ],
             ],
             'rowClass defines column' => [
                 'col', 'row-cols-4', 1, [],

@@ -241,15 +241,15 @@ defined('TYPO3') or die('Access denied.');
                 'items' => [
                     [
                         'label' => sprintf('%s:none', $l10nFile),
-                        'value' => 'none'
+                        'value' => 'none',
                     ],
                     [
                         'label' => sprintf('%s:menu_main_type.default', $l10nFile),
-                        'value' => ''
+                        'value' => '',
                     ],
                     [
                         'label' => sprintf('%s:menu_main_type.top', $l10nFile),
-                        'value' => 'top'
+                        'value' => 'top',
                     ],
                 ],
             ],

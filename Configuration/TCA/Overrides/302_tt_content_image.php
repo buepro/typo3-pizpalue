@@ -22,7 +22,7 @@ defined('TYPO3') or die('Access denied.');
                 'type' => 'text',
                 'default' => implode(',' . chr(10), ['xxl: 1.0', 'xl: 1.0', 'lg: 1.0', 'md: 1.0', 'sm: 1.0', 'xs: 1.0']),
                 'rows' => 6,
-            ]
+            ],
         ],
         'tx_pizpalue_image_variants' => [
             'exclude' => true,
@@ -54,7 +54,7 @@ defined('TYPO3') or die('Access denied.');
                     'items' => [
                         [
                             'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.undefined',
-                            implode(',' . chr(10), ['xxl: 0', 'xl: 0', 'lg: 0', 'md: 0', 'sm: 0', 'xs: 0'])
+                            implode(',' . chr(10), ['xxl: 0', 'xl: 0', 'lg: 0', 'md: 0', 'sm: 0', 'xs: 0']),
                         ],
                         ['2:1', implode(',' . chr(10), ['xxl: 2.0', 'xl: 2.0', 'lg: 2.0', 'md: 2.0', 'sm: 2.0', 'xs: 2.0'])],
                         ['16:9', implode(',' . chr(10), ['xxl: 1.7778', 'xl: 1.7778', 'lg: 1.7778', 'md: 1.7778', 'sm: 1.7778', 'xs: 1.7778'])],
@@ -62,7 +62,7 @@ defined('TYPO3') or die('Access denied.');
                         ['1:1', implode(',' . chr(10), ['xxl: 1.0', 'xl: 1.0', 'lg: 1.0', 'md: 1.0', 'sm: 1.0', 'xs: 1.0'])],
                         ['3:4', implode(',' . chr(10), ['xxl: 0.75', 'xl: 0.75', 'lg: 0.75', 'md: 0.75', 'sm: 0.75', 'xs: 0.75'])],
                         ['9:16', implode(',' . chr(10), ['xxl: 0.5625', 'xl: 0.5625', 'lg: 0.5625', 'md: 0.5625', 'sm: 0.5625', 'xs: 0.5625'])],
-                        ['1:2', implode(',' . chr(10), ['xxl: 0.5', 'xl: 0.5', 'lg: 0.5', 'md: 0.5', 'sm: 0.5', 'xs: 0.5'])]
+                        ['1:2', implode(',' . chr(10), ['xxl: 0.5', 'xl: 0.5', 'lg: 0.5', 'md: 0.5', 'sm: 0.5', 'xs: 0.5'])],
                     ],
                 ],
                 'rows' => 6,

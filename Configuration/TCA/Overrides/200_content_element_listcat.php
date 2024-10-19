@@ -27,7 +27,7 @@ defined('TYPO3') or die('Access denied.');
             'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_list_categorized_content.title',
             'pp_list_categorized_content',
             'content-pizpalue-list-categorized-content',
-            'pizpalue'
+            'pizpalue',
         ]
     );
 
@@ -66,7 +66,7 @@ defined('TYPO3') or die('Access denied.');
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
                     rowDescription,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
-            '
+            ',
         ]
     );
 

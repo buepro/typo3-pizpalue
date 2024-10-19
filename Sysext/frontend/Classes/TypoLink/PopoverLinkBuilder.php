@@ -39,8 +39,8 @@ class PopoverLinkBuilder extends AbstractTypolinkBuilder
             $urlConf = [
                 'typolink.' => [
                     'parameter' => $linkDetails['href'],
-                    'returnLast' => 'url'
-                ]
+                    'returnLast' => 'url',
+                ],
             ];
             /** @var ContentObjectRenderer $cObjRenderer (new instance to avoid overriding data from parent) */
             $cObjRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);

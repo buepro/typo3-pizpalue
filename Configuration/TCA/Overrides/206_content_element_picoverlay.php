@@ -20,7 +20,7 @@ defined('TYPO3') or die('Access denied.');
             'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_picoverlay.title',
             'pp_picoverlay',
             'content-pizpalue-picoverlay',
-            'pizpalue'
+            'pizpalue',
         ]
     );
 
@@ -83,7 +83,7 @@ defined('TYPO3') or die('Access denied.');
                         'maxitems' => 2,
                     ],
                 ],
-            ]
+            ],
         ]
     );
 

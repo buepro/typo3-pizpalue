@@ -20,10 +20,10 @@ $EM_CONF[$_EXTKEY] = [
         'depends'   => [
             'typo3'                 => '12.4.22-13.99.99',
             'bootstrap_package'     => '15.0.0-15.99.99',
-            'pvh'                   => '3.0.0-3.99.99'
+            'pvh'                   => '3.0.0-3.99.99',
         ],
         'conflicts' => [
-            'container_elements'      => '0.0.0-5.3.0'
+            'container_elements'      => '0.0.0-5.3.0',
         ],
         'suggests'  => [
             'container_elements'    => '',

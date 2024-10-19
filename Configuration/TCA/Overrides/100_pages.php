@@ -82,40 +82,40 @@ defined('TYPO3') or die('Access denied.');
             'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
             'disallowed' => '',
             'appearance' => [
-                'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+                'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
             ],
             'overrideChildTca' => [
                 'types' => [
                     \TYPO3\CMS\Core\Resource\File::FILETYPE_UNKNOWN => [
                         'showitem' => '
                             --palette--;;filePalette
-                        '
+                        ',
                     ],
                     \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
                         'showitem' => '
                             --palette--;;filePalette
-                        '
+                        ',
                     ],
                     \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
                         'showitem' => '
                             crop,
                             --palette--;;filePalette
-                        '
+                        ',
                     ],
                     \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
                         'showitem' => '
                             --palette--;;filePalette
-                        '
+                        ',
                     ],
                     \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
                         'showitem' => '
                             --palette--;;filePalette
-                        '
+                        ',
                     ],
                     \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
                         'showitem' => '
                             --palette--;;filePalette
-                        '
+                        ',
                     ],
                 ],
             ],

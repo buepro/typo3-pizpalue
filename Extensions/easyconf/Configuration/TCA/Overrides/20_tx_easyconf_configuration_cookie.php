@@ -54,7 +54,7 @@ defined('TYPO3') or die('Access denied.');
                 $locationProperties, '--linebreak--',
                 'static, --linebreak--',
                 $appearanceProperties, '--linebreak--',
-                'type, --linebreak--, revokable, --linebreak--, cookie.expiryDays'
+                'type, --linebreak--, revokable, --linebreak--, cookie.expiryDays',
             ]),
             'cookie',
             0

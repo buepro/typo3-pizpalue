@@ -37,7 +37,7 @@ class TextReplacementProcessorTest extends FunctionalFrontendTestCase
     protected array $pageData = [
         'title' => 'Pizpalue title',
         'seo_title' => 'SEO title goes here',
-        'description' => 'SEO description goes here'
+        'description' => 'SEO description goes here',
     ];
 
     /**

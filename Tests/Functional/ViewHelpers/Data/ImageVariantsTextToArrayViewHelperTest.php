@@ -57,7 +57,7 @@ class ImageVariantsTextToArrayViewHelperTest extends FunctionalTestCase
                     'medium' => 0.8,
                     'small' => 0.8,
                     'extrasmall' => 0.8,
-                ]
+                ],
             ],
             'some definitions with default in vh and text' => [
                 'default: 0.8, xxl: 0.6, xl: 0.7',
@@ -69,7 +69,7 @@ class ImageVariantsTextToArrayViewHelperTest extends FunctionalTestCase
                     'medium' => 0.8,
                     'small' => 0.8,
                     'extrasmall' => 0.8,
-                ]
+                ],
             ],
         ];
     }
@@ -84,7 +84,7 @@ class ImageVariantsTextToArrayViewHelperTest extends FunctionalTestCase
         $view->setTemplatePathAndFilename(self::TEMPLATE_PATH);
         $view->assignMultiple([
             'text' => $text,
-            'default' => $default
+            'default' => $default,
         ]);
         $html = trim($view->render());
         self::assertSame($expected, json_decode($html, true));

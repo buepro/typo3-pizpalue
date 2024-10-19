@@ -25,7 +25,7 @@ defined('TYPO3') or die('Access denied.');
         $value = $class;
         $classItems[] = [
             'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes.' . $class,
-            $value . ' '
+            $value . ' ',
         ];
     }
 
@@ -41,7 +41,7 @@ defined('TYPO3') or die('Access denied.');
         }
         $innerClassItems[] = [
             'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_ttc.classes.' . $class,
-            $value . ' '
+            $value . ' ',
         ];
     }
 
@@ -125,16 +125,16 @@ defined('TYPO3') or die('Access denied.');
                         [
                             ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
                             [' Twikito', ''],
-                            ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
+                            ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', ''],
                         ],
                         $twikitoAttributes(),
                         [
                             ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
                             [' Josh', ''],
-                            ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', '']
+                            ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', ''],
                         ],
                         $joshAttributes()
-                    )
+                    ),
                 ],
             ],
         ],

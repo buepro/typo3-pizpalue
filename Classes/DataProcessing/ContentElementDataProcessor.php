@@ -43,13 +43,13 @@ class ContentElementDataProcessor implements DataProcessorInterface
         if (($ppClasses = $ppData['classes'] ?? []) !== []) {
             $baseAttributes['class'] = trim(implode(' ', [
                 $baseAttributes['class'] ?? '',
-                ...$ppClasses
+                ...$ppClasses,
             ]));
         }
         if (($ppStyles = $ppData['styles'] ?? []) !== []) {
             $baseAttributes['style'] = trim(implode('; ', [
                 $baseAttributes['style'] ?? '',
-                ...$ppStyles
+                ...$ppStyles,
             ]), " \t\n\r\0\x0B;") . ';';
         }
         if (($ppAttributes = $ppData['attributes'] ?? []) !== []) {

@@ -103,7 +103,7 @@ class UrlService extends AbstractService
             'Disallow: /typo3/',
             'Disallow: /typo3_src/',
             'Allow: /typo3/sysext/frontend/Resources/Public/*',
-            sprintf("\r\nSitemap: %ssitemap.xml\r\n", $this->mainUrl)
+            sprintf("\r\nSitemap: %ssitemap.xml\r\n", $this->mainUrl),
         ]);
         $this->siteConfigurationMapper
             ->bufferProperty($path . 'route', 'robots.txt')

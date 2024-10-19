@@ -171,7 +171,7 @@ class TextReplacementProcessor implements DataProcessorInterface
                 if ($value) {
                     if ($value instanceof FileReference) {
                         $config = [
-                            'width' => $processedData['data']['pi_flexform']['image_width']
+                            'width' => $processedData['data']['pi_flexform']['image_width'],
                         ];
                         $urlPrefix = GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST');
                         if (is_string($urlPrefix) && is_array($imageResource = $cObj->getImgResource($value, $config))) {

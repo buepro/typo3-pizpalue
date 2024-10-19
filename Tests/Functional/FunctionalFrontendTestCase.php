@@ -51,7 +51,7 @@ class FunctionalFrontendTestCase extends FunctionalTestCase
                 'hreflang' => '',
                 'direction' => '',
                 'flag' => 'us',
-            ]
+            ],
         ];
         $languages = array_merge($languages, $additionalLanguages);
         $configuration = [

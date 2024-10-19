@@ -95,7 +95,7 @@ class ColumnViewHelperTest extends FunctionalFrontendTestCase
             'outerClass' => 'col-lg-8',
             'innerClass' => 'col-xl-6',
             'tagName' => 'main',
-            'role' => 'main'
+            'role' => 'main',
         ]);
         $html = $view->render();
         $doc = new \DOMDocument();

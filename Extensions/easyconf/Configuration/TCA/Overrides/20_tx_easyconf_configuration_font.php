@@ -86,7 +86,7 @@ defined('TYPO3') or die('Access denied.');
             implode(', ', [
                 'google_font, google_weight',
                 '--linebreak--',
-                $fontGoogleHeadingsProperties
+                $fontGoogleHeadingsProperties,
             ]),
             'font',
             0
@@ -127,7 +127,7 @@ defined('TYPO3') or die('Access denied.');
         $fontGoogleProperties,
         [
             'config' => ['required' => true],
-            'displayCond' => 'FIELD:font_control_google_font_enable:REQ:true'
+            'displayCond' => 'FIELD:font_control_google_font_enable:REQ:true',
         ],
         'font_google'
     );
@@ -138,8 +138,8 @@ defined('TYPO3') or die('Access denied.');
             'config' => ['required' => true],
             'displayCond' => ['AND' => [
                 'FIELD:font_control_google_font_enable:REQ:true',
-                'FIELD:font_control_enable_headings_font:REQ:true'
-            ]]
+                'FIELD:font_control_enable_headings_font:REQ:true',
+            ]],
         ],
         'font'
     );
@@ -178,7 +178,7 @@ defined('TYPO3') or die('Access denied.');
         ['Libre Baskerville', 'Libre Baskerville'],
         ['---', ''],
         ['Lobster', 'Lobster'],
-        ['Indie Flower', 'Indie Flower']
+        ['Indie Flower', 'Indie Flower'],
     ];
     TcaUtility::modifyColumns(
         $tca['columns'],

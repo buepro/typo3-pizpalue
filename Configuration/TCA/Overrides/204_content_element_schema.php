@@ -27,7 +27,7 @@ defined('TYPO3') or die('Access denied.');
             'LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ce_schema.title',
             'pp_schema',
             'content-pizpalue-schema',
-            'pizpalue'
+            'pizpalue',
         ]
     );
 
@@ -63,14 +63,14 @@ defined('TYPO3') or die('Access denied.');
                         'format' => 'javascript',
                         'renderType' => 't3editor',
                         'rows' => 20,
-                    ]
+                    ],
                 ],
                 'teaser' => [
                     'config' => [
-                        'rows' => 20
-                    ]
-                ]
-            ]
+                        'rows' => 20,
+                    ],
+                ],
+            ],
         ]
     );
 
