@@ -13,7 +13,7 @@ page.theme {
             }
             github {
                 label = GitHub
-                # cat=6050/2910/04_github_url; type=string; label=GitHub: Insert the full account url
+                # cat=6050/2910/02_github_url; type=string; label=GitHub: Insert the full account url
                 url = https://github.com/buepro/typo3-pizpalue
             }
             instagram {
@@ -24,55 +24,67 @@ page.theme {
 
             linkedin {
                 label = LinkedIn
-                # cat=6050/2910/06_linkedin_url; type=string; label=LinkedIn: Insert the full account url
+                # cat=6050/2910/04_linkedin_url; type=string; label=LinkedIn: Insert the full account url
                 url = https://www.linkedin.com/
             }
 
             mastodon {
                 label = Mastodon
-                # cat=6050/2910/07_mastodon_url; type=string; label=Mastodon: Insert the full account url
+                # cat=6050/2910/05_mastodon_url; type=string; label=Mastodon: Insert the full account url
                 url = https://mastodon-swiss.org/@buepro
             }
 
             pinterest {
                 label = Pinterest
-                # cat=6050/2910/09_pinterest_url; type=string; label=Pinterest: Insert the full account url
+                # cat=6050/2910/06_pinterest_url; type=string; label=Pinterest: Insert the full account url
                 url = https://www.pinterest.com/
             }
 
             rss {
                 label = RSS
-                # cat=6050/2910/12_rss_url; type=string; label=RSS: Insert the full url
+                # cat=6050/2910/07_rss_url; type=string; label=RSS: Insert the full url
                 url = https://www.srf.ch/allgemeines/rss-feeds-von-srf
             }
 
-            x {
-                label = X
-                # cat=6050/2910/02_x_url; type=string; label=X: Insert the full account url
-                url = https://twitter.com/typo3
+            threads {
+                label = Threads
+                # cat=6050/2910/08_threads_url; type=string; label=Threads: Insert the full url
+                url =
+            }
+
+            telegram {
+                label = Telegram
+                # cat=6050/2910/09_ttelegram_url; type=string; label=Telegram: Insert the full url
+                url =
             }
 
             vimeo {
                 label = Vimeo
-                # cat=6050/2910/11_vimeo_url; type=string; label=Vimeo: Insert the full account url
+                # cat=6050/2910/10_vimeo_url; type=string; label=Vimeo: Insert the full account url
                 url = https://vimeo.com/
             }
 
             vk {
                 label = VK
-                # cat=6050/2910/10_vk_url; type=string; label=VK: Insert the full account url
+                # cat=6050/2910/11_vk_url; type=string; label=VK: Insert the full account url
                 url = https://vk.com/
+            }
+
+            x {
+                label = X
+                # cat=6050/2910/12_x_url; type=string; label=X: Insert the full account url
+                url = https://twitter.com/typo3
             }
 
             xing {
                 label = Xing
-                # cat=6050/2910/07_xing_url; type=string; label=Xing: Insert the full account url
+                # cat=6050/2910/13_xing_url; type=string; label=Xing: Insert the full account url
                 url = https://www.xing.com/
             }
 
             youtube {
                 label = YouTube
-                # cat=6050/2910/08_youtube_url; type=string; label=YouTube: Insert the full account url
+                # cat=6050/2910/14_youtube_url; type=string; label=YouTube: Insert the full account url
                 url = https://www.youtube.com/user/typo3
             }
 

@@ -1,10 +1,10 @@
 @font-face {
     font-display: swap;
     font-family: "pizpalueicon";
-    src: url("./pizpalueicon.eot?887cbbd0abaf52ba5ba621708dc38b17#iefix") format("embedded-opentype"),
-url("./pizpalueicon.woff2?887cbbd0abaf52ba5ba621708dc38b17") format("woff2"),
-url("./pizpalueicon.woff?887cbbd0abaf52ba5ba621708dc38b17") format("woff"),
-url("./pizpalueicon.ttf?887cbbd0abaf52ba5ba621708dc38b17") format("truetype");
+    src: url("./pizpalueicon.eot?b02ff0bc9a81ea4845fd32c2d5b16870#iefix") format("embedded-opentype"),
+url("./pizpalueicon.woff2?b02ff0bc9a81ea4845fd32c2d5b16870") format("woff2"),
+url("./pizpalueicon.woff?b02ff0bc9a81ea4845fd32c2d5b16870") format("woff"),
+url("./pizpalueicon.ttf?b02ff0bc9a81ea4845fd32c2d5b16870") format("truetype");
 }
 
 .ppicon::before, .bootstrappackageicon::before, .glyphicon::before {
@@ -71,3 +71,5 @@ url("./pizpalueicon.ttf?887cbbd0abaf52ba5ba621708dc38b17") format("truetype");
 .ppicon-map-regular::before, .bootstrappackageicon-map-regular::before, .glyphicon-map-regular::before { content: "\f119"; }
 .ppicon-map-solid::before, .bootstrappackageicon-map-solid::before, .glyphicon-map-solid::before { content: "\f11a"; }
 .ppicon-x::before, .bootstrappackageicon-x::before, .glyphicon-x::before { content: "\f11b"; }
+.ppicon-threads::before, .bootstrappackageicon-threads::before, .glyphicon-threads::before { content: "\f11c"; }
+.ppicon-telegram::before, .bootstrappackageicon-telegram::before, .glyphicon-telegram::before { content: "\f11d"; }
