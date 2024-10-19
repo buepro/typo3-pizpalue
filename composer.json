@@ -99,7 +99,6 @@
 			"dev-main": "17.0.x-dev"
 		},
 		"typo3/cms": {
-			"app-dir": ".build",
 			"extension-key": "pizpalue",
 			"web-dir": ".build/public"
 		}
