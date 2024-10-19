@@ -14,13 +14,9 @@ namespace Buepro\Pizpalue\ViewHelpers\Format;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Fluid\ViewHelpers\Format\AbstractEncodingViewHelper;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderStatic;
 
 class SchemaViewHelper extends AbstractEncodingViewHelper
 {
-    use CompileWithContentArgumentAndRenderStatic;
-
     /**
      * @var bool
      */
@@ -31,20 +27,22 @@ class SchemaViewHelper extends AbstractEncodingViewHelper
      */
     protected $escapeOutput = false;
 
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ): string {
-        /** @var array{decodeOptions: ?string, encodeOptions: ?string, removeEmptyElements: ?bool} $arguments */
-        $decodeOptions = self::getJsonOptions($arguments['decodeOptions']);
-        $encodeOptions = self::getJsonOptions($arguments['encodeOptions']);
-        $value = $renderChildrenClosure();
+    /**
+     * @return string
+     */
+    public function render()
+    {
+        $decodeOptions = self::getJsonOptions($this->arguments['decodeOptions']);
+        $encodeOptions = self::getJsonOptions($this->arguments['encodeOptions']);
+        $value = $this->arguments['value'] ?? $this->renderChildren();
+        if (!is_string($value)) {
+            throw new \InvalidArgumentException('Value has to be a string', 1729406633);
+        }
         if (!is_array($json = json_decode($value, true, 512, $decodeOptions))) {
             return 'Decoding the string to json didn\'t result in a array. Please check if \'decodeOptions\', '
                 . '\'addSlashes\' and \'stripSlashes\' should be further specified.';
         }
-        if ((bool)$arguments['removeEmptyElements']) {
+        if ((bool)$this->arguments['removeEmptyElements']) {
             $json = ArrayUtility::removeArrayEntryByValue($json, '');
             $json = ArrayUtility::removeNullValuesRecursive($json);
         }

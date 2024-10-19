@@ -18,9 +18,7 @@ use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use Buepro\Pizpalue\Utility\VectorUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * By wrapping columns with this view helper images can be rendered with the optimal size. This is achieved by
@@ -38,8 +36,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  */
 class ColumnViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
-
     /**
      * @var bool
      */
@@ -62,31 +58,19 @@ class ColumnViewHelper extends AbstractViewHelper
         $this->registerArgument('correction', 'float|array', 'Correction to be subtracted. In case a float is provided it will be used for all screen breakpoints.', false, 0);
     }
 
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ): string {
-        /**
-         * @var array{
-         *     gutter: array|float,
-         *     class: string,
-         *     rowClass: string,
-         *     count: int,
-         *     correction: array|float
-         * } $arguments
-         */
+    /**
+     * @return string
+     */
+    public function render()
+    {
         if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
-            $gutter = StructureVariantsUtility::getVectorProperty($arguments['gutter']);
+            $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
             $multiplier = ColumnVariantsUtility::getMultiplier(
-                /** @phpstan-ignore-next-line */
-                $arguments['class'] ?? '',
-                /** @phpstan-ignore-next-line */
-                $arguments['rowClass'] ?? 'row-cols-1',
-                /** @phpstan-ignore-next-line */
-                $arguments['count'] ?? 1
+                $this->arguments['class'] ?? '',
+                $this->arguments['rowClass'] ?? 'row-cols-1',
+                $this->arguments['count'] ?? 1
             );
-            $correction = StructureVariantsUtility::getVectorProperty($arguments['correction']);
+            $correction = StructureVariantsUtility::getVectorProperty($this->arguments['correction']);
             $modifier = (new VariantsModifier())
                 ->setMargins(VectorUtility::negate($gutter))
                 ->setMultiplier($multiplier)
@@ -95,11 +79,11 @@ class ColumnViewHelper extends AbstractViewHelper
             // Push variants modifier -> render content -> pop modifier
             $variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
             $variantsModifierStack->pushVariantsModifier($modifier);
-            $content = $renderChildrenClosure();
+            $content = $this->renderChildren();
             $variantsModifierStack->popVariantsModifier();
             return $content;
         }
 
-        return $renderChildrenClosure();
+        return $this->renderChildren();
     }
 }

@@ -13,7 +13,6 @@ namespace Buepro\Pizpalue\ViewHelpers;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * This ViewHelper filters an array for that it just holds elements belonging to a key present in the
@@ -29,8 +28,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  */
 class FilterArrayViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
-
     /**
      * @return void
      */
@@ -42,15 +39,15 @@ class FilterArrayViewHelper extends AbstractViewHelper
 
     /**
      * Filters the array.
+     *
+     * @return ?array
      */
-    public function render(): ?array
+    public function render()
     {
-        /** @var array{source: ?array, keylist: string} $arguments */
-        $arguments = $this->arguments;
-        $source = $arguments['source'];
-        $keylist = $arguments['keylist'];
-        if ($source === null) {
-            return $source;
+        $source = $this->arguments['source'] ?? null;
+        $keylist = $this->arguments['keylist'] ?? '';
+        if (!is_array($source)) {
+            return null;
         }
         $keys = GeneralUtility::trimExplode(',', $keylist, true);
         $keys = array_flip($keys);
@@ -62,9 +59,9 @@ class FilterArrayViewHelper extends AbstractViewHelper
             if (is_object($element)) {
                 $newElement = [];
                 foreach ($keys as $key => $v) {
-                    $method = 'get' . ucfirst($key);
-                    if (method_exists($element, $method)) {
-                        $newElement[$key] = $element->$method(); // @phpstan-ignore-line
+                    $callable = [$element, 'get' . ucfirst($key)];
+                    if (is_callable($callable)) {
+                        $newElement[$key] = call_user_func($callable);
                     }
                 }
                 $filtered[] = $newElement;

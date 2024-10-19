@@ -13,9 +13,7 @@ namespace Buepro\Pizpalue\ViewHelpers\Structure;
 
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * To get the current variants
@@ -24,8 +22,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  */
 class VariantsViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
-
     /**
      * @return void
      */
@@ -37,20 +33,14 @@ class VariantsViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
      * @return mixed
      */
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ) {
+    public function render()
+    {
         $result = (GeneralUtility::makeInstance(VariantsModifierStack::class))
-            ->getVariants($arguments['initialVariants'] ?? '');
-        if ($arguments['as']) {
-            $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+            ->getVariants($this->arguments['initialVariants'] ?? '');
+        if (isset($this->arguments['as']) && $this->arguments['as'] !== '') {
+            $this->renderingContext->getVariableProvider()->add($this->arguments['as'], $result);
             return '';
         }
         return $result;

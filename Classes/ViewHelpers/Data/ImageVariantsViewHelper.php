@@ -11,9 +11,7 @@ declare(strict_types=1);
 
 namespace Buepro\Pizpalue\ViewHelpers\Data;
 
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * Class ImageVariantsViewHelper
@@ -22,8 +20,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  */
 class ImageVariantsViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
-
     /**
      * @var string[]
      */
@@ -41,24 +37,18 @@ class ImageVariantsViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
      * @return mixed
      */
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ) {
-        $result = $arguments['variants'];
+    public function render()
+    {
+        $result = $this->arguments['variants'];
         foreach (self::$breakpoints as $breakpoint) {
-            if (isset($arguments['aspectRatio'][$breakpoint]) && (float) $arguments['aspectRatio'][$breakpoint] > 0) {
-                $result[$breakpoint]['aspectRatio'] = (float) $arguments['aspectRatio'][$breakpoint];
+            if (isset($this->arguments['aspectRatio'][$breakpoint]) && (float) $this->arguments['aspectRatio'][$breakpoint] > 0) {
+                $result[$breakpoint]['aspectRatio'] = (float) $this->arguments['aspectRatio'][$breakpoint];
             }
         }
-        if ($arguments['as']) {
-            $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+        if (isset($this->arguments['as']) && $this->arguments['as'] !== '') {
+            $this->renderingContext->getVariableProvider()->add($this->arguments['as'], $result);
             return '';
         }
         return $result;

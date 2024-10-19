@@ -12,9 +12,7 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\ViewHelpers\Data;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * Class ImageVariantsTextToArrayViewHelper
@@ -36,8 +34,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  */
 class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
-
     /**
      * @var string[]
      */
@@ -62,18 +58,12 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
      * @return mixed
      */
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ) {
-        $text = $arguments['text'] ?? '';
-        $default = (float)$arguments['default'];
+    public function render()
+    {
+        $text = $this->arguments['text'] ?? '';
+        $default = (float)$this->arguments['default'];
         if (preg_match_all('/default\s*:\s([\d\.]+)/', $text, $matches) === 1) {
             $default = (float)$matches[1][0];
         }
@@ -85,8 +75,8 @@ class ImageVariantsTextToArrayViewHelper extends AbstractViewHelper
                 $result[self::$breakpointMap[$parts[0]]] = (float) $parts[1];
             }
         }
-        if ($arguments['as']) {
-            $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+        if (isset($this->arguments['as']) && $this->arguments['as'] !== '') {
+            $this->renderingContext->getVariableProvider()->add($this->arguments['as'], $result);
             return '';
         }
         return $result;

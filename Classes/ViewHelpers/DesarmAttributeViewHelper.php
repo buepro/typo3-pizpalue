@@ -12,8 +12,6 @@ declare(strict_types = 1);
 namespace Buepro\Pizpalue\ViewHelpers;
 
 use TYPO3\CMS\Fluid\ViewHelpers\Format\AbstractEncodingViewHelper;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderStatic;
 
 /**
  * Class DesarmAttributeViewHelper
@@ -40,8 +38,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderS
  */
 class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
 {
-    use CompileWithContentArgumentAndRenderStatic;
-
     /**
      * We accept value and children interchangeably, thus we must disable children escaping.
      *
@@ -114,7 +110,7 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
         // Desarm attribute names and values
         $desarmedKey = [];
         $desarmedValue = [];
-        if (isset($attributes[2])) {
+        if (count($attributes[2]) > 0) {
             foreach ($attributes[1] as $attrKey) {
                 $desarmedKey[] = htmlentities($attrKey, $htmlEntityFlags, $encoding);
             }
@@ -134,19 +130,17 @@ class DesarmAttributeViewHelper extends AbstractEncodingViewHelper
         return implode(' ', $desarmedAttr);
     }
 
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ): string {
-        /** @var array{encoding: ?string, keepQuotes: bool} $arguments */
-        $value = $renderChildrenClosure();
-        $encoding = (string) $arguments['encoding'];
-        $keepQuotes = $arguments['keepQuotes'];
-
+    /**
+     * @return string
+     */
+    public function render()
+    {
+        $value = $this->arguments['value'] ?? $this->renderChildren();
         if (!is_string($value)) {
-            return '';
+            throw new \InvalidArgumentException('Value has to be a string', 1729406821);
         }
+        $encoding = (string) $this->arguments['encoding'];
+        $keepQuotes = $this->arguments['keepQuotes'];
 
         if ($encoding === '') {
             $encoding = self::resolveDefaultEncoding();

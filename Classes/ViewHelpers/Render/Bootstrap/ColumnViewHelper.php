@@ -39,6 +39,8 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
     public function initializeArguments(): void
     {
         parent::initializeArguments();
+        // TODO: Remove registerUniversalTagAttributes and registerTagAttribute
+        // On dropping TYPO3 v12.4 support.
         $this->registerUniversalTagAttributes();
         $this->registerTagAttribute('itemscope', 'string', 'Itemscope attribute for this element');
         $this->registerTagAttribute('itemtype', 'string', 'Itemtype attribute for this element');
@@ -52,29 +54,15 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
 
     public function render()
     {
-        /**
-         * @var array{
-         *     tagName: string,
-         *     gutter: array|float,
-         *     class: string,
-         *     rowClass: string,
-         *     count: int,
-         *     correction: array|float
-         * } $arguments
-         */
-        $arguments = $this->arguments;
-        $this->tagName = $arguments['tagName'];
-        $this->tag->setTagName($arguments['tagName']);
-        $gutter = StructureVariantsUtility::getVectorProperty($arguments['gutter']);
+        $this->tagName = $this->arguments['tagName'];
+        $this->tag->setTagName($this->arguments['tagName']);
+        $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
         $multiplier = ColumnVariantsUtility::getMultiplier(
-            /** @phpstan-ignore-next-line */
-            $arguments['class'] ?? '',
-            /** @phpstan-ignore-next-line */
-            $arguments['rowClass'] ?? 'row-cols-1',
-            /** @phpstan-ignore-next-line */
-            $arguments['count'] ?? 1
+            $this->arguments['class'] ?? '',
+            $this->arguments['rowClass'] ?? 'row-cols-1',
+            $this->arguments['count'] ?? 1
         );
-        $correction = StructureVariantsUtility::getVectorProperty($arguments['correction']);
+        $correction = StructureVariantsUtility::getVectorProperty($this->arguments['correction']);
         $modifier = (new VariantsModifier())
             ->setMargins(VectorUtility::negate($gutter))
             ->setMultiplier($multiplier)

@@ -13,17 +13,13 @@ namespace Buepro\Pizpalue\ViewHelpers\Data;
 
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\DataProcessing\FilesProcessor;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * Class FilesProcessorViewHelper
  */
 class FilesProcessorViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
-
     /**
      * @return void
      */
@@ -37,30 +33,24 @@ class FilesProcessorViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
      * @return mixed
      */
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ) {
+    public function render()
+    {
         $result = [];
-        if (isset($arguments['data'][$arguments['field']])) {
+        if (isset($this->arguments['data'][$this->arguments['field']])) {
             $cObjRenderer = new ContentObjectRenderer();
             $filesProcessor = new FilesProcessor();
-            $cObjRenderer->start($arguments['data'], $arguments['table']);
+            $cObjRenderer->start($this->arguments['data'], $this->arguments['table']);
             $processorConfiguration = [
                 'references.' => [
-                    'fieldName' => $arguments['field'],
+                    'fieldName' => $this->arguments['field'],
                 ],
             ];
             $result = $filesProcessor->process($cObjRenderer, [], $processorConfiguration, [])['files'] ?? [];
         }
-        if ($arguments['as']) {
-            $renderingContext->getVariableProvider()->add($arguments['as'], $result);
+        if (isset($this->arguments['as']) && $this->arguments['as'] !== '') {
+            $this->renderingContext->getVariableProvider()->add($this->arguments['as'], $result);
             return '';
         }
         return $result;

@@ -12,9 +12,7 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\ViewHelpers\Structure\Multiplier;
 
 use Buepro\Pizpalue\Utility\ColumnVariantsUtility;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
-use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * Used to generate a multiplier array used for creating image variants.
@@ -28,8 +26,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  */
 class GetForColumnViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
-
     /**
      * @return void
      */
@@ -44,23 +40,17 @@ class GetForColumnViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
      * @return mixed
      */
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ) {
-        $multiplier = $arguments['multiplier'] ?? [];
-        $class = $arguments['class'] ?? '';
-        $rowClass = $arguments['rowClass'] ?? '';
-        $count = $arguments['count'] ?? 1;
+    public function render()
+    {
+        $multiplier = $this->arguments['multiplier'] ?? [];
+        $class = $this->arguments['class'] ?? '';
+        $rowClass = $this->arguments['rowClass'] ?? '';
+        $count = $this->arguments['count'] ?? 1;
         $multiplier = ColumnVariantsUtility::getMultiplier($class, $rowClass, $count, $multiplier);
-        if ($arguments['as']) {
-            $renderingContext->getVariableProvider()->add($arguments['as'], $multiplier);
+        if (isset($this->arguments['as']) && $this->arguments['as'] !== '') {
+            $this->renderingContext->getVariableProvider()->add($this->arguments['as'], $multiplier);
             return '';
         }
         return $multiplier;
