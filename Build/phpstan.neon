@@ -33,4 +33,4 @@ parameters:
 	- %currentWorkingDirectory%/Sysext/core/Classes/
 	- %currentWorkingDirectory%/Sysext/frontend/Classes/
 	- %currentWorkingDirectory%/Sysext/backend/Classes/
-	- %currentWorkingDirectory%/Tests/
+	- %currentWorkingDirectory%/Tests/Unit/
