@@ -24,6 +24,7 @@ defined('TYPO3') or die('Access denied.');
     ];
     $complementaryAdded = false;
     foreach ($tcaItems as $tcaItem) {
+        $items[] = $tcaItem;
         if ($tcaItem['value'] === 'secondary') {
             $items[] = $complementaryItem;
             $complementaryAdded = true;
