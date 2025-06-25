@@ -30,7 +30,7 @@ class TcaConfigTest extends UnitTestCase
         return $result;
     }
 
-    public static function getColorItemsReturnsCorrectItemsDataProvider(): array
+    public static function getColorItemsForSelectFieldReturnsCorrectItemsDataProvider(): array
     {
         $defaultColorItems = self::getDefaultColorItems();
         $colorItemsWithoutNormal = $defaultColorItems;
@@ -47,10 +47,10 @@ class TcaConfigTest extends UnitTestCase
 
     /**
      * @test
-     * @dataProvider getColorItemsReturnsCorrectItemsDataProvider
+     * @dataProvider getColorItemsForSelectFieldReturnsCorrectItemsDataProvider
      */
-    public function getColorItemsReturnsCorrectItems(bool $includeNormal = false, string $format = '', array $expected = []): void
+    public function getColorItemsForSelectFieldReturnsCorrectItems(bool $includeNormal = false, string $format = '', array $expected = []): void
     {
-        self::assertSame($expected, TcaConfig::getColorItems($includeNormal, $format));
+        self::assertSame($expected, TcaConfig::getColorItemsForSelectField($includeNormal, $format));
     }
 }

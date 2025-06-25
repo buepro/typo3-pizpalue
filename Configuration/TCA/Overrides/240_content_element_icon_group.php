@@ -25,7 +25,7 @@ defined('TYPO3') || die('Access denied.');
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'default' => '',
-                'items' => \Buepro\Pizpalue\Helper\TcaConfig::getColorItems(true, 'text-%s'),
+                'items' => \Buepro\Pizpalue\Helper\TcaConfig::getColorItemsForSelectField(true, 'text-%s'),
             ],
         ],
     ]);

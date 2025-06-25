@@ -15,7 +15,7 @@ class TcaConfig
     public const BOOTSTRAP_PACKAGE_COLORS = ['primary', 'secondary', 'complementary', 'tertiary', 'quaternary', 'light', 'dark'];
     public const LL_PREFIX = 'LLL:EXT:pizpalue/Resources/Private/Language/locallang.xml:';
 
-    public static function getColorItems(bool $includeNormal = true, string $format = ''): array
+    public static function getColorItemsForSelectField(bool $includeNormal = true, string $format = ''): array
     {
         $result = [];
         if ($includeNormal) {
@@ -37,12 +37,28 @@ class TcaConfig
         return $result;
     }
 
+    public static function getColorItemsForValuePicker(bool $includeNormal = true, string $format = ''): array
+    {
+        $result = [];
+        if ($includeNormal) {
+            $result[] = [self::LL_PREFIX . 'normal', ''];
+        }
+        foreach (self::BOOTSTRAP_PACKAGE_COLORS as $color) {
+            $value = $color;
+            if ($format !== '') {
+                $value = sprintf($format, $value);
+            }
+            $result[] = [self::LL_PREFIX . $color, $value];
+        }
+        return $result;
+    }
+
     public static function getColorConfig(): array
     {
         return [
             'type' => 'input',
             'valuePicker' => [
-                'items' => self::getColorItems(false, 'var(--bs-%s)'),
+                'items' => self::getColorItemsForValuePicker(false, 'var(--bs-%s)'),
             ],
         ];
     }
