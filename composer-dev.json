@@ -34,12 +34,12 @@
 	},
 	"require": {
 		"bk2k/bootstrap-package": "^15.0.0",
-		"buepro/typo3-pvh": "^3.0.0@dev",
-		"typo3/cms-core": "^12.4.22 || ^13.4"
+		"buepro/typo3-pvh": "^3.0.0",
+		"typo3/cms-core": "^13.4"
 	},
 	"require-dev": {
 		"b13/container": "^3.0.0",
-		"buepro/typo3-container-elements": "^6.0.0@dev",
+		"buepro/typo3-container-elements": "^6.0.0",
 		"buepro/typo3-pvh": "^3.0.0",
 		"buepro/typo3-user-pizpalue": "^7.0.0@dev",
 		"ergebnis/composer-normalize": "^2.43.0",
@@ -51,9 +51,8 @@
 		"phpstan/phpstan-deprecation-rules": "^1.2.0",
 		"phpstan/phpstan-phpunit": "^1.4.0",
 		"phpstan/phpstan-strict-rules": "^1.6.0",
-		"typo3/cms-base-distribution": "^12.4 || ^13.4",
-		"typo3/cms-core": "^12.4",
-		"typo3/cms-impexp": "^12.4 || ^13.4",
+		"typo3/cms-base-distribution": "^13.4",
+		"typo3/cms-impexp": "^13.4",
 		"typo3/testing-framework": "^8.2.0"
 	},
 	"conflict": {
@@ -67,10 +66,6 @@
 		"georgringer/news": "Flexible news system"
 	},
 	"repositories": {
-		"container-elements": {
-			"type": "path",
-			"url": "/mnt/public/package/typo3-container_elements"
-		},
 		"easyconf": {
 			"type": "path",
 			"url": "/mnt/public/package/typo3-easyconf"
