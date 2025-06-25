@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="paletteAdminSiteconf.description" resname="paletteAdminSiteconf.description" approved="yes">
+        <source>ATTENTION: Activating one of the following switches results in the site configuration to be changed.</source>
+        <target state="final">ACHTUNG: Die Aktivierung eines der folgenden Schalter führt dazu, dass die Seitenkonfiguration geändert wird.</target>
+      </trans-unit>
+      <trans-unit id="admin_easyconf_show_all_properties" resname="admin_easyconf_show_all_properties" approved="yes">
+        <source>Show all properties</source>
+        <target state="final">Alle Eigenschaften anzeigen</target>
+      </trans-unit>
+      <trans-unit id="admin_siteconf_overwrite_base" resname="admin_siteconf_overwrite_base" approved="yes">
+        <source>Overwrite base</source>
+        <target state="final">Base-Eigenschaft überschreiben</target>
+      </trans-unit>
+      <trans-unit id="admin_siteconf_overwrite_base_variants" resname="admin_siteconf_overwrite_base_variants" approved="yes">
+        <source>Overwrite base variants</source>
+        <target state="final">Base-Varianten überschreiben</target>
+      </trans-unit>
+      <trans-unit id="admin_siteconf_overwrite_robots" resname="admin_siteconf_overwrite_robots" approved="yes">
+        <source>Overwrite robots</source>
+        <target state="final">Robots überschreiben</target>
+      </trans-unit>
+      <trans-unit id="admin_siteconf_overwrite_sitemap" resname="admin_siteconf_overwrite_sitemap" approved="yes">
+        <source>Overwrite sitemap</source>
+        <target state="final">Sitemap überschreiben</target>
+      </trans-unit>
+      <trans-unit id="admin_siteconf_manage_news_route_enhancer" resname="admin_siteconf_manage_news_route_enhancer" approved="yes">
+        <source>Manage news route enhancer</source>
+        <target state="final">News-Routenverbesserer verwalten</target>
+      </trans-unit>
+      <trans-unit id="admin_siteconf_remove_legacy_news_route_enhancers" resname="admin_siteconf_remove_legacy_news_route_enhancers" approved="yes">
+        <source>Remove legacy news route enhancers</source>
+        <target state="final">Alte News-Routenverbesserer entfernen</target>
+      </trans-unit>
+      <trans-unit id="admin_siteconf_overwrite_page_not_found" resname="admin_siteconf_overwrite_page_not_found" approved="yes">
+        <source>Overwrite page not found</source>
+        <target state="final">"Seite nicht gefunden" überschreiben </target>
+      </trans-unit>
+      <trans-unit id="admin_site_site_mode" resname="admin_site_site_mode" approved="yes">
+        <source>Site mode</source>
+        <target state="final">Webseiten-Modus</target>
+      </trans-unit>
+      <trans-unit id="admin_site_site_mode.production" resname="admin_site_site_mode.production" approved="yes">
+        <source>Production</source>
+        <target state="final">Produktion</target>
+      </trans-unit>
+      <trans-unit id="admin_site_site_mode.maintenance" resname="admin_site_site_mode.maintenance" approved="yes">
+        <source>Maintenance</source>
+        <target state="final">Wartung</target>
+      </trans-unit>
+      <trans-unit id="admin_site_site_mode.develop" resname="admin_site_site_mode.develop" approved="yes">
+        <source>Develop</source>
+        <target state="final">Entwicklung</target>
+      </trans-unit>
+      <trans-unit id="admin_site_site_mode.review" resname="admin_site_site_mode.review" approved="yes">
+        <source>Review</source>
+        <target state="final">Begutachten</target>
+      </trans-unit>
+      <trans-unit id="admin_site_is_maintenance_page" resname="admin_site_is_maintenance_page" approved="yes">
+        <source>Is maintenance page</source>
+        <target state="final">Ist Wartungsseite</target>
+      </trans-unit>
+      <trans-unit id="admin_format_date_format" resname="admin_format_date_format" approved="yes">
+        <source>Date format</source>
+        <target state="final">Datumsformat</target>
+      </trans-unit>
+      <trans-unit id="admin_format_date_strftime_format" resname="admin_format_date_strftime_format" approved="yes">
+        <source>Date strftime format</source>
+        <target state="final">Datumsformat strftime</target>
+      </trans-unit>
+      <trans-unit id="admin_format_time_format" resname="admin_format_time_format" approved="yes">
+        <source>Time format</source>
+        <target state="final">Zeitformat</target>
+      </trans-unit>
+      <trans-unit id="admin_format_time_strftime_format" resname="admin_format_time_strftime_format" approved="yes">
+        <source>Time strftime format</source>
+        <target state="final">Zeitformat strftime</target>
+      </trans-unit>
+      <trans-unit id="admin_format_date_time_format" resname="admin_format_date_time_format" approved="yes">
+        <source>Date-time format</source>
+        <target state="final">Datum-Zeitformat</target>
+      </trans-unit>
+      <trans-unit id="admin_format_date_time_strftime_format" resname="admin_format_date_time_strftime_format" approved="yes">
+        <source>Date-time strftime format</source>
+        <target state="final">Datum-Zeitformat strftime</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

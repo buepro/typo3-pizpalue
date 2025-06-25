@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-09-02T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="linkhandler-popover-registerTitle" approved="yes">
+        <source>Popover</source>
+        <target state="final">Popover</target>
+      </trans-unit>
+      <trans-unit id="linkhandler-popover-content" approved="yes">
+        <source>Content</source>
+        <target state="final">Inhalt</target>
+      </trans-unit>
+      <trans-unit id="linkhandler-popover-setPopover" approved="yes">
+        <source>Set popover</source>
+        <target state="final">Popover festlegen</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2018-05-31T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tx_pizpalue_pages.css" approved="yes">
+        <source>CSS declarations</source>
+        <target state="final">CSS-Deklarationen</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.palette.pp-scroll-navigation" approved="yes">
+        <source>Scroll navigation</source>
+        <target state="final">Scrollnavigation</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.undefined" approved="yes">
+        <source>Undefined</source>
+        <target state="final">Nicht definiert</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.scroll_navigation_enable" approved="yes">
+        <source>Enable</source>
+        <target state="final">Aktivieren</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.scroll_navigation_title" approved="yes">
+        <source>Title</source>
+        <target state="final">Titel</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.scroll_navigation_position" approved="yes">
+        <source>Position</source>
+        <target state="final">Position</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.attributes" approved="yes">
+        <source>Attributes</source>
+        <target state="final">Attribute</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes" approved="yes">
+        <source>Additional classes</source>
+        <target state="final">Zusätzliche Klassen</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.description" approved="yes">
+        <source>Classes to be added to the outer tag from the content element.</source>
+        <target state="final">Klassen, die dem äußeren Tag des Inhaltselementes hinzugefügt werden sollen.</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.inner_classes" approved="yes">
+        <source>Additional inner classes</source>
+        <target state="final">Zusätzliche innere Klassen</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.inner_classes.description" approved="yes">
+        <source>Classes to be added to the inner tag from the content element.</source>
+        <target state="final">Klassen, die dem inneren Tag des Inhaltselementes hinzugefügt werden sollen.</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.style" approved="yes">
+        <source>Additional styles</source>
+        <target state="final">Zusätzliche Stile</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.styleDescription" approved="yes">
+        <source>When using curly brackets style definitions are added to the header. Otherwise they will be used inline. Hint: When using curly brackets the key #self might be used to refer to the content element id (e.g. #self { border: green 1px solid; })</source>
+        <target state="final">Bei Verwendung geschweifter Klammern werden Stildefinitionen zum Header hinzugefügt. Andernfalls werden sie im Tag (inline) verwendet. Hinweis: Bei Verwendung geschweifter Klammern kann das Schlüsselwort #self verwendet werden, um auf das aktuelle Inhaltselement (e. . #self { Grenze: grün 1px solid; }) zu verweisen.</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.additionalAttributes" approved="yes">
+        <source>Additional attributes</source>
+        <target state="final">Zusätzliche Attribute</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.additionalAttributesDescription" approved="yes">
+        <source>For josh scroll animation see github.com/mamunhpath/josh.js and animate.style</source>
+        <target state="final">Für Josh-Scroll-Animation siehe github.com/mamunhpath/josh.js und animate.style</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.background" approved="yes">
+        <source>Background</source>
+        <target state="final">Hintergrund</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.bgmedia" approved="yes">
+        <source>Background image (inline)</source>
+        <target state="final">Hintergrundbild (inline)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.behaviour" approved="yes">
+        <source>Behaviour</source>
+        <target state="final">Verhalten</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation" approved="yes">
+        <source>Animation</source>
+        <target state="final">Animation</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animationNone" approved="yes">
+        <source>No animation</source>
+        <target state="final">Keine Animation</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation1" approved="yes">
+        <source>Fade up right (on scrolling)</source>
+        <target state="final">Einblenden oben rechts (beim Scrollen)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation2" approved="yes">
+        <source>Fade up left (on scrolling)</source>
+        <target state="final">Einblenden oben links (beim Scrollen)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation3" approved="yes">
+        <source>Zoom in (on scrolling)</source>
+        <target state="final">Einzoomen (beim Scrollen)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation4" approved="yes">
+        <source>Flip up (on scrolling)</source>
+        <target state="final">Nach oben drehen (beim Scrollen)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation21" approved="yes">
+        <source>Zoom in down</source>
+        <target state="final">Zoom in unten</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation22" approved="yes">
+        <source>Jack in the box</source>
+        <target state="final">Springteufel</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.animation23" approved="yes">
+        <source>Rubber band</source>
+        <target state="final">Gummiband</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_scaling" approved="yes">
+        <source>Scaling</source>
+        <target state="final">Skalierung</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_scaling.description" approved="yes">
+        <source>Default might be used (e.g. default: 0.6)</source>
+        <target state="final">Standard kann verwendet werden (z.B. default: 0.6)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_variants" approved="yes">
+        <source>Variants</source>
+        <target state="final">Varianten</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.carousel.image_variants" resname="tx_pizpalue_ttc.carousel.image_variants" approved="yes">
+        <source>Carousel items background image variants</source>
+        <target state="final">Hintergrundbild-Varianten der Karussellelemente</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_aspect_ratio" approved="yes">
+        <source>Aspect ratio</source>
+        <target state="final">Seitenverhältnis</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.background_image_variants" approved="yes">
+        <source>Background image variants</source>
+        <target state="final">Hintergrundbild-Varianten</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.background_image_variants.description" approved="yes">
+        <source>Select "Full page width" when the background image covers the entire page width and select "Default" when it covers the content element width.</source>
+        <target state="final">Wählen Sie "Vollständige Seitenbreite" aus, wenn das Hintergrundbild die gesamte Seitenbreite abdeckt, und wählen Sie "Standard", wenn es die Breite des Inhaltselementes abdeckt.</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_variants.content" approved="yes">
+        <source>Default (content width)</source>
+        <target state="final">Standard (Inhaltsbreite)</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.image_variants.page" approved="yes">
+        <source>Full page width</source>
+        <target state="final">Ganze Seitenbreite</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-row-height" approved="yes">
+        <source>Row height</source>
+        <target state="final">Zeilenhöhe</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-image-overlay" approved="yes">
+        <source>Image with overlay heading</source>
+        <target state="final">Bild mit überlagertem Titel</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-margin" approved="yes">
+        <source>Element with margin</source>
+        <target state="final">Element mit Aussenabstand</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-margin-sm" approved="yes">
+        <source>Element with small margin</source>
+        <target state="final">Element mit kleinem Aussenabstand</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-padding" approved="yes">
+        <source>Element with padding</source>
+        <target state="final">Element mit Innenabstand</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-padding-sm" approved="yes">
+        <source>Element with small padding</source>
+        <target state="final">Element mit kleinem Innenabstand</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-bg-gray-600" approved="yes">
+        <source>Gray background</source>
+        <target state="final">Grauer Hintergrund</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.opacity-75" approved="yes">
+        <source>75% Opacity</source>
+        <target state="final">75 % Deckkraft</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-panel-primary" approved="yes">
+        <source>Panel with primary color</source>
+        <target state="final">Panel mit Primärfarbe</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-panel-secondary" approved="yes">
+        <source>Panel with secondary color</source>
+        <target state="final">Panel mit sekundärer Farbe</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-panel-complementary" approved="yes">
+        <source>Panel with complementary color</source>
+        <target state="final">Panel mit komplementärer Farbe</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-panel-tertiary" approved="yes">
+        <source>Panel with tertiary color</source>
+        <target state="final">Panel mit tertiärer Farbe</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-panel-quaternary" approved="yes">
+        <source>Panel with quaternary color</source>
+        <target state="final">Panel mit quaternärer Farbe</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-panel-light" approved="yes">
+        <source>Panel with light color</source>
+        <target state="final">Panel mit heller Farbe</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-panel-dark" approved="yes">
+        <source>Panel with dark color</source>
+        <target state="final">Panel mit dunkler Farbe</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-center" approved="yes">
+        <source>Gallery item center</source>
+        <target state="final">Galerieobjekt in Mitte</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-left" approved="yes">
+        <source>Gallery item left</source>
+        <target state="final">Galerieelement links</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-right" approved="yes">
+        <source>Gallery item right</source>
+        <target state="final">Galerieelement rechts</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-join" approved="yes">
+        <source>Gallery item join</source>
+        <target state="final">Galerieelement verbinden</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-gallery-item-shadow" approved="yes">
+        <source>Gallery item shadow</source>
+        <target state="final">Galerieelement mit Schatten</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-tile-scroll-y" approved="yes">
+        <source>Tile with vertical scrollbar</source>
+        <target state="final">Kachel mit vertikalem Scrollbar</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.classes.pp-below-header" approved="yes">
+        <source>Move content below header</source>
+        <target state="final">Inhalt unter Kopfzeile schieben</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint" approved="yes">
+        <source>Layout breakpoint</source>
+        <target state="final">Layout Bildschirm-Umschaltpunkt</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.all" approved="yes">
+        <source>All</source>
+        <target state="final">Alle</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.small" approved="yes">
+        <source>Small</source>
+        <target state="final">Klein</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.medium" approved="yes">
+        <source>Medium</source>
+        <target state="final">Mittel</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.large" approved="yes">
+        <source>Large</source>
+        <target state="final">Gross</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.layoutBreakpoint.extralarge" approved="yes">
+        <source>Extra large</source>
+        <target state="final">Sehr gross</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.innerSpaceBeforeClass" approved="yes">
+        <source>Inner Space Before</source>
+        <target state="final">Innenabstand davor</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.innerSpaceAfterClass" approved="yes">
+        <source>Inner Space After</source>
+        <target state="final">Innenabstand danach</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.innerSpace.none" approved="yes">
+        <source>None</source>
+        <target state="final">Keine</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.innerSpace.small" approved="yes">
+        <source>Small</source>
+        <target state="final">Klein</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.innerSpace.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.innerSpace.large" approved="yes">
+        <source>Large</source>
+        <target state="final">Groß</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.innerSpace.extraLarge" approved="yes">
+        <source>Extra large</source>
+        <target state="final">Extra groß</target>
+      </trans-unit>
+      <trans-unit id="tx_pizpalue_ttc.dummyAsset" approved="yes">
+        <source>Dummy asset</source>
+        <target state="final">Standardbild</target>
+      </trans-unit>
+      <trans-unit id="tca.tabs.text" approved="yes">
+        <source>Text</source>
+        <target state="final">Text</target>
+      </trans-unit>
+      <trans-unit id="tca.content_element.options" approved="yes">
+        <source>Content element options</source>
+        <target state="final">Inhaltselement-Optionen</target>
+      </trans-unit>
+      <trans-unit id="tca.modal_dialog.header" approved="yes">
+        <source>Button text</source>
+        <target state="final">Knopfbeschriftung</target>
+      </trans-unit>
+      <trans-unit id="tca.modal_dialog.subheader" approved="yes">
+        <source>Dialog header</source>
+        <target state="final">Dialogkopf</target>
+      </trans-unit>
+      <trans-unit id="tca.modal_dialog.options" approved="yes">
+        <source>Button options</source>
+        <target state="final">Knopfoptionen</target>
+      </trans-unit>
+      <trans-unit id="tca.list_categorized_content.options" approved="yes">
+        <source>List options</source>
+        <target state="final">Listenoptionen</target>
+      </trans-unit>
+      <trans-unit id="tca.schema.jsonLdCode" approved="yes">
+        <source>JSON-LD Code</source>
+        <target state="final">JSON-LD Code</target>
+      </trans-unit>
+      <trans-unit id="tca.schema.options" approved="yes">
+        <source>Schema options</source>
+        <target state="final">Schema-Optionen</target>
+      </trans-unit>
+      <trans-unit id="tca.picoverlay.readmore_label.description" approved="yes">
+        <source>Only used in conjunction with the picture overlay type "bar"</source>
+        <target state="final">Wird nur in Verbindung mit dem Bildüberlagerungs-Typ "Balken" verwendet</target>
+      </trans-unit>
+      <trans-unit id="tca.picoverlay.image.description" approved="yes">
+        <source>For the picture overlay type "info" and "image" two images might be defined. The second image is shown with the overlay. The images should have the same aspect ratios.</source>
+        <target state="final">Für den Bildüberlagerungstyp "Info" und "Bild" können zwei Bilder definiert werden. Das zweite Bild wird mit dem Overlay angezeigt. Die Bilder sollten die gleichen Seitenverhältnisse haben.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

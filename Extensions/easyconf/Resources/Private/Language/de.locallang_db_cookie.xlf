@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="cookie_enable" resname="cookie_enable" approved="yes">
+        <source>Enable</source>
+        <target state="final">Aktivieren</target>
+      </trans-unit>
+      <trans-unit id="cookie_layout" resname="cookie_layout" approved="yes">
+        <source>Layout</source>
+        <target state="final">Layout</target>
+      </trans-unit>
+      <trans-unit id="cookie_layout.basic" resname="cookie_layout.basic" approved="yes">
+        <source>Basic</source>
+        <target state="final">Einfach</target>
+      </trans-unit>
+      <trans-unit id="cookie_layout.basic-close" resname="cookie_layout.basic-close" approved="yes">
+        <source>Basic close</source>
+        <target state="final">Mit Schließen</target>
+      </trans-unit>
+      <trans-unit id="cookie_layout.basic-header" resname="cookie_layout.basic-header" approved="yes">
+        <source>Basic header</source>
+        <target state="final">Mit Titel</target>
+      </trans-unit>
+      <trans-unit id="cookie_position" resname="cookie_position" approved="yes">
+        <source>Position</source>
+        <target state="final">Position</target>
+      </trans-unit>
+      <trans-unit id="cookie_position.top" resname="cookie_position.top" approved="yes">
+        <source>Top</source>
+        <target state="final">Oben</target>
+      </trans-unit>
+      <trans-unit id="cookie_position.bottom" resname="cookie_position.bottom" approved="yes">
+        <source>Bottom</source>
+        <target state="final">Unten</target>
+      </trans-unit>
+      <trans-unit id="cookie_position.top-left" resname="cookie_position.top-left" approved="yes">
+        <source>Top left</source>
+        <target state="final">Oben links</target>
+      </trans-unit>
+      <trans-unit id="cookie_position.top-right" resname="cookie_position.top-right" approved="yes">
+        <source>Top right</source>
+        <target state="final">Oben rechts</target>
+      </trans-unit>
+      <trans-unit id="cookie_position.bottom-left" resname="cookie_position.bottom-left" approved="yes">
+        <source>Bottom left</source>
+        <target state="final">Unten links</target>
+      </trans-unit>
+      <trans-unit id="cookie_position.bottom-right" resname="cookie_position.bottom-right" approved="yes">
+        <source>Bottom right</source>
+        <target state="final">Unten rechts</target>
+      </trans-unit>
+      <trans-unit id="cookie_static" resname="cookie_static" approved="yes">
+        <source>Static</source>
+        <target state="final">Statisch</target>
+      </trans-unit>
+      <trans-unit id="cookie_content_href" resname="cookie_content_href" approved="yes">
+        <source>Privacy policy link</source>
+        <target state="final">Link Datenschutzerklärung</target>
+      </trans-unit>
+      <trans-unit id="cookie_law_country_code" resname="cookie_law_country_code" approved="yes">
+        <source>Country code</source>
+        <target state="final">Ländercode</target>
+      </trans-unit>
+      <trans-unit id="cookie_law_country_code.description" resname="cookie_law_country_code.description" approved="yes">
+        <source>Rather than getting the country code from the location services, you can hard code a particular country into the tool.</source>
+        <target state="final">Anstatt den Ländercode von den Standortdiensten zu erhalten, kann ein bestimmter Landescode definiert werden.</target>
+      </trans-unit>
+      <trans-unit id="cookie_law_regional_law" resname="cookie_law_regional_law" approved="yes">
+        <source>Show for all regions</source>
+        <target state="final">Für alle Regionen anzeigen</target>
+      </trans-unit>
+      <trans-unit id="cookie_law_regional_law.description" resname="cookie_law_regional_law.description" approved="yes">
+        <source>If false, then we only enable the popup if the country has the cookie law. We ignore all other country specific rules.</source>
+        <target state="final">Deaktivieren, um den Dialog nur anzuzeigen, wenn in dem Land des Seitenbesuchers das Cookie-Gesetz in Kraft ist. Alle anderen länderspezifischen Regeln werden ignoriert.</target>
+      </trans-unit>
+      <trans-unit id="cookie_revokable" resname="cookie_revokable" approved="yes">
+        <source>Revokable</source>
+        <target state="final">Widerrufbar</target>
+      </trans-unit>
+      <trans-unit id="cookie_revokable.description" resname="cookie_revokable.description" approved="yes">
+        <source>If set true, revoke button is displayed every time. If false, revoke button is only displayed for
+					advanced compliance options (opt-in and opt-out) and in countries that require revokable consent.
+					The latter can be disabled by regionalLaw.</source>
+        <target state="final">Wenn aktiviert, so wird die Schaltfläche zum Widerrufen jedes Mal angezeigt. Wenn deaktiviert, so wird der Widerrufsschaltknopf nur für erweiterte Einhaltungsoptionen (Opt-in und Opt-out) und in Ländern angezeigt, in denen widerrufliche Zustimmung erforderlich ist. Letztere können durch regionales Recht behindert werden.</target>
+      </trans-unit>
+      <trans-unit id="cookie_location" resname="cookie_location" approved="yes">
+        <source>Location detection</source>
+        <target state="final">Standorterkennung</target>
+      </trans-unit>
+      <trans-unit id="cookie_location.description" resname="cookie_location.description" approved="yes">
+        <source>Location is simply a tool for getting the two letter country code that the user is in.</source>
+        <target state="final">Standort ist einfach ein Werkzeug, um den zweistelligen Ländercode des Benutzers zu erhalten.</target>
+      </trans-unit>
+      <trans-unit id="cookie_type" resname="cookie_type" approved="yes">
+        <source>Type</source>
+        <target state="final">Typ</target>
+      </trans-unit>
+      <trans-unit id="cookie_type.info" resname="cookie_type.info" approved="yes">
+        <source>Info</source>
+        <target state="final">Info</target>
+      </trans-unit>
+      <trans-unit id="cookie_type.opt-in" resname="cookie_type.opt-in" approved="yes">
+        <source>Opt-in</source>
+        <target state="final">Opt-in</target>
+      </trans-unit>
+      <trans-unit id="cookie_type.opt-out" resname="cookie_type.opt-out" approved="yes">
+        <source>Opt-out</source>
+        <target state="final">Opt-Out</target>
+      </trans-unit>
+      <trans-unit id="cookie_cookie_expiry_days" resname="cookie_cookie_expiry_days" approved="yes">
+        <source>Cookie expiry days</source>
+        <target state="final">Cookie-Ablauftage</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
