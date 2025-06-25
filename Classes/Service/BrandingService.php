@@ -42,7 +42,7 @@ class BrandingService
      * @throws ExtensionConfigurationExtensionNotConfiguredException
      * @throws ExtensionConfigurationPathDoesNotExistException
      */
-    public function setBackendStyling(string $extension = null): void
+    public function setBackendStyling(?string $extension = null): void
     {
         if ($extension === self::EXT_KEY && class_exists(ExtensionConfiguration::class)) {
             $extensionConfiguration = GeneralUtility::makeInstance(
