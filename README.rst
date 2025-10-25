@@ -22,8 +22,7 @@
 TYPO3 extension ``pizpalue``
 ============================
 
-    MAINTAINER WANTED
-    =================
+    **MAINTAINER WANTED**
 
     Unfortunately I am missing the time to further care this package.
     Please get in touch to take over.
