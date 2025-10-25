@@ -22,6 +22,12 @@
 TYPO3 extension ``pizpalue``
 ============================
 
+    MAINTAINER WANTED
+    =================
+
+    Unfortunately I am missing the time to further care this package.
+    Please get in touch to take over.
+
 The extension builds on Benjamin Kott's
 `Bootstrap Package <https://extensions.typo3.org/extension/bootstrap_package>`__
 and serves as a template for creating complete TYPO3 websites and
