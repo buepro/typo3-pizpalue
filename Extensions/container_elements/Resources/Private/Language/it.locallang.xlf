@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-08-15T09:11:39Z" product-name="pizpalue" target-language="it">
+    <header/>
+    <body>
+      <trans-unit id="enable" approved="yes">
+        <source>Enable</source>
+        <target state="final">Attiva</target>
+      </trans-unit>
+      <trans-unit id="adjustment" approved="yes">
+        <source>Adjustment</source>
+        <target state="final">Regolazione</target>
+      </trans-unit>
+      <trans-unit id="columns.collapseElement" approved="yes">
+        <source>Collapse elements</source>
+        <target state="final">Elementi contenitore</target>
+      </trans-unit>
+      <trans-unit id="columns.collapseContentElement" approved="yes">
+        <source>Collapse content elements</source>
+        <target state="final">Elementi di contenuto consentiti</target>
+      </trans-unit>
+      <trans-unit id="columns.collapseRow" approved="yes">
+        <source>Collapse row</source>
+        <target state="final">Comprimi riga</target>
+      </trans-unit>
+      <trans-unit id="columns.imageVariants.gutter" approved="yes">
+        <source>Gutter for image variants</source>
+        <target state="final">Rilegatura per varianti di immagine</target>
+      </trans-unit>
+      <trans-unit id="columns.imageVariants.correction" approved="yes">
+        <source>Correction for image variants</source>
+        <target state="final">Correzione per le varianti di immagine</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
