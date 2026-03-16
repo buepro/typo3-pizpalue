@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace Buepro\Pizpalue\Updates;
 
+use Buepro\Pizpalue\Updates\Criteria\ContainsWordCriteria;
 use Buepro\Pizpalue\Updates\Criteria\CriteriaInterface;
 use Buepro\Pizpalue\Updates\Criteria\EqualStringCriteria;
 use Buepro\Pizpalue\Updates\Criteria\GreaterThanCriteria;
@@ -127,6 +128,12 @@ abstract class AbstractUpdate
     protected function createLikeCriteria(QueryBuilder $queryBuilder, string $field, string $value): LikeCriteria
     {
         return (new LikeCriteria($queryBuilder, $field))
+            ->setValue($value);
+    }
+
+    protected function createContainsWordCriteria(QueryBuilder $queryBuilder, string $field, string $value): ContainsWordCriteria
+    {
+        return (new ContainsWordCriteria($queryBuilder, $field))
             ->setValue($value);
     }
 

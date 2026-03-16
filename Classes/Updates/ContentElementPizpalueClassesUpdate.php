@@ -20,7 +20,7 @@ use TYPO3\CMS\Install\Updates\UpgradeWizardInterface;
 class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements UpgradeWizardInterface, RepeatableInterface
 {
     /**
-     * @var string[]
+     * @var array<string, string>
      */
     private $movedToFrameBackgroundClass = [
         'pp-bg-primary' => 'primary',
@@ -37,7 +37,7 @@ class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements Upgr
     ];
 
     /**
-     * @var string[]
+     * @var array<string, string>
      */
     private $movedToInnerClasses = [
         'pp-card-primary' => 'pp-panel pp-panel-primary',
@@ -72,7 +72,7 @@ class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements Upgr
     {
         $constraints = [];
         foreach ($this->movedToFrameBackgroundClass as $oldClass => $newClass) {
-            $constraints[] = (string) $this->createLikeCriteria($queryBuilder, $this->field, "%$oldClass%");
+            $constraints[] = (string) $this->createContainsWordCriteria($queryBuilder, $this->field, $oldClass);
         }
         return $queryBuilder->expr()->or(...$constraints);
     }
@@ -81,7 +81,7 @@ class ContentElementPizpalueClassesUpdate extends AbstractUpdate implements Upgr
     {
         $constraints = [];
         foreach ($this->movedToInnerClasses as $oldClass => $newClass) {
-            $constraints[] = (string) $this->createLikeCriteria($queryBuilder, $this->field, "%$oldClass%");
+            $constraints[] = (string) $this->createContainsWordCriteria($queryBuilder, $this->field, $oldClass);
         }
         return $queryBuilder->expr()->or(...$constraints);
     }
