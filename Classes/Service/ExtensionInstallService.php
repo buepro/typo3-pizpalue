@@ -16,13 +16,12 @@ use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
 use TYPO3\CMS\Extensionmanager\Exception\ExtensionManagerException;
 
 class ExtensionInstallService
 {
     /**
-     * @param AfterExtensionFilesHaveBeenImportedEvent | AfterPackageActivationEvent $event
+     * @param AfterPackageActivationEvent $event
      * @return void
      * @throws ExtensionConfigurationExtensionNotConfiguredException
      * @throws ExtensionConfigurationPathDoesNotExistException

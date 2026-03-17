@@ -36,7 +36,7 @@ class PosterProcessor implements DataProcessorInterface
                 'tx_pizpalue_poster',
                 $fileReference->getUid()
             );
-            if ($posterReferences[0] ?? false) {
+            if ((bool) ($posterReferences[0] ?? false)) {
                 $fileReference->setPoster($posterReferences[0]);
                 $processedData['files'][$key] = $fileReference;
             }

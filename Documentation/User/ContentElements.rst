@@ -71,7 +71,7 @@ functions are available:
 Content
 -------
 
-In the content element an image and a text can be defined. They might be used
+In the content element an image and a text can be defined under the tab "Extended". They might be used
 in the JSON-LD data with the following
 placeholders:
 

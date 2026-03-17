@@ -46,9 +46,12 @@ class PostMenuProcessorTest extends UnitTestCase
     public function setUp(): void
     {
         parent::setUp();
+        // @phpstan-ignore-next-line
         $tsfeProphecy = $this->prophesize(TypoScriptFrontendController::class);
         /** @var TypoScriptFrontendController $GLOBALS['TSFE'] */
+        // @phpstan-ignore-next-line
         $GLOBALS['TSFE'] = $tsfeProphecy->reveal();
+        // @phpstan-ignore-next-line
         $GLOBALS['TSFE']->rootLine = $this->rootLine;
         $this->setRequest($this->currentPageUid);
     }

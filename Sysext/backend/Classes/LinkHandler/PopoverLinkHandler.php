@@ -15,7 +15,6 @@ use TYPO3\CMS\Backend\LinkHandler\LinkHandlerInterface;
 use TYPO3\CMS\Core\Imaging\IconFactory;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Utility\VersionNumberUtility;
 use TYPO3\CMS\Core\View\ViewInterface;
 use TYPO3Fluid\Fluid\View\ViewInterface as TYPO3FluidViewInterface;
 
@@ -150,9 +149,6 @@ class PopoverLinkHandler implements LinkHandlerInterface
 
     public function render(ServerRequestInterface $request)
     {
-        if (VersionNumberUtility::convertVersionNumberToInteger(VersionNumberUtility::getNumericTypo3Version()) < 12000000) {
-            return $this->renderForTypo3V11($request);
-        }
         if ($this->view === null) {
             return '';
         }
@@ -161,33 +157,4 @@ class PopoverLinkHandler implements LinkHandlerInterface
         return $this->view->render('LinkBrowser/PpPopover');
     }
 
-    private function renderForTypo3V11(ServerRequestInterface $request): string
-    {
-        if (
-            $this->view === null ||
-            !method_exists($this->view, 'setTemplateRootPaths') ||
-            !method_exists($this->view, 'getTemplateRootPaths') ||
-            !method_exists($this->view, 'setTemplate')
-        ) {
-            return '';
-        }
-
-        // Add JS
-        $this->pageRenderer->addRequireJsConfiguration(['paths' => [
-            'Buepro/Pizpalue/Sysext/Backend' =>
-                '/typo3conf/ext/pizpalue/Sysext/backend/Resources/Public/JavaScript']]);
-        $this->pageRenderer->loadRequireJsModule('Buepro/Pizpalue/Sysext/Backend/PopoverLinkHandler');
-
-        // Set template
-        $this->view->setTemplateRootPaths(array_merge(
-            $this->view->getTemplateRootPaths(),
-            [GeneralUtility::getFileAbsFileName('EXT:pizpalue/Sysext/backend/Resources/Private/Templates/LinkBrowser')]
-        ));
-        $this->view->setTemplate('PpPopover');
-
-        // Assign variables
-        $this->assignVariablesToView($this->view);
-
-        return '';
-    }
 }

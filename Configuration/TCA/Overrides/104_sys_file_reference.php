@@ -25,7 +25,7 @@ defined('TYPO3') or die('Access denied.');
                 // to use the imageoverlayPalette instead of the basicoverlayPalette
                 'overrideChildTca' => [
                     'types' => [
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                        \TYPO3\CMS\Core\Resource\FileType::IMAGE->value => [
                             'showitem' => '
                                 --palette--;;filePalette,--linebreak--,crop,--linebreak--,tx_pizpalue_poster_width',
                         ],

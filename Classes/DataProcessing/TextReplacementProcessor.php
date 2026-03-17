@@ -174,8 +174,8 @@ class TextReplacementProcessor implements DataProcessorInterface
                             'width' => $processedData['data']['pi_flexform']['image_width'],
                         ];
                         $urlPrefix = GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST');
-                        if (is_string($urlPrefix) && is_array($imageResource = $cObj->getImgResource($value, $config))) {
-                            $relativePath = trim(\TYPO3\CMS\Core\Utility\PathUtility::getRelativePathTo($imageResource[3]) ?? '', '\\/');
+                        if (is_string($urlPrefix) && !is_null($imageResource = $cObj->getImgResource($value, $config))) {
+                            $relativePath = trim(\TYPO3\CMS\Core\Utility\PathUtility::getRelativePathTo($imageResource->getFullPath()) ?? '', '\\/');
                             $replacements[] = $urlPrefix . '/' . $relativePath;
                         }
                     } elseif (

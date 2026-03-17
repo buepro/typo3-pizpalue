@@ -149,7 +149,7 @@ abstract class TypoScriptBasedTestCase extends UnitTestCase
     public function setUp(): void
     {
         parent::setUp();
-        $frontendTypoScript = new FrontendTypoScript(new RootNode(), []);
+        $frontendTypoScript = new FrontendTypoScript(new RootNode(), [], [], []);
         $frontendTypoScript->setSetupArray($this->typoScriptSetupArray);
         $serverRequest = (new ServerRequest())->withAttribute('frontend.typoscript', $frontendTypoScript);
         $GLOBALS['TYPO3_REQUEST'] = $serverRequest;

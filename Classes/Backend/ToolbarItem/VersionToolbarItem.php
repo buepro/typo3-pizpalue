@@ -37,7 +37,7 @@ class VersionToolbarItem
         if (file_exists($extensionDirectory . '.git')) {
             $returnCode = 0;
             CommandUtility::exec('git --version', $_, $returnCode);
-            if ((int)$returnCode === 0 && ($currentDir = getcwd()) !== false) {
+            if ($returnCode === 0 && ($currentDir = getcwd()) !== false) {
                 chdir($extensionDirectory);
                 $tag = trim((string)CommandUtility::exec('git tag -l --points-at HEAD'));
                 if ((bool)$tag) {

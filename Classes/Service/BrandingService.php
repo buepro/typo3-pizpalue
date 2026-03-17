@@ -15,7 +15,6 @@ use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExis
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Package\Event\AfterPackageActivationEvent;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extensionmanager\Event\AfterExtensionFilesHaveBeenImportedEvent;
 
 /**
  * BrandingService
@@ -28,7 +27,7 @@ class BrandingService
     protected const EXT_KEY = 'pizpalue';
 
     /**
-     * @param AfterExtensionFilesHaveBeenImportedEvent | AfterPackageActivationEvent $event
+     * @param AfterPackageActivationEvent $event
      * @return void
      * @throws ExtensionConfigurationExtensionNotConfiguredException
      * @throws ExtensionConfigurationPathDoesNotExistException

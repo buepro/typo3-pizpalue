@@ -39,12 +39,6 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
     public function initializeArguments(): void
     {
         parent::initializeArguments();
-        // TODO: Remove registerUniversalTagAttributes and registerTagAttribute
-        // On dropping TYPO3 v12.4 support.
-        $this->registerUniversalTagAttributes();
-        $this->registerTagAttribute('itemscope', 'string', 'Itemscope attribute for this element');
-        $this->registerTagAttribute('itemtype', 'string', 'Itemtype attribute for this element');
-        $this->registerTagAttribute('role', 'string', 'Role attribute for this element');
         $this->registerArgument('rowClass', 'string', 'Classes assigned to the wrapping row', false, '');
         $this->registerArgument('count', 'int', 'Column count in row. Might be overwritten by rowClass definitions.', false, 1);
         $this->registerArgument('gutter', 'float|array', 'Space between columns. In case a number is provided it will be used for all screen breakpoints.', false, 0);
