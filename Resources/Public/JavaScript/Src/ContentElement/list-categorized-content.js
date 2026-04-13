@@ -86,9 +86,12 @@
                     initializeListItems;
                 });
             });
-            list.querySelector('img').addEventListener('load', (e) => {
-                initializeListItems();
-            });
+            const imageList = list.querySelector('img');
+            if (imageList) {
+                imageList.addEventListener('load', (e) => {
+                    initializeListItems();
+                });
+            }
             list.querySelectorAll('.ppc-more').forEach(element => {
                 element.addEventListener('click', (e) => {
                     let button = e.currentTarget,
