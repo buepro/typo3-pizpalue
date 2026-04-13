@@ -61,7 +61,7 @@
                             <items type="array">
                                 <numIndex index="0" type="array">
                                     <label>
-                                     valueer_elements/Resources/Private/Language/locallang.xlf:none
+                                        LLL:EXT:container_elements/Resources/Private/Language/locallang.xlf:none
                                     </label>
                                     <value></value>
                                 </numIndex>
