@@ -1,8 +1,8 @@
 .. include:: /Includes.rst.txt
 
-.. image:: https://img.shields.io/badge/TYPO3-13-orange.svg
-   :alt: TYPO3 13
-   :target: https://get.typo3.org/version/13
+.. image:: https://img.shields.io/badge/TYPO3-14-orange.svg
+   :alt: TYPO3 14
+   :target: https://get.typo3.org/version/14
 
 .. image:: https://poser.pugx.org/buepro/typo3-pizpalue/v/stable.svg
    :alt: Latest Stable Version
@@ -15,10 +15,6 @@
 .. image:: https://poser.pugx.org/buepro/typo3-pizpalue/d/monthly
    :alt: Monthly Downloads
    :target: https://packagist.org/packages/buepro/typo3-pizpalue
-
-.. image:: https://github.com/buepro/typo3-pizpalue/workflows/CI/badge.svg
-   :alt: Continuous Integration Status
-   :target: https://github.com/buepro/typo3-pizpalue/actions?query=workflow%3ACI
 
 .. _introduction:
 

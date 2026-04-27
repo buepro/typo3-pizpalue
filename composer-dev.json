@@ -28,31 +28,30 @@
 	],
 	"homepage": "https://extensions.typo3.org/extension/pizpalue",
 	"support": {
-		"issues": "https://github.com/buepro/typo3-pizpalue/issues",
-		"source": "https://github.com/buepro/typo3-pizpalue",
+		"issues": "https://codeberg.org/buepro/typo3-pizpalue/issues",
+		"source": "https://codeberg.org/buepro/typo3-pizpalue",
 		"docs": "https://docs.typo3.org/p/buepro/typo3-pizpalue/main/en-us/"
 	},
 	"require": {
-		"bk2k/bootstrap-package": "^15.0.0",
-		"buepro/typo3-pvh": "^3.0.0",
-		"typo3/cms-core": "^13.4"
+		"bk2k/bootstrap-package": "^16.0.99@dev",
+		"buepro/typo3-pvh": "^4.0.0@dev",
+		"typo3/cms-core": "^14.3.0"
 	},
 	"require-dev": {
-		"b13/container": "^3.0.0",
 		"buepro/typo3-ci": "^0.1.0@dev",
-		"buepro/typo3-container-elements": "^7.0.0",
-		"buepro/typo3-pvh": "^3.0.0",
-		"buepro/typo3-user-pizpalue": "^7.0.0@dev",
+		"buepro/typo3-container-elements": "^8.0.0@dev",
 		"ergebnis/composer-normalize": "^2.43.0",
-		"friendsofphp/php-cs-fixer": "^3.9.0",
-		"overtrue/phplint": "^9.6.0",
-		"phpspec/prophecy-phpunit": "^2.4.0",
-		"phpstan/phpstan": "^2.1.0",
-		"phpstan/phpstan-deprecation-rules": "^2.0.0",
-		"phpstan/phpstan-phpunit": "^2.0.0",
-		"phpstan/phpstan-strict-rules": "^2.0.0",
-		"typo3/cms-base-distribution": "^13.4",
-		"typo3/cms-impexp": "^13.4",
+        "friendsofphp/php-cs-fixer": "^3.9.0",
+        "overtrue/phplint": "^9.6.0",
+        "phpspec/prophecy-phpunit": "^2.4.0",
+        "phpstan/phpstan": "^2.1.10",
+        "phpstan/phpstan-deprecation-rules": "^2.0.0",
+        "phpstan/phpstan-phpunit": "^2.0.0",
+        "phpstan/phpstan-strict-rules": "^2.0.0",
+        "typo3/cms-base-distribution": "^14.3.0",
+        "typo3/cms-lowlevel": "^14.3.0",
+		"typo3/cms-impexp": "^14.3.0",
+		"typo3/cms-recycler": "^14.3.0",
 		"typo3/testing-framework": "^9.0.0"
 	},
 	"conflict": {
@@ -117,10 +116,14 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "17.0.x-dev"
+			"dev-main": "18.0.x-dev"
 		},
 		"typo3/cms": {
 			"extension-key": "pizpalue",
+			"Package": {
+                "providesPackages": {}
+            },
+            "version": "18.0.0-dev",
 			"web-dir": ".build/public"
 		}
 	},

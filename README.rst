@@ -1,22 +1,11 @@
-.. image:: https://img.shields.io/badge/TYPO3-13-orange.svg
-   :alt: TYPO3 13
-   :target: https://get.typo3.org/version/13
+.. raw:: html
 
-.. image:: https://poser.pugx.org/buepro/typo3-pizpalue/v/stable.svg
-   :alt: Latest Stable Version
-   :target: https://extensions.typo3.org/extension/pizpalue/
-
-.. image:: https://poser.pugx.org/buepro/typo3-pizpalue/d/total.svg
-   :alt: Total Downloads
-   :target: https://packagist.org/packages/buepro/typo3-pizpalue
-
-.. image:: https://poser.pugx.org/buepro/typo3-pizpalue/d/monthly
-   :alt: Monthly Downloads
-   :target: https://packagist.org/packages/buepro/typo3-pizpalue
-
-.. image:: https://github.com/buepro/typo3-pizpalue/workflows/CI/badge.svg
-   :alt: Continuous Integration Status
-   :target: https://github.com/buepro/typo3-pizpalue/actions?query=workflow%3ACI
+   <div style="display: flex;">
+      <img src="https://img.shields.io/badge/TYPO3-14-orange.svg" />
+      <img src="https://poser.pugx.org/buepro/typo3-pizpalue/v/stable.svg" />
+      <img src="https://poser.pugx.org/buepro/typo3-pizpalue/d/total.svg" />
+      <img src="https://poser.pugx.org/buepro/typo3-pizpalue/d/monthly" />
+   </div>   
 
 ============================
 TYPO3 extension ``pizpalue``
