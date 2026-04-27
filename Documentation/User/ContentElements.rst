@@ -97,7 +97,7 @@ element. The image will be used for the `logo` and the text for the
 
 **JSON-LD-code in content element:**
 
-.. code-block:: json-ld
+.. code-block:: json
 
    {
      "@context" : "http://schema.org",
@@ -125,7 +125,7 @@ element. The image will be used for the `logo` and the text for the
 
 **JSON-LD-code embedded into body tag:**
 
-.. code-block:: json-ld
+.. code-block:: json
 
    {
      "@context" : "http://schema.org",

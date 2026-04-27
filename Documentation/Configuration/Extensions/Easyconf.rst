@@ -1,6 +1,6 @@
 .. include:: /Includes.rst.txt
 
-.. _config_easyconf:
+.. _config_extension_easyconf:
 
 =====================
 Extension `easyconf`
