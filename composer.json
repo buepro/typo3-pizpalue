@@ -39,6 +39,7 @@
 	},
 	"require-dev": {
 		"b13/container": "^3.0.0",
+		"buepro/typo3-ci": "^0.1.0@dev",
 		"buepro/typo3-container-elements": "^7.0.0",
 		"buepro/typo3-pvh": "^3.0.0",
 		"buepro/typo3-user-pizpalue": "^7.0.0@dev",
