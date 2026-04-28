@@ -171,10 +171,6 @@
         <source>Picture with a footer bar to show an overlaid text</source>
         <target state="final">Image avec une barre de pied de page pour afficher un texte superposé</target>
       </trans-unit>
-      <trans-unit id="ext_conf.enableDefaultPageTSconfig" approved="yes">
-        <source>Enable default pageTS configuration. If disabled configurations can be added manually in page properties resources register.</source>
-        <target state="final">Activer la configuration par défaut des pageTS. Si désactivé, les configurations peuvent être ajoutées manuellement dans le registre des propriétés de la page.</target>
-      </trans-unit>
       <trans-unit id="tx-news-imageOnTop" approved="yes">
         <source>Image on top</source>
         <target state="final">Image en haut</target>
