@@ -36,15 +36,6 @@ defined('TYPO3') || die('Access denied.');
         \Buepro\Pizpalue\Sysext\Core\LinkHandling\EmailLinkHandler::class;
 
     /**
-     * EXT:backend
-     */
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('backend')) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            '@import "EXT:pizpalue/Sysext/backend/Configuration/TsConfig/page.tsconfig"'
-        );
-    }
-
-    /**
      * EXT:form
      */
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('form')) {
@@ -118,7 +109,6 @@ defined('TYPO3') || die('Access denied.');
      * RTE: Add default configuration for pizpalue
      */
     $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['pizpalue'] = 'EXT:pizpalue/Configuration/RTE/Default.yaml';
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('RTE.default.preset = pizpalue');
 
     /**
      * Hook: DataHandler used to set image variants for content elements

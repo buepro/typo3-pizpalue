@@ -1,2 +1,6 @@
 @import './PageTsConfig/'
 @import './PageTsConfig/ContentElement/'
+
+[ppExtensionLoaded("backend")]
+    @import 'EXT:pizpalue/Sysext/backend/Configuration/TsConfig/page.tsconfig'
+[end]
