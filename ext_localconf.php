@@ -17,17 +17,7 @@ defined('TYPO3') || die('Access denied.');
     $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
         \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
     );
-    $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
     $pizpalueConfiguration = $extensionConfiguration->get('pizpalue');
-
-    // Remove bootstrap package container elements
-    if (!(bool) $pizpalueConfiguration['enableBootstrapPackageContainerElements'] &&
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements')
-    ) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/RemoveBootstrapPackageContainerElements.tsconfig'"
-        );
-    }
 
     // Default PageTS for TCEFORM
     if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
