@@ -327,18 +327,6 @@
         <source>Media column classes</source>
         <target state="final">Medien-Spaltenklassen</target>
       </trans-unit>
-      <trans-unit id="ext_conf.enableBootstrapPackageBackendLayouts" approved="yes">
-        <source>Enable bootstrap package page layouts</source>
-        <target state="final">Seitenlayouts des bootstrap_package aktivieren</target>
-      </trans-unit>
-      <trans-unit id="ext_conf.enableBootstrapPackageContainerElements" approved="yes">
-        <source>Enable bootstrap package container elements when the extension container_elements is loaded</source>
-        <target state="final">Bootstrap Package Container-Elemente aktivieren, wenn die Erweiterung container_elements geladen ist</target>
-      </trans-unit>
-      <trans-unit id="ext_conf.enableDefaultPageTSconfig" approved="yes">
-        <source>Enable default pageTS configuration. If disabled configurations can be added manually in page properties resources register.</source>
-        <target state="final">Aktiviere die Standardeinstellungen für pageTS config. Wenn deaktiviert, können Konfigurationen manuell, über die Seiten-Eigenschaften - Register Ressourcen, hinzugefügt werden.</target>
-      </trans-unit>
       <trans-unit id="ext_conf.autoLoadStaticTSForExtensions" approved="yes">
         <source>Automatically load static typoscript for extensions. If disabled configurations can be added manually to template records.</source>
         <target state="final">Automatisches Laden von statischem Typoscript von Erweiterungen. Wenn deaktiviert, können die Konfigurationen manuell den Vorlagen-Datensätzen hinzugefügt werden.</target>
