@@ -3,6 +3,8 @@ baseVariants:
   -
     base: 'https://dev.pizpalue.ddev.site/'
     condition: 'getenv("HTTP_HOST") == "dev.pizpalue.ddev.site"'
+dependencies:
+  - pizpalue/full
 easyconf:
   data:
     admin:
