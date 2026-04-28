@@ -1,0 +1,18 @@
+categories:
+  Pizpalue:
+    label: 'Pizpalue Package'
+  Pizpalue.backendLayouts:
+    label: 'Backend Layouts'
+    parent: Pizpalue
+
+settings:
+  backendLayout.pizpalue_subnavigation_left:
+    label: LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.subnavigation_left 
+    category: Pizpalue.backendLayouts
+    type: bool
+    default: true
+  backendLayout.pizpalue_subnavigation_right:
+    label: LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.subnavigation_right
+    category: Pizpalue.backendLayouts
+    type: bool
+    default: true

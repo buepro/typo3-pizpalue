@@ -20,21 +20,6 @@ defined('TYPO3') || die('Access denied.');
     $bootstrapPackageConfiguration = $extensionConfiguration->get('bootstrap_package');
     $pizpalueConfiguration = $extensionConfiguration->get('pizpalue');
 
-    // Add BackendLayouts for the BackendLayout DataProvider
-    // @todo Remove once bootstrap_package switched to using page.tsconfig (ref 1724069741)
-    if (!(bool) $bootstrapPackageConfiguration['disablePageTsBackendLayouts']) {
-        // Disable some bootstrap_package backend layouts
-        if (!(bool) $pizpalueConfiguration['enableBootstrapPackageBackendLayouts']) {
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/DisableBackendLayouts.tsconfig'"
-            );
-        }
-        // Pizpalue backend layouts
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'"
-        );
-    }
-
     // Remove bootstrap package container elements
     if (!(bool) $pizpalueConfiguration['enableBootstrapPackageContainerElements'] &&
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container_elements')

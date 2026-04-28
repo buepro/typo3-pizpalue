@@ -1,0 +1,6 @@
+[siteSetting("backendlayout.pizpalue_subnavigation_left", true) == true]
+    @import './PageTsConfig/01_subnavigation_left.tsconfig'
+[end]
+[siteSetting("backendlayout.pizpalue_subnavigation_right", true) == true]
+    @import './PageTsConfig/02_subnavigation_right.tsconfig'
+[end]

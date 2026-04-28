@@ -1,0 +1,5 @@
+name: pizpalue/full
+label: 'Pizpalue Package: Full Package'
+dependencies:
+  - bootstrap-package/full
+  - pizpalue/backend-layouts

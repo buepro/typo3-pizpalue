@@ -1,0 +1,13 @@
+backendlayout.default: true
+backendlayout.simple: false
+backendlayout.2_columns: false
+backendlayout.2_columns_25_75: false
+backendlayout.2_columns_50_50: false
+backendlayout.2_columns_offset_right: false
+backendlayout.3_columns: false
+backendlayout.special_feature: false
+backendlayout.special_start: false
+backendlayout.subnavigation_left: false
+backendlayout.subnavigation_left_2_columns: false
+backendlayout.subnavigation_right: false
+backendlayout.subnavigation_right_2_columns: false
