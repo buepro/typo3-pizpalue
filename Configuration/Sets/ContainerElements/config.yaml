@@ -1,0 +1,4 @@
+name: pizpalue/container-elements
+label: 'Pizpalue Package: Container Elements'
+dependencies:
+  - pizpalue/full
