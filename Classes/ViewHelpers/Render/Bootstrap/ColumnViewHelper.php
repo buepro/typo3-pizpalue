@@ -46,7 +46,7 @@ class ColumnViewHelper extends AbstractTagBasedViewHelper
         $this->registerArgument('tagName', 'string', 'Tag name', false, 'div');
     }
 
-    public function render()
+    public function render(): string
     {
         $this->tagName = $this->arguments['tagName'];
         $this->tag->setTagName($this->arguments['tagName']);
