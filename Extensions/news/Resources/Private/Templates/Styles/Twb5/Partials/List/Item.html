@@ -4,24 +4,24 @@
 	  data-namespace-typo3-fluid="true">
 
 <n:excludeDisplayedNews newsItem="{newsItem}" />
-{f:variable(name: '_itemClasses', value: settings.advanced.listItemClasses)}
-{f:variable(name: '_itemClasses', value: 'list-group-item') -> f:if(condition: '{_itemClasses} == ""')}
-<pp:render.bootstrap.column class="{_itemClasses}" rowClass="{settings.advanced.listClasses}" tagName="li">
+{f:variable(name: 'cvItemClass', value: settings.advanced.listItemClasses)}
+{f:variable(name: 'cvItemClass', value: 'list-group-item') -> f:if(condition: '{cvItemClass} == ""')}
+<pp:render.bootstrap.column class="{cvItemClass}" rowClass="{settings.advanced.listClasses}" tagName="li">
 	<div class="row news-list-item">
         <pp:render.bootstrap.column class="col-md-3" count="2">
             <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
                 <f:if condition="{newsItem.mediaPreviews}">
                     <f:then>
                         <f:if condition="{settings.advanced.imageVariants.listMultiplier}">
-                            {pp:structure.variants(as: '_variants')}
-                            {pp:data.imageVariantsTextToArray(as: '_multiplier', text: settings.advanced.imageVariants.listMultiplier, default: 1.0)}
-                            <bk2k:data.imageVariants as="_variants" variants="{_variants}" multiplier="{_multiplier}" />
+                            {pp:structure.variants(as: 'cvVariants')}
+                            {pp:data.imageVariantsTextToArray(as: 'cvMultiplier', text: settings.advanced.imageVariants.listMultiplier, default: 1.0)}
+                            <bk2k:data.imageVariants as="cvVariants" variants="{cvVariants}" multiplier="{cvMultiplier}" />
                         </f:if>
                         <f:render partial="Plugin/RenderMedia" arguments="{
                             file: newsItem.mediaPreviews.0.originalResource,
                             data: newsItem,
                             settings: settings
-                            variants: _variants}" />
+                            variants: cvVariants}" />
                     </f:then>
                     <f:else>
                         <f:if condition="{settings.displayDummyIfNoMedia}">
@@ -55,9 +55,9 @@
                     </f:if>
                 </n:removeMediaTags>
             </div>
-            {f:variable(name: '_buttonClasses', value: settings.advanced.defaultButtonClasses)}
-            {f:variable(name: '_buttonClasses', value: 'btn btn-{settings.ppButtonMoreColor} btn-read-more') -> f:if(condition: '{_buttonClasses} == ""')}
-            <n:link newsItem="{newsItem}" settings="{settings}" class="{_buttonClasses}" title="{newsItem.title}">
+            {f:variable(name: 'cvButtonClasses', value: settings.advanced.defaultButtonClasses)}
+            {f:variable(name: 'cvButtonClasses', value: 'btn btn-{settings.ppButtonMoreColor} btn-read-more') -> f:if(condition: '{cvButtonClasses} == ""')}
+            <n:link newsItem="{newsItem}" settings="{settings}" class="{cvButtonClasses}" title="{newsItem.title}">
                 <f:translate key="more-link" />
             </n:link>
         </pp:render.bootstrap.column>

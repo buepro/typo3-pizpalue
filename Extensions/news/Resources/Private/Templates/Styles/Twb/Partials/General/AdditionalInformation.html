@@ -25,8 +25,8 @@
             <f:if condition="{newsItem.categories}">
                 <li title="{f:translate(extensionName: 'news', key: 'categories')}">
                     <span class="glyphicon glyphicon-tags"></span>
-                    <f:for each="{newsItem.categories}" as="_category">
-                        <span class="badge badge-pill badge-info rounded-pill bg-info">{_category.title}</span>
+                    <f:for each="{newsItem.categories}" as="cvCategory">
+                        <span class="badge badge-pill badge-info rounded-pill bg-info">{cvCategory.title}</span>
                     </f:for>
                 </li>
             </f:if>

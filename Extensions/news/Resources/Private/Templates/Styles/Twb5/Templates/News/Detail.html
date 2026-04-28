@@ -97,9 +97,9 @@
         </f:comment>
         <f:if condition="{settings.backPid}">
             <div class="ppc-back">
-                {f:variable(name: '_buttonClasses', value: settings.advanced.backButtonClasses)}
-                {f:variable(name: '_buttonClasses', value: 'btn btn-{settings.ppButtonBackColor} mb-3') -> f:if(condition: '{_buttonClasses} == ""')}
-                <f:link.page class="{_buttonClasses}" pageUid="{settings.backPid}">
+                {f:variable(name: 'cvButtonClasses', value: settings.advanced.backButtonClasses)}
+                {f:variable(name: 'cvButtonClasses', value: 'btn btn-{settings.ppButtonBackColor} mb-3') -> f:if(condition: '{cvButtonClasses} == ""')}
+                <f:link.page class="{cvButtonClasses}" pageUid="{settings.backPid}">
                     <f:translate key="back-link" />
                 </f:link.page>
             </div>

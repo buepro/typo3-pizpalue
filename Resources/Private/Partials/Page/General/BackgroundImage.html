@@ -9,9 +9,9 @@
 </f:comment>
 <f:if condition="{backgroundImage.0}">
     <f:variable name="backgroundImageObject" value="{backgroundImage.0}"/>
-    <pp:structure.variants as="_pageVariants" initialVariants="pageVariants" />
+    <pp:structure.variants as="cvPageVariants" initialVariants="pageVariants" />
     <f:variable name="styles" value=""/>
-    <f:for each="{_pageVariants}" key="name" as="variant">
+    <f:for each="{cvPageVariants}" key="name" as="variant">
         {f:variable(name: 'cropVariant', value: name)}
         {f:variable(name: 'cropVariant', value: 'default') -> f:if(condition: '{name} == "xlarge"')}
         <f:variable name="breakpoint">{variant.breakpoint as integer}</f:variable>

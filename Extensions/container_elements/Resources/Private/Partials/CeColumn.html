@@ -9,11 +9,11 @@
 
 {f:variable(name: 'class', value: '{class} {column.class}') -> f:if(condition: column.class)}
 {f:variable(name: 'class', value: '{class} ce-col-collapse') -> f:if(condition: collapse)}
-{f:variable(name: '_settings', value: settings.containerElements.imageVariants)}
-{f:variable(name: '_gutter', value: _settings.gutter.variants) -> f:if(condition: '{_settings.gutter.enable as integer} == 1')}
-{f:variable(name: '_correction', value: _settings.correction.variants) -> f:if(condition: '{_settings.correction.enable as integer} == 1')}
+{f:variable(name: 'cvSettings', value: settings.containerElements.imageVariants)}
+{f:variable(name: 'cvGutter', value: cvSettings.gutter.variants) -> f:if(condition: '{cvSettings.gutter.enable as integer} == 1')}
+{f:variable(name: 'cvCorrection', value: cvSettings.correction.variants) -> f:if(condition: '{cvSettings.correction.enable as integer} == 1')}
 
-<pp:render.bootstrap.column class="ce-col {class}" count="{colCount}" gutter="{_gutter}" correction="{_correction}">
+<pp:render.bootstrap.column class="ce-col {class}" count="{colCount}" gutter="{cvGutter}" correction="{cvCorrection}">
     <f:for each="{content}" as="record">
         {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: record)}
     </f:for>

@@ -46,10 +46,10 @@
 </div>
 
 <f:section name="FastMenuIcon">
-    {f:variable(name: '_iconFile', value: item.iconClass) -> pvh:condition.string.contains(haystack: item.iconClass, needle: '.svg')}
-    <f:if condition="{_iconFile}">
+    {f:variable(name: 'cvIconFile', value: item.iconClass) -> pvh:condition.string.contains(haystack: item.iconClass, needle: '.svg')}
+    <f:if condition="{cvIconFile}">
         <f:then>
-            <span class="ppicon ppc-inline">{bp:inlineSvg(src: _iconFile)}</span>
+            <span class="ppicon ppc-inline">{bp:inlineSvg(src: cvIconFile)}</span>
         </f:then>
         <f:else>
             <span class="{item.iconClass} ppc-iconfont"></span>

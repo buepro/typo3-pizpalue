@@ -71,16 +71,16 @@
                     It is only rendered if the field ´header type` is not `hidden`. The header type is taken into
                     account.
                 </f:comment>
-                {f:variable(name: '_h', value: 3)}
-                {contentObjectData.header_layout -> f:variable(name: '_a')}
-                {f:variable(name: '_a', value: 2) -> f:if(condition: '{_a} == 0')}
-                {f:translate(extensionName: 'pizpalue', key: 'events') -> f:variable(name: '_title')}
-                {contentObjectData.subheader -> f:variable(name: '_title')
+                {f:variable(name: 'cvH', value: 3)}
+                {contentObjectData.header_layout -> f:variable(name: 'cvA')}
+                {f:variable(name: 'cvA', value: 2) -> f:if(condition: '{cvA} == 0')}
+                {f:translate(extensionName: 'pizpalue', key: 'events') -> f:variable(name: 'cvTitle')}
+                {contentObjectData.subheader -> f:variable(name: 'cvTitle')
                     -> f:if(condition: '!{contentObjectData.header} && {contentObjectData.subheader}')}
-                <f:if condition="{_a as integer} != 100">
-                    {f:variable(name: '_h', value: '{_a + 1}')}
+                <f:if condition="{cvA as integer} != 100">
+                    {f:variable(name: 'cvH', value: '{cvA + 1}')}
                     <header class="frame-header">
-                        <h{_h} class="element-header "><span>{_title}</span></h{_h}>
+                        <h{cvH} class="element-header "><span>{cvTitle}</span></h{cvH}>
                     </header>
                 </f:if>
                 <div class="ppc-items">
@@ -118,22 +118,22 @@
                     <f:for as="newsItem" each="{day.news}" iteration="i">
                         {f:render(partial: 'General/EventSpan', arguments: '{n: newsItem}')
                             -> pvh:format.eliminate(unixBreaks: 1, windowsBreaks: 1)
-                            -> f:variable(name: '_eventSpan')}
-                        {f:variable(name: '_location', value: ', {newsItem.locationSimple}') -> f:if(condition: newsItem.locationSimple)}
-                        {f:variable(name: '_location', value: ', {newsItem.location.title}') -> f:if(condition: newsItem.location.title)}
+                            -> f:variable(name: 'cvEventSpan')}
+                        {f:variable(name: 'cvLocation', value: ', {newsItem.locationSimple}') -> f:if(condition: newsItem.locationSimple)}
+                        {f:variable(name: 'cvLocation', value: ', {newsItem.location.title}') -> f:if(condition: newsItem.location.title)}
                         {f:render(partial: 'General/EventPopup', arguments: '{n: newsItem, month: month, settings: settings}')
-                            -> f:variable(name: '_popupContent')}
-                        {f:format.date(date: newsItem.datetime, format: 'H:i') -> f:variable(name: '_text')}
-                        {f:variable(name: '_text', value: '❮ ❯') -> f:if(condition: newsItem.fullDay)}
+                            -> f:variable(name: 'cvPopupContent')}
+                        {f:format.date(date: newsItem.datetime, format: 'H:i') -> f:variable(name: 'cvText')}
+                        {f:variable(name: 'cvText', value: '❮ ❯') -> f:if(condition: newsItem.fullDay)}
                         <a tabindex="0"
                            class="btn btn-sm btn-primary ppc-time pp-popover ppc-{newsItem.uid} mb-1"
                            role="button"
                            data-bs-toggle="popover"
                            data-bs-trigger="click"
                            data-bs-html="true"
-                           data-bs-content="{_popupContent}"
-                           title="{_eventSpan}{_location}"
-                        >{_text}</a>
+                           data-bs-content="{cvPopupContent}"
+                           title="{cvEventSpan}{cvLocation}"
+                        >{cvText}</a>
                     </f:for>
                 </f:then>
                 <f:else>

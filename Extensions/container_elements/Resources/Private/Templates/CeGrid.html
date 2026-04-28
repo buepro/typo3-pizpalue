@@ -4,22 +4,22 @@
 
 <f:layout name="Default" />
 <f:section name="Main">
-    {f:variable(name: '_config', value: data.pi_flexform)}
-    {f:variable(name: '_settings', value: settings.containerElements.imageVariants)}
-    {f:variable(name: '_gutter', value: _settings.gutter.variants) -> f:if(condition: '{_settings.gutter.enable as integer} == 1')}
-    {f:variable(name: '_correction', value: _settings.correction.variants) -> f:if(condition: '{_settings.correction.enable as integer} == 1')}
+    {f:variable(name: 'cvConfig', value: data.pi_flexform)}
+    {f:variable(name: 'cvSettings', value: settings.containerElements.imageVariants)}
+    {f:variable(name: 'cvGutter', value: cvSettings.gutter.variants) -> f:if(condition: '{cvSettings.gutter.enable as integer} == 1')}
+    {f:variable(name: 'cvCorrection', value: cvSettings.correction.variants) -> f:if(condition: '{cvSettings.correction.enable as integer} == 1')}
     <f:if condition="{children_101}">
-        <div class="{_config.rowClasses}">
-            <f:for each="{children_101}" as="_record">
-                <f:if condition="{_record.ce_grid_classes} == '!external'">
+        <div class="{cvConfig.rowClasses}">
+            <f:for each="{children_101}" as="cvRecord">
+                <f:if condition="{cvRecord.ce_grid_classes} == '!external'">
                     <f:then>
-                        <pp:structure.wrap.column class="{_record.ce_grid_classes}" rowClass="{_config.rowClasses}" gutter="{_gutter}" correction="{_correction}">
-                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                        <pp:structure.wrap.column class="{cvRecord.ce_grid_classes}" rowClass="{cvConfig.rowClasses}" gutter="{cvGutter}" correction="{cvCorrection}">
+                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: cvRecord)}
                         </pp:structure.wrap.column>
                     </f:then>
                     <f:else>
-                        <pp:render.bootstrap.column class="{_record.ce_grid_classes}" rowClass="{_config.rowClasses}" gutter="{_gutter}" correction="{_correction}">
-                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: _record)}
+                        <pp:render.bootstrap.column class="{cvRecord.ce_grid_classes}" rowClass="{cvConfig.rowClasses}" gutter="{cvGutter}" correction="{cvCorrection}">
+                            {f:cObject(typoscriptObjectPath: 'lib.containerElements.renderContent', data: cvRecord)}
                         </pp:render.bootstrap.column>
                     </f:else>
                 </f:if>

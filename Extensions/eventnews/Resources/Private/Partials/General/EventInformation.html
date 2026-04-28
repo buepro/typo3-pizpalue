@@ -3,23 +3,23 @@
 <ul class="extra pp-news-infobar ppc-eventnews ppc-list">
     <li>
         <span class="glyphicon glyphicon-calendar"></span>
-        <f:variable name="_startDate">{f:format.date(date: newsItem.datetime, format:'Y-m-d')}T{f:format.date(date: newsItem.datetime, format:'H:i')}</f:variable>
-        <span class="ppc-time" itemprop="startDate" content="{_startDate}">{f:render(partial: 'General/EventSpan', arguments: '{n: newsItem}')}</span>
+        <f:variable name="cv_StartDate">{f:format.date(date: newsItem.datetime, format:'Y-m-d')}T{f:format.date(date: newsItem.datetime, format:'H:i')}</f:variable>
+        <span class="ppc-time" itemprop="startDate" content="{cv_StartDate}">{f:render(partial: 'General/EventSpan', arguments: '{n: newsItem}')}</span>
     </li>
 
     <f:if condition="{newsItem.organizer} || {newsItem.organizerSimple}">
-        {f:translate(extensionName: 'pizpalue', key: 'moreDetails') -> f:variable(name: '_moreLabel')}
-        {f:variable(name: '_more', value: '<span class="pp-eventnews-popup-more ppc-organizer">{_moreLabel}</span>')}
+        {f:translate(extensionName: 'pizpalue', key: 'moreDetails') -> f:variable(name: 'cvMoreLabel')}
+        {f:variable(name: 'cvMore', value: '<span class="pp-eventnews-popup-more ppc-organizer">{cvMoreLabel}</span>')}
         <li title="{f:translate(extensionName: 'eventnews', key: 'organizer')}">
             <f:if condition="{newsItem.organizer.title}">
-                <f:variable name="_content"><f:format.nl2br>{newsItem.organizer.description -> f:format.crop(maxCharacters: 120)} {_more -> f:link.typolink(parameter: newsItem.organizer.link) -> f:if(condition: newsItem.organizer.link)}</f:format.nl2br></f:variable>
+                <f:variable name="cvContent"><f:format.nl2br>{newsItem.organizer.description -> f:format.crop(maxCharacters: 120)} {cvMore -> f:link.typolink(parameter: newsItem.organizer.link) -> f:if(condition: newsItem.organizer.link)}</f:format.nl2br></f:variable>
                 <a tabindex="0"
                    class="pp-popover ppc-{newsItem.organizer.uid}"
                    data-toggle="popover"
                    data-trigger="click"
                    title="{newsItem.organizer.title}"
                    data-html="true"
-                   data-content="{_content}"
+                   data-content="{cvContent}"
                    href="javascript:void(0)"><span class="glyphicon glyphicon-user"></span> {newsItem.organizer.title}</a>
             </f:if>
             <f:if condition="{newsItem.organizerSimple}">
@@ -29,18 +29,18 @@
     </f:if>
 
     <f:if condition="{newsItem.location} || {newsItem.locationSimple}">
-        {f:translate(extensionName: 'pizpalue', key: 'tx-eventnews-locationDetailLink') -> f:variable(name: '_moreLabel')}
-        {f:variable(name: '_more', value: '<span class="pp-eventnews-popup-more ppc-location">{_moreLabel}</span>')}
+        {f:translate(extensionName: 'pizpalue', key: 'tx-eventnews-locationDetailLink') -> f:variable(name: 'cvMoreLabel')}
+        {f:variable(name: 'cvMore', value: '<span class="pp-eventnews-popup-more ppc-location">{cvMoreLabel}</span>')}
         <li title="{f:translate(extensionName: 'eventnews', key: 'location')}">
             <f:if condition="{newsItem.location.title}">
-                <f:variable name="_content"><f:format.nl2br>{newsItem.location.description -> f:format.crop(maxCharacters: 120)} {_more -> f:link.typolink(parameter: newsItem.location.link) -> f:if(condition: newsItem.location.link)}</f:format.nl2br></f:variable>
+                <f:variable name="cvContent"><f:format.nl2br>{newsItem.location.description -> f:format.crop(maxCharacters: 120)} {cvMore -> f:link.typolink(parameter: newsItem.location.link) -> f:if(condition: newsItem.location.link)}</f:format.nl2br></f:variable>
                 <a tabindex="0"
                    class="pp-popover ppc-{newsItem.location.uid}"
                    data-toggle="popover"
                    data-trigger="click"
                    title="{newsItem.location.title}"
                    data-html="true"
-                   data-content="{_content}"
+                   data-content="{cvContent}"
                    href="javascript:void(0)"><span class="glyphicon glyphicon-location"></span> {newsItem.location.title}</a>
             </f:if>
             <f:if condition="{newsItem.locationSimple}">
@@ -52,8 +52,8 @@
     <f:if condition="{newsItem.categories}">
         <li title="{f:translate(extensionName: 'news', key: 'categories')}">
             <span class="glyphicon glyphicon-tags"></span>
-            <f:for each="{newsItem.categories}" as="_category">
-                <span class="badge badge-pill badge-info rounded-pill bg-info">{_category.title}</span>
+            <f:for each="{newsItem.categories}" as="cvCategory">
+                <span class="badge badge-pill badge-info rounded-pill bg-info">{cvCategory.title}</span>
             </f:for>
         </li>
     </f:if>

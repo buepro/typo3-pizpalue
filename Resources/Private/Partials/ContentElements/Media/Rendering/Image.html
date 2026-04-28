@@ -2,7 +2,7 @@
       xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <picture>
-    {f:format.date(date: 'now', format: '?U') -> f:variable(name: '_reloadUrlSegment') -> f:if(condition: data.tx_pizpalue_image_reload_url_segment)}
+    {f:format.date(date: 'now', format: '?U') -> f:variable(name: 'cvReloadUrlSegment') -> f:if(condition: data.tx_pizpalue_image_reload_url_segment)}
     <f:for each="{variants}" key="name" as="variant">
         <f:variable name="breakpoint">{variant.breakpoint as integer}</f:variable>
         <f:variable name="width">{variant.width as integer}</f:variable>
@@ -10,8 +10,8 @@
         <f:if condition="{width}">
             <f:if condition="{variant.aspectRatio}">
                 <f:variable name="aspectRatio">{variant.aspectRatio as float}</f:variable>
-                <f:variable name="_aspectRatioPercent">{aspectRatio * 100}</f:variable>
-                <f:variable name="height" value="{width * 100 / _aspectRatioPercent}" />
+                <f:variable name="cvAspectRatioPercent">{aspectRatio * 100}</f:variable>
+                <f:variable name="height" value="{width * 100 / cvAspectRatioPercent}" />
                 <f:variable name="height">{height as integer}</f:variable>
             </f:if>
             <f:variable name="mediaQuery">{f:if(condition: breakpoint, then: 'media="(min-width: {breakpoint}px)"')}</f:variable>
@@ -34,13 +34,13 @@
                                 Using maxWidth doesn't work always, so we use the width property as fallback.
                                 -----------------------------------------------------------------------------
                             </f:comment>
-                            <f:variable name="_sizedWidth">{bk2k:data.imageInfo(src: sizeUrl, property: 'width')}</f:variable>
-                            <f:if condition="{_sizedWidth as integer} > {sizeWidth}">
+                            <f:variable name="cvSizedWidth">{bk2k:data.imageInfo(src: sizeUrl, property: 'width')}</f:variable>
+                            <f:if condition="{cvSizedWidth as integer} > {sizeWidth}">
                                 <f:variable name="sizeUrl">{f:uri.image(image: file, cropVariant: name, width: sizeWidth)}</f:variable>
                             </f:if>
                         </f:else>
                     </f:if>
-                    <f:variable name="srcset">{srcset}{sizeUrl}{_reloadUrlSegment} {sizeKey}{f:if(condition: iteration.isLast, else: ',')}</f:variable>
+                    <f:variable name="srcset">{srcset}{sizeUrl}{cvReloadUrlSegment} {sizeKey}{f:if(condition: iteration.isLast, else: ',')}</f:variable>
                 </f:for>
             </f:if>
             <source data-variant="{name}" {f:if(condition: sizeHeight, then: 'data-width="{width}" data-height="{sizeHeight}"', else: 'data-maxwidth="{width}"')} {mediaQuery->f:format.raw()} srcset="{srcset}">
@@ -55,16 +55,16 @@
     </f:if>
     <f:if condition="{defaultHeight}">
         <f:then>
-            <f:variable name="src" value="{f:uri.image(image: file, cropVariant: 'default', width: defaultWidth, height: defaultHeight)}{_reloadUrlSegment}" />
+            <f:variable name="src" value="{f:uri.image(image: file, cropVariant: 'default', width: defaultWidth, height: defaultHeight)}{cvReloadUrlSegment}" />
         </f:then>
         <f:else>
-            <f:variable name="src" value="{f:uri.image(image: file, cropVariant: 'default', width: defaultWidth)}{_reloadUrlSegment}" />
+            <f:variable name="src" value="{f:uri.image(image: file, cropVariant: 'default', width: defaultWidth)}{cvReloadUrlSegment}" />
         </f:else>
     </f:if>
     <f:variable name="finalWidth" value="{bk2k:data.imageInfo(src: src, property: 'width')}" />
     <f:variable name="finalHeight" value="{bk2k:data.imageInfo(src: src, property: 'height')}" />
-    {f:variable(name: '_loading', value: 'lazy')}
-    {f:variable(name: '_loading', value: settings.gallery.imageLoading) -> f:if(condition: settings.gallery.imageLoading)}
-    <img class="img-responsive img-fluid" loading="{_loading}" src="{src}" width="{finalWidth}" height="{finalHeight}" title="{file.properties.title}" alt="{file.properties.alternative}">
+    {f:variable(name: 'cvLoading', value: 'lazy')}
+    {f:variable(name: 'cvLoading', value: settings.gallery.imageLoading) -> f:if(condition: settings.gallery.imageLoading)}
+    <img class="img-responsive img-fluid" loading="{cvLoading}" src="{src}" width="{finalWidth}" height="{finalHeight}" title="{file.properties.title}" alt="{file.properties.alternative}">
 </picture>
 </html>

@@ -1,15 +1,15 @@
 <html data-namespace-typo3-fluid="true"
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
-{f:translate(extensionName: 'pizpalue', key: 'moreDetails') -> f:variable(name: '_more')}
+{f:translate(extensionName: 'pizpalue', key: 'moreDetails') -> f:variable(name: 'cvMore')}
 <f:if condition="{settings.templateLayout as integer} !== 21">
     <f:then>
-        {_more -> f:link.page(additionalParams: '{tx_news_pi1:{overwriteDemand: {month: month.month, year: month.year}}}', rel: 'nofollow', section: 'event{n.uid}') -> f:variable(name: '_more')}
+        {cvMore -> f:link.page(additionalParams: '{tx_news_pi1:{overwriteDemand: {month: month.month, year: month.year}}}', rel: 'nofollow', section: 'event{n.uid}') -> f:variable(name: 'cvMore')}
     </f:then>
     <f:else>
-        {_more -> n:link(newsItem: n, settings: settings, title: n.title) -> f:variable(name: '_more')}
+        {cvMore -> n:link(newsItem: n, settings: settings, title: n.title) -> f:variable(name: 'cvMore')}
     </f:else>
 </f:if>
 <h6>{n.title}</h6>
-<f:format.nl2br>{n.teaser -> f:format.crop(maxCharacters: 120)}</f:format.nl2br> <span class="pp-eventnews-popup-more ppc-event">{_more -> f:format.htmlentitiesDecode()}</span>
+<f:format.nl2br>{n.teaser -> f:format.crop(maxCharacters: 120)}</f:format.nl2br> <span class="pp-eventnews-popup-more ppc-event">{cvMore -> f:format.htmlentitiesDecode()}</span>
 </html>

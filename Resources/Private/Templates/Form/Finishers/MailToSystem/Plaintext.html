@@ -15,7 +15,7 @@
             -> pvh:format.replace(substring: 'ö', replacement: 'oe', caseSensitive: 0)
             -> pvh:format.replace(substring: 'ü', replacement: 'ue', caseSensitive: 0)
             -> f:variable(name:'fieldName')}
-        {f:variable(name: '_{fieldName}', value: formValue.processedValue)}
+        {f:variable(name: 'cv{fieldName}', value: formValue.processedValue)}
     </formvh:renderAllFormValues>
 
     <f:comment>
@@ -24,5 +24,5 @@
         ------------------------------------------------------------------------------------------------------------->
     </f:comment>
 </pvh:format.eliminate>
-#{_Name}#{_Email}#{_Telefon}#{_Betreff}#{_Mitteilung}#
+#{cvName}#{cvEmail}#{cvTelefon}#{cvBetreff}#{cvMitteilung}#
 </html>

@@ -47,13 +47,13 @@
 </f:section>
 
 <f:section name="ItemList">
-    {f:render(partial: 'List/GetPartialName', arguments: _all) -> pvh:format.trim() -> f:variable(name: '_partialName')}
-    {f:variable(name: '_partialName', value: 'Item') -> f:if(condition: '{_partialName} == ""')}
-    {f:variable(name: '_listClasses', value: settings.advanced.listClasses)}
-    {f:variable(name: '_listClasses', value: 'list-group') -> f:if(condition: '{_listClasses} == ""')}
-    <ul class="{_listClasses}">
+    {f:render(partial: 'List/GetPartialName', arguments: _all) -> pvh:format.trim() -> f:variable(name: 'cvPartialName')}
+    {f:variable(name: 'cvPartialName', value: 'Item') -> f:if(condition: '{cvPartialName} == ""')}
+    {f:variable(name: 'cvListClasses', value: settings.advanced.listClasses)}
+    {f:variable(name: 'cvListClasses', value: 'list-group') -> f:if(condition: '{cvListClasses} == ""')}
+    <ul class="{cvListClasses}">
         <f:for each="{newsItems}" as="newsItem" iteration="iterator">
-            <f:render partial="List/{_partialName}" arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
+            <f:render partial="List/{cvPartialName}" arguments="{newsItem: newsItem, settings:settings, iterator:iterator}" />
         </f:for>
     </ul>
 </f:section>

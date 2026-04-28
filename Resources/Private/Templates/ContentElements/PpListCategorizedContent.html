@@ -9,8 +9,8 @@
         767: data.pi_flexform.itemHeightMd,
         991: data.pi_flexform.itemHeightLg,
         1199: data.pi_flexform.itemHeightXl
-    }) -> f:variable(name: '_heights')}
-    <div class="pp-list-categorized-content" data-pp-heights="{_heights}">
+    }) -> f:variable(name: 'cvHeights')}
+    <div class="pp-list-categorized-content" data-pp-heights="{cvHeights}">
         <f:for each="{content}" as="ce" iteration="iterator">
             <f:if condition="{iterator.index} < {data.pi_flexform.itemCount}">
                 <div class="ppc-item{f:if(condition: data.pi_flexform.collapsible, then: ' ppc-collapsible')}">

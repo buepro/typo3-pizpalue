@@ -2,28 +2,28 @@
       xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers">
 <pvh:format.trim>
-    {f:translate(extensionName: 'news', key:'dateFormat') -> f:variable(name: '_dateFormat')}
-    {f:format.date(date: n.datetime, format: '{_dateFormat} ') -> f:variable(name: '_startDay')}
-    {f:format.date(date: n.eventEnd, format: '{_dateFormat} ') -> f:variable(name: '_endDay')}
-    {f:variable(name: '_toEndDay', value: ' - {_endDay}')}
+    {f:translate(extensionName: 'news', key:'dateFormat') -> f:variable(name: 'cvDateFormat')}
+    {f:format.date(date: n.datetime, format: '{cvDateFormat} ') -> f:variable(name: 'cvStartDay')}
+    {f:format.date(date: n.eventEnd, format: '{cvDateFormat} ') -> f:variable(name: 'cvEndDayy')}
+    {f:variable(name: 'cvEndDay', value: ' - {cvEndDayy}')}
     <f:if condition="{n.fullDay}">
         <f:then>
             <f:if condition="{n.eventEnd}">
                 <f:then>
-                    {_startDay}{_toEndDay -> f:if(condition: '{_startDay} != {_endDay}')}
+                    {cvStartDay}{cvEndDay -> f:if(condition: '{cvStartDay} != {cvEndDayy}')}
                 </f:then>
                 <f:else>
-                    {_startDay}
+                    {cvStartDay}
                 </f:else>
             </f:if>
         </f:then>
         <f:else>
             <f:if condition="{n.eventEnd}">
                 <f:then>
-                    {_startDay}{f:format.date(date: n.datetime, format: 'H:i')} - {_endDay -> f:if(condition: '{_startDay} != {_endDay}')}{f:format.date(date: n.eventEnd, format: 'H:i')}
+                    {cvStartDay}{f:format.date(date: n.datetime, format: 'H:i')} - {cvEndDayy -> f:if(condition: '{cvStartDay} != {cvEndDayy}')}{f:format.date(date: n.eventEnd, format: 'H:i')}
                 </f:then>
                 <f:else>
-                    {_startDay}{f:format.date(date: n.datetime, format: 'H:i')}
+                    {cvStartDay}{f:format.date(date: n.datetime, format: 'H:i')}
                 </f:else>
             </f:if>
         </f:else>

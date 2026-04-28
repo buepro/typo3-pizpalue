@@ -10,11 +10,11 @@
         <f:form class="pp-eventnews-form p-3" method="post" action="month" object="{search}" name="search" arguments="{overwriteDemand:overwriteDemand}">
             <input type="hidden" name="id" value="{currentPageId}" />
             <div class="ppc-group ppc-group1">
-                <events:filter.organizer organizers="{allOrganizers}" news="{news}" as="_organizers">
-                    <f:if condition="{_organizers}">
+                <events:filter.organizer organizers="{allOrganizers}" news="{news}" as="cvOrganizers">
+                    <f:if condition="{cvOrganizers}">
                         <fieldset class="form-group">
                             <legend><f:translate key="organizers" extensionName="eventnews" /></legend>
-                            <f:for each="{_organizers}" as="organizer">
+                            <f:for each="{cvOrganizers}" as="organizer">
                                 <div class="custom-control custom-checkbox custom-control-inline ppc-organizer ppc-{organizer.uid}">
                                     <f:form.checkbox id="organizer-{organizer.uid}" class="custom-control-input" property="organizers.{organizer.uid}" value="{organizer.uid}" />
                                     <label class="custom-control-label" for="organizer-{organizer.uid}">{organizer.title}</label>
@@ -23,11 +23,11 @@
                         </fieldset>
                     </f:if>
                 </events:filter.organizer>
-                <events:filter.location locations="{allLocations}" news="{news}" as="_locations">
-                    <f:if condition="{_locations}">
+                <events:filter.location locations="{allLocations}" news="{news}" as="cvLocations">
+                    <f:if condition="{cvLocations}">
                         <fieldset class="form-group">
                             <legend><f:translate key="locations" extensionName="eventnews" /></legend>
-                            <f:for each="{_locations}" as="location">
+                            <f:for each="{cvLocations}" as="location">
                                 <div class="custom-control custom-checkbox custom-control-inline ppc-location ppc-{location.uid}">
                                     <f:form.checkbox id="location-{location.uid}" class="custom-control-input" property="locations.{location.uid}" value="{location.uid}" />
                                     <label class="custom-control-label" for="location-{location.uid}">{location.title}</label>

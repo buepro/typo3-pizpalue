@@ -5,15 +5,15 @@
       data-namespace-typo3-fluid="true">
 
 <f:comment>Background image variants</f:comment>
-{pp:structure.variants(as: '_backgroundVariants', initialVariants: 'tx_pizpalue_background_image_variants')}
-{f:variable(name: '_backgroundAll', value: _all)}
-{_backgroundVariants -> pvh:variable.set(name: '_backgroundAll.variants')}
+{pp:structure.variants(as: 'cvBackgroundVariants', initialVariants: 'tx_pizpalue_background_image_variants')}
+{f:variable(name: 'cvBackgroundAll', value: _all)}
+{cvBackgroundVariants -> pvh:variable.set(name: 'cvBackgroundAll.variants')}
 
 <f:comment>Initialize variables</f:comment>
-{f:variable(name: '_ppData', value: configuration.ppData)}
+{f:variable(name: 'cvPpData', value: configuration.ppData)}
 
 <f:comment>Compile inner classes</f:comment>
-{_ppData.innerClasses -> bk2k:implode() -> f:variable(name: '_ppInnerClasses')}
+{cvPpData.innerClasses -> bk2k:implode() -> f:variable(name: 'cvPpInnerClasses')}
 
 <f:if condition="{configuration.displayFrame}">
     <f:then>
@@ -21,9 +21,9 @@
         <div {frameAttributes -> f:format.raw()}>
             <div class="frame-group-container">
                 <div class="frame-group-inner">
-                    <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
+                    <f:render partial="Frame/BackgroundImage" arguments="{cvBackgroundAll}" />
                     <div class="frame-container frame-container-default">
-                        <div class="frame-inner{f:if(condition: _ppInnerClasses, then: ' {_ppInnerClasses}')}">
+                        <div class="frame-inner{f:if(condition: cvPpInnerClasses, then: ' {cvPpInnerClasses}')}">
                             {content -> f:format.raw()}
                         </div>
                     </div>
@@ -34,16 +34,16 @@
     </f:then>
     <f:else>
 
-        <f:if condition="{configuration.backgroundImage} || {_ppData.framelessAttributes}">
+        <f:if condition="{configuration.backgroundImage} || {cvPpData.framelessAttributes}">
             <f:then>
 
-                <div id="{configuration.id}" {_ppData.framelessAttributes -> f:format.raw()}>
-                    <f:render partial="Frame/BackgroundImage" arguments="{_backgroundAll}" />
-                    <f:if condition="{_ppData.isTile}">
+                <div id="{configuration.id}" {cvPpData.framelessAttributes -> f:format.raw()}>
+                    <f:render partial="Frame/BackgroundImage" arguments="{cvBackgroundAll}" />
+                    <f:if condition="{cvPpData.isTile}">
                         <f:then>
 
                             <div class="frame-container">
-                                <div class="frame-inner{f:if(condition: _ppInnerClasses, then: ' {_ppInnerClasses}')}">
+                                <div class="frame-inner{f:if(condition: cvPpInnerClasses, then: ' {cvPpInnerClasses}')}">
                                     {content -> f:format.raw()}
                                 </div>
                             </div>

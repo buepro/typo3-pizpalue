@@ -2,7 +2,7 @@
       xmlns:pp="http://typo3.org/ns/Buepro/Pizpalue/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-{pp:data.imageVariantsTextToArray(as: '_variants', text: text, default: default)}
-{_variants -> f:format.json() -> f:format.raw()}
+{pp:data.imageVariantsTextToArray(as: 'cvVariants', text: text, default: default)}
+{cvVariants -> f:format.json() -> f:format.raw()}
 
 </html>

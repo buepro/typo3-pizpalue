@@ -4,8 +4,8 @@
       data-namespace-typo3-fluid="true">
 <f:if condition="{files}">
     <f:variable name="imagecols">{data.imagecols as integer}</f:variable>
-    {files -> f:count() -> f:variable(name: '_filesCount')}
-    {_filesCount -> f:variable(name: 'imagecols') -> f:if(condition: '{_filesCount} < {imagecols}')}
+    {files -> f:count() -> f:variable(name: 'cvFilesCount')}
+    {cvFilesCount -> f:variable(name: 'imagecols') -> f:if(condition: '{cvFilesCount} < {imagecols}')}
     <f:variable name="columnConfig">{settings.gallery.columns.{imagecols}}</f:variable>
     <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{columnConfig.multiplier}" gutters="{columnConfig.gutters}" corrections="{columnConfig.corrections}" />
     <f:comment>
@@ -13,15 +13,15 @@
         Apply additional scaling as defined in field `data.tx_pizpalue_image_scaling`
     -------------------------------------------------------------------------------------------------------------------
     </f:comment>
-    {pp:data.imageVariantsTextToArray(as: '_multiplier', text: data.tx_pizpalue_image_scaling, default: 1.0)}
-    <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{_multiplier}" />
+    {pp:data.imageVariantsTextToArray(as: 'cvMultiplier', text: data.tx_pizpalue_image_scaling, default: 1.0)}
+    <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{cvMultiplier}" />
     <f:comment>
     ===================================================================================================================
         Update image aspect ratios with values defined in `data.tx_pizpalue_image_ratio`
     -------------------------------------------------------------------------------------------------------------------
     </f:comment>
-    {pp:data.imageVariantsTextToArray(as: '_aspectRatio', text: data.tx_pizpalue_image_aspect_ratio, default: 0.0)}
-    {pp:data.imageVariants(as: 'variants', variants: variants, aspectRatio: _aspectRatio)}
+    {pp:data.imageVariantsTextToArray(as: 'cvAspectRatio', text: data.tx_pizpalue_image_aspect_ratio, default: 0.0)}
+    {pp:data.imageVariants(as: 'variants', variants: variants, aspectRatio: cvAspectRatio)}
     <f:comment>
     ===================================================================================================================
     </f:comment>

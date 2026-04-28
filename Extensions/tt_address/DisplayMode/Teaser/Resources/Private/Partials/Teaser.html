@@ -2,11 +2,11 @@
       xmlns:pvh="http://typo3.org/ns/Buepro/Pvh/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-{f:variable(name: '_teaserConfig', value: settings.pizpalue.teaser)}
-{addresses -> pvh:iterator.random(count: settings.pizpalue.teaser.maxItemCount, as: '_randomized')}
+{f:variable(name: 'cvTeaserConfig', value: settings.pizpalue.teaser)}
+{addresses -> pvh:iterator.random(count: settings.pizpalue.teaser.maxItemCount, as: 'cvRandomizer')}
 <div class="pp-ttaddress-teaser">
-    <f:for each="{_randomized}" as="_item">
-        <f:render partial="TeaserItem" arguments="{address: _item, teaserConfig: _teaserConfig}" />
+    <f:for each="{cvRandomizer}" as="cvItem">
+        <f:render partial="TeaserItem" arguments="{address: cvItem, teaserConfig: cvTeaserConfig}" />
     </f:for>
 </div>
 

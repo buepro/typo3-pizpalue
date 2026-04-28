@@ -5,12 +5,12 @@
     <f:if condition="{records}">
         <div class="icongroup icongroup-align-{data.pi_flexform.align} icongroup-columns-{data.pi_flexform.columns} icongroup-iconposition-{data.pi_flexform.icon_position}">
             <f:for each="{records}" as="item" iteration="iteration">
-                {f:variable(name: '_iconColor', value: '')}
-                {f:variable(name: '_iconColor', value: ' {data.pi_flexform.icon_color}') -> f:if(condition: data.pi_flexform.icon_color)}
-                {f:variable(name: '_iconColor', value: ' {item.data.tx_pizpalue_icon_color}') -> f:if(condition: item.data.tx_pizpalue_icon_color)}
+                {f:variable(name: 'cvIconColor', value: '')}
+                {f:variable(name: 'cvIconColor', value: ' {data.pi_flexform.icon_color}') -> f:if(condition: data.pi_flexform.icon_color)}
+                {f:variable(name: 'cvIconColor', value: ' {item.data.tx_pizpalue_icon_color}') -> f:if(condition: item.data.tx_pizpalue_icon_color)}
                 <div class="icongroup-item">
                     <f:if condition="{item.icon}">
-                        <div class="icongroup-item-icon{_iconColor}">
+                        <div class="icongroup-item-icon{cvIconColor}">
                             <bk2k:icon icon="{item.icon}" />
                         </div>
                     </f:if>

@@ -3,14 +3,14 @@
 <f:section name="Header" />
 <f:section name="Main">
 
-    {f:variable(name: '_orientClass', value: 'textmedia-centered textmedia-left')}
-    {f:variable(name: '_orientClass', value: 'textmedia-centered textmedia-right') -> f:if(condition: '{data.imageorient} == 125')}
-    {f:variable(name: '_orientClass', value: 'textmedia-left') -> f:if(condition: '{data.imageorient} == 26')}
-    {f:variable(name: '_orientClass', value: 'textmedia-right') -> f:if(condition: '{data.imageorient} == 25')}
+    {f:variable(name: 'cvOrientClass', value: 'textmedia-centered textmedia-left')}
+    {f:variable(name: 'cvOrientClass', value: 'textmedia-centered textmedia-right') -> f:if(condition: '{data.imageorient} == 125')}
+    {f:variable(name: 'cvOrientClass', value: 'textmedia-left') -> f:if(condition: '{data.imageorient} == 26')}
+    {f:variable(name: 'cvOrientClass', value: 'textmedia-right') -> f:if(condition: '{data.imageorient} == 25')}
     {f:variable(name: 'imageConfig', value: settings.responsiveimages.contentelements.pp_emphasize_media)}
     <bk2k:data.imageVariants as="variants" variants="{variants}" multiplier="{imageConfig.multiplier}" gutters="{imageConfig.gutters}" corrections="{imageConfig.corrections}" />
 
-    <div class="pp-emphasize-media textmedia {_orientClass}">
+    <div class="pp-emphasize-media textmedia {cvOrientClass}">
         <div class="textmedia-item textmedia-gallery">
             <f:render partial="PpEmphasizeMedia/Gallery" arguments="{_all}" />
         </div>

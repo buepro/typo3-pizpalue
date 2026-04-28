@@ -3,24 +3,24 @@
       data-namespace-typo3-fluid="true">
 <f:if condition="{files}">
     <f:comment>
-        ***********************************************************************************
-        Get configuration and variants for lead image: `_columnConfigLead`, `_variantsLead`
-        ***********************************************************************************
+        *************************************************************************************
+        Get configuration and variants for lead image: `cvColumnConfigLead`, `cvVariantsLead`
+        *************************************************************************************
     </f:comment>
-    <f:variable name="_columnConfigLead">{settings.gallery.columns.1}</f:variable>
-    <bk2k:data.imageVariants as="_variantsLead" variants="{variants}" multiplier="{_columnConfigLead.multiplier}" gutters="{_columnConfigLead.gutters}" corrections="{_columnConfigLead.corrections}" />
+    <f:variable name="cvColumnConfigLead">{settings.gallery.columns.1}</f:variable>
+    <bk2k:data.imageVariants as="cvVariantsLead" variants="{variants}" multiplier="{cvColumnConfigLead.multiplier}" gutters="{cvColumnConfigLead.gutters}" corrections="{cvColumnConfigLead.corrections}" />
 
     <f:comment>
-        *********************************************************************************
-        Get configuration and variants for remaining images: `_columnConfig`, `_variants`
-        *********************************************************************************
+        ***********************************************************************************
+        Get configuration and variants for remaining images: `cvColumnConfig`, `cvVariants`
+        ***********************************************************************************
     </f:comment>
     <f:variable name="imagecols">1</f:variable>
     <f:if condition="{files -> f:count()} > 1">
         <f:variable name="imagecols">{data.imagecols as integer}</f:variable>
     </f:if>
-    <f:variable name="_columnConfig">{settings.gallery.columns.{imagecols}}</f:variable>
-    <bk2k:data.imageVariants as="_variants" variants="{variants}" multiplier="{_columnConfig.multiplier}" gutters="{_columnConfig.gutters}" corrections="{_columnConfig.corrections}" />
+    <f:variable name="cvColumnConfig">{settings.gallery.columns.{imagecols}}</f:variable>
+    <bk2k:data.imageVariants as="cvVariants" variants="{variants}" multiplier="{cvColumnConfig.multiplier}" gutters="{cvColumnConfig.gutters}" corrections="{cvColumnConfig.corrections}" />
 
     <f:comment>
         **************
@@ -31,13 +31,13 @@
         <f:for each="{files}" as="file" iteration="fileIteration">
             <f:if condition="{fileIteration.index} == 0">
                 <f:then>
-                    <div class="gallery-item {_columnConfigLead.class}">
-                        <f:render partial="Media/Type" arguments="{file: file, data: data, settings: settings, variants: _variantsLead}" />
+                    <div class="gallery-item {cvColumnConfigLead.class}">
+                        <f:render partial="Media/Type" arguments="{file: file, data: data, settings: settings, variants: cvVariantsLead}" />
                     </div>
                 </f:then>
                 <f:else>
-                    <div class="gallery-item {_columnConfig.class}">
-                        <f:render partial="Media/Type" arguments="{file: file, data: data, settings: settings, variants: _variants}" />
+                    <div class="gallery-item {cvColumnConfig.class}">
+                        <f:render partial="Media/Type" arguments="{file: file, data: data, settings: settings, variants: cvVariants}" />
                     </div>
                 </f:else>
             </f:if>

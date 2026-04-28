@@ -5,15 +5,15 @@
     <f:render partial="Media/Gallery" arguments="{_all}" />
 </div>
 <div class="pp-picoverlay-item pp-picoverlay-text">
-    <h{_headerLayout} class="ppc-header {settings.header.class}{_headerPosition}{_headerClass}">
+    <h{cvHeaderLayout} class="ppc-header {settings.header.class}{cvHeaderPosition}{cvHeaderClass}">
         <span class="ppc-text">{data.header}</span>
         <a href="javascript:void(0);"><span class="ppc-icon ppc-show px-1"><i class="ppicon ppicon-arrow-up"></i></span></a>
-    </h{_headerLayout}>
+    </h{cvHeaderLayout}>
     <div class="ppc-body"><f:format.html>{data.bodytext}</f:format.html></div>
-    <h{_headerLayout} class="ppc-footer {settings.header.class}{_headerPosition}{_headerClass}">
+    <h{cvHeaderLayout} class="ppc-footer {settings.header.class}{cvHeaderPosition}{cvHeaderClass}">
         <span class="ppc-text"><f:link.typolink parameter="{data.header_link}">{data.readmore_label}</f:link.typolink></span>
         <a href="javascript:void(0);"><span class="ppc-icon ppc-hide px-1"><i class="ppicon ppicon-arrow-down"></i></span></a>
-    </h{_headerLayout}>
+    </h{cvHeaderLayout}>
 </div>
 <f:if condition="{settings.pizpalue.siteMode} == 1 || {pizpalue.agency.siteMode} == 2">
     <f:then>
