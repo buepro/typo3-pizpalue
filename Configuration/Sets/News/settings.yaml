@@ -1,5 +1,5 @@
 routeEnhancers:
-  PizpalueNews:
+  pizpalueNews:
     type: Extbase
     extension: News
     plugin: Pi1

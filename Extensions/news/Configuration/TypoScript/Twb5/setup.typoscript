@@ -1,2 +1,0 @@
-@import 'EXT:pizpalue/Extensions/news/Configuration/TypoScript/setup.typoscript'
-page.includeCSS.ppNews >
