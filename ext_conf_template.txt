@@ -1,5 +1,2 @@
-# cat=Installation; type=boolean; label=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.enableDefaultPageTSconfig
-enableDefaultPageTSconfig = 1
-
 # cat=Installation; type=boolean; label=LLL:EXT:pizpalue/Resources/Private/Language/Backend.xlf:ext_conf.autoLoadStaticTSForExtensions
 autoLoadStaticTSForExtensions = 1

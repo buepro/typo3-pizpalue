@@ -1,5 +1,0 @@
-#=========================================================#
-# Content elements
-#=========================================================#
-
-@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/Element/*.tsconfig'

@@ -10,41 +10,6 @@
 defined('TYPO3') || die('Access denied.');
 
 /**
- * PageTS
- */
-(static function () {
-    // Initialization
-    $extensionConfiguration = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
-    );
-    $pizpalueConfiguration = $extensionConfiguration->get('pizpalue');
-
-    // Default PageTS for TCEFORM
-    if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/TCEFORM.tsconfig'"
-        );
-    }
-})();
-
-/**
- * Additional content elements
- */
-(static function () {
-    // Initialization
-    $pizpalueConfiguration = (\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
-        \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
-    ))->get('pizpalue');
-
-    // Add page tsconfig
-    if ((bool) $pizpalueConfiguration['enableDefaultPageTSconfig']) {
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            "@import 'EXT:pizpalue/Configuration/TsConfig/Page/ContentElement/All.tsconfig'"
-        );
-    }
-})();
-
-/**
  * Bootstrap popover implementation
  */
 (static function () {
@@ -130,28 +95,6 @@ defined('TYPO3') || die('Access denied.');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(
             '@import "EXT:pizpalue/Extensions/container_elements/Configuration/TypoScript/setup.typoscript"'
         );
-    }
-
-    /**
-     * EXT:news
-     */
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')) {
-        if ((bool)$pizpalueConfiguration['enableDefaultPageTSconfig']) {
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Extensions/news/Configuration/TsConfig/Page.tsconfig'"
-            );
-        }
-    }
-
-    /**
-     * EXT:eventnews
-     */
-    if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('eventnews')) {
-        if ((bool)$pizpalueConfiguration['enableDefaultPageTSconfig']) {
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-                "@import 'EXT:pizpalue/Extensions/eventnews/Configuration/TsConfig/Page.tsconfig'"
-            );
-        }
     }
 
     /**
