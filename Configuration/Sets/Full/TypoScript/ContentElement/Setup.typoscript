@@ -1,0 +1,2 @@
+@import 'EXT:pizpalue/Configuration/Sets/Full/TypoScript/ContentElement/Element/'
+@import 'EXT:pizpalue/Configuration/Sets/Full/TypoScript/ContentElement/Helper/'

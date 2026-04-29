@@ -1,4 +1,4 @@
-@import 'EXT:pizpalue/Configuration/TypoScript/Main/Constants/CategoryDefinition.typoscript'
+@import 'EXT:pizpalue/Configuration/Sets/Full/TypoScript/Main/Constants/CategoryDefinition.typoscript'
 
 #---------------------------------------------------------#
 # General
