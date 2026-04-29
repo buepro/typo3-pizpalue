@@ -48,19 +48,19 @@ defined('TYPO3') or die('Access denied.');
     // Twikito scroll animation
     $twikitoAttributes = static function (): array {
         return [
-            ['Twikito animation', 'data-scroll="animate__pulse" '],
-            ['Twikito repeat', 'data-scroll-repeat="true" '],
-            ['Twikito offset', 'data-scroll-offset="200" '],
+            ['label' => 'Twikito animation', 'value' => 'data-scroll="animate__pulse" '],
+            ['label' => 'Twikito repeat', 'value' => 'data-scroll-repeat="true" '],
+            ['label' => 'Twikito offset', 'value' => 'data-scroll-offset="200" '],
         ];
     };
 
     // Josh scroll animation (using animate.css)
     $joshAttributes = static function (): array {
         return [
-            ['Josh animation', 'data-josh-anim-name="pulse" '],
-            ['Josh duration', 'data-josh-duration="1500ms" '],
-            ['Josh delay', 'data-josh-anim-delay="3.5s" '],
-            ['Josh iteration', 'data-josh-iteration="infinite" '],
+            ['label' => 'Josh animation', 'value' => 'data-josh-anim-name="pulse" '],
+            ['label' => 'Josh duration', 'value' => 'data-josh-duration="1500ms" '],
+            ['label' => 'Josh delay', 'value' => 'data-josh-anim-delay="3.5s" '],
+            ['label' => 'Josh iteration', 'value' => 'data-josh-iteration="infinite" '],
         ];
     };
 
@@ -74,8 +74,8 @@ defined('TYPO3') or die('Access denied.');
                 'size' => 100,
                 'max' => 255,
                 'valuePicker' => [
-                    'mode' => 'append',
-                    'items' => $classItems,
+                    ['label' => 'mode', 'value' => 'append'],
+                    ['label' => 'items', 'value' => $classItems],
                 ],
             ],
         ],
@@ -94,8 +94,8 @@ defined('TYPO3') or die('Access denied.');
                 'size' => 100,
                 'max' => 255,
                 'valuePicker' => [
-                    'mode' => 'append',
-                    'items' => $innerClassItems,
+                    ['label' => 'mode', 'value' => 'append'],
+                    ['label' => 'items', 'value' => $innerClassItems],
                 ],
             ],
         ],
@@ -120,19 +120,8 @@ defined('TYPO3') or die('Access denied.');
                 'size' => 100,
                 'max' => 255,
                 'valuePicker' => [
-                    'mode' => 'append',
                     'items' => array_merge(
-                        [
-                            ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
-                            [' Twikito', ''],
-                            ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', ''],
-                        ],
                         $twikitoAttributes(),
-                        [
-                            ['▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁', ''],
-                            [' Josh', ''],
-                            ['▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔', ''],
-                        ],
                         $joshAttributes()
                     ),
                 ],
