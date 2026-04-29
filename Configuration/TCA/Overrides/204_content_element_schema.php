@@ -62,7 +62,7 @@ defined('TYPO3') or die('Access denied.');
                 'bodytext' => [
                     'config' => [
                         'format' => 'javascript',
-                        'renderType' => 't3editor',
+                        'renderType' => 'codeEditor',
                         'rows' => 20,
                     ],
                 ],

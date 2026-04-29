@@ -87,7 +87,7 @@ defined('TYPO3') or die('Access denied.');
         'label' => 'LLL:EXT:pizpalue/Resources/Private/Language/locallang_db.xlf:tx_pizpalue_pages.css',
         'config' => [
             'type' => 'text',
-            'renderType' => 't3editor',
+            'renderType' => 'codeEditor',
             'rows' => 8,
             'cols' => 50,
             'eval' => 'Buepro\\Pizpalue\\UserFunction\\FormEngine\\CssEval',
