@@ -20,7 +20,6 @@ if (!ExtensionManagementUtility::isLoaded('easyconf')) {
         'delete' => 'deleted',
         'enablecolumns' => [
         ],
-        'searchFields' => '',
     ];
     return;
 }
