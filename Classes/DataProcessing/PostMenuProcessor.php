@@ -46,10 +46,6 @@ class PostMenuProcessor implements DataProcessorInterface, SingletonInterface
         if (is_array($this->rootLine)) {
             return;
         }
-        $this->rootLine = [];
-        foreach ($GLOBALS['TSFE']->rootLine as $data) {
-            $this->rootLine[$data['uid']] = $data;
-        }
     }
 
     /**
@@ -61,6 +57,12 @@ class PostMenuProcessor implements DataProcessorInterface, SingletonInterface
         array $processorConfiguration,
         array $processedData
     ) {
+        if ($this->rootLine === null) {
+            $this->rootLine = [];
+            foreach ($cObj->getRequest()->getAttribute('frontend.page.information')->getRootLine() as $data) {
+                $this->rootLine[$data['uid']] = $data;
+            }
+        }
         $processedData['coreActive'] = (int)$processedData['active'];
         $processedData['isInRootLine'] = (int)isset($this->rootLine[$processedData['data']['uid']]);
         $processedData['isShortcut'] = (int)($processedData['data']['doktype'] === PageRepository::DOKTYPE_SHORTCUT);

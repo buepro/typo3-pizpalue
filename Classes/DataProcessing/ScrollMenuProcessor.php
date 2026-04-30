@@ -100,7 +100,8 @@ class ScrollMenuProcessor implements DataProcessorInterface, SingletonInterface
         array $contentElements
     ): array {
         $scrollMenuItems = [];
-        $localCObj = new ContentObjectRenderer($GLOBALS['TSFE']);
+        $localCObj = GeneralUtility::makeInstance(ContentObjectRenderer::class);
+        $localCObj->setRequest($cObj->getRequest());
         foreach ($contentElements as $contentElement) {
             $scrollMenuItem = [];
             $localCObj->start($contentElement);

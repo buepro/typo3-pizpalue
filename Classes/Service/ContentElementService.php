@@ -109,12 +109,15 @@ class ContentElementService
 
     public function modifyTitleTag(): void
     {
+        $request = $this->cObj->getRequest();
+        $frontendTypoScriptArray = $request->getAttribute('frontend.typoscript')->getConfigArray();
         if (
             ($records = $this->cObj->data['records'] ?? null) !== null &&
-            isset($GLOBALS['TSFE']->config['config']['pageTitleProviders.']['news.']) &&
+            isset($frontendTypoScriptArray['config']['pageTitleProviders.']['news.']) &&
             strpos($records, 'tx_news_domain_model_news') !== false
         ) {
-            unset($GLOBALS['TSFE']->config['config']['pageTitleProviders.']['news.']);
+            unset($frontendTypoScriptArray['config']['pageTitleProviders.']['news.']);
+            $request->getAttribute('frontend.typoscript')->setConfigArray($frontendTypoScriptArray);
         }
     }
 }

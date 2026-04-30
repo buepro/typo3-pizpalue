@@ -16,8 +16,8 @@ use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use Buepro\Pizpalue\Utility\ColumnVariantsUtility;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
 use Buepro\Pizpalue\Utility\VectorUtility;
+use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
@@ -63,27 +63,30 @@ class ColumnViewHelper extends AbstractViewHelper
      */
     public function render()
     {
-        if ($GLOBALS['TSFE'] instanceof TypoScriptFrontendController) {
-            $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
-            $multiplier = ColumnVariantsUtility::getMultiplier(
-                $this->arguments['class'] ?? '',
-                $this->arguments['rowClass'] ?? 'row-cols-1',
-                $this->arguments['count'] ?? 1
-            );
-            $correction = StructureVariantsUtility::getVectorProperty($this->arguments['correction']);
-            $modifier = (new VariantsModifier())
-                ->setMargins(VectorUtility::negate($gutter))
-                ->setMultiplier($multiplier)
-                ->setCorrections(VectorUtility::addVector($gutter, $correction));
-
-            // Push variants modifier -> render content -> pop modifier
-            $variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
-            $variantsModifierStack->pushVariantsModifier($modifier);
-            $content = $this->renderChildren();
-            $variantsModifierStack->popVariantsModifier();
-            return $content;
+        if (
+            !$this->renderingContext->hasAttribute(ServerRequestInterface::class) ||
+            $this->renderingContext->getAttribute(ServerRequestInterface::class)
+                ->getAttribute('frontend.page.information')->getId() < 1
+        ) {
+            return $this->renderChildren();
         }
+        $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
+        $multiplier = ColumnVariantsUtility::getMultiplier(
+            $this->arguments['class'] ?? '',
+            $this->arguments['rowClass'] ?? 'row-cols-1',
+            $this->arguments['count'] ?? 1
+        );
+        $correction = StructureVariantsUtility::getVectorProperty($this->arguments['correction']);
+        $modifier = (new VariantsModifier())
+            ->setMargins(VectorUtility::negate($gutter))
+            ->setMultiplier($multiplier)
+            ->setCorrections(VectorUtility::addVector($gutter, $correction));
 
-        return $this->renderChildren();
+        // Push variants modifier -> render content -> pop modifier
+        $variantsModifierStack = GeneralUtility::makeInstance(VariantsModifierStack::class);
+        $variantsModifierStack->pushVariantsModifier($modifier);
+        $content = $this->renderChildren();
+        $variantsModifierStack->popVariantsModifier();
+        return $content;
     }
 }
