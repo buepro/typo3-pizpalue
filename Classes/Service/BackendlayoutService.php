@@ -12,6 +12,7 @@ namespace Buepro\Pizpalue\Service;
 use Buepro\Pizpalue\Structure\Service\TypoScriptService;
 use Buepro\Pizpalue\Structure\VariantsModifier;
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
+use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
@@ -35,10 +36,7 @@ class BackendlayoutService
         $this->cObj = $contentObjectRenderer;
     }
 
-    /**
-     * @param string $content
-     * @param array $conf
-     */
+    #[AsAllowedCallable]
     public function pushVariantsModifier(string $content, array $conf): void
     {
         $variantsModifier = new VariantsModifier();
@@ -56,6 +54,7 @@ class BackendlayoutService
         $this->variantsModifierStack->pushVariantsModifier($variantsModifier);
     }
 
+    #[AsAllowedCallable]
     public function popVariantsModifier(): void
     {
         $this->variantsModifierStack->popVariantsModifier();

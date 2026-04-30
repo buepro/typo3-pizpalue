@@ -13,6 +13,7 @@ use Buepro\Pizpalue\Structure\Service\TypoScriptService;
 use Buepro\Pizpalue\Structure\VariantsModifier;
 use Buepro\Pizpalue\Structure\VariantsModifierStack;
 use Buepro\Pizpalue\Utility\StructureVariantsUtility;
+use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
 use TYPO3\CMS\Core\Service\FlexFormService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
@@ -76,6 +77,7 @@ class ContentElementService
     /**
      * Pushes the variants modifier related to the content element defined by $this->cObj->data
      */
+    #[AsAllowedCallable]
     public function pushVariantsModifier(): void
     {
         $data = $this->cObj->data;
@@ -102,11 +104,13 @@ class ContentElementService
         $this->variantsModifierStack->pushVariantsModifier($variantsModifier);
     }
 
+    #[AsAllowedCallable]
     public function popVariantsModifier(): void
     {
         $this->variantsModifierStack->popVariantsModifier();
     }
 
+    #[AsAllowedCallable]
     public function modifyTitleTag(): void
     {
         $request = $this->cObj->getRequest();

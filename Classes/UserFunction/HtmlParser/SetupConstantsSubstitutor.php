@@ -11,9 +11,11 @@ declare(strict_types=1);
 namespace Buepro\Pizpalue\UserFunction\HtmlParser;
 
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
 
 class SetupConstantsSubstitutor
 {
+    #[AsAllowedCallable]
     public function process(string $content, array $conf, ServerRequestInterface $request): string
     {
         if (str_contains($content, '###')) {
