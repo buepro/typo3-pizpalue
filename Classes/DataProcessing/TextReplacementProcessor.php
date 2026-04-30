@@ -11,6 +11,7 @@ declare(strict_types = 1);
 namespace Buepro\Pizpalue\DataProcessing;
 
 use BK2K\BootstrapPackage\Utility\TypoScriptUtility;
+use TYPO3\CMS\Core\Http\NormalizedParams;
 use TYPO3\CMS\Core\Resource\FileReference;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
@@ -26,6 +27,8 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
  */
 class TextReplacementProcessor implements DataProcessorInterface
 {
+    private NormalizedParams $normalizedParams;
+
     /**
      * Process content object data
      *
@@ -47,6 +50,7 @@ class TextReplacementProcessor implements DataProcessorInterface
             $referenceConfiguration = $processorConfiguration['references.'];
             $fieldName = $cObj->stdWrapValue('fieldName', $referenceConfiguration);
         }
+        $this->normalizedParams = $cObj->getRequest()->getAttribute('normalizedParams');
 
         // Process
         if (isset($processedData['data'][$fieldName]) && $processedData['data'][$fieldName] !== '') {
@@ -173,7 +177,7 @@ class TextReplacementProcessor implements DataProcessorInterface
                         $config = [
                             'width' => $processedData['data']['pi_flexform']['image_width'],
                         ];
-                        $urlPrefix = GeneralUtility::getIndpEnv('TYPO3_REQUEST_HOST');
+                        $urlPrefix = $this->normalizedParams->getRequestHost();
                         if (is_string($urlPrefix) && !is_null($imageResource = $cObj->getImgResource($value, $config))) {
                             $relativePath = trim(\TYPO3\CMS\Core\Utility\PathUtility::getRelativePathTo($imageResource->getFullPath()) ?? '', '\\/');
                             $replacements[] = $urlPrefix . '/' . $relativePath;
@@ -242,7 +246,7 @@ class TextReplacementProcessor implements DataProcessorInterface
      */
     private function generateBreadcrumbMarkup(array $breadcrumb): ?array
     {
-        $siteUrl = GeneralUtility::getIndpEnv('TYPO3_SITE_URL');
+        $siteUrl = $this->normalizedParams->getSiteUrl();
         // @phpstan-ignore-next-line
         if (!is_string($siteUrl)) {
             return null;
