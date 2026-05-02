@@ -72,7 +72,7 @@ class ColumnViewHelper extends AbstractViewHelper
         }
         $gutter = StructureVariantsUtility::getVectorProperty($this->arguments['gutter']);
         $multiplier = ColumnVariantsUtility::getMultiplier(
-            $this->arguments['class'] ?? '',
+            $this->additionalArguments['class'] ?? '',
             $this->arguments['rowClass'] ?? 'row-cols-1',
             $this->arguments['count'] ?? 1
         );

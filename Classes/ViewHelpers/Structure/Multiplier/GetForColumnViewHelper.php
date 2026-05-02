@@ -45,7 +45,7 @@ class GetForColumnViewHelper extends AbstractViewHelper
     public function render()
     {
         $multiplier = $this->arguments['multiplier'] ?? [];
-        $class = $this->arguments['class'] ?? '';
+        $class = $this->additionalArguments['class'] ?? '';
         $rowClass = $this->arguments['rowClass'] ?? '';
         $count = $this->arguments['count'] ?? 1;
         $multiplier = ColumnVariantsUtility::getMultiplier($class, $rowClass, $count, $multiplier);
