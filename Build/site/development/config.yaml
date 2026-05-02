@@ -5,6 +5,7 @@ baseVariants:
     condition: 'getenv("HTTP_HOST") == "dev.pizpalue.ddev.site"'
 dependencies:
   - pizpalue/full
+  - pizpalue/container-elements
 easyconf:
   data:
     admin:
