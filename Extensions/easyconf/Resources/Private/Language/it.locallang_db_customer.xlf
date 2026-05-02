@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="it">
+    <header/>
+    <body>
+      <trans-unit id="customer_company" resname="customer_company" approved="yes">
+        <source>Company</source>
+        <target state="final">Azienda</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_name" resname="customer_contact_name" approved="yes">
+        <source>Name</source>
+        <target state="final">Nome</target>
+      </trans-unit>
+      <trans-unit id="customer_legal_contact" resname="customer_legal_contact" approved="yes">
+        <source>Legal contact</source>
+        <target state="final">Contatti legali</target>
+      </trans-unit>
+      <trans-unit id="customer_uid" resname="customer_uid" approved="yes">
+        <source>UID</source>
+        <target state="final">UID</target>
+      </trans-unit>
+      <trans-unit id="customer_url" resname="customer_url" approved="yes">
+        <source>URL</source>
+        <target state="final">URL</target>
+      </trans-unit>
+      <trans-unit id="customer_alternative_url" resname="customer_alternative_url" approved="yes">
+        <source>Alternative URL</source>
+        <target state="final">URL alternativo</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_address" resname="customer_contact_address" approved="yes">
+        <source>Address</source>
+        <target state="final">Indirizzo</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_address_addition" resname="customer_contact_address_addition" approved="yes">
+        <source>Address addition</source>
+        <target state="final">Addizione indirizzo</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_zip" resname="customer_contact_zip" approved="yes">
+        <source>Zip</source>
+        <target state="final">CAP</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_city" resname="customer_contact_city" approved="yes">
+        <source>City</source>
+        <target state="final">Città</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_country" resname="customer_contact_country" approved="yes">
+        <source>Country</source>
+        <target state="final">Nazione</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_phone" resname="customer_contact_phone" approved="yes">
+        <source>Phone</source>
+        <target state="final">Telefono</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_phone_alt" resname="customer_contact_phone_alt" approved="yes">
+        <source>Alternative phone</source>
+        <target state="final">Telefono alternativo</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_email" resname="customer_contact_email" approved="yes">
+        <source>Email</source>
+        <target state="final">Email</target>
+      </trans-unit>
+      <trans-unit id="customer_contact_messenger" resname="customer_contact_messenger" approved="yes">
+        <source>Messenger ID</source>
+        <target state="final">Id Messenger</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

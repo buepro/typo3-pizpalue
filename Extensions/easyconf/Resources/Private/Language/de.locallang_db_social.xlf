@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="social_enable" resname="social_enable" approved="yes">
+        <source>Add social links to footer meta section</source>
+        <target state="final">Füge soziale Links dem Meta-Bereich hinzu</target>
+      </trans-unit>
+      <trans-unit id="paletteSocialChannel.description" resname="paletteSocialChannel.description" approved="yes">
+        <source>A social channel is shown on the website if a link has been defined for it.</source>
+        <target state="final">Eine soziale Netzwerkverlinkung wird auf der Website angezeigt, wenn dafür ein Link definiert wurde.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

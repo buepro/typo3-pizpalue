@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2022-04-04T09:11:39Z" product-name="pizpalue" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="logo_file_reference" resname="logo_file_reference" approved="yes">
+        <source>Normal</source>
+        <target state="final">Normal</target>
+      </trans-unit>
+      <trans-unit id="logo_file_inverted_reference" resname="logo_file_inverted_reference" approved="yes">
+        <source>Inverted</source>
+        <target state="final">Invertiert</target>
+      </trans-unit>
+      <trans-unit id="logo_file" resname="logo_file" approved="yes">
+        <source>Normal by path</source>
+        <target state="final">Normal nach Pfad</target>
+      </trans-unit>
+      <trans-unit id="logo_file_inverted" resname="logo_file_inverted" approved="yes">
+        <source>Inverted by path</source>
+        <target state="final">Invertiert nach Pfad</target>
+      </trans-unit>
+      <trans-unit id="logo_width" resname="logo_width" approved="yes">
+        <source>Width</source>
+        <target state="final">Breite</target>
+      </trans-unit>
+      <trans-unit id="logo_height" resname="logo_height" approved="yes">
+        <source>Height</source>
+        <target state="final">Höhe</target>
+      </trans-unit>
+      <trans-unit id="logo_alt" resname="logo_alt" approved="yes">
+        <source>Alt Tag</source>
+        <target state="final">Alt Tag</target>
+      </trans-unit>
+      <trans-unit id="logo_linktitle" resname="logo_linktitle" approved="yes">
+        <source>Title Tag</source>
+        <target state="final">Title Tag</target>
+      </trans-unit>
+      <trans-unit id="paletteAppicon.description" resname="paletteAppicon.description" approved="yes">
+        <source>App icons are used by various devices in different formats, for example as screen or
+					bookmark icon. They can be generated under https://realfavicongenerator.net. The website
+					provides an archive called "Favicon package" and a text to be used in the head section.
+					Upload the archive here to define the app icons with default settings. To fine tune the settings
+					you might paste as well the text provided by realfavicongenerator.net to the "App icons text"
+					field which is available upon enabling "Show all properties" in the admin tab. In case app
+					icons are not needed just define a favicon file. ATTENTION: When an app icon is defined by
+					an app icons archive its files are copied to the website root directory where existing files
+					will be overwritten.</source>
+        <target state="final">App-Icons werden von verschiedenen Geräten in verschiedenen Formaten verwendet, zum Beispiel als Bildschirm oder Lesezeichensymbol. Sie können unter https://realfavicongenerator erstellt werden. Die Website generiert eine ZIP-Datei, mit dem Namen „Favicon package“, und einen Quellcode-Text. Beide können hier verwendet werden. Wird nur von der ZIP-Datei gebrauch gemacht, so werden die App-Symbole mit Standardeinstellungen eingebunden. Die Standardeinstellungen können im Feld "App-Icon Code, welches durch Aktivieren von "Alle Eigenschaften anzeigen" im Admin-Tab verfügbar ist, überschrieben werden. Falls die App Symbole nicht benötigt werden, kann einfach eine Favicon-Datei festgelegt werden. ACHTUNG: Beim Definieren der App-Icons mit der ZIP-Dateie werden Dateien in das Wurzelverzeichnis der Website kopiert. Bereits vorhandene Dateien werden dabei überschrieben.</target>
+      </trans-unit>
+      <trans-unit id="appicon_generator_archive" resname="appicon_generator_archive" approved="yes">
+        <source>App icons archive</source>
+        <target state="final">App-Icons Datei</target>
+      </trans-unit>
+      <trans-unit id="appicon_generator_text" resname="appicon_generator_text" approved="yes">
+        <source>App icons text</source>
+        <target state="final">App-Icons Code</target>
+      </trans-unit>
+      <trans-unit id="appicon_generator_text.description" resname="appicon_generator_text.description" approved="yes">
+        <source>Set the field "Favicon file" to AppIcon or define an app icons archive to insert this text into the website header. In case an app icons archive has been defined this property is set automatically but might be overwritten to fine tune the app icons.</source>
+        <target state="final">Um den Text dieses Feldes in den Websiten-Kopfbereich einzufügen, kann das Feld "Favicon Datei" auf AppIcon gesetzt oder eine App-Icons Datei hinzugefügt werden. Durch festlegen einer App-Icons Datei wird der Wert dieses Feldes automatisch definiert, kann jedoch manuell überschrieben werden.</target>
+      </trans-unit>
+      <trans-unit id="appicon_file" resname="appicon_file" approved="yes">
+        <source>Favicon file</source>
+        <target state="final">Favicon Datei</target>
+      </trans-unit>
+      <trans-unit id="appicon_file.description" resname="appicon_file.description" approved="yes">
+        <source>Define a favicon by path or with the key word AppIcon. In case an app icons archive has been defined this property is set automatically.</source>
+        <target state="final">Dieses Feld kann mit einem Favicon-Pfad oder dem Schlüsselwort AppIcon belegt werden. Beim Festlegen einer App-Icons Datei wird diese Eigenschaft automatisch gesetzt.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
